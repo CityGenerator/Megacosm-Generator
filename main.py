@@ -2,9 +2,9 @@
 
 # Import the Flask Framework
 import png
-from flask import Flask,  send_file
+from flask import Flask, send_file
 import StringIO
-from noise import snoise2
+from noise import snoise2, pnoise2
 app = Flask(__name__)
 # Note: We don't need to call run() since our application is embedded within
 # the App Engine WSGI application server.
@@ -15,39 +15,45 @@ def hello():
     """Return a friendly HTTP greeting."""
     return 'Hello World!'
 
-@app.route('/map.png')
-def hellomap():
+@app.route('/simplex.png')
+def simplexmap():
     """Return a simple image."""
     img_io = StringIO.StringIO()
-    s = [
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000000000000000000000000000000000',
-        '00000000000000000000000000000000000',
-        '00000000000000000000000000000000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000',
-        '00000001111111111111111111110000000']
-    #for x in xrange(100):
-    #    for y in xrange (200):
-    #        s[x][y]=snoise2(x, y)
-
+    s = []
+    for x in xrange(500):
+        row=[]
+        for y in xrange (800):
+            pixel=snoise2(x,y)
+            #print "%r " % pixel
+            pixel=int((pixel+1)/2*255)
+            row.append(pixel)
+        s.append(row)
 
     s = map(lambda x: map(int, x), s)
     #draw a simple grayscale gradient png
-    w = png.Writer(len(s[0]), len(s), greyscale=True,bitdepth=2)
+    w = png.Writer(len(s[0]), len(s),greyscale=True)
+    w.write(img_io,s) 
+    img_io.seek(0)
+    return send_file(img_io, mimetype='image/png')
+
+@app.route('/perlin.png')
+def perlinmap():
+    """Return a simple image."""
+    img_io = StringIO.StringIO()
+    s = []
+    for x in xrange(500):
+        row=[]
+        for y in xrange (800):
+            pixel=pnoise2(x,y)
+            #print "%r " % pixel
+
+            pixel=int((pixel+1)/2*255)
+            row.append(pixel)
+        s.append(row)
+
+    s = map(lambda x: map(int, x), s)
+    #draw a simple grayscale gradient png
+    w = png.Writer(len(s[0]), len(s),greyscale=True)
     w.write(img_io,s) 
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
@@ -60,4 +66,5 @@ def page_not_found(e):
 
 
 if __name__ == '__main__':
+    app.debug = True
     app.run()
