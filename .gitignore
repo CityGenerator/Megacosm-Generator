@@ -16,6 +16,7 @@ sdist
 develop-eggs
 .installed.cfg
 lib
+!lib/README.md
 lib64
 __pycache__
 
