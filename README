@@ -1,0 +1,15 @@
+To get started locally without google app engine:
+* make sure you have python 2.7
+* make sure you have python's virtualenv installed
+* on the first run, do the following:
+    virtualenv env
+    source env/bin/activate
+    pip install -r requirements.txt
+
+* after that, you just need to use this:
+    source env/bin/activate
+
+Finally, to get the app up and running, run this:
+    python main.py
+
+
