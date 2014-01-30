@@ -1,27 +1,32 @@
-"""`main` is the top level module for your Flask application."""
+"""`main` is the top level module for this application."""
 
-# Import the Flask Framework
+
+# Import the stuffs!
+from flask import Flask, send_file, render_template, request
+from noise import snoise2, pnoise2,snoise3
 import png
-from flask import Flask, send_file, render_template
 import StringIO
 import random
-from noise import snoise2, pnoise2,snoise3
+
+
+# This thing here.. does stuff.
 app = Flask(__name__)
-# Note: We don't need to call run() since our application is embedded within
-# the App Engine WSGI application server.
+
 
 
 @app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
+def welcomepage():
+    """This is the first page anyone sees."""
     return render_template('map.html')
 
 @app.route('/worldmap.png')
-def worldmapmap():
-    """Return a simple image."""
-    img_io = StringIO.StringIO()
-#   random.seed(2)
-    offset=random.randint(1,100)
+def worldmap():
+    """Return a worldmap."""
+    worldId= request.args.get('worldId')
+
+    random.seed(worldId)
+    
+    offset=random.randint(1,100000)
     s = []
     zoom=260.0
     waterline=145
@@ -48,6 +53,7 @@ def worldmapmap():
     #draw a simple grayscale gradient png
     w = png.Writer(len(s[0])/3, len(s),greyscale=False, alpha=False)
 
+    img_io = StringIO.StringIO()
     w.write(img_io,s) 
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
@@ -61,3 +67,5 @@ def page_not_found(e):
 if __name__ == '__main__':
     app.debug = True
     app.run()
+# Note: We don't need to call run() since our application is embedded within
+# the App Engine WSGI application server...except we do to get it to run without app engine/
