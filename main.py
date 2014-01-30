@@ -2,7 +2,7 @@
 
 # Import the Flask Framework
 import png
-from flask import Flask, send_file
+from flask import Flask, send_file, render_template
 import StringIO
 import random
 from noise import snoise2, pnoise2,snoise3
@@ -14,10 +14,10 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World!'
+    return render_template('map.html')
 
-@app.route('/simplex.png')
-def simplexmap():
+@app.route('/worldmap.png')
+def worldmapmap():
     """Return a simple image."""
     img_io = StringIO.StringIO()
 #   random.seed(2)
