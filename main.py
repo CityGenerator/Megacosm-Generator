@@ -1,6 +1,5 @@
 """`main` is the top level module for this application."""
 
-
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
 from noise import snoise2, snoise3, snoise4
@@ -11,7 +10,6 @@ import random
 
 # This thing here.. does stuff.
 app = Flask(__name__)
-
 
 @app.route('/')
 def welcomepage():
@@ -26,20 +24,14 @@ def worldmap():
     """Generate a worldmap and return it."""
     worldId= request.args.get('worldId')
     random.seed(worldId)
-    myMap=generate_map(worldId)
 
-    # Create a temp file for writing the image
-    img_io = StringIO()
+    # Generate the map data
+    mapdata=generate_map(worldId)
 
-    # Convert the matrix of pixels into a png, then write it to the temp file
-    imagewriter = png.Writer(len(myMap[0])/3, len(myMap))
-    imagewriter.write(img_io,myMap) 
+    # Colorize the data and return a png.
+    myImage=colorize_map(mapdata)
 
-    #ensure the image is properly flushed
-    img_io.seek(0)
-
-    return send_file(img_io, mimetype='image/png', cache_timeout=100)
-
+    return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -53,33 +45,49 @@ def page_borked(e):
     return message, 500
 
 def generate_map(worldId):
+    """ Return a simple matrix of simplex noise from 0-255."""
     offset=random.randint(1,100000)
-    s = []
-    zoom=250.0
+    mapdata = []
+    zoom=140.0
     waterline=145
     for x in xrange(500):
         row=[]
         for y in xrange (800):
-            
-            pixel=snoise2(x/zoom+offset , y/zoom+offset,  4, 0.4,2.0, 500/zoom*4, 800/zoom, 1 )
-#            pixel=snoise3(x/zoom,y/zoom, offset,  4, 0.4, 2.0 )
-#            pixel=snoise4(x/zoom,y/zoom, offset,offset ,  4, 0.4, 2.0 )
-            # noise2(x, y,       octaves=1, persistence=0.5, lacunarity=2.0, repeatx=None, repeaty=None, base=0.0) return simplex noise value for specified 2D coordinate.
-            # noise3(x, y, z,    octaves=1, persistence=0.5, lacunarity=2.0)
-            # noise4(x, y, z, w, octaves=1, persistence=0.5, lacunarity=2.0)
-            pixel=int((pixel+1)/2*255-1)
+            noisevalue=snoise2(x/zoom , y/zoom,  10, 0.5,2.0, 500/zoom*5, 800/zoom, 1 )
+            pixel=int((noisevalue+1)/2*255-1)
+            row.append(pixel)
+        mapdata.append(row)
+    return mapdata
 
-            if (pixel <waterline):
-                row.append(max(pixel/2,0))
-                row.append(max(pixel/2,0))
-                row.append(255-max(pixel/4,0))
-            else:
-                pixel=(pixel-waterline)* 255/waterline
-                row.append(54+pixel)
-                row.append(54+pixel)
-                row.append(pixel)
-        s.append(row)
-    return s
+def colorize_map(mapdata):
+    """ Convert the black and white pixel data to actual map-looking colors."""
+    image=[]
+    waterline=145
+    for row in mapdata:
+        imagerow=[]
+        for y in row:
+            pixel=y;
+            color=(pixel,pixel,pixel) # land
+            if (pixel < waterline-50):
+                color=(0,0,205) # Deepest
+            elif (pixel <waterline-15):
+                color=(10,10,255) # Deep
+            elif (pixel <waterline):
+                color=(55,55,255) # Shallow
+            #Note that this is actually tripling the width of the array for RGB values.
+            imagerow.extend(color)
+        image.append(imagerow)
+    # Create a temp file for writing the image
+    img_io = StringIO()
+
+    # Convert the matrix of pixels into a png, then write it to the temp file
+    imagewriter = png.Writer(len(image[0])/3, len(image))
+    imagewriter.write(img_io,image) 
+
+    #ensure the image is properly flushed
+    img_io.seek(0)
+
+    return img_io
 
 
 if __name__ == '__main__':
