@@ -22,11 +22,16 @@ def welcomepage():
 @app.route('/worldmap.png')
 def worldmap():
     """Generate a worldmap and return it."""
-    worldId= request.args.get('worldId')
-    random.seed(worldId)
-
+    worldId= int(request.args.get('worldId'))
+    if (worldId == None):
+        worldId=random.randint(1,100000)
+    width=800
+    height=500
+    zoom=100.0
+    xoffset=0
+    yoffset=0
     # Generate the map data
-    mapdata=generate_map(worldId)
+    mapdata=generate_map(worldId,width,height,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=colorize_map(mapdata)
@@ -44,16 +49,15 @@ def page_borked(e):
     message="You Broke it!"
     return message, 500
 
-def generate_map(worldId):
+def generate_map(worldId=0,width=800,height=500,xoffset=0.0,yoffset=0.0,zoom=600.0):
     """ Return a simple matrix of simplex noise from 0-255."""
-    offset=random.randint(1,100000)
     mapdata = []
-    zoom=140.0
     waterline=145
-    for x in xrange(500):
+    print worldId
+    for x in xrange(height):
         row=[]
-        for y in xrange (800):
-            noisevalue=snoise2(x/zoom , y/zoom,  10, 0.5,2.0, 500/zoom*5, 800/zoom, 1 )
+        for y in xrange (width):
+            noisevalue=snoise2(x/zoom+worldId+xoffset, y/zoom+worldId+yoffset,  6, 0.52,2.0, height/zoom*5, width/zoom, 1 )
             pixel=int((noisevalue+1)/2*255-1)
             row.append(pixel)
         mapdata.append(row)
