@@ -1,6 +1,5 @@
 {
-  "data": {
-    "-root_chance": "30",
+    "root_chance": "30",
     "pre": [
       "Mer",
       "Ven",
@@ -36,5 +35,4 @@
       "on",
       "can"
     ]
-  }
 }
