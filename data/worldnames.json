@@ -1,0 +1,38 @@
+{
+    "root_chance": "30",
+    "pre": [
+      "Mer",
+      "Ven",
+      "Ea",
+      "Ma",
+      "Sat",
+      "Jup",
+      "Urn",
+      "Nep",
+      "Plu",
+      "Vul",
+      "Kli"
+    ],
+    "root": [
+      "bah",
+      "ket",
+      "a",
+      "i",
+      "cur",
+      "lax",
+      "ng"
+    ],
+    "post": [
+      "ry",
+      "nus",
+      "rth",
+      "rs",
+      "rn",
+      "ter",
+      "us",
+      "une",
+      "to",
+      "on",
+      "can"
+    ]
+}
