@@ -1,0 +1,2 @@
+[redis]
+url=redis://redistogo:passwordgoeshere@hostname:port/
