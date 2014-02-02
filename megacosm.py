@@ -5,6 +5,15 @@ from flask import Flask, send_file, render_template, request, url_for
 from generators import WorldMap
 
 import random
+import redis
+import ConfigParser
+
+
+config = ConfigParser.RawConfigParser()
+config.read('configs/config.ini')
+
+url = config.get('redis', 'url')
+server=redis.from_url(url)
 
 
 # This thing here.. does stuff.
@@ -16,7 +25,8 @@ def welcomepage():
     worldId= request.args.get('worldId')
     if (worldId == None):
         worldId=random.randint(1,100000)
-    return render_template('map.html', worldId=worldId)
+    worldname=WorldMap.generate_name(worldId,server)
+    return render_template('map.html', worldId=worldId, worldname=worldname)
 
 @app.route('/worldmap.png')
 def worldmap():

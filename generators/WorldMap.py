@@ -7,6 +7,19 @@ import png
 import random
 
 
+import redis
+
+
+def generate_name(worldId,server):
+    random.seed(worldId)
+    name = server.lindex('worldnamepre',  random.randint(0,server.llen('worldnamepre')-1 ))
+    name+= server.lindex('worldnameroot', random.randint(0,server.llen('worldnameroot')-1 ))
+    name+= server.lindex('worldnamepost', random.randint(0,server.llen('worldnamepost')-1 ))
+    
+    return name
+
+
+
 def generate_map(worldId=0,width=800,height=500,xoffset=0.0,yoffset=0.0,zoom=1.0):
     """ Return a simple matrix of simplex noise from 0-255."""
     mapdata = []
@@ -52,3 +65,28 @@ def colorize_map(mapdata):
     img_io.seek(0)
 
     return img_io
+
+
+
+
+
+
+#json_data=open('data/worldnames.json')
+#data = json.load(json_data)
+#
+##pprint(data)
+#for feature in data:
+#    if (feature.find("_chance") != -1 ):
+#        server.set('worldname'+feature, data[feature])
+#    else:
+#        featurelist=data[feature]
+#        server.sadd('worldname'+feature, *featurelist)
+#
+#    
+# 
+#print server.srandmember('worldnamepre')+server.srandmember('worldnameroot')+server.srandmember('worldnamepost')
+#
+#
+#
+#json_data.close()
+#
