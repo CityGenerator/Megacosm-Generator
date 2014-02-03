@@ -66,7 +66,60 @@ def colorize_map(mapdata):
 
     return img_io
 
+def bump_map(mapdata):
+    """ Convert the black and white pixel data to actual map-looking colors."""
+    image=[]
+    waterline=145
+    for row in mapdata:
+        imagerow=[]
+        for y in row:
+            pixel=y;
+            color=(0,0,0) # land
+            if (pixel >waterline):
+                pixel=int( (pixel-waterline)/(255.0-waterline) *255.0)
+                print pixel
+                color=(pixel,pixel,pixel) #water is flat
 
+            #Note that this is actually tripling the width of the array for RGB values.
+            imagerow.extend(color)
+        image.append(imagerow)
+    # Create a temp file for writing the image
+    img_io = StringIO()
+
+    # Convert the matrix of pixels into a png, then write it to the temp file
+    imagewriter = png.Writer(len(image[0])/3, len(image))
+    imagewriter.write(img_io,image) 
+
+    #ensure the image is properly flushed
+    img_io.seek(0)
+
+    return img_io
+def specular_map(mapdata):
+    """ Convert the black and white pixel data to actual map-looking colors."""
+    image=[]
+    waterline=145
+    for row in mapdata:
+        imagerow=[]
+        for y in row:
+            pixel=y;
+            color=(255,255,255) # land
+            if (pixel >= waterline):
+                color=(0,0,0) #water is flat
+
+            #Note that this is actually tripling the width of the array for RGB values.
+            imagerow.extend(color)
+        image.append(imagerow)
+    # Create a temp file for writing the image
+    img_io = StringIO()
+
+    # Convert the matrix of pixels into a png, then write it to the temp file
+    imagewriter = png.Writer(len(image[0])/3, len(image))
+    imagewriter.write(img_io,image) 
+
+    #ensure the image is properly flushed
+    img_io.seek(0)
+
+    return img_io
 
 
 

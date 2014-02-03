@@ -3,13 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { margin: 0; overflow: hidden; }
+            .tm  { position: absolute; top: 10px; right: 10px; }
+            .webgl-error { font: 15px/30px monospace; text-align: center; color: #fff; margin: 50px; }
+            .webgl-error a { color: #fff; }
+        </style>
     </head>
     <body>
         <h1>Welcome to planet <a href="/?worldId={{worldId}}">{{worldname}} ({{worldId}})</a></h1>
-        <img src="/worldmap.png?worldId={{worldId}}"/>
+        <!--<img src="/worldmap.png?worldId={{worldId}}"/>-->
 
-  </body>
-</html>
+        <div id="planetwindow" style="width:800px;height:500px"></div>
+        <script src="static/js/three.min.js"></script>
+        <script src="static/js/Detector.js"></script>
+        <script src="static/js/TrackballControls.js"></script> 
+        <script src="static/js/planet.js"></script> 
+        <script>
+            if (!Detector.webgl) {
+                Detector.addGetWebGLMessage(planetwindow);
+                return;
+            }
 
+            generate_scene();
+            generate_stars({{worldId}});
+            generate_planet({{worldId}});
+            render();
+        </script>  
     </body>
 </html>
