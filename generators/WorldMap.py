@@ -11,26 +11,26 @@ import redis
 WIDTH=800
 HEIGHT=500
 PIXEL_DEPTH=255.0
-SEALEVEL=145
+SEALEVEL=135
 DEEPWATER=SEALEVEL*0.85
 DEEPESTWATER=SEALEVEL*0.65
 NOISEOCTAVES=6
 
 def generate_name(worldId,server):
     random.seed(worldId)
+    #FIXME this is friggen manual as hell and needs refactoring to use chances
     name = server.lindex('worldnamepre',  random.randint(0,server.llen('worldnamepre')-1 ))
     name+= server.lindex('worldnameroot', random.randint(0,server.llen('worldnameroot')-1 ))
     name+= server.lindex('worldnamepost', random.randint(0,server.llen('worldnamepost')-1 ))
     
     return name
 
-
-
 def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
     """ Return a simple matrix of simplex noise from 0-255."""
     mapdata = []
-    print worldId
+    random.seed(worldId)
     zoom=zoom * 100.0
+    riversource=[]
     for x in xrange(height):
         row=[]
         for y in xrange (width):
@@ -39,13 +39,21 @@ def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoo
             noisevalue=snoise2(xparam, yparam,  NOISEOCTAVES, 0.52,2.0, height/zoom*2, width/zoom, float(worldId) )
             #convert 1.0...-1.0 to 255...0
             pixel=int((noisevalue+1)/2*PIXEL_DEPTH-1)
-            cell={'height': pixel}
-            if (pixel <= SEALEVEL):
+            cell={'height': pixel, 'x':x, 'y':y }
+            if (pixel < SEALEVEL):
                 cell['type']='water'
             else:
                 cell['type']='land'
+                if (random.randint(0,10000) <5):
+                    cell['riverhead']=True
+                    riversource.append(cell)
+                    
             row.append( cell )
         mapdata.append(row)
+
+
+    pp = pprint.PrettyPrinter(indent=4)
+    pp.pprint(riversource) 
     return mapdata
 
 def colorize_map(mapdata):
@@ -58,6 +66,8 @@ def colorize_map(mapdata):
             color=(pixel,pixel,pixel) # land
             if (cell['type'] is 'water'):
                 color=colorize_ocean(pixel)
+#          elif ('riverhead' in cell):
+#                color=(255,0,0)
 
             #Note that this is actually tripling the width of the array for RGB values.
             imagerow.extend(color)
@@ -118,6 +128,7 @@ def bump_map(mapdata):
     img_io.seek(0)
 
     return img_io
+
 def specular_map(mapdata):
     """ Convert the black and white pixel data to actual map-looking colors."""
     image=[]
