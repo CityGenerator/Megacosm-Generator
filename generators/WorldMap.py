@@ -5,10 +5,16 @@ from noise import snoise2, snoise3, snoise4
 from StringIO import StringIO
 import png
 import random
-
+import pprint
 
 import redis
-
+WIDTH=800
+HEIGHT=500
+PIXEL_DEPTH=255.0
+SEALEVEL=145
+DEEPWATER=SEALEVEL*0.85
+DEEPESTWATER=SEALEVEL*0.65
+NOISEOCTAVES=6
 
 def generate_name(worldId,server):
     random.seed(worldId)
@@ -20,7 +26,7 @@ def generate_name(worldId,server):
 
 
 
-def generate_map(worldId=0,width=800,height=500,xoffset=0.0,yoffset=0.0,zoom=1.0):
+def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
     """ Return a simple matrix of simplex noise from 0-255."""
     mapdata = []
     print worldId
@@ -30,27 +36,29 @@ def generate_map(worldId=0,width=800,height=500,xoffset=0.0,yoffset=0.0,zoom=1.0
         for y in xrange (width):
             xparam=float((x+xoffset)/zoom)
             yparam=float((y+yoffset)/zoom)
-            noisevalue=snoise2(xparam, yparam,  6, 0.52,2.0, height/zoom*2, width/zoom, float(worldId) )
-            pixel=int((noisevalue+1)/2*255-1)
-            row.append(pixel)
+            noisevalue=snoise2(xparam, yparam,  NOISEOCTAVES, 0.52,2.0, height/zoom*2, width/zoom, float(worldId) )
+            #convert 1.0...-1.0 to 255...0
+            pixel=int((noisevalue+1)/2*PIXEL_DEPTH-1)
+            cell={'height': pixel}
+            if (pixel <= SEALEVEL):
+                cell['type']='water'
+            else:
+                cell['type']='land'
+            row.append( cell )
         mapdata.append(row)
     return mapdata
 
 def colorize_map(mapdata):
     """ Convert the black and white pixel data to actual map-looking colors."""
     image=[]
-    waterline=145
     for row in mapdata:
         imagerow=[]
-        for y in row:
-            pixel=y;
+        for cell in row:
+            pixel=cell['height'];
             color=(pixel,pixel,pixel) # land
-            if (pixel < waterline-50):
-                color=(0,0,205) # Deepest
-            elif (pixel <waterline-15):
-                color=(10,10,255) # Deep
-            elif (pixel <waterline):
-                color=(55,55,255) # Shallow
+            if (cell['type'] is 'water'):
+                color=colorize_ocean(pixel)
+
             #Note that this is actually tripling the width of the array for RGB values.
             imagerow.extend(color)
         image.append(imagerow)
@@ -66,18 +74,34 @@ def colorize_map(mapdata):
 
     return img_io
 
+def colorize_ocean(pixel):
+    """ Convert the black and white pixel data to actual ocean colors if below SEALEVEL."""
+    # Caution, voodoo math ahead.
+    colorrange=50         #range of color that the water can show
+    bluemultiplier=1.5    #RGB's B is 1.5x more affected.
+    darkestblue=PIXEL_DEPTH-colorrange*bluemultiplier   # Darkest blue is the pixeldepth minus the blue colorrange
+
+    if (pixel < DEEPESTWATER):
+        color=(0,0,int(darkestblue)) # Deepest dark water
+    elif (pixel < DEEPWATER and pixel >DEEPESTWATER):
+        #colors in this range should be 0-50 because that provides the best color range.
+        mod=(pixel-DEEPESTWATER)/(DEEPWATER-DEEPESTWATER)*colorrange
+        color=(int(0+mod),int(0+mod),int(darkestblue+(mod*bluemultiplier))) # Deep
+    else:
+        color=(colorrange,colorrange,int(PIXEL_DEPTH)) # Shallow
+    return color
+
+
 def bump_map(mapdata):
     """ Convert the black and white pixel data to actual map-looking colors."""
     image=[]
-    waterline=145
     for row in mapdata:
         imagerow=[]
-        for y in row:
-            pixel=y;
+        for cell in row:
+            pixel=cell['height'];
             color=(0,0,0) # land
-            if (pixel >waterline):
-                pixel=int( (pixel-waterline)/(255.0-waterline) *255.0)
-                print pixel
+            if (pixel >SEALEVEL):
+                pixel=int( (pixel-SEALEVEL)/(PIXEL_DEPTH-SEALEVEL) *PIXEL_DEPTH)
                 color=(pixel,pixel,pixel) #water is flat
 
             #Note that this is actually tripling the width of the array for RGB values.
@@ -100,8 +124,8 @@ def specular_map(mapdata):
     waterline=145
     for row in mapdata:
         imagerow=[]
-        for y in row:
-            pixel=y;
+        for cell in row:
+            pixel=cell['height'];
             color=(255,255,255) # land
             if (pixel >= waterline):
                 color=(0,0,0) #water is flat
