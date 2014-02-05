@@ -18,7 +18,8 @@ function generate_scene() {
     document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 100);
     document.camera.position.z = 1.5;
     // And a renderer
-    document.renderer = new THREE.WebGLRenderer();
+    document.renderer = new THREE.WebGLRenderer( {antialias:true} );
+
     document.renderer.setSize(WIDTH, HEIGHT);
 
     //Then lets throw a background up for flavor
@@ -39,45 +40,92 @@ function generate_stars(worldId){
     //A little ambient light to see stuff on the back side.
     document.scene.add(new THREE.AmbientLight(0x444444));
 
+
+    document.star=[]
+    document.starGlow=[]
+    document.light=[]
     // Lets replicate the light of a single star to start with.
-    var light = new THREE.DirectionalLight(0xffffff, 0.7);
-    light.position.set(10,2,10);
-    document.scene.add(light);
+    var color= 0xffffff
+    var position= new THREE.Vector3( 5,1, -10 );
+    var diameter=0.5
+    var intensity=0.7
+    var halo=1.2
     
-    document.stars=[]
-    document.stars.push( generateStar());
+    generateStar(color, position, diameter, intensity, halo);
 
-    document.scene.add(document.stars[0])
+    var color= 0xffff00
+    var position= new THREE.Vector3( 6,2, -10 );
+    var diameter=0.7
+    var intensity=0.5
+    var halo=1.7
+    
+    generateStar(color, position, diameter, intensity, halo);
+
+
 
 
 
 }
 
-function generateStar() {
-    star=new THREE.Mesh(
-        new THREE.SphereGeometry(1, 15, 15),
-        new THREE.MeshPhongMaterial({
-            emissive: 0xff0000,
-            color:0xff00ff,
-        })
-    );
-    star.position.set(-10,1,-20);
 
 
 
+function generateStar(color, position, diameter, intensity, halo) {
+
+    var sphereGeom = new THREE.SphereGeometry(diameter, 32, 32);
+    var starMaterial = new THREE.MeshBasicMaterial( );
+    var star = new THREE.Mesh(sphereGeom, starMaterial);
+
+    star.position=position;
+    star.visible=false
+    document.scene.add(star);
+    document.star.push(star);
+
+    this.starGlow = new THREE.Mesh( sphereGeom.clone(), Create_Shader_Material(color) );
+    starGlow.position = position
+    starGlow.material.side = THREE.BackSide; 
+    starGlow.scale.multiplyScalar(halo);
+    document.scene.add( starGlow );
+    document.starGlow.push(starGlow);
+
+    var light = new THREE.DirectionalLight(color, intensity);
+    light.position= position;
+    document.scene.add(light);
+    document.light.push(light);
 
 
-
-
-
-
-
-
-
-
-
-    return star
 }
+
+
+
+function Create_Shader_Material(color){
+    return new THREE.ShaderMaterial({
+        uniforms: 
+        { 
+            "p":   { type: "f", value: 6},
+            glowColor: { type: "c", value: new THREE.Color(color) },
+            viewVector: { type: "v3", value: document.camera.position }
+        },
+        vertexShader:   document.getElementById( 'vertexShader'   ).textContent,
+        fragmentShader: document.getElementById( 'fragmentShader' ).textContent,
+        side: THREE.DoubleSide,
+        blending: THREE.AdditiveBlending,
+        transparent: true
+    }   );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function generate_planet(worldId){
@@ -104,6 +152,13 @@ function render() {
     document.clouds.rotation.y += 0.0007;
     requestAnimationFrame(render);
     document.renderer.render(document.scene, document.camera);
+
+    for (glow in document.starGlow) {
+    t}
+
+
+
+
 }
 
 function createPlanet(radius, segments, worldId) {
