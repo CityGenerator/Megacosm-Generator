@@ -43,9 +43,41 @@ function generate_stars(worldId){
     var light = new THREE.DirectionalLight(0xffffff, 0.7);
     light.position.set(10,2,10);
     document.scene.add(light);
+    
+    document.stars=[]
+    document.stars.push( generateStar());
+
+    document.scene.add(document.stars[0])
+
+
 
 }
 
+function generateStar() {
+    star=new THREE.Mesh(
+        new THREE.SphereGeometry(1, 15, 15),
+        new THREE.MeshPhongMaterial({
+            emissive: 0xff0000,
+            color:0xff00ff,
+        })
+    );
+    star.position.set(-10,1,-20);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return star
+}
 
 
 function generate_planet(worldId){

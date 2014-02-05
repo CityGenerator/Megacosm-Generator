@@ -12,24 +12,25 @@ url = config.get('redis', 'url')
 
 server=redis.from_url(url)
 
-json_data=open('data/worldnames.json')
-data = json.load(json_data)
-json_data.close()
-
-
-#pprint(data)
-for feature in data:
-    if (feature.find("_chance") != -1 ):
-        server.set('worldname'+feature, data[feature])
-    else:
-        featureset=data[feature]
-        server.ltrim('worldname'+feature, 0, 0 )
-        server.lpush('worldname'+feature, *featureset)
-
-    
-print server.llen('worldnamepost') 
-#print server.srandmember('worldnamepre')+server.srandmember('worldnameroot')+server.srandmember('worldnamepost')
+def load_names(dataname,data):
+    print "loading",dataname
+    for feature in data:
+        if (feature.find("_chance") != -1 ):
+            server.set(dataname+feature, data[feature])
+            print "    ",feature,":",server.get(dataname+feature) 
+        else:
+            featureset=data[feature]
+            server.ltrim(dataname+feature, 0, 0 )
+            server.lpush(dataname+feature, *featureset)
+            print "    ",feature,":",server.llen(dataname+feature) 
 
 
 
+
+
+for dataname in ['world','star','moon']:
+    json_data=open('data/'+dataname+'name.json')
+    data = json.load( json_data )
+    load_names(dataname+'name',data)
+    json_data.close()
 
