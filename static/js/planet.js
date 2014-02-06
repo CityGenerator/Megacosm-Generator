@@ -11,7 +11,6 @@ function generate_scene() {
         HEIGHT = parseInt(planetwindow.style.height);
 
 
-
     // We need a scene
     document.scene = new THREE.Scene();
     // A Camera
@@ -45,42 +44,59 @@ function generate_stars(worldId){
     document.starGlow=[]
     document.light=[]
     var halo=1.5
-    var diameter=0.25
+    var diameter=1
     var intensity=0.6
-
+    var rotation=worldId
 
 
 
     // Lets replicate the light of a single star to start with.
     var color= 0x99ffff
-    var position= new THREE.Vector3( 0,0, 0 );
+    var diameter=.5
+    var halo=2
+    var intensity=1
+    var position= new THREE.Vector3( 17,-1, -40 );
     //var position= new THREE.Vector3( 5,1, -10 );
     
-    generateStar(color, position, diameter, intensity, halo);
+    generateStar(color, position, diameter, intensity, halo, rotation);
 
     var color= 0xffff00
-    var position= new THREE.Vector3( 3, 2, -5 );
+    var diameter=1
+    var halo=1.5
+    var intensity=0.6
+    var position= new THREE.Vector3( 17, 3, -40 );
     //var position= new THREE.Vector3( 6,2, -10 );
     
-    generateStar(color, position, diameter, intensity, halo);
+    generateStar(color, position, diameter, intensity, halo,rotation);
+
+
+    var halo=1.5
+    var diameter=4
+    var intensity=0.01
+    var color= 0xff0000
+    var position= new THREE.Vector3( 24, -2, -50 );
+    //var position= new THREE.Vector3( 6,2, -10 );
+    
+    generateStar(color, position, diameter, intensity, halo,rotation);
 
 }
 
 
 
 
-function generateStar(color, position, diameter, intensity, halo) {
+function generateStar(color, position, diameter, intensity, halo, rotation) {
 
     var sphereGeom = new THREE.SphereGeometry(diameter, 32, 32);
     var starMaterial = new THREE.MeshPhongMaterial( 
-          {  
-                map:         THREE.ImageUtils.loadTexture('/static/images/star.png'),
-                emissive:color,
+            {  
+                map:        THREE.ImageUtils.loadTexture('/static/images/star.png'),
+                emissive:   color,
             }
     );
     var star = new THREE.Mesh(sphereGeom, starMaterial);
 
     star.position=position;
+    star.rotation.y=rotation
     star.visible=true
     document.scene.add(star);
     document.star.push(star);
@@ -121,18 +137,6 @@ function Create_Shader_Material(color){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 function generate_planet(worldId){
     // planet params
     var radius   = 0.5,
@@ -148,8 +152,8 @@ function generate_planet(worldId){
     document.clouds.rotation.y = 0;
     document.scene.add(document.clouds)
 
-    document.planet.visible=false
-    document.clouds.visible=false
+//    document.planet.visible=false
+//    document.clouds.visible=false
 }
 
 
