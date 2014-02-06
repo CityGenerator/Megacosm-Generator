@@ -44,20 +44,23 @@ function generate_stars(worldId){
     document.star=[]
     document.starGlow=[]
     document.light=[]
+    var halo=1.5
+    var diameter=1
+    var intensity=0.6
+
+
+
+
     // Lets replicate the light of a single star to start with.
-    var color= 0xffffff
-    var position= new THREE.Vector3( 5,1, -10 );
-    var diameter=0.5
-    var intensity=0.7
-    var halo=1.2
+    var color= 0x99ffff
+    var position= new THREE.Vector3( 0,0, 0 );
+    //var position= new THREE.Vector3( 5,1, -10 );
     
     generateStar(color, position, diameter, intensity, halo);
 
     var color= 0xffff00
-    var position= new THREE.Vector3( 6,2, -10 );
-    var diameter=0.7
-    var intensity=0.5
-    var halo=1.7
+    var position= new THREE.Vector3( 3, 2, -5 );
+    //var position= new THREE.Vector3( 6,2, -10 );
     
     generateStar(color, position, diameter, intensity, halo);
 
@@ -72,16 +75,21 @@ function generate_stars(worldId){
 
 function generateStar(color, position, diameter, intensity, halo) {
 
-    var sphereGeom = new THREE.SphereGeometry(diameter, 32, 32);
-    var starMaterial = new THREE.MeshBasicMaterial( );
+    var sphereGeom = new THREE.SphereGeometry(diameter/4, 32, 32);
+    var starMaterial = new THREE.MeshPhongMaterial( 
+          {  
+                map:         THREE.ImageUtils.loadTexture('/static/images/star.png'),
+                emissive:color,
+            }
+    );
     var star = new THREE.Mesh(sphereGeom, starMaterial);
 
     star.position=position;
-    star.visible=false
+    star.visible=true
     document.scene.add(star);
     document.star.push(star);
 
-    this.starGlow = new THREE.Mesh( sphereGeom.clone(), Create_Shader_Material(color) );
+    this.starGlow = new THREE.Mesh( new THREE.SphereGeometry(diameter, 32, 32)   , Create_Shader_Material(color) );
     starGlow.position = position
     starGlow.material.side = THREE.BackSide; 
     starGlow.scale.multiplyScalar(halo);
@@ -102,7 +110,8 @@ function Create_Shader_Material(color){
     return new THREE.ShaderMaterial({
         uniforms: 
         { 
-            "p":   { type: "f", value: 6},
+            "c":   { type: "f", value: 0.001},
+            "p":   { type: "f", value: 20},
             glowColor: { type: "c", value: new THREE.Color(color) },
             viewVector: { type: "v3", value: document.camera.position }
         },
@@ -143,23 +152,40 @@ function generate_planet(worldId){
     document.clouds.rotation.y = 0;
     document.scene.add(document.clouds)
 
+    document.planet.visible=false
+    document.clouds.visible=false
 }
 
 
 function render() {
-    document.controls.update();
-    document.planet.rotation.y += 0.0005;
-    document.clouds.rotation.y += 0.0007;
-    requestAnimationFrame(render);
     document.renderer.render(document.scene, document.camera);
-
-    for (glow in document.starGlow) {
-    t}
-
-
 
 
 }
+
+function animate() 
+{
+    requestAnimationFrame( animate );
+    render();
+    update();
+}
+
+function update()
+{
+    document.controls.update();
+
+    document.planet.rotation.y += 0.0005;
+    document.clouds.rotation.y += 0.0007;
+
+    document.starGlow.forEach( function(glow){
+        glow.material.uniforms.viewVector.value = 
+            new THREE.Vector3().subVectors( document.camera.position, glow.position );
+    }   )
+
+}
+
+
+
 
 function createPlanet(radius, segments, worldId) {
     return new THREE.Mesh(
