@@ -45,7 +45,7 @@ function generate_stars(worldId){
     document.starGlow=[]
     document.light=[]
     var halo=1.5
-    var diameter=1
+    var diameter=0.25
     var intensity=0.6
 
 
@@ -64,10 +64,6 @@ function generate_stars(worldId){
     
     generateStar(color, position, diameter, intensity, halo);
 
-
-
-
-
 }
 
 
@@ -75,7 +71,7 @@ function generate_stars(worldId){
 
 function generateStar(color, position, diameter, intensity, halo) {
 
-    var sphereGeom = new THREE.SphereGeometry(diameter/4, 32, 32);
+    var sphereGeom = new THREE.SphereGeometry(diameter, 32, 32);
     var starMaterial = new THREE.MeshPhongMaterial( 
           {  
                 map:         THREE.ImageUtils.loadTexture('/static/images/star.png'),
@@ -110,8 +106,8 @@ function Create_Shader_Material(color){
     return new THREE.ShaderMaterial({
         uniforms: 
         { 
-            "c":   { type: "f", value: 0.001},
-            "p":   { type: "f", value: 20},
+            "c":   { type: "f", value: 0.1},
+            "p":   { type: "f", value: 3},
             glowColor: { type: "c", value: new THREE.Color(color) },
             viewVector: { type: "v3", value: document.camera.position }
         },
