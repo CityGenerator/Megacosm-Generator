@@ -1,0 +1,43 @@
+{
+    "pre": [
+      "Mo",
+      "Dei",
+      "Pho",
+      "Gana",
+      "Calli",
+      "Hima",
+      "Ela",
+      "Sino",
+      "The",
+      "Cha",
+      "Spo",
+      "Pro"
+    ],
+    "root": [
+      "ro",
+      "ka",
+      "di",
+      "do",
+      "la",
+      "ta",
+      "le",
+      "me"
+    ],
+    "post_chance": "30",
+    "post": [
+      "bos",
+      "mos",
+      "pa",
+      "sto",
+      "pe",
+      "ke",
+      "lite",
+      "dene",
+      "noe",
+      "se",
+      "thys",
+      "dus",
+      "pso",
+      "theus"
+    ]
+}
