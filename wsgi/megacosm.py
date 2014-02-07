@@ -7,14 +7,21 @@ from generators import WorldMap
 import random
 import redis
 import ConfigParser
+import os
+import sys
 
+
+configpath="data/"
+
+if ('OPENSHIFT_DATA_DIR' in os.environ):
+    configpath=os.environ['OPENSHIFT_DATA_DIR']
 
 config = ConfigParser.RawConfigParser()
-config.read('configs/config.ini')
+config.read( configpath + 'config.ini')
 
 url = config.get('redis', 'url')
 server=redis.from_url(url)
-
+    
 
 # This thing here.. does stuff.
 app = Flask(__name__)
@@ -98,8 +105,6 @@ def page_borked(e):
 
 
 if __name__ == '__main__':
-    app.debug = True
+#    app.debug = True
     app.run()
-# Note: We don't need to call run() since our application is embedded within
-# the App Engine WSGI application server...except we do to get it to run without app engine/
 

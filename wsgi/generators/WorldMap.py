@@ -5,7 +5,7 @@ from noise import snoise2, snoise3, snoise4
 from StringIO import StringIO
 import png
 import random
-import pprint
+#import pprint
 
 import redis
 WIDTH=800
@@ -22,7 +22,6 @@ def generate_name(worldId,server):
     name = server.lindex('worldnamepre',  random.randint(0,server.llen('worldnamepre')-1 ))
     name+= server.lindex('worldnameroot', random.randint(0,server.llen('worldnameroot')-1 ))
     name+= server.lindex('worldnamepost', random.randint(0,server.llen('worldnamepost')-1 ))
-    
     return name
 
 def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
@@ -52,8 +51,8 @@ def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoo
         mapdata.append(row)
 
 
-    pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(riversource) 
+    #pp = pprint.PrettyPrinter(indent=4)
+    #pp.pprint(riversource) 
     return mapdata
 
 def colorize_map(mapdata):

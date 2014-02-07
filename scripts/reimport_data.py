@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import redis
 import ConfigParser, os
 import json
@@ -6,7 +8,7 @@ from pprint import pprint
 
 
 config = ConfigParser.RawConfigParser()
-config.read('configs/config.ini')
+config.read('data/config.ini')
 
 url = config.get('redis', 'url')
 

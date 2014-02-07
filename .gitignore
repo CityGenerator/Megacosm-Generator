@@ -1,5 +1,6 @@
 
-configs/config.ini
+data/config.ini
+
 *.py[cod]
 env/
 # C extensions

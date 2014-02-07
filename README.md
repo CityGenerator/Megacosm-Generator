@@ -24,19 +24,19 @@ On the first run, do the following:
     pip install -r requirements.txt
 
     # copy the example config into place
-    cp configs/config.ini.example configs/config.ini
+    cp data/config.ini.example data/config.ini
 
     # Load your data
     python scripts/reimport_data.py
 
     # start the server
-    python megacosm.py
+    python wsgi/megacosm.py
 ```
 
 After that, you just need to use this:
 
 ```bash
     source env/bin/activate
-    python megacosm.py
+    python wsgi/megacosm.py
 ```
 
