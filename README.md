@@ -9,7 +9,6 @@ A tool for creating fantasy campaign settings, including maps, regions, flags, c
 * make sure you have python's virtualenv installed
 * set up Redis
 
-
 On the first run, do the following:
 
 ```bash
