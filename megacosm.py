@@ -2,8 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import WorldMap
-
+from generators import WorldMap, Star, StarSystem
 import random
 import redis
 import ConfigParser
@@ -11,17 +10,15 @@ import os
 import sys
 
 
-configpath="data/"
-
-if ('OPENSHIFT_DATA_DIR' in os.environ):
-    configpath=os.environ['OPENSHIFT_DATA_DIR']
-
 config = ConfigParser.RawConfigParser()
-config.read( configpath + 'config.ini')
+config.read( '../data/config.ini')
 
-url = config.get('redis', 'url')
-server=redis.from_url(url)
-    
+#url = config.get('redis', 'url')
+#server=redis.from_url(url)
+
+
+pool = redis.ConnectionPool(host=config.get('redis', 'host'), port=config.get('redis', 'port'), db=0, password=config.get('redis', 'password'),   )
+server = redis.Redis(connection_pool=pool)    
 
 # This thing here.. does stuff.
 app = Flask(__name__)
@@ -32,6 +29,9 @@ def welcomepage():
     worldId= request.args.get('worldId')
     if (worldId == None):
         worldId=random.randint(1,100000)
+
+    starsystem=StarSystem.StarSystem(server,worldId)
+
     worldname=WorldMap.generate_name(worldId,server)
     return render_template('map.html', worldId=worldId, worldname=worldname)
 
@@ -105,6 +105,9 @@ def page_borked(e):
 
 
 if __name__ == '__main__':
-#    app.debug = True
+    app.debug = True
     app.run()
+
+
+
 
