@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { margin: 0; overflow: hidden; }
+            .tm  { position: absolute; top: 10px; right: 10px; }
+            .webgl-error { font: 15px/30px monospace; text-align: center; color: #fff; margin: 50px; }
+            .webgl-error a { color: #fff; }
+        </style>
+
+
+    </head>
+    <body>
+		<script id="vertexShader" type="x-shader/x-vertex">
+			uniform vec3 viewVector;
+            uniform float c;
+			uniform float p;
+			varying float intensity;
+			void main() 
+			{
+			    vec3 vNormal = normalize( normalMatrix * normal );
+			    vec3 vNormel = normalize( normalMatrix * viewVector );
+			    intensity = pow( c - dot(vNormal, vNormel), p );
+			    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+		<script id="fragmentShader" type="x-shader/x-vertex"> 
+			uniform vec3 glowColor;
+			varying float intensity;
+			void main() 
+			{
+			    vec3 glow = glowColor * intensity;
+			    gl_FragColor = vec4( glow, 1.0 );
+			}
+		</script>
+
+        <h1>Welcome to planet <a href="/?worldId={{worldId}}">{{worldname}} ({{worldId}})</a></h1>
+        <!--<img src="/worldmap.png?worldId={{worldId}}"/>-->
+
+        <div id="planetwindow" style="width:800px;height:500px"></div>
+        <script src="static/js/three.min.js"></script>
+        <script src="static/js/Detector.js"></script>
+        <script src="static/js/TrackballControls.js"></script> 
+        <script src="static/js/planet.js"></script> 
+        <script>
+            if (!Detector.webgl) {
+                Detector.addGetWebGLMessage(planetwindow);
+                return;
+            }
+
+            generate_scene();
+            generate_stars({{worldId}});
+            generate_planet({{worldId}});
+            animate();
+        </script>  
+    </body>
+</html>

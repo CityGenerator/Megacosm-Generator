@@ -1,0 +1,39 @@
+
+{
+    "pre": [
+      "To",
+      "Na",
+      "Wo",
+      "Me",
+      "Si",
+      "Lu",
+      "Uu",
+      "Aba",
+      "Be",
+      "Ce",
+      "Kro"
+    ],
+    "root": [
+      "r",
+      "k",
+      "l",
+      "j",
+      "c",
+      "x",
+      "n"
+    ],
+    "post_chance": "30",
+    "post": [
+      "ay",
+      "us",
+      "or",
+      "an",
+      "el",
+      "ub",
+      "uri",
+      "un",
+      "ol",
+      "on",
+      "ek"
+    ]
+}
