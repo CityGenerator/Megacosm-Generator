@@ -16,6 +16,8 @@ configpath="data/"
 if ('OPENSHIFT_DATA_DIR' in os.environ):
     configpath=os.environ['OPENSHIFT_DATA_DIR']
 
+sys.stderr.write("my path is "+configpath)
+
 config = ConfigParser.RawConfigParser()
 config.read( configpath + 'config.ini')
 
