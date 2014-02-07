@@ -11,7 +11,7 @@ import sys
 
 
 config = ConfigParser.RawConfigParser()
-config.read( '../data/config.ini')
+config.read( 'data/config.ini')
 
 #url = config.get('redis', 'url')
 #server=redis.from_url(url)
