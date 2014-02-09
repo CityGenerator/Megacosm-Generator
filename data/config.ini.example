@@ -1,3 +1,7 @@
 [redis]
 #url=redis://redistogo:passwordgoeshere@hostname:port/
 url = redis://127.0.0.1:6379/
+username = 
+password = 
+host = localhost
+port = 6379

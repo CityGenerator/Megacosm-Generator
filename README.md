@@ -30,13 +30,19 @@ On the first run, do the following:
     python scripts/reimport_data.py
 
     # start the server
-    python wsgi/megacosm.py
+    python megacosm.py
 ```
 
 After that, you just need to use this:
 
 ```bash
     source env/bin/activate
-    python wsgi/megacosm.py
+    python megacosm.py
+```
+
+To try your unit tests, run 
+
+```bash
+    nosetests tests/
 ```
 

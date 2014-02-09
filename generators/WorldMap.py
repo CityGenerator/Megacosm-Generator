@@ -7,9 +7,9 @@ import png
 import random
 #import pprint
 
-import redis
-WIDTH=800
-HEIGHT=500
+
+WIDTH=400
+HEIGHT=250
 PIXEL_DEPTH=255.0
 SEALEVEL=135
 DEEPWATER=SEALEVEL*0.85
