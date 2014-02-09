@@ -19,28 +19,28 @@ function generate_stars(worldId){
     var diameter=.5
     var halo=2
     var intensity=1
-    var position= new THREE.Vector3( 0,0, -10 );
+    var position= new THREE.Vector3( 10,0, -40 );
     
     generateStar(color, position, diameter, intensity, halo, rotation);
 
-//    var color= 0xffff00
-//    var diameter=1
-//    var halo=1.5
-//    var intensity=0.6
-//    var position= new THREE.Vector3( 17, 3, -40 );
-//    //var position= new THREE.Vector3( 6,2, -10 );
-//    
-//    generateStar(color, position, diameter, intensity, halo,rotation);
-//
-//
-//    var halo=1.5
-//    var diameter=4
-//    var intensity=0.01
-//    var color= 0xff0000
-//    var position= new THREE.Vector3( 24, -2, -50 );
-//    //var position= new THREE.Vector3( 6,2, -10 );
-//    
-//    generateStar(color, position, diameter, intensity, halo,rotation);
+    var color= 0xffff00
+    var diameter=1
+    var halo=1.5
+    var intensity=0.6
+    var position= new THREE.Vector3( 17, 3, -40 );
+    //var position= new THREE.Vector3( 6,2, -10 );
+    
+    generateStar(color, position, diameter, intensity, halo,rotation);
+
+
+    var halo=1.5
+    var diameter=4
+    var intensity=0.01
+    var color= 0xff0000
+    var position= new THREE.Vector3( 24, -2, -50 );
+    //var position= new THREE.Vector3( 6,2, -10 );
+
+    generateStar(color, position, diameter, intensity, halo,rotation);
 
 }
 
@@ -71,8 +71,20 @@ function generateStar(color, position, diameter, intensity, halo, rotation) {
     document.scene.add( starGlow );
     document.starGlow.push(starGlow);
 
-    var light = new THREE.PointLight(color, intensity, 10000);
+    var light = new THREE.DirectionalLight(color, intensity, 1);
+    light.castShadow=true;
     light.position= position;
+    //light.shadowCameraVisible = true;  //debugging box
+
+    light.shadowCameraNear = 1;
+    light.shadowCameraFar = 10-star.position.z;
+    console.log(star.position.z)
+
+    light.shadowDarkness = 0.5;
+    light.shadowCameraLeft = -2.5;
+    light.shadowCameraRight = 2.5;
+    light.shadowCameraTop = 2.5;
+    light.shadowCameraBottom = -2.5;
 
     document.scene.add(light);
     document.light.push(light);

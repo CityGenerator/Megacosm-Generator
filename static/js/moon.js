@@ -8,7 +8,7 @@ function generate_moons(seed){
 
     var color= 0xff9999
     var diameter=.1
-    var position= new THREE.Vector3( 0 ,0, -1 );
+    var position= new THREE.Vector3( 0 ,0, -2 );
     
     generateMoon(color, position, diameter, rotation);
 
@@ -28,6 +28,8 @@ function generateMoon(color, position, diameter, rotation) {
     moon.position=position;
     moon.rotation.y=rotation
     moon.visible=true
+    moon.castShadow=true;
+    moon.receiveShadow=true;
 
     document.scene.add(moon);
     document.moons.push(moon);

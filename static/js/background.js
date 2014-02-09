@@ -15,11 +15,14 @@ function generate_scene() {
     document.scene = new THREE.Scene();
     // A Camera
     document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 100);
-    document.camera.position.z = -3.5;
+    document.camera.position.z = - 1.5;
+    document.camera.position.x = 1.5;
     // And a renderer
     document.renderer = new THREE.WebGLRenderer( {antialias:true} );
 
+
     document.renderer.setSize(WIDTH, HEIGHT);
+    document.renderer.shadowMapEnabled = true;
 
     //Then lets throw a background up for flavor
     background = createBackground(90, 64);
@@ -71,9 +74,9 @@ function update()
     if ( document.moons){
         document.moons.forEach( function(moon){
             moon.position.set(
-              1* Math.sin(m_angle) + document.planet.position.x, 
+              2* Math.sin(m_angle) + document.planet.position.x, 
               0,
-              1* Math.cos(m_angle) + document.planet.position.z 
+              2* Math.cos(m_angle) + document.planet.position.z 
             );
 
         }   )

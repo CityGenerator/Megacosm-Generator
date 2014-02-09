@@ -1,5 +1,4 @@
 
-
 function generate_planet(worldId){
     // planet params
     var radius   = 0.5,
@@ -8,10 +7,15 @@ function generate_planet(worldId){
     // We need to create two parts,
     document.planet = createPlanet(radius, segments, worldId);
     document.planet.rotation.y = 0;
+    document.planet.castShadow=true;
+    document.planet.receiveShadow=true;
+
     document.scene.add(document.planet)
 
     document.clouds = createClouds(radius+0.01, segments);
     document.clouds.rotation.y = 0;
+    document.clouds.castShadow=true;
+    document.clouds.receiveShadow=true;
     document.scene.add(document.clouds)
 
 }
