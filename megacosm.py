@@ -30,7 +30,7 @@ def welcomepage():
     if (worldId == None):
         worldId=random.randint(1,100000)
 
-    starsystem=StarSystem.StarSystem(server,worldId)
+    starsystem=StarSystem.StarSystem(server,{'seed':worldId})
 
     worldname=WorldMap.generate_name(worldId,server)
     return render_template('map.html', worldId=worldId, worldname=worldname)
