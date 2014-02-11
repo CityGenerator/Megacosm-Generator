@@ -1,0 +1,38 @@
+DEL moonpre
+LPUSH moonpre Mo
+LPUSH moonpre Dei
+LPUSH moonpre Pho
+LPUSH moonpre Gana
+LPUSH moonpre Calli
+LPUSH moonpre Hima
+LPUSH moonpre Ela
+LPUSH moonpre Sino
+LPUSH moonpre The
+LPUSH moonpre Cha
+LPUSH moonpre Spo
+LPUSH moonpre Pro
+DEL moonroot
+LPUSH moonroot ro
+LPUSH moonroot ka
+LPUSH moonroot di
+LPUSH moonroot do
+LPUSH moonroot la
+LPUSH moonroot ta
+LPUSH moonroot le
+LPUSH moonroot me
+SET moonpost_chance 30
+DEL moonpost
+LPUSH moonpost bos
+LPUSH moonpost mos
+LPUSH moonpost pa
+LPUSH moonpost sto
+LPUSH moonpost pe
+LPUSH moonpost ke
+LPUSH moonpost lite
+LPUSH moonpost dene
+LPUSH moonpost noe
+LPUSH moonpost se
+LPUSH moonpost thys
+LPUSH moonpost dus
+LPUSH moonpost pso
+LPUSH moonpost theus

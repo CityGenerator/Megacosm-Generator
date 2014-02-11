@@ -1,0 +1,24 @@
+DEL starcount
+ZADD starcount 70   "{'text':'single star',     'count':1}"
+ZADD starcount 95   "{'text':'binary star',     'count':2}"
+ZADD starcount 100  "{'text':'trinary star',    'count':3}"
+
+
+DEL starsize
+ZADD starsize 5     "{'text':'tiny',        'multiplier':0.1}"
+ZADD starsize 10    "{'text':'small',       'multiplier':0.5}"
+ZADD starsize 65    "{'text':'average',     'multiplier':1.0}"
+ZADD starsize 85    "{'text':'large',       'multiplier':2.0}"
+ZADD starsize 95    "{'text':'massive',     'multiplier':8.0}"
+ZADD starsize 100   "{'text':'supermassive','multiplier':20.0}"
+
+
+DEL starcolor
+ZADD starcolor 10   "{'text':'blue',        'color':'0x4699ca'}"
+ZADD starcolor 30   "{'text':'white',       'color':'0xffffff'}"
+ZADD starcolor 70   "{'text':'yellow',      'color':'0xffff79'}"
+ZADD starcolor 85   "{'text':'orange',      'color':'0xff8f37'}"
+ZADD starcolor 95   "{'text':'red',         'color':'0xff0000'}"
+ZADD starcolor 100  "{'text':'brown',       'color':'0xbd732d'}"
+
+

@@ -7,7 +7,7 @@ A tool for creating fantasy campaign settings, including maps, regions, flags, c
 
 * make sure you have python 2.7
 * make sure you have python's virtualenv installed
-* set up Redis
+* set up Redis or (have access to one, like redistogo).
 
 
 On the first run, do the following:
@@ -23,7 +23,7 @@ On the first run, do the following:
     # install the requirements
     pip install -r requirements.txt
 
-    # copy the example config into place
+    # copy the example config into place and configure it
     cp data/config.ini.example data/config.ini
 
     # Load your data

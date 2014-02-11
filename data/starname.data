@@ -1,0 +1,38 @@
+
+
+DEL starpre
+LPUSH starpre To
+LPUSH starpre Na
+LPUSH starpre Wo
+LPUSH starpre Me
+LPUSH starpre Si
+LPUSH starpre Lu
+LPUSH starpre Uu
+LPUSH starpre Aba
+LPUSH starpre Be
+LPUSH starpre Ce
+LPUSH starpre Kro
+
+DEL starroot
+LPUSH starroot r
+LPUSH starroot k
+LPUSH starroot l
+LPUSH starroot j
+LPUSH starroot c
+LPUSH starroot x
+LPUSH starroot n
+
+SET starpost_chance 30
+
+DEL starpost
+LPUSH starpost ay
+LPUSH starpost us
+LPUSH starpost or
+LPUSH starpost an
+LPUSH starpost el
+LPUSH starpost ub
+LPUSH starpost uri
+LPUSH starpost un
+LPUSH starpost ol
+LPUSH starpost on
+
