@@ -49,7 +49,3 @@ for filename in glob.glob("data/*.data") :
 pipe.execute()
 
 
-print server.type('starnamepre')
-
-
-
