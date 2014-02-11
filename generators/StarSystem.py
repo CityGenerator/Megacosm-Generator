@@ -1,17 +1,12 @@
 
 import random
 from generators.Star import Star
+from generators.Generator import Generator
 
-class StarSystem():
-    def __init__(self, server, features={}):
-        for feature, value in features.iteritems():
-            setattr( self, feature, value)
-            print "set",feature,"to",value
-        if 'seed' not in features:
-            self.seed=random.randint(1,10000000)
-        random.seed(self.seed)
+class StarSystem(Generator):
+    def __init__(self, redis, features={}):
+        Generator.__init__(self,redis, features)
         self.generate_stars()
-        
 
     def generate_stars(self):
         """ Do stuff"""
@@ -21,4 +16,4 @@ class StarSystem():
             self.star_count=1
 
         for starId in xrange(self.star_count):
-            self.stars.append(Star())
+            self.stars.append(Star(self.redis))
