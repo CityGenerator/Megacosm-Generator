@@ -26,11 +26,11 @@ app = Flask(__name__)
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
-    worldId= request.args.get('worldId')
-    if (worldId == None):
-        worldId=random.randint(1,100000)
-    random.seed(int(worldId))
-    starsystem=StarSystem.StarSystem(server,{'seed':worldId})
+    seed= request.args.get('seed')
+    if (seed == None):
+        seed=random.randint(1,100000)
+    random.seed(int(seed))
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
 
     return render_template('index.html',starsystem=starsystem) 
 
@@ -38,28 +38,27 @@ def indexpage():
 @app.route('/worldmap')
 def worldmap():
     """A view into the solar system."""
-    worldId= request.args.get('worldId')
-    if (worldId == None):
-        worldId=random.randint(1,100000)
+    seed= request.args.get('seed')
+    if (seed == None):
+        seed=random.randint(1,100000)
+    random.seed(int(seed))
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
 
-    starsystem=StarSystem.StarSystem(server,{'seed':worldId})
-
-    worldname=WorldMap.generate_name(worldId,server)
-    return render_template('map.html', worldId=worldId, worldname=worldname)
+    return render_template('map.html', starsystem=starsystem )
 
 @app.route('/worldmap.png')
 def worldmappng():
     """Generate a worldmap and return it."""
-    worldId= int(request.args.get('worldId'))
-    if (worldId == None):
-        worldId=random.randint(1,100000)
+    seed= int(request.args.get('seed'))
+    if (seed == None):
+        seed=random.randint(1,100000)
     width=800
     height=500
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(worldId,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.colorize_map(mapdata)
@@ -69,16 +68,16 @@ def worldmappng():
 @app.route('/worldbumpmap.png')
 def worldbumpmap():
     """Generate a worldmap and return it."""
-    worldId= int(request.args.get('worldId'))
-    if (worldId == None):
-        worldId=random.randint(1,100000)
+    seed= int(request.args.get('seed'))
+    if (seed == None):
+        seed=random.randint(1,100000)
     width=800
     height=500
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(worldId,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.bump_map(mapdata)
@@ -88,16 +87,16 @@ def worldbumpmap():
 @app.route('/worldspecularmap.png')
 def worldspecularmap():
     """Generate a worldmap and return it."""
-    worldId= int(request.args.get('worldId'))
-    if (worldId == None):
-        worldId=random.randint(1,100000)
+    seed= int(request.args.get('seed'))
+    if (seed == None):
+        seed=random.randint(1,100000)
     width=800
     height=500
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(worldId,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.specular_map(mapdata)

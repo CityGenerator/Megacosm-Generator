@@ -35,9 +35,9 @@
 			    gl_FragColor = vec4( glow, 1.0 );
 			}
 		</script>
+        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name['full']}} ({{starsystem.seed}})</a></h1>
 
-        <h1>Welcome to planet <a href="/?worldId={{worldId}}">{{worldname}} ({{worldId}})</a></h1>
-        <!--<img src="/worldmap.png?worldId={{worldId}}"/>-->
+        <!--<img src="/worldmap.png?seed={{seed}}"/>-->
 
         <div id="planetwindow" style="width:800px;height:500px"></div>
         <script src="static/js/three.min.js"></script>
@@ -54,9 +54,9 @@
             }
 
             generate_scene();
-            generate_stars({{worldId}});
-            generate_moons({{worldId}});
-            generate_planet({{worldId}});
+            generate_stars({{starsystem.seed}});
+            generate_moons({{starsystem.seed}});
+            generate_planet({{starsystem.seed}});
             animate();
         </script>  
     </body>

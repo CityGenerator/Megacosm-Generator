@@ -1,11 +1,11 @@
 
-function generate_planet(worldId){
+function generate_planet(seed){
     // planet params
     var radius   = 0.5,
         segments = 30;
 
     // We need to create two parts,
-    document.planet = createPlanet(radius, segments, worldId);
+    document.planet = createPlanet(radius, segments, seed);
     document.planet.rotation.y = 0;
     document.planet.castShadow=true;
     document.planet.receiveShadow=true;
@@ -20,14 +20,14 @@ function generate_planet(worldId){
 
 }
 
-function createPlanet(radius, segments, worldId) {
+function createPlanet(radius, segments, seed) {
     return new THREE.Mesh(
         new THREE.SphereGeometry(radius, segments, segments),
         new THREE.MeshPhongMaterial({
-            map:         THREE.ImageUtils.loadTexture('/worldmap.png?worldId='+worldId),
-            bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?worldId='+worldId),
+            map:         THREE.ImageUtils.loadTexture('/worldmap.png?seed='+seed),
+            bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?seed='+seed),
             bumpScale:   0.01,
-            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?worldId='+worldId),
+            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
             specular:    new THREE.Color(0x222222)
         })
     );

@@ -1,5 +1,5 @@
 
-function generate_stars(worldId){
+function generate_stars(seed){
     //A little ambient light to see stuff on the back side.
     document.scene.add(new THREE.AmbientLight(0x222222));
 
@@ -10,7 +10,7 @@ function generate_stars(worldId){
     var halo=1.5
     var diameter=1
     var intensity=0.6
-    var rotation=worldId
+    var rotation=seed
 
 
 
