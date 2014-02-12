@@ -11,9 +11,8 @@
     </head>
     <body>
 
-        <h1>Welcome to planet <a href="/?worldId={{starsystem.seed}}">{{starsystem.planet.name['full']}} ({{starsystem.seed}})</a></h1>
+        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name['full']}} ({{starsystem.seed}})</a></h1>
         <a href="/worldmap?seed={{starsystem.seed}}">Worldmap</a>
-        <!--<img src="/worldmap.png?worldId={{worldId}}"/>-->
         <h2> Stars</h2>
         <ul id="stars">
             {% for star in starsystem.stars %}

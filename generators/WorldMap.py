@@ -18,17 +18,11 @@ DEEPWATER=SEALEVEL*0.85
 DEEPESTWATER=SEALEVEL*0.65
 NOISEOCTAVES=6
 
-def generate_name(worldId,server):
-    random.seed(worldId)
-    #FIXME this is friggen manual as hell and needs refactoring to use chances
-    planet = Planet(server)
-    name=planet.name['full']
-    return name
 
-def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
+def generate_map(seed,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
     """ Return a simple matrix of simplex noise from 0-255."""
     mapdata = []
-    random.seed(worldId)
+    random.seed(seed)
     zoom=zoom * 100.0
     riversource=[]
     for x in xrange(height):
@@ -36,7 +30,7 @@ def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoo
         for y in xrange (width):
             xparam=float((x+xoffset)/zoom)
             yparam=float((y+yoffset)/zoom)
-            noisevalue=snoise2(xparam, yparam,  NOISEOCTAVES, 0.52,2.0, height/zoom*2, width/zoom, float(worldId) )
+            noisevalue=snoise2(xparam, yparam,  NOISEOCTAVES, 0.52,2.0, height/zoom*2, width/zoom, float(seed) )
             #convert 1.0...-1.0 to 255...0
             pixel=int((noisevalue+1)/2*PIXEL_DEPTH-1)
             cell={'height': pixel, 'x':x, 'y':y }
