@@ -6,26 +6,38 @@ from generators import WorldMap, Star, StarSystem
 import random
 import redis
 import ConfigParser
+import pprint
+import json
 import os
 import sys
-
 
 config = ConfigParser.RawConfigParser()
 config.read( 'data/config.ini')
 
-#url = config.get('redis', 'url')
-#server=redis.from_url(url)
+url = config.get('redis', 'url')
+server=redis.from_url(url)
 
-
-pool = redis.ConnectionPool(host=config.get('redis', 'host'), port=config.get('redis', 'port'), db=0, password=config.get('redis', 'password'),   )
-server = redis.Redis(connection_pool=pool)    
+#pool = redis.ConnectionPool(host=config.get('redis', 'host'), port=config.get('redis', 'port'), db=0, password=config.get('redis', 'password'),   )
+#server = redis.Redis(connection_pool=pool)    
 
 # This thing here.. does stuff.
 app = Flask(__name__)
 
 @app.route('/')
-def welcomepage():
+def indexpage():
     """This is the first page anyone sees."""
+    worldId= request.args.get('worldId')
+    if (worldId == None):
+        worldId=random.randint(1,100000)
+    random.seed(int(worldId))
+    starsystem=StarSystem.StarSystem(server,{'seed':worldId})
+
+    return render_template('index.html',starsystem=starsystem) 
+
+
+@app.route('/worldmap')
+def worldmap():
+    """A view into the solar system."""
     worldId= request.args.get('worldId')
     if (worldId == None):
         worldId=random.randint(1,100000)
@@ -36,7 +48,7 @@ def welcomepage():
     return render_template('map.html', worldId=worldId, worldname=worldname)
 
 @app.route('/worldmap.png')
-def worldmap():
+def worldmappng():
     """Generate a worldmap and return it."""
     worldId= int(request.args.get('worldId'))
     if (worldId == None):

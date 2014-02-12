@@ -1,0 +1,22 @@
+DEL mooncount
+ZADD mooncount 10 {"text":"no moons", "count":0}
+ZADD mooncount 70 {"text":"single moon", "count":1}
+ZADD mooncount 95 {"text":"double moon", "count":2}
+ZADD mooncount 97 {"text":"triple moon", "count":3}
+ZADD mooncount 100 {"text":"quadruple moon", "count":4}
+
+DEL moonsize
+ZADD moonsize 5 {"text":"tiny", "multiplier":0.1}
+ZADD moonsize 10 {"text":"small", "multiplier":0.5}
+ZADD moonsize 65 {"text":"average", "multiplier":1.0}
+ZADD moonsize 85 {"text":"large", "multiplier":2.0}
+ZADD moonsize 95 {"text":"massive", "multiplier":4.0}
+ZADD moonsize 100 {"text":"supermassive","multiplier":8.0}
+
+DEL mooncolor
+ZADD mooncolor 20 {"text":"light blue", "color":"0xb4dde1"}
+ZADD mooncolor 40 {"text":"briliant silver", "color":"0xCCCCCC"}
+ZADD mooncolor 60 {"text":"bone white", "color":"0xffffff"}
+ZADD mooncolor 80 {"text":"pale yellow", "color":"0xFFF68F"}
+ZADD mooncolor 95 {"text":"rusty red", "color":"0x5C0C0C"}
+ZADD mooncolor 100 {"text":"dull brown", "color":"0x876e4b"}

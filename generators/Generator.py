@@ -4,12 +4,15 @@ import random
 
 class Generator():
     def __init__(self,redis, features={}):
+        """ set any features and generate a seed if one is not included. """
         self.redis=redis
+
+        # For each feature, set it as an attribute for this generator
         for feature, value in features.iteritems():
             setattr( self, feature, value)
+        # If a seed isn't included, generate one.
         if 'seed' not in features:
             self.seed=random.randint(1,10000000)
-        random.seed(self.seed)
 
     def generate_name(self,key):
         """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.
@@ -39,20 +42,25 @@ class Generator():
             print name['full']
         return name   
 
-
     def rand_value(self,key):
+        """ Select a Random Value from the list matching the key in redis. """
         if self.redis.exists(key) and self.redis.type(key) == 'list':
-            return self.redis.lindex(key, random.randint(0,self.redis.llen(key)-1 ))
+            value=self.redis.lindex(key, random.randint(0,self.redis.llen(key)-1 ))
+            return value
         else:
-            raise Exception( "the key %s doesn't appear to exist or isn't a list (%s)." % (key, self.redis.type(key)  ))
+            raise Exception( "the key (%s) doesn't appear to exist or isn't a list (%s)." % (key, self.redis.type(key)  ))
 
-
-    def select_by_roll(self,roll, key):
+    def select_by_roll(self,key, roll=None):
+        """ Using roll, select the closest matching score from key in Redis. """
+        if roll ==None:
+            roll=random.randint(1,100)
+        roll=max(1,min(roll,100))
         if self.redis.exists(key) and self.redis.type(key) == 'zset':
-            rollvalue= self.redis.zrangebyscore(key, roll, 100, 0, 1);
+            rollvalue= self.redis.zrangebyscore(key, roll, 100, 0, 1)
             if rollvalue == None:
-                raise Exception( "the key %s appears to be empty for a value of %s- This should never happen." % (key, roll))
-            return rollvalue
+                raise Exception( "the key (%s) appears to be empty for a roll of %s- This should never happen." % (key, roll))
+            return json.loads(rollvalue[0])
         else:
-            raise Exception( "the key %s doesn't appear to exist or isn't a sorted list (%s)." % (key, self.redis.type(key)))
+            raise Exception( "the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
+
 

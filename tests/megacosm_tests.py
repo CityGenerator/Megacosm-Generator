@@ -18,7 +18,7 @@
 #
 #    def test_index_route(self):
 #        response = self.app.get("/")
-#        self.assertTemplateUsed('map.html')
+#        self.assertTemplateUsed('index.html')
 #        self.assert200(response)
 #
 #
