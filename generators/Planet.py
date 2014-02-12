@@ -1,12 +1,22 @@
 
 import random
 
-class Planet():
+from generators.Generator import Generator
+from generators.Moon import Moon
+import pprint
+
+class Planet(Generator):
     def __init__(self, server, features={}):
-        for feature, value in features.iteritems():
-            setattr( self, feature, value)
-            print "set",feature,"to",value
-        if 'seed' not in features:
-            self.seed=random.randint(1,10000000)
-        random.seed(self.seed)
-        
+        Generator.__init__(self,server,features)
+        self.name=self.generate_name('planet')
+        self.generate_moons()
+
+
+    def generate_moons(self):
+        if ( not hasattr(self, 'moon_count')):
+            mooncount_data=Generator.select_by_roll(self,'mooncount')
+            self.moon_count=mooncount_data['count']
+            self.moon_text=mooncount_data['text']
+        self.moons=[]
+        for moonId in xrange(self.moon_count):
+            self.moons.append(Moon(self.redis))

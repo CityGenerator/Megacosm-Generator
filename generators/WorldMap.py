@@ -2,6 +2,8 @@
 
 # Import the stuffs!
 from noise import snoise2, snoise3, snoise4
+from generators.Star import Star
+from generators.Planet import Planet
 from StringIO import StringIO
 import png
 import random
@@ -19,9 +21,8 @@ NOISEOCTAVES=6
 def generate_name(worldId,server):
     random.seed(worldId)
     #FIXME this is friggen manual as hell and needs refactoring to use chances
-    name = server.lindex('worldnamepre',  random.randint(0,server.llen('worldnamepre')-1 ))
-    name+= server.lindex('worldnameroot', random.randint(0,server.llen('worldnameroot')-1 ))
-    name+= server.lindex('worldnamepost', random.randint(0,server.llen('worldnamepost')-1 ))
+    planet = Planet(server)
+    name=planet.name['full']
     return name
 
 def generate_map(worldId=0,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):

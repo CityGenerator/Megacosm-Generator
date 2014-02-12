@@ -1,14 +1,15 @@
 
+from generators.Generator import Generator
 
-class Star():
-    def __init__(self):
-        self.color = '0xff00ff'
 
-    def generate_name(self,worldId,server):
-        #random.seed(worldId)
+class Star(Generator):
+    def __init__(self, redis, features={}):
+        Generator.__init__(self,redis,features)
+        self.name=self.generate_name('star')
+        color=self.select_by_roll('starcolor')
+        self.color=color['color']
+        self.color_text=color['text']
 
-        #name = server.lindex('worldnamepre',  random.randint(0,server.llen('worldnamepre')-1 ))
-        #name+= server.lindex('worldnameroot', random.randint(0,server.llen('worldnameroot')-1 ))
-        #name+= server.lindex('worldnamepost', random.randint(0,server.llen('worldnamepost')-1 ))
-        return name
-
+        size=self.select_by_roll('starsize')
+        self.multiplier=size['multiplier']
+        self.size_text=size['text']
