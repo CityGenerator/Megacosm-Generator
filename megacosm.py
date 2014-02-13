@@ -11,6 +11,9 @@ import json
 import os
 import sys
 
+MAPWIDTH=500
+MAPHEIGHT=300
+
 config = ConfigParser.RawConfigParser()
 config.read( 'data/config.ini')
 
@@ -49,16 +52,15 @@ def worldmap():
 @app.route('/worldmap.png')
 def worldmappng():
     """Generate a worldmap and return it."""
-    seed= int(request.args.get('seed'))
+    seed= request.args.get('seed')
     if (seed == None):
         seed=random.randint(1,100000)
-    width=800
-    height=500
+    random.seed(int(seed))
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.colorize_map(mapdata)
@@ -71,13 +73,11 @@ def worldbumpmap():
     seed= int(request.args.get('seed'))
     if (seed == None):
         seed=random.randint(1,100000)
-    width=800
-    height=500
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.bump_map(mapdata)
@@ -90,13 +90,11 @@ def worldspecularmap():
     seed= int(request.args.get('seed'))
     if (seed == None):
         seed=random.randint(1,100000)
-    width=800
-    height=500
     zoom=1.0
     xoffset=0
     yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(seed,width,height,xoffset,yoffset,zoom)
+    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
 
     # Colorize the data and return a png.
     myImage=WorldMap.specular_map(mapdata)

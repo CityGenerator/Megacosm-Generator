@@ -6,6 +6,7 @@ from generators.Star import Star
 from generators.Planet import Planet
 from StringIO import StringIO
 import png
+import math
 import random
 #import pprint
 

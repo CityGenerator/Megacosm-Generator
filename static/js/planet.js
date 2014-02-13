@@ -26,8 +26,8 @@ function createPlanet(radius, segments, seed) {
             map:         THREE.ImageUtils.loadTexture('/worldmap.png?seed='+seed),
             bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?seed='+seed),
             bumpScale:   0.01,
-            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
-            specular:    new THREE.Color(0x222222)
+//            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
+//            specular:    new THREE.Color(0x222222)
         })
     );
 }

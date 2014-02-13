@@ -24,7 +24,7 @@ function generateStar(color, position, diameter, intensity, halo, rotation) {
     document.scene.add(star);
     document.star.push(star);
 
-    this.starGlow = new THREE.Mesh( new THREE.SphereGeometry(diameter, 32, 32)   , Create_Shader_Material(color) );
+    this.starGlow = new THREE.Mesh( new THREE.SphereGeometry(diameter+0.5, 32, 32)   , Create_Shader_Material(color) );
     starGlow.position = position
     starGlow.material.side = THREE.BackSide; 
     starGlow.scale.multiplyScalar(halo);
