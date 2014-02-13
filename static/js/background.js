@@ -14,9 +14,9 @@ function generate_scene() {
     // We need a scene
     document.scene = new THREE.Scene();
     // A Camera
-    document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 100);
-    document.camera.position.z = - 1.5;
-    document.camera.position.x = 1.5;
+    document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 1000);
+    document.camera.position.z = -3;
+    document.camera.position.x = 6;
     // And a renderer
     document.renderer = new THREE.WebGLRenderer( {antialias:true} );
 
@@ -25,8 +25,12 @@ function generate_scene() {
     document.renderer.shadowMapEnabled = true;
 
     //Then lets throw a background up for flavor
-    background = createBackground(90, 64);
+    background = createBackground(300, 64);
     document.scene.add(background);
+
+    document.scene.add(new THREE.AmbientLight(0x222222));
+
+
 
 
     // Add the control features
@@ -67,19 +71,8 @@ function update()
                 new THREE.Vector3().subVectors( document.camera.position, glow.position );
         }   )
     }
-    speed=0.2
-    time = time + speed;
-    var m_angle = time * 0.01;
-
     if ( document.moons){
-        document.moons.forEach( function(moon){
-            moon.position.set(
-              2* Math.sin(m_angle) + document.planet.position.x, 
-              0,
-              2* Math.cos(m_angle) + document.planet.position.z 
-            );
-
-        }   )
+        update_moons()
     }
 
 

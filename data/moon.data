@@ -1,3 +1,5 @@
+# Details for moons.
+
 DEL mooncount
 ZADD mooncount 10 {"text":"no moons", "count":0}
 ZADD mooncount 70 {"text":"single moon", "count":1}
@@ -6,12 +8,43 @@ ZADD mooncount 97 {"text":"triple moon", "count":3}
 ZADD mooncount 100 {"text":"quadruple moon", "count":4}
 
 DEL moonsize
-ZADD moonsize 5 {"text":"tiny", "multiplier":0.1}
-ZADD moonsize 10 {"text":"small", "multiplier":0.5}
-ZADD moonsize 65 {"text":"average", "multiplier":1.0}
-ZADD moonsize 85 {"text":"large", "multiplier":2.0}
-ZADD moonsize 95 {"text":"massive", "multiplier":4.0}
-ZADD moonsize 100 {"text":"supermassive","multiplier":8.0}
+# moons in our solar system range from Ganymede (1/4 earth) to Miranda (3.6% radius of earth)
+ZADD moonsize 10  {"text":"tiny",   "multiplier":0.05}
+ZADD moonsize 20  {"text":"tiny",   "multiplier":0.07}
+ZADD moonsize 30  {"text":"small",  "multiplier":0.1}
+ZADD moonsize 40  {"text":"small",  "multiplier":0.2}
+ZADD moonsize 50  {"text":"small",  "multiplier":0.3}
+ZADD moonsize 60  {"text":"average","multiplier":0.4}
+ZADD moonsize 70  {"text":"average","multiplier":0.5}
+ZADD moonsize 80  {"text":"large",  "multiplier":0.6}
+ZADD moonsize 90  {"text":"large",  "multiplier":0.7}
+ZADD moonsize 100 {"text":"massive","multiplier":0.8}
+
+
+DEL moonspeed
+# moons in our solar system range from Ganymede (1/4 earth) to Miranda (3.6% radius of earth)
+ZADD moonspeed 5  {"text":"crawling",  "multiplier":0.2}
+ZADD moonspeed 10  {"text":"crawling",  "multiplier":0.3}
+ZADD moonspeed 15  {"text":"crawling",  "multiplier":0.4}
+ZADD moonspeed 20  {"text":"slow",      "multiplier":0.5}
+ZADD moonspeed 25  {"text":"slow",      "multiplier":0.6}
+ZADD moonspeed 30  {"text":"slow",      "multiplier":0.7}
+ZADD moonspeed 40  {"text":"average",   "multiplier":0.8}
+ZADD moonspeed 50  {"text":"average",   "multiplier":0.9}
+ZADD moonspeed 60  {"text":"average",   "multiplier":1.0}
+ZADD moonspeed 70  {"text":"average",   "multiplier":1.1}
+ZADD moonspeed 80  {"text":"quick",     "multiplier":1.2}
+ZADD moonspeed 85  {"text":"quick",     "multiplier":1.3}
+ZADD moonspeed 90  {"text":"fast",      "multiplier":1.4}
+ZADD moonspeed 95  {"text":"fast",      "multiplier":1.5}
+ZADD moonspeed 100 {"text":"fast",      "multiplier":1.6}
+
+
+DEL moonorbit
+LPUSH moonorbit {"text": "close",       "multiplier": 1.0}
+LPUSH moonorbit {"text": "near",        "multiplier": 2.0}
+LPUSH moonorbit {"text": "far",         "multiplier": 4.0}
+LPUSH moonorbit {"text": "distant",     "multiplier": 8.0}
 
 DEL mooncolor
 ZADD mooncolor 20 {"text":"light blue", "color":"0xb4dde1"}

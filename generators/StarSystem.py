@@ -1,5 +1,6 @@
 
 import random
+import json
 from generators.Star import Star
 from generators.Planet import Planet
 from generators.Generator import Generator
@@ -19,8 +20,12 @@ class StarSystem(Generator):
             self.star_count=starcount_data['count']
             self.star_text=starcount_data['text']
 
+
+        positions=self.redis.lrange('starposition', 0,-1)
+            
         for starId in xrange(self.star_count):
-            self.stars.append(Star(self.redis))
+            random.shuffle(positions)
+            self.stars.append(Star(self.redis, {'pos': json.loads(positions.pop(0))  }))
 
     def generate_planet(self):
         """ Do stuff"""

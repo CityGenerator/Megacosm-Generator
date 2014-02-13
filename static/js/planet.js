@@ -1,23 +1,22 @@
 
-function generate_planet(seed){
+function generate_planet(seed, size){
     // planet params
-    var radius   = 0.5,
         segments = 30;
 
     // We need to create two parts,
-    document.planet = createPlanet(radius, segments, seed);
+    document.planet = createPlanet(size, segments, seed);
     document.planet.rotation.y = 0;
+    
     document.planet.castShadow=true;
     document.planet.receiveShadow=true;
 
     document.scene.add(document.planet)
 
-    document.clouds = createClouds(radius+0.01, segments);
+    document.clouds = createClouds(size*1.01, segments);
     document.clouds.rotation.y = 0;
     document.clouds.castShadow=true;
     document.clouds.receiveShadow=true;
     document.scene.add(document.clouds)
-
 }
 
 function createPlanet(radius, segments, seed) {

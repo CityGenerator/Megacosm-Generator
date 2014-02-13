@@ -126,13 +126,12 @@ def bump_map(mapdata):
 def specular_map(mapdata):
     """ Convert the black and white pixel data to actual map-looking colors."""
     image=[]
-    waterline=145
     for row in mapdata:
         imagerow=[]
         for cell in row:
             pixel=cell['height'];
             color=(255,255,255) # land
-            if (pixel >= waterline):
+            if (pixel >= SEALEVEL):
                 color=(0,0,0) #water is flat
 
             #Note that this is actually tripling the width of the array for RGB values.

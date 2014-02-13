@@ -1,54 +1,14 @@
 
-function generate_stars(seed){
-    //A little ambient light to see stuff on the back side.
-    document.scene.add(new THREE.AmbientLight(0x222222));
-
-
-    document.star=[]
-    document.starGlow=[]
-    document.light=[]
-    var halo=1.5
-    var diameter=1
-    var intensity=0.6
-    var rotation=seed
-
-
-
-    // Lets replicate the light of a single star to start with.
-    var color= 0x99ffff
-    var diameter=.5
-    var halo=2
-    var intensity=1
-    var position= new THREE.Vector3( 10,0, -40 );
-    
-    generateStar(color, position, diameter, intensity, halo, rotation);
-
-    var color= 0xffff00
-    var diameter=1
-    var halo=1.5
-    var intensity=0.6
-    var position= new THREE.Vector3( 17, 3, -40 );
-    //var position= new THREE.Vector3( 6,2, -10 );
-    
-    generateStar(color, position, diameter, intensity, halo,rotation);
-
-
-    var halo=1.5
-    var diameter=4
-    var intensity=0.01
-    var color= 0xff0000
-    var position= new THREE.Vector3( 24, -2, -50 );
-    //var position= new THREE.Vector3( 6,2, -10 );
-
-    generateStar(color, position, diameter, intensity, halo,rotation);
-
-}
-
-
-
-
 function generateStar(color, position, diameter, intensity, halo, rotation) {
-
+    if (document.star == undefined){
+        document.star=[]
+    }
+    if (document.starGlow == undefined){
+        document.starGlow=[]
+    }
+    if (document.light == undefined){
+        document.light=[]
+    }
     var sphereGeom = new THREE.SphereGeometry(diameter, 32, 32);
     var starMaterial = new THREE.MeshPhongMaterial( 
             {  
@@ -76,9 +36,8 @@ function generateStar(color, position, diameter, intensity, halo, rotation) {
     light.position= position;
     //light.shadowCameraVisible = true;  //debugging box
 
-    light.shadowCameraNear = 1;
-    light.shadowCameraFar = 10-star.position.z;
-    console.log(star.position.z)
+    light.shadowCameraNear = 10;
+    light.shadowCameraFar = 20-star.position.x
 
     light.shadowDarkness = 0.5;
     light.shadowCameraLeft = -2.5;

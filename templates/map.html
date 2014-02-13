@@ -54,9 +54,24 @@
             }
 
             generate_scene();
-            generate_stars({{starsystem.seed}});
-            generate_moons({{starsystem.seed}});
-            generate_planet({{starsystem.seed}});
+            {% for star in starsystem.stars %}
+        
+                console.log("star: {{star.name['full']}}: {{star.pos.x}}, {{star.pos.y}}, {{star.pos.z}} Luminosity: {{star.luminosity}}" )
+                var position= new THREE.Vector3({{star.pos.x}}-50+{{star.multiplier}},{{star.pos.y}},{{star.pos.z}}  );
+                generateStar({{star.color}}, position, {{star.multiplier}}, {{star.luminosity}}, 1+{{star.luminosity}}, {{loop.index}});
+
+            {% endfor %}
+            {% for moon in starsystem.planet.moons %}
+        
+                console.log("moon: {{moon.name['full']}}: Diameter: {{starsystem.planet.size*moon.multiplier}} Orbit: {{moon.orbit.multiplier}} Speed: {{moon.speed}} color:{{moon.color}}" )
+                //generateMoon({{moon.color}},  {{starsystem.planet.size}}*{{moon.multiplier}},{{moon.orbit.multiplier}},  {{loop.index}});
+                generateMoon({{moon.color}},  {{starsystem.planet.size}}*{{moon.multiplier}},{{moon.orbit.multiplier}}, {{moon.speed}}, {{loop.index}});
+
+            {% endfor %}
+
+            console.log("planet: {{starsystem.planet.name['full']}}: size: {{starsystem.planet.size}}" )
+            generate_planet({{starsystem.seed}}, {{starsystem.planet.size}});
+
             animate();
         </script>  
     </body>
