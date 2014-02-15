@@ -1,38 +1,37 @@
 
+DEL   namestarpre
+LPUSH namestarpre To
+LPUSH namestarpre Na
+LPUSH namestarpre Wo
+LPUSH namestarpre Me
+LPUSH namestarpre Si
+LPUSH namestarpre Lu
+LPUSH namestarpre Uu
+LPUSH namestarpre Aba
+LPUSH namestarpre Be
+LPUSH namestarpre Ce
+LPUSH namestarpre Kro
 
-DEL starpre
-LPUSH starpre To
-LPUSH starpre Na
-LPUSH starpre Wo
-LPUSH starpre Me
-LPUSH starpre Si
-LPUSH starpre Lu
-LPUSH starpre Uu
-LPUSH starpre Aba
-LPUSH starpre Be
-LPUSH starpre Ce
-LPUSH starpre Kro
+DEL   namestarroot
+LPUSH namestarroot r
+LPUSH namestarroot k
+LPUSH namestarroot l
+LPUSH namestarroot j
+LPUSH namestarroot c
+LPUSH namestarroot x
+LPUSH namestarroot n
 
-DEL starroot
-LPUSH starroot r
-LPUSH starroot k
-LPUSH starroot l
-LPUSH starroot j
-LPUSH starroot c
-LPUSH starroot x
-LPUSH starroot n
+SET   namestarpost_chance 30
 
-SET starpost_chance 30
-
-DEL starpost
-LPUSH starpost ay
-LPUSH starpost us
-LPUSH starpost or
-LPUSH starpost an
-LPUSH starpost el
-LPUSH starpost ub
-LPUSH starpost uri
-LPUSH starpost un
-LPUSH starpost ol
-LPUSH starpost on
+DEL   namestarpost
+LPUSH namestarpost ay
+LPUSH namestarpost us
+LPUSH namestarpost or
+LPUSH namestarpost an
+LPUSH namestarpost el
+LPUSH namestarpost ub
+LPUSH namestarpost uri
+LPUSH namestarpost un
+LPUSH namestarpost ol
+LPUSH namestarpost on
 

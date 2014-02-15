@@ -6,13 +6,25 @@ class Generator():
     def __init__(self,redis, features={}):
         """ set any features and generate a seed if one is not included. """
         self.redis=redis
+        namekey= self.__class__.__name__.lower()
+        self.name=self.generate_name('name'+namekey)
 
         # For each feature, set it as an attribute for this generator
         for feature, value in features.iteritems():
             setattr( self, feature, value)
         # If a seed isn't included, generate one.
+
         if 'seed' not in features:
             self.seed=random.randint(1,10000000)
+
+
+        for key in redis.keys(namekey+'_*'):
+            if redis.type(key) == 'zset':
+                feature=key.replace(namekey+'_','')
+                print "adding ",feature,"to ", namekey
+                setattr( self, feature, Generator.select_by_roll(self,key) )
+
+
 
     def generate_name(self,key):
         """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.

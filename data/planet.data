@@ -1,24 +1,82 @@
+# Planet details
+DEL  planet_size
+ZADD planet_size 5  {"text":"tiny",      "multiplier":0.4}
+ZADD planet_size 10 {"text":"small",     "multiplier":0.7}
+ZADD planet_size 65 {"text":"average",   "multiplier":1.0}
+ZADD planet_size 85 {"text":"large",     "multiplier":1.5}
+ZADD planet_size 100 {"text":"massive",  "multiplier":2.0}
 
-DEL planetsize
-ZADD planetsize 5  {"text":"tiny",      "diameter":0.4}
-ZADD planetsize 10 {"text":"small",     "diameter":0.7}
-ZADD planetsize 65 {"text":"average",   "diameter":1.0}
-ZADD planetsize 85 {"text":"large",     "diameter":1.5}
-ZADD planetsize 100 {"text":"massive",  "diameter":2.0}
+DEL  planet_temp
+ZADD planet_temp 5   {"text":"unbearably cold", "multiplier":0.5}
+ZADD planet_temp 10  {"text":"freezing",        "multiplier":0.6}
+ZADD planet_temp 15  {"text":"cold",            "multiplier":0.7}
+ZADD planet_temp 20  {"text":"cool",            "multiplier":0.8}
+ZADD planet_temp 30  {"text":"mild",            "multiplier":0.9}
+ZADD planet_temp 70  {"text":"ideal",           "multiplier":1.0}
+ZADD planet_temp 80  {"text":"pleasant",        "multiplier":1.1}
+ZADD planet_temp 85  {"text":"warm",            "multiplier":1.2}
+ZADD planet_temp 90  {"text":"hot",             "multiplier":1.3}
+ZADD planet_temp 95  {"text":"sweltering",      "multiplier":1.4}
+ZADD planet_temp 100 {"text":"unbearably hot",  "multiplier":1.5}
+                              
+DEL  planet_atmosphere
+ZADD planet_atmosphere 5   {"text":"thin",     "opacity":0.01}
+ZADD planet_atmosphere 10  {"text":"meager",   "opacity":0.10}
+ZADD planet_atmosphere 25  {"text":"slight",   "opacity":0.30}
+ZADD planet_atmosphere 75  {"text":"average",  "opacity":0.50}
+ZADD planet_atmosphere 85  {"text":"thick",    "opacity":0.70}
+ZADD planet_atmosphere 95  {"text":"heavt",    "opacity":0.90}
+ZADD planet_atmosphere 100 {"text":"dense",    "opacity":0.99}
 
-#DEL starposition
-#LPUSH starposition {"text": "companion",    "x":-100,    "y":4,  "z":4  }
-#LPUSH starposition {"text": "companion",    "x":-100,    "y":4,  "z":-4 }
-#LPUSH starposition {"text": "companion",    "x":-100,    "y":-4, "z":4  }
-#LPUSH starposition {"text": "companion",    "x":-100,    "y":-4, "z":-4 }
+
+DEL  planet_wind
+ZADD planet_wind 5   {"text":"dead",         "multiplier":0.5}
+ZADD planet_wind 10  {"text":"soft",         "multiplier":0.7}
+ZADD planet_wind 25  {"text":"slight",       "multiplier":0.9}
+ZADD planet_wind 75  {"text":"breezy",       "multiplier":1.0}
+ZADD planet_wind 85  {"text":"gusty",        "multiplier":1.1}
+ZADD planet_wind 95  {"text":"heavy",        "multiplier":1.3}
+ZADD planet_wind 100 {"text":"overwhelming", "multiplier":1.5}
+
+DEL  planet_day
+ZADD planet_day 5   {"text":"short",       "minhour":10,     "maxhour":15 }
+ZADD planet_day 10  {"text":"swift",       "minhour":16,     "maxhour":20 }
+ZADD planet_day 90  {"text":"average",     "minhour":21,     "maxhour":40 }
+ZADD planet_day 95  {"text":"slow",        "minhour":40,     "maxhour":50 }
+ZADD planet_day 100 {"text":"long",        "minhour":51,     "maxhour":100}
+
+DEL  planet_day
+ZADD planet_day 5   {"text":"short",       "minhour":10,     "maxhour":15 }
+ZADD planet_day 10  {"text":"swift",       "minhour":16,     "maxhour":20 }
+ZADD planet_day 90  {"text":"average",     "minhour":21,     "maxhour":40 }
+ZADD planet_day 95  {"text":"slow",        "minhour":40,     "maxhour":50 }
+ZADD planet_day 100 {"text":"long",        "minhour":51,     "maxhour":100}
+
+DEL  planet_civilization
+ZADD planet_civilization 5   {"text":"crude"       }
+ZADD planet_civilization 10  {"text":"scattered"   }
+ZADD planet_civilization 90  {"text":"moderate"    }
+ZADD planet_civilization 95  {"text":"prosperous"  }
+ZADD planet_civilization 100 {"text":"thriving"    }
+
+DEL  planet_precipitation
+ZADD planet_precipitation  10 {"text":"scarce",    "multiplier":0.5 }
+ZADD planet_precipitation  30 {"text":"rare",      "multiplier":0.8 }
+ZADD planet_precipitation  55 {"text":"common",    "multiplier":0.9 }
+ZADD planet_precipitation  85 {"text":"plentiful", "multiplier":1.1 }
+ZADD planet_precipitation  95 {"text":"abundant",  "multiplier":1.2 }
+ZADD planet_precipitation 100 {"text":"excessive", "multiplier":1.5 }
+
+# Details for moons.
+
+DEL  planet_mooncount
+ZADD planet_mooncount 10     {"text":"no moons",         "count":0}
+ZADD planet_mooncount 70     {"text":"single moon",      "count":1}
+ZADD planet_mooncount 95     {"text":"double moon",      "count":2}
+ZADD planet_mooncount 97     {"text":"triple moon",      "count":3}
+ZADD planet_mooncount 100    {"text":"quadruple moon",   "count":4}
 
 
-#    <surface> <!-- in millions of square km TODO verify this is KM!!!!!-->
-#        <option          max="10" minkm="65000000"    maxkm="85000000"   size="tiny"    />  <!-- ~Mercury -->
-#        <option min="11" max="20" minkm="85000000"    maxkm="500000000"  size="small"   /> <!-- ~venus -->
-#        <option min="21" max="80" minkm="500000000"   maxkm="760000000"  size="average" /> <!-- ~earth -->
-#        <option min="81"          minkm="760000000"   maxkm="1048000000" size="large"   /> <!-- large superearth -->
-#        <option min="81"          minkm="1048000000"  maxkm="1448000000" size="massive" /> <!-- massive superearth -->
 
 
 #    <atmosphere reason_chance='50' > <!-- The sky is _________[, partially due to ______ high in the atmosphere].-->
@@ -74,40 +132,6 @@ ZADD planetsize 100 {"text":"massive",  "diameter":2.0}
 #        </option>
 #    </atmosphere>
 #
-#    <basetemp>
-#        <option pop_mod="0.80" >unbearably cold</option>
-#        <option pop_mod="0.90" >freezing</option>
-#        <option pop_mod="0.95" >cold</option>
-#        <option pop_mod="1.00" >chilly</option>
-#        <option pop_mod="1.00" >cool</option>
-#        <option pop_mod="1.10" >mild</option>
-#        <option pop_mod="1.12" >ideal</option>
-#        <option pop_mod="1.10" >pleasant</option>
-#        <option pop_mod="1.00" >warm</option>
-#        <option pop_mod="0.95" >hot</option>
-#        <option pop_mod="0.90" >unbearably hot</option>
-#    </basetemp>
-#    <air>
-#        <option >thin</option>
-#        <option >dense</option>
-#        <option >heavy</option>
-#        <option >thick</option>
-#        <option >fragile</option>
-#        <option >slight</option>
-#        <option >poor</option>
-#        <option >meager</option>
-#        <option >sparse</option>
-#        <option >light</option>
-#        <option >whispy</option>
-#    </air>
-#    <wind>
-#        <option >breezy</option>
-#        <option >dead</option>
-#        <option >soft</option>
-#        <option >heavy</option>
-#        <option >strong</option>
-#        <option >incredibly strong</option>
-#    </wind>
 #
 #
 #
@@ -127,35 +151,12 @@ ZADD planetsize 100 {"text":"massive",  "diameter":2.0}
 #        <option min="99" max="99"  minday="300001" maxday="700000" />
 #    </year>
 #
-#    <day>
-#        <option          max="5"  minhour="10"      maxhour="15" />
-#        <option min="6"  max="10" minhour="16"      maxhour="20" />
-#        <option min="11" max="90" minhour="21"      maxhour="40" />
-#        <option min="91" max="98" minhour="40"      maxhour="50" />
-#        <option min="99"          minhour="51"      maxhour="100" />
-#    </day>
 #    
 #            
 #    </surface>
 #
 #
-#    <surfacewater>
-#        <option          max="10" >scarce</option>
-#        <option min="10" max="31" >rare</option>
-#        <option min="30" max="55" >common</option>
-#        <option min="65" max="85" >plentiful</option>
-#        <option min="86" max="95" >abundant</option>
-#        <option min="96"          >excessive</option>
-#    </surfacewater>
-#
-#    <civilization>
-#        <option          max="10" modifier="-5" >crude</option>
-#        <option min="11" max="20" modifier="-3" >scattered</option>
-#        <option min="21" max="80" modifier="0"  >moderate</option>
-#        <option min="81" max="90" modifier="3"  >prosperous</option>
-#        <option min="91"          modifier="5"  >thriving</option>
-#    </civilization>
-#
+
 #    <smallstorms>
 #        <option          max="10" >scarce</option>
 #        <option min="10" max="31" >rare</option>
@@ -164,15 +165,6 @@ ZADD planetsize 100 {"text":"massive",  "diameter":2.0}
 #        <option min="86" max="95" >abundant</option>
 #        <option min="96"          >excessive</option>
 #    </smallstorms>
-#
-#    <precipitation>
-#        <option          max="10" >scarce</option>
-#        <option min="10" max="31" >rare</option>
-#        <option min="30" max="55" >common</option>
-#        <option min="65" max="85" >plentiful</option>
-#        <option min="86" max="95" >abundant</option>
-#        <option min="96"          >excessive</option>
-#    </precipitation>
 #
 #    <clouds>
 #        <option          max="10" >scarce</option>

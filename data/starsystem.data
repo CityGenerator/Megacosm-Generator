@@ -1,0 +1,7 @@
+
+
+DEL  starsystem_starcount
+ZADD starsystem_starcount 70   {"text":"single star",  "count":1}
+ZADD starsystem_starcount 95   {"text":"binary star",  "count":2}
+ZADD starsystem_starcount 100  {"text":"trinary star", "count":3}
+

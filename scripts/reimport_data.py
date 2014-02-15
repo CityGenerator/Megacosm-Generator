@@ -15,7 +15,7 @@ url = config.get('redis', 'url')
 server=redis.from_url(url)
 pipe=server.pipeline()
 
-
+pipe.flushall()
 linenumber=0
 for filename in glob.glob("data/*.data") :
     raw_data=open(filename)

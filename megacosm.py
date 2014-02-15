@@ -56,14 +56,10 @@ def worldmappng():
     if (seed == None):
         seed=random.randint(1,100000)
     random.seed(int(seed))
-    zoom=1.0
-    xoffset=0
-    yoffset=0
     # Generate the map data
-    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
-
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
     # Colorize the data and return a png.
-    myImage=WorldMap.colorize_map(mapdata)
+    myImage=WorldMap.colorize_map(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
@@ -73,14 +69,12 @@ def worldbumpmap():
     seed= int(request.args.get('seed'))
     if (seed == None):
         seed=random.randint(1,100000)
-    zoom=1.0
-    xoffset=0
-    yoffset=0
-    # Generate the map data
-    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
+    random.seed(int(seed))
 
+    # Generate the map data
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
     # Colorize the data and return a png.
-    myImage=WorldMap.bump_map(mapdata)
+    myImage=WorldMap.bump_map(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
@@ -90,14 +84,12 @@ def worldspecularmap():
     seed= int(request.args.get('seed'))
     if (seed == None):
         seed=random.randint(1,100000)
-    zoom=1.0
-    xoffset=0
-    yoffset=0
-    # Generate the map data
-    mapdata=WorldMap.generate_map(seed,MAPWIDTH,MAPHEIGHT,xoffset,yoffset,zoom)
+    random.seed(int(seed))
 
+    # Generate the map data
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
     # Colorize the data and return a png.
-    myImage=WorldMap.specular_map(mapdata)
+    myImage=WorldMap.specular_map(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 

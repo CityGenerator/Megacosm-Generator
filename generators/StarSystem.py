@@ -13,17 +13,11 @@ class StarSystem(Generator):
 
     def generate_stars(self):
         """ Do stuff"""
-        if ( not  hasattr(self, 'stars')):
-            self.stars=[]
-        if ( not  hasattr(self, 'star_count')):
-            starcount_data=Generator.select_by_roll(self,'starcount')
-            self.star_count=starcount_data['count']
-            self.star_text=starcount_data['text']
-
+        self.stars=[]
 
         positions=self.redis.lrange('starposition', 0,-1)
-            
-        for starId in xrange(self.star_count):
+
+        for starId in xrange(self.starcount['count']):
             random.shuffle(positions)
             self.stars.append(Star(self.redis, {'pos': json.loads(positions.pop(0))  }))
 

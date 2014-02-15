@@ -1,38 +1,38 @@
-DEL moonpre
-LPUSH moonpre Mo
-LPUSH moonpre Dei
-LPUSH moonpre Pho
-LPUSH moonpre Gana
-LPUSH moonpre Calli
-LPUSH moonpre Hima
-LPUSH moonpre Ela
-LPUSH moonpre Sino
-LPUSH moonpre The
-LPUSH moonpre Cha
-LPUSH moonpre Spo
-LPUSH moonpre Pro
-DEL moonroot
-LPUSH moonroot ro
-LPUSH moonroot ka
-LPUSH moonroot di
-LPUSH moonroot do
-LPUSH moonroot la
-LPUSH moonroot ta
-LPUSH moonroot le
-LPUSH moonroot me
-SET moonpost_chance 30
-DEL moonpost
-LPUSH moonpost bos
-LPUSH moonpost mos
-LPUSH moonpost pa
-LPUSH moonpost sto
-LPUSH moonpost pe
-LPUSH moonpost ke
-LPUSH moonpost lite
-LPUSH moonpost dene
-LPUSH moonpost noe
-LPUSH moonpost se
-LPUSH moonpost thys
-LPUSH moonpost dus
-LPUSH moonpost pso
-LPUSH moonpost theus
+DEL   namemoonpre
+LPUSH namemoonpre Mo
+LPUSH namemoonpre Dei
+LPUSH namemoonpre Pho
+LPUSH namemoonpre Gana
+LPUSH namemoonpre Calli
+LPUSH namemoonpre Hima
+LPUSH namemoonpre Ela
+LPUSH namemoonpre Sino
+LPUSH namemoonpre The
+LPUSH namemoonpre Cha
+LPUSH namemoonpre Spo
+LPUSH namemoonpre Pro
+DEL   namemoonroot
+LPUSH namemoonroot ro
+LPUSH namemoonroot ka
+LPUSH namemoonroot di
+LPUSH namemoonroot do
+LPUSH namemoonroot la
+LPUSH namemoonroot ta
+LPUSH namemoonroot le
+LPUSH namemoonroot me
+SET   namemoonpost_chance 30
+DEL   namemoonpost
+LPUSH namemoonpost bos
+LPUSH namemoonpost mos
+LPUSH namemoonpost pa
+LPUSH namemoonpost sto
+LPUSH namemoonpost pe
+LPUSH namemoonpost ke
+LPUSH namemoonpost lite
+LPUSH namemoonpost dene
+LPUSH namemoonpost noe
+LPUSH namemoonpost se
+LPUSH namemoonpost thys
+LPUSH namemoonpost dus
+LPUSH namemoonpost pso
+LPUSH namemoonpost theus

@@ -22,7 +22,7 @@
         <h2> Moons</h2>
         <ul id="moons">
             {% for moon in starsystem.planet.moons %}
-                <li>{{ moon.name['full']  }} ({{ moon.size_text  }}, {{ moon.color_text  }})</a></li>
+                <li>{{ moon.name['full']  }} ({{ moon.size['text']  }}, {{ moon.color['text']  }})</a></li>
             {% endfor %}
         </ul>
     </body>

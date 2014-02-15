@@ -54,23 +54,28 @@
             }
 
             generate_scene();
+
             {% for star in starsystem.stars %}
         
                 console.log("star: {{star.name['full']}}: {{star.pos.x}}, {{star.pos.y}}, {{star.pos.z}} Luminosity: {{star.luminosity}}" )
-                var position= new THREE.Vector3({{star.pos.x}}-50+{{star.multiplier}},{{star.pos.y}},{{star.pos.z}}  );
-                generateStar({{star.color}}, position, {{star.multiplier}}, {{star.luminosity}}, 1+{{star.luminosity}}, {{loop.index}});
+                var position= new THREE.Vector3({{star.pos.x}}-50+{{star.size['multiplier']}},{{star.pos.y}},{{star.pos.z}}  );
+                generateStar({{star.color['color']}}, position, {{star.size['multiplier']}}, {{star.color['luminosity']}}, 1+{{star.color['luminosity']}}, {{loop.index}});
 
             {% endfor %}
             {% for moon in starsystem.planet.moons %}
-        
-                console.log("moon: {{moon.name['full']}}: Diameter: {{starsystem.planet.size*moon.multiplier}} Orbit: {{moon.orbit.multiplier}} Speed: {{moon.speed}} color:{{moon.color}}" )
-                //generateMoon({{moon.color}},  {{starsystem.planet.size}}*{{moon.multiplier}},{{moon.orbit.multiplier}},  {{loop.index}});
-                generateMoon({{moon.color}},  {{starsystem.planet.size}}*{{moon.multiplier}},{{moon.orbit.multiplier}}, {{moon.speed}}, {{loop.index}});
+                var orbitdistance={{(loop.index**2)/2+1}};
+                var orbitspeed={{1+(loop.length-loop.index)/loop.length}};
+                console.log("moon: {{moon.name['full']}} orbitdistance: "+orbitdistance+" orbitspeed: "+orbitspeed) 
+                generateMoon({{moon.color['color']}},  
+                             {{starsystem.planet.size['multiplier']}}*{{moon.size['multiplier']}},
+                             orbitdistance, //orbit
+                             orbitspeed,  //speed
+                            {{loop.index}}); //rotation
 
             {% endfor %}
 
-            console.log("planet: {{starsystem.planet.name['full']}}: size: {{starsystem.planet.size}}" )
-            generate_planet({{starsystem.seed}}, {{starsystem.planet.size}});
+            console.log("planet: {{starsystem.planet.name['full']}}: size: {{starsystem.planet.size['multiplier']}}" )
+            generate_planet({{starsystem.seed}}, {{starsystem.planet.size['multiplier']}});
 
             animate();
         </script>  

@@ -14,7 +14,7 @@ function generate_scene() {
     document.scene = new THREE.Scene();
     // A Camera
     document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 1000);
-  //  document.camera.position.y = 3;
+    //document.camera.position.y = 4;
     document.camera.position.z = -3;
     document.camera.position.x = 6;
     // And a renderer
@@ -29,9 +29,6 @@ function generate_scene() {
     document.scene.add(background);
 
     document.scene.add(new THREE.AmbientLight(0x222222));
-
-
-
 
     // Add the control features
     document.controls = new THREE.TrackballControls(document.camera);

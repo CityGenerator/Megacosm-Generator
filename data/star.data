@@ -1,28 +1,26 @@
-DEL starcount
-#ZADD starcount 70 {"text":"single star", "count":1}
-#ZADD starcount 95 {"text":"binary star", "count":2}
-ZADD starcount 100 {"text":"trinary star", "count":3}
 
-DEL starsize
-ZADD starsize 5 {"text":"tiny", "multiplier":0.5}
-ZADD starsize 10 {"text":"small", "multiplier":0.8}
-ZADD starsize 65 {"text":"average", "multiplier":1.0}
-ZADD starsize 85 {"text":"large", "multiplier":1.5}
-ZADD starsize 100 {"text":"massive", "multiplier":3.0}
+DEL  star_size
+ZADD star_size 5   {"text":"tiny",       "multiplier":0.5}
+ZADD star_size 10  {"text":"small",      "multiplier":0.8}
+ZADD star_size 65  {"text":"average",    "multiplier":1.0}
+ZADD star_size 85  {"text":"large",      "multiplier":1.5}
+ZADD star_size 100 {"text":"massive",    "multiplier":3.0}
 
-DEL starposition
+
+DEL  star_color
+ZADD star_color 10  {"text":"blue",   "color":"0x4699ca", "luminosity":0.6}
+ZADD star_color 30  {"text":"white",  "color":"0xffffff", "luminosity":0.5}
+ZADD star_color 70  {"text":"yellow", "color":"0xffff79", "luminosity":0.4}
+ZADD star_color 85  {"text":"orange", "color":"0xff8f37", "luminosity":0.3}
+ZADD star_color 100 {"text":"red",    "color":"0xff0000", "luminosity":0.2}
+
+
+
+# The lack of underscore prevents it from gettnig sucked in as a feature
+DEL   starposition
 LPUSH starposition {"text": "companion",    "x":-150,    "y":4,  "z":4  }
 LPUSH starposition {"text": "companion",    "x":-150,    "y":4,  "z":-4 }
 LPUSH starposition {"text": "companion",    "x":-150,    "y":-4, "z":4  }
 LPUSH starposition {"text": "companion",    "x":-150,    "y":-4, "z":-4 }
-
-
-
-DEL starcolor
-ZADD starcolor 10 {"text":"blue",   "color":"0x4699ca", "luminosity":0.6}
-ZADD starcolor 30 {"text":"white",  "color":"0xffffff", "luminosity":0.5}
-ZADD starcolor 70 {"text":"yellow", "color":"0xffff79", "luminosity":0.4}
-ZADD starcolor 85 {"text":"orange", "color":"0xff8f37", "luminosity":0.3}
-ZADD starcolor 100 {"text":"red",   "color":"0xff0000", "luminosity":0.2}
 
 

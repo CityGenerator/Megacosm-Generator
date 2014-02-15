@@ -20,37 +20,6 @@ DEEPESTWATER=SEALEVEL*0.65
 NOISEOCTAVES=6
 
 
-def generate_map(seed,width=WIDTH,height=HEIGHT,xoffset=0.0,yoffset=0.0,zoom=1.0):
-    """ Return a simple matrix of simplex noise from 0-255."""
-    mapdata = []
-    random.seed(seed)
-    zoom=zoom * 100.0
-    riversource=[]
-    for x in xrange(height):
-        row=[]
-        for y in xrange (width):
-            xparam=float((x+xoffset)/zoom)
-            yparam=float((y+yoffset)/zoom)
-            noisevalue=snoise2(xparam, yparam,  NOISEOCTAVES, 0.52,2.0, height/zoom*2, width/zoom, float(seed) )
-            #convert 1.0...-1.0 to 255...0
-            pixel=int((noisevalue+1)/2*PIXEL_DEPTH-1)
-            cell={'height': pixel, 'x':x, 'y':y }
-            if (pixel < SEALEVEL):
-                cell['type']='water'
-            else:
-                cell['type']='land'
-                if (random.randint(0,10000) <5):
-                    cell['riverhead']=True
-                    riversource.append(cell)
-                    
-            row.append( cell )
-        mapdata.append(row)
-
-
-    #pp = pprint.PrettyPrinter(indent=4)
-    #pp.pprint(riversource) 
-    return mapdata
-
 def colorize_map(mapdata):
     """ Convert the black and white pixel data to actual map-looking colors."""
     image=[]
