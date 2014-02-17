@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test World</title>    
+    <script src="/static/js/three.min.js"></script>
+    <script src="/static/js/TrackballControls.js"></script>
+
+    <script>
+    window.onload = function() {
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize( 800, 600 );
+        document.body.appendChild( renderer.domElement );
+
+        var scene = new THREE.Scene();
+
+        var camera = new THREE.PerspectiveCamera( 35, 800 / 600, 0.1, 10000 );
+        camera.position.set( -15, 10, 10 );
+        camera.lookAt( scene.position );
+
+
+        texture = THREE.ImageUtils.loadTexture('/static/images/samplecontinent.png')
+        texture.offset.set(0,0)
+
+        texture2 = THREE.ImageUtils.loadTexture('/static/images/samplecontinent2.png')
+        texture2.offset.set(0,.1)
+
+        mats2= new THREE.MeshPhongMaterial({      map:        texture       })
+        mats2= new THREE.MeshPhongMaterial({      map:         texture2    })
+
+        mesh=  THREE.SceneUtils.createMultiMaterialObject( new THREE.SphereGeometry(2,30,30), [mats1,mats2]    );
+
+
+        scene.add( mesh );
+
+        var light = new THREE.HemisphereLight( 0x222200);
+        light.position.set( 10, 0, 20 );
+        scene.add( light );
+
+        var light2 = new THREE.HemisphereLight( 0x222222);
+        light2.position.set( 0, 20, 20 );
+        scene.add( light2 );
+
+        renderer.render( scene, camera );
+        controls = new THREE.TrackballControls(camera);
+        document.camera=camera
+        document.scene=scene
+        document.controls=controls
+        document.renderer=renderer
+        animate();
+
+    };
+
+    function render() {
+        document.renderer.render(document.scene, document.camera);
+    }
+
+    function animate(){
+        requestAnimationFrame( animate );
+        render();
+        update();
+    }
+
+    function update(){
+        document.controls.update();
+    }
+
+    </script>
+</head>
+<body></body>
+</html>

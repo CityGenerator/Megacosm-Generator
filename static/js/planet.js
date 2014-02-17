@@ -16,18 +16,23 @@ function generate_planet(seed, size){
     document.clouds.rotation.y = 0;
     document.clouds.castShadow=true;
     document.clouds.receiveShadow=true;
-    document.scene.add(document.clouds)
+//    document.scene.add(document.clouds)
+
 }
 
 function createPlanet(radius, segments, seed) {
+
+    texture = THREE.ImageUtils.loadTexture('/static/images/samplecontinent.png')
+    texture.offset=new Vector(0.3,1.4)
     return new THREE.Mesh(
         new THREE.SphereGeometry(radius, segments, segments),
         new THREE.MeshPhongMaterial({
-            map:         THREE.ImageUtils.loadTexture('/worldmap.png?seed='+seed),
-            bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?seed='+seed),
-            bumpScale:   0.05,
-            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
-            specular:    new THREE.Color(0x222222)
+            color:      0x0000ff,
+              map:         texture,
+//            bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?seed='+seed),
+//            bumpScale:   0.05,
+//            specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
+//            specular:    new THREE.Color(0x222222)
         })
     );
 }

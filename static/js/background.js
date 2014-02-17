@@ -28,7 +28,8 @@ function generate_scene() {
     background = createBackground(300, 64);
     document.scene.add(background);
 
-    document.scene.add(new THREE.AmbientLight(0x222222));
+    document.scene.add(new THREE.AmbientLight(0x666666));
+//    document.scene.add(new THREE.AmbientLight(0x222222));
 
     // Add the control features
     document.controls = new THREE.TrackballControls(document.camera);
