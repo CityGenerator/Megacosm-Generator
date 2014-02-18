@@ -5,55 +5,69 @@ import random
 import json
 from generators.Generator import Generator
 from generators.Moon import Moon
-from generators.Continent import Continent
 import pprint
 
-class Planet(Generator):
+class Continent(Generator):
     WIDTH=500
-    HEIGHT=300
+    HEIGHT=500
     PIXEL_DEPTH=255.0
     SEALEVEL=135
     DEEPWATER=SEALEVEL*0.85
     DEEPESTWATER=SEALEVEL*0.65
     NOISEOCTAVES=6
     ZOOMFACTOR=100.0
-
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
 
-#        self.generate_map()
-#        self.generate_moons()
-        self.generate_continents()
-
-
-    def generate_continents(self):
-        """ Generate the continents for this planet"""
-        self.continent_count=random.randint(1,5);
-        self.continent=[]
-        for continentID in xrange(self.continent_count):
-            self.continent.append( Continent(self.redis) )
+        self.generate_map()
 
 
     def generate_map(self):
         random.seed(self.seed)
         self.mapdata = []
         self.riversource=[]
+
+        # Putting these here to improve readability and reduce calculations
+        ymidpoint=self.HEIGHT/2
+        xmidpoint=self.WIDTH/2
+
         for y in xrange(self.HEIGHT):
             row=[]
-            latitude=math.fabs(self.HEIGHT/2.0-y) *(180.0/self.HEIGHT)
+
+            # yEdgePenalty ranges from 2 on the edges to 0 in the middle
+            yedgepenalty = math.fabs(   y - ymidpoint)/(self.HEIGHT/4)
             for x in xrange (self.WIDTH):
+
+                # xEdgePenalty ranges from 2 on the edges to 0 in the middle
+                xedgepenalty =  math.fabs(   x - xmidpoint)/(self.WIDTH/4)
+
+                # Penalty range is 0.3 in the center to -1.3 on the edges
+                # This keeps continents solid in the center, but  away from edges
+                penalty=  min( .3, - math.hypot(yedgepenalty, xedgepenalty)+1.5)
+
+                # Select the Perlin noise location, returning a -1.0 to 1.0 value for the height of the pixel
                 heightnoise= snoise2(x/self.ZOOMFACTOR, y/self.ZOOMFACTOR, self.NOISEOCTAVES, 0.52,2.0, self.WIDTH/self.ZOOMFACTOR, self.HEIGHT/self.ZOOMFACTOR*10.0, self.seed/100.0 )
+
+                # To fully understand the impact of the penalty equations, uncomment heightnoise
+                #heightnoise=0
+
+                # Select the Perlin noise location, returning a -1.0 to 1.0 value for the moisture of the pixel
+                # Note that the height is shifted one screen so that moisture is not an exact match.
                 moisturenoise= snoise2(x/self.ZOOMFACTOR, (self.HEIGHT+y)/self.ZOOMFACTOR, 5, 0.52,2.0, self.WIDTH/self.ZOOMFACTOR, self.HEIGHT/self.ZOOMFACTOR*10, (self.seed)/100.0 )
-                #convert 1.0...-1.0 to 255...0
-                heightvalue  =int((heightnoise  +1)/2*self.PIXEL_DEPTH-1)
+
+
+                #convert (-1.0 to 1.0)+ penalty to  (0 to 2). This allows for some slop, then cleans it up
+                heightvalue  =  min(2,max(0,(heightnoise+1.0 + penalty ))) #range 0-2
+                # convert from (0 to 2) to (0 to 255)
+                heightvalue  = int((heightvalue/2.0) * self.PIXEL_DEPTH)
+
+
                 moisturevalue=int((moisturenoise+1)/2*self.PIXEL_DEPTH-1)
-                cell={'height': heightvalue, 'x':x, 'y':y, 'moisture':moisturevalue, 'latitude':latitude}
+                cell={'height': heightvalue, 'x':x, 'y':y, 'moisture':moisturevalue }
                 if (heightvalue < self.SEALEVEL):
                     cell=self.colorize_ocean(cell)
-                    cell['bump']=0
                 else:
                     cell=self.colorize_land(cell)
-                    cell['bump']=(heightvalue-self.SEALEVEL)/(self.PIXEL_DEPTH-self.SEALEVEL)* self.PIXEL_DEPTH
                     if (random.randint(0,10000) <5):
                         cell['riverhead']=True
                         self.riversource.append(cell)
@@ -84,8 +98,3 @@ class Planet(Generator):
 
 
 
-    def generate_moons(self):
-        """ Generate a list of moons """
-        self.moons=[]
-        for moonId in xrange(self.mooncount['count']):
-            self.moons.append(Moon(self.redis ))

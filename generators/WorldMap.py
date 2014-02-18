@@ -28,7 +28,7 @@ def colorize_map(mapdata):
         for cell in row:
             pixel=cell['height'];
             color=(pixel,pixel,pixel) # land
-            if (cell['type'] is 'water'):
+            if (cell['type'] is 'ocean'):
                 color=colorize_ocean(pixel)
 #          elif ('riverhead' in cell):
 #                color=(255,0,0)

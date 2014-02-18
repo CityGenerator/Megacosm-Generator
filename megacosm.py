@@ -2,7 +2,9 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import WorldMap, Star, StarSystem
+from generators import Star, StarSystem
+from util.MakeMap import *
+from util.Seeds import *
 import random
 import redis
 import ConfigParser
@@ -29,22 +31,34 @@ app = Flask(__name__)
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
-    seed= request.args.get('seed')
-    if (seed == None):
-        seed=random.randint(1,100000)
-    random.seed(int(seed))
+    seed=set_seed( request.args.get('seed') )
+
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
 
     return render_template('index.html',starsystem=starsystem) 
 
 
+@app.route('/continentmap')
+def continentmap():
+    """A view into the solar system."""
+    seed=set_seed( request.args.get('seed') )
+
+    starsystem=StarSystem.StarSystem(server,{'seed':seed})
+
+    # Colorize the data and return a png.
+    myImage=generate_image(starsystem.planet.continent[0].mapdata)
+
+
+    return send_file(myImage, mimetype='image/png', cache_timeout=100)
+
+
+
+
 @app.route('/worldmap')
 def worldmap():
     """A view into the solar system."""
-    seed= request.args.get('seed')
-    if (seed == None):
-        seed=random.randint(1,100000)
-    random.seed(int(seed))
+    seed=set_seed( request.args.get('seed') )
+
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
 
     return render_template('map.html', starsystem=starsystem )
@@ -52,44 +66,39 @@ def worldmap():
 @app.route('/worldmap.png')
 def worldmappng():
     """Generate a worldmap and return it."""
-    seed= request.args.get('seed')
-    if (seed == None):
-        seed=random.randint(1,100000)
-    random.seed(int(seed))
+    seed=set_seed( request.args.get('seed') )
+
     # Generate the map data
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
+
     # Colorize the data and return a png.
-    myImage=WorldMap.colorize_map(starsystem.planet.mapdata)
+    myImage=generate_image(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
 @app.route('/worldbumpmap.png')
 def worldbumpmap():
     """Generate a worldmap and return it."""
-    seed= int(request.args.get('seed'))
-    if (seed == None):
-        seed=random.randint(1,100000)
-    random.seed(int(seed))
+    seed=set_seed( request.args.get('seed') )
 
     # Generate the map data
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
+
     # Colorize the data and return a png.
-    myImage=WorldMap.bump_map(starsystem.planet.mapdata)
+    myImage=generate_bump_image(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
 @app.route('/worldspecularmap.png')
 def worldspecularmap():
     """Generate a worldmap and return it."""
-    seed= int(request.args.get('seed'))
-    if (seed == None):
-        seed=random.randint(1,100000)
-    random.seed(int(seed))
+    seed=set_seed( request.args.get('seed') )
 
     # Generate the map data
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
+
     # Colorize the data and return a png.
-    myImage=WorldMap.specular_map(starsystem.planet.mapdata)
+    myImage=generate_specular_image(starsystem.planet.mapdata)
 
     return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
