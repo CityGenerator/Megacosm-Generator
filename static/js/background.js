@@ -13,10 +13,9 @@ function generate_scene() {
     // We need a scene
     document.scene = new THREE.Scene();
     // A Camera
-    document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 1000);
+    document.camera = new THREE.PerspectiveCamera(30, WIDTH / HEIGHT, 1, 2000);
     //document.camera.position.y = 4;
-    document.camera.position.z = -3;
-    document.camera.position.x = 6;
+    document.camera.position.z = -2000;
     // And a renderer
     document.renderer = new THREE.WebGLRenderer( {antialias:true} );
 
@@ -85,7 +84,7 @@ function createBackground(radius, segments) {
     return new THREE.Mesh(
         new THREE.SphereGeometry(radius, segments, segments),
         new THREE.MeshBasicMaterial({
-            map:  THREE.ImageUtils.loadTexture('static/images/background.png'),
+            map:  THREE.ImageUtils.loadTexture('/static/images/background.png'),
             side: THREE.BackSide
         })
     );
