@@ -7,26 +7,21 @@ import sys
 from pprint import pprint
 
 
-config = ConfigParser.RawConfigParser()
-config.read('data/config.ini')
+COMMANDCOUNT=0
 
-url = config.get('redis', 'url')
-
-server=redis.from_url(url)
-pipe=server.pipeline()
-
-pipe.flushall()
-linenumber=0
-for filename in glob.glob("data/*.data") :
+def parse_file(pipe, filename):
+    linenumber=0
+    global COMMANDCOUNT
     raw_data=open(filename)
     for line in raw_data:
         linenumber+=1
         line=line.rstrip()
         if line:
-            print line
+            #print line
             if line.startswith('#'):
                 continue;
             else:
+                COMMANDCOUNT+=1
                 command, args = line.split(' ',1)
                 command=command.upper()
                 if command == 'SET':
@@ -36,9 +31,11 @@ for filename in glob.glob("data/*.data") :
                     key,value=args.split(' ',1)
                     pipe.lpush(key,value)
                 elif command == "ZADD":
-                    key,score,value=args.split(' ',2)
-                    print score
+                    key,score,value=args.split(None,2)
                     pipe.zadd(key,value,score)
+                elif command == "HSET":
+                    name,key,value=args.split(None,2)
+                    pipe.hset(name,key,value)
                 elif command == "DEL":
                     pipe.delete(args)
                 else:
@@ -46,6 +43,26 @@ for filename in glob.glob("data/*.data") :
                     raise Exception("line #%s in %s: %s is an unsupported command." % (linenumber, filename, command) )
     raw_data.close()
 
+
+
+config = ConfigParser.RawConfigParser()
+config.read('data/config.ini')
+
+url = config.get('redis', 'url')
+
+server=redis.from_url(url)
+pipe=server.pipeline()
+
+pipe.flushall()
+
+for filename in glob.glob("data/*.data") :
+    parse_file(pipe, filename)
+
+for filename in glob.glob("data/races/*.data") :
+    parse_file(pipe, filename)
+
 pipe.execute()
+
+print COMMANDCOUNT, "Commands were run."
 
 

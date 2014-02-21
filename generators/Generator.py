@@ -21,7 +21,7 @@ class Generator():
         for key in redis.keys(namekey+'_*'):
             if redis.type(key) == 'zset':
                 feature=key.replace(namekey+'_','')
-                print "adding ",feature,"to ", namekey
+                #print "adding ",feature,"to ", namekey
                 setattr( self, feature, Generator.select_by_roll(self,key) )
 
 
@@ -48,10 +48,10 @@ class Generator():
         if self.redis.exists(key+'trailer'):
             roll=random.randint(1,100)
             if (not self.redis.exists(key+'trailer_chance')) or (roll < int(self.redis.get(key+'trailer_chance'))):
-                print "trailer set!"
+                #print "trailer set!"
                 name['trailer']=self.rand_value(key+'trailer')
                 name['full']+=' '+name['trailer']
-            print name['full']
+            #print name['full']
         return name   
 
     def rand_value(self,key):
