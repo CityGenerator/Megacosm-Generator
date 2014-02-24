@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { margin: 0; overflow: hidden; }
+        </style>
+
+
+    </head>
+    <body>
+
+        <h1>Meet <a href="/npc?seed={{npc.seed}}">{{npc.name['full']}} ({{npc.seed}})</a></h1>
+                {{ npc.name['firstname']  }} 
+                {{ npc.sex['name']  }} 
+        <ul id="attributes">
+                {{ npc.seed }}
+                {{ npc['seed'] }}
+            {% for attrib in npc.__dict__ %}
+                <li>{{  attrib }} </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+

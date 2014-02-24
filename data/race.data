@@ -5,47 +5,47 @@ HSET race_size small    {"modifier":"-1"}
 HSET race_size medium   {"modifier":"0" }
 HSET race_size large    {"modifier":"+1"}
 
-LPUSH race gnome       
-LPUSH race halfling    
-LPUSH race dwarf       
-LPUSH race elf         
-LPUSH race minotaur    
-LPUSH race centaur     
-LPUSH race kobold      
-LPUSH race goblin      
-LPUSH race bugbear     
-LPUSH race hobgoblin   
-LPUSH race lizardfolk  
-LPUSH race troglodyte  
-LPUSH race ogre        
-LPUSH race orc         
-LPUSH race molekin     
-
-# a ____, known for __________
-SET gnome_details      {"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }
-SET halfling_details   {"name": "Halfling",   "size": "small",   "description": "being inquisitive and occasionally compulsive" }
-SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": "their stubby limbs and strict work ethic"}
-SET elf_details        {"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}
-SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": "their strength and pride"}
-SET centaur_details    {"name": "Centaur",    "size": "large",   "description": "their equine bodies and human torso"}
-SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
-SET goblin_details     {"name": "Goblin",     "size": "small",   "description": "their small stature and conniving"}
-SET bugbear_details    {"name": "Bugbear",    "size": "medium",  "description": "their brute strength and frightening demeanor"}
-SET hobgoblin_details  {"name": "Hobgoblin",  "size": "medium",  "description": "their trickery and troublesome behavior"}
-SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": "reptilian features and taste for fresh meat"}
-SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": "crude behavior and foul smell"}
-SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
-SET orc_details        {"name": "Orc",        "size": "medium",  "description": "underbite and ferocious demeanor"}
-SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
-
-
-
-# a _subrace___, known for __racedesc________ of the __race__, but __subracedesc__
-# Bob is a Wood elf, know for their care-free spirit and lengthy lifespan of the elves, but being stronger and less thoughtful than other elves.
-#LPUSH subrace_elf {"name": "Dark Elf", "description": "being a more sinister and maligned version of their above-ground cousins" }
-#LPUSH subrace_elf {"name": "Wood Elf", "description": "being stronger and less thoughtful than other elves" }
-#LPUSH subrace_elf {"name": "Wild Elf", "description": "being reclusive and slightly feral" }
-#LPUSH subrace_elf {"name": "Half Elf", "description": "having a mixed bloodline with humans." }
-
-#LPUSH subrace_dwarf {"name": "Deep Dwarf", "description": "are pale-skinned, standoffish variant of their more sociable cousins." }
-
+#LPUSH race gnome       
+#LPUSH race halfling    
+#LPUSH race dwarf       
+#LPUSH race elf         
+#LPUSH race minotaur    
+#LPUSH race centaur     
+#LPUSH race kobold      
+#LPUSH race goblin      
+#LPUSH race bugbear     
+#LPUSH race hobgoblin   
+#LPUSH race lizardfolk  
+#LPUSH race troglodyte  
+#LPUSH race ogre        
+#LPUSH race orc         
+#LPUSH race molekin     
+#
+## a ____, known for __________
+#SET gnome_details      {"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }
+#SET halfling_details   {"name": "Halfling",   "size": "small",   "description": "being inquisitive and occasionally compulsive" }
+#SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": "their stubby limbs and strict work ethic"}
+#SET elf_details        {"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}
+#SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": "their strength and pride"}
+#SET centaur_details    {"name": "Centaur",    "size": "large",   "description": "their equine bodies and human torso"}
+#SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
+#SET goblin_details     {"name": "Goblin",     "size": "small",   "description": "their small stature and conniving"}
+#SET bugbear_details    {"name": "Bugbear",    "size": "medium",  "description": "their brute strength and frightening demeanor"}
+#SET hobgoblin_details  {"name": "Hobgoblin",  "size": "medium",  "description": "their trickery and troublesome behavior"}
+#SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": "reptilian features and taste for fresh meat"}
+#SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": "crude behavior and foul smell"}
+#SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
+#SET orc_details        {"name": "Orc",        "size": "medium",  "description": "underbite and ferocious demeanor"}
+#SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
+#
+#
+#
+## a _subrace___, known for __racedesc________ of the __race__, but __subracedesc__
+## Bob is a Wood elf, know for their care-free spirit and lengthy lifespan of the elves, but being stronger and less thoughtful than other elves.
+##LPUSH subrace_elf {"name": "Dark Elf", "description": "being a more sinister and maligned version of their above-ground cousins" }
+##LPUSH subrace_elf {"name": "Wood Elf", "description": "being stronger and less thoughtful than other elves" }
+##LPUSH subrace_elf {"name": "Wild Elf", "description": "being reclusive and slightly feral" }
+##LPUSH subrace_elf {"name": "Half Elf", "description": "having a mixed bloodline with humans." }
+#
+##LPUSH subrace_dwarf {"name": "Deep Dwarf", "description": "are pale-skinned, standoffish variant of their more sociable cousins." }
+#

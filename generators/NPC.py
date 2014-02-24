@@ -1,4 +1,6 @@
 
+
+
 import random
 import json
 from generators.Generator import Generator
@@ -8,6 +10,10 @@ class NPC(Generator):
         Generator.__init__(self,redis,features)
         self.select_race()
         self.select_names()
+
+        # This list tells us which of the attributes are actually stats
+        self.stats=self.redis.lrange('npcstats',0,-1)
+
     def select_race(self):
         #print self.redis.llen('race')
         if hasattr(self,'race'):
@@ -46,5 +52,3 @@ class NPC(Generator):
 
             self.name['full']+=self.name[name+"name"]+" "
         self.name['full']=self.name['full'].strip()
-        print self.seed
-        print self.name

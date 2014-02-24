@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Star, StarSystem
+from generators import Star, StarSystem, NPC
 from util.MakeMap import *
 from util.Seeds import *
 import random
@@ -36,6 +36,17 @@ def indexpage():
     starsystem=StarSystem.StarSystem(server,{'seed':seed})
 
     return render_template('index.html',starsystem=starsystem) 
+
+
+@app.route('/npc')
+def GenerateNPC():
+    """Generate an NPC"""
+    seed=set_seed( request.args.get('seed') )
+
+    npc=NPC.NPC(server,{'seed':seed})
+
+    return render_template('npc.html',npc=npc) 
+
 
 
 @app.route('/continentmap')
