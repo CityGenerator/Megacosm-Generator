@@ -1,0 +1,133 @@
+#
+
+LPUSH race molekin
+
+SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
+
+ZADD molekin_name_order 1 first
+ZADD molekin_name_order 2 middle
+ZADD molekin_name_order 3 last
+
+HSET molekin_name_first  pre 100
+HSET molekin_name_first  root 100
+
+HSET molekin_name_middle root 100
+
+HSET molekin_name_last  pre 100
+HSET molekin_name_last  root 100
+
+
+LPUSH molekin_name_first_pre Bar
+LPUSH molekin_name_first_pre Barm
+LPUSH molekin_name_first_pre Ber
+LPUSH molekin_name_first_pre Breg
+LPUSH molekin_name_first_pre Brid
+LPUSH molekin_name_first_pre Brod
+LPUSH molekin_name_first_pre Brokk
+LPUSH molekin_name_first_pre Broud
+LPUSH molekin_name_first_pre Burr
+LPUSH molekin_name_first_pre Deg
+LPUSH molekin_name_first_pre Dreg
+LPUSH molekin_name_first_pre Drig
+LPUSH molekin_name_first_pre Drog
+LPUSH molekin_name_first_pre Gar
+LPUSH molekin_name_first_pre Garm
+LPUSH molekin_name_first_pre Gart
+LPUSH molekin_name_first_pre Ger
+LPUSH molekin_name_first_pre Germ
+LPUSH molekin_name_first_pre Gert
+LPUSH molekin_name_first_pre Grat
+LPUSH molekin_name_first_pre Gret
+LPUSH molekin_name_first_pre Grot
+LPUSH molekin_name_first_pre Mae
+LPUSH molekin_name_first_pre Maeg
+LPUSH molekin_name_first_pre Mar
+LPUSH molekin_name_first_pre Meg
+LPUSH molekin_name_first_pre Mel
+LPUSH molekin_name_first_pre Mer
+LPUSH molekin_name_first_pre Mog
+LPUSH molekin_name_first_pre Mor
+LPUSH molekin_name_first_pre Mot
+LPUSH molekin_name_first_pre Mul
+LPUSH molekin_name_first_pre Mur
+LPUSH molekin_name_first_pre Mut
+LPUSH molekin_name_first_pre Nag
+LPUSH molekin_name_first_pre Neg
+LPUSH molekin_name_first_pre Nog
+
+LPUSH molekin_name_first_root da
+LPUSH molekin_name_first_root do
+LPUSH molekin_name_first_root ta
+LPUSH molekin_name_first_root to
+LPUSH molekin_name_first_root la
+LPUSH molekin_name_first_root lo
+LPUSH molekin_name_first_root ma
+LPUSH molekin_name_first_root mo
+LPUSH molekin_name_first_root ga
+LPUSH molekin_name_first_root go
+LPUSH molekin_name_first_root ra
+LPUSH molekin_name_first_root ro
+LPUSH molekin_name_first_root lin
+
+
+
+
+
+LPUSH molekin_name_middle_root of
+
+
+
+
+
+LPUSH molekin_name_last_pre Bar
+LPUSH molekin_name_last_pre Barm
+LPUSH molekin_name_last_pre Ber
+LPUSH molekin_name_last_pre Breg
+LPUSH molekin_name_last_pre Brid
+LPUSH molekin_name_last_pre Brod
+LPUSH molekin_name_last_pre Brokk
+LPUSH molekin_name_last_pre Broud
+LPUSH molekin_name_last_pre Burr
+LPUSH molekin_name_last_pre Deg
+LPUSH molekin_name_last_pre Dreg
+LPUSH molekin_name_last_pre Drig
+LPUSH molekin_name_last_pre Drog
+LPUSH molekin_name_last_pre Gar
+LPUSH molekin_name_last_pre Garm
+LPUSH molekin_name_last_pre Gart
+LPUSH molekin_name_last_pre Ger
+LPUSH molekin_name_last_pre Germ
+LPUSH molekin_name_last_pre Gert
+LPUSH molekin_name_last_pre Grat
+LPUSH molekin_name_last_pre Gret
+LPUSH molekin_name_last_pre Grot
+LPUSH molekin_name_last_pre Mae
+LPUSH molekin_name_last_pre Maeg
+LPUSH molekin_name_last_pre Mar
+LPUSH molekin_name_last_pre Meg
+LPUSH molekin_name_last_pre Mel
+LPUSH molekin_name_last_pre Mer
+LPUSH molekin_name_last_pre Mog
+LPUSH molekin_name_last_pre Mor
+LPUSH molekin_name_last_pre Mot
+LPUSH molekin_name_last_pre Mul
+LPUSH molekin_name_last_pre Mur
+LPUSH molekin_name_last_pre Mut
+LPUSH molekin_name_last_pre Nag
+LPUSH molekin_name_last_pre Neg
+LPUSH molekin_name_last_pre Nog
+
+LPUSH molekin_name_last_root da
+LPUSH molekin_name_last_root do
+LPUSH molekin_name_last_root ta
+LPUSH molekin_name_last_root to
+LPUSH molekin_name_last_root la
+LPUSH molekin_name_last_root lo
+LPUSH molekin_name_last_root ma
+LPUSH molekin_name_last_root mo
+LPUSH molekin_name_last_root ga
+LPUSH molekin_name_last_root go
+LPUSH molekin_name_last_root ra
+LPUSH molekin_name_last_root ro
+LPUSH molekin_name_last_root lin
+

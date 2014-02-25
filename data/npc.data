@@ -13,20 +13,36 @@ LPUSH npcstats skill
 LPUSH npcstats sex
 LPUSH npcstats bravery
 
-ZADD npc_sex  50  {"name":"female",     "pronoun":"she" }
-ZADD npc_sex  99  {"name":"male",       "pronoun":"he"  }
-ZADD npc_sex 100  {"name":"androgynous","pronoun":"it"  }
+ZADD npc_sex  50  {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her"}
+ZADD npc_sex  99  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him"}
+ZADD npc_sex 100  {"name":"androgynous","pronoun":"it", "possessive":"its",  "third-person":"it"}
 
-ZADD npc_bravery 5    {"name":"minor"   }
-ZADD npc_bravery 10   {"name":"apprehensive"   }
-ZADD npc_bravery 30   {"name":"uneasy"   }
-ZADD npc_bravery 40   {"name":"alarming"   }
-ZADD npc_bravery 50   {"name":"panicky"   }
-ZADD npc_bravery 70   {"name":"unnerving"   }
-ZADD npc_bravery 80   {"name":"powerful"   }
-ZADD npc_bravery 90   {"name":"dreadful"   }
-ZADD npc_bravery 98   {"name":"quivering"   }
-ZADD npc_bravery 100  {"name":"crippling"   }
+
+#Bob is a human 
+ZADD npc_age 5    {"name":"juvenile"    }
+ZADD npc_age 10   {"name":"adolescent"  }
+ZADD npc_age 20   {"name":"young"       }
+ZADD npc_age 40   {"name":"adult"       }
+ZADD npc_age 80   {"name":"middle-aged" }
+ZADD npc_age 95   {"name":"elderly"     }
+ZADD npc_age 100  {"name":"ancient"     }
+
+# When provoked, bob is 
+ZADD npc_bravery 5    {"name":"chicken-hearted"   }
+ZADD npc_bravery 10   {"name":"spineless"   }
+ZADD npc_bravery 15   {"name":"cowardly"    }
+ZADD npc_bravery 20   {"name":"craven"      }
+ZADD npc_bravery 30   {"name":"faint-hearted"   }
+ZADD npc_bravery 40   {"name":"panicky"     }
+ZADD npc_bravery 50   {"name":"nervous"     }
+ZADD npc_bravery 60   {"name":"tough"       }
+ZADD npc_bravery 70   {"name":"intrepid"    }
+ZADD npc_bravery 80   {"name":"fearless"    }
+ZADD npc_bravery 85   {"name":"bold"        }
+ZADD npc_bravery 90   {"name":"unafraid"    }
+ZADD npc_bravery 95   {"name":"brave"       }
+ZADD npc_bravery 100  {"name":"heroic"      }
+
 ZADD npc_skill 5   {"name":"incompetent"   }
 ZADD npc_skill 10  {"name":"ineptly skilled"   }
 ZADD npc_skill 30  {"name":"poorly skilled"   }
@@ -59,31 +75,61 @@ ZADD npc_experience 90   {"name":"expert"   }
 ZADD npc_experience 95   {"name":"vetran"   }
 ZADD npc_experience 100  {"name":"grizzled"   }
 
-ZADD npc_strength 25     {"name":"weak"   }
-ZADD npc_strength 50     {"name":"average"   }
-ZADD npc_strength 75     {"name":"strong"   }
+ZADD npc_strength 10     {"name":"weak"   }
+ZADD npc_strength 20     {"name":"shaky"   }
+ZADD npc_strength 30     {"name":"delicate"   }
+ZADD npc_strength 40     {"name":"inactive"   }
+ZADD npc_strength 60     {"name":"able-bodied"   }
+ZADD npc_strength 70     {"name":"strong"   }
+ZADD npc_strength 80     {"name":"sinewy"   }
+ZADD npc_strength 90     {"name":"powerful"   }
 ZADD npc_strength 100    {"name":"herculean"   }
+
+ZADD npc_endurance 10    {"name":"exhausted"   }
+ZADD npc_endurance 20    {"name":"unenergetic"   }
+ZADD npc_endurance 30    {"name":"lazy"   }
+ZADD npc_endurance 40    {"name":"lethargic"   }
+ZADD npc_endurance 60    {"name":"resistant"   }
+ZADD npc_endurance 70    {"name":"vital"   }
+ZADD npc_endurance 80    {"name":"fortified"   }
+ZADD npc_endurance 90    {"name":"resolute"   }
+ZADD npc_endurance 100   {"name":"unflagging"   }
+
+# Looking at his past, bob is _____ of his choices in the past
+ZADD npc_satisfaction 10     {"name":"rueful"   }
+ZADD npc_satisfaction 20     {"name":"regretful"   }
+ZADD npc_satisfaction 30     {"name":"apologetic"   }
+ZADD npc_satisfaction 40     {"name":"repentant"   }
+ZADD npc_satisfaction 50     {"name":"remorseful"   }
+ZADD npc_satisfaction 60     {"name":"questioning"   }
+ZADD npc_satisfaction 70     {"name":"unrepentant"   }
+ZADD npc_satisfaction 80     {"name":"unashamed"   }
+ZADD npc_satisfaction 90     {"name":"accepting"   }
+ZADD npc_satisfaction 100    {"name":"satisfied"   }
 
 ZADD npc_agility 30      {"name":"clumsy"   }
 ZADD npc_agility 60      {"name":"average"   }
 ZADD npc_agility 100     {"name":"agile"   }
 
-ZADD npc_endurance 25    {"name":"frail"   }
-ZADD npc_endurance 50    {"name":"sickly"   }
-ZADD npc_endurance 75    {"name":"average"   }
-ZADD npc_endurance 100   {"name":"robust"   }
-
-ZADD npc_wisdom 30       {"name":"foolish"   }
-ZADD npc_wisdom 60       {"name":"average"   }
+ZADD npc_wisdom 10       {"name":"foolish"   }
+ZADD npc_wisdom 20       {"name":"obtuse"   }
+ZADD npc_wisdom 30       {"name":"careless"   }
+ZADD npc_wisdom 40       {"name":"indiscreet"   }
+ZADD npc_wisdom 50       {"name":"average"   }
+ZADD npc_wisdom 60       {"name":"keen"   }
+ZADD npc_wisdom 70       {"name":"astute"   }
+ZADD npc_wisdom 80       {"name":"thoughtful"   }
+ZADD npc_wisdom 90       {"name":"enlightened"   }
 ZADD npc_wisdom 100      {"name":"wise"   }
 
 ZADD npc_charisma 30     {"name":"obnoxious"   }
 ZADD npc_charisma 60     {"name":"average"   }
 ZADD npc_charisma 100    {"name":"inspiring"   }
 
-ZADD npc_intelligence 25    {"name":"dumb"   }
-ZADD npc_intelligence 50    {"name":"dimwited"   }
-ZADD npc_intelligence 75    {"name":"average"   }
+ZADD npc_intelligence 20    {"name":"dumb"   }
+ZADD npc_intelligence 40    {"name":"dimwited"   }
+ZADD npc_intelligence 60    {"name":"average"   }
+ZADD npc_intelligence 80    {"name":"clever"   }
 ZADD npc_intelligence 100   {"name":"brilliant"   }
 
 ZADD npc_attractiveness 30  {"name":"ugly"   }
@@ -576,7 +622,7 @@ LPUSH npc_phobia pain ( Algophobia )
 LPUSH npc_phobia painful bowels movements ( Defecaloesiophobia )
 LPUSH npc_phobia pain ( Odynephobia )
 LPUSH npc_phobia pain ( Odynophobia )
-LPUSH npc_phobia palindromes (from Best tag lines) ( Aibohphobia )
+LPUSH npc_phobia palindromes ( Aibohphobia )
 LPUSH npc_phobia paper ( Papyrophobia )
 LPUSH npc_phobia parasites ( Parasitophobia )
 LPUSH npc_phobia parents-in-law ( Soceraphobia )
@@ -922,86 +968,89 @@ LPUSH npc_posession kaleidoscope
 LPUSH npc_posession holy symbol
 LPUSH npc_posession broken sword hilt
 LPUSH npc_posession lock of hair
-        
-LPUSH npc_behavior accusatory
-LPUSH npc_behavior apologetic
-LPUSH npc_behavior attentive
-LPUSH npc_behavior authoritarian
-LPUSH npc_behavior battle-ready
-LPUSH npc_behavior beligerent
-LPUSH npc_behavior boastful
-LPUSH npc_behavior cautious
-LPUSH npc_behavior chatty
-LPUSH npc_behavior clumsy
-LPUSH npc_behavior conspirational
-LPUSH npc_behavior contrarian
-LPUSH npc_behavior cowed
-LPUSH npc_behavior deluded
-LPUSH npc_behavior drunken
-LPUSH npc_behavior easily offended
-LPUSH npc_behavior efficient
-LPUSH npc_behavior egotistical
-LPUSH npc_behavior embittered
-LPUSH npc_behavior exhausted
-LPUSH npc_behavior fashion concious
-LPUSH npc_behavior fatalistic
-LPUSH npc_behavior flirtatious
-LPUSH npc_behavior forbidding
-LPUSH npc_behavior forgetful
-LPUSH npc_behavior giddy
-LPUSH npc_behavior gluttonous
-LPUSH npc_behavior gosipy
-LPUSH npc_behavior greedy
-LPUSH npc_behavior grieving
-LPUSH npc_behavior guarded
-LPUSH npc_behavior guilty
-LPUSH npc_behavior healthy
-LPUSH npc_behavior helpful
-LPUSH npc_behavior homesick
-LPUSH npc_behavior idealistic
-LPUSH npc_behavior impatient
-LPUSH npc_behavior insecure
-LPUSH npc_behavior intimidating
-LPUSH npc_behavior intimidated
-LPUSH npc_behavior jaded
-LPUSH npc_behavior jesterly
-LPUSH npc_behavior jolly
-LPUSH npc_behavior lonely
-LPUSH npc_behavior loud
-LPUSH npc_behavior lovelorn
-LPUSH npc_behavior melancholy
-LPUSH npc_behavior mocking
-LPUSH npc_behavior mopey
-LPUSH npc_behavior nervous
-LPUSH npc_behavior nihilistic
-LPUSH npc_behavior nosy
-LPUSH npc_behavior outlandish
-LPUSH npc_behavior pacifistic
-LPUSH npc_behavior patriotic
-LPUSH npc_behavior patronizing
-LPUSH npc_behavior pious
-LPUSH npc_behavior prejudiced
-LPUSH npc_behavior quiet
-LPUSH npc_behavior resentful
-LPUSH npc_behavior scattered
-LPUSH npc_behavior self-obsessed
-LPUSH npc_behavior shifty
-LPUSH npc_behavior sick
-LPUSH npc_behavior skeptical
-LPUSH npc_behavior smitten
-LPUSH npc_behavior smug
-LPUSH npc_behavior solemn
-LPUSH npc_behavior spiteful
-LPUSH npc_behavior territorial
-LPUSH npc_behavior thick
-LPUSH npc_behavior treasure-obsessed
-LPUSH npc_behavior trusting
-LPUSH npc_behavior unreliable
-LPUSH npc_behavior vengeful
-LPUSH npc_behavior violent
-LPUSH npc_behavior gambling
-LPUSH npc_behavior worrying
-LPUSH npc_behavior xenophobic
+
+#If approached, bob will be
+LPUSH npc_attitude accusatory
+LPUSH npc_attitude apologetic
+LPUSH npc_attitude attentive
+LPUSH npc_attitude authoritarian
+LPUSH npc_attitude battle-ready
+LPUSH npc_attitude beligerent
+LPUSH npc_attitude boastful
+LPUSH npc_attitude cautious
+LPUSH npc_attitude chatty
+LPUSH npc_attitude clumsy
+LPUSH npc_attitude conspirational
+LPUSH npc_attitude contrarian
+LPUSH npc_attitude crude
+LPUSH npc_attitude conniving
+LPUSH npc_attitude cowed
+LPUSH npc_attitude deluded
+LPUSH npc_attitude drunken
+LPUSH npc_attitude easily offended
+LPUSH npc_attitude efficient
+LPUSH npc_attitude egotistical
+LPUSH npc_attitude embittered
+LPUSH npc_attitude exhausted
+LPUSH npc_attitude fashion concious
+LPUSH npc_attitude fatalistic
+LPUSH npc_attitude flirtatious
+LPUSH npc_attitude forbidding
+LPUSH npc_attitude forgetful
+LPUSH npc_attitude giddy
+LPUSH npc_attitude gluttonous
+LPUSH npc_attitude gosipy
+LPUSH npc_attitude greedy
+LPUSH npc_attitude grieving
+LPUSH npc_attitude guarded
+LPUSH npc_attitude guilty
+LPUSH npc_attitude healthy
+LPUSH npc_attitude helpful
+LPUSH npc_attitude homesick
+LPUSH npc_attitude idealistic
+LPUSH npc_attitude impatient
+LPUSH npc_attitude insecure
+LPUSH npc_attitude intimidating
+LPUSH npc_attitude intimidated
+LPUSH npc_attitude jaded
+LPUSH npc_attitude jesterly
+LPUSH npc_attitude jolly
+LPUSH npc_attitude lonely
+LPUSH npc_attitude loud
+LPUSH npc_attitude lovelorn
+LPUSH npc_attitude melancholy
+LPUSH npc_attitude mocking
+LPUSH npc_attitude mopey
+LPUSH npc_attitude nervous
+LPUSH npc_attitude nihilistic
+LPUSH npc_attitude nosy
+LPUSH npc_attitude outlandish
+LPUSH npc_attitude pacifistic
+LPUSH npc_attitude patriotic
+LPUSH npc_attitude patronizing
+LPUSH npc_attitude pious
+LPUSH npc_attitude prejudiced
+LPUSH npc_attitude quiet
+LPUSH npc_attitude resentful
+LPUSH npc_attitude scattered
+LPUSH npc_attitude self-obsessed
+LPUSH npc_attitude shifty
+LPUSH npc_attitude sickly
+LPUSH npc_attitude skeptical
+LPUSH npc_attitude smitten
+LPUSH npc_attitude smug
+LPUSH npc_attitude solemn
+LPUSH npc_attitude spiteful
+LPUSH npc_attitude territorial
+LPUSH npc_attitude thick
+LPUSH npc_attitude treasure-obsessed
+LPUSH npc_attitude trusting
+LPUSH npc_attitude unreliable
+LPUSH npc_attitude vengeful
+LPUSH npc_attitude violent
+LPUSH npc_attitude gambling
+LPUSH npc_attitude worrying
+LPUSH npc_attitude xenophobic
         
 LPUSH npc_regret was unable to save a loved one
 LPUSH npc_regret didn't lie to protect a close friend
@@ -1017,7 +1066,6 @@ LPUSH npc_height tall
 LPUSH npc_build frail
 LPUSH npc_build thin
 LPUSH npc_build skinny
-LPUSH npc_build average build
 LPUSH npc_build chubby
 LPUSH npc_build stocky
 LPUSH npc_build obese
@@ -1141,21 +1189,21 @@ LPUSH npc_motivation doing something questionable
 LPUSH npc_motivation seeing the world
 LPUSH npc_motivation seeing the city
 
-LPUSH npc_motivation finding a missing parent
-LPUSH npc_motivation finding a missing sibling
-LPUSH npc_motivation finding a missing friend
-LPUSH npc_motivation finding a missing nemesis
-LPUSH npc_motivation finding a missing criminal
-LPUSH npc_motivation finding a missing artifact
-LPUSH npc_motivation finding a missing treasure
-LPUSH npc_motivation finding a missing map
-LPUSH npc_motivation finding a missing heir
-LPUSH npc_motivation finding a missing artifact
+LPUSH npc_motivation searching for a missing parent
+LPUSH npc_motivation searching for a missing sibling
+LPUSH npc_motivation searching for a missing friend
+LPUSH npc_motivation searching for a missing nemesis
+LPUSH npc_motivation searching for a missing criminal
+LPUSH npc_motivation searching for a missing artifact
+LPUSH npc_motivation searching for a missing treasure
+LPUSH npc_motivation searching for a missing map
+LPUSH npc_motivation searching for a missing heir
+LPUSH npc_motivation searching for a missing artifact
 
-LPUSH npc_motivation finding a long-lost parent
-LPUSH npc_motivation finding a long-lost sibling
-LPUSH npc_motivation finding a long-lost friend
-LPUSH npc_motivation finding a long-lost distant relative
+LPUSH npc_motivation searching for a long-lost parent
+LPUSH npc_motivation searching for a long-lost sibling
+LPUSH npc_motivation searching for a long-lost friend
+LPUSH npc_motivation searching for a long-lost distant relative
 
 LPUSH npc_motivation cleaning out a monster infestation
 LPUSH npc_motivation cleaning out a wealthy person
@@ -1189,138 +1237,267 @@ LPUSH npc_motivation here to buy spices
 LPUSH npc_motivation here to buy slaves
         
 
-LPUSH npc_emotion adoration
-LPUSH npc_emotion affection
-LPUSH npc_emotion aggravation
-LPUSH npc_emotion agitation
-LPUSH npc_emotion agony
-LPUSH npc_emotion alarm
-LPUSH npc_emotion alienation
-LPUSH npc_emotion amazement
-LPUSH npc_emotion amusement
-LPUSH npc_emotion anger
-LPUSH npc_emotion anguish
-LPUSH npc_emotion annoyance
-LPUSH npc_emotion anxiety
-LPUSH npc_emotion apprehension
-LPUSH npc_emotion astonishment
-LPUSH npc_emotion attractiveness
+# bob appears ______
+LPUSH npc_emotion adoring
+LPUSH npc_emotion affectionate
+LPUSH npc_emotion aggravated
+LPUSH npc_emotion agitated
+LPUSH npc_emotion agonized
+LPUSH npc_emotion alarmed
+LPUSH npc_emotion alienated
+LPUSH npc_emotion amazed
+LPUSH npc_emotion amused
+LPUSH npc_emotion angered
+LPUSH npc_emotion anguished
+LPUSH npc_emotion annoyed
+LPUSH npc_emotion anxious
+LPUSH npc_emotion apprehensive
+LPUSH npc_emotion astonished
 LPUSH npc_emotion bitter
-LPUSH npc_emotion bliss
+LPUSH npc_emotion blissful
 LPUSH npc_emotion caring
-LPUSH npc_emotion cheerfulness
-LPUSH npc_emotion compassion
-LPUSH npc_emotion contempt
-LPUSH npc_emotion contentment
-LPUSH npc_emotion crosspatch
-LPUSH npc_emotion defeatism
-LPUSH npc_emotion dejection
-LPUSH npc_emotion delight
-LPUSH npc_emotion depression
-LPUSH npc_emotion desire
-LPUSH npc_emotion despair
-LPUSH npc_emotion disappointment
-LPUSH npc_emotion disgust
-LPUSH npc_emotion dislike
-LPUSH npc_emotion dismay
+LPUSH npc_emotion cheerful
+LPUSH npc_emotion compassionate
+LPUSH npc_emotion contemptful
+LPUSH npc_emotion contented
+LPUSH npc_emotion defeated
+LPUSH npc_emotion dejected
+LPUSH npc_emotion delighted
+LPUSH npc_emotion depressed
+LPUSH npc_emotion desiring
+LPUSH npc_emotion despairing
+LPUSH npc_emotion disappointed
+LPUSH npc_emotion disgusted
+LPUSH npc_emotion disliked
+LPUSH npc_emotion dismayed
 LPUSH npc_emotion displeasure
-LPUSH npc_emotion distress
-LPUSH npc_emotion dread
-LPUSH npc_emotion eagerness
-LPUSH npc_emotion ecstasy
-LPUSH npc_emotion elation
-LPUSH npc_emotion embarrassment
-LPUSH npc_emotion enjoyment
-LPUSH npc_emotion enthrallment
-LPUSH npc_emotion enthusiasm
-LPUSH npc_emotion envy
-LPUSH npc_emotion euphoria
-LPUSH npc_emotion exasperation
-LPUSH npc_emotion excitement
-LPUSH npc_emotion exhilaration
-LPUSH npc_emotion fear
-LPUSH npc_emotion ferocity
-LPUSH npc_emotion fondness
-LPUSH npc_emotion fright
-LPUSH npc_emotion frustration
-LPUSH npc_emotion fury
-LPUSH npc_emotion gaiety
-LPUSH npc_emotion gladness
-LPUSH npc_emotion glee
-LPUSH npc_emotion gloom
-LPUSH npc_emotion glumness
-LPUSH npc_emotion grief
+LPUSH npc_emotion distressed
+LPUSH npc_emotion dread-filled
+LPUSH npc_emotion eager
+LPUSH npc_emotion elated
+LPUSH npc_emotion embarrassed
+LPUSH npc_emotion enthralled
+LPUSH npc_emotion enthusiastic
+LPUSH npc_emotion envious
+LPUSH npc_emotion euphoric
+LPUSH npc_emotion exasperated
+LPUSH npc_emotion excited
+LPUSH npc_emotion exhilarated
+LPUSH npc_emotion fearful
+LPUSH npc_emotion ferocious
+LPUSH npc_emotion frightful
+LPUSH npc_emotion frustrated
+LPUSH npc_emotion furious
+LPUSH npc_emotion glad
+LPUSH npc_emotion gleeful
+LPUSH npc_emotion gloomy
+LPUSH npc_emotion glum
+LPUSH npc_emotion grief-stricken
 LPUSH npc_emotion grouchy
 LPUSH npc_emotion grumpy
-LPUSH npc_emotion guilt
-LPUSH npc_emotion happiness
-LPUSH npc_emotion hatred
-LPUSH npc_emotion homesickness
-LPUSH npc_emotion hope
-LPUSH npc_emotion horror
-LPUSH npc_emotion hostility
-LPUSH npc_emotion humiliation
+LPUSH npc_emotion guilty
+LPUSH npc_emotion happy
+LPUSH npc_emotion hate-filled
+LPUSH npc_emotion homesick
+LPUSH npc_emotion hopeful
+LPUSH npc_emotion horrified
+LPUSH npc_emotion hostile
+LPUSH npc_emotion humiliated
 LPUSH npc_emotion hurt
-LPUSH npc_emotion hysteria
-LPUSH npc_emotion infatuation
-LPUSH npc_emotion insecurity
-LPUSH npc_emotion insult
-LPUSH npc_emotion irritability
-LPUSH npc_emotion isolation
-LPUSH npc_emotion jealousy
-LPUSH npc_emotion jolliness
-LPUSH npc_emotion joviality
-LPUSH npc_emotion joy
-LPUSH npc_emotion jubilation
-LPUSH npc_emotion liking
-LPUSH npc_emotion loathing
-LPUSH npc_emotion loneliness
+LPUSH npc_emotion hysterical
+LPUSH npc_emotion infatuated
+LPUSH npc_emotion insecure
+LPUSH npc_emotion insulted
+LPUSH npc_emotion irritable
+LPUSH npc_emotion isolated
+LPUSH npc_emotion jealous
+LPUSH npc_emotion jolly
+LPUSH npc_emotion jovial
+LPUSH npc_emotion joyful
+LPUSH npc_emotion jubiliant
+LPUSH npc_emotion loathful
+LPUSH npc_emotion lonely
 LPUSH npc_emotion longing
 LPUSH npc_emotion melancholy
-LPUSH npc_emotion misery
-LPUSH npc_emotion mortification
-LPUSH npc_emotion neglect
-LPUSH npc_emotion nervousness
-LPUSH npc_emotion optimism
-LPUSH npc_emotion outrage
-LPUSH npc_emotion panic
-LPUSH npc_emotion passion
-LPUSH npc_emotion pity
-LPUSH npc_emotion pleasure
-LPUSH npc_emotion pride
-LPUSH npc_emotion rage
-LPUSH npc_emotion rapture
-LPUSH npc_emotion regret
-LPUSH npc_emotion rejection
-LPUSH npc_emotion relief
-LPUSH npc_emotion remorse
-LPUSH npc_emotion resentment
-LPUSH npc_emotion revulsion
-LPUSH npc_emotion sadness
-LPUSH npc_emotion satisfaction
-LPUSH npc_emotion scorn
-LPUSH npc_emotion sentimentality
-LPUSH npc_emotion shame
-LPUSH npc_emotion shock
-LPUSH npc_emotion sorrow
-LPUSH npc_emotion spite
+LPUSH npc_emotion miserable
+LPUSH npc_emotion mortified
+LPUSH npc_emotion neglected
+LPUSH npc_emotion nervous
+LPUSH npc_emotion optimistic
+LPUSH npc_emotion outraged
+LPUSH npc_emotion panicked
+LPUSH npc_emotion passionate
+LPUSH npc_emotion pitiful
+LPUSH npc_emotion pleased
+LPUSH npc_emotion proud
+LPUSH npc_emotion enraged
+LPUSH npc_emotion enraptured
+LPUSH npc_emotion regretful
+LPUSH npc_emotion rejected
+LPUSH npc_emotion relieved
+LPUSH npc_emotion remorseful
+LPUSH npc_emotion resenting
+LPUSH npc_emotion revolted
+LPUSH npc_emotion sadened
+LPUSH npc_emotion satisfied
+LPUSH npc_emotion scornful
+LPUSH npc_emotion sentimental
+LPUSH npc_emotion shamed
+LPUSH npc_emotion shocked
+LPUSH npc_emotion sorrowful
+LPUSH npc_emotion spiteful
 LPUSH npc_emotion suffering
-LPUSH npc_emotion surprise
-LPUSH npc_emotion suspense
-LPUSH npc_emotion sympathy
-LPUSH npc_emotion tenderness
-LPUSH npc_emotion terror
-LPUSH npc_emotion thrill
-LPUSH npc_emotion torment
-LPUSH npc_emotion triumph
-LPUSH npc_emotion uneasiness
+LPUSH npc_emotion surprised
+LPUSH npc_emotion suspensful
+LPUSH npc_emotion sympathetic
+LPUSH npc_emotion tender
+LPUSH npc_emotion terrorized
+LPUSH npc_emotion thrilled
+LPUSH npc_emotion tormented
+LPUSH npc_emotion triumphant
+LPUSH npc_emotion uneasy
 LPUSH npc_emotion unhappy
-LPUSH npc_emotion vengefulness
-LPUSH npc_emotion woe
-LPUSH npc_emotion worry
-LPUSH npc_emotion wrath
-LPUSH npc_emotion zeal
-LPUSH npc_emotion zest
+LPUSH npc_emotion vengeful
+LPUSH npc_emotion woeful
+LPUSH npc_emotion worrying
+LPUSH npc_emotion wrathful
+LPUSH npc_emotion zealous
+LPUSH npc_emotion zestful
     
+
+
+
+# professions
+
+LPUSH npc_profession mercenary
+LPUSH npc_profession adventurer
+LPUSH npc_profession alchemist
+LPUSH npc_profession apothecary
+LPUSH npc_profession armorer
+LPUSH npc_profession astrologer
+LPUSH npc_profession baker
+LPUSH npc_profession pastrycook
+LPUSH npc_profession banker
+LPUSH npc_profession barber
+LPUSH npc_profession soldier
+LPUSH npc_profession lawyer
+LPUSH npc_profession bather
+LPUSH npc_profession beer seller
+LPUSH npc_profession bleacher
+LPUSH npc_profession bookbinder
+LPUSH npc_profession bookseller
+LPUSH npc_profession bowyer
+LPUSH npc_profession brewer
+LPUSH npc_profession prostitute
+LPUSH npc_profession bucklemaker
+LPUSH npc_profession butcher
+LPUSH npc_profession cartwright
+LPUSH npc_profession chandler
+LPUSH npc_profession cheesemaker
+LPUSH npc_profession priest
+LPUSH npc_profession official
+LPUSH npc_profession physician
+LPUSH npc_profession tailor
+LPUSH npc_profession cobbler
+LPUSH npc_profession cooper
+LPUSH npc_profession copyist
+LPUSH npc_profession cutler
+LPUSH npc_profession dyer
+LPUSH npc_profession engineer
+LPUSH npc_profession fishmonger
+LPUSH npc_profession furrier
+LPUSH npc_profession outfitter
+LPUSH npc_profession glassmaker
+LPUSH npc_profession glovemaker
+LPUSH npc_profession undertaker
+LPUSH npc_profession grocer
+LPUSH npc_profession harness maker
+LPUSH npc_profession hatmaker
+LPUSH npc_profession haymerchant
+LPUSH npc_profession herbalist
+LPUSH npc_profession illuminator
+LPUSH npc_profession innkeeper
+LPUSH npc_profession jailer
+LPUSH npc_profession jeweler
+LPUSH npc_profession deputy
+LPUSH npc_profession sheriff
+LPUSH npc_profession leatherworker
+LPUSH npc_profession sage
+LPUSH npc_profession scribe
+LPUSH npc_profession librarian
+LPUSH npc_profession locksmith
+LPUSH npc_profession lumberjack
+LPUSH npc_profession woodseller
+LPUSH npc_profession mason
+LPUSH npc_profession mercer
+LPUSH npc_profession miller
+LPUSH npc_profession messenger
+LPUSH npc_profession potter
+LPUSH npc_profession pursemaker
+LPUSH npc_profession roofer
+LPUSH npc_profession ropemaker
+LPUSH npc_profession rugmaker
+LPUSH npc_profession scabbardmaker
+LPUSH npc_profession teacher
+LPUSH npc_profession sculptor
+LPUSH npc_profession shipwright
+LPUSH npc_profession shoemaker
+LPUSH npc_profession chickenbutcher
+LPUSH npc_profession smith
+LPUSH npc_profession blacksmith
+LPUSH npc_profession salter
+LPUSH npc_profession spicemerchant
+LPUSH npc_profession ostler
+LPUSH npc_profession stablehand
+LPUSH npc_profession artist
+LPUSH npc_profession tanner
+LPUSH npc_profession tavern
+LPUSH npc_profession actor
+LPUSH npc_profession tilemaker
+LPUSH npc_profession trader
+LPUSH npc_profession interpreter
+LPUSH npc_profession professor
+LPUSH npc_profession vintner
+LPUSH npc_profession wagoneer
+LPUSH npc_profession laborer
+LPUSH npc_profession weaponsmith
+LPUSH npc_profession weaver
+LPUSH npc_profession wine seller
+LPUSH npc_profession woodworker
+LPUSH npc_profession handyman
+LPUSH npc_profession ship captain
+LPUSH npc_profession magic dealer
+LPUSH npc_profession coach driver
+LPUSH npc_profession bounty hunter
+LPUSH npc_profession good samaritan
+LPUSH npc_profession specialty smith
+LPUSH npc_profession saddler
+LPUSH npc_profession entertainer
+LPUSH npc_profession teamster
+LPUSH npc_profession plasterer
+LPUSH npc_profession painter
+LPUSH npc_profession porter
+LPUSH npc_profession courtier
+LPUSH npc_profession woodcarver
+LPUSH npc_profession maidservant
+LPUSH npc_profession navigator
+LPUSH npc_profession doctor
+LPUSH npc_profession collier
+LPUSH npc_profession seamstress
+LPUSH npc_profession carpenter
+LPUSH npc_profession timberwright
+LPUSH npc_profession tinker
+LPUSH npc_profession forester
+LPUSH npc_profession watercarrier
+LPUSH npc_profession social worker
+LPUSH npc_profession warehouse worker
+
+
+
+
+
+
+
+
 
 

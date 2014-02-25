@@ -12,6 +12,9 @@ import pprint
 import json
 import os
 import sys
+import inflect
+
+p = inflect.engine()
 
 MAPWIDTH=500
 MAPHEIGHT=300
@@ -123,6 +126,15 @@ def page_borked(e):
     """Return a custom 500 error. Only hit when debugging is off."""
     message="You Broke it!"
     return message, 500
+
+@app.template_filter('article')
+def select_article(s):
+    return p.an(s)
+
+@app.template_filter('pluralize')
+def select_pluralize(s):
+    return p.plural(s)
+
 
 
 if __name__ == '__main__':

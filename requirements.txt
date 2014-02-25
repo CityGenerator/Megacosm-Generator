@@ -17,3 +17,4 @@ wsgiref==0.1.2
 redis==2.9.1
 mock>=1.0.1
 gunicorn>=18.0
+inflect>=0.2.4

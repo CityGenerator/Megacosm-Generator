@@ -6,9 +6,6 @@ HSET race_size medium   {"modifier":"0" }
 HSET race_size large    {"modifier":"+1"}
 
 #LPUSH race gnome       
-#LPUSH race halfling    
-#LPUSH race dwarf       
-#LPUSH race elf         
 #LPUSH race minotaur    
 #LPUSH race centaur     
 #LPUSH race kobold      
@@ -17,15 +14,10 @@ HSET race_size large    {"modifier":"+1"}
 #LPUSH race hobgoblin   
 #LPUSH race lizardfolk  
 #LPUSH race troglodyte  
-#LPUSH race ogre        
-#LPUSH race orc         
 #LPUSH race molekin     
 #
 ## a ____, known for __________
 #SET gnome_details      {"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }
-#SET halfling_details   {"name": "Halfling",   "size": "small",   "description": "being inquisitive and occasionally compulsive" }
-#SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": "their stubby limbs and strict work ethic"}
-#SET elf_details        {"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}
 #SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": "their strength and pride"}
 #SET centaur_details    {"name": "Centaur",    "size": "large",   "description": "their equine bodies and human torso"}
 #SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
@@ -34,8 +26,6 @@ HSET race_size large    {"modifier":"+1"}
 #SET hobgoblin_details  {"name": "Hobgoblin",  "size": "medium",  "description": "their trickery and troublesome behavior"}
 #SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": "reptilian features and taste for fresh meat"}
 #SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": "crude behavior and foul smell"}
-#SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
-#SET orc_details        {"name": "Orc",        "size": "medium",  "description": "underbite and ferocious demeanor"}
 #SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
 #
 #
