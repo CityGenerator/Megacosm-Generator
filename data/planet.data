@@ -77,6 +77,17 @@ ZADD planet_mooncount 97     {"text":"triple moon",      "count":3}
 ZADD planet_mooncount 100    {"text":"quadruple moon",   "count":4}
 
 
+# Most of this planet appears to be in the Stone Age, which is known for 
+DEL  planet_technology
+ZADD planet_technology 5    {"text":"Stone Age",        "description":"implements made of stone."  }
+ZADD planet_technology 10   {"text":"Bronze Age",       "description":"implements of copper and bronze"  }
+ZADD planet_technology 15   {"text":"Iron Age",         "description":"implements of iron and steel"  }
+ZADD planet_technology 20   {"text":"Ancient Age",      "description":"advances in engineering"  }
+ZADD planet_technology 90   {"text":"Middle Age",       "description":"advances in weaponry"  }
+ZADD planet_technology 95   {"text":"Modern Age",       "description":"advances in science"  }
+ZADD planet_technology 100  {"text":"Contemporary Age", "description":"being similar to our own"  }
+
+
 
 
 #    <atmosphere reason_chance='50' > <!-- The sky is _________[, partially due to ______ high in the atmosphere].-->

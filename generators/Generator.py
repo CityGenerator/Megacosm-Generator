@@ -2,7 +2,7 @@ import redis
 import json
 import random
 
-class Generator():
+class Generator(object):
     def __init__(self,redis, features={}):
         """ set any features and generate a seed if one is not included. """
         self.redis=redis
@@ -21,8 +21,12 @@ class Generator():
         for key in redis.keys(namekey+'_*'):
             if redis.type(key) == 'zset':
                 feature=key.replace(namekey+'_','')
-                print "adding ",feature,"to ", namekey
+                print "adding zset",feature,"to ", namekey
                 setattr( self, feature, Generator.select_by_roll(self,key) )
+            elif redis.type(key) == 'list':
+                feature=key.replace(namekey+'_','')
+                print "adding list",feature,"to ", namekey
+                setattr( self, feature, Generator.rand_value(self,key) )
 
 
 
@@ -38,7 +42,7 @@ class Generator():
             if (not self.redis.exists(key+'title_chance')) or (roll < int(self.redis.get(key+'title_chance'))):
                 name['title']=self.rand_value(key+'title')
                 name['full']=name['title']+' '
-          
+
         for part in [ 'pre', 'root', 'post']:
             if self.redis.exists(key+part):
                 if (not self.redis.exists(key+part+'_chance')) or (random.randint(1,100) < int(self.redis.get(key+part+'_chance'))):
@@ -48,10 +52,10 @@ class Generator():
         if self.redis.exists(key+'trailer'):
             roll=random.randint(1,100)
             if (not self.redis.exists(key+'trailer_chance')) or (roll < int(self.redis.get(key+'trailer_chance'))):
-                print "trailer set!"
+                #print "trailer set!"
                 name['trailer']=self.rand_value(key+'trailer')
                 name['full']+=' '+name['trailer']
-            print name['full']
+            #print name['full']
         return name   
 
     def rand_value(self,key):

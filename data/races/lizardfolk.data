@@ -1,0 +1,49 @@
+
+LPUSH race lizardfolk
+
+SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": "reptilian features and taste for fresh meat"}
+
+
+ZADD lizardfolk_name_order 1 first
+ZADD lizardfolk_name_order 2 last
+
+HSET lizardfolk_name_first  pre 100 
+HSET lizardfolk_name_first  post 100
+
+HSET lizardfolk_name_last   title 100
+HSET lizardfolk_name_last   pre 100
+HSET lizardfolk_name_last   post 100
+
+
+
+
+LPUSH lizardfolk_name_first_pre S'her
+LPUSH lizardfolk_name_first_pre Khal
+LPUSH lizardfolk_name_first_pre Yer
+LPUSH lizardfolk_name_first_pre S'hoor
+LPUSH lizardfolk_name_first_pre Ghe
+LPUSH lizardfolk_name_first_pre Khal
+LPUSH lizardfolk_name_first_post ssen
+LPUSH lizardfolk_name_first_post al
+LPUSH lizardfolk_name_first_post zin
+LPUSH lizardfolk_name_first_post zor
+        
+LPUSH lizardfolk_name_last_title ahn
+LPUSH lizardfolk_name_last_title teh
+LPUSH lizardfolk_name_last_title se
+LPUSH lizardfolk_name_last_title fe
+LPUSH lizardfolk_name_last_title heh
+LPUSH lizardfolk_name_last_title seh
+LPUSH lizardfolk_name_last_pre Ghe
+LPUSH lizardfolk_name_last_pre S'her
+LPUSH lizardfolk_name_last_pre Khal
+LPUSH lizardfolk_name_last_pre Yer
+LPUSH lizardfolk_name_last_pre S'hoor
+LPUSH lizardfolk_name_last_pre Ghe
+LPUSH lizardfolk_name_last_pre Khal
+LPUSH lizardfolk_name_last_post ssen
+LPUSH lizardfolk_name_last_post al
+LPUSH lizardfolk_name_last_post zin
+LPUSH lizardfolk_name_last_post zor
+        
+    

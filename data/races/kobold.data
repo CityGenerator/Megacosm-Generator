@@ -1,0 +1,70 @@
+#
+
+LPUSH race kobold
+
+SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
+
+
+ZADD kobold_name_order 1 first
+
+HSET kobold_name_first  root 100
+
+LPUSH kobold_name_first_root Bat
+LPUSH kobold_name_first_root Bap
+LPUSH kobold_name_first_root Bit
+LPUSH kobold_name_first_root Bip
+LPUSH kobold_name_first_root Bot
+LPUSH kobold_name_first_root Car
+LPUSH kobold_name_first_root Cor
+LPUSH kobold_name_first_root Cak
+LPUSH kobold_name_first_root Dat
+LPUSH kobold_name_first_root Dit
+LPUSH kobold_name_first_root Dot
+LPUSH kobold_name_first_root Fax
+LPUSH kobold_name_first_root Fat
+LPUSH kobold_name_first_root Fot
+LPUSH kobold_name_first_root Gat
+LPUSH kobold_name_first_root Git
+LPUSH kobold_name_first_root Gip
+LPUSH kobold_name_first_root Got
+LPUSH kobold_name_first_root Jat
+LPUSH kobold_name_first_root Jit
+LPUSH kobold_name_first_root Jot
+LPUSH kobold_name_first_root Jop
+LPUSH kobold_name_first_root Lat
+LPUSH kobold_name_first_root Lik
+LPUSH kobold_name_first_root Lot
+LPUSH kobold_name_first_root Nat
+LPUSH kobold_name_first_root Niz
+LPUSH kobold_name_first_root Nip
+LPUSH kobold_name_first_root Not
+LPUSH kobold_name_first_root Nop
+LPUSH kobold_name_first_root Pat
+LPUSH kobold_name_first_root Paz
+LPUSH kobold_name_first_root Pot
+LPUSH kobold_name_first_root Rat
+LPUSH kobold_name_first_root Rap
+LPUSH kobold_name_first_root Rit
+LPUSH kobold_name_first_root Rot
+LPUSH kobold_name_first_root Rop
+LPUSH kobold_name_first_root Taz
+LPUSH kobold_name_first_root Teb
+LPUSH kobold_name_first_root Tean
+LPUSH kobold_name_first_root Vab
+LPUSH kobold_name_first_root Vaz
+LPUSH kobold_name_first_root Vit
+LPUSH kobold_name_first_root Vor
+LPUSH kobold_name_first_root Wat
+LPUSH kobold_name_first_root Wit
+LPUSH kobold_name_first_root Wot
+LPUSH kobold_name_first_root Yat
+LPUSH kobold_name_first_root Yap
+LPUSH kobold_name_first_root Yik
+LPUSH kobold_name_first_root Yip
+LPUSH kobold_name_first_root Yot
+LPUSH kobold_name_first_root Yop
+LPUSH kobold_name_first_root Zat
+LPUSH kobold_name_first_root Zit
+LPUSH kobold_name_first_root Zol
+
+
