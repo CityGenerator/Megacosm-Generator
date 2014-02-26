@@ -2,19 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
         <style>
         </style>
         <script>
             function disable_unused(){
                 var elem=document.getElementById('npcform').elements
+                console.log(elem)
                 for(var i = 0; i < elem.length; i++){
-                    console.log(elem[i].name)
                     if (elem[i].value == ""){
                         elem[i].disabled=true
                         console.log('disabled!')
                     }
                 }
-                console.log('complete')
+                return 1;
+            }
+            window.onpageshow = function(){
+                // added so firefox enables things if the back button is hit. stupid firefox
+                var elem=document.getElementById('npcform').elements
+                for(var i = 0; i < elem.length; i++){
+                    if (elem[i].value == ""){
+                        elem[i].disabled=false
+                    }
+                }
                 return 1;
             }
         </script>
