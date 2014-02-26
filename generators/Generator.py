@@ -80,7 +80,11 @@ class Generator(object):
             rollvalue= self.redis.zrangebyscore(key, roll, 100, 0, 1)
             if rollvalue == None:
                 raise Exception( "the key (%s) appears to be empty for a roll of %s- This should never happen." % (key, roll))
-            return json.loads(rollvalue[0])
+            try:
+                return json.loads(rollvalue[0])
+            except Exception as e:
+                print "couldn't read json",rollvalue[0]
+                raise e
         else:
             raise Exception( "the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
 
