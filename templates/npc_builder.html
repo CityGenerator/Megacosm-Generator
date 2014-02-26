@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+        </style>
+        <script>
+            function disable_unused(){
+                var elem=document.getElementById('npcform').elements
+                for(var i = 0; i < elem.length; i++){
+                    console.log(elem[i].name)
+                    if (elem[i].value == ""){
+                        elem[i].disabled=true
+                        console.log('disabled!')
+                    }
+                }
+                console.log('complete')
+                return 1;
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <h1>Lets build an NPC!</h1>
+        <form action="/npc" id="npcform">
+        <table>
+            <tr>
+                <td>Race: </td>
+                <td>
+                    <select name="npc_race">
+                        <option value=""></option>
+                        {% for race in races %}
+                        <option value="{{ race}}">{{race }} </option>
+                        {% endfor %}
+                    <select>
+                </td>
+            </tr>
+            <tr>
+                <td>Profession: </td>
+                <td>
+                    <select name="npc_profession">
+                        <option value=""></option>
+                        {% for profession in professions %}
+                        <option value="{{ profession }}">{{profession }} </option>
+                        {% endfor %}
+                    <select>
+                </td>
+            </tr>
+
+
+
+            {% for stat in statinfo %}
+            <tr>
+                <td>{{stat}}: </td>
+                <td>
+                    <select name="npc_{{stat}}_roll">
+                        <option value=""></option>
+                        {% for statstring in statinfo[stat] %}
+                        <option value="{{ statstring['score']}}">{{statstring['name'] }} </option>
+                        {% endfor %}
+                    <select>
+                </td> 
+            </tr> 
+            {% endfor %}
+        </table>
+            <input onclick="disable_unused();submit(); " type="submit" name="build!"></input>
+        </form>
+    </body>
+</html>
+
+
+
+

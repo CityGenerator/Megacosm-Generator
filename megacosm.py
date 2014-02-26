@@ -13,6 +13,7 @@ import json
 import os
 import sys
 import inflect
+import re
 
 p = inflect.engine()
 
@@ -46,14 +47,41 @@ def GenerateNPC():
     """Generate an NPC"""
     seed=set_seed( request.args.get('seed') )
 
-    npc=NPC.NPC(server,{'seed':seed})
+    npcfeatures={'seed':seed,}
 
+    races=server.lrange('race',0,-1);
+    professions=server.lrange('npc_profession',0,-1);
+    for param in request.args :
+        if re.match('^npc_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            npcfeatures[param]=int(request.args[param])
+        elif re.match('^npc_race$',param) and request.args[param] in races:
+            npcfeatures['race']=request.args[param]
+        elif re.match('^npc_profession$',param) and request.args[param] in professions:
+            npcfeatures['profession']=request.args[param]
+            print "setting profession to ",npcfeatures['profession']
+
+    npc=NPC.NPC(server,npcfeatures)
     return render_template('npc.html',npc=npc) 
 
+@app.route('/npc_builder')
+def NPC_Builder():
+    """Generate an NPC"""
 
+    stats=server.lrange('npcstats',0,-1)
+    statinfo={}
+    races=server.lrange('race',0,-1);
+    professions=server.lrange('npc_profession',0,-1);
+    for stat in stats :
+        statinfo[stat]=[]
+        for statstring in server.zrange('npc_'+stat,0,-1):
+            statinfo[stat].append(json.loads(statstring))
+    
+    return render_template('npc_builder.html',statinfo=statinfo, races=races,professions=professions) 
 
 @app.route('/continentmap')
 def continentmap():
+
     """A view into the solar system."""
     seed=set_seed( request.args.get('seed') )
 
@@ -134,7 +162,6 @@ def select_article(s):
 @app.template_filter('pluralize')
 def select_pluralize(s):
     return p.plural(s)
-
 
 
 if __name__ == '__main__':
