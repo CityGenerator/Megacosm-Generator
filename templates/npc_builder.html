@@ -25,28 +25,19 @@
         <h1>Lets build an NPC!</h1>
         <form action="/npc" id="npcform">
         <table>
+            {% for statname in otherstats %}
             <tr>
-                <td>Race: </td>
+                <td>{{statname|capitalize}} </td>
                 <td>
-                    <select name="npc_race">
+                    <select name="npc_{{statname}}">
                         <option value=""></option>
-                        {% for race in races %}
-                        <option value="{{ race}}">{{race }} </option>
+                        {% for stat in otherstats[statname]|sort %}
+                        <option value="{{ stat }}">{{stat }} </option>
                         {% endfor %}
                     <select>
                 </td>
             </tr>
-            <tr>
-                <td>Profession: </td>
-                <td>
-                    <select name="npc_profession">
-                        <option value=""></option>
-                        {% for profession in professions %}
-                        <option value="{{ profession }}">{{profession }} </option>
-                        {% endfor %}
-                    <select>
-                </td>
-            </tr>
+            {% endfor %}
 
 
 

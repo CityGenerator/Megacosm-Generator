@@ -51,6 +51,9 @@ def GenerateNPC():
 
     races=server.lrange('race',0,-1);
     professions=server.lrange('npc_profession',0,-1);
+    attitudes=server.lrange('npc_attitude',0,-1);
+    motivations=server.lrange('npc_motivation',0,-1);
+    emotions=server.lrange('npc_emotion',0,-1);
     for param in request.args :
         if re.match('^npc_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
@@ -59,7 +62,12 @@ def GenerateNPC():
             npcfeatures['race']=request.args[param]
         elif re.match('^npc_profession$',param) and request.args[param] in professions:
             npcfeatures['profession']=request.args[param]
-            print "setting profession to ",npcfeatures['profession']
+        elif re.match('^npc_attitude$',param) and request.args[param] in attitudes:
+            npcfeatures['attitude']=request.args[param]
+        elif re.match('^npc_motivation$',param) and request.args[param] in motivations:
+            npcfeatures['motivation']=request.args[param]
+        elif re.match('^npc_emotion$',param) and request.args[param] in emotions:
+            npcfeatures['emotion']=request.args[param]
 
     npc=NPC.NPC(server,npcfeatures)
     return render_template('npc.html',npc=npc) 
@@ -72,12 +80,15 @@ def NPC_Builder():
     statinfo={}
     races=server.lrange('race',0,-1);
     professions=server.lrange('npc_profession',0,-1);
+    attitudes=server.lrange('npc_attitude',0,-1);
+    motivations=server.lrange('npc_motivation',0,-1);
+    emotions=server.lrange('npc_emotion',0,-1);
     for stat in stats :
         statinfo[stat]=[]
         for statstring in server.zrange('npc_'+stat,0,-1):
             statinfo[stat].append(json.loads(statstring))
     
-    return render_template('npc_builder.html',statinfo=statinfo, races=races,professions=professions) 
+    return render_template('npc_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
 
 @app.route('/continentmap')
 def continentmap():
