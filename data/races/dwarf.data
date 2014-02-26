@@ -14,6 +14,7 @@ HSET dwarf_name_last   root 100
 HSET dwarf_name_last   post 100
 
 LPUSH dwarf_name_first_pre Aba
+LPUSH dwarf_name_first_pre Abo
 LPUSH dwarf_name_first_pre Ada
 LPUSH dwarf_name_first_pre Ar
 LPUSH dwarf_name_first_pre Bal
