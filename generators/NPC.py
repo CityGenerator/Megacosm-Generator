@@ -7,7 +7,9 @@ from generators.Generator import Generator
 
 class NPC(Generator):
     def __init__(self, redis, features={}):
+
         Generator.__init__(self,redis,features)
+
         self.select_race()
         self.select_names()
 

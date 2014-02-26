@@ -5,6 +5,7 @@ import random
 class Generator(object):
     def __init__(self,redis, features={}):
         """ set any features and generate a seed if one is not included. """
+
         self.redis=redis
         namekey= self.__class__.__name__.lower()
         self.name=self.generate_name('name'+namekey)
@@ -17,16 +18,18 @@ class Generator(object):
         if 'seed' not in features:
             self.seed=random.randint(1,10000000)
 
-
         for key in redis.keys(namekey+'_*'):
             if redis.type(key) == 'zset':
                 feature=key.replace(namekey+'_','')
                 print "adding zset",feature,"to ", namekey
                 setattr( self, feature, Generator.select_by_roll(self,key) )
-            elif redis.type(key) == 'list':
+            elif redis.type(key) == 'list' :
                 feature=key.replace(namekey+'_','')
-                print "adding list",feature,"to ", namekey
-                setattr( self, feature, Generator.rand_value(self,key) )
+                if feature not in self.__dict__ :
+                    print "adding list",feature,"to ", namekey
+                    setattr( self, feature, Generator.rand_value(self,key) )
+            else:
+                print "no idea what ",redis.type(key),"is."
 
 
 
@@ -66,11 +69,13 @@ class Generator(object):
         else:
             raise Exception( "the key (%s) doesn't appear to exist or isn't a list (%s)." % (key, self.redis.type(key)  ))
 
-    def select_by_roll(self,key, roll=None):
+    def select_by_roll(self,key ):
         """ Using roll, select the closest matching score from key in Redis. """
-        if roll ==None:
-            roll=random.randint(1,100)
-        roll=max(1,min(roll,100))
+        if key+'_roll' not in self.__dict__ :
+            setattr(self,key+'_roll', random.randint(1,100))
+
+        roll=max(1,min(getattr(self,key+'_roll'),100))
+
         if self.redis.exists(key) and self.redis.type(key) == 'zset':
             rollvalue= self.redis.zrangebyscore(key, roll, 100, 0, 1)
             if rollvalue == None:

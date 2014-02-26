@@ -42,7 +42,7 @@ class TestNPC(unittest.TestCase):
         """  """
         npc = NPC(self.redis, { 'race':'human'})
         self.assertEqual(npc.race,'human')
-        self.assertEqual(npc.name['full'],'Ianiam Tramey')
+        self.assertEqual(npc.name['full'],'Bob Berling')
 
 if __name__ == '__main__':
     unittest.main()

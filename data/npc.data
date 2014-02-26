@@ -1,6 +1,7 @@
 #
 
-
+LPUSH npcstats sex
+LPUSH npcstats age
 LPUSH npcstats attractiveness
 LPUSH npcstats intelligence
 LPUSH npcstats charisma
@@ -10,131 +11,128 @@ LPUSH npcstats agility
 LPUSH npcstats strength
 LPUSH npcstats experience
 LPUSH npcstats skill
-LPUSH npcstats sex
 LPUSH npcstats bravery
 
-ZADD npc_sex  50  {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her"}
-ZADD npc_sex  99  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him"}
-ZADD npc_sex 100  {"name":"androgynous","pronoun":"it", "possessive":"its",  "third-person":"it"}
-
+ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her",   "score":51  }
+ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him",   "score":100  }
 
 #Bob is a human 
-ZADD npc_age 5    {"name":"juvenile"    }
-ZADD npc_age 10   {"name":"adolescent"  }
-ZADD npc_age 20   {"name":"young"       }
-ZADD npc_age 40   {"name":"adult"       }
-ZADD npc_age 80   {"name":"middle-aged" }
-ZADD npc_age 95   {"name":"elderly"     }
-ZADD npc_age 100  {"name":"ancient"     }
+ZADD npc_age 5    {"name":"juvenile"    ,   "score":5  }
+ZADD npc_age 10   {"name":"adolescent"  ,   "score":10  }
+ZADD npc_age 20   {"name":"young"       ,   "score":20  }
+ZADD npc_age 40   {"name":"adult"       ,   "score":40  }
+ZADD npc_age 80   {"name":"middle-aged" ,   "score":80  }
+ZADD npc_age 95   {"name":"elderly"     ,   "score":95  }
+ZADD npc_age 100  {"name":"ancient"     ,   "score":100  }
 
 # When provoked, bob is 
-ZADD npc_bravery 5    {"name":"chicken-hearted"   }
-ZADD npc_bravery 10   {"name":"spineless"   }
-ZADD npc_bravery 15   {"name":"cowardly"    }
-ZADD npc_bravery 20   {"name":"craven"      }
-ZADD npc_bravery 30   {"name":"faint-hearted"   }
-ZADD npc_bravery 40   {"name":"panicky"     }
-ZADD npc_bravery 50   {"name":"nervous"     }
-ZADD npc_bravery 60   {"name":"tough"       }
-ZADD npc_bravery 70   {"name":"intrepid"    }
-ZADD npc_bravery 80   {"name":"fearless"    }
-ZADD npc_bravery 85   {"name":"bold"        }
-ZADD npc_bravery 90   {"name":"unafraid"    }
-ZADD npc_bravery 95   {"name":"brave"       }
-ZADD npc_bravery 100  {"name":"heroic"      }
+ZADD npc_bravery 5    {"name":"chicken-hearted"   ,   "score":5  }
+ZADD npc_bravery 10   {"name":"spineless"   ,   "score":10  }
+ZADD npc_bravery 15   {"name":"cowardly"    ,   "score":15  }
+ZADD npc_bravery 20   {"name":"craven"      ,   "score":20  }
+ZADD npc_bravery 30   {"name":"faint-hearted"   ,   "score":30  }
+ZADD npc_bravery 40   {"name":"panicky"     ,   "score":40  }
+ZADD npc_bravery 50   {"name":"nervous"     ,   "score":50  }
+ZADD npc_bravery 60   {"name":"tough"       ,   "score":60  }
+ZADD npc_bravery 70   {"name":"intrepid"    ,   "score":70  }
+ZADD npc_bravery 80   {"name":"fearless"    ,   "score":80  }
+ZADD npc_bravery 85   {"name":"bold"        ,   "score":85  }
+ZADD npc_bravery 90   {"name":"unafraid"    ,   "score":90  }
+ZADD npc_bravery 95   {"name":"brave"       ,   "score":95  }
+ZADD npc_bravery 100  {"name":"heroic"      ,   "score":100  }
 
-ZADD npc_skill 5   {"name":"incompetent"   }
-ZADD npc_skill 10  {"name":"ineptly skilled"   }
-ZADD npc_skill 30  {"name":"poorly skilled"   }
-ZADD npc_skill 40  {"name":"mediocrely skilled"   }
-ZADD npc_skill 50  {"name":"reasonably skilled"   }
-ZADD npc_skill 70  {"name":"decently skilled"   }
-ZADD npc_skill 80  {"name":"skilled"   }
-ZADD npc_skill 90  {"name":"gifted"   }
-ZADD npc_skill 98  {"name":"impressively skilled"   }
-ZADD npc_skill 100 {"name":"legendarily skilled"   }
+ZADD npc_skill 5   {"name":"incompetent"   ,   "score":5  }
+ZADD npc_skill 10  {"name":"ineptly skilled"   ,   "score":10  }
+ZADD npc_skill 30  {"name":"poorly skilled"   ,   "score":30  }
+ZADD npc_skill 40  {"name":"mediocrely skilled"   ,   "score":40  }
+ZADD npc_skill 50  {"name":"reasonably skilled"   ,   "score":50  }
+ZADD npc_skill 70  {"name":"decently skilled"   ,   "score":70  }
+ZADD npc_skill 80  {"name":"skilled"   ,   "score":80  }
+ZADD npc_skill 90  {"name":"gifted"   ,   "score":90  }
+ZADD npc_skill 98  {"name":"impressively skilled"   ,   "score":98  }
+ZADD npc_skill 100 {"name":"legendarily skilled"   ,   "score":100  }
 
-ZADD npc_experience 5    {"name":"new"   }
-ZADD npc_experience 10   {"name":"naive"   }
-ZADD npc_experience 15   {"name":"green"   }
-ZADD npc_experience 20   {"name":"amatuer"   }
-ZADD npc_experience 25   {"name":"fledgling"   }
-ZADD npc_experience 30   {"name":"inexperienced"   }
-ZADD npc_experience 35   {"name":"rookie"   }
-ZADD npc_experience 40   {"name":"trained"   }
-ZADD npc_experience 45   {"name":"capable"   }
-ZADD npc_experience 50   {"name":"qualified"   }
-ZADD npc_experience 55   {"name":"proficient"   }
-ZADD npc_experience 60   {"name":"average"   }
-ZADD npc_experience 65   {"name":"effective"   }
-ZADD npc_experience 70   {"name":"accomplished"   }
-ZADD npc_experience 75   {"name":"gifted"   }
-ZADD npc_experience 80   {"name":"adept"   }
-ZADD npc_experience 85   {"name":"worldly"   }
-ZADD npc_experience 90   {"name":"expert"   }
-ZADD npc_experience 95   {"name":"vetran"   }
-ZADD npc_experience 100  {"name":"grizzled"   }
+ZADD npc_experience 5    {"name":"new"   ,   "score":5  }
+ZADD npc_experience 10   {"name":"naive"   ,   "score":10  }
+ZADD npc_experience 15   {"name":"green"   ,   "score":15  }
+ZADD npc_experience 20   {"name":"amatuer"   ,   "score":20  }
+ZADD npc_experience 25   {"name":"fledgling"   ,   "score":25  }
+ZADD npc_experience 30   {"name":"inexperienced"   ,   "score":30  }
+ZADD npc_experience 35   {"name":"rookie"   ,   "score":35  }
+ZADD npc_experience 40   {"name":"trained"   ,   "score":40  }
+ZADD npc_experience 45   {"name":"capable"   ,   "score":45  }
+ZADD npc_experience 50   {"name":"qualified"   ,   "score":50  }
+ZADD npc_experience 55   {"name":"proficient"   ,   "score":55  }
+ZADD npc_experience 60   {"name":"average"   ,   "score":60  }
+ZADD npc_experience 65   {"name":"effective"   ,   "score":65  }
+ZADD npc_experience 70   {"name":"accomplished"   ,   "score":70  }
+ZADD npc_experience 75   {"name":"gifted"   ,   "score":75  }
+ZADD npc_experience 80   {"name":"adept"   ,   "score":80  }
+ZADD npc_experience 85   {"name":"worldly"   ,   "score":85  }
+ZADD npc_experience 90   {"name":"expert"   ,   "score":90  }
+ZADD npc_experience 95   {"name":"vetran"   ,   "score":95  }
+ZADD npc_experience 100  {"name":"grizzled"   ,   "score":100  }
 
-ZADD npc_strength 10     {"name":"weak"   }
-ZADD npc_strength 20     {"name":"shaky"   }
-ZADD npc_strength 30     {"name":"delicate"   }
-ZADD npc_strength 40     {"name":"inactive"   }
-ZADD npc_strength 60     {"name":"able-bodied"   }
-ZADD npc_strength 70     {"name":"strong"   }
-ZADD npc_strength 80     {"name":"sinewy"   }
-ZADD npc_strength 90     {"name":"powerful"   }
-ZADD npc_strength 100    {"name":"herculean"   }
+ZADD npc_strength 10     {"name":"weak"   ,   "score":10  }
+ZADD npc_strength 20     {"name":"shaky"   ,   "score":20  }
+ZADD npc_strength 30     {"name":"delicate"   ,   "score":30  }
+ZADD npc_strength 40     {"name":"inactive"   ,   "score":40  }
+ZADD npc_strength 60     {"name":"able-bodied"   ,   "score":60  }
+ZADD npc_strength 70     {"name":"strong"   ,   "score":70  }
+ZADD npc_strength 80     {"name":"sinewy"   ,   "score":80  }
+ZADD npc_strength 90     {"name":"powerful"   ,   "score":90  }
+ZADD npc_strength 100    {"name":"herculean"   ,   "score":100  }
 
-ZADD npc_endurance 10    {"name":"exhausted"   }
-ZADD npc_endurance 20    {"name":"unenergetic"   }
-ZADD npc_endurance 30    {"name":"lazy"   }
-ZADD npc_endurance 40    {"name":"lethargic"   }
-ZADD npc_endurance 60    {"name":"resistant"   }
-ZADD npc_endurance 70    {"name":"vital"   }
-ZADD npc_endurance 80    {"name":"fortified"   }
-ZADD npc_endurance 90    {"name":"resolute"   }
-ZADD npc_endurance 100   {"name":"unflagging"   }
+ZADD npc_endurance 10    {"name":"exhausted"   ,   "score":10  }
+ZADD npc_endurance 20    {"name":"unenergetic"   ,   "score":20  }
+ZADD npc_endurance 30    {"name":"lazy"   ,   "score":30  }
+ZADD npc_endurance 40    {"name":"lethargic"   ,   "score":40  }
+ZADD npc_endurance 60    {"name":"resistant"   ,   "score":60  }
+ZADD npc_endurance 70    {"name":"vital"   ,   "score":70  }
+ZADD npc_endurance 80    {"name":"fortified"   ,   "score":80  }
+ZADD npc_endurance 90    {"name":"resolute"   ,   "score":90  }
+ZADD npc_endurance 100   {"name":"unflagging"   ,   "score":100  }
 
 # Looking at his past, bob is _____ of his choices in the past
-ZADD npc_satisfaction 10     {"name":"rueful"   }
-ZADD npc_satisfaction 20     {"name":"regretful"   }
-ZADD npc_satisfaction 30     {"name":"apologetic"   }
-ZADD npc_satisfaction 40     {"name":"repentant"   }
-ZADD npc_satisfaction 50     {"name":"remorseful"   }
-ZADD npc_satisfaction 60     {"name":"questioning"   }
-ZADD npc_satisfaction 70     {"name":"unrepentant"   }
-ZADD npc_satisfaction 80     {"name":"unashamed"   }
-ZADD npc_satisfaction 90     {"name":"accepting"   }
-ZADD npc_satisfaction 100    {"name":"satisfied"   }
+ZADD npc_satisfaction 10     {"name":"rueful"   ,   "score":10  }
+ZADD npc_satisfaction 20     {"name":"regretful"   ,   "score":20  }
+ZADD npc_satisfaction 30     {"name":"apologetic"   ,   "score":30  }
+ZADD npc_satisfaction 40     {"name":"repentant"   ,   "score":40  }
+ZADD npc_satisfaction 50     {"name":"remorseful"   ,   "score":50  }
+ZADD npc_satisfaction 60     {"name":"questioning"   ,   "score":60  }
+ZADD npc_satisfaction 70     {"name":"unrepentant"   ,   "score":70  }
+ZADD npc_satisfaction 80     {"name":"unashamed"   ,   "score":80  }
+ZADD npc_satisfaction 90     {"name":"accepting"   ,   "score":90  }
+ZADD npc_satisfaction 100    {"name":"satisfied"   ,   "score":100  }
 
-ZADD npc_agility 30      {"name":"clumsy"   }
-ZADD npc_agility 60      {"name":"average"   }
-ZADD npc_agility 100     {"name":"agile"   }
+ZADD npc_agility 30      {"name":"clumsy"   ,   "score":30  }
+ZADD npc_agility 60      {"name":"average"   ,   "score":60  }
+ZADD npc_agility 100     {"name":"agile"   ,   "score":100  }
 
-ZADD npc_wisdom 10       {"name":"foolish"   }
-ZADD npc_wisdom 20       {"name":"obtuse"   }
-ZADD npc_wisdom 30       {"name":"careless"   }
-ZADD npc_wisdom 40       {"name":"indiscreet"   }
-ZADD npc_wisdom 50       {"name":"average"   }
-ZADD npc_wisdom 60       {"name":"keen"   }
-ZADD npc_wisdom 70       {"name":"astute"   }
-ZADD npc_wisdom 80       {"name":"thoughtful"   }
-ZADD npc_wisdom 90       {"name":"enlightened"   }
-ZADD npc_wisdom 100      {"name":"wise"   }
+ZADD npc_wisdom 10       {"name":"foolish"   ,   "score":10  }
+ZADD npc_wisdom 20       {"name":"obtuse"   ,   "score":20  }
+ZADD npc_wisdom 30       {"name":"careless"   ,   "score":30  }
+ZADD npc_wisdom 40       {"name":"indiscreet"   ,   "score":40  }
+ZADD npc_wisdom 50       {"name":"average"   ,   "score":50  }
+ZADD npc_wisdom 60       {"name":"keen"   ,   "score":60  }
+ZADD npc_wisdom 70       {"name":"astute"   ,   "score":70  }
+ZADD npc_wisdom 80       {"name":"thoughtful"   ,   "score":80  }
+ZADD npc_wisdom 90       {"name":"enlightened"   ,   "score":90  }
+ZADD npc_wisdom 100      {"name":"wise"   ,   "score":100  }
 
-ZADD npc_charisma 30     {"name":"obnoxious"   }
-ZADD npc_charisma 60     {"name":"average"   }
-ZADD npc_charisma 100    {"name":"inspiring"   }
+ZADD npc_charisma 30     {"name":"obnoxious"   ,   "score":30  }
+ZADD npc_charisma 60     {"name":"average"   ,   "score":60  }
+ZADD npc_charisma 100    {"name":"inspiring"   ,   "score":100  }
 
-ZADD npc_intelligence 20    {"name":"dumb"   }
-ZADD npc_intelligence 40    {"name":"dimwited"   }
-ZADD npc_intelligence 60    {"name":"average"   }
-ZADD npc_intelligence 80    {"name":"clever"   }
-ZADD npc_intelligence 100   {"name":"brilliant"   }
+ZADD npc_intelligence 20    {"name":"dumb"   ,   "score":20  }
+ZADD npc_intelligence 40    {"name":"dimwited"   ,   "score":40  }
+ZADD npc_intelligence 60    {"name":"average"   ,   "score":60  }
+ZADD npc_intelligence 80    {"name":"clever"   ,   "score":80  }
+ZADD npc_intelligence 100   {"name":"brilliant"   ,   "score":100  }
 
-ZADD npc_attractiveness 30  {"name":"ugly"   }
-ZADD npc_attractiveness 90  {"name":"average"   }
-ZADD npc_attractiveness 100 {"name":"attractive"   }
+ZADD npc_attractiveness 30  {"name":"ugly"   ,   "score":30  }
+ZADD npc_attractiveness 90  {"name":"average"   ,   "score":90  }
+ZADD npc_attractiveness 100 {"name":"attractive"   ,   "score":100  }
         
 
     
