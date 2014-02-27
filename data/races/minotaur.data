@@ -3,13 +3,13 @@ LPUSH race minotaur
 
 SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": "their strength and pride"}
 
-ZADD monitaur_name_order 1 first
-ZADD monitaur_name_order 2 last
+ZADD minotaur_name_order 1 first
+ZADD minotaur_name_order 2 last
 
-HSET monitaur_name_first  pre 100 
-HSET monitaur_name_first  root 100
-HSET monitaur_name_last   pre 100
-HSET monitaur_name_last   root 100
+HSET minotaur_name_first  pre 100 
+HSET minotaur_name_first  root 100
+HSET minotaur_name_last   pre 100
+HSET minotaur_name_last   root 100
 
 
 LPUSH minotaur_name_first_pre Ag

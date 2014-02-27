@@ -1,30 +1,18 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body { margin: 0; overflow: hidden; }
-        </style>
 
 
-    </head>
-    <body>
+{% extends "base.html" %}
+{% block title %}Welcome to Megacosm Generator {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
 
-        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name['full']}} ({{starsystem.seed}})</a></h1>
-        <a href="/worldmap?seed={{starsystem.seed}}">Worldmap</a>
-        <h2> Stars</h2>
-        <ul id="stars">
-            {% for star in starsystem.stars %}
-                <li>{{ star.name['full']  }}  ({{ star.size_text  }}, {{ star.color_text  }})</a></li>
-            {% endfor %}
-        </ul>
-        <h2> Moons</h2>
-        <ul id="moons">
-            {% for moon in starsystem.planet.moons %}
-                <li>{{ moon.name['full']  }} ({{ moon.size['text']  }}, {{ moon.color['text']  }})</a></li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+    <h1>Welcome to Megacosm Generator</h1>
+    Select a generator from above and get started.
 
+
+
+{% endblock %}
