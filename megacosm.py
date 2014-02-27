@@ -35,11 +35,7 @@ app = Flask(__name__)
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
-    seed=set_seed( request.args.get('seed') )
-
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
-
-    return render_template('index.html',starsystem=starsystem) 
+    return render_template('index.html') 
 
 
 @app.route('/npc')

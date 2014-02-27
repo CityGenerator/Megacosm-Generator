@@ -34,6 +34,7 @@ class NPC(Generator):
 
     def select_names(self):
         nameorder= self.redis.zrange(self.race+'_name_order',0,-1)
+        print nameorder
         for name in nameorder :
             self.name[name]={}
             nameparts=self.redis.hgetall(self.race+"_name_"+name)

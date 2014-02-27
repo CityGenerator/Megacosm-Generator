@@ -1,11 +1,8 @@
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
-<META HTTP-EQUIV="Expires" CONTENT="-1">
-        <style>
-        </style>
+
+{% extends "base.html" %}
+{% block title %}Build an NPC{% endblock %}
+{% block head %}
+  {{ super() }}
         <script>
             function disable_unused(){
                 var elem=document.getElementById('npcform').elements
@@ -30,11 +27,17 @@
             }
         </script>
 
-    </head>
-    <body>
+        <style type="text/css">
+            .important { color: #336699; }
+        </style>
+{% endblock %}
+{% block content %}
+
 
         <h1>Lets build an NPC!</h1>
         <form action="/npc" id="npcform">
+
+
         <table>
             {% for statname in otherstats %}
             <tr>
@@ -68,8 +71,13 @@
         </table>
             <input onclick="disable_unused();" type="submit" name="build!" value="build!"></input>
         </form>
-    </body>
-</html>
+
+{% endblock %}
+
+
+
+
+
 
 
 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    {% block head %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+    <title>{% block title %}{% endblock %} - Megacosm Generator</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="/static/images/megacosm_icon_64.png" /> 
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/sticky-footer.css">
+
+    {% endblock %}
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img src="static/images/megacosm_icon_32.png"></a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            {% for generator in ['Planet','Continent','Country','City']%}
+                
+                <li class="dropdown disabled">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{generator}}<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/{{generator|lower}}">{{generator}}</a></li>
+                        <li><a href="/{{generator|lower}}_builder">{{generator}} Builder</a></li>
+                      </ul>
+                </li>
+            {% endfor %}
+            <li class="divider" ></li>
+            {% for generator in [ 'Encounter', 'NPC','Magic Item', 'Spell Failure', 'Business','Flag', 'Faction']%}
+                {% if generator == 'NPC'%} 
+                <li class="dropdown">
+                {%else%}
+                <li class="dropdown disabled">
+                {%endif%}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{generator}}<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/{{generator|lower}}">{{generator}}</a></li>
+                        <li><a href="/{{generator|lower}}_builder">{{generator}} Builder</a></li>
+                      </ul>
+                </li>
+            {% endfor %}
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://rpg.drivethrustuff.com/browse.php?manufacturers_id=6296">Morgajel's Gimp Tools for Map Makers</a></li>
+                <li><a href="https://github.com/CityGenerator/Megacosm-Generator">Source Code</a></li>
+                <li><a href="https://github.com/CityGenerator/Megacosm-Generator/issues/new">Report an Issue</a></li>
+                <li class="divider"></li>
+                <li><span style="margin-left:20px;">Endorse me: <div class="g-plusone" data-size="small" data-href="http://megacosm.morgajel.net"></div></span></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div id="content">
+      <div class="page-header"></div>
+      {% block content %}{% endblock %}</div>
+
+    <div id="footer">
+      {% block footer %}
+      <div class="container">
+        <p class="text-muted">
+            <span style="float:right">
+            &copy; Copyright 2014 by <a href="http://morgajel.net/">morgajel</a>.
+            </span>
+            <!-- Place this tag after the last +1 button tag. -->
+        </p>
+      </div>
+      {% endblock %}
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+  </body>
+</html>
