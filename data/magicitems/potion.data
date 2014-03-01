@@ -1,0 +1,470 @@
+#
+
+LPUSH magicitem_kind potion
+
+
+LPUSH potion_name_template {{ magicitem.strength['name'] }} {{ magicitem.effect_description['name'] }} {{ magicitem.kind }}
+LPUSH potion_name_template {{ magicitem.strength['name'] }} {{ magicitem.variety }} of {{ magicitem.effect_description['name'] }}
+LPUSH potion_name_template {{ magicitem.npc.name['firstname'] }}'s {{ magicitem.effect_description['name'] }} {{ magicitem.variety }}
+
+
+LPUSH potion_effect healing
+LPUSH potion_effect neutralize_poison
+LPUSH potion_effect endure_elements
+LPUSH potion_effect jumping
+LPUSH potion_effect remove_fear
+LPUSH potion_effect blur
+LPUSH potion_effect flight
+LPUSH potion_effect levitation
+LPUSH potion_effect haste
+LPUSH potion_effect respiration
+            
+HSET potion_effect_description healing              {"name":"healing",              "description":"can heal various wounds and ailments"    }
+HSET potion_effect_description neutralize_poison    {"name":"neutralize poison",    "description":"can neutralize various poisons"          }
+HSET potion_effect_description endure_elements      {"name":"endure elements",      "description":"increases resistance to the elements"    }
+HSET potion_effect_description jumping              {"name":"jumping",              "description":"allows user to jump to amazing heights and distances"    }
+HSET potion_effect_description remove_fear          {"name":"remove fear",          "description":"fortifies the user against the most terrifying foes"     }
+HSET potion_effect_description blur                 {"name":"blur",                 "description":"causes user to blur with movement"       }
+HSET potion_effect_description flight               {"name":"flight",               "description":"allows unassisted flight for a limited duration"         }
+HSET potion_effect_description levitation           {"name":"levitation",           "description":"allows unassisted levitation for a limited duration"     }
+HSET potion_effect_description haste                {"name":"haste",                "description":"allows user to move with extreme speed"  }
+HSET potion_effect_description respiration          {"name":"respiration",          "description":"allows user breathe in otherwise dangerous environments" }
+            
+#<!-- may cause blindness, which -->
+
+ZADD potion_duration  10  {"name":"is temporary",           "score":10  }
+ZADD potion_duration  20  {"name":"lasts a few seconds",    "score":20  }
+ZADD potion_duration  30  {"name":"lasts a minute",         "score":30  }
+ZADD potion_duration  40  {"name":"lasts a few minutes",    "score":40  }
+ZADD potion_duration  50  {"name":"lasts several minutes",  "score":50  }
+ZADD potion_duration  60  {"name":"lasts an hour",          "score":60  }
+ZADD potion_duration  70  {"name":"lasts a few hours",      "score":70  }
+ZADD potion_duration  80  {"name":"lasts several hours",    "score":80  }
+ZADD potion_duration  85  {"name":"lasts a day",            "score":85  }
+ZADD potion_duration  90  {"name":"lasts a few days",       "score":90  }
+ZADD potion_duration  95  {"name":"lasts a week",           "score":95  }
+ZADD potion_duration  98  {"name":"lasts weeks",            "score":98  }
+ZADD potion_duration 100  {"name":"is permanent",           "score":100  }
+
+
+# In the container is a _________ potion
+ZADD potion_consistency   3  {"name":"watery",   "score":3  }
+ZADD potion_consistency   6  {"name":"thick",   "score":6  }
+ZADD potion_consistency   9  {"name":"chunky",   "score":9  }
+ZADD potion_consistency  12  {"name":"viscous",   "score":12  }
+ZADD potion_consistency  15  {"name":"goopy",   "score":15  }
+ZADD potion_consistency  18  {"name":"gooey",   "score":18  }
+ZADD potion_consistency  21  {"name":"milky",   "score":21  }
+ZADD potion_consistency  24  {"name":"soupy",   "score":24  }
+ZADD potion_consistency  27  {"name":"sappy",   "score":27  }
+ZADD potion_consistency  30  {"name":"crusty",   "score":30  }
+ZADD potion_consistency  33  {"name":"buttery",   "score":33  }
+ZADD potion_consistency  36  {"name":"bubbly",   "score":36  }
+ZADD potion_consistency  39  {"name":"runny",   "score":39  }
+ZADD potion_consistency  42  {"name":"layered",   "score":42  }
+ZADD potion_consistency  45  {"name":"syrupy",   "score":45  }
+ZADD potion_consistency  48  {"name":"coagulated",   "score":48  }
+ZADD potion_consistency  51  {"name":"congealed",   "score":51  }
+ZADD potion_consistency  54  {"name":"gloppy",   "score":54  }
+ZADD potion_consistency  57  {"name":"gunky",   "score":57  }
+ZADD potion_consistency  60  {"name":"jellied",   "score":60  }
+ZADD potion_consistency  63  {"name":"solidified",   "score":63  }
+ZADD potion_consistency  66  {"name":"pulpy",   "score":66  }
+ZADD potion_consistency  69  {"name":"slushy",   "score":69  }
+ZADD potion_consistency  72  {"name":"tacky",   "score":72  }
+ZADD potion_consistency  75  {"name":"mucousy",   "score":75  }
+ZADD potion_consistency  78  {"name":"waxy",   "score":78  }
+ZADD potion_consistency  81  {"name":"scummy",   "score":81  }
+ZADD potion_consistency  84  {"name":"aqueous",   "score":84  }
+ZADD potion_consistency  87  {"name":"brothy",   "score":87  }
+ZADD potion_consistency  90  {"name":"fizzing",   "score":90  }
+ZADD potion_consistency  93  {"name":"chalky",   "score":93  }
+ZADD potion_consistency  96  {"name":"oily",   "score":96  }
+ZADD potion_consistency 100  {"name":"gritty",   "score":99  }
+
+            
+LPUSH potion_color aquamarine
+HSET potion_color_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+LPUSH potion_color azure
+HSET potion_color_description azure     {"name":"azure", "hex":"F0FFFF" }
+LPUSH potion_color banana
+HSET potion_color_description banana     {"name":"banana", "hex":"E3CF57" }
+LPUSH potion_color beige
+HSET potion_color_description beige     {"name":"beige", "hex":"F5F5DC" }
+LPUSH potion_color bisque
+HSET potion_color_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+LPUSH potion_color black
+HSET potion_color_description black     {"name":"black", "hex":"000000" }
+LPUSH potion_color blanchedalmond
+HSET potion_color_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+LPUSH potion_color blue
+HSET potion_color_description blue     {"name":"blue", "hex":"0000FF" }
+LPUSH potion_color blueviolet
+HSET potion_color_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+LPUSH potion_color brick
+HSET potion_color_description brick     {"name":"brick", "hex":"9C661F" }
+LPUSH potion_color brown
+HSET potion_color_description brown     {"name":"brown", "hex":"A52A2A" }
+LPUSH potion_color burlywood
+HSET potion_color_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+LPUSH potion_color burntsienna
+HSET potion_color_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+LPUSH potion_color burntumber
+HSET potion_color_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+LPUSH potion_color cadetblue
+HSET potion_color_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+LPUSH potion_color cadmiumorange
+HSET potion_color_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+LPUSH potion_color cadmiumyellow
+HSET potion_color_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+LPUSH potion_color carrot
+HSET potion_color_description carrot     {"name":"carrot", "hex":"ED9121" }
+LPUSH potion_color chartreuse
+HSET potion_color_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+LPUSH potion_color chocolate
+HSET potion_color_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+LPUSH potion_color cobalt
+HSET potion_color_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+LPUSH potion_color cobaltgreen
+HSET potion_color_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+LPUSH potion_color coldgrey
+HSET potion_color_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+LPUSH potion_color coral
+HSET potion_color_description coral     {"name":"coral", "hex":"FF7F50" }
+LPUSH potion_color cornflowerblue
+HSET potion_color_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
+LPUSH potion_color cornsilk
+HSET potion_color_description cornsilk     {"name":"cornsilk-colored", "hex":"FFF8DC" }
+LPUSH potion_color crimson
+HSET potion_color_description crimson     {"name":"crimson", "hex":"DC143C" }
+LPUSH potion_color cyan
+HSET potion_color_description cyan     {"name":"cyan", "hex":"00FFFF" }
+LPUSH potion_color darkblue
+HSET potion_color_description darkblue     {"name":"dark blue", "hex":"00008B" }
+LPUSH potion_color darkcyan
+HSET potion_color_description darkcyan     {"name":"dark cyan", "hex":"008B8B" }
+LPUSH potion_color darkgoldenrod
+HSET potion_color_description darkgoldenrod     {"name":"dark goldenrod", "hex":"B8860B" }
+LPUSH potion_color darkgray
+HSET potion_color_description darkgray     {"name":"dark gray", "hex":"A9A9A9" }
+LPUSH potion_color darkgreen
+HSET potion_color_description darkgreen     {"name":"dark green", "hex":"006400" }
+LPUSH potion_color darkkhaki
+HSET potion_color_description darkkhaki     {"name":"dark khaki", "hex":"BDB76B" }
+LPUSH potion_color darkolivegreen
+HSET potion_color_description darkolivegreen     {"name":"dark olive green", "hex":"556B2F" }
+LPUSH potion_color darkorange
+HSET potion_color_description darkorange     {"name":"dark orange", "hex":"FF8C00" }
+LPUSH potion_color darkorchid
+HSET potion_color_description darkorchid     {"name":"dark orchid", "hex":"9932CC" }
+LPUSH potion_color darkred
+HSET potion_color_description darkred     {"name":"dark red", "hex":"8B0000" }
+LPUSH potion_color darksalmon
+HSET potion_color_description darksalmon     {"name":"dark salmon", "hex":"E9967A" }
+LPUSH potion_color darkseagreen
+HSET potion_color_description darkseagreen     {"name":"dark sea green", "hex":"8FBC8F" }
+LPUSH potion_color darkslateblue
+HSET potion_color_description darkslateblue     {"name":"dark slate blue", "hex":"483D8B" }
+LPUSH potion_color darkslategray
+HSET potion_color_description darkslategray     {"name":"dark slate gray", "hex":"2F4F4F" }
+LPUSH potion_color darkturquoise
+HSET potion_color_description darkturquoise     {"name":"dark turquoise", "hex":"00CED1" }
+LPUSH potion_color darkviolet
+HSET potion_color_description darkviolet     {"name":"dark violet", "hex":"9400D3" }
+LPUSH potion_color deeppink
+HSET potion_color_description deeppink     {"name":"deep pink", "hex":"FF1493" }
+LPUSH potion_color deepskyblue
+HSET potion_color_description deepskyblue     {"name":"deep sky blue", "hex":"00BFFF" }
+LPUSH potion_color dimgray
+HSET potion_color_description dimgray     {"name":"dim gray", "hex":"696969" }
+LPUSH potion_color dodgerblue
+HSET potion_color_description dodgerblue     {"name":"dodger blue", "hex":"1E90FF" }
+LPUSH potion_color eggshell
+HSET potion_color_description eggshell     {"name":"eggshell", "hex":"FCE6C9" }
+LPUSH potion_color emeraldgreen
+HSET potion_color_description emeraldgreen     {"name":"emerald green", "hex":"00C957" }
+LPUSH potion_color firebrick
+HSET potion_color_description firebrick     {"name":"firebrick", "hex":"B22222" }
+LPUSH potion_color flesh
+HSET potion_color_description flesh     {"name":"flesh", "hex":"FF7D40" }
+LPUSH potion_color floralwhite
+HSET potion_color_description floralwhite     {"name":"floral white", "hex":"FFFAF0" }
+LPUSH potion_color forestgreen
+HSET potion_color_description forestgreen     {"name":"forest green", "hex":"228B22" }
+LPUSH potion_color fuchsia
+HSET potion_color_description fuchsia     {"name":"fuchsia", "hex":"FF00FF" }
+LPUSH potion_color ghostwhite
+HSET potion_color_description ghostwhite     {"name":"ghost white", "hex":"F8F8FF" }
+LPUSH potion_color goldenrod
+HSET potion_color_description goldenrod     {"name":"goldenrod", "hex":"DAA520" }
+LPUSH potion_color gold
+HSET potion_color_description gold     {"name":"gold", "hex":"FFD700" }
+LPUSH potion_color gray
+HSET potion_color_description gray     {"name":"gray", "hex":"808080" }
+LPUSH potion_color green
+HSET potion_color_description green     {"name":"green", "hex":"008000" }
+LPUSH potion_color greenyellow
+HSET potion_color_description greenyellow     {"name":"green-yellow", "hex":"ADFF2F" }
+LPUSH potion_color honeydew
+HSET potion_color_description honeydew     {"name":"honeydew", "hex":"F0FFF0" }
+LPUSH potion_color hotpink
+HSET potion_color_description hotpink     {"name":"hot pink", "hex":"FF69B4" }
+LPUSH potion_color indian
+HSET potion_color_description indian     {"name":"indian red", "hex":"B0171F" }
+LPUSH potion_color indigo
+HSET potion_color_description indigo     {"name":"indigo", "hex":"4B0082" }
+LPUSH potion_color ivoryblack
+HSET potion_color_description ivoryblack     {"name":"ivoryblack", "hex":"292421" }
+LPUSH potion_color ivory
+HSET potion_color_description ivory     {"name":"ivory", "hex":"FFFFF0" }
+LPUSH potion_color khaki
+HSET potion_color_description khaki     {"name":"khaki-colored", "hex":"F0E68C" }
+LPUSH potion_color lavender
+HSET potion_color_description lavender     {"name":"lavender", "hex":"E6E6FA" }
+LPUSH potion_color lawngreen
+HSET potion_color_description lawngreen     {"name":"lawn green", "hex":"7CFC00" }
+LPUSH potion_color lightblue
+HSET potion_color_description lightblue     {"name":"light blue", "hex":"ADD8E6" }
+LPUSH potion_color lightcoral
+HSET potion_color_description lightcoral     {"name":"light coral", "hex":"F08080" }
+LPUSH potion_color lightcyan
+HSET potion_color_description lightcyan     {"name":"light cyan", "hex":"E0FFFF" }
+LPUSH potion_color lightgoldenrod
+HSET potion_color_description lightgoldenrod     {"name":"light goldenrod", "hex":"FFEC8B" }
+LPUSH potion_color lightgoldenrodyellow
+HSET potion_color_description lightgoldenrodyellow     {"name":"light goldenrod yellow", "hex":"FAFAD2" }
+LPUSH potion_color lightgreen
+HSET potion_color_description lightgreen     {"name":"light green", "hex":"90EE90" }
+LPUSH potion_color lightgrey
+HSET potion_color_description lightgrey     {"name":"light grey", "hex":"D3D3D3" }
+LPUSH potion_color lightpink
+HSET potion_color_description lightpink     {"name":"light pink", "hex":"FFB6C1" }
+LPUSH potion_color lightsalmon
+HSET potion_color_description lightsalmon     {"name":"light salmon", "hex":"FFA07A" }
+LPUSH potion_color lightseagreen
+HSET potion_color_description lightseagreen     {"name":"light sea green", "hex":"20B2AA" }
+LPUSH potion_color lightskyblue
+HSET potion_color_description lightskyblue     {"name":"light sky blue", "hex":"87CEFA" }
+LPUSH potion_color lightslateblue
+HSET potion_color_description lightslateblue     {"name":"light slate blue", "hex":"8470FF" }
+LPUSH potion_color lightslategray
+HSET potion_color_description lightslategray     {"name":"light slate gray", "hex":"778899" }
+LPUSH potion_color lightsteelblue
+HSET potion_color_description lightsteelblue     {"name":"light steel blue", "hex":"B0C4DE" }
+LPUSH potion_color lightyellow
+HSET potion_color_description lightyellow     {"name":"light yellow", "hex":"FFFFE0" }
+LPUSH potion_color lime
+HSET potion_color_description lime     {"name":"lime", "hex":"00FF00" }
+LPUSH potion_color limegreen
+HSET potion_color_description limegreen     {"name":"lime green", "hex":"32CD32" }
+LPUSH potion_color linen
+HSET potion_color_description linen     {"name":"linen white", "hex":"FAF0E6" }
+LPUSH potion_color manganeseblue
+HSET potion_color_description manganeseblue     {"name":"manganese blue", "hex":"03A89E" }
+LPUSH potion_color maroon
+HSET potion_color_description maroon     {"name":"maroon", "hex":"FF34B3" }
+LPUSH potion_color midnightblue
+HSET potion_color_description midnightblue     {"name":"midnight blue", "hex":"191970" }
+LPUSH potion_color mint
+HSET potion_color_description mint     {"name":"mint", "hex":"BDFCC9" }
+LPUSH potion_color navy
+HSET potion_color_description navy     {"name":"navy", "hex":"000080" }
+LPUSH potion_color olive
+HSET potion_color_description olive     {"name":"olive", "hex":"808000" }
+LPUSH potion_color olivedrab
+HSET potion_color_description olivedrab     {"name":"olive drab", "hex":"6B8E23" }
+LPUSH potion_color orange
+HSET potion_color_description orange     {"name":"orange", "hex":"FFA500" }
+LPUSH potion_color orangered
+HSET potion_color_description orangered     {"name":"orange-red", "hex":"FF4500" }
+LPUSH potion_color orchid
+HSET potion_color_description orchid     {"name":"orchid", "hex":"DA70D6" }
+LPUSH potion_color palegoldenrod
+HSET potion_color_description palegoldenrod     {"name":"pale goldenrod", "hex":"EEE8AA" }
+LPUSH potion_color palegreen
+HSET potion_color_description palegreen     {"name":"pale green", "hex":"98FB98" }
+LPUSH potion_color paleturquoise
+HSET potion_color_description paleturquoise     {"name":"pale turquoise", "hex":"AEEEEE" }
+LPUSH potion_color palevioletred
+HSET potion_color_description palevioletred     {"name":"pale violet-red", "hex":"DB7093" }
+LPUSH potion_color pink
+HSET potion_color_description pink     {"name":"pink", "hex":"FFC0CB" }
+LPUSH potion_color plum
+HSET potion_color_description plum     {"name":"plum", "hex":"DDA0DD" }
+LPUSH potion_color powderblue
+HSET potion_color_description powderblue     {"name":"powder-blue", "hex":"B0E0E6" }
+LPUSH potion_color purple
+HSET potion_color_description purple     {"name":"purple", "hex":"800080" }
+LPUSH potion_color raspberry
+HSET potion_color_description raspberry     {"name":"raspberry", "hex":"872657" }
+LPUSH potion_color rawsienna
+HSET potion_color_description rawsienna     {"name":"raw sienna", "hex":"C76114" }
+LPUSH potion_color red
+HSET potion_color_description red     {"name":"red", "hex":"FF0000" }
+LPUSH potion_color rosybrown
+HSET potion_color_description rosybrown     {"name":"rosy brown", "hex":"BC8F8F" }
+LPUSH potion_color royalblue
+HSET potion_color_description royalblue     {"name":"royal blue", "hex":"4169E1" }
+LPUSH potion_color saddlebrown
+HSET potion_color_description saddlebrown     {"name":"saddle brown", "hex":"8B4513" }
+LPUSH potion_color salmon
+HSET potion_color_description salmon     {"name":"salmon-colored", "hex":"FA8072" }
+LPUSH potion_color sandybrown
+HSET potion_color_description sandybrown     {"name":"sandy brown", "hex":"F4A460" }
+LPUSH potion_color sapgreen
+HSET potion_color_description sapgreen     {"name":"sap green", "hex":"308014" }
+LPUSH potion_color seagreen
+HSET potion_color_description seagreen     {"name":"sea green", "hex":"2E8B57" }
+LPUSH potion_color seashell
+HSET potion_color_description seashell     {"name":"seashell", "hex":"FFF5EE" }
+LPUSH potion_color sepia
+HSET potion_color_description sepia     {"name":"sepia", "hex":"5E2612" }
+LPUSH potion_color sienna
+HSET potion_color_description sienna     {"name":"sienna", "hex":"A0522D" }
+LPUSH potion_color silver
+HSET potion_color_description silver     {"name":"silver", "hex":"C0C0C0" }
+LPUSH potion_color skyblue
+HSET potion_color_description skyblue     {"name":"sky blue", "hex":"87CEEB" }
+LPUSH potion_color slateblue
+HSET potion_color_description slateblue     {"name":"slate blue", "hex":"6A5ACD" }
+LPUSH potion_color slategray
+HSET potion_color_description slategray     {"name":"slate gray", "hex":"708090" }
+LPUSH potion_color snow
+HSET potion_color_description snow     {"name":"snow-white", "hex":"FFFAFA" }
+LPUSH potion_color springgreen
+HSET potion_color_description springgreen     {"name":"spring green", "hex":"00FF7F" }
+LPUSH potion_color steelblue
+HSET potion_color_description steelblue     {"name":"steel blue", "hex":"4682B4" }
+LPUSH potion_color tan
+HSET potion_color_description tan     {"name":"tan", "hex":"D2B48C" }
+LPUSH potion_color teal
+HSET potion_color_description teal     {"name":"teal", "hex":"008080" }
+LPUSH potion_color thistle
+HSET potion_color_description thistle     {"name":"thistle", "hex":"D8BFD8" }
+LPUSH potion_color tomato
+HSET potion_color_description tomato     {"name":"tomato", "hex":"FF6347" }
+LPUSH potion_color turquoise
+HSET potion_color_description turquoise     {"name":"turquoise", "hex":"00F5FF" }
+LPUSH potion_color turquoiseblue
+HSET potion_color_description turquoiseblue     {"name":"turquoise blue", "hex":"00C78C" }
+LPUSH potion_color violet
+HSET potion_color_description violet     {"name":"violet", "hex":"EE82EE" }
+LPUSH potion_color violetred
+HSET potion_color_description violetred     {"name":"violet-red", "hex":"D02090" }
+LPUSH potion_color warmgrey
+HSET potion_color_description warmgrey     {"name":"warm grey", "hex":"808069" }
+LPUSH potion_color wheat
+HSET potion_color_description wheat     {"name":"wheat", "hex":"F5DEB3" }
+LPUSH potion_color white
+HSET potion_color_description white     {"name":"white", "hex":"FFFFFF" }
+LPUSH potion_color yellow
+HSET potion_color_description yellow     {"name":"yellow", "hex":"FFFF00" }
+LPUSH potion_color yellowgreen
+HSET potion_color_description yellowgreen     {"name":"yellow green", "hex":"9ACD32" }
+
+
+
+
+
+
+SET   potion_sideeffect_chance 5
+LPUSH potion_sideeffect seizures
+LPUSH potion_sideeffect blindness
+LPUSH potion_sideeffect death
+LPUSH potion_sideeffect melting flesh
+LPUSH potion_sideeffect spontaneous combustion
+LPUSH potion_sideeffect muteness
+LPUSH potion_sideeffect mouth glued shut
+LPUSH potion_sideeffect skin to turn an unnatural color
+LPUSH potion_sideeffect vomiting
+LPUSH potion_sideeffect nausea 
+LPUSH potion_sideeffect irritability
+LPUSH potion_sideeffect dizziness
+LPUSH potion_sideeffect fatigue
+LPUSH potion_sideeffect allergic reactions
+LPUSH potion_sideeffect fever
+LPUSH potion_sideeffect apathy
+LPUSH potion_sideeffect lethargy
+LPUSH potion_sideeffect paranoia
+LPUSH potion_sideeffect irrational behavior
+LPUSH potion_sideeffect hallucinations
+LPUSH potion_sideeffect levitation
+LPUSH potion_sideeffect colour blindness
+LPUSH potion_sideeffect sprouting feathers
+LPUSH potion_sideeffect sprouting hairs
+LPUSH potion_sideeffect vertigo
+LPUSH potion_sideeffect uncontrolled bowel movements
+LPUSH potion_sideeffect uncontrolled urination
+LPUSH potion_sideeffect severe muscle cramps
+            
+LPUSH potion_variety potion
+LPUSH potion_variety brew
+LPUSH potion_variety elixir
+LPUSH potion_variety philer
+LPUSH potion_variety tonic
+LPUSH potion_variety balm
+LPUSH potion_variety dram
+LPUSH potion_variety formula
+LPUSH potion_variety lotion
+LPUSH potion_variety gel
+LPUSH potion_variety slurry
+            
+            
+LPUSH potion_smell bubblegum
+LPUSH potion_smell sewage
+LPUSH potion_smell cornflour
+LPUSH potion_smell vinegar
+LPUSH potion_smell alcohol
+LPUSH potion_smell strawberries
+LPUSH potion_smell sweat
+LPUSH potion_smell lilac
+LPUSH potion_smell fruit
+LPUSH potion_smell fresh-cut grass
+LPUSH potion_smell mint
+LPUSH potion_smell harsh chemicals
+LPUSH potion_smell stinkbugs
+            
+LPUSH potion_container_material glass
+LPUSH potion_container_material copper
+LPUSH potion_container_material tin
+LPUSH potion_container_material iron
+LPUSH potion_container_material ceramic
+LPUSH potion_container_material leather
+            
+SET   potion_container_decoration_chance 30
+LPUSH potion_container_decoration cryptic writing
+LPUSH potion_container_decoration worthless jewels
+LPUSH potion_container_decoration feathers
+LPUSH potion_container_decoration beaded strings
+            
+SET   potion_container_label_chance 30
+LPUSH potion_container_label illegible
+LPUSH potion_container_label clearly labeled
+LPUSH potion_container_label written in an uncommon language
+LPUSH potion_container_label ideogram
+
+#The Weak Blur Potion is a lime green potion in an iron ____________.
+LPUSH potion_container_shape ampoule
+LPUSH potion_container_shape bottle
+LPUSH potion_container_shape can
+LPUSH potion_container_shape canteen
+LPUSH potion_container_shape carafe
+LPUSH potion_container_shape carton
+LPUSH potion_container_shape cylinder
+LPUSH potion_container_shape decanter
+LPUSH potion_container_shape demijohn
+LPUSH potion_container_shape dropper
+LPUSH potion_container_shape ewer
+LPUSH potion_container_shape figurine
+LPUSH potion_container_shape flagon
+LPUSH potion_container_shape flask
+LPUSH potion_container_shape goatskin
+LPUSH potion_container_shape jar
+LPUSH potion_container_shape jug
+LPUSH potion_container_shape phial
+LPUSH potion_container_shape tin
+LPUSH potion_container_shape vial
+
+
+
+

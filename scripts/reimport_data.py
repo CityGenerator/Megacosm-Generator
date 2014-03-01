@@ -58,7 +58,7 @@ pipe.flushall()
 for filename in glob.glob("data/*.data") :
     parse_file(pipe, filename)
 
-for filename in glob.glob("data/races/*.data") :
+for filename in glob.glob("data/*/*.data") :
     parse_file(pipe, filename)
 
 pipe.execute()

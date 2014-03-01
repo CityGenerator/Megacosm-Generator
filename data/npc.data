@@ -1175,7 +1175,7 @@ LPUSH npc_motivation on a mission to capture someone
 
 LPUSH npc_motivation traveling with a diplomat
 LPUSH npc_motivation traveling with a circus
-LPUSH npc_motivation traveling with an expidition
+LPUSH npc_motivation traveling with an expedition
 LPUSH npc_motivation traveling with an important person
 LPUSH npc_motivation traveling with an acting troupe
 
