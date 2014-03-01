@@ -62,7 +62,7 @@ LPUSH magicitem_curse derp
 LPUSH magicitem_curse yawning
 LPUSH magicitem_curse submission
 LPUSH magicitem_curse lethargy
-LPUSH magicitem_curse big spender
+LPUSH magicitem_curse bigspender
 LPUSH magicitem_curse truthteller
 LPUSH magicitem_curse precious
 LPUSH magicitem_curse braddoro
@@ -87,7 +87,7 @@ HSET magicitem_curse_description derp  {"name":"derp", "description":"causes the
 HSET magicitem_curse_description yawning  {"name":"yawning", "description":"causes uncontrollable, loud yawning"   }
 HSET magicitem_curse_description submission  {"name":"submission", "description":"will randomly submit to an enemy"   }
 HSET magicitem_curse_description lethargy  {"name":"lethargy", "description":"has a small chance of causing the user to deny participating in any physical action"   }
-HSET magicitem_curse_description big spender  {"name":"spender", "description":"causes user to overcompensate when making purchases"   }
+HSET magicitem_curse_description bigspender  {"name":"big spender", "description":"causes user to overcompensate when making purchases"   }
 HSET magicitem_curse_description truthteller  {"name":"truthteller", "description":"cannot lie or bend the rules while in your possession"   }
 HSET magicitem_curse_description precious  {"name":"precious", "description":"causes paranoia relating to theft of the item"   }
 HSET magicitem_curse_description braddoro  {"name":"braddoro", "description":"preoccupation with juvenile jokes, which causes giggles"   }

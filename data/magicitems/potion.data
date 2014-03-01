@@ -29,6 +29,178 @@ HSET potion_effect_description flight               {"name":"flight",           
 HSET potion_effect_description levitation           {"name":"levitation",           "description":"allows unassisted levitation for a limited duration"     }
 HSET potion_effect_description haste                {"name":"haste",                "description":"allows user to move with extreme speed"  }
 HSET potion_effect_description respiration          {"name":"respiration",          "description":"allows user breathe in otherwise dangerous environments" }
+
+
+#   accuracy boost    increases accuracy with projectiles
+#   acid    can burn through most organic substances
+#   ad nauseum    causes sudden and severe nausea
+#   agility    grants improved agility
+#   aging causes    instant aging
+#   hyena    causes hysteria and fits of uncontrollable laughter
+#   animal magnetism    you become irresistible
+#   antidote    removes the effect of any poision
+#   anti-paralysis    potion a potion that heals paralysis.
+#   assassin's evasion    increases your natural stealth ability
+#   aura of protection    potion of arcane protection
+#   awaken    wakes a sleeping person
+#   babbling    causes uncontrollable speaking of nonsense
+#   barkskin    causes hardening of skin granting natural armor
+#   bear endurance    increases the endurance of the user
+#   beautification    makes the user appear more attractive
+#   befuddlement    user becomes confused and reckless.
+#   beguiling    makes the user appear more trustworthy
+#   beneficial mutation    provides some sort of beneficial mutation
+#   neutral mutation    provides some sort of neutral mutation
+#   unfortunate mutation    provides some sort of unfortunate mutation
+#   berserk rage     throws user into uncontrollable rage
+#   passification    causes immediate aversion to confrontation
+#   bless    grants the blessing of an unknown deity
+#   blindness    causes immediate blindness
+#   blindness removal    restores sight to the blind
+#   blood    provides sustinence for creatures that drink blood
+#   blood-replenishing    restores lost blood from a severely injured person
+#   bloodroot    causes the blood to become unappealing to blooddrinkers
+#   bloodthirst    causes an unnatural, literal thirst for blood
+#   blur    causes user to become blurry and difficult to hit.
+#   perception    increases the users perception 
+#   blessing of the fae    causes user to turn into a fairy
+#   curse of the lycan    infects user with lycanthropy
+#   mummy curse    causes illness and a slow death unless curse is broken
+#   vampire's bite    infects user with vampirism
+#   brilliance    grants amazing insight
+#   bruise removal    removes minor injuries
+#   bulge-eye    causes user's eyes to bulge unnaturally
+#   bull strength    grants user powerful physical strength
+#   burn-healing    soothes and heals minor to severe burns
+#   cacophony    causes user to hear incredibly loud, continual noise
+#   calming    calms the user of shock, trauma, etc.
+#   catalyst    another potion to double in potency
+#   cat's grace    grants user uncanny grace
+#   stomach growling    provokes stomach growling
+#   cheese    makes anything taste edible (although possibly still dangerous)
+#   clone    causes a painful splitting into two beings, one of which immediately dies.
+#   coagulated blood     provides slight satiation for vampires and carnivores
+#   confusion    confuses the taker.
+#   coughing    provokes a powerful coughing fit
+#   pinkeye    causes drinker to suffer immediate conjunctivitis
+#   cunning    grants user unsurpassed cleverness
+#   cupid    causes drinker to have an immediate romantic infatuation with whoever they see next
+#   cure corruption    heals diseased or corrupted flesh
+#   cure disease    cures most diseases
+#   cure boils    will heal painful or unsightly boils
+#   cure insanity    calms the most unsound mind
+#   cure mutation    will remove any unnatural mutations
+#   cure paralysis    cures paralysis
+#   cure weakness    removes any unnatural weakness
+#   current stopper    prevents electrocution
+#   curse removal    removes most magical or supernatural curses
+#   deflection    provides some protection from attacks
+#   darkvision    allows user to see in the dark
+#   daylight    allows the user to see as if there was daylight present
+#   deafness    causes complete loss of hearing
+#   death-cap    causes death if used
+#   deathwish    causes subconscious desire to die through reckless behavior
+#   decay    immediately causes flesh to rot
+#   degeneration    causes a random ability to reduce
+#   bliss    user becomes immediately blissful and happy
+#   death ward    prevents user from dying
+#   delay poison    prevents the onset if toxic substances
+#   desire    causes user to desperately desire something or someone
+#   despair    causes a deep depression over the hopelessness of the situation
+#   detect creature    gives the user insight on the location of any nearby creatures
+#   detect things    gives the user insight on the location of a specific object
+#   dexterity    grants the user impressive dexterity
+#   discord    drinker becomes irritable and picks fights
+#   disease removal    cures drinker of most diseases
+#   divine power    Grants the user strength from an unknown deity
+#   divine restoration    restores the user as a favor from an unknown deity
+#   dizziness    makes the drinker dizzy and lightheaded
+#   dogbane    poisonous to anything with canine ancestry
+#   dragon dung    causes the drinker to defecate a small number of coins
+#   dreamless    prevents the user from dreaming during sleep
+#   drowsiness    makes the drinker incredibly drowsy
+#   education    grants knowledge on a specific subject
+#   euphoria    induces an irrational happiness
+#   endure elements    grants resistence to the elements
+#   embiggenment    embiggens the user by one size
+#   enlargement    enlarges the user by one size
+#   enlightenment    provides user with a random bonus on a given skill
+#   exploding    causes an explosive reaction when exposed to certain substances 
+#   fatiguing    causes user to feel fatigued
+#   fear removal    removes fear caused by a specific source
+#   fungal    causes user to grow unsightly fungal growths
+#   fire protection    protects the user from fire and heat
+#   flesh eater    causes uneven and grotesque disfigurement
+#   flatulence    causes uncontrollable, loud and unsavory gas.
+#   flight    grants the ability to fly
+#   flinch    causes user to flinch uncontrollably
+#   forgetfulness    makes the user forgetful.
+#   fox cunning     make the user cleverer than normal
+#   freezing  lower the body temperature of the drinker
+#   frostbite  causes frost damage to drinker
+#   frostbite    increases ice damage
+#   frostguard    increases ice resistance
+#   fungiface    makes the user's face erupt in fungus.
+#   fury    induces an uncontrollable rage towards others
+#   gaseous form    user takes a gaseous form
+#   girding    gives the user extra endurance.
+#   grace    grants the user unnatural grace.
+#   hair-raising    causes the user's hair to stand on end.
+#   hallucination   causes drinker to hallucinate
+#   haste    causes drinker to move quickly 
+#   hate    causes a growing dislike of a person or thing
+#   heartbreak    causes an irrational feeling of loss and heartbreak
+#   herbicide   causes damage or death to plant-based life
+#   heroism    caused unusual recklessness and remission of fear
+#   hiccupping  causes uncontrollable hiccupping
+#   hide from animals    prevents animals from detecting the user
+#   hide from undead    prevents undead from detecting the user
+#   holy flame    burns the drinker with a righteous flame
+#   ignition    causes user to uncontrollably belch flames
+#   dragon's breath    grants user the ability to breathe fire like a dragon
+#   influence    grants the ability to influence others
+#   insanity    causes user become irrational and uncontrollable
+#   invigorating    removes fatigue and keeps user awake
+#   invisibility    makes the user invisible
+#   jawbind    induces lockjaw in the user
+#   lockjaw    induces lockjaw in the user
+#   jumping    grants the user the ability to jump twice their normal distance.
+#   knowledge    grants the user knowledge on a specific subject.
+#   obesity    causes an immediate increase in body fat by 100%
+#   lazarus    can return the user from death or near-death
+#   laughter    causes the user to laugh uncontrollably
+#   laxative    causes uncontrollable bowel movements
+#   lean        causes the user to immediately decrease body fat by 75%
+#   levitation    allows the user to levitate
+#   librarian    grants user the ability to locate any nearby book
+#   light foot    grants the user the ability to move quietly
+#   static discharge    causes unnatural buildup of static discharge
+#   living death    puts user into a death-like sleep
+#   longevity    cuts aging rage by half.
+#   love    makes the user fall in love with whoever held the substance previously
+#   luck    grants unnatural luck to the user
+#   mage armor    grants magical protection to the user
+#   magebane    causes illness in anyone who manipulates magical energies
+#   magic fang    causes user to grow magical fangs
+#   magic stone   summons a handful of small throwing stones
+#   magic vestment    grants magical protection to the users clothing
+#   magic weapon    summons a force weapon shaped by the user's mind
+#   malevolence    causes brooding anger towards a random target
+#   manegrow    causes users head to grow thick, luxurious hair rapidly
+#   melancholy    impairs enjoyment and fun
+#   memory    enhances the drinker's memory
+
+
+
+
+
+
+
+
+
+
+
+
             
 #<!-- may cause blindness, which -->
 
@@ -407,7 +579,11 @@ LPUSH potion_variety dram
 LPUSH potion_variety formula
 LPUSH potion_variety lotion
 LPUSH potion_variety gel
+LPUSH potion_variety pomade
 LPUSH potion_variety slurry
+LPUSH potion_variety draught
+LPUSH potion_variety essence
+LPUSH potion_variety serum
             
             
 LPUSH potion_smell bubblegum
