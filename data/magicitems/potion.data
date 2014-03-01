@@ -36,7 +36,6 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   ad nauseum    causes sudden and severe nausea
 #   agility    grants improved agility
 #   aging causes    instant aging
-#   hyena    causes hysteria and fits of uncontrollable laughter
 #   animal magnetism    you become irresistible
 #   antidote    removes the effect of any poision
 #   anti-paralysis    potion a potion that heals paralysis.
@@ -50,23 +49,17 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   befuddlement    user becomes confused and reckless.
 #   beguiling    makes the user appear more trustworthy
 #   beneficial mutation    provides some sort of beneficial mutation
-#   neutral mutation    provides some sort of neutral mutation
-#   unfortunate mutation    provides some sort of unfortunate mutation
 #   berserk rage     throws user into uncontrollable rage
-#   passification    causes immediate aversion to confrontation
 #   bless    grants the blessing of an unknown deity
+#   blessing of the fae    causes user to turn into a fairy
 #   blindness    causes immediate blindness
 #   blindness removal    restores sight to the blind
+#   bliss    user becomes immediately blissful and happy
 #   blood    provides sustinence for creatures that drink blood
 #   blood-replenishing    restores lost blood from a severely injured person
 #   bloodroot    causes the blood to become unappealing to blooddrinkers
 #   bloodthirst    causes an unnatural, literal thirst for blood
 #   blur    causes user to become blurry and difficult to hit.
-#   perception    increases the users perception 
-#   blessing of the fae    causes user to turn into a fairy
-#   curse of the lycan    infects user with lycanthropy
-#   mummy curse    causes illness and a slow death unless curse is broken
-#   vampire's bite    infects user with vampirism
 #   brilliance    grants amazing insight
 #   bruise removal    removes minor injuries
 #   bulge-eye    causes user's eyes to bulge unnaturally
@@ -76,40 +69,39 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   calming    calms the user of shock, trauma, etc.
 #   catalyst    another potion to double in potency
 #   cat's grace    grants user uncanny grace
-#   stomach growling    provokes stomach growling
 #   cheese    makes anything taste edible (although possibly still dangerous)
 #   clone    causes a painful splitting into two beings, one of which immediately dies.
 #   coagulated blood     provides slight satiation for vampires and carnivores
 #   confusion    confuses the taker.
 #   coughing    provokes a powerful coughing fit
-#   pinkeye    causes drinker to suffer immediate conjunctivitis
 #   cunning    grants user unsurpassed cleverness
 #   cupid    causes drinker to have an immediate romantic infatuation with whoever they see next
+#   cure boils    will heal painful or unsightly boils
 #   cure corruption    heals diseased or corrupted flesh
 #   cure disease    cures most diseases
-#   cure boils    will heal painful or unsightly boils
 #   cure insanity    calms the most unsound mind
 #   cure mutation    will remove any unnatural mutations
 #   cure paralysis    cures paralysis
 #   cure weakness    removes any unnatural weakness
 #   current stopper    prevents electrocution
+#   curse of the lycan    infects user with lycanthropy
 #   curse removal    removes most magical or supernatural curses
-#   deflection    provides some protection from attacks
 #   darkvision    allows user to see in the dark
 #   daylight    allows the user to see as if there was daylight present
 #   deafness    causes complete loss of hearing
 #   death-cap    causes death if used
+#   death ward    prevents user from dying
 #   deathwish    causes subconscious desire to die through reckless behavior
 #   decay    immediately causes flesh to rot
+#   deflection    provides some protection from attacks
 #   degeneration    causes a random ability to reduce
-#   bliss    user becomes immediately blissful and happy
-#   death ward    prevents user from dying
 #   delay poison    prevents the onset if toxic substances
 #   desire    causes user to desperately desire something or someone
 #   despair    causes a deep depression over the hopelessness of the situation
 #   detect creature    gives the user insight on the location of any nearby creatures
 #   detect things    gives the user insight on the location of a specific object
 #   dexterity    grants the user impressive dexterity
+#   discord    complete disagreement with every point of view
 #   discord    drinker becomes irritable and picks fights
 #   disease removal    cures drinker of most diseases
 #   divine power    Grants the user strength from an unknown deity
@@ -117,29 +109,31 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   dizziness    makes the drinker dizzy and lightheaded
 #   dogbane    poisonous to anything with canine ancestry
 #   dragon dung    causes the drinker to defecate a small number of coins
+#   dragon's breath    grants user the ability to breathe fire like a dragon
 #   dreamless    prevents the user from dreaming during sleep
 #   drowsiness    makes the drinker incredibly drowsy
 #   education    grants knowledge on a specific subject
-#   euphoria    induces an irrational happiness
-#   endure elements    grants resistence to the elements
 #   embiggenment    embiggens the user by one size
+#   endure elements    grants resistence to the elements
 #   enlargement    enlarges the user by one size
 #   enlightenment    provides user with a random bonus on a given skill
+#   euphoria    induces an irrational happiness
 #   exploding    causes an explosive reaction when exposed to certain substances 
 #   fatiguing    causes user to feel fatigued
 #   fear removal    removes fear caused by a specific source
-#   fungal    causes user to grow unsightly fungal growths
 #   fire protection    protects the user from fire and heat
-#   flesh eater    causes uneven and grotesque disfigurement
 #   flatulence    causes uncontrollable, loud and unsavory gas.
+#   flesh eater    causes uneven and grotesque disfigurement
 #   flight    grants the ability to fly
 #   flinch    causes user to flinch uncontrollably
 #   forgetfulness    makes the user forgetful.
 #   fox cunning     make the user cleverer than normal
 #   freezing  lower the body temperature of the drinker
+#   friendship    grants drinker the ability to become fast friends with someone upon meeting them.
 #   frostbite  causes frost damage to drinker
 #   frostbite    increases ice damage
 #   frostguard    increases ice resistance
+#   fungal    causes user to grow unsightly fungal growths
 #   fungiface    makes the user's face erupt in fungus.
 #   fury    induces an uncontrollable rage towards others
 #   gaseous form    user takes a gaseous form
@@ -156,26 +150,24 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   hide from animals    prevents animals from detecting the user
 #   hide from undead    prevents undead from detecting the user
 #   holy flame    burns the drinker with a righteous flame
+#   hyena    causes hysteria and fits of uncontrollable laughter
 #   ignition    causes user to uncontrollably belch flames
-#   dragon's breath    grants user the ability to breathe fire like a dragon
 #   influence    grants the ability to influence others
 #   insanity    causes user become irrational and uncontrollable
 #   invigorating    removes fatigue and keeps user awake
 #   invisibility    makes the user invisible
 #   jawbind    induces lockjaw in the user
-#   lockjaw    induces lockjaw in the user
 #   jumping    grants the user the ability to jump twice their normal distance.
 #   knowledge    grants the user knowledge on a specific subject.
-#   obesity    causes an immediate increase in body fat by 100%
-#   lazarus    can return the user from death or near-death
 #   laughter    causes the user to laugh uncontrollably
 #   laxative    causes uncontrollable bowel movements
+#   lazarus    can return the user from death or near-death
 #   lean        causes the user to immediately decrease body fat by 75%
 #   levitation    allows the user to levitate
 #   librarian    grants user the ability to locate any nearby book
 #   light foot    grants the user the ability to move quietly
-#   static discharge    causes unnatural buildup of static discharge
 #   living death    puts user into a death-like sleep
+#   lockjaw    induces lockjaw in the user
 #   longevity    cuts aging rage by half.
 #   love    makes the user fall in love with whoever held the substance previously
 #   luck    grants unnatural luck to the user
@@ -189,10 +181,121 @@ HSET potion_effect_description respiration          {"name":"respiration",      
 #   manegrow    causes users head to grow thick, luxurious hair rapidly
 #   melancholy    impairs enjoyment and fun
 #   memory    enhances the drinker's memory
-
-
-
-
+#   mental resistance    protects the user from mental attacks and damage
+#   midas touch    allows user to turn any small object to gold.
+#   might    greatly increases user's strength
+#   misdirection    grants user the ability to misdirect others visually or verbally
+#   monster    causes user to transform into a random creature
+#   mouth itching    causes insufferable itching of the inside of the mouth
+#   muffling    wraps the user in a coccoon of silence
+#   mummy curse    causes illness and a slow death unless curse is broken
+#   neutralize poison    neutralizes any poisons in the user's system
+#   neutral mutation    provides some sort of neutral mutation
+#   nightmare    invokes nightmares the next time the user sleeps
+#   nondetection    makes the user undetectable through magical means
+#   noxious fumes    causes the user to emit noxious, suffocating fumes.
+#   obesity    causes an immediate increase in body fat by 100%
+#   oculus    restores the user's sight
+#   owl wisdom    grants the user powerful insight
+#   paralysis    paralyzes the user
+#   paralysis removal    removes paralysis from user
+#   passification    causes immediate aversion to confrontation
+#   pass without trace    grants the user the ability to move without leaving a trail
+#   peace    relieves anxiety.
+#   perception    increases the users perception 
+#   piercing wit    user becomes keenly aware of the missteps of others
+#   pinkeye    causes drinker to suffer immediate conjunctivitis
+#   poison    user becomes immediately ill
+#   polymorph    grants the user the ability to morph into another shpe
+#   porridge    removes any immediate hunger
+#   precision    grants the user precision with ranged weaponry
+#   prowess    grants the user unmatched agility, strength or endurance
+#   pumpkinhead    turns the user's head into an unlit jack-o-lantern
+#   pure luck    grants the user unnatural luck
+#   purification    cleanses the user of any non-magical diseases and filth
+#   scouring solution    is good for cleaning caked on grime.
+#   sleep    user will fall asleep for up to 24 hours
+#   static discharge    causes unnatural buildup of static discharge
+#   stomach growling    provokes stomach growling
+#   unfortunate mutation    provides some sort of unfortunate mutation
+#   vampire's bite    infects user with vampirism
+#   rage    user develops uncontrolled, undirected rage
+#   rano    causes user to develop large horns on their forehead
+#   raw chaos    user is innundated with raw chaos
+#   reason    user is protected from the effects of insanity
+#   reduce person    user decreases in size by 50%
+#   reflection    grants the user insight
+#   regeneration    allows user to regrow lost limbs
+#   remove blindness    restores sight 
+#   remove deafness    restores hearing
+#   remove curse    removes minor curses
+#   remove disease    removes most diseases
+#   remove fear    removes unnatural fear
+#   remove paralysis    grants the ability to move freely
+#   replenishing    heals and revitalizes the user
+#   resist acid    toughens the user and makes them resistant to corrosive substances
+#   resist cold    provides resistance to the cold
+#   resist electricity    provides resistance to electricity
+#   resist fire     provides resistance to fire
+#   resist sonic     provides resistance to sonic damage
+#   resource finder    allows user to sniff out needed resources
+#   restoration     reverts effects of any other spells
+#   revive    awakens an unconscious person
+#   rock skin    hardens the skin of the user while allowing flexibility
+#   sanctuary    grants the user protection from combat 
+#   snakehair    causes user to sprout snakes from their head
+#   seduction    grants the user the ability to seduce anyone
+#   see invisible    grants the user the ability to see invisible things
+#   serpent    causes user to grow poisonous fangs
+#   shield    grants the user a magical force shield for protection
+#   shield of faith     grants the user a magical force shield from an unknown deity
+#   shrinking    causes the drinker to shrink
+#   sickness    causes user to display symptoms of severe illness
+#   skelegro   regrows any missing bones
+#   hair    causes user to grow thick, beautiful hair on their head
+#   hare    causes user to grow thick, beautiful hare on their head
+#   slashing fury    causes user to fly into a frenzy when holding a blade
+#   slaying    grants user unnatural vigor when combatting a specific enemy
+#   sleeping    forces the user into a deep sleep
+#   slowness    causes the user to move with extreme slowness
+#   snuffling    causes the user to continuously sniffle 
+#   social grace    grants unnatural skill in social situations
+#   sparkling apple cider    causes the user to desire apples
+#   spark    user suffers from continual, uncontrollable electrical outbursts
+#   speed    allows the user to move quickly
+#   spell breaker    breaks any existing spell effects on the user
+#   spicy fungal gumbo    causes severe pain and hallucinations
+#   spider climb    grants the user the ability to climb walls
+#   steeled curtain    increases the protection of existing armor
+#   stoneskin    grants the user hardened skin
+#   stone to flesh    can be used to cure petrification
+#   strength    grants unusual strength to the drinker
+#   caged imp    user becomes subconsciously mischievious 
+#   swelling    causes severe swelling of a random section of the body
+#   swiftness    grants the user the ability to move quickly
+#   intimidation    causes the user to be far more intimidating
+#   tongues    allows user to speak and understand any language
+#   toughness    grants user increased endurance
+#   training    allows user to increase effectiveness of a single skill
+#   troll blood    grants the user minor regenerative abilities 
+#   truth    makes the user tell the truth
+#   tumbling    grants the user unnatural tumbling skills
+#   indestructibility    user cannot be damage
+#   uselessness    has no discernible effect
+#   vampiric sunscreen    mitigates any penalties taken from sunlight
+#   venomguard    grants poison resistance
+#   bottled genie    turns the drinker into a genie, binds them to the bottle.
+#   visibility    grants visibility to the invisible
+#   cats eye    improves vision and enhances night vision 
+#   vision    grants user a mysterious and unclear vision 
+#   vocality   alters the user's voice
+#   water breathing    allows the user to breathe underwater
+#   water walk    allows the user to walk on water
+#   weakness    causes the user to feel weak.
+#   wide-eye    prevents the user from falling asleep
+#   wolfsbane    poisonous to a lycanthrope, protects user from infection
+#   wound-cleaning  antiseptic prevents infection frmo sinking in
+#   zombification   causes user to show immediate signs of zombification
 
 
 
@@ -642,5 +745,9 @@ LPUSH potion_container_shape tin
 LPUSH potion_container_shape vial
 
 
+# rarity- how rare is this potion in this region
+# rarity controls how likely they will know of it.
 
 
+# taste
+#texture
