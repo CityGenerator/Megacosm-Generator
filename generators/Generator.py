@@ -34,7 +34,7 @@ class Generator(object):
                     setattr( self, feature, Generator.rand_value(self,key) )
                 if self.redis.exists(key+"_description") and feature+"_description" not in self.__dict__ :
                     #print "adding list",feature,"to ", namekey
-                    print key+"_description", "has ",getattr(self,feature),"returns",self.redis.hmget(key+"_description",getattr(self,feature)  )
+                    #print key+"_description", "has ",getattr(self,feature),"returns",self.redis.hmget(key+"_description",getattr(self,feature)  )
 
                     setattr( self, feature+"_description", json.loads(self.redis.hmget(key+"_description",getattr(self,feature) )[0] ) )
                 
