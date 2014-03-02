@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% block title %}Welcome to the Planet {{planet.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Welcome to the Planet <a href="/planet?seed={{planet.seed}}">{{planet.name['full']}} ({{planet.seed}})</a></h1>
+
+    <h2>Summary</h2>
+
+
+{{planet.name['full'] }} is {{planet.size['name'] |article }} planet with {{planet.mooncount['name'] |article }}. 
+Days are {{planet.day['name'] }} on {{planet.name['full'] }}.
+ 
+
+<h2>Weather</h2>
+{{planet.name['full'] }} has {{planet.atmosphere['name'] |article }} atmosphere, where precipitation is {{planet.precipitation['name'] }}.
+The temperature on {{planet.name['full'] }} is {{planet.temp['name'] }}, and the wind is {{planet.wind['name'] }}.
+
+<h2>Civilization and Technology</h2>
+
+The growth of civilization on {{planet.name['full'] }} is considered {{planet.civilization['name'] }}.
+The average technology level is {{planet.technology['name'] }}, which is known for {{planet.technology['description'] }}.
+
+
+{% endblock %}

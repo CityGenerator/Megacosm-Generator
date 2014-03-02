@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Star, StarSystem, NPC, MagicItem
+from generators import Planet, NPC, MagicItem
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -101,70 +101,44 @@ def NPC_Builder():
     
     return render_template('npc_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
 
-@app.route('/continentmap')
-def continentmap():
+@app.route('/planet_builder')
+def Planet_Builder():
+    """Generate the basic data about a planet"""
 
-    """A view into the solar system."""
+    stats=server.lrange('planetstats',0,-1)
+    statinfo={}
+
+    for stat in stats :
+        statinfo[stat]=[]
+        for statstring in server.zrange('planet_'+stat,0,-1):
+            print "looking at planet_",stat, statstring
+            statinfo[stat].append(json.loads(statstring))
+    
+    return render_template('planet_builder.html',statinfo=statinfo) 
+
+
+@app.route('/planet')
+def GeneratePlanet():
+    """Generate the basic data about a planet"""
     seed=set_seed( request.args.get('seed') )
 
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
+    print "MAH SEED:",seed
 
-    # Colorize the data and return a png.
-    myImage=generate_image(starsystem.planet.continent[0].mapdata)
+    planetfeatures={'seed':seed,}
+
+    for param in request.args :
+        if re.match('^planet_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            planetfeatures[param]=int(request.args[param])
+
+    planet=Planet.Planet(server,planetfeatures)
+
+    return render_template('planet.html', planet=planet )
 
 
-    return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
 
 
-
-@app.route('/worldmap')
-def worldmap():
-    """A view into the solar system."""
-    seed=set_seed( request.args.get('seed') )
-
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
-
-    return render_template('map.html', starsystem=starsystem )
-
-@app.route('/worldmap.png')
-def worldmappng():
-    """Generate a worldmap and return it."""
-    seed=set_seed( request.args.get('seed') )
-
-    # Generate the map data
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
-
-    # Colorize the data and return a png.
-    myImage=generate_image(starsystem.planet.mapdata)
-
-    return send_file(myImage, mimetype='image/png', cache_timeout=100)
-
-@app.route('/worldbumpmap.png')
-def worldbumpmap():
-    """Generate a worldmap and return it."""
-    seed=set_seed( request.args.get('seed') )
-
-    # Generate the map data
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
-
-    # Colorize the data and return a png.
-    myImage=generate_bump_image(starsystem.planet.mapdata)
-
-    return send_file(myImage, mimetype='image/png', cache_timeout=100)
-
-@app.route('/worldspecularmap.png')
-def worldspecularmap():
-    """Generate a worldmap and return it."""
-    seed=set_seed( request.args.get('seed') )
-
-    # Generate the map data
-    starsystem=StarSystem.StarSystem(server,{'seed':seed})
-
-    # Colorize the data and return a png.
-    myImage=generate_specular_image(starsystem.planet.mapdata)
-
-    return send_file(myImage, mimetype='image/png', cache_timeout=100)
 
 @app.errorhandler(404)
 def page_not_found(e):

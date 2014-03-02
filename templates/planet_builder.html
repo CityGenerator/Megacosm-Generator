@@ -1,11 +1,11 @@
 
 {% extends "base.html" %}
-{% block title %}Build an NPC{% endblock %}
+{% block title %}Build a Planet{% endblock %}
 {% block head %}
   {{ super() }}
         <script>
             function disable_unused(){
-                var elem=document.getElementById('npcform').elements
+                var elem=document.getElementById('planetform').elements
                 console.log(elem)
                 for(var i = 0; i < elem.length; i++){
                     if (elem[i].value == ""){
@@ -17,7 +17,7 @@
             }
             window.onpageshow = function(){
                 // added so firefox enables things if the back button is hit. stupid firefox
-                var elem=document.getElementById('npcform').elements
+                var elem=document.getElementById('planetform').elements
                 for(var i = 0; i < elem.length; i++){
                     if (elem[i].value == ""){
                         elem[i].disabled=false
@@ -31,32 +31,17 @@
 {% block content %}
 
 
-        <h1>Lets build an NPC!</h1>
-        <form action="/npc" id="npcform">
+        <h1>Lets build a Planet!</h1>
+        <form action="/planet" id="planetform">
 
 
         <table>
-            {% for statname in otherstats %}
-            <tr>
-                <td>{{statname|capitalize}} </td>
-                <td>
-                    <select name="npc_{{statname}}">
-                        <option value=""></option>
-                        {% for stat in otherstats[statname]|sort %}
-                        <option value="{{ stat }}">{{stat }} </option>
-                        {% endfor %}
-                    <select>
-                </td>
-            </tr>
-            {% endfor %}
-
-
 
             {% for stat in statinfo %}
             <tr>
                 <td>{{stat}}: </td>
                 <td>
-                    <select name="npc_{{stat}}_roll">
+                    <select name="planet_{{stat}}_roll">
                         <option value=""></option>
                         {% for statstring in statinfo[stat] %}
                         <option value="{{ statstring['score']}}">{{statstring['name'] }} </option>
