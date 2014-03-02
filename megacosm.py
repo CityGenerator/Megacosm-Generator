@@ -2,9 +2,10 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Star, StarSystem, NPC
+from generators import Star, StarSystem, NPC, MagicItem
 from util.MakeMap import *
 from util.Seeds import *
+from util import Filters
 import random
 import redis
 import ConfigParser
@@ -36,6 +37,39 @@ app = Flask(__name__)
 def indexpage():
     """This is the first page anyone sees."""
     return render_template('index.html') 
+
+
+@app.route('/magic_item')
+def GenerateMagicItem():
+    """Generate a MagicItem"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    magicitemfeatures={'seed':seed,}
+
+    magicitem=MagicItem.MagicItem(server, magicitemfeatures)
+
+    print magicitem.__dict__
+    return render_template('magicitem.html',magicitem=magicitem) 
+
+@app.route('/magicitem_builder')
+def MagicItem_Builder():
+    """Generate an MagicItem"""
+
+    stats=server.lrange('magicitemstats',0,-1)
+    statinfo={}
+    races=server.lrange('race',0,-1);
+    professions=server.lrange('magicitem_profession',0,-1);
+    attitudes=server.lrange('magicitem_attitude',0,-1);
+    motivations=server.lrange('magicitem_motivation',0,-1);
+    emotions=server.lrange('magicitem_emotion',0,-1);
+    for stat in stats :
+        statinfo[stat]=[]
+        for statstring in server.zrange('magicitem_'+stat,0,-1):
+            statinfo[stat].append(json.loads(statstring))
+    
+    return render_template('magicitem_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
 
 
 @app.route('/npc')
@@ -164,11 +198,11 @@ def page_borked(e):
 
 @app.template_filter('article')
 def select_article(s):
-    return p.an(s)
+    return Filters.select_article(s)
 
 @app.template_filter('pluralize')
 def select_pluralize(s):
-    return p.plural(s)
+    return Filters.select_pluralize(s)
 
 
 if __name__ == '__main__':

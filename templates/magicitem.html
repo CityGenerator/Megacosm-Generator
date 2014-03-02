@@ -1,0 +1,32 @@
+
+
+{% extends "base.html" %}
+{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h2>Summary</h2>
+    The {{magicitem.name|title}} is {{magicitem.color_description['name'] | article}} {{magicitem.kind}} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
+    The {{magicitem.effect}} {{magicitem.kind}} {{magicitem.effect_description['description']}}.
+    The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and smells of {{magicitem.smell}}. 
+    The {{magicitem.strength['name']}} {{magicitem.variety}} is considered {{magicitem.value['name']|article}}. 
+    This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
+    {% if magicitem.curse %}
+    <br><br>
+    <b>Warning:</b> May cause {{magicitem.sideeffect}}.
+    {% endif%}
+
+    <h2>Description If Found...</h2>
+    <blockquote style="font-style:italic">"{{magicitem.location|capitalize}} is {{magicitem.kind|article }} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
+    The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and contains {{magicitem.consistency['name']|article}}, {{magicitem.color_description['name']}} {{magicitem.variety}} that smells of {{magicitem.smell}}."</blockquote> 
+
+ 
+
+
+{% endblock %}

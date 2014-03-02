@@ -18,20 +18,29 @@ class Generator(object):
         if 'seed' not in features:
             self.seed=random.randint(1,10000000)
 
-        for key in redis.keys(namekey+'_*'):
-            if redis.type(key) == 'zset':
+        self.generate_features(namekey)
+
+    def generate_features(self,namekey):
+        """ Given a namekey, add those features to this object."""
+        for key in self.redis.keys(namekey+'_*'):
+            if self.redis.type(key) == 'zset':
                 feature=key.replace(namekey+'_','')
-                print "adding zset",feature,"to ", namekey
+                #print "adding zset",feature,"to ", namekey
                 setattr( self, feature, Generator.select_by_roll(self,key) )
-            elif redis.type(key) == 'list' :
+            elif self.redis.type(key) == 'list' :
                 feature=key.replace(namekey+'_','')
                 if feature not in self.__dict__ :
-                    print "adding list",feature,"to ", namekey
+                    #print "adding list",feature,"to ", namekey
                     setattr( self, feature, Generator.rand_value(self,key) )
+                if self.redis.exists(key+"_description") and feature+"_description" not in self.__dict__ :
+                    #print "adding list",feature,"to ", namekey
+                    #print key+"_description", "has ",getattr(self,feature),"returns",self.redis.hmget(key+"_description",getattr(self,feature)  )
+
+                    setattr( self, feature+"_description", json.loads(self.redis.hmget(key+"_description",getattr(self,feature) )[0] ) )
+                
             else:
-                print "no idea what ",redis.type(key),"is."
-
-
+                print "no idea what ",self.redis.type(key),"is."
+# 
 
     def generate_name(self,key):
         """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.

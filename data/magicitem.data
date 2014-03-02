@@ -1,0 +1,125 @@
+#
+
+LPUSH magicitemstats value
+LPUSH magicitemstats repair
+LPUSH magicitemstats quality
+
+ZADD magicitem_value  25 {"name":"trivial magical item",  "score": 25   }
+ZADD magicitem_value  65 {"name":"minor magical item",    "score": 65   }
+ZADD magicitem_value  90 {"name":"medium magical item",   "score": 90   }
+ZADD magicitem_value  97 {"name":"major magical item",    "score": 97   }
+ZADD magicitem_value 100 {"name":"artifact",              "score": 100  }
+        
+# Foo is a quality greatsword that is _______ 
+ZADD magicitem_repair  20 {"name":"broken",                    "score":20  }
+ZADD magicitem_repair  40 {"name":"in disrepair",              "score":40  }
+ZADD magicitem_repair  60 {"name":"intact",                    "score":60  }
+ZADD magicitem_repair  80 {"name":"well maintained",           "score":80  }
+ZADD magicitem_repair 100 {"name":"in pristine condition",     "score":100 }
+        
+ZADD magicitem_strength  20 {"name":"weak",         "score":20  }
+ZADD magicitem_strength  40 {"name":"mediocre",     "score":40  }
+ZADD magicitem_strength  60 {"name":"moderate",     "score":60  }
+ZADD magicitem_strength  80 {"name":"strong",       "score":80  }
+ZADD magicitem_strength 100 {"name":"powerful",     "score":100  }
+
+# Foo is a ________ greatsword that is well maintained
+ZADD magicitem_quality  20 {"name":"shoddy",   "score":20  }
+ZADD magicitem_quality  40 {"name":"poor",     "score":40  }
+ZADD magicitem_quality  60 {"name":"average",  "score":60  }
+ZADD magicitem_quality  80 {"name":"good",     "score":80  }
+ZADD magicitem_quality 100 {"name":"excellent","score":100 }
+        
+#        <location><!-- This ring can be found _________. -->
+LPUSH magicitem_location hidden on a corpse
+LPUSH magicitem_location locked in a chest
+LPUSH magicitem_location stashed in a crack in the wall
+LPUSH magicitem_location forgotten on a shelf
+LPUSH magicitem_location buried in a pile of refuse
+LPUSH magicitem_location secreted away in a tomb
+LPUSH magicitem_location buried in a nest
+LPUSH magicitem_location hidden on a sage
+        
+#LPUSH magicitem_kind armor
+#LPUSH magicitem_kind weapon
+#LPUSH magicitem_kind scroll
+#LPUSH magicitem_kind rings
+#LPUSH magicitem_kind rods
+#LPUSH magicitem_kind staves
+#LPUSH magicitem_kind wands
+#LPUSH magicitem_kind Wonderous Items
+
+SET   magicitem_curse_chance 10
+
+LPUSH magicitem_curse bezerker
+LPUSH magicitem_curse narcolepsy
+LPUSH magicitem_curse fanatic
+LPUSH magicitem_curse greed
+LPUSH magicitem_curse hubris
+LPUSH magicitem_curse addiction
+LPUSH magicitem_curse penalty
+LPUSH magicitem_curse derp
+LPUSH magicitem_curse yawning
+LPUSH magicitem_curse submission
+LPUSH magicitem_curse lethargy
+LPUSH magicitem_curse bigspender
+LPUSH magicitem_curse truthteller
+LPUSH magicitem_curse precious
+LPUSH magicitem_curse braddoro
+LPUSH magicitem_curse karrius
+LPUSH magicitem_curse quint
+LPUSH magicitem_curse ibiwan
+LPUSH magicitem_curse greenimposter
+LPUSH magicitem_curse mabdelnour
+LPUSH magicitem_curse trammelle
+LPUSH magicitem_curse jamangai
+LPUSH magicitem_curse phobic
+LPUSH magicitem_curse babbler
+
+HSET magicitem_curse_description bezerker  {"name":"bezerker", "description":"has a small chance of causing an uncontrolled rage"   }
+HSET magicitem_curse_description narcolepsy  {"name":"narcolepsy", "description":"has a small chance of causing the user to drop unconscious when used"   }
+HSET magicitem_curse_description fanatic  {"name":"fanatic", "description":"causes overzealous feelings towards a person, action or thing"   }
+HSET magicitem_curse_description greed  {"name":"greed", "description":"causes the user to take unnecessary risks for treasure"   }
+HSET magicitem_curse_description hubris  {"name":"hubris", "description":"causes the user to overvalue their ability"   }
+HSET magicitem_curse_description addiction  {"name":"addiction", "description":"causes the user to use it at any opportunity"   }
+HSET magicitem_curse_description penalty  {"name":"penalty", "description":"causes user to perform poorly"   }
+HSET magicitem_curse_description derp  {"name":"derp", "description":"causes the user to become noticably stupider to everyone but themselves"   }
+HSET magicitem_curse_description yawning  {"name":"yawning", "description":"causes uncontrollable, loud yawning"   }
+HSET magicitem_curse_description submission  {"name":"submission", "description":"will randomly submit to an enemy"   }
+HSET magicitem_curse_description lethargy  {"name":"lethargy", "description":"has a small chance of causing the user to deny participating in any physical action"   }
+HSET magicitem_curse_description bigspender  {"name":"big spender", "description":"causes user to overcompensate when making purchases"   }
+HSET magicitem_curse_description truthteller  {"name":"truthteller", "description":"cannot lie or bend the rules while in your possession"   }
+HSET magicitem_curse_description precious  {"name":"precious", "description":"causes paranoia relating to theft of the item"   }
+HSET magicitem_curse_description braddoro  {"name":"braddoro", "description":"preoccupation with juvenile jokes, which causes giggles"   }
+HSET magicitem_curse_description karrius  {"name":"karrius", "description":"causes an obnoxious preoccupation with random topics that no one cares about"   }
+HSET magicitem_curse_description quint  {"name":"quint", "description":"causes user to randomly berate and threaten friends and colleagues"   }
+HSET magicitem_curse_description ibiwan  {"name":"ibiwan", "description":"cannot comprehend being wrong, even if it leads to death"   }
+HSET magicitem_curse_description greenimposter  {"name":"greenimposter", "description":"causes user to suddenly believe their are unqualified for whatever task is at hand"   }
+HSET magicitem_curse_description mabdelnour  {"name":"mabdelnour", "description":"causes random shortness of breath"   }
+HSET magicitem_curse_description trammelle  {"name":"trammelle", "description":"causes fits of rage when fingerprints are left on a glossy surface"   }
+HSET magicitem_curse_description jamangai  {"name":"jamangai", "description":"causes user to feel compelled to one-up others"   }
+HSET magicitem_curse_description phobic  {"name":"phobic", "description":"causes irrational fear of something"   }
+HSET magicitem_curse_description babbler  {"name":"babbler", "description":"causes incessant, uncontrollable talking that becomes worse with stressful situations"   }
+
+# Foo was created ___________ by a human named bob
+ZADD magicitem_age  20 {"name":"recently",              "score":20  }
+ZADD magicitem_age  40 {"name":"several months ago",    "score":40  }
+ZADD magicitem_age  60 {"name":"several years ago",     "score":60  }
+ZADD magicitem_age  80 {"name":"several decades ago",   "score":80  }
+ZADD magicitem_age 100 {"name":"over a century ago",    "score":100 }
+
+# this wand was created recently by _________
+LPUSH magicitem_creator_template {{npc.race | article}}
+LPUSH magicitem_creator_template {{npc.race | article}} named {{npc.name['full']}}
+LPUSH magicitem_creator_template {{npc.name['firstname']}} the {{npc.race}}
+LPUSH magicitem_creator_template {{npc.attitude}} {{npc.race }} named {{npc.name['full']}}
+
+
+
+
+
+
+
+
+
+
