@@ -53,25 +53,6 @@ def GenerateMagicItem():
     print magicitem.__dict__
     return render_template('magicitem.html',magicitem=magicitem) 
 
-@app.route('/magicitem_builder')
-def MagicItem_Builder():
-    """Generate an MagicItem"""
-
-    stats=server.lrange('magicitemstats',0,-1)
-    statinfo={}
-    races=server.lrange('race',0,-1);
-    professions=server.lrange('magicitem_profession',0,-1);
-    attitudes=server.lrange('magicitem_attitude',0,-1);
-    motivations=server.lrange('magicitem_motivation',0,-1);
-    emotions=server.lrange('magicitem_emotion',0,-1);
-    for stat in stats :
-        statinfo[stat]=[]
-        for statstring in server.zrange('magicitem_'+stat,0,-1):
-            statinfo[stat].append(json.loads(statstring))
-    
-    return render_template('magicitem_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
-
-
 @app.route('/npc')
 def GenerateNPC():
     """Generate an NPC"""
