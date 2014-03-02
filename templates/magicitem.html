@@ -13,7 +13,7 @@
     <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
     <h2>Summary</h2>
     The {{magicitem.name|title}} is {{magicitem.color_description['name'] | article}} {{magicitem.kind}} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
-    The {{magicitem.effect}} {{magicitem.kind}} {{magicitem.effect_description['description']}}.
+    The {{magicitem.effect_description['name']}} {{magicitem.kind}} {{magicitem.effect_description['description']}}.
     The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and smells of {{magicitem.smell}}. 
     The {{magicitem.strength['name']}} {{magicitem.variety}} is considered {{magicitem.value['name']|article}}. 
     This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
