@@ -988,11 +988,9 @@ LPUSH potion_container_label ideogram
 #The Weak Blur Potion is a lime green potion in an iron ____________.
 LPUSH potion_container_shape ampoule
 LPUSH potion_container_shape bottle
-LPUSH potion_container_shape can
+LPUSH potion_container_shape cannister
 LPUSH potion_container_shape canteen
 LPUSH potion_container_shape carafe
-LPUSH potion_container_shape carton
-LPUSH potion_container_shape cylinder
 LPUSH potion_container_shape decanter
 LPUSH potion_container_shape demijohn
 LPUSH potion_container_shape dropper
@@ -1000,11 +998,9 @@ LPUSH potion_container_shape ewer
 LPUSH potion_container_shape figurine
 LPUSH potion_container_shape flagon
 LPUSH potion_container_shape flask
-LPUSH potion_container_shape goatskin
 LPUSH potion_container_shape jar
 LPUSH potion_container_shape jug
 LPUSH potion_container_shape phial
-LPUSH potion_container_shape tin
 LPUSH potion_container_shape vial
 
 
