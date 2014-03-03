@@ -15,6 +15,7 @@ import os
 import sys
 import inflect
 import re
+from pprint import pprint
 
 p = inflect.engine()
 
@@ -47,11 +48,16 @@ def GenerateMagicItem():
     print "MAH SEED:",seed
 
     magicitemfeatures={'seed':seed,}
+    for param in request.args :
+        if re.match('^magicitem_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            magicitemfeatures[param]=int(request.args[param])
+        elif re.match('^magicitem_kind$',param) and request.args[param] in server.lrange('magicitem_kind',0,-1):
+            magicitemfeatures['kind']=request.args[param]
 
     magicitem=MagicItem.MagicItem(server, magicitemfeatures)
-
-    print magicitem.__dict__
-    return render_template('magicitem.html',magicitem=magicitem) 
+    kind= magicitem.kind
+    return render_template('magicitem_'+kind+'.html',magicitem=magicitem) 
 
 @app.route('/npc')
 def GenerateNPC():

@@ -22,7 +22,21 @@ class Generator(object):
 
     def generate_features(self,namekey):
         """ Given a namekey, add those features to this object."""
+        #print "my namekey", namekey
+        #print self.redis.keys(namekey+'_*')
         for key in self.redis.keys(namekey+'_*'):
+            #print "testing key",key
+            if  self.redis.exists(key+"_chance"):
+                chance=int(self.redis.get(key+"_chance"))
+                #print "==",key,"_chance exists:",chance
+                if key+"_roll" not in self.__dict__:
+                      setattr( self, key+"_roll", random.randint(1,100) )
+                if int(getattr(self,key+"_roll")) > chance:
+                    print key+"_roll (",getattr(self,key+"_roll"),") vs ",chance
+                    print key," failed its roll"
+                    continue
+
+                
             if self.redis.type(key) == 'zset':
                 feature=key.replace(namekey+'_','')
                 #print "adding zset",feature,"to ", namekey
@@ -38,8 +52,8 @@ class Generator(object):
 
                     setattr( self, feature+"_description", json.loads(self.redis.hmget(key+"_description",getattr(self,feature) )[0] ) )
                 
-            else:
-                print "no idea what ",self.redis.type(key),"is."
+            #else:
+                #print "no idea ",key,"what ",self.redis.type(key),"is."
 # 
 
     def generate_name(self,key):

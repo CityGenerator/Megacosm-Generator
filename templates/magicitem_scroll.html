@@ -1,0 +1,51 @@
+
+
+{% extends "base.html" %}
+{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h2>Summary</h2>
+
+
+    The {{magicitem.name|title}} is {{magicitem.material | article}} scroll that {{magicitem.effect_description['description']}}.
+    It is stored in {{magicitem.repair['name'] | article}} {{magicitem.container_type}}.
+    
+    {%if magicitem.container_label %}
+    The label on the {{magicitem.container_type}} is {{magicitem.container_label}}.
+    {%endif%}
+    The scroll itself is covered with {{magicitem.writingtype}} {{magicitem.writingform}}.
+    The {{magicitem.material }} is {{magicitem.quality['name']}} quality, and the container is {{magicitem.repair['name']}}.
+    It is considered {{magicitem.value['name']|article}}.
+
+    This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
+    {% if magicitem.sideeffect %}
+    <br><br>
+    <b>Warning:</b> Side effects may include {{magicitem.sideeffect}}, which are temporary.
+    {% endif%}
+    {% if magicitem.curse %}
+    <br><br>
+    <b>Danger:</b> 
+    This scroll carries a curse of {{magicitem.curse_description['name']|title}}, which {{magicitem.curse_description['description']}}.
+    The effects of the curse {{magicitem.curse_duration['name']}}.
+    {% endif%}
+
+    <h2>Description If Found...</h2>
+    <blockquote style="font-style:italic">
+        "{{magicitem.location|capitalize}} you find {{magicitem.container_type | article}} containing {{magicitem.material | article}} scroll covered with {{magicitem.writingtype}} {{magicitem.writingform}}. 
+        {%if magicitem.container_label %}
+        The label on the {{magicitem.container_type}} is {{magicitem.container_label}}.
+        {%endif%}"
+
+
+    </blockquote> 
+<pre>
+
+</pre>
+{% endblock %}

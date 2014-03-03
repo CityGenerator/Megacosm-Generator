@@ -13,7 +13,7 @@ class MagicItem(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
-        self.generate_features('potion')
+        self.generate_features(self.kind)
         
         self.npc=NPC(redis)
         print self.creator_template
@@ -28,4 +28,5 @@ class MagicItem(Generator):
         template= environment.from_string(self.name_template)
         self.name=template.render(magicitem=self)
 
-
+#TODO move FILTER additions to generator
+#TODO same with template rendering

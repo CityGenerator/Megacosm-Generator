@@ -25,8 +25,9 @@ def parse_file(pipe, filename):
                 command, args = line.split(' ',1)
                 command=command.upper()
                 if command == 'SET':
-                    key,value=args.split(' ',1)
+                    key,value=args.split(None,1)
                     pipe.set(key,value)
+                    print "setting",key,"to",value
                 elif command == "LPUSH":
                     key,value=args.split(' ',1)
                     pipe.lpush(key,value)

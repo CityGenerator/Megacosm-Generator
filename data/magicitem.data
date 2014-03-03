@@ -42,14 +42,14 @@ LPUSH magicitem_location hidden on a sage
         
 #LPUSH magicitem_kind armor
 #LPUSH magicitem_kind weapon
-#LPUSH magicitem_kind scroll
+LPUSH magicitem_kind scroll
 #LPUSH magicitem_kind rings
 #LPUSH magicitem_kind rods
 #LPUSH magicitem_kind staves
 #LPUSH magicitem_kind wands
 #LPUSH magicitem_kind Wonderous Items
 
-SET   magicitem_curse_chance 10
+SET   magicitem_curse_chance 40
 
 LPUSH magicitem_curse bezerker
 LPUSH magicitem_curse narcolepsy
@@ -76,8 +76,8 @@ LPUSH magicitem_curse jamangai
 LPUSH magicitem_curse phobic
 LPUSH magicitem_curse babbler
 
-HSET magicitem_curse_description bezerker  {"name":"bezerker", "description":"has a small chance of causing an uncontrolled rage"   }
-HSET magicitem_curse_description narcolepsy  {"name":"narcolepsy", "description":"has a small chance of causing the user to drop unconscious when used"   }
+HSET magicitem_curse_description bezerker  {"name":"bezerker", "description":"has a small chance of causing an uncontrollable rage with the user"  }
+HSET magicitem_curse_description narcolepsy  {"name":"narcolepsy", "description":"has a small chance of causing the user to drop unconscious."   }
 HSET magicitem_curse_description fanatic  {"name":"fanatic", "description":"causes overzealous feelings towards a person, action or thing"   }
 HSET magicitem_curse_description greed  {"name":"greed", "description":"causes the user to take unnecessary risks for treasure"   }
 HSET magicitem_curse_description hubris  {"name":"hubris", "description":"causes the user to overvalue their ability"   }
@@ -88,7 +88,7 @@ HSET magicitem_curse_description yawning  {"name":"yawning", "description":"caus
 HSET magicitem_curse_description submission  {"name":"submission", "description":"will randomly submit to an enemy"   }
 HSET magicitem_curse_description lethargy  {"name":"lethargy", "description":"has a small chance of causing the user to deny participating in any physical action"   }
 HSET magicitem_curse_description bigspender  {"name":"big spender", "description":"causes user to overcompensate when making purchases"   }
-HSET magicitem_curse_description truthteller  {"name":"truthteller", "description":"cannot lie or bend the rules while in your possession"   }
+HSET magicitem_curse_description truthteller  {"name":"truth teller", "description":"prevents you from lying or bending the rules while in your possession"   }
 HSET magicitem_curse_description precious  {"name":"precious", "description":"causes paranoia relating to theft of the item"   }
 HSET magicitem_curse_description braddoro  {"name":"braddoro", "description":"preoccupation with juvenile jokes, which causes giggles"   }
 HSET magicitem_curse_description karrius  {"name":"karrius", "description":"causes an obnoxious preoccupation with random topics that no one cares about"   }
@@ -100,6 +100,21 @@ HSET magicitem_curse_description trammelle  {"name":"trammelle", "description":"
 HSET magicitem_curse_description jamangai  {"name":"jamangai", "description":"causes user to feel compelled to one-up others"   }
 HSET magicitem_curse_description phobic  {"name":"phobic", "description":"causes irrational fear of something"   }
 HSET magicitem_curse_description babbler  {"name":"babbler", "description":"causes incessant, uncontrollable talking that becomes worse with stressful situations"   }
+
+ZADD magicitem_curse_duration   5  {"name":"are intermittent",      "score":10  }
+ZADD magicitem_curse_duration  10  {"name":"are temporary",         "score":10  }
+ZADD magicitem_curse_duration  20  {"name":"last a few seconds",    "score":20  }
+ZADD magicitem_curse_duration  30  {"name":"last a minute",         "score":30  }
+ZADD magicitem_curse_duration  40  {"name":"last a few minutes",    "score":40  }
+ZADD magicitem_curse_duration  50  {"name":"last several minutes",  "score":50  }
+ZADD magicitem_curse_duration  60  {"name":"last an hour",          "score":60  }
+ZADD magicitem_curse_duration  70  {"name":"last a few hours",      "score":70  }
+ZADD magicitem_curse_duration  95  {"name":"last several hours",    "score":95  }
+ZADD magicitem_curse_duration  96  {"name":"last a day",            "score":96  }
+ZADD magicitem_curse_duration  97  {"name":"last a few days",       "score":97  }
+ZADD magicitem_curse_duration  98  {"name":"last a week",           "score":98  }
+ZADD magicitem_curse_duration  99  {"name":"last weeks",            "score":99  }
+ZADD magicitem_curse_duration 100  {"name":"are permanent",         "score":100  }
 
 # Foo was created ___________ by a human named bob
 ZADD magicitem_age  20 {"name":"recently",              "score":20  }

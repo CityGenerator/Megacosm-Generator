@@ -17,7 +17,7 @@
     The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and smells of {{magicitem.smell}}. 
     The {{magicitem.strength['name']}} {{magicitem.variety}} is considered {{magicitem.value['name']|article}}. 
     This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
-    {% if magicitem.curse %}
+    {% if magicitem.sideeffect %}
     <br><br>
     <b>Warning:</b> May cause {{magicitem.sideeffect}}.
     {% endif%}
@@ -27,6 +27,6 @@
     The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and contains {{magicitem.consistency['name']|article}}, {{magicitem.color_description['name']}} {{magicitem.variety}} that smells of {{magicitem.smell}}."</blockquote> 
 
  
-
+{{magicitem.__dict__}}
 
 {% endblock %}
