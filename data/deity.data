@@ -1,0 +1,1381 @@
+#
+
+LPUSH npcstats importance
+LPUSH npcstats jealousy
+LPUSH npcstats age
+LPUSH npcstats followers
+LPUSH npcstats devotion
+LPUSH npcstats secrecy
+LPUSH npcstats power
+
+ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 } 
+ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 } 
+ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 } 
+ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":4 } 
+ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":10 } 
+ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":12 } 
+ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":20 } 
+
+ZADD deity_jealousy  10 {"name":"trusting",  "score":10   } 
+ZADD deity_jealousy  20 {"name":"unresentful",  "score":20   } 
+ZADD deity_jealousy  30 {"name":"unquestioning",  "score":30   } 
+ZADD deity_jealousy  40 {"name":"unsuspecting",  "score":40   } 
+ZADD deity_jealousy  50 {"name":"content",  "score":50   } 
+ZADD deity_jealousy  60 {"name":"covetous",  "score":60   } 
+ZADD deity_jealousy  70 {"name":"demanding",  "score":70   } 
+ZADD deity_jealousy  80 {"name":"suspicious",  "score":80   } 
+ZADD deity_jealousy  90 {"name":"selfish",  "score":90   } 
+ZADD deity_jealousy 100 {"name":"jealous",  "score":100   } 
+        
+#        <age> <!-- bob is a _____ god-->
+ZADD deity_age   5 {"name":"new",  "score":5   } 
+ZADD deity_age  10 {"name":"young",  "score":10   } 
+ZADD deity_age  15 {"name":"recent",  "score":15   } 
+ZADD deity_age  20 {"name":"latter",  "score":20   } 
+ZADD deity_age  25 {"name":"modern",  "score":25   } 
+ZADD deity_age  30 {"name":"contemporary",  "score":30   } 
+ZADD deity_age  35 {"name":"fledgling",  "score":35   } 
+ZADD deity_age  40 {"name":"primitive",  "score":40   } 
+ZADD deity_age  45 {"name":"old",  "score":45   } 
+ZADD deity_age  55 {"name":"antiquated",  "score":55   } 
+ZADD deity_age  60 {"name":"aboriginal",  "score":60   } 
+ZADD deity_age  65 {"name":"primeval",  "score":65   } 
+ZADD deity_age  70 {"name":"primal",  "score":70   } 
+ZADD deity_age  75 {"name":"primordial",  "score":75   } 
+ZADD deity_age  80 {"name":"archaic",  "score":80   } 
+ZADD deity_age  85 {"name":"eternal",  "score":85   } 
+ZADD deity_age  99 {"name":"ancient",  "score":99   } 
+ZADD deity_age 100 {"name":"original",  "score":100   } 
+        
+#        <followers> <!--Bobs followers are -->
+ZADD deity_followers   5 {"name":"thought to be extinct",  "score":5   } 
+ZADD deity_followers  10 {"name":"long gone",  "score":10   } 
+ZADD deity_followers  20 {"name":"rare",  "score":20   } 
+ZADD deity_followers  30 {"name":"scarce",  "score":30   } 
+ZADD deity_followers  40 {"name":"uncommon",  "score":40   } 
+ZADD deity_followers  50 {"name":"common",  "score":50   } 
+ZADD deity_followers  60 {"name":"prevalent",  "score":60   } 
+ZADD deity_followers  70 {"name":"wide spread",  "score":70   } 
+ZADD deity_followers  80 {"name":"everywhere",  "score":80   } 
+ZADD deity_followers  90 {"name":"legion",  "score":90   } 
+ZADD deity_followers 100 {"name":"ubiquitous",  "score":100   } 
+        
+#        <devotion {"name":"<!-- Bob is thought to have _______ current followers in the world-->
+ZADD deity_devotion   5 {"name":"no",  "score":5   } 
+ZADD deity_devotion  10 {"name":"only a few",  "score":10   } 
+ZADD deity_devotion  15 {"name":"several",  "score":15   } 
+ZADD deity_devotion  20 {"name":"a dozen",  "score":20   } 
+ZADD deity_devotion  25 {"name":"several dozen",  "score":25   } 
+ZADD deity_devotion  30 {"name":"over a hundred",  "score":30   } 
+ZADD deity_devotion  60 {"name":"an unknown number of",  "score":60   } 
+ZADD deity_devotion  65 {"name":"hundreds of",  "score":65   } 
+ZADD deity_devotion  70 {"name":"near a thousand",  "score":70   } 
+ZADD deity_devotion  75 {"name":"several thousand",  "score":75   } 
+ZADD deity_devotion  80 {"name":"tens of thouands of",  "score":80   } 
+ZADD deity_devotion  85 {"name":"hundreds of thousands of",  "score":85   } 
+ZADD deity_devotion 100 {"name":"countless",  "score":100   } 
+        
+#        <secrecy  <!-- bob's followers are said to be ________ about their affiliation-->
+ZADD deity_secrecy   5 {"name":"secretive",  "score":5   } 
+ZADD deity_secrecy  10 {"name":"silent",  "score":10   } 
+ZADD deity_secrecy  20 {"name":"tight lipped",  "score":20   } 
+ZADD deity_secrecy  30 {"name":"hidden",  "score":30   } 
+ZADD deity_secrecy  40 {"name":"reserved",  "score":40   } 
+ZADD deity_secrecy  50 {"name":"cryptic",  "score":50   } 
+ZADD deity_secrecy  60 {"name":"careful",  "score":60   } 
+ZADD deity_secrecy  70 {"name":"clear",  "score":70   } 
+ZADD deity_secrecy  80 {"name":"forthright",  "score":80   } 
+ZADD deity_secrecy  90 {"name":"honest",  "score":90   } 
+ZADD deity_secrecy 100 {"name":"open",  "score":100   } 
+        
+    <acceptance><!--Sect members are see as _____ by the faithful -->
+        <option          max="5" >heretical
+        <option min="6"  max="10">blasphemous
+        <option min="11" max="15">sectarian
+        <option min="16" max="20">rebelious
+        <option min="21" max="25">defecting
+        <option min="26" max="30">dissenting
+        <option min="31" max="35">agitating
+        <option min="36" max="40">deviant
+        <option min="41" max="45">mislead
+        <option min="46" max="50">non-confirming
+        <option min="51" max="55">faithful
+        <option min="56" max="60">honorable
+        <option min="61" max="65">noble
+        <option min="66" max="70">loyal
+        <option min="71" max="75">dutiful
+        <option min="76" max="80">reverant
+        <option min="81" max="85">devout
+        <option min="86" max="90">virtuous
+        <option min="91" max="95">righteous
+        <option min="96"         >saintly
+    
+    <culttype>
+        <option>cult
+        <option>sect
+        <option>clan
+        <option>faction
+        <option>following
+        <option>chapter
+        <option>order
+        <option>society
+    
+
+    <feature>
+        <clergytype> <!-- _______ of bob often follow a Vow of ______ (a vow to  __________). -->
+            <option>priests
+            <option>clergy
+            <option>clerics
+            <option>friars
+            <option>preachers
+            <option>rectors
+            <option>ministers
+            <option>monks
+            <option>chaplains
+            <option>pastors
+            <option>rabbis
+            <option>abbots
+            <option>evangelists
+            <option>shepherds
+        
+        <vow><!-- clerics of bob often follow a Vow of _______ (a vow to  ____) -->
+            <option type="Celibacy">refrain from marriage and sex
+            <option type="Chastity">refrain from marriage and sex
+            <option type="Abstinence">abstain from alcoholic beverages, drugs, and intoxication
+            <option type="Nonviolence">avoid violence against other sentient creatures
+            <option type="Obedience">live according to the dictates of a superior in the religious order or similar organization
+            <option type="Submission">submit to those who ask of it
+            <option type="Peace">abstain from harming any living creature
+            <option type="Poverty">forswear material possessions
+            <option type="Purity">avoid contact with dead flesh
+            <option type="Propriety"> seek glory, honor, and victory in tribute
+            <option type="Itinerancy">constantly move from place to place, never settling
+            <option type="Charity">refrain from accepting compensation for any services rendered
+            <option type="Humility">abstain from extholing your own virtues
+            <option type="Surety">defend a group or groups with your very life
+            <option type="Silence">not speak under any circumstances
+            <option type="Reconstruction">reunite factions after a long and bitter feud
+            <option type="Independence">never affiliate with or take orders from any organization, including the church
+            <option type="Stocism">speak as few words as possible, often a given word to represent their faith
+        
+        <worship> <!--Orsis prefers ____ from his followers -->
+            <option>sacrifices
+            <option>offerings
+            <option>tithings
+            <option>prayers
+            <option>supplication
+        
+        <primarycolor>
+            <option>black
+            <option>blue
+            <option>brown
+            <option>dark blue
+            <option>dark brown
+            <option>dark green
+            <option>dark grey
+            <option>dark red
+            <option>dark yellow
+            <option>gold
+            <option>green
+            <option>grey
+            <option>light blue
+            <option>light brown
+            <option>light green
+            <option>light grey
+            <option>light orange
+            <option>light red
+            <option>light yellow
+            <option>orange
+            <option>purple
+            <option>red
+            <option>very dark blue
+            <option>very dark green
+            <option>very dark grey
+            <option>very dark red
+            <option>very light blue
+            <option>very light green
+            <option>very light red
+            <option>very light yellow
+            <option>white
+            <option>yellow
+        
+        <secondarycolor>
+            <option>black
+            <option>blue
+            <option>brown
+            <option>dark blue
+            <option>dark brown
+            <option>dark green
+            <option>dark grey
+            <option>dark red
+            <option>dark yellow
+            <option>gold
+            <option>green
+            <option>grey
+            <option>light blue
+            <option>light brown
+            <option>light green
+            <option>light grey
+            <option>light orange
+            <option>light red
+            <option>light yellow
+            <option>orange
+            <option>purple
+            <option>red
+            <option>very dark blue
+            <option>very dark green
+            <option>very dark grey
+            <option>very dark red
+            <option>very light blue
+            <option>very light green
+            <option>very light red
+            <option>very light yellow
+            <option>white
+            <option>yellow
+        
+        <weapon> <!-- in battle, Gokl prefers -->
+            <option>axes
+            <option>bastard swords
+            <option>battle axes
+            <option>picks
+            <option>bladed gauntlets
+            <option>bows
+            <option>butterfly swords
+            <option>claw bracers
+            <option>composite bows
+            <option>crossbows
+            <option>curved swords
+            <option>daggers
+            <option>falchionn
+            <option>flails, maces and clubs
+            <option>glaives
+            <option>greataxes
+            <option>great clubs
+            <option>great crossbows
+            <option>greatswords
+            <option>guisarmes
+            <option>halberds
+            <option>hand axes
+            <option>hand crossbows
+            <option>harpoons
+            <option>heavy crossbows
+            <option>heavy flail
+            <option>heavy mace
+            <option>javelins
+            <option>light crossbows
+            <option>light flail
+            <option>light mace
+            <option>longbows
+            <option>long spears
+            <option>longswords
+            <option>martial arts
+            <option>morningstars
+            <option>polearms
+            <option>ranseurs
+            <option>rapiers
+            <option>repeating crossbows
+            <option>scimitars
+            <option>shortbows
+            <option>short spears
+            <option>shortswords
+            <option>simple clubs
+            <option>slings
+            <option>spears
+            <option>spiked clubs
+            <option>stump knives
+            <option>swords
+            <option>throwing axes
+            <option>throwing daggers
+            <option>throwing hammers
+            <option>thrown weapons
+            <option>tonfas
+            <option>tridents
+            <option>unarmed combat
+            <option>unique axes
+        
+    
+    <holysymbol title_chance="10">
+        <title>single
+        <title>double
+        <title>triple
+        <title>stylized
+        <title>broken
+        <title>shining
+
+        <root>ankh
+        <root>bone
+        <root>book
+        <root>candle
+        <root>coin
+        <root>crescent
+        <root>cross
+        <root>dragon
+        <root>duck
+        <root>ear
+        <root>eye
+        <root>feather
+        <root>fist
+        <root>flame
+        <root>flask
+        <root>flower
+        <root>gate
+        <root>gauntlet
+        <root>hand
+        <root>heart
+        <root>helmet
+        <root>insect
+        <root>key
+        <root>mask
+        <root>moon
+        <root>pearl
+        <root>potato
+        <root>scroll
+        <root>shield
+        <root>snowflake
+        <root>spiral
+        <root>star
+        <root>statue
+        <root>sun
+        <root>totem
+        <root>tree
+        <root>weapon
+        <root>bell
+        <root>circle
+        <root>square
+        <root>triangle
+        <root>pentagon
+        <root>hexagon
+        <root>pyramid
+
+    
+    <portfolio>
+        <option value="8">war
+        <option value="8">death
+        <option value="8">magic
+        <option value="8">lore
+        <option value="8">mercy
+        <option value="1">stray cats
+        <option value="4">abundance
+        <option value="4">accidents
+        <option value="4">accountability
+        <option value="1">adventure
+        <option value="1">agony
+        <option value="1">agriculture
+        <option value="8">air
+        <option value="1">alcohol
+        <option value="1">ambition
+        <option value="1">ambush
+        <option value="1">amphibians
+        <option value="1">anger
+        <option value="8">animals
+        <option value="1">appraisal
+        <option value="4">arcane knowledge
+        <option value="1">archery
+        <option value="1">architecture
+        <option value="1">arctic beasts
+        <option value="4">armies
+        <option value="2">armor
+        <option value="8">art
+        <option value="1">artifice
+        <option value="2">artisans
+        <option value="1">assassination
+        <option value="4">astrology
+        <option value="4">astronomy
+        <option value="2">athletes
+        <option value="4">atmosphere
+        <option value="8">authority
+        <option value="1">autumn
+        <option value="1">avariels
+        <option value="1">bad fortune
+        <option value="1">bad luck
+        <option value="1">bad weather
+        <option value="8">balance
+        <option value="4">barbarians
+        <option value="4">bards
+        <option value="1">barrenness
+        <option value="1">bats
+        <option value="8">battle
+        <option value="4">beasts
+        <option value="8">beauty
+        <option value="1">bees
+        <option value="4">beginnings
+        <option value="2">benevolence
+        <option value="4">berserking
+        <option value="8">betrayal
+        <option value="1">bigotry
+        <option value="1">birds
+        <option value="4">birth
+        <option value="1">black magic
+        <option value="4">blacksmithing
+        <option value="1">blind beggars
+        <option value="1">blind destruction
+        <option value="2">blizzards
+        <option value="6">blood
+        <option value="1">bloodlust
+        <option value="4">books
+        <option value="2">bounty
+        <option value="4">bravery
+        <option value="1">brawling
+        <option value="1">brewing
+        <option value="1">brutality
+        <option value="2">bugbears
+        <option value="4">building
+        <option value="4">bureaucracy
+        <option value="1">burials
+        <option value="1">buried wealth
+        <option value="4">business
+        <option value="1">calligraphy
+        <option value="1">camels
+        <option value="1">campfires
+        <option value="2">canines
+        <option value="1">cannibalism
+        <option value="1">caravans
+        <option value="1">carefree celebration
+        <option value="1">carousing
+        <option value="4">cartography
+        <option value="1">cats
+        <option value="1">cattle
+        <option value="4">caverns
+        <option value="2">caves
+        <option value="6">celebrations
+        <option value="3">cemeteries
+        <option value="8">chance
+        <option value="4">change
+        <option value="8">chaos
+        <option value="4">charisma
+        <option value="2">charity
+        <option value="2">charm
+        <option value="2">children
+        <option value="1">civilization
+        <option value="2">clarity
+        <option value="2">climbing
+        <option value="3">clouds
+        <option value="4">cold
+        <option value="6">combat
+        <option value="6">comfort
+        <option value="8">commerce
+        <option value="4">common sense
+        <option value="6">communication
+        <option value="4">community
+        <option value="8">compassion
+        <option value="4">competition
+        <option value="2">concealment
+        <option value="1">conception
+        <option value="8">conflict
+        <option value="4">confusion
+        <option value="4">conquest
+        <option value="2">construction
+        <option value="1">consumption
+        <option value="1">contentment
+        <option value="1">continuity
+        <option value="2">contracts
+        <option value="4">control
+        <option value="4">cooperation
+        <option value="1">corn
+        <option value="8">corruption
+        <option value="4">courage
+        <option value="2">courtship
+        <option value="2">covert activity
+        <option value="2">cowardice
+        <option value="4">crafts
+        <option value="1">creativity
+        <option value="2">creatures of the deep
+        <option value="1">crocodiles
+        <option value="2">crops
+        <option value="4">cruelty
+        <option value="1">crusades
+        <option value="1">cultivated foods
+        <option value="4">cultures
+        <option value="4">cunning
+        <option value="3">curative medicine
+        <option value="4">curiosity
+        <option value="3">currents
+        <option value="3">dance
+        <option value="3">dancing
+        <option value="1">dancing girls
+        <option value="4">daring
+        <option value="4">darkness
+        <option value="4">dawn
+        <option value="4">day
+        <option value="1">daylight
+        <option value="8">death
+        <option value="2">debauch
+        <option value="4">decay
+        <option value="4">deceit
+        <option value="4">deception
+        <option value="2">decision
+        <option value="4">dedication
+        <option value="6">defense
+        <option value="1">deformity
+        <option value="4">delight
+        <option value="1">desert-dwelling vermin
+        <option value="2">desert mountains
+        <option value="1">desert raiders
+        <option value="2">deserts
+        <option value="1">desert storms
+        <option value="1">desert whirlwinds
+        <option value="6">despair
+        <option value="8">destiny
+        <option value="8">destruction
+        <option value="2">determination
+        <option value="3">devouring
+        <option value="4">dexterity
+        <option value="4">dignity
+        <option value="1">dinosaurs
+        <option value="6">diplomacy
+        <option value="4">disasters
+        <option value="8">discipline
+        <option value="4">discord
+        <option value="4">discovery
+        <option value="8">disease
+        <option value="8">disguise
+        <option value="2">distance
+        <option value="4">divination
+        <option value="1">dogs
+        <option value="2">domination
+        <option value="1">doom
+        <option value="3">doors
+        <option value="6">dragonkind
+        <option value="4">dreams
+        <option value="2">drought
+        <option value="6">drow
+        <option value="4">druids
+        <option value="1">dryads
+        <option value="2">duels
+        <option value="4">dungeons
+        <option value="4">dusk
+        <option value="8">duty
+        <option value="4">dwarves
+        <option value="2">dying
+        <option value="1">eagles
+        <option value="4">earth
+        <option value="2">earthquakes
+        <option value="1">ease
+        <option value="2">east wind
+        <option value="2">eating
+        <option value="1">eclipses
+        <option value="4">elements
+        <option value="2">eloquence
+        <option value="4">elves
+        <option value="1">emotional hatreds
+        <option value="6">emotions
+        <option value="2">enchantments
+        <option value="1">endings
+        <option value="4">endurance
+        <option value="2">energy
+        <option value="2">enfeeblement
+        <option value="4">engineering
+        <option value="4">enjoyment
+        <option value="1">enlightened justice
+        <option value="4">enlightenment
+        <option value="4">entropy
+        <option value="8">envy
+        <option value="2">epidemics
+        <option value="4">eroticism
+        <option value="6">espionage
+        <option value="2">esthetics
+        <option value="1">eternal darkness
+        <option value="1">eternal light
+        <option value="1">eternal youth
+        <option value="4">ethics
+        <option value="2">evening
+        <option value="16">evil
+        <option value="1">evil aquatic creatures
+        <option value="1">evil birds
+        <option value="4">evil cloud giants
+        <option value="4">evil dragons
+        <option value="2">evil dreams
+        <option value="2">evil fate
+        <option value="4">evil fey
+        <option value="6">evil knowledge
+        <option value="4">evil liches
+        <option value="4">evil lycanthropes
+        <option value="6">evil magic
+        <option value="4">evil plans
+        <option value="2">evil reptiles
+        <option value="4">evil secrets
+        <option value="4">excellence
+        <option value="4">excess
+        <option value="2">exhaustion
+        <option value="4">exiles
+        <option value="2">expansion
+        <option value="1">experimentation
+        <option value="4">exploration
+        <option value="4">faerie folk
+        <option value="2">fair practices
+        <option value="2">faith
+        <option value="4">faithfulness
+        <option value="1">falcons
+        <option value="4">fallen heroes
+        <option value="2">false promises
+        <option value="4">family
+        <option value="6">famine
+        <option value="2">far journeys
+        <option value="6">farming
+        <option value="1">fatalism
+        <option value="6">fates
+        <option value="2">fauna
+        <option value="1">favorable winds
+        <option value="6">fear
+        <option value="4">feasting
+        <option value="1">felines
+        <option value="3">femininity
+        <option value="8">fertility
+        <option value="2">festivals
+        <option value="2">feuds
+        <option value="4">fidelity
+        <option value="4">fighters
+        <option value="4">fine arts
+        <option value="1">fine-smithing
+        <option value="6">fire
+        <option value="2">fire giants
+        <option value="4">fire-using dragons
+        <option value="1">fir trees
+        <option value="2">fish
+        <option value="1">fishermen
+        <option value="4">fitness
+        <option value="2">flattery
+        <option value="6">flora
+        <option value="2">flowers
+        <option value="3">flowing water
+        <option value="4">flying
+        <option value="1">fogs
+        <option value="1">folk music
+        <option value="6">food
+        <option value="4">fools
+        <option value="4">forbidden knowlege
+        <option value="2">foreknowledge
+        <option value="4">foresight
+        <option value="1">forest creatures
+        <option value="1">forest dwellers
+        <option value="1">forest folk
+        <option value="1">forest gnomes
+        <option value="2">forests
+        <option value="2">forges
+        <option value="2">forgetfulness
+        <option value="2">forgiveness
+        <option value="4">formality
+        <option value="3">fortification
+        <option value="8">fortune
+        <option value="1">fortune telling
+        <option value="2">foul weather
+        <option value="8">freedom
+        <option value="2">frenzy
+        <option value="2">fresh water
+        <option value="2">friendship
+        <option value="1">frog folk
+        <option value="1">frost giants
+        <option value="1">frost sprites
+        <option value="2">frozen seas
+        <option value="2">fruitfulness
+        <option value="4">full moons
+        <option value="2">funerals
+        <option value="4">future
+        <option value="1">gambling
+        <option value="2">games
+        <option value="4">gardening
+        <option value="2">gates
+        <option value="1">gemcutting
+        <option value="2">gems
+        <option value="1">gemstones
+        <option value="1">ghosts
+        <option value="1">ghouls
+        <option value="1">giant eagles
+        <option value="4">giants
+        <option value="1">glaciers
+        <option value="6">glory
+        <option value="2">glyphs
+        <option value="4">gnolls
+        <option value="4">gnomes
+        <option value="4">goblins
+        <option value="2">gold
+        <option value="2">goliaths
+        <option value="8">good
+        <option value="4">good-aligned magical beasts
+        <option value="4">good beasts
+        <option value="4">good dragons
+        <option value="4">good fortune
+        <option value="4">good giants
+        <option value="4">good luck
+        <option value="4">good magic
+        <option value="2">goodness
+        <option value="4">grain
+        <option value="4">gray dwarves
+        <option value="8">greed
+        <option value="2">grief
+        <option value="1">grimlocks
+        <option value="8">growing things
+        <option value="2">growth
+        <option value="2">guadianship
+        <option value="8">guardians
+        <option value="2">guarding
+        <option value="2">guarding the underworld
+        <option value="3">guidance
+        <option value="3">guides
+        <option value="4">guile
+        <option value="2">guilt
+        <option value="1">hags
+        <option value="4">halflings
+        <option value="1">handicrafts
+        <option value="2">happiness
+        <option value="2">harm
+        <option value="4">harmony
+        <option value="8">harvest
+        <option value="4">hate
+        <option value="4">hatred
+        <option value="6">healing
+        <option value="2">health
+        <option value="2">hearing
+        <option value="4">hearth
+        <option value="2">heat
+        <option value="1">hedonism
+        <option value="3">heroism
+        <option value="4">hidden things
+        <option value="2">hidden knowledge
+        <option value="4">hidden treasures
+        <option value="2">hiding places
+        <option value="1">hill giants
+        <option value="1">hills
+        <option value="1">historians
+        <option value="2">history
+        <option value="4">hobgoblins
+        <option value="2">home
+        <option value="2">honesty
+        <option value="4">honor
+        <option value="1">honorable combat
+        <option value="1">honor in battle
+        <option value="6">hope
+        <option value="1">horizons
+        <option value="2">horses
+        <option value="2">hospitality
+        <option value="1">humiliation
+        <option value="4">humility
+        <option value="4">humor
+        <option value="2">hunger
+        <option value="6">hunters
+        <option value="6">hunting
+        <option value="1">hurricanes
+        <option value="2">hyenas
+        <option value="2">ice
+        <option value="4">ideas
+        <option value="1">ill council
+        <option value="1">ill luck
+        <option value="4">illness
+        <option value="1">illumians
+        <option value="4">illusions
+        <option value="2">images
+        <option value="3">imaginations
+        <option value="1">immediacy
+        <option value="2">immortality through undeath
+        <option value="2">improvement
+        <option value="1">impudence
+        <option value="4">independence
+        <option value="4">individuality
+        <option value="4">industriousness
+        <option value="2">industry
+        <option value="2">inevitability
+        <option value="4">infinity
+        <option value="2">inflexibility
+        <option value="4">influence
+        <option value="4">injustice
+        <option value="1">inland waters
+        <option value="2">inquiry
+        <option value="6">insanity
+        <option value="2">insects
+        <option value="1">insomnia
+        <option value="1">inspiration
+        <option value="6">intellect
+        <option value="6">intelligence
+        <option value="2">intoxication
+        <option value="4">intrigue
+        <option value="2">invention
+        <option value="1">inventiveness
+        <option value="2">invisiblity
+        <option value="4">iron
+        <option value="4">irrigation
+        <option value="1">isolation
+        <option value="3">jealousy
+        <option value="1">jellies
+        <option value="1">jewelrymaking
+        <option value="2">jokes
+        <option value="4">joy
+        <option value="2">joy of battle
+        <option value="8">judgement
+        <option value="2">jungles
+        <option value="1">jungle survival
+        <option value="8">justice
+        <option value="1">just rewards
+        <option value="2">keen senses
+        <option value="3">keys
+        <option value="4">killing
+        <option value="2">kings
+        <option value="8">knowledge
+        <option value="4">kobolds
+        <option value="1">krakens
+        <option value="2">kuo-toas
+        <option value="4">labyrinths
+        <option value="4">lakes
+        <option value="2">languages
+        <option value="4">law
+        <option value="1">lawful theft
+        <option value="6">laws
+        <option value="1">lawyers
+        <option value="3">leadership
+        <option value="2">learning
+        <option value="2">liars
+        <option value="3">liberation
+        <option value="6">liberty
+        <option value="1">lichdom
+        <option value="4">lies
+        <option value="8">life
+        <option value="4">life/fertility
+        <option value="4">light
+        <option value="2">lightning
+        <option value="1">lions
+        <option value="4">literacy
+        <option value="1">literary art
+        <option value="2">literature
+        <option value="4">livestock
+        <option value="2">living things
+        <option value="1">lizardfolk
+        <option value="3">locks
+        <option value="1">loneliness
+        <option value="2">longevity
+        <option value="2">long life
+        <option value="1">long-range traders
+        <option value="1">long rivers
+        <option value="6">lore
+        <option value="2">loss
+        <option value="1">lost causes
+        <option value="6">love
+        <option value="4">loyalty
+        <option value="8">luck
+        <option value="2">luck in battle
+        <option value="4">lust
+        <option value="1">lycanthropes
+        <option value="2">madness
+        <option value="3">mages
+        <option value="8">magic
+        <option value="2">magical knowledge
+        <option value="1">magic users
+        <option value="1">magisrates
+        <option value="2">malice
+        <option value="2">malign knowledge
+        <option value="2">marauders
+        <option value="1">marauding beasts
+        <option value="6">marriage
+        <option value="2">marshes
+        <option value="1">martial arts
+        <option value="1">martial defense
+        <option value="1">martial skill
+        <option value="1">martial training
+        <option value="2">martyrdom
+        <option value="2">massacres
+        <option value="4">mass destruction
+        <option value="1">mastery of undead
+        <option value="2">meadows
+        <option value="2">medicine
+        <option value="2">meditation
+        <option value="4">memory
+        <option value="1">mental dominion
+        <option value="1">mental health
+        <option value="1">mental mastery
+        <option value="2">mental powers
+        <option value="1">mental prowess
+        <option value="6">merchants
+        <option value="8">mercy
+        <option value="1">merfolk
+        <option value="4">messages
+        <option value="2">messengers
+        <option value="2">metalcraft
+        <option value="4">metals
+        <option value="2">metalsmiths
+        <option value="1">metalworking
+        <option value="6">might
+        <option value="2">military excellence
+        <option value="3">mind flayers
+        <option value="2">minerals
+        <option value="2">miners
+        <option value="2">mines
+        <option value="2">mining
+        <option value="4">minotaurs
+        <option value="1">mirrors
+        <option value="1">mirth
+        <option value="2">mischief
+        <option value="3">misfortune
+        <option value="1">moisture
+        <option value="4">money
+        <option value="2">monks
+        <option value="1">moonlight
+        <option value="6">moons
+        <option value="2">morale
+        <option value="4">morning
+        <option value="4">mortality
+        <option value="1">mortal life
+        <option value="4">motherhood
+        <option value="4">mothers
+        <option value="4">mountain dwarves
+        <option value="4">mountain giants
+        <option value="4">mountains
+        <option value="2">mourning
+        <option value="3">movement
+        <option value="6">murder
+        <option value="1">murderers
+        <option value="2">music
+        <option value="2">musicians
+        <option value="6">mysteries
+        <option value="1">mystic insight
+        <option value="1">mysticism
+        <option value="1">napkins
+        <option value="1">narrow escapes
+        <option value="1">natural alchemy
+        <option value="1">natural balances
+        <option value="1">natural beauty
+        <option value="1">natural disasters
+        <option value="1">natural growth
+        <option value="8">nature
+        <option value="3">naval combat
+        <option value="8">navigation
+        <option value="1">navigators
+        <option value="1">necromancers
+        <option value="8">necromancy
+        <option value="1">needlework
+        <option value="2">negative energy
+        <option value="4">negotiation
+        <option value="1">netherworld
+        <option value="4">neutral dragons
+        <option value="8">neutrality
+        <option value="4">night
+        <option value="1">night birds
+        <option value="4">nightmares
+        <option value="1">night travelers
+        <option value="1">nobility
+        <option value="1">noble beasts
+        <option value="2">noise
+        <option value="1">nonintervention
+        <option value="1">northern stars
+        <option value="1">northern wind
+        <option value="1">oases
+        <option value="6">oaths
+        <option value="4">obedience
+        <option value="2">obligations
+        <option value="2">obscurement
+        <option value="3">obsession
+        <option value="1">occult lore
+        <option value="1">ocean creatures
+        <option value="4">oceans
+        <option value="2">ocean storms
+        <option value="4">ogres
+        <option value="2">old age
+        <option value="4">omens
+        <option value="1">oozes
+        <option value="4">open paths
+        <option value="1">opportunism
+        <option value="2">oppression
+        <option value="4">orcs
+        <option value="8">order
+        <option value="2">ores
+        <option value="2">outcasts
+        <option value="1">outer space
+        <option value="1">outlaws
+        <option value="1">overwhelming numbers
+        <option value="1">pacifism
+        <option value="4">pain
+        <option value="3">paladins
+        <option value="2">panic
+        <option value="2">paralysis
+        <option value="1">parasites
+        <option value="2">parenthood
+        <option value="4">passion
+        <option value="2">patience
+        <option value="6">peace
+        <option value="1">peaks
+        <option value="2">perfection
+        <option value="2">perseverance
+        <option value="4">pestilence
+        <option value="4">philosophy
+        <option value="1">physical fitness
+        <option value="1">physical love
+        <option value="1">physical prowess
+        <option value="1">physical strength
+        <option value="2">pillaging
+        <option value="1">plagues
+        <option value="3">planning
+        <option value="2">planting
+        <option value="6">plant life
+        <option value="1">play
+        <option value="6">pleasure
+        <option value="6">plenty
+        <option value="2">plunder
+        <option value="1">poetic justice
+        <option value="1">poetry
+        <option value="1">poets
+        <option value="4">poison
+        <option value="1">poisoners
+        <option value="4">poisoning
+        <option value="1">polar environments
+        <option value="2">police
+        <option value="2">pools
+        <option value="5">portals
+        <option value="4">positive energy
+        <option value="2">pottery
+        <option value="4">power
+        <option value="1">powerbrokers
+        <option value="1">powermongers
+        <option value="6">pranks
+        <option value="3">predators
+        <option value="2">predestination
+        <option value="1">premeditated killing
+        <option value="2">preservation
+        <option value="2">prestige
+        <option value="1">pretty things
+        <option value="5">pride
+        <option value="4">procreation
+        <option value="3">propagation
+        <option value="4">prophecy
+        <option value="1">propriety
+        <option value="1">prose
+        <option value="4">prosperity
+        <option value="6">protection
+        <option value="4">protectors
+        <option value="3">psionics
+        <option value="1">psychotic behavior
+        <option value="2">public combat
+        <option value="6">punishment
+        <option value="2">purification
+        <option value="6">purity
+        <option value="2">puzzles
+        <option value="2">quarrels
+        <option value="2">questers
+        <option value="1">quiet places
+        <option value="1">racing
+        <option value="1">radiance
+        <option value="4">rage
+        <option value="6">rain
+        <option value="1">rainbows
+        <option value="1">random mischief
+        <option value="2">randomness
+        <option value="3">rangers
+        <option value="1">rats
+        <option value="1">ravaging beasts
+        <option value="6">reason
+        <option value="6">reasoning
+        <option value="2">rebellion
+        <option value="4">rebels
+        <option value="4">rebirth
+        <option value="2">reciprocity
+        <option value="3">records
+        <option value="2">relationships
+        <option value="4">renewal
+        <option value="2">reptiles
+        <option value="1">restful sleep
+        <option value="2">restraint
+        <option value="4">retribution
+        <option value="1">revelry
+        <option value="6">revenge
+        <option value="2">reverence
+        <option value="3">rice
+        <option value="1">righteous indignation
+        <option value="6">righteousness
+        <option value="2">risks
+        <option value="1">river hazards
+        <option value="5">rivers
+        <option value="6">roads
+        <option value="1">robbers
+        <option value="3">rock gnomes
+        <option value="4">rogues
+        <option value="2">romance
+        <option value="1">romantic love
+        <option value="1">ropers
+        <option value="2">rot
+        <option value="2">rotting death
+        <option value="1">royalty
+        <option value="2">rulership
+        <option value="4">rumor
+        <option value="1">rune magic
+        <option value="1">running
+        <option value="2">running water
+        <option value="3">sacrifice
+        <option value="5">sadism
+        <option value="4">safety
+        <option value="2">sages
+        <option value="4">sailing
+        <option value="1">sailors
+        <option value="1">salamanders
+        <option value="3">salt
+        <option value="1">savage lust
+        <option value="2">savants
+        <option value="3">scapegoats
+        <option value="3">scheming
+        <option value="2">scholarship
+        <option value="6">science
+        <option value="2">scribes
+        <option value="2">sculptures
+        <option value="6">sea
+        <option value="1">sea creatures
+        <option value="1">sea elves
+        <option value="1">sea life
+        <option value="1">seals
+        <option value="4">seas
+        <option value="2">sea voyages
+        <option value="1">sea weather
+        <option value="1">sea winds
+        <option value="4">secrecy
+        <option value="1">secret pursuits
+        <option value="8">secrets
+        <option value="4">security
+        <option value="4">seduction
+        <option value="2">seekers
+        <option value="1">self-deception
+        <option value="2">self-defense
+        <option value="1">self-determination
+        <option value="3">selfishness
+        <option value="2">self-perfection
+        <option value="2">self-sacrifice
+        <option value="1">senses
+        <option value="1">sensual fulfillment
+        <option value="2">sentries
+        <option value="4">serenity
+        <option value="1">serpents
+        <option value="1">servants
+        <option value="1">service
+        <option value="1">servitude
+        <option value="1">sewers
+        <option value="1">shadow elves
+        <option value="6">shadows
+        <option value="2">shepherds
+        <option value="1">shield dwarves
+        <option value="3">ships
+        <option value="2">sickness
+        <option value="2">sight
+        <option value="1">silence
+        <option value="1">silver dragonkind
+        <option value="2">singing
+        <option value="1">sinister ambition
+        <option value="1">skiing
+        <option value="4">skill
+        <option value="1">skill-at-arms
+        <option value="1">skilled artisans
+        <option value="5">sky
+        <option value="2">slaughter
+        <option value="3">slavery
+        <option value="8">sleep
+        <option value="1">slimes
+        <option value="2">sloth
+        <option value="2">slumber
+        <option value="1">sly cleverness
+        <option value="1">small birds
+        <option value="1">smallpox
+        <option value="1">smithing
+        <option value="4">smiths
+        <option value="1">smithwork
+        <option value="2">smoke
+        <option value="1">snakes
+        <option value="4">snow
+        <option value="1">snow elves
+        <option value="1">social behavior
+        <option value="1">social order
+        <option value="2">societies
+        <option value="4">soldiers
+        <option value="1">solidity
+        <option value="2">song
+        <option value="1">songwriting
+        <option value="1">sorcerers
+        <option value="6">sorcery
+        <option value="4">sorrow
+        <option value="2">south wind
+        <option value="1">space
+        <option value="1">spawning
+        <option value="1">specific locality
+        <option value="2">speech
+        <option value="2">speed
+        <option value="4">spellcasters
+        <option value="6">spells
+        <option value="4">spiders
+        <option value="1">spinning
+        <option value="2">spite
+        <option value="1">sports
+        <option value="1">spriggans
+        <option value="6">spring
+        <option value="1">springs
+        <option value="1">stalking
+        <option value="3">starlight
+        <option value="4">stars
+        <option value="2">starvation
+        <option value="1">steadfastness
+        <option value="6">stealth
+        <option value="2">stench
+        <option value="2">sterility
+        <option value="1">stillness
+        <option value="5">stone
+        <option value="1">stone giants
+        <option value="2">stonework
+        <option value="1">storm giants
+        <option value="4">storms
+        <option value="2">storytelling
+        <option value="6">strategy
+        <option value="2">streams
+        <option value="6">strength
+        <option value="8">strife
+        <option value="2">strong beasts
+        <option value="4">structure
+        <option value="4">study
+        <option value="1">study of magic
+        <option value="8">stupidity
+        <option value="2">subtlety
+        <option value="2">subversion
+        <option value="2">success
+        <option value="2">suffering
+        <option value="6">summer
+        <option value="1">summer storms
+        <option value="8">sun
+        <option value="2">sunlight
+        <option value="2">sunshine
+        <option value="2">surprise
+        <option value="1">surrounding lands
+        <option value="4">survival
+        <option value="4">suspicion
+        <option value="2">swamps
+        <option value="3">swords
+        <option value="1">sword skills
+        <option value="1">swordsmanship
+        <option value="1">swordsmiths
+        <option value="1">swordwork
+        <option value="2">tactics
+        <option value="1">talking beasts
+        <option value="4">teaching
+        <option value="2">technology
+        <option value="4">tedium
+        <option value="2">territory
+        <option value="1">testing
+        <option value="1">theater
+        <option value="1">eastern light
+        <option value="1">oppressed
+        <option value="1">southern stars
+        <option value="3">thievery
+        <option value="3">thieves
+        <option value="2">thought
+        <option value="1">thoughtless acts
+        <option value="4">thunder
+        <option value="1">thunderstorms
+        <option value="3">tides
+        <option value="8">time
+        <option value="2">tolerance
+        <option value="1">tombs
+        <option value="5">torment
+        <option value="5">torture
+        <option value="1">tortured souls
+        <option value="1">torturers
+        <option value="2">tracking
+        <option value="8">trade
+        <option value="1">traders
+        <option value="1">tradesmen
+        <option value="2">tradition
+        <option value="1">transcendence
+        <option value="4">transformation
+        <option value="1">transformation of art
+        <option value="2">trapmaking
+        <option value="6">traps
+        <option value="8">travel
+        <option value="1">travelers
+        <option value="2">treachery
+        <option value="1">treachery over honor
+        <option value="1">treasure-finding
+        <option value="2">treasures
+        <option value="4">trees
+        <option value="8">trickery
+        <option value="1">tricks
+        <option value="2">troglodytes
+        <option value="2">trolls
+        <option value="3">trust
+        <option value="6">truth
+        <option value="1">truth-speakers
+        <option value="1">twilight
+        <option value="8">tyranny
+        <option value="1">ugliness
+        <option value="1">ugly people
+        <option value="2">undead
+        <option value="3">undeath
+        <option value="1">undefiled waters
+        <option value="4">underdark
+        <option value="5">underwater
+        <option value="5">underworld
+        <option value="1">unicorns
+        <option value="2">unknown
+        <option value="2">unknown secrets
+        <option value="4">unpredictability
+        <option value="1">unrevealed secrets
+        <option value="6">valor
+        <option value="1">vampires
+        <option value="1">vampirism
+        <option value="2">vandals
+        <option value="5">vanity
+        <option value="1">vegetation
+        <option value="1">vendettas
+        <option value="2">vengeance
+        <option value="1">venomous creatures
+        <option value="2">vermin
+        <option value="1">vice
+        <option value="3">victory
+        <option value="5">vigilance
+        <option value="3">vigor
+        <option value="6">violence
+        <option value="8">virtue
+        <option value="2">visions
+        <option value="2">vitality
+        <option value="2">volcanoes
+        <option value="1">vortices
+        <option value="1">wakefulness
+        <option value="6">wanderers
+        <option value="1">wandering
+        <option value="2">wanton destruction
+        <option value="1">wards
+        <option value="3">warfare
+        <option value="4">warmth
+        <option value="1">warpriests
+        <option value="4">warriors
+        <option value="2">wasting
+        <option value="1">watchfulness
+        <option value="6">water
+        <option value="1">waterfalls
+        <option value="1">water spirits
+        <option value="1">water travel
+        <option value="1">wave motions
+        <option value="2">waves
+        <option value="6">wealth
+        <option value="1">weapon making
+        <option value="6">weapons
+        <option value="1">weaponsmithing
+        <option value="2">weaponsmiths
+        <option value="3">weather
+        <option value="1">weaving
+        <option value="1">wells
+        <option value="4">west wind
+        <option value="2">wetlands
+        <option value="2">wetness
+        <option value="1">whales
+        <option value="1">whirlpools
+        <option value="3">wickedness
+        <option value="2">wild beasts
+        <option value="1">wilderness
+        <option value="1">wildlands
+        <option value="4">willpower
+        <option value="4">winds
+        <option value="2">wine
+        <option value="3">winter
+        <option value="8">wisdom
+        <option value="3">wit
+        <option value="3">witches
+        <option value="3">wizards
+        <option value="5">women
+        <option value="6">woodlands
+        <option value="1">woodworkers
+        <option value="1">woodworking
+        <option value="2">work
+        <option value="1">worms
+        <option value="4">wrath
+        <option value="3">writing
+        <option value="2">youth
+        <option value="2">zeal
+    
+
