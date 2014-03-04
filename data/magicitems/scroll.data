@@ -20,9 +20,9 @@ HSET scroll_effect_description adnauseum    {"name":"ad nauseum",    "descriptio
 LPUSH scroll_effect adnauseum
 HSET scroll_effect_description aging    {"name":"aging",    "description":"causes instant aging" }
 LPUSH scroll_effect aging
-HSET scroll_effect_description animalmagnetism    {"name":"animal magnetism",    "description":"you become irresistible" }
+HSET scroll_effect_description animalmagnetism    {"name":"animal magnetism",    "description":"causes you to become irresistible" }
 LPUSH scroll_effect animalmagnetism
-HSET scroll_effect_description antidote    {"name":"antidote",    "description":"removes the effect of any poision" }
+HSET scroll_effect_description antidote    {"name":"antidote",    "description":"removes the effect of any poison" }
 LPUSH scroll_effect antidote
 HSET scroll_effect_description anti-paralysis    {"name":"anti-paralysis",    "description":"cures paralysis" }
 LPUSH scroll_effect anti-paralysis
@@ -34,41 +34,41 @@ HSET scroll_effect_description awaken    {"name":"awaken",    "description":"wak
 LPUSH scroll_effect awaken
 HSET scroll_effect_description babbling    {"name":"babbling",    "description":"causes uncontrollable speaking of nonsense" }
 LPUSH scroll_effect babbling
-HSET scroll_effect_description barkskin    {"name":"barkskin",    "description":"causes hardening of skin granting natural armor" }
+HSET scroll_effect_description barkskin    {"name":"barkskin",    "description":"causes hardening of the skin granting natural armor" }
 LPUSH scroll_effect barkskin
 HSET scroll_effect_description bearendurance    {"name":"bear endurance",    "description":"increases the endurance of the user" }
 LPUSH scroll_effect bearendurance
 HSET scroll_effect_description beautification    {"name":"beautification",    "description":"makes the user appear more attractive" }
 LPUSH scroll_effect beautification
-HSET scroll_effect_description befuddlement    {"name":"befuddlement",    "description":"user becomes confused and reckless" }
+HSET scroll_effect_description befuddlement    {"name":"befuddlement",    "description":"makes the user become confused and reckless" }
 LPUSH scroll_effect befuddlement
 HSET scroll_effect_description beguiling    {"name":"beguiling",    "description":"makes the user appear more trustworthy" }
 LPUSH scroll_effect beguiling
 HSET scroll_effect_description beneficialmutation    {"name":"beneficial mutation",    "description":"provides some sort of beneficial mutation" }
 LPUSH scroll_effect beneficialmutation
-HSET scroll_effect_description berserkrage     {"name":"berserk rage ",    "description":"throws user into uncontrollable rage" }
+HSET scroll_effect_description berserkrage     {"name":"berserk rage ",    "description":"throws the user into an uncontrollable rage" }
 LPUSH scroll_effect berserkrage 
 HSET scroll_effect_description bless    {"name":"bless",    "description":"grants the blessing of an unknown deity" }
 LPUSH scroll_effect bless
-HSET scroll_effect_description blessingofthefae    {"name":"blessing of the fae",    "description":"causes user to turn into a fairy" }
+HSET scroll_effect_description blessingofthefae    {"name":"blessing of the fae",    "description":"causes the user to turn into a fairy" }
 LPUSH scroll_effect blessingofthefae
 HSET scroll_effect_description blindness    {"name":"blindness",    "description":"causes immediate blindness" }
 LPUSH scroll_effect blindness
 HSET scroll_effect_description blindnessremoval    {"name":"blindness removal",    "description":"restores sight to the blind" }
 LPUSH scroll_effect blindnessremoval
-HSET scroll_effect_description bliss    {"name":"bliss",    "description":"user becomes immediately blissful and happy" }
+HSET scroll_effect_description bliss    {"name":"bliss",    "description":"causes the user immediately to become blissful and happy" }
 LPUSH scroll_effect bliss
 HSET scroll_effect_description blood    {"name":"blood",    "description":"provides sustinence for creatures that drink blood" }
 LPUSH scroll_effect blood
 HSET scroll_effect_description blood-replenishing    {"name":"blood-replenishing",    "description":"restores lost blood from a severely injured person" }
 LPUSH scroll_effect blood-replenishing
-HSET scroll_effect_description bloodroot    {"name":"bloodroot",    "description":"causes the blood to become unappealing to blooddrinkers" }
+HSET scroll_effect_description bloodroot    {"name":"bloodroot",    "description":"causes the blood to become unappealing to blood drinkers" }
 LPUSH scroll_effect bloodroot
 HSET scroll_effect_description bloodthirst    {"name":"bloodthirst",    "description":"causes an unnatural, literal thirst for blood" }
 LPUSH scroll_effect bloodthirst
-HSET scroll_effect_description blur    {"name":"blur",    "description":"causes user to become blurry and difficult to hit" }
+HSET scroll_effect_description blur    {"name":"blur",    "description":"causes the user to become blurry and difficult to hit" }
 LPUSH scroll_effect blur
-HSET scroll_effect_description bottledgenie    {"name":"bottled genie",    "description":"turns the drinker into a genie, binds them to the bottle" }
+HSET scroll_effect_description bottledgenie    {"name":"bottled genie",    "description":"turns the drinker into a genie and binds them to the bottle" }
 LPUSH scroll_effect bottledgenie
 HSET scroll_effect_description brilliance    {"name":"brilliance",    "description":"grants amazing insight" }
 LPUSH scroll_effect brilliance
@@ -76,17 +76,17 @@ HSET scroll_effect_description bruiseremoval    {"name":"bruise removal",    "de
 LPUSH scroll_effect bruiseremoval
 HSET scroll_effect_description bulge-eye    {"name":"bulge-eye",    "description":"causes user's eyes to bulge unnaturally" }
 LPUSH scroll_effect bulge-eye
-HSET scroll_effect_description bullstrength    {"name":"bull strength",    "description":"grants user powerful physical strength" }
+HSET scroll_effect_description bullstrength    {"name":"bull strength",    "description":"grants the user powerful physical strength" }
 LPUSH scroll_effect bullstrength
 HSET scroll_effect_description burn-healing    {"name":"burn-healing",    "description":"soothes and heals minor to severe burns" }
 LPUSH scroll_effect burn-healing
-HSET scroll_effect_description cacophony    {"name":"cacophony",    "description":"causes user to hear incredibly loud, continual noise" }
+HSET scroll_effect_description cacophony    {"name":"cacophony",    "description":"causes the user to hear incredibly loud, continual noise" }
 LPUSH scroll_effect cacophony
-HSET scroll_effect_description cagedimp    {"name":"caged imp",    "description":"user becomes subconsciously mischievious" }
+HSET scroll_effect_description cagedimp    {"name":"caged imp",    "description":"makes the user subconsciously mischievious" }
 LPUSH scroll_effect cagedimp
 HSET scroll_effect_description calming    {"name":"calming",    "description":"calms the user of shock, trauma, etc" }
 LPUSH scroll_effect calming
-HSET scroll_effect_description catalyst    {"name":"catalyst",    "description":"another scroll or potion to double in potency" }
+HSET scroll_effect_description catalyst    {"name":"catalyst",    "description":"causes another scroll or potion to double in potency" }
 LPUSH scroll_effect catalyst
 HSET scroll_effect_description catseye    {"name":"cats eye",    "description":"improves vision and enhances night vision" }
 LPUSH scroll_effect catseye
@@ -98,13 +98,13 @@ HSET scroll_effect_description clone    {"name":"clone",    "description":"cause
 LPUSH scroll_effect clone
 HSET scroll_effect_description coagulatedblood     {"name":"coagulated blood ",    "description":"provides slight satiation for vampires and carnivores" }
 LPUSH scroll_effect coagulatedblood 
-HSET scroll_effect_description confusion    {"name":"confusion",    "description":"confuses the taker" }
+HSET scroll_effect_description confusion    {"name":"confusion",    "description":"confuses the user" }
 LPUSH scroll_effect confusion
 HSET scroll_effect_description coughing    {"name":"coughing",    "description":"provokes a powerful coughing fit" }
 LPUSH scroll_effect coughing
-HSET scroll_effect_description cunning    {"name":"cunning",    "description":"grants user unsurpassed cleverness" }
+HSET scroll_effect_description cunning    {"name":"cunning",    "description":"grants the user unsurpassed cleverness" }
 LPUSH scroll_effect cunning
-HSET scroll_effect_description cupid    {"name":"cupid",    "description":"causes drinker to have an immediate romantic infatuation with whoever they see next" }
+HSET scroll_effect_description cupid    {"name":"cupid",    "description":"causes the drinker to have an immediate romantic infatuation with whoever they see next" }
 LPUSH scroll_effect cupid
 HSET scroll_effect_description cureboils    {"name":"cure boils",    "description":"will heal painful or unsightly boils" }
 LPUSH scroll_effect cureboils
@@ -122,11 +122,11 @@ HSET scroll_effect_description cureweakness    {"name":"cure weakness",    "desc
 LPUSH scroll_effect cureweakness
 HSET scroll_effect_description currentstopper    {"name":"current stopper",    "description":"prevents electrocution" }
 LPUSH scroll_effect currentstopper
-HSET scroll_effect_description curseofthelycan    {"name":"curse of the lycan",    "description":"infects user with lycanthropy" }
+HSET scroll_effect_description curseofthelycan    {"name":"curse of the lycan",    "description":"infects the user with lycanthropy" }
 LPUSH scroll_effect curseofthelycan
 HSET scroll_effect_description curseremoval    {"name":"curse removal",    "description":"removes most magical or supernatural curses" }
 LPUSH scroll_effect curseremoval
-HSET scroll_effect_description darkvision    {"name":"darkvision",    "description":"allows user to see in the dark" }
+HSET scroll_effect_description darkvision    {"name":"darkvision",    "description":"allows the user to see in the dark" }
 LPUSH scroll_effect darkvision
 HSET scroll_effect_description daylight    {"name":"daylight",    "description":"allows the user to see as if there was daylight present" }
 LPUSH scroll_effect daylight
@@ -144,9 +144,9 @@ HSET scroll_effect_description deflection    {"name":"deflection",    "descripti
 LPUSH scroll_effect deflection
 HSET scroll_effect_description degeneration    {"name":"degeneration",    "description":"causes a random ability to reduce" }
 LPUSH scroll_effect degeneration
-HSET scroll_effect_description delaypoison    {"name":"delay poison",    "description":"prevents the onset if toxic substances" }
+HSET scroll_effect_description delaypoison    {"name":"delay poison",    "description":"prevents the onset of toxic substances" }
 LPUSH scroll_effect delaypoison
-HSET scroll_effect_description desire    {"name":"desire",    "description":"causes user to desperately desire something or someone" }
+HSET scroll_effect_description desire    {"name":"desire",    "description":"causes the user to desperately desire something or someone" }
 LPUSH scroll_effect desire
 HSET scroll_effect_description despair    {"name":"despair",    "description":"causes a deep depression over the hopelessness of the situation" }
 LPUSH scroll_effect despair
@@ -156,21 +156,21 @@ HSET scroll_effect_description detectthings    {"name":"detect things",    "desc
 LPUSH scroll_effect detectthings
 HSET scroll_effect_description dexterity    {"name":"dexterity",    "description":"grants the user impressive dexterity" }
 LPUSH scroll_effect dexterity
-HSET scroll_effect_description discord    {"name":"discord",    "description":"drinker becomes irritable and picks fights" }
+HSET scroll_effect_description discord    {"name":"discord",    "description":"makes the drinker become irritable and pick fights" }
 LPUSH scroll_effect discord
 HSET scroll_effect_description diseaseremoval    {"name":"disease removal",    "description":"cures drinker of most diseases" }
 LPUSH scroll_effect diseaseremoval
-HSET scroll_effect_description divinepower    {"name":"divine power",    "description":"Grants the user strength from an unknown deity" }
+HSET scroll_effect_description divinepower    {"name":"divine power",    "description":"grants the user strength from an unknown deity" }
 LPUSH scroll_effect divinepower
 HSET scroll_effect_description divinerestoration    {"name":"divine restoration",    "description":"restores the user as a favor from an unknown deity" }
 LPUSH scroll_effect divinerestoration
 HSET scroll_effect_description dizziness    {"name":"dizziness",    "description":"makes the drinker dizzy and lightheaded" }
 LPUSH scroll_effect dizziness
-HSET scroll_effect_description dogbane    {"name":"dogbane",    "description":"poisonous to anything with canine ancestry" }
+HSET scroll_effect_description dogbane    {"name":"dogbane",    "description":" is poisonous to anything with canine ancestry" }
 LPUSH scroll_effect dogbane
 HSET scroll_effect_description dragondung    {"name":"dragon dung",    "description":"causes the drinker to defecate a small number of coins" }
 LPUSH scroll_effect dragondung
-HSET scroll_effect_description dragonsbreath    {"name":"dragon's breath",    "description":"grants user the ability to breathe fire like a dragon" }
+HSET scroll_effect_description dragonsbreath    {"name":"dragon's breath",    "description":"grants the user the ability to breathe fire like a dragon" }
 LPUSH scroll_effect dragonsbreath
 HSET scroll_effect_description dreamless    {"name":"dreamless",    "description":"prevents the user from dreaming during sleep" }
 LPUSH scroll_effect dreamless
@@ -178,15 +178,15 @@ HSET scroll_effect_description drowsiness    {"name":"drowsiness",    "descripti
 LPUSH scroll_effect drowsiness
 HSET scroll_effect_description education    {"name":"education",    "description":"grants knowledge on a specific subject" }
 LPUSH scroll_effect education
-HSET scroll_effect_description embiggenment    {"name":"embiggenment",    "description":"embiggens the user by one size" }
+HSET scroll_effect_description embiggenment    {"name":"embiggenment",    "description":"enlarges the user by one size" }
 LPUSH scroll_effect embiggenment
-HSET scroll_effect_description endureelements    {"name":"endure elements",    "description":"grants resistence to the elements" }
+HSET scroll_effect_description endureelements    {"name":"endure elements",    "description":"grants resistance to the elements" }
 LPUSH scroll_effect endureelements
 HSET scroll_effect_description endure_elements      {"name":"endure elements",      "description":"increases resistance to the elements"    }
 LPUSH scroll_effect endure_elements
 HSET scroll_effect_description enlargement    {"name":"enlargement",    "description":"enlarges the user by one size" }
 LPUSH scroll_effect enlargement
-HSET scroll_effect_description enlightenment    {"name":"enlightenment",    "description":"provides user with a random bonus on a given skill" }
+HSET scroll_effect_description enlightenment    {"name":"enlightenment",    "description":"provides the user with a random bonus on a given skill" }
 LPUSH scroll_effect enlightenment
 HSET scroll_effect_description euphoria    {"name":"euphoria",    "description":"induces an irrational happiness" }
 LPUSH scroll_effect euphoria
@@ -204,15 +204,15 @@ HSET scroll_effect_description flesheater    {"name":"flesh eater",    "descript
 LPUSH scroll_effect flesheater
 HSET scroll_effect_description flight    {"name":"flight",    "description":"grants the ability to fly" }
 LPUSH scroll_effect flight
-HSET scroll_effect_description flinch    {"name":"flinch",    "description":"causes user to flinch uncontrollably" }
+HSET scroll_effect_description flinch    {"name":"flinch",    "description":"causes the user to flinch uncontrollably" }
 LPUSH scroll_effect flinch
 HSET scroll_effect_description forgetfulness    {"name":"forgetfulness",    "description":"makes the user forgetful" }
 LPUSH scroll_effect forgetfulness
-HSET scroll_effect_description foxcunning     {"name":"fox cunning ",    "description":"make the user cleverer than normal" }
+HSET scroll_effect_description foxcunning     {"name":"fox cunning ",    "description":"makes the user mpre clever than normal" }
 LPUSH scroll_effect foxcunning 
-HSET scroll_effect_description freezing    {"name":"freezing",    "description":"lower the body temperature of the drinker" }
+HSET scroll_effect_description freezing    {"name":"freezing",    "description":"lowers the body temperature of the drinker" }
 LPUSH scroll_effect freezing
-HSET scroll_effect_description friendship    {"name":"friendship",    "description":"grants drinker the ability to become fast friends with someone upon meeting them" }
+HSET scroll_effect_description friendship    {"name":"friendship",    "description":"grants the drinker the ability to become fast friends with someone upon meeting them" }
 LPUSH scroll_effect friendship
 HSET scroll_effect_description frostbite    {"name":"frostbite",    "description":"causes frost damage to drinker" }
 LPUSH scroll_effect frostbite
@@ -236,7 +236,7 @@ HSET scroll_effect_description hair-raising    {"name":"hair-raising",    "descr
 LPUSH scroll_effect hair-raising
 HSET scroll_effect_description hallucination    {"name":"hallucination",    "description":"causes drinker to hallucinate" }
 LPUSH scroll_effect hallucination
-HSET scroll_effect_description hare    {"name":"hare",    "description":"causes user to grow thick, beautiful hare on their head" }
+HSET scroll_effect_description hare    {"name":"hare",    "description":"causes user to grow a hare on their head" }
 LPUSH scroll_effect hare
 HSET scroll_effect_description haste                {"name":"haste",                "description":"allows user to move with extreme speed"  }
 LPUSH scroll_effect haste
@@ -248,7 +248,7 @@ HSET scroll_effect_description heartbreak    {"name":"heartbreak",    "descripti
 LPUSH scroll_effect heartbreak
 HSET scroll_effect_description herbicide    {"name":"herbicide",    "description":"causes damage or death to plant-based life" }
 LPUSH scroll_effect herbicide
-HSET scroll_effect_description heroism    {"name":"heroism",    "description":"caused unusual recklessness and remission of fear" }
+HSET scroll_effect_description heroism    {"name":"heroism",    "description":"causes unusual recklessness and remission of fear" }
 LPUSH scroll_effect heroism
 HSET scroll_effect_description hiccupping    {"name":"hiccupping",    "description":"causes uncontrollable hiccupping" }
 LPUSH scroll_effect hiccupping
@@ -262,7 +262,7 @@ HSET scroll_effect_description hyena    {"name":"hyena",    "description":"cause
 LPUSH scroll_effect hyena
 HSET scroll_effect_description ignition    {"name":"ignition",    "description":"causes user to uncontrollably belch flames" }
 LPUSH scroll_effect ignition
-HSET scroll_effect_description indestructibility    {"name":"indestructibility",    "description":"user cannot be damage" }
+HSET scroll_effect_description indestructibility    {"name":"indestructibility",    "description":"prevents the user from being damaged" }
 LPUSH scroll_effect indestructibility
 HSET scroll_effect_description influence    {"name":"influence",    "description":"grants the ability to influence others" }
 LPUSH scroll_effect influence
@@ -298,7 +298,7 @@ HSET scroll_effect_description livingdeath    {"name":"living death",    "descri
 LPUSH scroll_effect livingdeath
 HSET scroll_effect_description lockjaw    {"name":"lockjaw",    "description":"induces lockjaw in the user" }
 LPUSH scroll_effect lockjaw
-HSET scroll_effect_description longevity    {"name":"longevity",    "description":"cuts aging rage by half" }
+HSET scroll_effect_description longevity    {"name":"longevity",    "description":"cuts aging range by half" }
 LPUSH scroll_effect longevity
 HSET scroll_effect_description love    {"name":"love",    "description":"makes the user fall in love with whoever held the substance previously" }
 LPUSH scroll_effect love
@@ -312,13 +312,13 @@ HSET scroll_effect_description magicfang    {"name":"magic fang",    "descriptio
 LPUSH scroll_effect magicfang
 HSET scroll_effect_description magicstone    {"name":"magic stone",    "description":"summons a handful of small throwing stones" }
 LPUSH scroll_effect magicstone
-HSET scroll_effect_description magicvestment    {"name":"magic vestment",    "description":"grants magical protection to the users clothing" }
+HSET scroll_effect_description magicvestment    {"name":"magic vestment",    "description":"grants magical protection to the user's clothing" }
 LPUSH scroll_effect magicvestment
 HSET scroll_effect_description magicweapon    {"name":"magic weapon",    "description":"summons a force weapon shaped by the user's mind" }
 LPUSH scroll_effect magicweapon
 HSET scroll_effect_description malevolence    {"name":"malevolence",    "description":"causes brooding anger towards a random target" }
 LPUSH scroll_effect malevolence
-HSET scroll_effect_description manegrow    {"name":"manegrow",    "description":"causes users head to grow thick, luxurious hair rapidly" }
+HSET scroll_effect_description manegrow    {"name":"manegrow",    "description":"causes user's head to grow thick, luxurious hair rapidly" }
 LPUSH scroll_effect manegrow
 HSET scroll_effect_description melancholy    {"name":"melancholy",    "description":"impairs enjoyment and fun" }
 LPUSH scroll_effect melancholy
@@ -342,7 +342,7 @@ HSET scroll_effect_description mummycurse    {"name":"mummy curse",    "descript
 LPUSH scroll_effect mummycurse
 HSET scroll_effect_description neutralizepoison    {"name":"neutralize poison",    "description":"neutralizes any poisons in the user's system" }
 LPUSH scroll_effect neutralizepoison
-HSET scroll_effect_description neutralize_poison    {"name":"neutralize poison",    "description":"can neutralize various poisons"          }
+HSET scroll_effect_description neutralize_poison    {"name":"neutralize poison",    "description":"neutralizes various poisons"          }
 LPUSH scroll_effect neutralize_poison
 HSET scroll_effect_description neutralmutation    {"name":"neutral mutation",    "description":"provides some sort of neutral mutation" }
 LPUSH scroll_effect neutralmutation
@@ -368,15 +368,15 @@ HSET scroll_effect_description passwithouttrace    {"name":"pass without trace",
 LPUSH scroll_effect passwithouttrace
 HSET scroll_effect_description peace    {"name":"peace",    "description":"relieves anxiety" }
 LPUSH scroll_effect peace
-HSET scroll_effect_description perception    {"name":"perception",    "description":"increases the users perception" }
+HSET scroll_effect_description perception    {"name":"perception",    "description":"increases the user's perception" }
 LPUSH scroll_effect perception
-HSET scroll_effect_description piercingwit    {"name":"piercing wit",    "description":"user becomes keenly aware of the missteps of others" }
+HSET scroll_effect_description piercingwit    {"name":"piercing wit",    "description":"makes the user keenly aware of the missteps of others" }
 LPUSH scroll_effect piercingwit
 HSET scroll_effect_description pinkeye    {"name":"pinkeye",    "description":"causes drinker to suffer immediate conjunctivitis" }
 LPUSH scroll_effect pinkeye
 HSET scroll_effect_description poison    {"name":"poison",    "description":"user becomes immediately ill" }
 LPUSH scroll_effect poison
-HSET scroll_effect_description polymorph    {"name":"polymorph",    "description":"grants the user the ability to morph into another shpe" }
+HSET scroll_effect_description polymorph    {"name":"polymorph",    "description":"grants the user the ability to morph into another shape" }
 LPUSH scroll_effect polymorph
 HSET scroll_effect_description porridge    {"name":"porridge",    "description":"removes any immediate hunger" }
 LPUSH scroll_effect porridge
@@ -390,19 +390,19 @@ HSET scroll_effect_description pureluck    {"name":"pure luck",    "description"
 LPUSH scroll_effect pureluck
 HSET scroll_effect_description purification    {"name":"purification",    "description":"cleanses the user of any non-magical diseases and filth" }
 LPUSH scroll_effect purification
-HSET scroll_effect_description rage    {"name":"rage",    "description":"user develops uncontrolled, undirected rage" }
+HSET scroll_effect_description rage    {"name":"rage",    "description":"causes the user to develop uncontrolled, undirected rage" }
 LPUSH scroll_effect rage
 HSET scroll_effect_description rano    {"name":"rano",    "description":"causes user to develop large horns on their forehead" }
 LPUSH scroll_effect rano
-HSET scroll_effect_description rawchaos    {"name":"raw chaos",    "description":"user is innundated with raw chaos" }
+HSET scroll_effect_description rawchaos    {"name":"raw chaos",    "description":"innudates the user with raw chaos" }
 LPUSH scroll_effect rawchaos
-HSET scroll_effect_description reason    {"name":"reason",    "description":"user is protected from the effects of insanity" }
+HSET scroll_effect_description reason    {"name":"reason",    "description":"protects the user from the effects of insanity" }
 LPUSH scroll_effect reason
-HSET scroll_effect_description reduceperson    {"name":"reduce person",    "description":"user decreases in size by 50%" }
+HSET scroll_effect_description reduceperson    {"name":"reduce person",    "description":"decreases the user's size by 50%" }
 LPUSH scroll_effect reduceperson
 HSET scroll_effect_description reflection    {"name":"reflection",    "description":"grants the user insight" }
 LPUSH scroll_effect reflection
-HSET scroll_effect_description regeneration    {"name":"regeneration",    "description":"allows user to regrow lost limbs" }
+HSET scroll_effect_description regeneration    {"name":"regeneration",    "description":"allows the user to regrow lost limbs" }
 LPUSH scroll_effect regeneration
 HSET scroll_effect_description removeblindness    {"name":"remove blindness",    "description":"restores sight" }
 LPUSH scroll_effect removeblindness
@@ -430,9 +430,9 @@ HSET scroll_effect_description resistfire     {"name":"resist fire ",    "descri
 LPUSH scroll_effect resistfire 
 HSET scroll_effect_description resistsonic     {"name":"resist sonic ",    "description":"provides resistance to sonic damage" }
 LPUSH scroll_effect resistsonic 
-HSET scroll_effect_description resourcefinder    {"name":"resource finder",    "description":"allows user to sniff out needed resources" }
+HSET scroll_effect_description resourcefinder    {"name":"resource finder",    "description":"allows the user to sniff out needed resources" }
 LPUSH scroll_effect resourcefinder
-HSET scroll_effect_description respiration          {"name":"respiration",          "description":"allows user breathe in otherwise dangerous environments" }
+HSET scroll_effect_description respiration          {"name":"respiration",          "description":"allows the user to breathe in otherwise dangerous environments" }
 LPUSH scroll_effect respiration
 HSET scroll_effect_description restoration     {"name":"restoration ",    "description":"reverts effects of any other spells" }
 LPUSH scroll_effect restoration 
@@ -442,13 +442,13 @@ HSET scroll_effect_description rockskin    {"name":"rock skin",    "description"
 LPUSH scroll_effect rockskin
 HSET scroll_effect_description sanctuary    {"name":"sanctuary",    "description":"grants the user protection from combat" }
 LPUSH scroll_effect sanctuary
-HSET scroll_effect_description scouringsolution    {"name":"scouring solution",    "description":"is good for cleaning caked on grime" }
+HSET scroll_effect_description scouringsolution    {"name":"scouring solution",    "description":"is good for cleaning caked-on grime" }
 LPUSH scroll_effect scouringsolution
 HSET scroll_effect_description seduction    {"name":"seduction",    "description":"grants the user the ability to seduce anyone" }
 LPUSH scroll_effect seduction
 HSET scroll_effect_description seeinvisible    {"name":"see invisible",    "description":"grants the user the ability to see invisible things" }
 LPUSH scroll_effect seeinvisible
-HSET scroll_effect_description serpent    {"name":"serpent",    "description":"causes user to grow poisonous fangs" }
+HSET scroll_effect_description serpent    {"name":"serpent",    "description":"causes the user to grow poisonous fangs" }
 LPUSH scroll_effect serpent
 HSET scroll_effect_description shield    {"name":"shield",    "description":"grants the user a magical force shield for protection" }
 LPUSH scroll_effect shield
@@ -456,15 +456,15 @@ HSET scroll_effect_description shieldoffaith     {"name":"shield of faith ",    
 LPUSH scroll_effect shieldoffaith 
 HSET scroll_effect_description shrinking    {"name":"shrinking",    "description":"causes the drinker to shrink" }
 LPUSH scroll_effect shrinking
-HSET scroll_effect_description sickness    {"name":"sickness",    "description":"causes user to display symptoms of severe illness" }
+HSET scroll_effect_description sickness    {"name":"sickness",    "description":"causes the user to display symptoms of severe illness" }
 LPUSH scroll_effect sickness
 HSET scroll_effect_description skelegro    {"name":"skelegro",    "description":"regrows any missing bones" }
 LPUSH scroll_effect skelegro
-HSET scroll_effect_description slashingfury    {"name":"slashing fury",    "description":"causes user to fly into a frenzy when holding a blade" }
+HSET scroll_effect_description slashingfury    {"name":"slashing fury",    "description":"causes the user to fly into a frenzy when holding a blade" }
 LPUSH scroll_effect slashingfury
-HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants user unnatural vigor when combatting a specific enemy" }
+HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants the user unnatural vigor when combatting a specific enemy" }
 LPUSH scroll_effect slaying
-HSET scroll_effect_description sleep    {"name":"sleep",    "description":"user will fall asleep for up to 24 hours" }
+HSET scroll_effect_description sleep    {"name":"sleep",    "description":"causes the user to fall asleep for up to 24 hours" }
 LPUSH scroll_effect sleep
 HSET scroll_effect_description sleeping    {"name":"sleeping",    "description":"forces the user into a deep sleep" }
 LPUSH scroll_effect sleeping
@@ -476,7 +476,7 @@ HSET scroll_effect_description snuffling    {"name":"snuffling",    "description
 LPUSH scroll_effect snuffling
 HSET scroll_effect_description socialgrace    {"name":"social grace",    "description":"grants unnatural skill in social situations" }
 LPUSH scroll_effect socialgrace
-HSET scroll_effect_description spark    {"name":"spark",    "description":"user suffers from continual, uncontrollable electrical outbursts" }
+HSET scroll_effect_description spark    {"name":"spark",    "description":"causes the user to suffer from continual, uncontrollable electrical outbursts" }
 LPUSH scroll_effect spark
 HSET scroll_effect_description sparklingapplecider    {"name":"sparkling apple cider",    "description":"causes the user to desire apples" }
 LPUSH scroll_effect sparklingapplecider
@@ -504,11 +504,11 @@ HSET scroll_effect_description swelling    {"name":"swelling",    "description":
 LPUSH scroll_effect swelling
 HSET scroll_effect_description swiftness    {"name":"swiftness",    "description":"grants the user the ability to move quickly" }
 LPUSH scroll_effect swiftness
-HSET scroll_effect_description tongues    {"name":"tongues",    "description":"allows user to speak and understand any language" }
+HSET scroll_effect_description tongues    {"name":"tongues",    "description":"allows the user to speak and understand any language" }
 LPUSH scroll_effect tongues
-HSET scroll_effect_description toughness    {"name":"toughness",    "description":"grants user increased endurance" }
+HSET scroll_effect_description toughness    {"name":"toughness",    "description":"grants the user increased endurance" }
 LPUSH scroll_effect toughness
-HSET scroll_effect_description training    {"name":"training",    "description":"allows user to increase effectiveness of a single skill" }
+HSET scroll_effect_description training    {"name":"training",    "description":"allows the user to increase effectiveness of a single skill" }
 LPUSH scroll_effect training
 HSET scroll_effect_description trollblood    {"name":"troll blood",    "description":"grants the user minor regenerative abilities" }
 LPUSH scroll_effect trollblood
@@ -528,7 +528,7 @@ HSET scroll_effect_description venomguard    {"name":"venomguard",    "descripti
 LPUSH scroll_effect venomguard
 HSET scroll_effect_description visibility    {"name":"visibility",    "description":"grants visibility to the invisible" }
 LPUSH scroll_effect visibility
-HSET scroll_effect_description vision    {"name":"vision",    "description":"grants user a mysterious and unclear vision" }
+HSET scroll_effect_description vision    {"name":"vision",    "description":"grants the user a mysterious and unclear vision" }
 LPUSH scroll_effect vision
 HSET scroll_effect_description vocality    {"name":"vocality",    "description":"alters the user's voice" }
 LPUSH scroll_effect vocality
@@ -540,11 +540,11 @@ HSET scroll_effect_description weakness    {"name":"weakness",    "description":
 LPUSH scroll_effect weakness
 HSET scroll_effect_description wide-eye    {"name":"wide-eye",    "description":"prevents the user from falling asleep" }
 LPUSH scroll_effect wide-eye
-HSET scroll_effect_description wolfsbane    {"name":"wolfsbane",    "description":"poisonous to a lycanthrope, protects user from infection" }
+HSET scroll_effect_description wolfsbane    {"name":"wolfsbane",    "description":"is poisonous to a lycanthrope but protects uninfected user from infection" }
 LPUSH scroll_effect wolfsbane
-HSET scroll_effect_description wound-cleaning    {"name":"wound-cleaning",    "description":"antiseptic prevents infection from sinking in" }
+HSET scroll_effect_description wound-cleaning    {"name":"wound-cleaning",    "description":"is an anti-septic that prevents infection from sinking in" }
 LPUSH scroll_effect wound-cleaning
-HSET scroll_effect_description zombification    {"name":"zombification",    "description":"causes user to show immediate signs of zombification" }
+HSET scroll_effect_description zombification    {"name":"zombification",    "description":"causes the user to show immediate signs of zombification" }
 LPUSH scroll_effect zombification
 
 
@@ -636,7 +636,7 @@ LPUSH scroll_container_label written in an uncommon language
 LPUSH scroll_container_label covered in ideograms
 LPUSH scroll_container_label signed by the creator
 
-# The scrolls is housed in a ____
+# The scroll is housed in a ____
 LPUSH scroll_container_type scroll case
 LPUSH scroll_container_type folder
 LPUSH scroll_container_type book
