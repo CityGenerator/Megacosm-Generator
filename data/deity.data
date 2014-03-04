@@ -104,11 +104,11 @@ LPUSH deity_clergytype evangelists
 LPUSH deity_clergytype shepherds
         
 #        <worship> <!--Orsis prefers ____ from his followers -->
-LPUSH deity_workship sacrifices
-LPUSH deity_workship offerings
-LPUSH deity_workship tithings
-LPUSH deity_workship prayers
-LPUSH deity_workship supplication
+LPUSH deity_worship sacrifices
+LPUSH deity_worship offerings
+LPUSH deity_worship tithings
+LPUSH deity_worship prayers
+LPUSH deity_worship supplication
         
 #        <primarycolor>
 LPUSH deity_primarycolor black

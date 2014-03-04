@@ -7,11 +7,12 @@ from jinja2 import Template
 from jinja2.environment import Environment
 from util import Filters
 
-class Deity(NPC):
+class Deity(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
-        
+      
+        self.avatar=NPC(redis)  
        
         print self.__dict__ 
         environment = Environment()

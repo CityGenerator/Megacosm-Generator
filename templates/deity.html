@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}Tremble Before {{deity.name['full']}} {% endblock %}
+{% block title %}Tremble Before {{deity.avatar.name['full']}} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,41 +10,55 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Tremble Before <a href="/deity?seed={{deity.seed}}">{{deity.name['full']}} ({{deity.seed}})</a></h1>
-    <h2>Summary</h2>
-    {{deity.name['full']}} is {{deity.age['name']|article}} {{deity.race}} {{deity.sex['name']}} who is {{deity.skill['name'] | article}} {{deity.profession}} by trade. {{deity.sex['pronoun']|capitalize}} is currently {{deity.motivation}}.
-    
-    <h2>Description</h2>
-    {{deity.name['full']}} is {{deity.height| article}} {{deity.race}} with {{deity.complexion| article}} complexion. {{deity.name['firstname']}} appears {{deity.build}} and has {{deity.eye}} eyes. 
+    <h1>Tremble Before <a href="/deity?seed={{deity.seed}}">{{deity.avatar.name['full']}} ({{deity.seed}})</a></h1>
 
-    {{deity.sex['possessive']|capitalize}} friends describe {{deity.sex['third-person']}} as {{deity.charisma['name']}}, while others see {{deity.name['firstname']}} as {{deity.attractiveness['name']}}. Physically, {{deity.sex['pronoun']}} appears {{deity.strength['name']}} and {{deity.endurance['name']}}.
 
-    <h2>Behavior</h2>
-    {{deity.name['firstname']}} appears {{deity.emotion}}, but if approached, {{deity.sex['pronoun']}} will act {{deity.attitude}}.  When provoked, {{deity.name['firstname']}} is {{deity.bravery['name']}}. Peers consider {{deity.sex['third-person']}} {{deity.intelligence['name']}}. People who know {{deity.name['firstname']}} think {{deity.sex['pronoun']}} is {{deity.honor['name']}}. Looking back, {{deity.sex['pronoun']}} is {{deity.satisfaction['name']}} of {{deity.sex['possessive']}} past choices.
+<h2>Summary</h2>
+{{deity.avatar.name['full']}} is {{deity.importance['name'] |article}} who appreciates _________. 
+{{deity.avatar.name['firstname']}}'s portfolio includes _______________.
+{{deity.avatar.sex['possessive']|capitalize}} holy symbol is {{ deity.primarycolor|article}} {{deity.holysymbol_type}} {{ deity.holysymbol}}.
+{{deity.worship|capitalize}} are the preferred form of worship and {{deity.favored_weapon}} are the favored weapon.
 
-Tremble Before Faevartel! (734984)
 
-Summary
+<h2>Appearance</h2>
 
-Faevartel Tyrneaarrow is a demi-deity who likes to see intelligence in his followers. Faevartel controls treasures. Her holy symbol is a dark grey duck and prefers tithings from her followers. Harpoons are the preferred weapon of Faevartel.
-Description
-
+Bob often appears to her followers as _________, but has been known to take the form of a __________. She usually dresses in her preferred colors, {{ deity.primarycolor}} and {{ deity.primarycolor}}.
 Faevartel Tyrneaarrow often appears as a short half-elf with a dark complexion. Faevartel appears chubby and has sunken eyes.
-Clergy
+
+<h2>Clergy</h2>
 
 Clergy of Faevartel often follow a Vow of Charity (a vow to refrain from accepting compensation for any services rendered).
-Followers
+<h2>Followers</h2>
 
 This antiquated god's worshipers are everywhere. Faevartel is thought to have several devoted followers in the world. Faevartel's followers are said to be hidden about their affiliation.
 
+<h2> data</h2>
+'clergytype': 'abbots'
+'jealousy': {u'score': 90
+u'name': u'selfish'}
+'holysymbol': 'insect'
+'vow': 'purity'
+'followers': {u'score': 70
+u'name': u'wide spread'}
+'holysymbol_type': 'shining'
+'importance': {u'score': 80
+u'name': u'intermediate deity'
+u'points': 10}
+'secrecy': {u'score': 20
+u'name': u'tight lipped'}
+'name': {'full': ''}
+'age': {u'score': 55
+u'name': u'antiquated'}
+'vow_description': {u'name': u'Purity'
+u'description': u'avoid contact with dead flesh'}
+'primarycolor': 'very dark grey'
+'devotion': {u'score': 60
+u'name': u'an unknown number of'
+
+
+
 
 {{deity.__dict__}}
-
-
-
-
-
-
 
 
 {% endblock %}
