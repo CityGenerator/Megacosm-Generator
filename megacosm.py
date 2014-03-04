@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem
+from generators import Planet, NPC, MagicItem, Deity
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -142,8 +142,21 @@ def GeneratePlanet():
     return render_template('planet.html', planet=planet )
 
 
+@app.route('/deity')
+def GenerateDeity():
+    """Generate a Deity"""
+    seed=set_seed( request.args.get('seed') )
 
+    print "MAH SEED:",seed
 
+    deityfeatures={'seed':seed,}
+    for param in request.args :
+        if re.match('^deity_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            deityfeatures[param]=int(request.args[param])
+
+    deity=Deity.Deity(server, deityfeatures)
+    return render_template('deity.html',deity=deity) 
 
 
 @app.errorhandler(404)

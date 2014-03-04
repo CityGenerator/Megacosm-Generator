@@ -1,0 +1,50 @@
+
+
+{% extends "base.html" %}
+{% block title %}Tremble Before {{deity.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>Tremble Before <a href="/deity?seed={{deity.seed}}">{{deity.name['full']}} ({{deity.seed}})</a></h1>
+    <h2>Summary</h2>
+    {{deity.name['full']}} is {{deity.age['name']|article}} {{deity.race}} {{deity.sex['name']}} who is {{deity.skill['name'] | article}} {{deity.profession}} by trade. {{deity.sex['pronoun']|capitalize}} is currently {{deity.motivation}}.
+    
+    <h2>Description</h2>
+    {{deity.name['full']}} is {{deity.height| article}} {{deity.race}} with {{deity.complexion| article}} complexion. {{deity.name['firstname']}} appears {{deity.build}} and has {{deity.eye}} eyes. 
+
+    {{deity.sex['possessive']|capitalize}} friends describe {{deity.sex['third-person']}} as {{deity.charisma['name']}}, while others see {{deity.name['firstname']}} as {{deity.attractiveness['name']}}. Physically, {{deity.sex['pronoun']}} appears {{deity.strength['name']}} and {{deity.endurance['name']}}.
+
+    <h2>Behavior</h2>
+    {{deity.name['firstname']}} appears {{deity.emotion}}, but if approached, {{deity.sex['pronoun']}} will act {{deity.attitude}}.  When provoked, {{deity.name['firstname']}} is {{deity.bravery['name']}}. Peers consider {{deity.sex['third-person']}} {{deity.intelligence['name']}}. People who know {{deity.name['firstname']}} think {{deity.sex['pronoun']}} is {{deity.honor['name']}}. Looking back, {{deity.sex['pronoun']}} is {{deity.satisfaction['name']}} of {{deity.sex['possessive']}} past choices.
+
+Tremble Before Faevartel! (734984)
+
+Summary
+
+Faevartel Tyrneaarrow is a demi-deity who likes to see intelligence in his followers. Faevartel controls treasures. Her holy symbol is a dark grey duck and prefers tithings from her followers. Harpoons are the preferred weapon of Faevartel.
+Description
+
+Faevartel Tyrneaarrow often appears as a short half-elf with a dark complexion. Faevartel appears chubby and has sunken eyes.
+Clergy
+
+Clergy of Faevartel often follow a Vow of Charity (a vow to refrain from accepting compensation for any services rendered).
+Followers
+
+This antiquated god's worshipers are everywhere. Faevartel is thought to have several devoted followers in the world. Faevartel's followers are said to be hidden about their affiliation.
+
+
+{{deity.__dict__}}
+
+
+
+
+
+
+
+
+{% endblock %}
