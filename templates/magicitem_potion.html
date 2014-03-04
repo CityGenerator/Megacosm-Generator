@@ -12,6 +12,7 @@
 
     <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
     <h2>Summary</h2>
+    <img src="/static/images/potion.png" style="float:left;background-color:#{{magicitem.color_description['hex']}}" >
     The {{magicitem.name|title}} is {{magicitem.color_description['name'] | article}} {{magicitem.kind}} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
     The {{magicitem.effect_description['name']}} {{magicitem.kind}} {{magicitem.effect_description['description']}}.
     The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and smells of {{magicitem.smell}}. 
