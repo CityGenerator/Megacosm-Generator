@@ -88,1294 +88,1310 @@ ZADD deity_secrecy  80 {"name":"forthright",  "score":80   }
 ZADD deity_secrecy  90 {"name":"honest",  "score":90   } 
 ZADD deity_secrecy 100 {"name":"open",  "score":100   } 
         
-    <acceptance><!--Sect members are see as _____ by the faithful -->
-        <option          max="5" >heretical
-        <option min="6"  max="10">blasphemous
-        <option min="11" max="15">sectarian
-        <option min="16" max="20">rebelious
-        <option min="21" max="25">defecting
-        <option min="26" max="30">dissenting
-        <option min="31" max="35">agitating
-        <option min="36" max="40">deviant
-        <option min="41" max="45">mislead
-        <option min="46" max="50">non-confirming
-        <option min="51" max="55">faithful
-        <option min="56" max="60">honorable
-        <option min="61" max="65">noble
-        <option min="66" max="70">loyal
-        <option min="71" max="75">dutiful
-        <option min="76" max="80">reverant
-        <option min="81" max="85">devout
-        <option min="86" max="90">virtuous
-        <option min="91" max="95">righteous
-        <option min="96"         >saintly
+LPUSH deity_clergytype priests
+LPUSH deity_clergytype clergy
+LPUSH deity_clergytype clerics
+LPUSH deity_clergytype friars
+LPUSH deity_clergytype preachers
+LPUSH deity_clergytype rectors
+LPUSH deity_clergytype ministers
+LPUSH deity_clergytype monks
+LPUSH deity_clergytype chaplains
+LPUSH deity_clergytype pastors
+LPUSH deity_clergytype rabbis
+LPUSH deity_clergytype abbots
+LPUSH deity_clergytype evangelists
+LPUSH deity_clergytype shepherds
+        
+#        <worship> <!--Orsis prefers ____ from his followers -->
+LPUSH deity_workship sacrifices
+LPUSH deity_workship offerings
+LPUSH deity_workship tithings
+LPUSH deity_workship prayers
+LPUSH deity_workship supplication
+        
+#        <primarycolor>
+LPUSH deity_primarycolor black
+LPUSH deity_primarycolor blue
+LPUSH deity_primarycolor brown
+LPUSH deity_primarycolor dark blue
+LPUSH deity_primarycolor dark brown
+LPUSH deity_primarycolor dark green
+LPUSH deity_primarycolor dark grey
+LPUSH deity_primarycolor dark red
+LPUSH deity_primarycolor dark yellow
+LPUSH deity_primarycolor gold
+LPUSH deity_primarycolor green
+LPUSH deity_primarycolor grey
+LPUSH deity_primarycolor light blue
+LPUSH deity_primarycolor light brown
+LPUSH deity_primarycolor light green
+LPUSH deity_primarycolor light grey
+LPUSH deity_primarycolor light orange
+LPUSH deity_primarycolor light red
+LPUSH deity_primarycolor light yellow
+LPUSH deity_primarycolor orange
+LPUSH deity_primarycolor purple
+LPUSH deity_primarycolor red
+LPUSH deity_primarycolor very dark blue
+LPUSH deity_primarycolor very dark green
+LPUSH deity_primarycolor very dark grey
+LPUSH deity_primarycolor very dark red
+LPUSH deity_primarycolor very light blue
+LPUSH deity_primarycolor very light green
+LPUSH deity_primarycolor very light red
+LPUSH deity_primarycolor very light yellow
+LPUSH deity_primarycolor white
+LPUSH deity_primarycolor yellow
+        
+#        <secondarycolor>
+LPUSH deity_secondarycolor black
+LPUSH deity_secondarycolor blue
+LPUSH deity_secondarycolor brown
+LPUSH deity_secondarycolor dark blue
+LPUSH deity_secondarycolor dark brown
+LPUSH deity_secondarycolor dark green
+LPUSH deity_secondarycolor dark grey
+LPUSH deity_secondarycolor dark red
+LPUSH deity_secondarycolor dark yellow
+LPUSH deity_secondarycolor gold
+LPUSH deity_secondarycolor green
+LPUSH deity_secondarycolor grey
+LPUSH deity_secondarycolor light blue
+LPUSH deity_secondarycolor light brown
+LPUSH deity_secondarycolor light green
+LPUSH deity_secondarycolor light grey
+LPUSH deity_secondarycolor light orange
+LPUSH deity_secondarycolor light red
+LPUSH deity_secondarycolor light yellow
+LPUSH deity_secondarycolor orange
+LPUSH deity_secondarycolor purple
+LPUSH deity_secondarycolor red
+LPUSH deity_secondarycolor very dark blue
+LPUSH deity_secondarycolor very dark green
+LPUSH deity_secondarycolor very dark grey
+LPUSH deity_secondarycolor very dark red
+LPUSH deity_secondarycolor very light blue
+LPUSH deity_secondarycolor very light green
+LPUSH deity_secondarycolor very light red
+LPUSH deity_secondarycolor very light yellow
+LPUSH deity_secondarycolor white
+LPUSH deity_secondarycolor yellow
+        
+# in battle, Gokl prefers
+LPUSH deity_favored_weapon axes
+LPUSH deity_favored_weapon bastard swords
+LPUSH deity_favored_weapon battle axes
+LPUSH deity_favored_weapon picks
+LPUSH deity_favored_weapon bladed gauntlets
+LPUSH deity_favored_weapon bows
+LPUSH deity_favored_weapon butterfly swords
+LPUSH deity_favored_weapon claw bracers
+LPUSH deity_favored_weapon composite bows
+LPUSH deity_favored_weapon crossbows
+LPUSH deity_favored_weapon curved swords
+LPUSH deity_favored_weapon daggers
+LPUSH deity_favored_weapon falchionn
+LPUSH deity_favored_weapon flails, maces and clubs
+LPUSH deity_favored_weapon glaives
+LPUSH deity_favored_weapon greataxes
+LPUSH deity_favored_weapon great clubs
+LPUSH deity_favored_weapon great crossbows
+LPUSH deity_favored_weapon greatswords
+LPUSH deity_favored_weapon guisarmes
+LPUSH deity_favored_weapon halberds
+LPUSH deity_favored_weapon hand axes
+LPUSH deity_favored_weapon hand crossbows
+LPUSH deity_favored_weapon harpoons
+LPUSH deity_favored_weapon heavy crossbows
+LPUSH deity_favored_weapon heavy flail
+LPUSH deity_favored_weapon heavy mace
+LPUSH deity_favored_weapon javelins
+LPUSH deity_favored_weapon light crossbows
+LPUSH deity_favored_weapon light flail
+LPUSH deity_favored_weapon light mace
+LPUSH deity_favored_weapon longbows
+LPUSH deity_favored_weapon long spears
+LPUSH deity_favored_weapon longswords
+LPUSH deity_favored_weapon martial arts
+LPUSH deity_favored_weapon morningstars
+LPUSH deity_favored_weapon polearms
+LPUSH deity_favored_weapon ranseurs
+LPUSH deity_favored_weapon rapiers
+LPUSH deity_favored_weapon repeating crossbows
+LPUSH deity_favored_weapon scimitars
+LPUSH deity_favored_weapon shortbows
+LPUSH deity_favored_weapon short spears
+LPUSH deity_favored_weapon shortswords
+LPUSH deity_favored_weapon simple clubs
+LPUSH deity_favored_weapon slings
+LPUSH deity_favored_weapon spears
+LPUSH deity_favored_weapon spiked clubs
+LPUSH deity_favored_weapon stump knives
+LPUSH deity_favored_weapon swords
+LPUSH deity_favored_weapon throwing axes
+LPUSH deity_favored_weapon throwing daggers
+LPUSH deity_favored_weapon throwing hammers
+LPUSH deity_favored_weapon thrown weapons
+LPUSH deity_favored_weapon tonfas
+LPUSH deity_favored_weapon tridents
+LPUSH deity_favored_weapon unarmed combat
+LPUSH deity_favored_weapon unique axes
+        
     
-    <culttype>
-        <option>cult
-        <option>sect
-        <option>clan
-        <option>faction
-        <option>following
-        <option>chapter
-        <option>order
-        <option>society
-    
+SET   deity_holysymbol_type_chance 10
+LPUSH deity_holysymbol_type single
+LPUSH deity_holysymbol_type double
+LPUSH deity_holysymbol_type triple
+LPUSH deity_holysymbol_type stylized
+LPUSH deity_holysymbol_type broken
+LPUSH deity_holysymbol_type shining
 
-    <feature>
-        <clergytype> <!-- _______ of bob often follow a Vow of ______ (a vow to  __________). -->
-            <option>priests
-            <option>clergy
-            <option>clerics
-            <option>friars
-            <option>preachers
-            <option>rectors
-            <option>ministers
-            <option>monks
-            <option>chaplains
-            <option>pastors
-            <option>rabbis
-            <option>abbots
-            <option>evangelists
-            <option>shepherds
-        
-        <vow><!-- clerics of bob often follow a Vow of _______ (a vow to  ____) -->
-            <option type="Celibacy">refrain from marriage and sex
-            <option type="Chastity">refrain from marriage and sex
-            <option type="Abstinence">abstain from alcoholic beverages, drugs, and intoxication
-            <option type="Nonviolence">avoid violence against other sentient creatures
-            <option type="Obedience">live according to the dictates of a superior in the religious order or similar organization
-            <option type="Submission">submit to those who ask of it
-            <option type="Peace">abstain from harming any living creature
-            <option type="Poverty">forswear material possessions
-            <option type="Purity">avoid contact with dead flesh
-            <option type="Propriety"> seek glory, honor, and victory in tribute
-            <option type="Itinerancy">constantly move from place to place, never settling
-            <option type="Charity">refrain from accepting compensation for any services rendered
-            <option type="Humility">abstain from extholing your own virtues
-            <option type="Surety">defend a group or groups with your very life
-            <option type="Silence">not speak under any circumstances
-            <option type="Reconstruction">reunite factions after a long and bitter feud
-            <option type="Independence">never affiliate with or take orders from any organization, including the church
-            <option type="Stocism">speak as few words as possible, often a given word to represent their faith
-        
-        <worship> <!--Orsis prefers ____ from his followers -->
-            <option>sacrifices
-            <option>offerings
-            <option>tithings
-            <option>prayers
-            <option>supplication
-        
-        <primarycolor>
-            <option>black
-            <option>blue
-            <option>brown
-            <option>dark blue
-            <option>dark brown
-            <option>dark green
-            <option>dark grey
-            <option>dark red
-            <option>dark yellow
-            <option>gold
-            <option>green
-            <option>grey
-            <option>light blue
-            <option>light brown
-            <option>light green
-            <option>light grey
-            <option>light orange
-            <option>light red
-            <option>light yellow
-            <option>orange
-            <option>purple
-            <option>red
-            <option>very dark blue
-            <option>very dark green
-            <option>very dark grey
-            <option>very dark red
-            <option>very light blue
-            <option>very light green
-            <option>very light red
-            <option>very light yellow
-            <option>white
-            <option>yellow
-        
-        <secondarycolor>
-            <option>black
-            <option>blue
-            <option>brown
-            <option>dark blue
-            <option>dark brown
-            <option>dark green
-            <option>dark grey
-            <option>dark red
-            <option>dark yellow
-            <option>gold
-            <option>green
-            <option>grey
-            <option>light blue
-            <option>light brown
-            <option>light green
-            <option>light grey
-            <option>light orange
-            <option>light red
-            <option>light yellow
-            <option>orange
-            <option>purple
-            <option>red
-            <option>very dark blue
-            <option>very dark green
-            <option>very dark grey
-            <option>very dark red
-            <option>very light blue
-            <option>very light green
-            <option>very light red
-            <option>very light yellow
-            <option>white
-            <option>yellow
-        
-        <weapon> <!-- in battle, Gokl prefers -->
-            <option>axes
-            <option>bastard swords
-            <option>battle axes
-            <option>picks
-            <option>bladed gauntlets
-            <option>bows
-            <option>butterfly swords
-            <option>claw bracers
-            <option>composite bows
-            <option>crossbows
-            <option>curved swords
-            <option>daggers
-            <option>falchionn
-            <option>flails, maces and clubs
-            <option>glaives
-            <option>greataxes
-            <option>great clubs
-            <option>great crossbows
-            <option>greatswords
-            <option>guisarmes
-            <option>halberds
-            <option>hand axes
-            <option>hand crossbows
-            <option>harpoons
-            <option>heavy crossbows
-            <option>heavy flail
-            <option>heavy mace
-            <option>javelins
-            <option>light crossbows
-            <option>light flail
-            <option>light mace
-            <option>longbows
-            <option>long spears
-            <option>longswords
-            <option>martial arts
-            <option>morningstars
-            <option>polearms
-            <option>ranseurs
-            <option>rapiers
-            <option>repeating crossbows
-            <option>scimitars
-            <option>shortbows
-            <option>short spears
-            <option>shortswords
-            <option>simple clubs
-            <option>slings
-            <option>spears
-            <option>spiked clubs
-            <option>stump knives
-            <option>swords
-            <option>throwing axes
-            <option>throwing daggers
-            <option>throwing hammers
-            <option>thrown weapons
-            <option>tonfas
-            <option>tridents
-            <option>unarmed combat
-            <option>unique axes
-        
-    
-    <holysymbol title_chance="10">
-        <title>single
-        <title>double
-        <title>triple
-        <title>stylized
-        <title>broken
-        <title>shining
-
-        <root>ankh
-        <root>bone
-        <root>book
-        <root>candle
-        <root>coin
-        <root>crescent
-        <root>cross
-        <root>dragon
-        <root>duck
-        <root>ear
-        <root>eye
-        <root>feather
-        <root>fist
-        <root>flame
-        <root>flask
-        <root>flower
-        <root>gate
-        <root>gauntlet
-        <root>hand
-        <root>heart
-        <root>helmet
-        <root>insect
-        <root>key
-        <root>mask
-        <root>moon
-        <root>pearl
-        <root>potato
-        <root>scroll
-        <root>shield
-        <root>snowflake
-        <root>spiral
-        <root>star
-        <root>statue
-        <root>sun
-        <root>totem
-        <root>tree
-        <root>weapon
-        <root>bell
-        <root>circle
-        <root>square
-        <root>triangle
-        <root>pentagon
-        <root>hexagon
-        <root>pyramid
+LPUSH deity_holysymbol ankh
+LPUSH deity_holysymbol bone
+LPUSH deity_holysymbol book
+LPUSH deity_holysymbol candle
+LPUSH deity_holysymbol coin
+LPUSH deity_holysymbol crescent
+LPUSH deity_holysymbol cross
+LPUSH deity_holysymbol dragon
+LPUSH deity_holysymbol duck
+LPUSH deity_holysymbol ear
+LPUSH deity_holysymbol eye
+LPUSH deity_holysymbol feather
+LPUSH deity_holysymbol fist
+LPUSH deity_holysymbol flame
+LPUSH deity_holysymbol flask
+LPUSH deity_holysymbol flower
+LPUSH deity_holysymbol gate
+LPUSH deity_holysymbol gauntlet
+LPUSH deity_holysymbol hand
+LPUSH deity_holysymbol heart
+LPUSH deity_holysymbol helmet
+LPUSH deity_holysymbol insect
+LPUSH deity_holysymbol key
+LPUSH deity_holysymbol mask
+LPUSH deity_holysymbol moon
+LPUSH deity_holysymbol pearl
+LPUSH deity_holysymbol potato
+LPUSH deity_holysymbol scroll
+LPUSH deity_holysymbol shield
+LPUSH deity_holysymbol snowflake
+LPUSH deity_holysymbol spiral
+LPUSH deity_holysymbol star
+LPUSH deity_holysymbol statue
+LPUSH deity_holysymbol sun
+LPUSH deity_holysymbol totem
+LPUSH deity_holysymbol tree
+LPUSH deity_holysymbol weapon
+LPUSH deity_holysymbol bell
+LPUSH deity_holysymbol circle
+LPUSH deity_holysymbol square
+LPUSH deity_holysymbol triangle
+LPUSH deity_holysymbol pentagon
+LPUSH deity_holysymbol hexagon
+LPUSH deity_holysymbol pyramid
 
     
-    <portfolio>
-        <option value="8">war
-        <option value="8">death
-        <option value="8">magic
-        <option value="8">lore
-        <option value="8">mercy
-        <option value="1">stray cats
-        <option value="4">abundance
-        <option value="4">accidents
-        <option value="4">accountability
-        <option value="1">adventure
-        <option value="1">agony
-        <option value="1">agriculture
-        <option value="8">air
-        <option value="1">alcohol
-        <option value="1">ambition
-        <option value="1">ambush
-        <option value="1">amphibians
-        <option value="1">anger
-        <option value="8">animals
-        <option value="1">appraisal
-        <option value="4">arcane knowledge
-        <option value="1">archery
-        <option value="1">architecture
-        <option value="1">arctic beasts
-        <option value="4">armies
-        <option value="2">armor
-        <option value="8">art
-        <option value="1">artifice
-        <option value="2">artisans
-        <option value="1">assassination
-        <option value="4">astrology
-        <option value="4">astronomy
-        <option value="2">athletes
-        <option value="4">atmosphere
-        <option value="8">authority
-        <option value="1">autumn
-        <option value="1">avariels
-        <option value="1">bad fortune
-        <option value="1">bad luck
-        <option value="1">bad weather
-        <option value="8">balance
-        <option value="4">barbarians
-        <option value="4">bards
-        <option value="1">barrenness
-        <option value="1">bats
-        <option value="8">battle
-        <option value="4">beasts
-        <option value="8">beauty
-        <option value="1">bees
-        <option value="4">beginnings
-        <option value="2">benevolence
-        <option value="4">berserking
-        <option value="8">betrayal
-        <option value="1">bigotry
-        <option value="1">birds
-        <option value="4">birth
-        <option value="1">black magic
-        <option value="4">blacksmithing
-        <option value="1">blind beggars
-        <option value="1">blind destruction
-        <option value="2">blizzards
-        <option value="6">blood
-        <option value="1">bloodlust
-        <option value="4">books
-        <option value="2">bounty
-        <option value="4">bravery
-        <option value="1">brawling
-        <option value="1">brewing
-        <option value="1">brutality
-        <option value="2">bugbears
-        <option value="4">building
-        <option value="4">bureaucracy
-        <option value="1">burials
-        <option value="1">buried wealth
-        <option value="4">business
-        <option value="1">calligraphy
-        <option value="1">camels
-        <option value="1">campfires
-        <option value="2">canines
-        <option value="1">cannibalism
-        <option value="1">caravans
-        <option value="1">carefree celebration
-        <option value="1">carousing
-        <option value="4">cartography
-        <option value="1">cats
-        <option value="1">cattle
-        <option value="4">caverns
-        <option value="2">caves
-        <option value="6">celebrations
-        <option value="3">cemeteries
-        <option value="8">chance
-        <option value="4">change
-        <option value="8">chaos
-        <option value="4">charisma
-        <option value="2">charity
-        <option value="2">charm
-        <option value="2">children
-        <option value="1">civilization
-        <option value="2">clarity
-        <option value="2">climbing
-        <option value="3">clouds
-        <option value="4">cold
-        <option value="6">combat
-        <option value="6">comfort
-        <option value="8">commerce
-        <option value="4">common sense
-        <option value="6">communication
-        <option value="4">community
-        <option value="8">compassion
-        <option value="4">competition
-        <option value="2">concealment
-        <option value="1">conception
-        <option value="8">conflict
-        <option value="4">confusion
-        <option value="4">conquest
-        <option value="2">construction
-        <option value="1">consumption
-        <option value="1">contentment
-        <option value="1">continuity
-        <option value="2">contracts
-        <option value="4">control
-        <option value="4">cooperation
-        <option value="1">corn
-        <option value="8">corruption
-        <option value="4">courage
-        <option value="2">courtship
-        <option value="2">covert activity
-        <option value="2">cowardice
-        <option value="4">crafts
-        <option value="1">creativity
-        <option value="2">creatures of the deep
-        <option value="1">crocodiles
-        <option value="2">crops
-        <option value="4">cruelty
-        <option value="1">crusades
-        <option value="1">cultivated foods
-        <option value="4">cultures
-        <option value="4">cunning
-        <option value="3">curative medicine
-        <option value="4">curiosity
-        <option value="3">currents
-        <option value="3">dance
-        <option value="3">dancing
-        <option value="1">dancing girls
-        <option value="4">daring
-        <option value="4">darkness
-        <option value="4">dawn
-        <option value="4">day
-        <option value="1">daylight
-        <option value="8">death
-        <option value="2">debauch
-        <option value="4">decay
-        <option value="4">deceit
-        <option value="4">deception
-        <option value="2">decision
-        <option value="4">dedication
-        <option value="6">defense
-        <option value="1">deformity
-        <option value="4">delight
-        <option value="1">desert-dwelling vermin
-        <option value="2">desert mountains
-        <option value="1">desert raiders
-        <option value="2">deserts
-        <option value="1">desert storms
-        <option value="1">desert whirlwinds
-        <option value="6">despair
-        <option value="8">destiny
-        <option value="8">destruction
-        <option value="2">determination
-        <option value="3">devouring
-        <option value="4">dexterity
-        <option value="4">dignity
-        <option value="1">dinosaurs
-        <option value="6">diplomacy
-        <option value="4">disasters
-        <option value="8">discipline
-        <option value="4">discord
-        <option value="4">discovery
-        <option value="8">disease
-        <option value="8">disguise
-        <option value="2">distance
-        <option value="4">divination
-        <option value="1">dogs
-        <option value="2">domination
-        <option value="1">doom
-        <option value="3">doors
-        <option value="6">dragonkind
-        <option value="4">dreams
-        <option value="2">drought
-        <option value="6">drow
-        <option value="4">druids
-        <option value="1">dryads
-        <option value="2">duels
-        <option value="4">dungeons
-        <option value="4">dusk
-        <option value="8">duty
-        <option value="4">dwarves
-        <option value="2">dying
-        <option value="1">eagles
-        <option value="4">earth
-        <option value="2">earthquakes
-        <option value="1">ease
-        <option value="2">east wind
-        <option value="2">eating
-        <option value="1">eclipses
-        <option value="4">elements
-        <option value="2">eloquence
-        <option value="4">elves
-        <option value="1">emotional hatreds
-        <option value="6">emotions
-        <option value="2">enchantments
-        <option value="1">endings
-        <option value="4">endurance
-        <option value="2">energy
-        <option value="2">enfeeblement
-        <option value="4">engineering
-        <option value="4">enjoyment
-        <option value="1">enlightened justice
-        <option value="4">enlightenment
-        <option value="4">entropy
-        <option value="8">envy
-        <option value="2">epidemics
-        <option value="4">eroticism
-        <option value="6">espionage
-        <option value="2">esthetics
-        <option value="1">eternal darkness
-        <option value="1">eternal light
-        <option value="1">eternal youth
-        <option value="4">ethics
-        <option value="2">evening
-        <option value="16">evil
-        <option value="1">evil aquatic creatures
-        <option value="1">evil birds
-        <option value="4">evil cloud giants
-        <option value="4">evil dragons
-        <option value="2">evil dreams
-        <option value="2">evil fate
-        <option value="4">evil fey
-        <option value="6">evil knowledge
-        <option value="4">evil liches
-        <option value="4">evil lycanthropes
-        <option value="6">evil magic
-        <option value="4">evil plans
-        <option value="2">evil reptiles
-        <option value="4">evil secrets
-        <option value="4">excellence
-        <option value="4">excess
-        <option value="2">exhaustion
-        <option value="4">exiles
-        <option value="2">expansion
-        <option value="1">experimentation
-        <option value="4">exploration
-        <option value="4">faerie folk
-        <option value="2">fair practices
-        <option value="2">faith
-        <option value="4">faithfulness
-        <option value="1">falcons
-        <option value="4">fallen heroes
-        <option value="2">false promises
-        <option value="4">family
-        <option value="6">famine
-        <option value="2">far journeys
-        <option value="6">farming
-        <option value="1">fatalism
-        <option value="6">fates
-        <option value="2">fauna
-        <option value="1">favorable winds
-        <option value="6">fear
-        <option value="4">feasting
-        <option value="1">felines
-        <option value="3">femininity
-        <option value="8">fertility
-        <option value="2">festivals
-        <option value="2">feuds
-        <option value="4">fidelity
-        <option value="4">fighters
-        <option value="4">fine arts
-        <option value="1">fine-smithing
-        <option value="6">fire
-        <option value="2">fire giants
-        <option value="4">fire-using dragons
-        <option value="1">fir trees
-        <option value="2">fish
-        <option value="1">fishermen
-        <option value="4">fitness
-        <option value="2">flattery
-        <option value="6">flora
-        <option value="2">flowers
-        <option value="3">flowing water
-        <option value="4">flying
-        <option value="1">fogs
-        <option value="1">folk music
-        <option value="6">food
-        <option value="4">fools
-        <option value="4">forbidden knowlege
-        <option value="2">foreknowledge
-        <option value="4">foresight
-        <option value="1">forest creatures
-        <option value="1">forest dwellers
-        <option value="1">forest folk
-        <option value="1">forest gnomes
-        <option value="2">forests
-        <option value="2">forges
-        <option value="2">forgetfulness
-        <option value="2">forgiveness
-        <option value="4">formality
-        <option value="3">fortification
-        <option value="8">fortune
-        <option value="1">fortune telling
-        <option value="2">foul weather
-        <option value="8">freedom
-        <option value="2">frenzy
-        <option value="2">fresh water
-        <option value="2">friendship
-        <option value="1">frog folk
-        <option value="1">frost giants
-        <option value="1">frost sprites
-        <option value="2">frozen seas
-        <option value="2">fruitfulness
-        <option value="4">full moons
-        <option value="2">funerals
-        <option value="4">future
-        <option value="1">gambling
-        <option value="2">games
-        <option value="4">gardening
-        <option value="2">gates
-        <option value="1">gemcutting
-        <option value="2">gems
-        <option value="1">gemstones
-        <option value="1">ghosts
-        <option value="1">ghouls
-        <option value="1">giant eagles
-        <option value="4">giants
-        <option value="1">glaciers
-        <option value="6">glory
-        <option value="2">glyphs
-        <option value="4">gnolls
-        <option value="4">gnomes
-        <option value="4">goblins
-        <option value="2">gold
-        <option value="2">goliaths
-        <option value="8">good
-        <option value="4">good-aligned magical beasts
-        <option value="4">good beasts
-        <option value="4">good dragons
-        <option value="4">good fortune
-        <option value="4">good giants
-        <option value="4">good luck
-        <option value="4">good magic
-        <option value="2">goodness
-        <option value="4">grain
-        <option value="4">gray dwarves
-        <option value="8">greed
-        <option value="2">grief
-        <option value="1">grimlocks
-        <option value="8">growing things
-        <option value="2">growth
-        <option value="2">guadianship
-        <option value="8">guardians
-        <option value="2">guarding
-        <option value="2">guarding the underworld
-        <option value="3">guidance
-        <option value="3">guides
-        <option value="4">guile
-        <option value="2">guilt
-        <option value="1">hags
-        <option value="4">halflings
-        <option value="1">handicrafts
-        <option value="2">happiness
-        <option value="2">harm
-        <option value="4">harmony
-        <option value="8">harvest
-        <option value="4">hate
-        <option value="4">hatred
-        <option value="6">healing
-        <option value="2">health
-        <option value="2">hearing
-        <option value="4">hearth
-        <option value="2">heat
-        <option value="1">hedonism
-        <option value="3">heroism
-        <option value="4">hidden things
-        <option value="2">hidden knowledge
-        <option value="4">hidden treasures
-        <option value="2">hiding places
-        <option value="1">hill giants
-        <option value="1">hills
-        <option value="1">historians
-        <option value="2">history
-        <option value="4">hobgoblins
-        <option value="2">home
-        <option value="2">honesty
-        <option value="4">honor
-        <option value="1">honorable combat
-        <option value="1">honor in battle
-        <option value="6">hope
-        <option value="1">horizons
-        <option value="2">horses
-        <option value="2">hospitality
-        <option value="1">humiliation
-        <option value="4">humility
-        <option value="4">humor
-        <option value="2">hunger
-        <option value="6">hunters
-        <option value="6">hunting
-        <option value="1">hurricanes
-        <option value="2">hyenas
-        <option value="2">ice
-        <option value="4">ideas
-        <option value="1">ill council
-        <option value="1">ill luck
-        <option value="4">illness
-        <option value="1">illumians
-        <option value="4">illusions
-        <option value="2">images
-        <option value="3">imaginations
-        <option value="1">immediacy
-        <option value="2">immortality through undeath
-        <option value="2">improvement
-        <option value="1">impudence
-        <option value="4">independence
-        <option value="4">individuality
-        <option value="4">industriousness
-        <option value="2">industry
-        <option value="2">inevitability
-        <option value="4">infinity
-        <option value="2">inflexibility
-        <option value="4">influence
-        <option value="4">injustice
-        <option value="1">inland waters
-        <option value="2">inquiry
-        <option value="6">insanity
-        <option value="2">insects
-        <option value="1">insomnia
-        <option value="1">inspiration
-        <option value="6">intellect
-        <option value="6">intelligence
-        <option value="2">intoxication
-        <option value="4">intrigue
-        <option value="2">invention
-        <option value="1">inventiveness
-        <option value="2">invisiblity
-        <option value="4">iron
-        <option value="4">irrigation
-        <option value="1">isolation
-        <option value="3">jealousy
-        <option value="1">jellies
-        <option value="1">jewelrymaking
-        <option value="2">jokes
-        <option value="4">joy
-        <option value="2">joy of battle
-        <option value="8">judgement
-        <option value="2">jungles
-        <option value="1">jungle survival
-        <option value="8">justice
-        <option value="1">just rewards
-        <option value="2">keen senses
-        <option value="3">keys
-        <option value="4">killing
-        <option value="2">kings
-        <option value="8">knowledge
-        <option value="4">kobolds
-        <option value="1">krakens
-        <option value="2">kuo-toas
-        <option value="4">labyrinths
-        <option value="4">lakes
-        <option value="2">languages
-        <option value="4">law
-        <option value="1">lawful theft
-        <option value="6">laws
-        <option value="1">lawyers
-        <option value="3">leadership
-        <option value="2">learning
-        <option value="2">liars
-        <option value="3">liberation
-        <option value="6">liberty
-        <option value="1">lichdom
-        <option value="4">lies
-        <option value="8">life
-        <option value="4">life/fertility
-        <option value="4">light
-        <option value="2">lightning
-        <option value="1">lions
-        <option value="4">literacy
-        <option value="1">literary art
-        <option value="2">literature
-        <option value="4">livestock
-        <option value="2">living things
-        <option value="1">lizardfolk
-        <option value="3">locks
-        <option value="1">loneliness
-        <option value="2">longevity
-        <option value="2">long life
-        <option value="1">long-range traders
-        <option value="1">long rivers
-        <option value="6">lore
-        <option value="2">loss
-        <option value="1">lost causes
-        <option value="6">love
-        <option value="4">loyalty
-        <option value="8">luck
-        <option value="2">luck in battle
-        <option value="4">lust
-        <option value="1">lycanthropes
-        <option value="2">madness
-        <option value="3">mages
-        <option value="8">magic
-        <option value="2">magical knowledge
-        <option value="1">magic users
-        <option value="1">magisrates
-        <option value="2">malice
-        <option value="2">malign knowledge
-        <option value="2">marauders
-        <option value="1">marauding beasts
-        <option value="6">marriage
-        <option value="2">marshes
-        <option value="1">martial arts
-        <option value="1">martial defense
-        <option value="1">martial skill
-        <option value="1">martial training
-        <option value="2">martyrdom
-        <option value="2">massacres
-        <option value="4">mass destruction
-        <option value="1">mastery of undead
-        <option value="2">meadows
-        <option value="2">medicine
-        <option value="2">meditation
-        <option value="4">memory
-        <option value="1">mental dominion
-        <option value="1">mental health
-        <option value="1">mental mastery
-        <option value="2">mental powers
-        <option value="1">mental prowess
-        <option value="6">merchants
-        <option value="8">mercy
-        <option value="1">merfolk
-        <option value="4">messages
-        <option value="2">messengers
-        <option value="2">metalcraft
-        <option value="4">metals
-        <option value="2">metalsmiths
-        <option value="1">metalworking
-        <option value="6">might
-        <option value="2">military excellence
-        <option value="3">mind flayers
-        <option value="2">minerals
-        <option value="2">miners
-        <option value="2">mines
-        <option value="2">mining
-        <option value="4">minotaurs
-        <option value="1">mirrors
-        <option value="1">mirth
-        <option value="2">mischief
-        <option value="3">misfortune
-        <option value="1">moisture
-        <option value="4">money
-        <option value="2">monks
-        <option value="1">moonlight
-        <option value="6">moons
-        <option value="2">morale
-        <option value="4">morning
-        <option value="4">mortality
-        <option value="1">mortal life
-        <option value="4">motherhood
-        <option value="4">mothers
-        <option value="4">mountain dwarves
-        <option value="4">mountain giants
-        <option value="4">mountains
-        <option value="2">mourning
-        <option value="3">movement
-        <option value="6">murder
-        <option value="1">murderers
-        <option value="2">music
-        <option value="2">musicians
-        <option value="6">mysteries
-        <option value="1">mystic insight
-        <option value="1">mysticism
-        <option value="1">napkins
-        <option value="1">narrow escapes
-        <option value="1">natural alchemy
-        <option value="1">natural balances
-        <option value="1">natural beauty
-        <option value="1">natural disasters
-        <option value="1">natural growth
-        <option value="8">nature
-        <option value="3">naval combat
-        <option value="8">navigation
-        <option value="1">navigators
-        <option value="1">necromancers
-        <option value="8">necromancy
-        <option value="1">needlework
-        <option value="2">negative energy
-        <option value="4">negotiation
-        <option value="1">netherworld
-        <option value="4">neutral dragons
-        <option value="8">neutrality
-        <option value="4">night
-        <option value="1">night birds
-        <option value="4">nightmares
-        <option value="1">night travelers
-        <option value="1">nobility
-        <option value="1">noble beasts
-        <option value="2">noise
-        <option value="1">nonintervention
-        <option value="1">northern stars
-        <option value="1">northern wind
-        <option value="1">oases
-        <option value="6">oaths
-        <option value="4">obedience
-        <option value="2">obligations
-        <option value="2">obscurement
-        <option value="3">obsession
-        <option value="1">occult lore
-        <option value="1">ocean creatures
-        <option value="4">oceans
-        <option value="2">ocean storms
-        <option value="4">ogres
-        <option value="2">old age
-        <option value="4">omens
-        <option value="1">oozes
-        <option value="4">open paths
-        <option value="1">opportunism
-        <option value="2">oppression
-        <option value="4">orcs
-        <option value="8">order
-        <option value="2">ores
-        <option value="2">outcasts
-        <option value="1">outer space
-        <option value="1">outlaws
-        <option value="1">overwhelming numbers
-        <option value="1">pacifism
-        <option value="4">pain
-        <option value="3">paladins
-        <option value="2">panic
-        <option value="2">paralysis
-        <option value="1">parasites
-        <option value="2">parenthood
-        <option value="4">passion
-        <option value="2">patience
-        <option value="6">peace
-        <option value="1">peaks
-        <option value="2">perfection
-        <option value="2">perseverance
-        <option value="4">pestilence
-        <option value="4">philosophy
-        <option value="1">physical fitness
-        <option value="1">physical love
-        <option value="1">physical prowess
-        <option value="1">physical strength
-        <option value="2">pillaging
-        <option value="1">plagues
-        <option value="3">planning
-        <option value="2">planting
-        <option value="6">plant life
-        <option value="1">play
-        <option value="6">pleasure
-        <option value="6">plenty
-        <option value="2">plunder
-        <option value="1">poetic justice
-        <option value="1">poetry
-        <option value="1">poets
-        <option value="4">poison
-        <option value="1">poisoners
-        <option value="4">poisoning
-        <option value="1">polar environments
-        <option value="2">police
-        <option value="2">pools
-        <option value="5">portals
-        <option value="4">positive energy
-        <option value="2">pottery
-        <option value="4">power
-        <option value="1">powerbrokers
-        <option value="1">powermongers
-        <option value="6">pranks
-        <option value="3">predators
-        <option value="2">predestination
-        <option value="1">premeditated killing
-        <option value="2">preservation
-        <option value="2">prestige
-        <option value="1">pretty things
-        <option value="5">pride
-        <option value="4">procreation
-        <option value="3">propagation
-        <option value="4">prophecy
-        <option value="1">propriety
-        <option value="1">prose
-        <option value="4">prosperity
-        <option value="6">protection
-        <option value="4">protectors
-        <option value="3">psionics
-        <option value="1">psychotic behavior
-        <option value="2">public combat
-        <option value="6">punishment
-        <option value="2">purification
-        <option value="6">purity
-        <option value="2">puzzles
-        <option value="2">quarrels
-        <option value="2">questers
-        <option value="1">quiet places
-        <option value="1">racing
-        <option value="1">radiance
-        <option value="4">rage
-        <option value="6">rain
-        <option value="1">rainbows
-        <option value="1">random mischief
-        <option value="2">randomness
-        <option value="3">rangers
-        <option value="1">rats
-        <option value="1">ravaging beasts
-        <option value="6">reason
-        <option value="6">reasoning
-        <option value="2">rebellion
-        <option value="4">rebels
-        <option value="4">rebirth
-        <option value="2">reciprocity
-        <option value="3">records
-        <option value="2">relationships
-        <option value="4">renewal
-        <option value="2">reptiles
-        <option value="1">restful sleep
-        <option value="2">restraint
-        <option value="4">retribution
-        <option value="1">revelry
-        <option value="6">revenge
-        <option value="2">reverence
-        <option value="3">rice
-        <option value="1">righteous indignation
-        <option value="6">righteousness
-        <option value="2">risks
-        <option value="1">river hazards
-        <option value="5">rivers
-        <option value="6">roads
-        <option value="1">robbers
-        <option value="3">rock gnomes
-        <option value="4">rogues
-        <option value="2">romance
-        <option value="1">romantic love
-        <option value="1">ropers
-        <option value="2">rot
-        <option value="2">rotting death
-        <option value="1">royalty
-        <option value="2">rulership
-        <option value="4">rumor
-        <option value="1">rune magic
-        <option value="1">running
-        <option value="2">running water
-        <option value="3">sacrifice
-        <option value="5">sadism
-        <option value="4">safety
-        <option value="2">sages
-        <option value="4">sailing
-        <option value="1">sailors
-        <option value="1">salamanders
-        <option value="3">salt
-        <option value="1">savage lust
-        <option value="2">savants
-        <option value="3">scapegoats
-        <option value="3">scheming
-        <option value="2">scholarship
-        <option value="6">science
-        <option value="2">scribes
-        <option value="2">sculptures
-        <option value="6">sea
-        <option value="1">sea creatures
-        <option value="1">sea elves
-        <option value="1">sea life
-        <option value="1">seals
-        <option value="4">seas
-        <option value="2">sea voyages
-        <option value="1">sea weather
-        <option value="1">sea winds
-        <option value="4">secrecy
-        <option value="1">secret pursuits
-        <option value="8">secrets
-        <option value="4">security
-        <option value="4">seduction
-        <option value="2">seekers
-        <option value="1">self-deception
-        <option value="2">self-defense
-        <option value="1">self-determination
-        <option value="3">selfishness
-        <option value="2">self-perfection
-        <option value="2">self-sacrifice
-        <option value="1">senses
-        <option value="1">sensual fulfillment
-        <option value="2">sentries
-        <option value="4">serenity
-        <option value="1">serpents
-        <option value="1">servants
-        <option value="1">service
-        <option value="1">servitude
-        <option value="1">sewers
-        <option value="1">shadow elves
-        <option value="6">shadows
-        <option value="2">shepherds
-        <option value="1">shield dwarves
-        <option value="3">ships
-        <option value="2">sickness
-        <option value="2">sight
-        <option value="1">silence
-        <option value="1">silver dragonkind
-        <option value="2">singing
-        <option value="1">sinister ambition
-        <option value="1">skiing
-        <option value="4">skill
-        <option value="1">skill-at-arms
-        <option value="1">skilled artisans
-        <option value="5">sky
-        <option value="2">slaughter
-        <option value="3">slavery
-        <option value="8">sleep
-        <option value="1">slimes
-        <option value="2">sloth
-        <option value="2">slumber
-        <option value="1">sly cleverness
-        <option value="1">small birds
-        <option value="1">smallpox
-        <option value="1">smithing
-        <option value="4">smiths
-        <option value="1">smithwork
-        <option value="2">smoke
-        <option value="1">snakes
-        <option value="4">snow
-        <option value="1">snow elves
-        <option value="1">social behavior
-        <option value="1">social order
-        <option value="2">societies
-        <option value="4">soldiers
-        <option value="1">solidity
-        <option value="2">song
-        <option value="1">songwriting
-        <option value="1">sorcerers
-        <option value="6">sorcery
-        <option value="4">sorrow
-        <option value="2">south wind
-        <option value="1">space
-        <option value="1">spawning
-        <option value="1">specific locality
-        <option value="2">speech
-        <option value="2">speed
-        <option value="4">spellcasters
-        <option value="6">spells
-        <option value="4">spiders
-        <option value="1">spinning
-        <option value="2">spite
-        <option value="1">sports
-        <option value="1">spriggans
-        <option value="6">spring
-        <option value="1">springs
-        <option value="1">stalking
-        <option value="3">starlight
-        <option value="4">stars
-        <option value="2">starvation
-        <option value="1">steadfastness
-        <option value="6">stealth
-        <option value="2">stench
-        <option value="2">sterility
-        <option value="1">stillness
-        <option value="5">stone
-        <option value="1">stone giants
-        <option value="2">stonework
-        <option value="1">storm giants
-        <option value="4">storms
-        <option value="2">storytelling
-        <option value="6">strategy
-        <option value="2">streams
-        <option value="6">strength
-        <option value="8">strife
-        <option value="2">strong beasts
-        <option value="4">structure
-        <option value="4">study
-        <option value="1">study of magic
-        <option value="8">stupidity
-        <option value="2">subtlety
-        <option value="2">subversion
-        <option value="2">success
-        <option value="2">suffering
-        <option value="6">summer
-        <option value="1">summer storms
-        <option value="8">sun
-        <option value="2">sunlight
-        <option value="2">sunshine
-        <option value="2">surprise
-        <option value="1">surrounding lands
-        <option value="4">survival
-        <option value="4">suspicion
-        <option value="2">swamps
-        <option value="3">swords
-        <option value="1">sword skills
-        <option value="1">swordsmanship
-        <option value="1">swordsmiths
-        <option value="1">swordwork
-        <option value="2">tactics
-        <option value="1">talking beasts
-        <option value="4">teaching
-        <option value="2">technology
-        <option value="4">tedium
-        <option value="2">territory
-        <option value="1">testing
-        <option value="1">theater
-        <option value="1">eastern light
-        <option value="1">oppressed
-        <option value="1">southern stars
-        <option value="3">thievery
-        <option value="3">thieves
-        <option value="2">thought
-        <option value="1">thoughtless acts
-        <option value="4">thunder
-        <option value="1">thunderstorms
-        <option value="3">tides
-        <option value="8">time
-        <option value="2">tolerance
-        <option value="1">tombs
-        <option value="5">torment
-        <option value="5">torture
-        <option value="1">tortured souls
-        <option value="1">torturers
-        <option value="2">tracking
-        <option value="8">trade
-        <option value="1">traders
-        <option value="1">tradesmen
-        <option value="2">tradition
-        <option value="1">transcendence
-        <option value="4">transformation
-        <option value="1">transformation of art
-        <option value="2">trapmaking
-        <option value="6">traps
-        <option value="8">travel
-        <option value="1">travelers
-        <option value="2">treachery
-        <option value="1">treachery over honor
-        <option value="1">treasure-finding
-        <option value="2">treasures
-        <option value="4">trees
-        <option value="8">trickery
-        <option value="1">tricks
-        <option value="2">troglodytes
-        <option value="2">trolls
-        <option value="3">trust
-        <option value="6">truth
-        <option value="1">truth-speakers
-        <option value="1">twilight
-        <option value="8">tyranny
-        <option value="1">ugliness
-        <option value="1">ugly people
-        <option value="2">undead
-        <option value="3">undeath
-        <option value="1">undefiled waters
-        <option value="4">underdark
-        <option value="5">underwater
-        <option value="5">underworld
-        <option value="1">unicorns
-        <option value="2">unknown
-        <option value="2">unknown secrets
-        <option value="4">unpredictability
-        <option value="1">unrevealed secrets
-        <option value="6">valor
-        <option value="1">vampires
-        <option value="1">vampirism
-        <option value="2">vandals
-        <option value="5">vanity
-        <option value="1">vegetation
-        <option value="1">vendettas
-        <option value="2">vengeance
-        <option value="1">venomous creatures
-        <option value="2">vermin
-        <option value="1">vice
-        <option value="3">victory
-        <option value="5">vigilance
-        <option value="3">vigor
-        <option value="6">violence
-        <option value="8">virtue
-        <option value="2">visions
-        <option value="2">vitality
-        <option value="2">volcanoes
-        <option value="1">vortices
-        <option value="1">wakefulness
-        <option value="6">wanderers
-        <option value="1">wandering
-        <option value="2">wanton destruction
-        <option value="1">wards
-        <option value="3">warfare
-        <option value="4">warmth
-        <option value="1">warpriests
-        <option value="4">warriors
-        <option value="2">wasting
-        <option value="1">watchfulness
-        <option value="6">water
-        <option value="1">waterfalls
-        <option value="1">water spirits
-        <option value="1">water travel
-        <option value="1">wave motions
-        <option value="2">waves
-        <option value="6">wealth
-        <option value="1">weapon making
-        <option value="6">weapons
-        <option value="1">weaponsmithing
-        <option value="2">weaponsmiths
-        <option value="3">weather
-        <option value="1">weaving
-        <option value="1">wells
-        <option value="4">west wind
-        <option value="2">wetlands
-        <option value="2">wetness
-        <option value="1">whales
-        <option value="1">whirlpools
-        <option value="3">wickedness
-        <option value="2">wild beasts
-        <option value="1">wilderness
-        <option value="1">wildlands
-        <option value="4">willpower
-        <option value="4">winds
-        <option value="2">wine
-        <option value="3">winter
-        <option value="8">wisdom
-        <option value="3">wit
-        <option value="3">witches
-        <option value="3">wizards
-        <option value="5">women
-        <option value="6">woodlands
-        <option value="1">woodworkers
-        <option value="1">woodworking
-        <option value="2">work
-        <option value="1">worms
-        <option value="4">wrath
-        <option value="3">writing
-        <option value="2">youth
-        <option value="2">zeal
+ZADD deityportfolio 1 {"name":"adventure",                   "score":1 }
+ZADD deityportfolio 1 {"name":"agony",                       "score":1 }
+ZADD deityportfolio 1 {"name":"agriculture",                 "score":1 }
+ZADD deityportfolio 1 {"name":"alcohol",                     "score":1 }
+ZADD deityportfolio 1 {"name":"ambition",                    "score":1 }
+ZADD deityportfolio 1 {"name":"ambush",                      "score":1 }
+ZADD deityportfolio 1 {"name":"amphibians",                  "score":1 }
+ZADD deityportfolio 1 {"name":"anger",                       "score":1 }
+ZADD deityportfolio 1 {"name":"appraisal",                   "score":1 }
+ZADD deityportfolio 1 {"name":"archery",                     "score":1 }
+ZADD deityportfolio 1 {"name":"architecture",                "score":1 }
+ZADD deityportfolio 1 {"name":"arctic beasts",               "score":1 }
+ZADD deityportfolio 1 {"name":"artifice",                    "score":1 }
+ZADD deityportfolio 1 {"name":"assassination",               "score":1 }
+ZADD deityportfolio 1 {"name":"autumn",                      "score":1 }
+ZADD deityportfolio 1 {"name":"avariels",                    "score":1 }
+ZADD deityportfolio 1 {"name":"bad fortune",                 "score":1 }
+ZADD deityportfolio 1 {"name":"bad luck",                    "score":1 }
+ZADD deityportfolio 1 {"name":"bad weather",                 "score":1 }
+ZADD deityportfolio 1 {"name":"barrenness",                  "score":1 }
+ZADD deityportfolio 1 {"name":"bats",                        "score":1 }
+ZADD deityportfolio 1 {"name":"bees",                        "score":1 }
+ZADD deityportfolio 1 {"name":"bigotry",                     "score":1 }
+ZADD deityportfolio 1 {"name":"birds",                       "score":1 }
+ZADD deityportfolio 1 {"name":"black magic",                 "score":1 }
+ZADD deityportfolio 1 {"name":"blind beggars",               "score":1 }
+ZADD deityportfolio 1 {"name":"blind destruction",           "score":1 }
+ZADD deityportfolio 1 {"name":"bloodlust",                   "score":1 }
+ZADD deityportfolio 1 {"name":"brawling",                    "score":1 }
+ZADD deityportfolio 1 {"name":"brewing",                     "score":1 }
+ZADD deityportfolio 1 {"name":"brutality",                   "score":1 }
+ZADD deityportfolio 1 {"name":"burials",                     "score":1 }
+ZADD deityportfolio 1 {"name":"buried wealth",               "score":1 }
+ZADD deityportfolio 1 {"name":"calligraphy",                 "score":1 }
+ZADD deityportfolio 1 {"name":"camels",                      "score":1 }
+ZADD deityportfolio 1 {"name":"campfires",                   "score":1 }
+ZADD deityportfolio 1 {"name":"cannibalism",                 "score":1 }
+ZADD deityportfolio 1 {"name":"caravans",                    "score":1 }
+ZADD deityportfolio 1 {"name":"carefree celebration",        "score":1 }
+ZADD deityportfolio 1 {"name":"carousing",                   "score":1 }
+ZADD deityportfolio 1 {"name":"cats",                        "score":1 }
+ZADD deityportfolio 1 {"name":"cattle",                      "score":1 }
+ZADD deityportfolio 1 {"name":"civilization",                "score":1 }
+ZADD deityportfolio 1 {"name":"conception",                  "score":1 }
+ZADD deityportfolio 1 {"name":"consumption",                 "score":1 }
+ZADD deityportfolio 1 {"name":"contentment",                 "score":1 }
+ZADD deityportfolio 1 {"name":"continuity",                  "score":1 }
+ZADD deityportfolio 1 {"name":"corn",                        "score":1 }
+ZADD deityportfolio 1 {"name":"creativity",                  "score":1 }
+ZADD deityportfolio 1 {"name":"crocodiles",                  "score":1 }
+ZADD deityportfolio 1 {"name":"crusades",                    "score":1 }
+ZADD deityportfolio 1 {"name":"cultivated foods",            "score":1 }
+ZADD deityportfolio 1 {"name":"dancing girls",               "score":1 }
+ZADD deityportfolio 1 {"name":"daylight",                    "score":1 }
+ZADD deityportfolio 1 {"name":"deformity",                   "score":1 }
+ZADD deityportfolio 1 {"name":"desert-dwelling vermin",      "score":1 }
+ZADD deityportfolio 1 {"name":"desert raiders",              "score":1 }
+ZADD deityportfolio 1 {"name":"desert storms",               "score":1 }
+ZADD deityportfolio 1 {"name":"desert whirlwinds",           "score":1 }
+ZADD deityportfolio 1 {"name":"dinosaurs",                   "score":1 }
+ZADD deityportfolio 1 {"name":"dogs",                        "score":1 }
+ZADD deityportfolio 1 {"name":"doom",                        "score":1 }
+ZADD deityportfolio 1 {"name":"dryads",                      "score":1 }
+ZADD deityportfolio 1 {"name":"eagles",                      "score":1 }
+ZADD deityportfolio 1 {"name":"ease",                        "score":1 }
+ZADD deityportfolio 1 {"name":"eastern light",               "score":1 }
+ZADD deityportfolio 1 {"name":"eclipses",                    "score":1 }
+ZADD deityportfolio 1 {"name":"emotional hatreds",           "score":1 }
+ZADD deityportfolio 1 {"name":"endings",                     "score":1 }
+ZADD deityportfolio 1 {"name":"enlightened justice",         "score":1 }
+ZADD deityportfolio 1 {"name":"eternal darkness",            "score":1 }
+ZADD deityportfolio 1 {"name":"eternal light",               "score":1 }
+ZADD deityportfolio 1 {"name":"eternal youth",               "score":1 }
+ZADD deityportfolio 1 {"name":"evil aquatic creatures",      "score":1 }
+ZADD deityportfolio 1 {"name":"evil birds",                  "score":1 }
+ZADD deityportfolio 1 {"name":"experimentation",             "score":1 }
+ZADD deityportfolio 1 {"name":"falcons",                     "score":1 }
+ZADD deityportfolio 1 {"name":"fatalism",                    "score":1 }
+ZADD deityportfolio 1 {"name":"favorable winds",             "score":1 }
+ZADD deityportfolio 1 {"name":"felines",                     "score":1 }
+ZADD deityportfolio 1 {"name":"fine-smithing",               "score":1 }
+ZADD deityportfolio 1 {"name":"fir trees",                   "score":1 }
+ZADD deityportfolio 1 {"name":"fishermen",                   "score":1 }
+ZADD deityportfolio 1 {"name":"fogs",                        "score":1 }
+ZADD deityportfolio 1 {"name":"folk music",                  "score":1 }
+ZADD deityportfolio 1 {"name":"forest creatures",            "score":1 }
+ZADD deityportfolio 1 {"name":"forest dwellers",             "score":1 }
+ZADD deityportfolio 1 {"name":"forest folk",                 "score":1 }
+ZADD deityportfolio 1 {"name":"forest gnomes",               "score":1 }
+ZADD deityportfolio 1 {"name":"fortune telling",             "score":1 }
+ZADD deityportfolio 1 {"name":"frog folk",                   "score":1 }
+ZADD deityportfolio 1 {"name":"frost giants",                "score":1 }
+ZADD deityportfolio 1 {"name":"frost sprites",               "score":1 }
+ZADD deityportfolio 1 {"name":"gambling",                    "score":1 }
+ZADD deityportfolio 1 {"name":"gemcutting",                  "score":1 }
+ZADD deityportfolio 1 {"name":"gemstones",                   "score":1 }
+ZADD deityportfolio 1 {"name":"ghosts",                      "score":1 }
+ZADD deityportfolio 1 {"name":"ghouls",                      "score":1 }
+ZADD deityportfolio 1 {"name":"giant eagles",                "score":1 }
+ZADD deityportfolio 1 {"name":"glaciers",                    "score":1 }
+ZADD deityportfolio 1 {"name":"grimlocks",                   "score":1 }
+ZADD deityportfolio 1 {"name":"hags",                        "score":1 }
+ZADD deityportfolio 1 {"name":"handicrafts",                 "score":1 }
+ZADD deityportfolio 1 {"name":"hedonism",                    "score":1 }
+ZADD deityportfolio 1 {"name":"hill giants",                 "score":1 }
+ZADD deityportfolio 1 {"name":"hills",                       "score":1 }
+ZADD deityportfolio 1 {"name":"historians",                  "score":1 }
+ZADD deityportfolio 1 {"name":"honorable combat",            "score":1 }
+ZADD deityportfolio 1 {"name":"honor in battle",             "score":1 }
+ZADD deityportfolio 1 {"name":"horizons",                    "score":1 }
+ZADD deityportfolio 1 {"name":"humiliation",                 "score":1 }
+ZADD deityportfolio 1 {"name":"hurricanes",                  "score":1 }
+ZADD deityportfolio 1 {"name":"ill council",                 "score":1 }
+ZADD deityportfolio 1 {"name":"ill luck",                    "score":1 }
+ZADD deityportfolio 1 {"name":"illumians",                   "score":1 }
+ZADD deityportfolio 1 {"name":"immediacy",                   "score":1 }
+ZADD deityportfolio 1 {"name":"impudence",                   "score":1 }
+ZADD deityportfolio 1 {"name":"inland waters",               "score":1 }
+ZADD deityportfolio 1 {"name":"insomnia",                    "score":1 }
+ZADD deityportfolio 1 {"name":"inspiration",                 "score":1 }
+ZADD deityportfolio 1 {"name":"inventiveness",               "score":1 }
+ZADD deityportfolio 1 {"name":"isolation",                   "score":1 }
+ZADD deityportfolio 1 {"name":"jellies",                     "score":1 }
+ZADD deityportfolio 1 {"name":"jewelrymaking",               "score":1 }
+ZADD deityportfolio 1 {"name":"jungle survival",             "score":1 }
+ZADD deityportfolio 1 {"name":"just rewards",                "score":1 }
+ZADD deityportfolio 1 {"name":"krakens",                     "score":1 }
+ZADD deityportfolio 1 {"name":"lawful theft",                "score":1 }
+ZADD deityportfolio 1 {"name":"lawyers",                     "score":1 }
+ZADD deityportfolio 1 {"name":"lichdom",                     "score":1 }
+ZADD deityportfolio 1 {"name":"lions",                       "score":1 }
+ZADD deityportfolio 1 {"name":"literary art",                "score":1 }
+ZADD deityportfolio 1 {"name":"lizardfolk",                  "score":1 }
+ZADD deityportfolio 1 {"name":"loneliness",                  "score":1 }
+ZADD deityportfolio 1 {"name":"long-range traders",          "score":1 }
+ZADD deityportfolio 1 {"name":"long rivers",                 "score":1 }
+ZADD deityportfolio 1 {"name":"lost causes",                 "score":1 }
+ZADD deityportfolio 1 {"name":"lycanthropes",                "score":1 }
+ZADD deityportfolio 1 {"name":"magic users",                 "score":1 }
+ZADD deityportfolio 1 {"name":"magisrates",                  "score":1 }
+ZADD deityportfolio 1 {"name":"marauding beasts",            "score":1 }
+ZADD deityportfolio 1 {"name":"martial arts",                "score":1 }
+ZADD deityportfolio 1 {"name":"martial defense",             "score":1 }
+ZADD deityportfolio 1 {"name":"martial skill",               "score":1 }
+ZADD deityportfolio 1 {"name":"martial training",            "score":1 }
+ZADD deityportfolio 1 {"name":"mastery of undead",           "score":1 }
+ZADD deityportfolio 1 {"name":"mental dominion",             "score":1 }
+ZADD deityportfolio 1 {"name":"mental health",               "score":1 }
+ZADD deityportfolio 1 {"name":"mental mastery",              "score":1 }
+ZADD deityportfolio 1 {"name":"mental prowess",              "score":1 }
+ZADD deityportfolio 1 {"name":"merfolk",                     "score":1 }
+ZADD deityportfolio 1 {"name":"metalworking",                "score":1 }
+ZADD deityportfolio 1 {"name":"mirrors",                     "score":1 }
+ZADD deityportfolio 1 {"name":"mirth",                       "score":1 }
+ZADD deityportfolio 1 {"name":"moisture",                    "score":1 }
+ZADD deityportfolio 1 {"name":"moonlight",                   "score":1 }
+ZADD deityportfolio 1 {"name":"mortal life",                 "score":1 }
+ZADD deityportfolio 1 {"name":"murderers",                   "score":1 }
+ZADD deityportfolio 1 {"name":"mystic insight",              "score":1 }
+ZADD deityportfolio 1 {"name":"mysticism",                   "score":1 }
+ZADD deityportfolio 1 {"name":"napkins",                     "score":1 }
+ZADD deityportfolio 1 {"name":"narrow escapes",              "score":1 }
+ZADD deityportfolio 1 {"name":"natural alchemy",             "score":1 }
+ZADD deityportfolio 1 {"name":"natural balances",            "score":1 }
+ZADD deityportfolio 1 {"name":"natural beauty",              "score":1 }
+ZADD deityportfolio 1 {"name":"natural disasters",           "score":1 }
+ZADD deityportfolio 1 {"name":"natural growth",              "score":1 }
+ZADD deityportfolio 1 {"name":"navigators",                  "score":1 }
+ZADD deityportfolio 1 {"name":"necromancers",                "score":1 }
+ZADD deityportfolio 1 {"name":"needlework",                  "score":1 }
+ZADD deityportfolio 1 {"name":"netherworld",                 "score":1 }
+ZADD deityportfolio 1 {"name":"night birds",                 "score":1 }
+ZADD deityportfolio 1 {"name":"night travelers",             "score":1 }
+ZADD deityportfolio 1 {"name":"nobility",                    "score":1 }
+ZADD deityportfolio 1 {"name":"noble beasts",                "score":1 }
+ZADD deityportfolio 1 {"name":"nonintervention",             "score":1 }
+ZADD deityportfolio 1 {"name":"northern stars",              "score":1 }
+ZADD deityportfolio 1 {"name":"northern wind",               "score":1 }
+ZADD deityportfolio 1 {"name":"oases",                       "score":1 }
+ZADD deityportfolio 1 {"name":"occult lore",                 "score":1 }
+ZADD deityportfolio 1 {"name":"ocean creatures",             "score":1 }
+ZADD deityportfolio 1 {"name":"oozes",                       "score":1 }
+ZADD deityportfolio 1 {"name":"opportunism",                 "score":1 }
+ZADD deityportfolio 1 {"name":"oppressed",                   "score":1 }
+ZADD deityportfolio 1 {"name":"outer space",                 "score":1 }
+ZADD deityportfolio 1 {"name":"outlaws",                     "score":1 }
+ZADD deityportfolio 1 {"name":"overwhelming numbers",        "score":1 }
+ZADD deityportfolio 1 {"name":"pacifism",                    "score":1 }
+ZADD deityportfolio 1 {"name":"parasites",                   "score":1 }
+ZADD deityportfolio 1 {"name":"peaks",                       "score":1 }
+ZADD deityportfolio 1 {"name":"physical fitness",            "score":1 }
+ZADD deityportfolio 1 {"name":"physical love",               "score":1 }
+ZADD deityportfolio 1 {"name":"physical prowess",            "score":1 }
+ZADD deityportfolio 1 {"name":"physical strength",           "score":1 }
+ZADD deityportfolio 1 {"name":"plagues",                     "score":1 }
+ZADD deityportfolio 1 {"name":"play",                        "score":1 }
+ZADD deityportfolio 1 {"name":"poetic justice",              "score":1 }
+ZADD deityportfolio 1 {"name":"poetry",                      "score":1 }
+ZADD deityportfolio 1 {"name":"poets",                       "score":1 }
+ZADD deityportfolio 1 {"name":"poisoners",                   "score":1 }
+ZADD deityportfolio 1 {"name":"polar environments",          "score":1 }
+ZADD deityportfolio 1 {"name":"powerbrokers",                "score":1 }
+ZADD deityportfolio 1 {"name":"powermongers",                "score":1 }
+ZADD deityportfolio 1 {"name":"premeditated killing",        "score":1 }
+ZADD deityportfolio 1 {"name":"pretty things",               "score":1 }
+ZADD deityportfolio 1 {"name":"propriety",                   "score":1 }
+ZADD deityportfolio 1 {"name":"prose",                       "score":1 }
+ZADD deityportfolio 1 {"name":"psychotic behavior",          "score":1 }
+ZADD deityportfolio 1 {"name":"quiet places",                "score":1 }
+ZADD deityportfolio 1 {"name":"racing",                      "score":1 }
+ZADD deityportfolio 1 {"name":"radiance",                    "score":1 }
+ZADD deityportfolio 1 {"name":"rainbows",                    "score":1 }
+ZADD deityportfolio 1 {"name":"random mischief",             "score":1 }
+ZADD deityportfolio 1 {"name":"rats",                        "score":1 }
+ZADD deityportfolio 1 {"name":"ravaging beasts",             "score":1 }
+ZADD deityportfolio 1 {"name":"restful sleep",               "score":1 }
+ZADD deityportfolio 1 {"name":"revelry",                     "score":1 }
+ZADD deityportfolio 1 {"name":"righteous indignation",       "score":1 }
+ZADD deityportfolio 1 {"name":"river hazards",               "score":1 }
+ZADD deityportfolio 1 {"name":"robbers",                     "score":1 }
+ZADD deityportfolio 1 {"name":"romantic love",               "score":1 }
+ZADD deityportfolio 1 {"name":"ropers",                      "score":1 }
+ZADD deityportfolio 1 {"name":"royalty",                     "score":1 }
+ZADD deityportfolio 1 {"name":"rune magic",                  "score":1 }
+ZADD deityportfolio 1 {"name":"running",                     "score":1 }
+ZADD deityportfolio 1 {"name":"sailors",                     "score":1 }
+ZADD deityportfolio 1 {"name":"salamanders",                 "score":1 }
+ZADD deityportfolio 1 {"name":"savage lust",                 "score":1 }
+ZADD deityportfolio 1 {"name":"sea creatures",               "score":1 }
+ZADD deityportfolio 1 {"name":"sea elves",                   "score":1 }
+ZADD deityportfolio 1 {"name":"sea life",                    "score":1 }
+ZADD deityportfolio 1 {"name":"seals",                       "score":1 }
+ZADD deityportfolio 1 {"name":"sea weather",                 "score":1 }
+ZADD deityportfolio 1 {"name":"sea winds",                   "score":1 }
+ZADD deityportfolio 1 {"name":"secret pursuits",             "score":1 }
+ZADD deityportfolio 1 {"name":"self-deception",              "score":1 }
+ZADD deityportfolio 1 {"name":"self-determination",          "score":1 }
+ZADD deityportfolio 1 {"name":"senses",                      "score":1 }
+ZADD deityportfolio 1 {"name":"sensual fulfillment",         "score":1 }
+ZADD deityportfolio 1 {"name":"serpents",                    "score":1 }
+ZADD deityportfolio 1 {"name":"servants",                    "score":1 }
+ZADD deityportfolio 1 {"name":"service",                     "score":1 }
+ZADD deityportfolio 1 {"name":"servitude",                   "score":1 }
+ZADD deityportfolio 1 {"name":"sewers",                      "score":1 }
+ZADD deityportfolio 1 {"name":"shadow elves",                "score":1 }
+ZADD deityportfolio 1 {"name":"shield dwarves",              "score":1 }
+ZADD deityportfolio 1 {"name":"silence",                     "score":1 }
+ZADD deityportfolio 1 {"name":"silver dragonkind",           "score":1 }
+ZADD deityportfolio 1 {"name":"sinister ambition",           "score":1 }
+ZADD deityportfolio 1 {"name":"skiing",                      "score":1 }
+ZADD deityportfolio 1 {"name":"skill-at-arms",               "score":1 }
+ZADD deityportfolio 1 {"name":"skilled artisans",            "score":1 }
+ZADD deityportfolio 1 {"name":"slimes",                      "score":1 }
+ZADD deityportfolio 1 {"name":"sly cleverness",              "score":1 }
+ZADD deityportfolio 1 {"name":"small birds",                 "score":1 }
+ZADD deityportfolio 1 {"name":"smallpox",                    "score":1 }
+ZADD deityportfolio 1 {"name":"smithing",                    "score":1 }
+ZADD deityportfolio 1 {"name":"smithwork",                   "score":1 }
+ZADD deityportfolio 1 {"name":"snakes",                      "score":1 }
+ZADD deityportfolio 1 {"name":"snow elves",                  "score":1 }
+ZADD deityportfolio 1 {"name":"social behavior",             "score":1 }
+ZADD deityportfolio 1 {"name":"social order",                "score":1 }
+ZADD deityportfolio 1 {"name":"solidity",                    "score":1 }
+ZADD deityportfolio 1 {"name":"songwriting",                 "score":1 }
+ZADD deityportfolio 1 {"name":"sorcerers",                   "score":1 }
+ZADD deityportfolio 1 {"name":"southern stars",              "score":1 }
+ZADD deityportfolio 1 {"name":"space",                       "score":1 }
+ZADD deityportfolio 1 {"name":"spawning",                    "score":1 }
+ZADD deityportfolio 1 {"name":"specific locality",           "score":1 }
+ZADD deityportfolio 1 {"name":"spinning",                    "score":1 }
+ZADD deityportfolio 1 {"name":"sports",                      "score":1 }
+ZADD deityportfolio 1 {"name":"spriggans",                   "score":1 }
+ZADD deityportfolio 1 {"name":"springs",                     "score":1 }
+ZADD deityportfolio 1 {"name":"stalking",                    "score":1 }
+ZADD deityportfolio 1 {"name":"steadfastness",               "score":1 }
+ZADD deityportfolio 1 {"name":"stillness",                   "score":1 }
+ZADD deityportfolio 1 {"name":"stone giants",                "score":1 }
+ZADD deityportfolio 1 {"name":"storm giants",                "score":1 }
+ZADD deityportfolio 1 {"name":"stray cats",                  "score":1 }
+ZADD deityportfolio 1 {"name":"study of magic",              "score":1 }
+ZADD deityportfolio 1 {"name":"summer storms",               "score":1 }
+ZADD deityportfolio 1 {"name":"surrounding lands",           "score":1 }
+ZADD deityportfolio 1 {"name":"sword skills",                "score":1 }
+ZADD deityportfolio 1 {"name":"swordsmanship",               "score":1 }
+ZADD deityportfolio 1 {"name":"swordsmiths",                 "score":1 }
+ZADD deityportfolio 1 {"name":"swordwork",                   "score":1 }
+ZADD deityportfolio 1 {"name":"talking beasts",              "score":1 }
+ZADD deityportfolio 1 {"name":"testing",                     "score":1 }
+ZADD deityportfolio 1 {"name":"theater",                     "score":1 }
+ZADD deityportfolio 1 {"name":"thoughtless acts",            "score":1 }
+ZADD deityportfolio 1 {"name":"thunderstorms",               "score":1 }
+ZADD deityportfolio 1 {"name":"tombs",                       "score":1 }
+ZADD deityportfolio 1 {"name":"tortured souls",              "score":1 }
+ZADD deityportfolio 1 {"name":"torturers",                   "score":1 }
+ZADD deityportfolio 1 {"name":"traders",                     "score":1 }
+ZADD deityportfolio 1 {"name":"tradesmen",                   "score":1 }
+ZADD deityportfolio 1 {"name":"transcendence",               "score":1 }
+ZADD deityportfolio 1 {"name":"transformation of art",       "score":1 }
+ZADD deityportfolio 1 {"name":"travelers",                   "score":1 }
+ZADD deityportfolio 1 {"name":"treachery over honor",        "score":1 }
+ZADD deityportfolio 1 {"name":"treasure-finding",            "score":1 }
+ZADD deityportfolio 1 {"name":"tricks",                      "score":1 }
+ZADD deityportfolio 1 {"name":"truth-speakers",              "score":1 }
+ZADD deityportfolio 1 {"name":"twilight",                    "score":1 }
+ZADD deityportfolio 1 {"name":"ugliness",                    "score":1 }
+ZADD deityportfolio 1 {"name":"ugly people",                 "score":1 }
+ZADD deityportfolio 1 {"name":"undefiled waters",            "score":1 }
+ZADD deityportfolio 1 {"name":"unicorns",                    "score":1 }
+ZADD deityportfolio 1 {"name":"unrevealed secrets",          "score":1 }
+ZADD deityportfolio 1 {"name":"vampires",                    "score":1 }
+ZADD deityportfolio 1 {"name":"vampirism",                   "score":1 }
+ZADD deityportfolio 1 {"name":"vegetation",                  "score":1 }
+ZADD deityportfolio 1 {"name":"vendettas",                   "score":1 }
+ZADD deityportfolio 1 {"name":"venomous creatures",          "score":1 }
+ZADD deityportfolio 1 {"name":"vice",                        "score":1 }
+ZADD deityportfolio 1 {"name":"vortices",                    "score":1 }
+ZADD deityportfolio 1 {"name":"wakefulness",                 "score":1 }
+ZADD deityportfolio 1 {"name":"wandering",                   "score":1 }
+ZADD deityportfolio 1 {"name":"wards",                       "score":1 }
+ZADD deityportfolio 1 {"name":"warpriests",                  "score":1 }
+ZADD deityportfolio 1 {"name":"watchfulness",                "score":1 }
+ZADD deityportfolio 1 {"name":"waterfalls",                  "score":1 }
+ZADD deityportfolio 1 {"name":"water spirits",               "score":1 }
+ZADD deityportfolio 1 {"name":"water travel",                "score":1 }
+ZADD deityportfolio 1 {"name":"wave motions",                "score":1 }
+ZADD deityportfolio 1 {"name":"weapon making",               "score":1 }
+ZADD deityportfolio 1 {"name":"weaponsmithing",              "score":1 }
+ZADD deityportfolio 1 {"name":"weaving",                     "score":1 }
+ZADD deityportfolio 1 {"name":"wells",                       "score":1 }
+ZADD deityportfolio 1 {"name":"whales",                      "score":1 }
+ZADD deityportfolio 1 {"name":"whirlpools",                  "score":1 }
+ZADD deityportfolio 1 {"name":"wilderness",                  "score":1 }
+ZADD deityportfolio 1 {"name":"wildlands",                   "score":1 }
+ZADD deityportfolio 1 {"name":"woodworkers",                 "score":1 }
+ZADD deityportfolio 1 {"name":"woodworking",                 "score":1 }
+ZADD deityportfolio 1 {"name":"worms",                       "score":1 }
+ZADD deityportfolio 2 {"name":"armor",                       "score":2 }
+ZADD deityportfolio 2 {"name":"artisans",                    "score":2 }
+ZADD deityportfolio 2 {"name":"athletes",                    "score":2 }
+ZADD deityportfolio 2 {"name":"benevolence",                 "score":2 }
+ZADD deityportfolio 2 {"name":"blizzards",                   "score":2 }
+ZADD deityportfolio 2 {"name":"bounty",                      "score":2 }
+ZADD deityportfolio 2 {"name":"bugbears",                    "score":2 }
+ZADD deityportfolio 2 {"name":"canines",                     "score":2 }
+ZADD deityportfolio 2 {"name":"caves",                       "score":2 }
+ZADD deityportfolio 2 {"name":"charity",                     "score":2 }
+ZADD deityportfolio 2 {"name":"charm",                       "score":2 }
+ZADD deityportfolio 2 {"name":"children",                    "score":2 }
+ZADD deityportfolio 2 {"name":"clarity",                     "score":2 }
+ZADD deityportfolio 2 {"name":"climbing",                    "score":2 }
+ZADD deityportfolio 2 {"name":"concealment",                 "score":2 }
+ZADD deityportfolio 2 {"name":"construction",                "score":2 }
+ZADD deityportfolio 2 {"name":"contracts",                   "score":2 }
+ZADD deityportfolio 2 {"name":"courtship",                   "score":2 }
+ZADD deityportfolio 2 {"name":"covert activity",             "score":2 }
+ZADD deityportfolio 2 {"name":"cowardice",                   "score":2 }
+ZADD deityportfolio 2 {"name":"creatures of the deep",       "score":2 }
+ZADD deityportfolio 2 {"name":"crops",                       "score":2 }
+ZADD deityportfolio 2 {"name":"debauch",                     "score":2 }
+ZADD deityportfolio 2 {"name":"decision",                    "score":2 }
+ZADD deityportfolio 2 {"name":"desert mountains",            "score":2 }
+ZADD deityportfolio 2 {"name":"deserts",                     "score":2 }
+ZADD deityportfolio 2 {"name":"determination",               "score":2 }
+ZADD deityportfolio 2 {"name":"distance",                    "score":2 }
+ZADD deityportfolio 2 {"name":"domination",                  "score":2 }
+ZADD deityportfolio 2 {"name":"drought",                     "score":2 }
+ZADD deityportfolio 2 {"name":"duels",                       "score":2 }
+ZADD deityportfolio 2 {"name":"dying",                       "score":2 }
+ZADD deityportfolio 2 {"name":"earthquakes",                 "score":2 }
+ZADD deityportfolio 2 {"name":"east wind",                   "score":2 }
+ZADD deityportfolio 2 {"name":"eating",                      "score":2 }
+ZADD deityportfolio 2 {"name":"eloquence",                   "score":2 }
+ZADD deityportfolio 2 {"name":"enchantments",                "score":2 }
+ZADD deityportfolio 2 {"name":"energy",                      "score":2 }
+ZADD deityportfolio 2 {"name":"enfeeblement",                "score":2 }
+ZADD deityportfolio 2 {"name":"epidemics",                   "score":2 }
+ZADD deityportfolio 2 {"name":"esthetics",                   "score":2 }
+ZADD deityportfolio 2 {"name":"evening",                     "score":2 }
+ZADD deityportfolio 2 {"name":"evil dreams",                 "score":2 }
+ZADD deityportfolio 2 {"name":"evil fate",                   "score":2 }
+ZADD deityportfolio 2 {"name":"evil reptiles",               "score":2 }
+ZADD deityportfolio 2 {"name":"exhaustion",                  "score":2 }
+ZADD deityportfolio 2 {"name":"expansion",                   "score":2 }
+ZADD deityportfolio 2 {"name":"fair practices",              "score":2 }
+ZADD deityportfolio 2 {"name":"faith",                       "score":2 }
+ZADD deityportfolio 2 {"name":"false promises",              "score":2 }
+ZADD deityportfolio 2 {"name":"far journeys",                "score":2 }
+ZADD deityportfolio 2 {"name":"fauna",                       "score":2 }
+ZADD deityportfolio 2 {"name":"festivals",                   "score":2 }
+ZADD deityportfolio 2 {"name":"feuds",                       "score":2 }
+ZADD deityportfolio 2 {"name":"fire giants",                 "score":2 }
+ZADD deityportfolio 2 {"name":"fish",                        "score":2 }
+ZADD deityportfolio 2 {"name":"flattery",                    "score":2 }
+ZADD deityportfolio 2 {"name":"flowers",                     "score":2 }
+ZADD deityportfolio 2 {"name":"foreknowledge",               "score":2 }
+ZADD deityportfolio 2 {"name":"forests",                     "score":2 }
+ZADD deityportfolio 2 {"name":"forges",                      "score":2 }
+ZADD deityportfolio 2 {"name":"forgetfulness",               "score":2 }
+ZADD deityportfolio 2 {"name":"forgiveness",                 "score":2 }
+ZADD deityportfolio 2 {"name":"foul weather",                "score":2 }
+ZADD deityportfolio 2 {"name":"frenzy",                      "score":2 }
+ZADD deityportfolio 2 {"name":"fresh water",                 "score":2 }
+ZADD deityportfolio 2 {"name":"friendship",                  "score":2 }
+ZADD deityportfolio 2 {"name":"frozen seas",                 "score":2 }
+ZADD deityportfolio 2 {"name":"fruitfulness",                "score":2 }
+ZADD deityportfolio 2 {"name":"funerals",                    "score":2 }
+ZADD deityportfolio 2 {"name":"games",                       "score":2 }
+ZADD deityportfolio 2 {"name":"gates",                       "score":2 }
+ZADD deityportfolio 2 {"name":"gems",                        "score":2 }
+ZADD deityportfolio 2 {"name":"glyphs",                      "score":2 }
+ZADD deityportfolio 2 {"name":"gold",                        "score":2 }
+ZADD deityportfolio 2 {"name":"goliaths",                    "score":2 }
+ZADD deityportfolio 2 {"name":"goodness",                    "score":2 }
+ZADD deityportfolio 2 {"name":"grief",                       "score":2 }
+ZADD deityportfolio 2 {"name":"growth",                      "score":2 }
+ZADD deityportfolio 2 {"name":"guadianship",                 "score":2 }
+ZADD deityportfolio 2 {"name":"guarding",                    "score":2 }
+ZADD deityportfolio 2 {"name":"guarding the underworld",     "score":2 }
+ZADD deityportfolio 2 {"name":"guilt",                       "score":2 }
+ZADD deityportfolio 2 {"name":"happiness",                   "score":2 }
+ZADD deityportfolio 2 {"name":"harm",                        "score":2 }
+ZADD deityportfolio 2 {"name":"health",                      "score":2 }
+ZADD deityportfolio 2 {"name":"hearing",                     "score":2 }
+ZADD deityportfolio 2 {"name":"heat",                        "score":2 }
+ZADD deityportfolio 2 {"name":"hidden knowledge",            "score":2 }
+ZADD deityportfolio 2 {"name":"hiding places",               "score":2 }
+ZADD deityportfolio 2 {"name":"history",                     "score":2 }
+ZADD deityportfolio 2 {"name":"home",                        "score":2 }
+ZADD deityportfolio 2 {"name":"honesty",                     "score":2 }
+ZADD deityportfolio 2 {"name":"horses",                      "score":2 }
+ZADD deityportfolio 2 {"name":"hospitality",                 "score":2 }
+ZADD deityportfolio 2 {"name":"hunger",                      "score":2 }
+ZADD deityportfolio 2 {"name":"hyenas",                      "score":2 }
+ZADD deityportfolio 2 {"name":"ice",                         "score":2 }
+ZADD deityportfolio 2 {"name":"images",                      "score":2 }
+ZADD deityportfolio 2 {"name":"immortality through undeath", "score":2 }
+ZADD deityportfolio 2 {"name":"improvement",                 "score":2 }
+ZADD deityportfolio 2 {"name":"industry",                    "score":2 }
+ZADD deityportfolio 2 {"name":"inevitability",               "score":2 }
+ZADD deityportfolio 2 {"name":"inflexibility",               "score":2 }
+ZADD deityportfolio 2 {"name":"inquiry",                     "score":2 }
+ZADD deityportfolio 2 {"name":"insects",                     "score":2 }
+ZADD deityportfolio 2 {"name":"intoxication",                "score":2 }
+ZADD deityportfolio 2 {"name":"invention",                   "score":2 }
+ZADD deityportfolio 2 {"name":"invisiblity",                 "score":2 }
+ZADD deityportfolio 2 {"name":"jokes",                       "score":2 }
+ZADD deityportfolio 2 {"name":"joy of battle",               "score":2 }
+ZADD deityportfolio 2 {"name":"jungles",                     "score":2 }
+ZADD deityportfolio 2 {"name":"keen senses",                 "score":2 }
+ZADD deityportfolio 2 {"name":"kings",                       "score":2 }
+ZADD deityportfolio 2 {"name":"kuo-toas",                    "score":2 }
+ZADD deityportfolio 2 {"name":"languages",                   "score":2 }
+ZADD deityportfolio 2 {"name":"learning",                    "score":2 }
+ZADD deityportfolio 2 {"name":"liars",                       "score":2 }
+ZADD deityportfolio 2 {"name":"lightning",                   "score":2 }
+ZADD deityportfolio 2 {"name":"literature",                  "score":2 }
+ZADD deityportfolio 2 {"name":"living things",               "score":2 }
+ZADD deityportfolio 2 {"name":"longevity",                   "score":2 }
+ZADD deityportfolio 2 {"name":"long life",                   "score":2 }
+ZADD deityportfolio 2 {"name":"loss",                        "score":2 }
+ZADD deityportfolio 2 {"name":"luck in battle",              "score":2 }
+ZADD deityportfolio 2 {"name":"madness",                     "score":2 }
+ZADD deityportfolio 2 {"name":"magical knowledge",           "score":2 }
+ZADD deityportfolio 2 {"name":"malice",                      "score":2 }
+ZADD deityportfolio 2 {"name":"malign knowledge",            "score":2 }
+ZADD deityportfolio 2 {"name":"marauders",                   "score":2 }
+ZADD deityportfolio 2 {"name":"marshes",                     "score":2 }
+ZADD deityportfolio 2 {"name":"martyrdom",                   "score":2 }
+ZADD deityportfolio 2 {"name":"massacres",                   "score":2 }
+ZADD deityportfolio 2 {"name":"meadows",                     "score":2 }
+ZADD deityportfolio 2 {"name":"medicine",                    "score":2 }
+ZADD deityportfolio 2 {"name":"meditation",                  "score":2 }
+ZADD deityportfolio 2 {"name":"mental powers",               "score":2 }
+ZADD deityportfolio 2 {"name":"messengers",                  "score":2 }
+ZADD deityportfolio 2 {"name":"metalcraft",                  "score":2 }
+ZADD deityportfolio 2 {"name":"metalsmiths",                 "score":2 }
+ZADD deityportfolio 2 {"name":"military excellence",         "score":2 }
+ZADD deityportfolio 2 {"name":"minerals",                    "score":2 }
+ZADD deityportfolio 2 {"name":"miners",                      "score":2 }
+ZADD deityportfolio 2 {"name":"mines",                       "score":2 }
+ZADD deityportfolio 2 {"name":"mining",                      "score":2 }
+ZADD deityportfolio 2 {"name":"mischief",                    "score":2 }
+ZADD deityportfolio 2 {"name":"monks",                       "score":2 }
+ZADD deityportfolio 2 {"name":"morale",                      "score":2 }
+ZADD deityportfolio 2 {"name":"mourning",                    "score":2 }
+ZADD deityportfolio 2 {"name":"musicians",                   "score":2 }
+ZADD deityportfolio 2 {"name":"music",                       "score":2 }
+ZADD deityportfolio 2 {"name":"negative energy",             "score":2 }
+ZADD deityportfolio 2 {"name":"noise",                       "score":2 }
+ZADD deityportfolio 2 {"name":"obligations",                 "score":2 }
+ZADD deityportfolio 2 {"name":"obscurement",                 "score":2 }
+ZADD deityportfolio 2 {"name":"ocean storms",                "score":2 }
+ZADD deityportfolio 2 {"name":"old age",                     "score":2 }
+ZADD deityportfolio 2 {"name":"oppression",                  "score":2 }
+ZADD deityportfolio 2 {"name":"ores",                        "score":2 }
+ZADD deityportfolio 2 {"name":"outcasts",                    "score":2 }
+ZADD deityportfolio 2 {"name":"panic",                       "score":2 }
+ZADD deityportfolio 2 {"name":"paralysis",                   "score":2 }
+ZADD deityportfolio 2 {"name":"parenthood",                  "score":2 }
+ZADD deityportfolio 2 {"name":"patience",                    "score":2 }
+ZADD deityportfolio 2 {"name":"perfection",                  "score":2 }
+ZADD deityportfolio 2 {"name":"perseverance",                "score":2 }
+ZADD deityportfolio 2 {"name":"pillaging",                   "score":2 }
+ZADD deityportfolio 2 {"name":"planting",                    "score":2 }
+ZADD deityportfolio 2 {"name":"plunder",                     "score":2 }
+ZADD deityportfolio 2 {"name":"police",                      "score":2 }
+ZADD deityportfolio 2 {"name":"pools",                       "score":2 }
+ZADD deityportfolio 2 {"name":"pottery",                     "score":2 }
+ZADD deityportfolio 2 {"name":"predestination",              "score":2 }
+ZADD deityportfolio 2 {"name":"preservation",                "score":2 }
+ZADD deityportfolio 2 {"name":"prestige",                    "score":2 }
+ZADD deityportfolio 2 {"name":"public combat",               "score":2 }
+ZADD deityportfolio 2 {"name":"purification",                "score":2 }
+ZADD deityportfolio 2 {"name":"puzzles",                     "score":2 }
+ZADD deityportfolio 2 {"name":"quarrels",                    "score":2 }
+ZADD deityportfolio 2 {"name":"questers",                    "score":2 }
+ZADD deityportfolio 2 {"name":"randomness",                  "score":2 }
+ZADD deityportfolio 2 {"name":"rebellion",                   "score":2 }
+ZADD deityportfolio 2 {"name":"reciprocity",                 "score":2 }
+ZADD deityportfolio 2 {"name":"relationships",               "score":2 }
+ZADD deityportfolio 2 {"name":"reptiles",                    "score":2 }
+ZADD deityportfolio 2 {"name":"restraint",                   "score":2 }
+ZADD deityportfolio 2 {"name":"reverence",                   "score":2 }
+ZADD deityportfolio 2 {"name":"risks",                       "score":2 }
+ZADD deityportfolio 2 {"name":"romance",                     "score":2 }
+ZADD deityportfolio 2 {"name":"rot",                         "score":2 }
+ZADD deityportfolio 2 {"name":"rotting death",               "score":2 }
+ZADD deityportfolio 2 {"name":"rulership",                   "score":2 }
+ZADD deityportfolio 2 {"name":"running water",               "score":2 }
+ZADD deityportfolio 2 {"name":"sages",                       "score":2 }
+ZADD deityportfolio 2 {"name":"savants",                     "score":2 }
+ZADD deityportfolio 2 {"name":"scholarship",                 "score":2 }
+ZADD deityportfolio 2 {"name":"scribes",                     "score":2 }
+ZADD deityportfolio 2 {"name":"sculptures",                  "score":2 }
+ZADD deityportfolio 2 {"name":"sea voyages",                 "score":2 }
+ZADD deityportfolio 2 {"name":"seekers",                     "score":2 }
+ZADD deityportfolio 2 {"name":"self-defense",                "score":2 }
+ZADD deityportfolio 2 {"name":"self-perfection",             "score":2 }
+ZADD deityportfolio 2 {"name":"self-sacrifice",              "score":2 }
+ZADD deityportfolio 2 {"name":"sentries",                    "score":2 }
+ZADD deityportfolio 2 {"name":"shepherds",                   "score":2 }
+ZADD deityportfolio 2 {"name":"sickness",                    "score":2 }
+ZADD deityportfolio 2 {"name":"sight",                       "score":2 }
+ZADD deityportfolio 2 {"name":"singing",                     "score":2 }
+ZADD deityportfolio 2 {"name":"slaughter",                   "score":2 }
+ZADD deityportfolio 2 {"name":"sloth",                       "score":2 }
+ZADD deityportfolio 2 {"name":"slumber",                     "score":2 }
+ZADD deityportfolio 2 {"name":"smoke",                       "score":2 }
+ZADD deityportfolio 2 {"name":"societies",                   "score":2 }
+ZADD deityportfolio 2 {"name":"song",                        "score":2 }
+ZADD deityportfolio 2 {"name":"south wind",                  "score":2 }
+ZADD deityportfolio 2 {"name":"speech",                      "score":2 }
+ZADD deityportfolio 2 {"name":"speed",                       "score":2 }
+ZADD deityportfolio 2 {"name":"spite",                       "score":2 }
+ZADD deityportfolio 2 {"name":"starvation",                  "score":2 }
+ZADD deityportfolio 2 {"name":"stench",                      "score":2 }
+ZADD deityportfolio 2 {"name":"sterility",                   "score":2 }
+ZADD deityportfolio 2 {"name":"stonework",                   "score":2 }
+ZADD deityportfolio 2 {"name":"storytelling",                "score":2 }
+ZADD deityportfolio 2 {"name":"streams",                     "score":2 }
+ZADD deityportfolio 2 {"name":"strong beasts",               "score":2 }
+ZADD deityportfolio 2 {"name":"subtlety",                    "score":2 }
+ZADD deityportfolio 2 {"name":"subversion",                  "score":2 }
+ZADD deityportfolio 2 {"name":"success",                     "score":2 }
+ZADD deityportfolio 2 {"name":"suffering",                   "score":2 }
+ZADD deityportfolio 2 {"name":"sunlight",                    "score":2 }
+ZADD deityportfolio 2 {"name":"sunshine",                    "score":2 }
+ZADD deityportfolio 2 {"name":"surprise",                    "score":2 }
+ZADD deityportfolio 2 {"name":"swamps",                      "score":2 }
+ZADD deityportfolio 2 {"name":"tactics",                     "score":2 }
+ZADD deityportfolio 2 {"name":"technology",                  "score":2 }
+ZADD deityportfolio 2 {"name":"territory",                   "score":2 }
+ZADD deityportfolio 2 {"name":"thought",                     "score":2 }
+ZADD deityportfolio 2 {"name":"tolerance",                   "score":2 }
+ZADD deityportfolio 2 {"name":"tracking",                    "score":2 }
+ZADD deityportfolio 2 {"name":"tradition",                   "score":2 }
+ZADD deityportfolio 2 {"name":"trapmaking",                  "score":2 }
+ZADD deityportfolio 2 {"name":"treachery",                   "score":2 }
+ZADD deityportfolio 2 {"name":"treasures",                   "score":2 }
+ZADD deityportfolio 2 {"name":"troglodytes",                 "score":2 }
+ZADD deityportfolio 2 {"name":"trolls",                      "score":2 }
+ZADD deityportfolio 2 {"name":"undead",                      "score":2 }
+ZADD deityportfolio 2 {"name":"unknown",                     "score":2 }
+ZADD deityportfolio 2 {"name":"unknown secrets",             "score":2 }
+ZADD deityportfolio 2 {"name":"vandals",                     "score":2 }
+ZADD deityportfolio 2 {"name":"vengeance",                   "score":2 }
+ZADD deityportfolio 2 {"name":"vermin",                      "score":2 }
+ZADD deityportfolio 2 {"name":"visions",                     "score":2 }
+ZADD deityportfolio 2 {"name":"vitality",                    "score":2 }
+ZADD deityportfolio 2 {"name":"volcanoes",                   "score":2 }
+ZADD deityportfolio 2 {"name":"wanton destruction",          "score":2 }
+ZADD deityportfolio 2 {"name":"wasting",                     "score":2 }
+ZADD deityportfolio 2 {"name":"waves",                       "score":2 }
+ZADD deityportfolio 2 {"name":"weaponsmiths",                "score":2 }
+ZADD deityportfolio 2 {"name":"wetlands",                    "score":2 }
+ZADD deityportfolio 2 {"name":"wetness",                     "score":2 }
+ZADD deityportfolio 2 {"name":"wild beasts",                 "score":2 }
+ZADD deityportfolio 2 {"name":"wine",                        "score":2 }
+ZADD deityportfolio 2 {"name":"work",                        "score":2 }
+ZADD deityportfolio 2 {"name":"youth",                       "score":2 }
+ZADD deityportfolio 2 {"name":"zeal",                        "score":2 }
+ZADD deityportfolio 3 {"name":"cemeteries",                  "score":3 }
+ZADD deityportfolio 3 {"name":"clouds",                      "score":3 }
+ZADD deityportfolio 3 {"name":"curative medicine",           "score":3 }
+ZADD deityportfolio 3 {"name":"currents",                    "score":3 }
+ZADD deityportfolio 3 {"name":"dance",                       "score":3 }
+ZADD deityportfolio 3 {"name":"dancing",                     "score":3 }
+ZADD deityportfolio 3 {"name":"devouring",                   "score":3 }
+ZADD deityportfolio 3 {"name":"doors",                       "score":3 }
+ZADD deityportfolio 3 {"name":"femininity",                  "score":3 }
+ZADD deityportfolio 3 {"name":"flowing water",               "score":3 }
+ZADD deityportfolio 3 {"name":"fortification",               "score":3 }
+ZADD deityportfolio 3 {"name":"guidance",                    "score":3 }
+ZADD deityportfolio 3 {"name":"guides",                      "score":3 }
+ZADD deityportfolio 3 {"name":"heroism",                     "score":3 }
+ZADD deityportfolio 3 {"name":"imaginations",                "score":3 }
+ZADD deityportfolio 3 {"name":"jealousy",                    "score":3 }
+ZADD deityportfolio 3 {"name":"keys",                        "score":3 }
+ZADD deityportfolio 3 {"name":"leadership",                  "score":3 }
+ZADD deityportfolio 3 {"name":"liberation",                  "score":3 }
+ZADD deityportfolio 3 {"name":"locks",                       "score":3 }
+ZADD deityportfolio 3 {"name":"mages",                       "score":3 }
+ZADD deityportfolio 3 {"name":"mind flayers",                "score":3 }
+ZADD deityportfolio 3 {"name":"misfortune",                  "score":3 }
+ZADD deityportfolio 3 {"name":"movement",                    "score":3 }
+ZADD deityportfolio 3 {"name":"naval combat",                "score":3 }
+ZADD deityportfolio 3 {"name":"obsession",                   "score":3 }
+ZADD deityportfolio 3 {"name":"paladins",                    "score":3 }
+ZADD deityportfolio 3 {"name":"planning",                    "score":3 }
+ZADD deityportfolio 3 {"name":"predators",                   "score":3 }
+ZADD deityportfolio 3 {"name":"propagation",                 "score":3 }
+ZADD deityportfolio 3 {"name":"psionics",                    "score":3 }
+ZADD deityportfolio 3 {"name":"rangers",                     "score":3 }
+ZADD deityportfolio 3 {"name":"records",                     "score":3 }
+ZADD deityportfolio 3 {"name":"rice",                        "score":3 }
+ZADD deityportfolio 3 {"name":"rock gnomes",                 "score":3 }
+ZADD deityportfolio 3 {"name":"sacrifice",                   "score":3 }
+ZADD deityportfolio 3 {"name":"salt",                        "score":3 }
+ZADD deityportfolio 3 {"name":"scapegoats",                  "score":3 }
+ZADD deityportfolio 3 {"name":"scheming",                    "score":3 }
+ZADD deityportfolio 3 {"name":"selfishness",                 "score":3 }
+ZADD deityportfolio 3 {"name":"ships",                       "score":3 }
+ZADD deityportfolio 3 {"name":"slavery",                     "score":3 }
+ZADD deityportfolio 3 {"name":"starlight",                   "score":3 }
+ZADD deityportfolio 3 {"name":"swords",                      "score":3 }
+ZADD deityportfolio 3 {"name":"thievery",                    "score":3 }
+ZADD deityportfolio 3 {"name":"thieves",                     "score":3 }
+ZADD deityportfolio 3 {"name":"tides",                       "score":3 }
+ZADD deityportfolio 3 {"name":"trust",                       "score":3 }
+ZADD deityportfolio 3 {"name":"undeath",                     "score":3 }
+ZADD deityportfolio 3 {"name":"victory",                     "score":3 }
+ZADD deityportfolio 3 {"name":"vigor",                       "score":3 }
+ZADD deityportfolio 3 {"name":"warfare",                     "score":3 }
+ZADD deityportfolio 3 {"name":"weather",                     "score":3 }
+ZADD deityportfolio 3 {"name":"wickedness",                  "score":3 }
+ZADD deityportfolio 3 {"name":"winter",                      "score":3 }
+ZADD deityportfolio 3 {"name":"witches",                     "score":3 }
+ZADD deityportfolio 3 {"name":"wit",                         "score":3 }
+ZADD deityportfolio 3 {"name":"wizards",                     "score":3 }
+ZADD deityportfolio 3 {"name":"writing",                     "score":3 }
+ZADD deityportfolio 4 {"name":"abundance",                   "score":4 }
+ZADD deityportfolio 4 {"name":"accidents",                   "score":4 }
+ZADD deityportfolio 4 {"name":"accountability",              "score":4 }
+ZADD deityportfolio 4 {"name":"arcane knowledge",            "score":4 }
+ZADD deityportfolio 4 {"name":"armies",                      "score":4 }
+ZADD deityportfolio 4 {"name":"astrology",                   "score":4 }
+ZADD deityportfolio 4 {"name":"astronomy",                   "score":4 }
+ZADD deityportfolio 4 {"name":"atmosphere",                  "score":4 }
+ZADD deityportfolio 4 {"name":"barbarians",                  "score":4 }
+ZADD deityportfolio 4 {"name":"bards",                       "score":4 }
+ZADD deityportfolio 4 {"name":"beasts",                      "score":4 }
+ZADD deityportfolio 4 {"name":"beginnings",                  "score":4 }
+ZADD deityportfolio 4 {"name":"berserking",                  "score":4 }
+ZADD deityportfolio 4 {"name":"birth",                       "score":4 }
+ZADD deityportfolio 4 {"name":"blacksmithing",               "score":4 }
+ZADD deityportfolio 4 {"name":"books",                       "score":4 }
+ZADD deityportfolio 4 {"name":"bravery",                     "score":4 }
+ZADD deityportfolio 4 {"name":"building",                    "score":4 }
+ZADD deityportfolio 4 {"name":"bureaucracy",                 "score":4 }
+ZADD deityportfolio 4 {"name":"business",                    "score":4 }
+ZADD deityportfolio 4 {"name":"cartography",                 "score":4 }
+ZADD deityportfolio 4 {"name":"caverns",                     "score":4 }
+ZADD deityportfolio 4 {"name":"change",                      "score":4 }
+ZADD deityportfolio 4 {"name":"charisma",                    "score":4 }
+ZADD deityportfolio 4 {"name":"cloud giants",                "score":4 }
+ZADD deityportfolio 4 {"name":"cold",                        "score":4 }
+ZADD deityportfolio 4 {"name":"common sense",                "score":4 }
+ZADD deityportfolio 4 {"name":"community",                   "score":4 }
+ZADD deityportfolio 4 {"name":"competition",                 "score":4 }
+ZADD deityportfolio 4 {"name":"confusion",                   "score":4 }
+ZADD deityportfolio 4 {"name":"conquest",                    "score":4 }
+ZADD deityportfolio 4 {"name":"control",                     "score":4 }
+ZADD deityportfolio 4 {"name":"cooperation",                 "score":4 }
+ZADD deityportfolio 4 {"name":"courage",                     "score":4 }
+ZADD deityportfolio 4 {"name":"crafts",                      "score":4 }
+ZADD deityportfolio 4 {"name":"cruelty",                     "score":4 }
+ZADD deityportfolio 4 {"name":"cultures",                    "score":4 }
+ZADD deityportfolio 4 {"name":"cunning",                     "score":4 }
+ZADD deityportfolio 4 {"name":"curiosity",                   "score":4 }
+ZADD deityportfolio 4 {"name":"daring",                      "score":4 }
+ZADD deityportfolio 4 {"name":"darkness",                    "score":4 }
+ZADD deityportfolio 4 {"name":"dawn",                        "score":4 }
+ZADD deityportfolio 4 {"name":"day",                         "score":4 }
+ZADD deityportfolio 4 {"name":"decay",                       "score":4 }
+ZADD deityportfolio 4 {"name":"deceit",                      "score":4 }
+ZADD deityportfolio 4 {"name":"deception",                   "score":4 }
+ZADD deityportfolio 4 {"name":"dedication",                  "score":4 }
+ZADD deityportfolio 4 {"name":"delight",                     "score":4 }
+ZADD deityportfolio 4 {"name":"dexterity",                   "score":4 }
+ZADD deityportfolio 4 {"name":"dignity",                     "score":4 }
+ZADD deityportfolio 4 {"name":"disasters",                   "score":4 }
+ZADD deityportfolio 4 {"name":"discord",                     "score":4 }
+ZADD deityportfolio 4 {"name":"discovery",                   "score":4 }
+ZADD deityportfolio 4 {"name":"divination",                  "score":4 }
+ZADD deityportfolio 4 {"name":"dreams",                      "score":4 }
+ZADD deityportfolio 4 {"name":"druids",                      "score":4 }
+ZADD deityportfolio 4 {"name":"dungeons",                    "score":4 }
+ZADD deityportfolio 4 {"name":"dusk",                        "score":4 }
+ZADD deityportfolio 4 {"name":"dwarves",                     "score":4 }
+ZADD deityportfolio 4 {"name":"earth",                       "score":4 }
+ZADD deityportfolio 4 {"name":"elements",                    "score":4 }
+ZADD deityportfolio 4 {"name":"elves",                       "score":4 }
+ZADD deityportfolio 4 {"name":"endurance",                   "score":4 }
+ZADD deityportfolio 4 {"name":"engineering",                 "score":4 }
+ZADD deityportfolio 4 {"name":"enjoyment",                   "score":4 }
+ZADD deityportfolio 4 {"name":"enlightenment",               "score":4 }
+ZADD deityportfolio 4 {"name":"entropy",                     "score":4 }
+ZADD deityportfolio 4 {"name":"eroticism",                   "score":4 }
+ZADD deityportfolio 4 {"name":"ethics",                      "score":4 }
+ZADD deityportfolio 4 {"name":"evil dragons",                "score":4 }
+ZADD deityportfolio 4 {"name":"evil liches",                 "score":4 }
+ZADD deityportfolio 4 {"name":"evil lycanthropes",           "score":4 }
+ZADD deityportfolio 4 {"name":"evil plans",                  "score":4 }
+ZADD deityportfolio 4 {"name":"evil secrets",                "score":4 }
+ZADD deityportfolio 4 {"name":"excellence",                  "score":4 }
+ZADD deityportfolio 4 {"name":"excess",                      "score":4 }
+ZADD deityportfolio 4 {"name":"exiles",                      "score":4 }
+ZADD deityportfolio 4 {"name":"exploration",                 "score":4 }
+ZADD deityportfolio 4 {"name":"faerie folk",                 "score":4 }
+ZADD deityportfolio 4 {"name":"faithfulness",                "score":4 }
+ZADD deityportfolio 4 {"name":"fallen heroes",               "score":4 }
+ZADD deityportfolio 4 {"name":"family",                      "score":4 }
+ZADD deityportfolio 4 {"name":"feasting",                    "score":4 }
+ZADD deityportfolio 4 {"name":"fey",                         "score":4 }
+ZADD deityportfolio 4 {"name":"fidelity",                    "score":4 }
+ZADD deityportfolio 4 {"name":"fighters",                    "score":4 }
+ZADD deityportfolio 4 {"name":"fine arts",                   "score":4 }
+ZADD deityportfolio 4 {"name":"fire-using dragons",          "score":4 }
+ZADD deityportfolio 4 {"name":"fitness",                     "score":4 }
+ZADD deityportfolio 4 {"name":"flying",                      "score":4 }
+ZADD deityportfolio 4 {"name":"fools",                       "score":4 }
+ZADD deityportfolio 4 {"name":"forbidden knowlege",          "score":4 }
+ZADD deityportfolio 4 {"name":"foresight",                   "score":4 }
+ZADD deityportfolio 4 {"name":"formality",                   "score":4 }
+ZADD deityportfolio 4 {"name":"full moons",                  "score":4 }
+ZADD deityportfolio 4 {"name":"future",                      "score":4 }
+ZADD deityportfolio 4 {"name":"gardening",                   "score":4 }
+ZADD deityportfolio 4 {"name":"giants",                      "score":4 }
+ZADD deityportfolio 4 {"name":"gnolls",                      "score":4 }
+ZADD deityportfolio 4 {"name":"gnomes",                      "score":4 }
+ZADD deityportfolio 4 {"name":"goblins",                     "score":4 }
+ZADD deityportfolio 4 {"name":"good-aligned magical beasts", "score":4 }
+ZADD deityportfolio 4 {"name":"good beasts",                 "score":4 }
+ZADD deityportfolio 4 {"name":"good dragons",                "score":4 }
+ZADD deityportfolio 4 {"name":"good fortune",                "score":4 }
+ZADD deityportfolio 4 {"name":"good giants",                 "score":4 }
+ZADD deityportfolio 4 {"name":"good luck",                   "score":4 }
+ZADD deityportfolio 4 {"name":"good magic",                  "score":4 }
+ZADD deityportfolio 4 {"name":"grain",                       "score":4 }
+ZADD deityportfolio 4 {"name":"gray dwarves",                "score":4 }
+ZADD deityportfolio 4 {"name":"guile",                       "score":4 }
+ZADD deityportfolio 4 {"name":"halflings",                   "score":4 }
+ZADD deityportfolio 4 {"name":"harmony",                     "score":4 }
+ZADD deityportfolio 4 {"name":"hate",                        "score":4 }
+ZADD deityportfolio 4 {"name":"hatred",                      "score":4 }
+ZADD deityportfolio 4 {"name":"hearth",                      "score":4 }
+ZADD deityportfolio 4 {"name":"hidden things",               "score":4 }
+ZADD deityportfolio 4 {"name":"hidden treasures",            "score":4 }
+ZADD deityportfolio 4 {"name":"hobgoblins",                  "score":4 }
+ZADD deityportfolio 4 {"name":"honor",                       "score":4 }
+ZADD deityportfolio 4 {"name":"humility",                    "score":4 }
+ZADD deityportfolio 4 {"name":"humor",                       "score":4 }
+ZADD deityportfolio 4 {"name":"ideas",                       "score":4 }
+ZADD deityportfolio 4 {"name":"illness",                     "score":4 }
+ZADD deityportfolio 4 {"name":"illusions",                   "score":4 }
+ZADD deityportfolio 4 {"name":"independence",                "score":4 }
+ZADD deityportfolio 4 {"name":"individuality",               "score":4 }
+ZADD deityportfolio 4 {"name":"industriousness",             "score":4 }
+ZADD deityportfolio 4 {"name":"infinity",                    "score":4 }
+ZADD deityportfolio 4 {"name":"influence",                   "score":4 }
+ZADD deityportfolio 4 {"name":"injustice",                   "score":4 }
+ZADD deityportfolio 4 {"name":"intrigue",                    "score":4 }
+ZADD deityportfolio 4 {"name":"iron",                        "score":4 }
+ZADD deityportfolio 4 {"name":"irrigation",                  "score":4 }
+ZADD deityportfolio 4 {"name":"joy",                         "score":4 }
+ZADD deityportfolio 4 {"name":"killing",                     "score":4 }
+ZADD deityportfolio 4 {"name":"kobolds",                     "score":4 }
+ZADD deityportfolio 4 {"name":"labyrinths",                  "score":4 }
+ZADD deityportfolio 4 {"name":"lakes",                       "score":4 }
+ZADD deityportfolio 4 {"name":"law",                         "score":4 }
+ZADD deityportfolio 4 {"name":"lies",                        "score":4 }
+ZADD deityportfolio 4 {"name":"life/fertility",              "score":4 }
+ZADD deityportfolio 4 {"name":"light",                       "score":4 }
+ZADD deityportfolio 4 {"name":"literacy",                    "score":4 }
+ZADD deityportfolio 4 {"name":"livestock",                   "score":4 }
+ZADD deityportfolio 4 {"name":"loyalty",                     "score":4 }
+ZADD deityportfolio 4 {"name":"lust",                        "score":4 }
+ZADD deityportfolio 4 {"name":"mass destruction",            "score":4 }
+ZADD deityportfolio 4 {"name":"memory",                      "score":4 }
+ZADD deityportfolio 4 {"name":"messages",                    "score":4 }
+ZADD deityportfolio 4 {"name":"metals",                      "score":4 }
+ZADD deityportfolio 4 {"name":"minotaurs",                   "score":4 }
+ZADD deityportfolio 4 {"name":"money",                       "score":4 }
+ZADD deityportfolio 4 {"name":"morning",                     "score":4 }
+ZADD deityportfolio 4 {"name":"mortality",                   "score":4 }
+ZADD deityportfolio 4 {"name":"motherhood",                  "score":4 }
+ZADD deityportfolio 4 {"name":"mothers",                     "score":4 }
+ZADD deityportfolio 4 {"name":"mountain dwarves",            "score":4 }
+ZADD deityportfolio 4 {"name":"mountain giants",             "score":4 }
+ZADD deityportfolio 4 {"name":"mountains",                   "score":4 }
+ZADD deityportfolio 4 {"name":"negotiation",                 "score":4 }
+ZADD deityportfolio 4 {"name":"neutral dragons",             "score":4 }
+ZADD deityportfolio 4 {"name":"nightmares",                  "score":4 }
+ZADD deityportfolio 4 {"name":"night",                       "score":4 }
+ZADD deityportfolio 4 {"name":"obedience",                   "score":4 }
+ZADD deityportfolio 4 {"name":"oceans",                      "score":4 }
+ZADD deityportfolio 4 {"name":"ogres",                       "score":4 }
+ZADD deityportfolio 4 {"name":"omens",                       "score":4 }
+ZADD deityportfolio 4 {"name":"open paths",                  "score":4 }
+ZADD deityportfolio 4 {"name":"orcs",                        "score":4 }
+ZADD deityportfolio 4 {"name":"pain",                        "score":4 }
+ZADD deityportfolio 4 {"name":"passion",                     "score":4 }
+ZADD deityportfolio 4 {"name":"pestilence",                  "score":4 }
+ZADD deityportfolio 4 {"name":"philosophy",                  "score":4 }
+ZADD deityportfolio 4 {"name":"poisoning",                   "score":4 }
+ZADD deityportfolio 4 {"name":"poison",                      "score":4 }
+ZADD deityportfolio 4 {"name":"positive energy",             "score":4 }
+ZADD deityportfolio 4 {"name":"power",                       "score":4 }
+ZADD deityportfolio 4 {"name":"procreation",                 "score":4 }
+ZADD deityportfolio 4 {"name":"prophecy",                    "score":4 }
+ZADD deityportfolio 4 {"name":"prosperity",                  "score":4 }
+ZADD deityportfolio 4 {"name":"protectors",                  "score":4 }
+ZADD deityportfolio 4 {"name":"rage",                        "score":4 }
+ZADD deityportfolio 4 {"name":"rebels",                      "score":4 }
+ZADD deityportfolio 4 {"name":"rebirth",                     "score":4 }
+ZADD deityportfolio 4 {"name":"renewal",                     "score":4 }
+ZADD deityportfolio 4 {"name":"retribution",                 "score":4 }
+ZADD deityportfolio 4 {"name":"rogues",                      "score":4 }
+ZADD deityportfolio 4 {"name":"rumor",                       "score":4 }
+ZADD deityportfolio 4 {"name":"safety",                      "score":4 }
+ZADD deityportfolio 4 {"name":"sailing",                     "score":4 }
+ZADD deityportfolio 4 {"name":"seas",                        "score":4 }
+ZADD deityportfolio 4 {"name":"secrecy",                     "score":4 }
+ZADD deityportfolio 4 {"name":"security",                    "score":4 }
+ZADD deityportfolio 4 {"name":"seduction",                   "score":4 }
+ZADD deityportfolio 4 {"name":"serenity",                    "score":4 }
+ZADD deityportfolio 4 {"name":"skill",                       "score":4 }
+ZADD deityportfolio 4 {"name":"smiths",                      "score":4 }
+ZADD deityportfolio 4 {"name":"snow",                        "score":4 }
+ZADD deityportfolio 4 {"name":"soldiers",                    "score":4 }
+ZADD deityportfolio 4 {"name":"sorrow",                      "score":4 }
+ZADD deityportfolio 4 {"name":"spellcasters",                "score":4 }
+ZADD deityportfolio 4 {"name":"spiders",                     "score":4 }
+ZADD deityportfolio 4 {"name":"stars",                       "score":4 }
+ZADD deityportfolio 4 {"name":"storms",                      "score":4 }
+ZADD deityportfolio 4 {"name":"structure",                   "score":4 }
+ZADD deityportfolio 4 {"name":"study",                       "score":4 }
+ZADD deityportfolio 4 {"name":"survival",                    "score":4 }
+ZADD deityportfolio 4 {"name":"suspicion",                   "score":4 }
+ZADD deityportfolio 4 {"name":"teaching",                    "score":4 }
+ZADD deityportfolio 4 {"name":"tedium",                      "score":4 }
+ZADD deityportfolio 4 {"name":"thunder",                     "score":4 }
+ZADD deityportfolio 4 {"name":"transformation",              "score":4 }
+ZADD deityportfolio 4 {"name":"trees",                       "score":4 }
+ZADD deityportfolio 4 {"name":"underdark",                   "score":4 }
+ZADD deityportfolio 4 {"name":"unpredictability",            "score":4 }
+ZADD deityportfolio 4 {"name":"warmth",                      "score":4 }
+ZADD deityportfolio 4 {"name":"warriors",                    "score":4 }
+ZADD deityportfolio 4 {"name":"west wind",                   "score":4 }
+ZADD deityportfolio 4 {"name":"willpower",                   "score":4 }
+ZADD deityportfolio 4 {"name":"winds",                       "score":4 }
+ZADD deityportfolio 4 {"name":"wrath",                       "score":4 }
+ZADD deityportfolio 5 {"name":"portals",                     "score":5 }
+ZADD deityportfolio 5 {"name":"pride",                       "score":5 }
+ZADD deityportfolio 5 {"name":"rivers",                      "score":5 }
+ZADD deityportfolio 5 {"name":"sadism",                      "score":5 }
+ZADD deityportfolio 5 {"name":"sky",                         "score":5 }
+ZADD deityportfolio 5 {"name":"stone",                       "score":5 }
+ZADD deityportfolio 5 {"name":"torment",                     "score":5 }
+ZADD deityportfolio 5 {"name":"torture",                     "score":5 }
+ZADD deityportfolio 5 {"name":"underwater",                  "score":5 }
+ZADD deityportfolio 5 {"name":"underworld",                  "score":5 }
+ZADD deityportfolio 5 {"name":"vanity",                      "score":5 }
+ZADD deityportfolio 5 {"name":"vigilance",                   "score":5 }
+ZADD deityportfolio 5 {"name":"women",                       "score":5 }
+ZADD deityportfolio 6 {"name":"blood",                       "score":6 }
+ZADD deityportfolio 6 {"name":"celebrations",                "score":6 }
+ZADD deityportfolio 6 {"name":"combat",                      "score":6 }
+ZADD deityportfolio 6 {"name":"comfort",                     "score":6 }
+ZADD deityportfolio 6 {"name":"communication",               "score":6 }
+ZADD deityportfolio 6 {"name":"defense",                     "score":6 }
+ZADD deityportfolio 6 {"name":"despair",                     "score":6 }
+ZADD deityportfolio 6 {"name":"diplomacy",                   "score":6 }
+ZADD deityportfolio 6 {"name":"dragonkind",                  "score":6 }
+ZADD deityportfolio 6 {"name":"drow",                        "score":6 }
+ZADD deityportfolio 6 {"name":"emotions",                    "score":6 }
+ZADD deityportfolio 6 {"name":"espionage",                   "score":6 }
+ZADD deityportfolio 6 {"name":"evil knowledge",              "score":6 }
+ZADD deityportfolio 6 {"name":"evil magic",                  "score":6 }
+ZADD deityportfolio 6 {"name":"famine",                      "score":6 }
+ZADD deityportfolio 6 {"name":"farming",                     "score":6 }
+ZADD deityportfolio 6 {"name":"fates",                       "score":6 }
+ZADD deityportfolio 6 {"name":"fear",                        "score":6 }
+ZADD deityportfolio 6 {"name":"fire",                        "score":6 }
+ZADD deityportfolio 6 {"name":"flora",                       "score":6 }
+ZADD deityportfolio 6 {"name":"food",                        "score":6 }
+ZADD deityportfolio 6 {"name":"glory",                       "score":6 }
+ZADD deityportfolio 6 {"name":"healing",                     "score":6 }
+ZADD deityportfolio 6 {"name":"hope",                        "score":6 }
+ZADD deityportfolio 6 {"name":"hunters",                     "score":6 }
+ZADD deityportfolio 6 {"name":"hunting",                     "score":6 }
+ZADD deityportfolio 6 {"name":"insanity",                    "score":6 }
+ZADD deityportfolio 6 {"name":"intellect",                   "score":6 }
+ZADD deityportfolio 6 {"name":"intelligence",                "score":6 }
+ZADD deityportfolio 6 {"name":"laws",                        "score":6 }
+ZADD deityportfolio 6 {"name":"liberty",                     "score":6 }
+ZADD deityportfolio 6 {"name":"lore",                        "score":6 }
+ZADD deityportfolio 6 {"name":"love",                        "score":6 }
+ZADD deityportfolio 6 {"name":"marriage",                    "score":6 }
+ZADD deityportfolio 6 {"name":"merchants",                   "score":6 }
+ZADD deityportfolio 6 {"name":"might",                       "score":6 }
+ZADD deityportfolio 6 {"name":"moons",                       "score":6 }
+ZADD deityportfolio 6 {"name":"murder",                      "score":6 }
+ZADD deityportfolio 6 {"name":"mysteries",                   "score":6 }
+ZADD deityportfolio 6 {"name":"oaths",                       "score":6 }
+ZADD deityportfolio 6 {"name":"peace",                       "score":6 }
+ZADD deityportfolio 6 {"name":"plant life",                  "score":6 }
+ZADD deityportfolio 6 {"name":"pleasure",                    "score":6 }
+ZADD deityportfolio 6 {"name":"plenty",                      "score":6 }
+ZADD deityportfolio 6 {"name":"pranks",                      "score":6 }
+ZADD deityportfolio 6 {"name":"protection",                  "score":6 }
+ZADD deityportfolio 6 {"name":"punishment",                  "score":6 }
+ZADD deityportfolio 6 {"name":"purity",                      "score":6 }
+ZADD deityportfolio 6 {"name":"rain",                        "score":6 }
+ZADD deityportfolio 6 {"name":"reasoning",                   "score":6 }
+ZADD deityportfolio 6 {"name":"reason",                      "score":6 }
+ZADD deityportfolio 6 {"name":"revenge",                     "score":6 }
+ZADD deityportfolio 6 {"name":"righteousness",               "score":6 }
+ZADD deityportfolio 6 {"name":"roads",                       "score":6 }
+ZADD deityportfolio 6 {"name":"science",                     "score":6 }
+ZADD deityportfolio 6 {"name":"sea",                         "score":6 }
+ZADD deityportfolio 6 {"name":"shadows",                     "score":6 }
+ZADD deityportfolio 6 {"name":"sorcery",                     "score":6 }
+ZADD deityportfolio 6 {"name":"spells",                      "score":6 }
+ZADD deityportfolio 6 {"name":"spring",                      "score":6 }
+ZADD deityportfolio 6 {"name":"stealth",                     "score":6 }
+ZADD deityportfolio 6 {"name":"strategy",                    "score":6 }
+ZADD deityportfolio 6 {"name":"strength",                    "score":6 }
+ZADD deityportfolio 6 {"name":"summer",                      "score":6 }
+ZADD deityportfolio 6 {"name":"traps",                       "score":6 }
+ZADD deityportfolio 6 {"name":"truth",                       "score":6 }
+ZADD deityportfolio 6 {"name":"valor",                       "score":6 }
+ZADD deityportfolio 6 {"name":"violence",                    "score":6 }
+ZADD deityportfolio 6 {"name":"wanderers",                   "score":6 }
+ZADD deityportfolio 6 {"name":"water",                       "score":6 }
+ZADD deityportfolio 6 {"name":"wealth",                      "score":6 }
+ZADD deityportfolio 6 {"name":"weapons",                     "score":6 }
+ZADD deityportfolio 6 {"name":"woodlands",                   "score":6 }
+ZADD deityportfolio 8 {"name":"air",                         "score":8 }
+ZADD deityportfolio 8 {"name":"animals",                     "score":8 }
+ZADD deityportfolio 8 {"name":"art",                         "score":8 }
+ZADD deityportfolio 8 {"name":"authority",                   "score":8 }
+ZADD deityportfolio 8 {"name":"balance",                     "score":8 }
+ZADD deityportfolio 8 {"name":"battle",                      "score":8 }
+ZADD deityportfolio 8 {"name":"beauty",                      "score":8 }
+ZADD deityportfolio 8 {"name":"betrayal",                    "score":8 }
+ZADD deityportfolio 8 {"name":"chance",                      "score":8 }
+ZADD deityportfolio 8 {"name":"chaos",                       "score":8 }
+ZADD deityportfolio 8 {"name":"commerce",                    "score":8 }
+ZADD deityportfolio 8 {"name":"compassion",                  "score":8 }
+ZADD deityportfolio 8 {"name":"conflict",                    "score":8 }
+ZADD deityportfolio 8 {"name":"corruption",                  "score":8 }
+ZADD deityportfolio 8 {"name":"death",                       "score":8 }
+ZADD deityportfolio 8 {"name":"death",                       "score":8 }
+ZADD deityportfolio 8 {"name":"destiny",                     "score":8 }
+ZADD deityportfolio 8 {"name":"destruction",                 "score":8 }
+ZADD deityportfolio 8 {"name":"discipline",                  "score":8 }
+ZADD deityportfolio 8 {"name":"disease",                     "score":8 }
+ZADD deityportfolio 8 {"name":"disguise",                    "score":8 }
+ZADD deityportfolio 8 {"name":"duty",                        "score":8 }
+ZADD deityportfolio 8 {"name":"envy",                        "score":8 }
+ZADD deityportfolio 8 {"name":"fertility",                   "score":8 }
+ZADD deityportfolio 8 {"name":"fortune",                     "score":8 }
+ZADD deityportfolio 8 {"name":"freedom",                     "score":8 }
+ZADD deityportfolio 8 {"name":"greed",                       "score":8 }
+ZADD deityportfolio 8 {"name":"growing things",              "score":8 }
+ZADD deityportfolio 8 {"name":"guardians",                   "score":8 }
+ZADD deityportfolio 8 {"name":"harvest",                     "score":8 }
+ZADD deityportfolio 8 {"name":"judgement",                   "score":8 }
+ZADD deityportfolio 8 {"name":"justice",                     "score":8 }
+ZADD deityportfolio 8 {"name":"knowledge",                   "score":8 }
+ZADD deityportfolio 8 {"name":"life",                        "score":8 }
+ZADD deityportfolio 8 {"name":"lore",                        "score":8 }
+ZADD deityportfolio 8 {"name":"luck",                        "score":8 }
+ZADD deityportfolio 8 {"name":"magic",                       "score":8 }
+ZADD deityportfolio 8 {"name":"magic",                       "score":8 }
+ZADD deityportfolio 8 {"name":"mercy",                       "score":8 }
+ZADD deityportfolio 8 {"name":"mercy",                       "score":8 }
+ZADD deityportfolio 8 {"name":"nature",                      "score":8 }
+ZADD deityportfolio 8 {"name":"navigation",                  "score":8 }
+ZADD deityportfolio 8 {"name":"necromancy",                  "score":8 }
+ZADD deityportfolio 8 {"name":"neutrality",                  "score":8 }
+ZADD deityportfolio 8 {"name":"order",                       "score":8 }
+ZADD deityportfolio 8 {"name":"secrets",                     "score":8 }
+ZADD deityportfolio 8 {"name":"sleep",                       "score":8 }
+ZADD deityportfolio 8 {"name":"strife",                      "score":8 }
+ZADD deityportfolio 8 {"name":"stupidity",                   "score":8 }
+ZADD deityportfolio 8 {"name":"sun",                         "score":8 }
+ZADD deityportfolio 8 {"name":"time",                        "score":8 }
+ZADD deityportfolio 8 {"name":"trade",                       "score":8 }
+ZADD deityportfolio 8 {"name":"travel",                      "score":8 }
+ZADD deityportfolio 8 {"name":"trickery",                    "score":8 }
+ZADD deityportfolio 8 {"name":"tyranny",                     "score":8 }
+ZADD deityportfolio 8 {"name":"virtue",                      "score":8 }
+ZADD deityportfolio 8 {"name":"war",                         "score":8 }
+ZADD deityportfolio 8 {"name":"wisdom",                      "score":8 }
+ZADD deityportfolio 16 {"name":"evil",                       "score":16 }
+ZADD deityportfolio 16 {"name":"good",                       "score":16 }
     
 
+
+#    <acceptance><!--Sect members are see as _____ by the faithful -->
+ZADD cult_acceptance   5 {"name":"heretical",  "score":5   } 
+ZADD cult_acceptance  10 {"name":"blasphemous",  "score":10   } 
+ZADD cult_acceptance  15 {"name":"sectarian",  "score":15   } 
+ZADD cult_acceptance  20 {"name":"rebelious",  "score":20   } 
+ZADD cult_acceptance  25 {"name":"defecting",  "score":25   } 
+ZADD cult_acceptance  30 {"name":"dissenting",  "score":30   } 
+ZADD cult_acceptance  35 {"name":"agitating",  "score":35   } 
+ZADD cult_acceptance  40 {"name":"deviant",  "score":40   } 
+ZADD cult_acceptance  45 {"name":"mislead",  "score":45   } 
+ZADD cult_acceptance  50 {"name":"non-confirming",  "score":50   } 
+ZADD cult_acceptance  55 {"name":"faithful",  "score":55   } 
+ZADD cult_acceptance  60 {"name":"honorable",  "score":60   } 
+ZADD cult_acceptance  65 {"name":"noble",  "score":65   } 
+ZADD cult_acceptance  70 {"name":"loyal",  "score":70   } 
+ZADD cult_acceptance  75 {"name":"dutiful",  "score":75   } 
+ZADD cult_acceptance  80 {"name":"reverant",  "score":80   } 
+ZADD cult_acceptance  85 {"name":"devout",  "score":85   } 
+ZADD cult_acceptance  90 {"name":"virtuous",  "score":90   } 
+ZADD cult_acceptance  95 {"name":"righteous",  "score":95   } 
+ZADD cult_acceptance 100 {"name":"saintly",  "score":100   } 
+    
+#    <culttype>
+LPUSH cult_kind cult
+LPUSH cult_kind sect
+LPUSH cult_kind clan
+LPUSH cult_kind faction
+LPUSH cult_kind following
+LPUSH cult_kind chapter
+LPUSH cult_kind order
+LPUSH cult_kind society
+    
+
+#        <vow><!-- clerics of bob often follow a Vow of _______ (a vow to  ____) -->
+LPUSH deity_vow abstinence
+LPUSH deity_vow celibacy
+LPUSH deity_vow charity
+LPUSH deity_vow chastity
+LPUSH deity_vow humility
+LPUSH deity_vow independence
+LPUSH deity_vow itinerancy
+LPUSH deity_vow nonviolence
+LPUSH deity_vow obedience
+LPUSH deity_vow peace
+LPUSH deity_vow poverty
+LPUSH deity_vow propriety
+LPUSH deity_vow purity
+LPUSH deity_vow reconstruction
+LPUSH deity_vow silence
+LPUSH deity_vow stocism
+LPUSH deity_vow submission
+LPUSH deity_vow surety
+
+HSET deity_vow_description abstinence  {"name":"Abstinence", "description":"abstain from alcoholic beverages, drugs, and intoxication"  }
+HSET deity_vow_description celibacy  {"name":"Celibacy", "description":"refrain from marriage and sex"  }
+HSET deity_vow_description charity  {"name":"Charity", "description":"refrain from accepting compensation for any services rendered"  }
+HSET deity_vow_description chastity  {"name":"Chastity", "description":"refrain from marriage and sex"  }
+HSET deity_vow_description humility  {"name":"Humility", "description":"abstain from extholing your own virtues"  }
+HSET deity_vow_description independence  {"name":"Independence", "description":"never affiliate with or take orders from any organization, including the church"  }
+HSET deity_vow_description itinerancy  {"name":"Itinerancy", "description":"constantly move from place to place, never settling"  }
+HSET deity_vow_description nonviolence  {"name":"Nonviolence", "description":"avoid violence against other sentient creatures"  }
+HSET deity_vow_description obedience  {"name":"Obedience", "description":"live according to the dictates of a superior in the religious order or similar organization"  }
+HSET deity_vow_description peace  {"name":"Peace", "description":"abstain from harming any living creature"  }
+HSET deity_vow_description poverty  {"name":"Poverty", "description":"forswear material possessions"  }
+HSET deity_vow_description propriety  {"name":"Propriety", "description":" seek glory, honor, and victory in tribute"  }
+HSET deity_vow_description purity  {"name":"Purity", "description":"avoid contact with dead flesh"  }
+HSET deity_vow_description reconstruction  {"name":"Reconstruction", "description":"reunite factions after a long and bitter feud"  }
+HSET deity_vow_description silence  {"name":"Silence", "description":"not speak under any circumstances"  }
+HSET deity_vow_description stocism  {"name":"Stocism", "description":"speak as few words as possible, often a given word to represent their faith"  }
+HSET deity_vow_description submission  {"name":"Submission", "description":"submit to those who ask of it"  }
+HSET deity_vow_description surety  {"name":"Surety", "description":"defend a group or groups with your very life"  }
