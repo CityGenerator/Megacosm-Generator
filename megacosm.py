@@ -49,7 +49,7 @@ def GenerateMagicItem():
 
     magicitemfeatures={'seed':seed,}
     for param in request.args :
-        if re.match('^magicitem_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^magicitem_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
             magicitemfeatures[param]=int(request.args[param])
         elif re.match('^magicitem_kind$',param) and request.args[param] in server.lrange('magicitem_kind',0,-1):
@@ -72,7 +72,7 @@ def GenerateNPC():
     motivations=server.lrange('npc_motivation',0,-1);
     emotions=server.lrange('npc_emotion',0,-1);
     for param in request.args :
-        if re.match('^npc_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^npc_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
             npcfeatures[param]=int(request.args[param])
         elif re.match('^npc_race$',param) and request.args[param] in races:
@@ -133,7 +133,7 @@ def GeneratePlanet():
     planetfeatures={'seed':seed,}
 
     for param in request.args :
-        if re.match('^planet_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^planet_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
             planetfeatures[param]=int(request.args[param])
 
@@ -151,7 +151,7 @@ def GenerateDeity():
 
     deityfeatures={'seed':seed,}
     for param in request.args :
-        if re.match('^deity_.*_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^deity_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
             deityfeatures[param]=int(request.args[param])
 
