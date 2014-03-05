@@ -17,6 +17,8 @@ LPUSH npcstats honor
 ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her",   "score":51  }
 ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him",   "score":100  }
 
+#TODO add npc_piety
+
 #Bob is a human 
 ZADD npc_age 5    {"name":"juvenile",       "score":5   }
 ZADD npc_age 10   {"name":"adolescent",     "score":10  }

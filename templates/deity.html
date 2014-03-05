@@ -13,52 +13,40 @@
     <h1>Tremble Before <a href="/deity?seed={{deity.seed}}">{{deity.avatar.name['full']}} ({{deity.seed}})</a></h1>
 
 
+
+<div style="float:right;width:200px;padding:10px;margin:10px; border:1px solid black" class="panel">
+    <h2>Portfolio</h2>
+    <ul>
+    {%for portfolio in deity.portfolios%}
+        <li>{{portfolio['name']|capitalize}} ({{portfolio['score']}}) </li>
+    {%endfor%}
+    </ul>
+</div>
+
 <h2>Summary</h2>
-{{deity.avatar.name['full']}} is {{deity.importance['name'] |article}} who appreciates _________. 
-{{deity.avatar.name['firstname']}}'s portfolio includes _______________.
+{{deity.avatar.name['full']}} is {{deity.age['name'] |article}} {{deity.importance['name']}} who appreciates {{deity.favored_stat}}. 
+{{deity.avatar.name['firstname']}} is know as the god of {{deity.portfolios[0]['name']|title}}.
 {{deity.avatar.sex['possessive']|capitalize}} holy symbol is {{ deity.primarycolor|article}} {{deity.holysymbol_type}} {{ deity.holysymbol}}.
 {{deity.worship|capitalize}} are the preferred form of worship and {{deity.favored_weapon}} are the favored weapon.
 
 
 <h2>Appearance</h2>
+{{deity.avatar.name['full']}} sometimes chooses to appear as {{deity.form|article}} before {{deity.avatar.sex['possessive']}} followers, but has been known to take the form of a {{deity.avatar.height}}, {{deity.avatar.age['name']}} {{deity.avatar.race}}.
 
-Bob often appears to her followers as _________, but has been known to take the form of a __________. She usually dresses in her preferred colors, {{ deity.primarycolor}} and {{ deity.primarycolor}}.
-Faevartel Tyrneaarrow often appears as a short half-elf with a dark complexion. Faevartel appears chubby and has sunken eyes.
+{{deity.avatar.sex['pronoun']|capitalize}} usually dresses in {{deity.avatar.sex['possessive']}} preferred colors, {{ deity.primarycolor}} and {{ deity.secondarycolor}}.
 
 <h2>Clergy</h2>
+While in public, {{deity.clergytype}} of {{deity.avatar.name['firstname']}} may wear {{deity.clergy_dress}}, and will often  follow a Vow of {{deity.vow_description['name']|capitalize}} - to {{deity.vow_description['description']}}.
 
-Clergy of Faevartel often follow a Vow of Charity (a vow to refrain from accepting compensation for any services rendered).
+
 <h2>Followers</h2>
 
-This antiquated god's worshipers are everywhere. Faevartel is thought to have several devoted followers in the world. Faevartel's followers are said to be hidden about their affiliation.
-
-<h2> data</h2>
-'clergytype': 'abbots'
-'jealousy': {u'score': 90
-u'name': u'selfish'}
-'holysymbol': 'insect'
-'vow': 'purity'
-'followers': {u'score': 70
-u'name': u'wide spread'}
-'holysymbol_type': 'shining'
-'importance': {u'score': 80
-u'name': u'intermediate deity'
-u'points': 10}
-'secrecy': {u'score': 20
-u'name': u'tight lipped'}
-'name': {'full': ''}
-'age': {u'score': 55
-u'name': u'antiquated'}
-'vow_description': {u'name': u'Purity'
-u'description': u'avoid contact with dead flesh'}
-'primarycolor': 'very dark grey'
-'devotion': {u'score': 60
-u'name': u'an unknown number of'
+{{deity.avatar.name['firstname']}}'s followers are {{deity.followerzeal['name']}}, and are often {{deity.secrecy['name']}} about their affiliation. {{deity.avatar.name['firstname']}} is thought to have {{deity.followercount['name']}} active worshipers throughout the world.
 
 
+{%if deity.sect%}
+<h2>Sects</h2>
 
-
-{{deity.__dict__}}
-
+{%endif%}
 
 {% endblock %}

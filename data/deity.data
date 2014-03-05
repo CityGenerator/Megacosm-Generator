@@ -3,7 +3,7 @@
 LPUSH npcstats importance
 LPUSH npcstats jealousy
 LPUSH npcstats age
-LPUSH npcstats followers
+LPUSH npcstats followerzeal
 LPUSH npcstats devotion
 LPUSH npcstats secrecy
 LPUSH npcstats power
@@ -11,10 +11,10 @@ LPUSH npcstats power
 ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 } 
 ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 } 
 ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 } 
-ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":4 } 
-ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":10 } 
-ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":12 } 
-ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":20 } 
+ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":7 } 
+ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":11 } 
+ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":13 } 
+ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":21 } 
 
 ZADD deity_jealousy  10 {"name":"trusting",  "score":10   } 
 ZADD deity_jealousy  20 {"name":"unresentful",  "score":20   } 
@@ -47,47 +47,53 @@ ZADD deity_age  85 {"name":"eternal",  "score":85   }
 ZADD deity_age  99 {"name":"ancient",  "score":99   } 
 ZADD deity_age 100 {"name":"original",  "score":100   } 
         
-#        <followers> <!--Bobs followers are -->
-ZADD deity_followers   5 {"name":"thought to be extinct",  "score":5   } 
-ZADD deity_followers  10 {"name":"long gone",  "score":10   } 
-ZADD deity_followers  20 {"name":"rare",  "score":20   } 
-ZADD deity_followers  30 {"name":"scarce",  "score":30   } 
-ZADD deity_followers  40 {"name":"uncommon",  "score":40   } 
-ZADD deity_followers  50 {"name":"common",  "score":50   } 
-ZADD deity_followers  60 {"name":"prevalent",  "score":60   } 
-ZADD deity_followers  70 {"name":"wide spread",  "score":70   } 
-ZADD deity_followers  80 {"name":"everywhere",  "score":80   } 
-ZADD deity_followers  90 {"name":"legion",  "score":90   } 
-ZADD deity_followers 100 {"name":"ubiquitous",  "score":100   } 
-        
+#        <followerzeal> <!--Bobs followers are -->
+ZADD deity_followerzeal   5 {"name":"noncommittal", "score":5   } 
+ZADD deity_followerzeal  10 {"name":"dispassionate","score":10   } 
+ZADD deity_followerzeal  20 {"name":"insincere",    "score":20   } 
+ZADD deity_followerzeal  30 {"name":"inattentive",  "score":30   } 
+ZADD deity_followerzeal  40 {"name":"dutiful",      "score":40   } 
+ZADD deity_followerzeal  50 {"name":"pious",        "score":50   } 
+ZADD deity_followerzeal  60 {"name":"devoted",      "score":60   } 
+ZADD deity_followerzeal  70 {"name":"reverent",     "score":70   } 
+ZADD deity_followerzeal  80 {"name":"devout",       "score":80   } 
+ZADD deity_followerzeal  90 {"name":"passionate",   "score":90   } 
+ZADD deity_followerzeal 100 {"name":"overzealous",  "score":100   } 
+
+#TODO ZADD popularity growing/dying out
+
 #        <devotion {"name":"<!-- Bob is thought to have _______ current followers in the world-->
-ZADD deity_devotion   5 {"name":"no",  "score":5   } 
-ZADD deity_devotion  10 {"name":"only a few",  "score":10   } 
-ZADD deity_devotion  15 {"name":"several",  "score":15   } 
-ZADD deity_devotion  20 {"name":"a dozen",  "score":20   } 
-ZADD deity_devotion  25 {"name":"several dozen",  "score":25   } 
-ZADD deity_devotion  30 {"name":"over a hundred",  "score":30   } 
-ZADD deity_devotion  60 {"name":"an unknown number of",  "score":60   } 
-ZADD deity_devotion  65 {"name":"hundreds of",  "score":65   } 
-ZADD deity_devotion  70 {"name":"near a thousand",  "score":70   } 
-ZADD deity_devotion  75 {"name":"several thousand",  "score":75   } 
-ZADD deity_devotion  80 {"name":"tens of thouands of",  "score":80   } 
-ZADD deity_devotion  85 {"name":"hundreds of thousands of",  "score":85   } 
-ZADD deity_devotion 100 {"name":"countless",  "score":100   } 
+ZADD deity_followercount   5 {"name":"no",  "score":5   } 
+ZADD deity_followercount  10 {"name":"only a few",  "score":10   } 
+ZADD deity_followercount  15 {"name":"several",  "score":15   } 
+ZADD deity_followercount  20 {"name":"a dozen",  "score":20   } 
+ZADD deity_followercount  25 {"name":"several dozen",  "score":25   } 
+ZADD deity_followercount  30 {"name":"over a hundred",  "score":30   } 
+ZADD deity_followercount  60 {"name":"an unknown number of",  "score":60   } 
+ZADD deity_followercount  65 {"name":"hundreds of",  "score":65   } 
+ZADD deity_followercount  70 {"name":"near a thousand",  "score":70   } 
+ZADD deity_followercount  75 {"name":"several thousand",  "score":75   } 
+ZADD deity_followercount  80 {"name":"tens of thouands of",  "score":80   } 
+ZADD deity_followercount  85 {"name":"hundreds of thousands of",  "score":85   } 
+ZADD deity_followercount 100 {"name":"countless",  "score":100   } 
         
-#        <secrecy  <!-- bob's followers are said to be ________ about their affiliation-->
-ZADD deity_secrecy   5 {"name":"secretive",  "score":5   } 
-ZADD deity_secrecy  10 {"name":"silent",  "score":10   } 
+# and are often {{deity.secrecy['name']}} about their affiliation.
+ZADD deity_secrecy   5 {"name":"secretive",     "score":5   } 
+ZADD deity_secrecy  10 {"name":"silent",        "score":10   } 
 ZADD deity_secrecy  20 {"name":"tight lipped",  "score":20   } 
-ZADD deity_secrecy  30 {"name":"hidden",  "score":30   } 
-ZADD deity_secrecy  40 {"name":"reserved",  "score":40   } 
-ZADD deity_secrecy  50 {"name":"cryptic",  "score":50   } 
-ZADD deity_secrecy  60 {"name":"careful",  "score":60   } 
-ZADD deity_secrecy  70 {"name":"clear",  "score":70   } 
-ZADD deity_secrecy  80 {"name":"forthright",  "score":80   } 
-ZADD deity_secrecy  90 {"name":"honest",  "score":90   } 
-ZADD deity_secrecy 100 {"name":"open",  "score":100   } 
-        
+ZADD deity_secrecy  30 {"name":"cryptic",       "score":30   } 
+ZADD deity_secrecy  40 {"name":"hidden",        "score":40   } 
+ZADD deity_secrecy  45 {"name":"careful",       "score":45   } 
+ZADD deity_secrecy  50 {"name":"reserved",      "score":50   } 
+ZADD deity_secrecy  55 {"name":"honest",        "score":55   } 
+ZADD deity_secrecy  60 {"name":"open",          "score":60   } 
+ZADD deity_secrecy  70 {"name":"indiscreet",    "score":70   } 
+ZADD deity_secrecy  80 {"name":"proud",         "score":80   } 
+ZADD deity_secrecy  90 {"name":"pretentious",   "score":90   } 
+ZADD deity_secrecy 100 {"name":"pompous",       "score":100   } 
+#TODO secrecy should include loud and proud
+
+# 
 LPUSH deity_clergytype priests
 LPUSH deity_clergytype clergy
 LPUSH deity_clergytype clerics
@@ -103,7 +109,7 @@ LPUSH deity_clergytype abbots
 LPUSH deity_clergytype evangelists
 LPUSH deity_clergytype shepherds
         
-#        <worship> <!--Orsis prefers ____ from his followers -->
+#   ___________ are the preferred form of worship.
 LPUSH deity_worship sacrifices
 LPUSH deity_worship offerings
 LPUSH deity_worship tithings
@@ -237,8 +243,7 @@ LPUSH deity_favored_weapon tonfas
 LPUSH deity_favored_weapon tridents
 LPUSH deity_favored_weapon unarmed combat
 LPUSH deity_favored_weapon unique axes
-        
-    
+
 SET   deity_holysymbol_type_chance 10
 LPUSH deity_holysymbol_type single
 LPUSH deity_holysymbol_type double
@@ -246,6 +251,7 @@ LPUSH deity_holysymbol_type triple
 LPUSH deity_holysymbol_type stylized
 LPUSH deity_holysymbol_type broken
 LPUSH deity_holysymbol_type shining
+LPUSH deity_holysymbol_type bloody
 
 LPUSH deity_holysymbol ankh
 LPUSH deity_holysymbol bone
@@ -1321,41 +1327,97 @@ ZADD deityportfolio 8 {"name":"war",                         "score":8 }
 ZADD deityportfolio 8 {"name":"wisdom",                      "score":8 }
 ZADD deityportfolio 16 {"name":"evil",                       "score":16 }
 ZADD deityportfolio 16 {"name":"good",                       "score":16 }
-    
+
+LPUSH deitypowerscale 16
+LPUSH deitypowerscale  8
+LPUSH deitypowerscale  6
+LPUSH deitypowerscale  5
+LPUSH deitypowerscale  4
+LPUSH deitypowerscale  3
+LPUSH deitypowerscale  2
+LPUSH deitypowerscale  1
 
 
 #    <acceptance><!--Sect members are see as _____ by the faithful -->
-ZADD cult_acceptance   5 {"name":"heretical",  "score":5   } 
-ZADD cult_acceptance  10 {"name":"blasphemous",  "score":10   } 
-ZADD cult_acceptance  15 {"name":"sectarian",  "score":15   } 
-ZADD cult_acceptance  20 {"name":"rebelious",  "score":20   } 
-ZADD cult_acceptance  25 {"name":"defecting",  "score":25   } 
-ZADD cult_acceptance  30 {"name":"dissenting",  "score":30   } 
-ZADD cult_acceptance  35 {"name":"agitating",  "score":35   } 
-ZADD cult_acceptance  40 {"name":"deviant",  "score":40   } 
-ZADD cult_acceptance  45 {"name":"mislead",  "score":45   } 
-ZADD cult_acceptance  50 {"name":"non-confirming",  "score":50   } 
-ZADD cult_acceptance  55 {"name":"faithful",  "score":55   } 
-ZADD cult_acceptance  60 {"name":"honorable",  "score":60   } 
-ZADD cult_acceptance  65 {"name":"noble",  "score":65   } 
-ZADD cult_acceptance  70 {"name":"loyal",  "score":70   } 
-ZADD cult_acceptance  75 {"name":"dutiful",  "score":75   } 
-ZADD cult_acceptance  80 {"name":"reverant",  "score":80   } 
-ZADD cult_acceptance  85 {"name":"devout",  "score":85   } 
-ZADD cult_acceptance  90 {"name":"virtuous",  "score":90   } 
-ZADD cult_acceptance  95 {"name":"righteous",  "score":95   } 
-ZADD cult_acceptance 100 {"name":"saintly",  "score":100   } 
+ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
+ZADD sect_acceptance  10 {"name":"blasphemous",  "score":10   } 
+ZADD sect_acceptance  15 {"name":"sectarian",  "score":15   } 
+ZADD sect_acceptance  20 {"name":"rebelious",  "score":20   } 
+ZADD sect_acceptance  25 {"name":"defecting",  "score":25   } 
+ZADD sect_acceptance  30 {"name":"dissenting",  "score":30   } 
+ZADD sect_acceptance  35 {"name":"agitating",  "score":35   } 
+ZADD sect_acceptance  40 {"name":"deviant",  "score":40   } 
+ZADD sect_acceptance  45 {"name":"mislead",  "score":45   } 
+ZADD sect_acceptance  50 {"name":"non-confirming",  "score":50   } 
+ZADD sect_acceptance  55 {"name":"faithful",  "score":55   } 
+ZADD sect_acceptance  60 {"name":"honorable",  "score":60   } 
+ZADD sect_acceptance  65 {"name":"noble",  "score":65   } 
+ZADD sect_acceptance  70 {"name":"loyal",  "score":70   } 
+ZADD sect_acceptance  75 {"name":"dutiful",  "score":75   } 
+ZADD sect_acceptance  80 {"name":"reverant",  "score":80   } 
+ZADD sect_acceptance  85 {"name":"devout",  "score":85   } 
+ZADD sect_acceptance  90 {"name":"virtuous",  "score":90   } 
+ZADD sect_acceptance  95 {"name":"righteous",  "score":95   } 
+ZADD sect_acceptance 100 {"name":"saintly",  "score":100   } 
     
-#    <culttype>
-LPUSH cult_kind cult
-LPUSH cult_kind sect
-LPUSH cult_kind clan
-LPUSH cult_kind faction
-LPUSH cult_kind following
-LPUSH cult_kind chapter
-LPUSH cult_kind order
-LPUSH cult_kind society
-    
+#    <secttype>
+LPUSH sect_kind cult
+LPUSH sect_kind sect
+LPUSH sect_kind clan
+LPUSH sect_kind faction
+LPUSH sect_kind following
+LPUSH sect_kind chapter
+LPUSH sect_kind order
+LPUSH sect_kind society
+
+#Ganthidon sometimes chooses to appear as a _________ before his followers.
+LPUSH deity_form talking jackal
+LPUSH deity_form burning bush
+LPUSH deity_form nightmarish vision
+LPUSH deity_form colorful mist
+LPUSH deity_form pillar of flame
+LPUSH deity_form small child
+LPUSH deity_form elderly man
+LPUSH deity_form elderly woman
+LPUSH deity_form hooded figure
+LPUSH deity_form whisper
+LPUSH deity_form flash of light from the skies
+LPUSH deity_form thundering voice
+LPUSH deity_form heavily armored soldier
+LPUSH deity_form beautiful maiden
+LPUSH deity_form beggar
+LPUSH deity_form small bird 
+LPUSH deity_form insect
+LPUSH deity_form telepathic plant
+LPUSH deity_form beautiful vision
+LPUSH deity_form horrible vision
+LPUSH deity_form glittering reflection
+LPUSH deity_form ghostly visage
+
+#While in public, clergy of bhaal wear
+LPUSH deity_clergy_dress colored robes 
+LPUSH deity_clergy_dress nondescript robes 
+LPUSH deity_clergy_dress their holy symbol around their neck
+LPUSH deity_clergy_dress their holy symbol emblazoned on their clothing
+LPUSH deity_clergy_dress formal dress
+LPUSH deity_clergy_dress vestments of their faith
+LPUSH deity_clergy_dress nondescript clothing
+LPUSH deity_clergy_dress colorful saris
+LPUSH deity_clergy_dress decorated mantles
+LPUSH deity_clergy_dress headresses unique to their faith
+LPUSH deity_clergy_dress formal uniforms
+LPUSH deity_clergy_dress trophies from fallen foes
+LPUSH deity_clergy_dress informal attire
+LPUSH deity_clergy_dress formal attire
+LPUSH deity_clergy_dress decorative attire
+LPUSH deity_clergy_dress single fabrics 
+LPUSH deity_clergy_dress common garb
+LPUSH deity_clergy_dress decorative frocks
+LPUSH deity_clergy_dress decorative cassocks
+LPUSH deity_clergy_dress decorative stoles
+LPUSH deity_clergy_dress colorful gowns
+LPUSH deity_clergy_dress decorative copes
+LPUSH deity_clergy_dress ritual makeup
 
 #        <vow><!-- clerics of bob often follow a Vow of _______ (a vow to  ____) -->
 LPUSH deity_vow abstinence
@@ -1377,21 +1439,21 @@ LPUSH deity_vow stocism
 LPUSH deity_vow submission
 LPUSH deity_vow surety
 
-HSET deity_vow_description abstinence  {"name":"Abstinence", "description":"abstain from alcoholic beverages, drugs, and intoxication"  }
-HSET deity_vow_description celibacy  {"name":"Celibacy", "description":"refrain from marriage and sex"  }
-HSET deity_vow_description charity  {"name":"Charity", "description":"refrain from accepting compensation for any services rendered"  }
-HSET deity_vow_description chastity  {"name":"Chastity", "description":"refrain from marriage and sex"  }
-HSET deity_vow_description humility  {"name":"Humility", "description":"abstain from extholing your own virtues"  }
-HSET deity_vow_description independence  {"name":"Independence", "description":"never affiliate with or take orders from any organization, including the church"  }
-HSET deity_vow_description itinerancy  {"name":"Itinerancy", "description":"constantly move from place to place, never settling"  }
-HSET deity_vow_description nonviolence  {"name":"Nonviolence", "description":"avoid violence against other sentient creatures"  }
-HSET deity_vow_description obedience  {"name":"Obedience", "description":"live according to the dictates of a superior in the religious order or similar organization"  }
-HSET deity_vow_description peace  {"name":"Peace", "description":"abstain from harming any living creature"  }
-HSET deity_vow_description poverty  {"name":"Poverty", "description":"forswear material possessions"  }
-HSET deity_vow_description propriety  {"name":"Propriety", "description":" seek glory, honor, and victory in tribute"  }
-HSET deity_vow_description purity  {"name":"Purity", "description":"avoid contact with dead flesh"  }
-HSET deity_vow_description reconstruction  {"name":"Reconstruction", "description":"reunite factions after a long and bitter feud"  }
-HSET deity_vow_description silence  {"name":"Silence", "description":"not speak under any circumstances"  }
-HSET deity_vow_description stocism  {"name":"Stocism", "description":"speak as few words as possible, often a given word to represent their faith"  }
-HSET deity_vow_description submission  {"name":"Submission", "description":"submit to those who ask of it"  }
-HSET deity_vow_description surety  {"name":"Surety", "description":"defend a group or groups with your very life"  }
+HSET deity_vow_description abstinence     {"name":"Abstinence",       "description":"abstain from alcoholic beverages, drugs, and intoxication"                                   }
+HSET deity_vow_description celibacy       {"name":"Celibacy",         "description":"refrain from marriage and sex"                                                               }
+HSET deity_vow_description charity        {"name":"Charity",          "description":"refrain from accepting compensation for any services rendered"                               }
+HSET deity_vow_description chastity       {"name":"Chastity",         "description":"refrain from marriage and sex"                                                               }
+HSET deity_vow_description humility       {"name":"Humility",         "description":"abstain from extholing your own virtues"                                                     }
+HSET deity_vow_description independence   {"name":"Independence",     "description":"never affiliate with or take orders from any organization, including the church"             }
+HSET deity_vow_description itinerancy     {"name":"Itinerancy",       "description":"constantly move from place to place, never settling"                                         }
+HSET deity_vow_description nonviolence    {"name":"Nonviolence",      "description":"avoid violence against other sentient creatures"                                             }
+HSET deity_vow_description obedience      {"name":"Obedience",        "description":"live according to the dictates of a superior in the religious order or similar organization" }
+HSET deity_vow_description peace          {"name":"Peace",            "description":"abstain from harming any living creature"                                                    }
+HSET deity_vow_description poverty        {"name":"Poverty",          "description":"forswear material possessions"                                                               }
+HSET deity_vow_description propriety      {"name":"Propriety",        "description":" seek glory, honor, and victory in tribute"                                                  }
+HSET deity_vow_description purity         {"name":"Purity",           "description":"avoid contact with dead flesh"                                                               }
+HSET deity_vow_description reconstruction {"name":"Reconstruction",   "description":"reunite factions after a long and bitter feud"                                               }
+HSET deity_vow_description silence        {"name":"Silence",          "description":"not speak under any circumstances"                                                           }
+HSET deity_vow_description stocism        {"name":"Stocism",          "description":"speak as few words as possible, often a given word to represent their faith"                 }
+HSET deity_vow_description submission     {"name":"Submission",       "description":"submit to those who ask of it"                                                               }
+HSET deity_vow_description surety         {"name":"Surety",           "description":"defend a group or groups with your very life"                                                }
