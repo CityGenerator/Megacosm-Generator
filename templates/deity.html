@@ -1,0 +1,52 @@
+
+
+{% extends "base.html" %}
+{% block title %}Tremble Before {{deity.avatar.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>Tremble Before <a href="/deity?seed={{deity.seed}}">{{deity.avatar.name['full']}} ({{deity.seed}})</a></h1>
+
+
+
+<div style="float:right;width:200px;padding:10px;margin:10px; border:1px solid black" class="panel">
+    <h2>Portfolio</h2>
+    <ul>
+    {%for portfolio in deity.portfolios%}
+        <li>{{portfolio['name']|capitalize}} ({{portfolio['score']}}) </li>
+    {%endfor%}
+    </ul>
+</div>
+
+<h2>Summary</h2>
+{{deity.avatar.name['full']}} is {{deity.age['name'] |article}} {{deity.importance['name']}} who appreciates {{deity.favored_stat}}. 
+{{deity.avatar.name['firstname']}} is know as the god of {{deity.portfolios[0]['name']|title}}.
+{{deity.avatar.sex['possessive']|capitalize}} holy symbol is {{ deity.primarycolor|article}} {{deity.holysymbol_type}} {{ deity.holysymbol}}.
+{{deity.worship|capitalize}} are the preferred form of worship and {{deity.favored_weapon}} are the favored weapon.
+
+
+<h2>Appearance</h2>
+{{deity.avatar.name['full']}} sometimes chooses to appear as {{deity.form|article}} before {{deity.avatar.sex['possessive']}} followers, but has been known to take the form of a {{deity.avatar.height}}, {{deity.avatar.age['name']}} {{deity.avatar.race}}.
+
+{{deity.avatar.sex['pronoun']|capitalize}} usually dresses in {{deity.avatar.sex['possessive']}} preferred colors, {{ deity.primarycolor}} and {{ deity.secondarycolor}}.
+
+<h2>Clergy</h2>
+While in public, {{deity.clergytype}} of {{deity.avatar.name['firstname']}} may wear {{deity.clergy_dress}}, and will often  follow a Vow of {{deity.vow_description['name']|capitalize}} - to {{deity.vow_description['description']}}.
+
+
+<h2>Followers</h2>
+
+{{deity.avatar.name['firstname']}}'s followers are {{deity.followerzeal['name']}}, and are often {{deity.secrecy['name']}} about their affiliation. {{deity.avatar.name['firstname']}} is thought to have {{deity.followercount['name']}} active worshipers throughout the world.
+
+
+{%if deity.sect%}
+<h2>Sects</h2>
+
+{%endif%}
+
+{% endblock %}
