@@ -3,6 +3,7 @@ import random
 import json
 from generators.Generator import Generator
 from generators.NPC import  NPC
+from generators.Sect import  Sect
 from jinja2 import Template
 from jinja2.environment import Environment
 from util import Filters
@@ -24,16 +25,24 @@ class Deity(Generator):
         random.shuffle(avatarstats)
         self.favored_stat=avatarstats.pop()
         self.select_portfolio()
+        print "final portfolios:", self.portfolios
         self.generate_sects()
 
     def generate_sects(self): 
         self.sects=[]
-        for i in self.portfolios[1:]:
-           print "TODO: generate a sect right here." 
+        sectdomains=self.portfolios[1:]
+        random.shuffle(sectdomains)
+        sectchance=100
+        for domain in sectdomains:
+            if sectchance >= random.randint(1,100): 
+                sect= Sect(self.redis, {'deity':self,'domain':domain})
+                print "================your sect:",sect.__dict__
+                self.sects.append(sect)
+                sectchance=sectchance/2
 
     def select_portfolio(self):
         points=int(self.importance['points'])
-        powerlevels=self.redis.lrange('deitypowerscale',0,-1)
+        powerlevels=self.redis.lrange('portfolio_level',0,-1)
         self.portfolios=[]
         while points>0:
             powerlevel=int(powerlevels.pop())
@@ -44,7 +53,7 @@ class Deity(Generator):
                 random.shuffle(powerlevels)
                 powerlevels.insert(0,powerlevel)
                 # snag all portfolios for this level
-                portfolios=self.redis.zrevrangebyscore('deityportfolio', powerlevel,powerlevel)
+                portfolios=self.redis.zrevrangebyscore('portfolio_domain', powerlevel,powerlevel)
                 random.shuffle(portfolios)
                 while powerlevel <= points :
                     newportfolio=json.loads(portfolios.pop())

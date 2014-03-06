@@ -7,6 +7,17 @@ LPUSH npcstats followerzeal
 LPUSH npcstats devotion
 LPUSH npcstats secrecy
 LPUSH npcstats power
+LPUSH npcstats unity
+
+
+# Members of the church are ____________ in their beliefs._
+ZADD deity_unity  10 {"name":"splintered",                                         "score":10  } 
+ZADD deity_unity  20 {"name":"fractured",                                          "score":20  } 
+ZADD deity_unity  30 {"name":"divided",                                            "score":30  } 
+ZADD deity_unity  70 {"name":"fragmented",                                         "score":70  } 
+ZADD deity_unity  80 {"name":"diverse",                                            "score":80  } 
+ZADD deity_unity  90 {"name":"faceted",                                            "score":90  } 
+ZADD deity_unity 100 {"name":"unified",                                            "score":100 } 
 
 ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 } 
 ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 } 
@@ -1378,40 +1389,6 @@ LPUSH deitypowerscale  3
 LPUSH deitypowerscale  2
 LPUSH deitypowerscale  1
 
-
-#    <acceptance><!--Sect members are see as _____ by the faithful -->
-ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
-ZADD sect_acceptance  10 {"name":"blasphemous",  "score":10   } 
-ZADD sect_acceptance  15 {"name":"sectarian",  "score":15   } 
-ZADD sect_acceptance  20 {"name":"rebelious",  "score":20   } 
-ZADD sect_acceptance  25 {"name":"defecting",  "score":25   } 
-ZADD sect_acceptance  30 {"name":"dissenting",  "score":30   } 
-ZADD sect_acceptance  35 {"name":"agitating",  "score":35   } 
-ZADD sect_acceptance  40 {"name":"deviant",  "score":40   } 
-ZADD sect_acceptance  45 {"name":"mislead",  "score":45   } 
-ZADD sect_acceptance  50 {"name":"non-confirming",  "score":50   } 
-ZADD sect_acceptance  55 {"name":"faithful",  "score":55   } 
-ZADD sect_acceptance  60 {"name":"honorable",  "score":60   } 
-ZADD sect_acceptance  65 {"name":"noble",  "score":65   } 
-ZADD sect_acceptance  70 {"name":"loyal",  "score":70   } 
-ZADD sect_acceptance  75 {"name":"dutiful",  "score":75   } 
-ZADD sect_acceptance  80 {"name":"reverant",  "score":80   } 
-ZADD sect_acceptance  85 {"name":"devout",  "score":85   } 
-ZADD sect_acceptance  90 {"name":"virtuous",  "score":90   } 
-ZADD sect_acceptance  95 {"name":"righteous",  "score":95   } 
-ZADD sect_acceptance 100 {"name":"saintly",  "score":100   } 
-    
-#    <secttype>
-LPUSH sect_kind brotherhood
-LPUSH sect_kind chapter
-LPUSH sect_kind clan
-LPUSH sect_kind coven
-LPUSH sect_kind cult
-LPUSH sect_kind faction
-LPUSH sect_kind following
-LPUSH sect_kind order
-LPUSH sect_kind sect
-LPUSH sect_kind society
 
 #Ganthidon sometimes chooses to appear as a _________ before his followers.
 LPUSH deity_form talking jackal
