@@ -172,8 +172,7 @@ def GenerateFlag():
             flagfeatures[param]=int(request.args[param])
 
     flag=Flag.Flag(server, flagfeatures)
-    print flag.get_json()
-    return render_template('flag.html',flag=flag, json=flag.get_json()) 
+    return render_template('flag.html',flag=flag) 
 
 @app.errorhandler(404)
 def page_not_found(e):
