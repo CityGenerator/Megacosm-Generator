@@ -3,7 +3,7 @@
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
-from generators import Wanted
+from generators import Wanted, Flag
 from util.Seeds import *
 from util import Filters
 import random
@@ -448,9 +448,6 @@ def builder_form_data(generator):
                 except ValueError as e:
                     raise Exception ("failed to parse",key,"field", field)
     return paramlist,paramstring,paramset
-
-
-
 
 
 
