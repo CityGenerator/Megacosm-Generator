@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity
+from generators import Planet, NPC, MagicItem, Deity, Flag
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -158,6 +158,22 @@ def GenerateDeity():
     deity=Deity.Deity(server, deityfeatures)
     return render_template('deity.html',deity=deity) 
 
+@app.route('/flag')
+def GenerateFlag():
+    """Generate a flag"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    flagfeatures={'seed':seed,}
+    for param in request.args :
+        if re.match('^flag_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            flagfeatures[param]=int(request.args[param])
+
+    flag=Flag.Flag(server, flagfeatures)
+    print flag.get_json()
+    return render_template('flag.html',flag=flag, json=flag.get_json()) 
 
 @app.errorhandler(404)
 def page_not_found(e):

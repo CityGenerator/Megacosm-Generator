@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% block title %}Behold the Flag {% endblock %}
+{% block head %}
+  {{ super() }}
+    <script type="text/javascript" src="/static/js/flag.js"></script>
+
+{% endblock %}
+{% block content %}
+
+    <div>
+        <canvas id='flag' height='350'  >
+        </canvas>
+
+        <div id="flagjson" style="font-family:serif;">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        create_flag( {{json}},  "flag");
+    </script>
+
+<pre>
+    {%for detail in flag.__dict__%}
+        {{detail}} {{flag[detail]}}
+    {%endfor%}
+</pre>
+{% endblock %}
