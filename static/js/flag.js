@@ -11,7 +11,7 @@ function create_flag(params,flagcanvas,jsonblock) {
     var flag=params.canvas.getContext('2d');
     params.flag=flag;
     
-    params.canvas.width=canvas.height*params.ratio;
+    params.canvas.width=canvas.height*params.ratio['name'];
     params.flag=set_shape( params );
     params.flag.clip();
     
