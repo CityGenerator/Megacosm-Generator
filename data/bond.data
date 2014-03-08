@@ -152,11 +152,11 @@ LPUSH bond_template {{params.partyA}} nailed {{params.partyB}} to a tree.
 LPUSH bond_template {{params.partyA}} took notes for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} obtained treasure for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} offended {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} often offers his help to {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} offered help to {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} opened doors for {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} ordered all his tools from {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} owed {{params.partyB}} his life.
-LPUSH bond_template {{params.partyA}} owned {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} did business with {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} owed {{params.partyB}} a favor. It's still owed.
+LPUSH bond_template {{params.partyA}} owned {{params.partyB}} as a slave.
 LPUSH bond_template {{params.partyA}} painted {{params.partyB}} in a bad light.
 LPUSH bond_template {{params.partyA}} parked carriages for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} parted ways with {{params.partyB}}.
@@ -164,7 +164,6 @@ LPUSH bond_template {{params.partyA}} paused to chat with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pecked {{params.partyB}} on the cheek.
 LPUSH bond_template {{params.partyA}} peeped when {{params.partyB}} is changing.
 LPUSH bond_template {{params.partyA}} performed heroic deeds for {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live on his property.
 LPUSH bond_template {{params.partyA}} picked on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pined for the fjords with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} placed {{params.partyB}} on a pedestal.
@@ -175,9 +174,13 @@ LPUSH bond_template {{params.partyA}} polished the knobs for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} popped pills with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} poured wine for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} practiced the magic arts with {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} preached to {{params.partyB}} about his religion.
+LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the basement.
+LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the attic.
+LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the shed.
+LPUSH bond_template {{params.partyA}} preached to {{params.partyB}} about religion. 
+LPUSH bond_template {{params.partyA}} gave {{params.partyB}} a gift.
+LPUSH bond_template {{params.partyA}} read poetry to {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} preceded {{params.partyB}} in the family tree.
-LPUSH bond_template {{params.partyA}} presented his poetry to {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pressed {{params.partyB}} to take action.
 LPUSH bond_template {{params.partyA}} printed libelous pamphlets about {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} produced {{params.partyB}}.
