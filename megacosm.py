@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -179,6 +179,45 @@ def Bond_Builder():
             statinfo[stat].append(statstring)
     
     return render_template('bond_builder.html',statinfo=statinfo) 
+
+
+@app.route('/rumor')
+def GenerateRumor():
+    """Generate a simple rumor"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    rumorfeatures={'seed':seed,}
+
+    for param in request.args :
+        if re.match('^rumor_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            rumorfeatures[param]=int(request.args[param])
+        elif re.match('^rumor_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('rumor_template'):
+            rumorfeatures['template']=server.lrange('rumor_template', int(request.args[param]), int(request.args[param]) )[0]
+        elif re.match('^rumor_when_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('rumor_when'):
+            rumorfeatures['when']=server.lrange('rumor_when', int(request.args[param]), int(request.args[param]) )[0]
+        elif re.match('^rumor_[a-zA-Z]*$',param)  and re.match('^[a-zA-Z\']+$', request.args[param]):
+            fieldname=param.split('_',2)[1]
+            rumorfeatures[fieldname]=request.args[param]
+
+    rumor=Rumor.Rumor(server,rumorfeatures)
+
+    return render_template('rumor.html', rumor=rumor )
+
+@app.route('/rumor_builder')
+def Rumor_Builder():
+    """Generate the basic data about a rumor"""
+
+    statinfo={}
+    for stat in ['when', 'template']:
+        statinfo[stat]=[]
+        for statstring in server.lrange('rumor_'+stat,0,-1):
+            print "looking at rumor_",stat, statstring
+            statinfo[stat].append(statstring)
+    
+    return render_template('rumor_builder.html',statinfo=statinfo) 
 
 
 @app.route('/deity')
