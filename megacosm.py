@@ -155,10 +155,31 @@ def GenerateBond():
         if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             print "param is",param,"=",request.args[param]
             bondfeatures[param]=int(request.args[param])
+        elif re.match('^bond_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('bond_template'):
+            bondfeatures['template']=server.lrange('bond_template', int(request.args[param]), int(request.args[param]) )[0]
+        elif re.match('^bond_when_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('bond_when'):
+            bondfeatures['when']=server.lrange('bond_when', int(request.args[param]), int(request.args[param]) )[0]
+        elif re.match('^bond_[a-zA-Z]*$',param)  and re.match('^[a-zA-Z\']+$', request.args[param]):
+            fieldname=param.split('_',2)[1]
+            bondfeatures[fieldname]=request.args[param]
 
     bond=Bond.Bond(server,bondfeatures)
 
     return render_template('bond.html', bond=bond )
+
+@app.route('/bond_builder')
+def Bond_Builder():
+    """Generate the basic data about a bond"""
+
+    statinfo={}
+    for stat in ['when', 'template']:
+        statinfo[stat]=[]
+        for statstring in server.lrange('bond_'+stat,0,-1):
+            print "looking at bond_",stat, statstring
+            statinfo[stat].append(statstring)
+    
+    return render_template('bond_builder.html',statinfo=statinfo) 
+
 
 @app.route('/deity')
 def GenerateDeity():

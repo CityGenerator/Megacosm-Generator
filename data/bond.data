@@ -33,7 +33,7 @@ LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and lost.
 LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and won.
 LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and cheated to win.
 LPUSH bond_template {{params.partyA}} camped together recently.
-LPUSH bond_template {{params.partyA}} challenged each other to a duel to the death and both lost.
+LPUSH bond_template {{params.partyA}} challenged {{params.partyB}} to a duel to the death, then backed out.
 LPUSH bond_template {{params.partyA}} tampered with a jury for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} charged a bear with a chicken wing to defend {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} chased a wild boar for {{params.partyB}}.
@@ -186,6 +186,8 @@ LPUSH bond_template {{params.partyA}} provided {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pulled practical jokes on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pumped water for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pushed {{params.partyB}} over a cliff.
+LPUSH bond_template {{params.partyA}} feared what {{params.partyB}} would become.
+LPUSH bond_template {{params.partyA}} didn't tell {{params.partyB}} about the prophecy.
         
 # These were never resolved.    
 #    <reason>
