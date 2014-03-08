@@ -32,7 +32,7 @@ LPUSH bond_template {{params.you}} and {{params.other}} burned an enemy's house 
 LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and lost.
 LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and won.
 LPUSH bond_template {{params.partyA}} bet against {{params.partyB}} and cheated to win.
-LPUSH bond_template {{params.partyA}} camped together recently.
+LPUSH bond_template {{params.partyA}} and {{params.partyB}} camped together recently.
 LPUSH bond_template {{params.partyA}} challenged {{params.partyB}} to a duel to the death, then backed out.
 LPUSH bond_template {{params.partyA}} tampered with a jury for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} charged a bear with a chicken wing to defend {{params.partyB}}.
@@ -64,7 +64,7 @@ LPUSH bond_template {{params.partyA}} depended on {{params.partyB}} to come thro
 LPUSH bond_template {{params.partyA}} deserted {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} destroyed a cursed item to save {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} disarmed {{params.partyB}} in an embarassing sparring session.
-LPUSH bond_template {{params.partyA}} discovered that {{params.partyB}} has a deep, dark secret.
+LPUSH bond_template {{params.partyA}} discovered the deep, dark secret that {{params.partyB}} hid.
 LPUSH bond_template {{params.partyA}} discovered that {{params.partyB}} lied about something critical.
 LPUSH bond_template {{params.partyA}} divided the loot improperly with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} dragged {{params.partyB}} somewhere dangerous.
