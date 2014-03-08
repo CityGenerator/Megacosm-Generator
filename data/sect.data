@@ -76,9 +76,7 @@ LPUSH namesectroot bal
 LPUSH namesectroot damp
 LPUSH namesectroot moto
 LPUSH namesectroot costal
-LPUSH namesectroot tafar
-LPUSH namesectroot haj
-LPUSH namesectroot hant
+LPUSH namesectroot far
 LPUSH namesectroot rik
 LPUSH namesectroot versal
 LPUSH namesectroot dun
@@ -86,10 +84,12 @@ LPUSH namesectroot dun
 SET   namesectpost_chance 30
 LPUSH namesectpost ism
 LPUSH namesectpost um
+LPUSH namesectpost aj
 LPUSH namesectpost ic
 LPUSH namesectpost ites
 LPUSH namesectpost oxy
 LPUSH namesectpost ogy
+LPUSH namesectpost ons
 LPUSH namesectpost ists
 
 
