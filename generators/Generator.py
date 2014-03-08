@@ -1,6 +1,11 @@
 import redis
 import json
 import random
+from jinja2 import Template
+from jinja2.environment import Environment
+from util import Filters
+
+
 
 class Generator(object):
     def __init__(self,redis, features={}):
@@ -111,4 +116,12 @@ class Generator(object):
         else:
             raise Exception( "the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
 
+    def render_template(self,template):
+        """ Renders a given template using itself."""
+        environment = Environment()
+        environment.filters['article'] = Filters.select_article
+        environment.filters['pluralize'] = Filters.select_pluralize
+        template= environment.from_string(template)
+
+        return template.render(params=self)
 

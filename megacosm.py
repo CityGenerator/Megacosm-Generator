@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity
+from generators import Planet, NPC, MagicItem, Deity, Bond
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -141,6 +141,24 @@ def GeneratePlanet():
 
     return render_template('planet.html', planet=planet )
 
+
+@app.route('/bond')
+def GenerateBond():
+    """Generate a simple bond"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    bondfeatures={'seed':seed,}
+
+    for param in request.args :
+        if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            bondfeatures[param]=int(request.args[param])
+
+    bond=Bond.Bond(server,bondfeatures)
+
+    return render_template('bond.html', bond=bond )
 
 @app.route('/deity')
 def GenerateDeity():
