@@ -185,7 +185,9 @@ LPUSH bond_template {{params.partyA}} pressed {{params.partyB}} to take action.
 LPUSH bond_template {{params.partyA}} printed libelous pamphlets about {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} produced {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} promised the world to {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} provided {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} provided {{params.partyB}} with something crucial.
+LPUSH bond_template {{params.partyA}} provided {{params.partyB}} with something useless.
+LPUSH bond_template {{params.partyA}} provided {{params.partyB}} with the cure.
 LPUSH bond_template {{params.partyA}} pulled practical jokes on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pumped water for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pushed {{params.partyB}} over a cliff.
