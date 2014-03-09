@@ -11,8 +11,8 @@ ZADD magicitem_value  97 {"name":"major magical item",    "score": 97   }
 ZADD magicitem_value 100 {"name":"artifact",              "score": 100  }
         
 # Foo is a quality greatsword that is _______ 
-ZADD magicitem_repair  20 {"name":"broken",                    "score":20  }
-ZADD magicitem_repair  40 {"name":"in disrepair",              "score":40  }
+ZADD magicitem_repair   5 {"name":"broken",                    "score":5   }
+ZADD magicitem_repair  20 {"name":"in disrepair",              "score":20  }
 ZADD magicitem_repair  60 {"name":"intact",                    "score":60  }
 ZADD magicitem_repair  80 {"name":"well maintained",           "score":80  }
 ZADD magicitem_repair 100 {"name":"in pristine condition",     "score":100 }
