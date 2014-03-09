@@ -58,20 +58,19 @@
                       <ul class="dropdown-menu">
                         {% for generator in ['NPC', 'Bond']%}
                         <li class="divider" ></li>
-                        <li ><a href="/{{generator|lower|replace(' ','_')}}" >{{generator}}</a></li>
-                        <li ><a href="/{{generator|lower|replace(' ','_')}}_builder">{{generator}} Builder</a></li>
+                        <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
+                        <li ><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
                         {% endfor %}
                         {% for generator in ['Magic Item', 'Deity', 'Rumor']%}
                         <li class="divider" ></li>
-                        <li ><a href="/{{generator|lower|replace(' ','_')}}" >{{generator}}</a></li>
+                        <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
                         {% endfor %}
 
                         {% for generator in [ 'Encounter', 'Spell Failure', 'Business','Flag', 'Faction']%}
                         <li class="divider" ></li>
-                        <li class="disabled"><a href="/{{generator|lower|replace(' ','_')}}" >{{generator}}</a></li>
-                        <li class="disabled"><a href="/{{generator|lower|replace(' ','_')}}_builder">{{generator}} Builder</a></li>
+                        <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
+                        <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
                         {% endfor %}
-
 
                       </ul>
                 </li>

@@ -3,9 +3,9 @@
 LPUSH magicitem_kind potion
 
 
-LPUSH potion_name_template {{ magicitem.strength['name'] }} {{ magicitem.effect_description['name'] }} {{ magicitem.kind }}
-LPUSH potion_name_template {{ magicitem.strength['name'] }} {{ magicitem.variety }} of {{ magicitem.effect_description['name'] }}
-LPUSH potion_name_template {{ magicitem.npc.name['firstname'] }}'s {{ magicitem.effect_description['name'] }} {{ magicitem.variety }}
+LPUSH potion_name_template {{ params.strength['name'] }} {{ params.effect_description['name'] }} {{ params.kind }}
+LPUSH potion_name_template {{ params.strength['name'] }} {{ params.variety }} of {{ params.effect_description['name'] }}
+LPUSH potion_name_template {{ params.npc.name['firstname'] }}'s {{ params.effect_description['name'] }} {{ params.variety }}
 
 
 
@@ -884,9 +884,6 @@ LPUSH potion_color yellow
 HSET potion_color_description yellow     {"name":"yellow", "hex":"FFFF00" }
 LPUSH potion_color yellowgreen
 HSET potion_color_description yellowgreen     {"name":"yellow green", "hex":"9ACD32" }
-
-
-
 
 
 

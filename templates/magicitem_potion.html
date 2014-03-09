@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
     <h2>Summary</h2>
     <img src="/static/images/potion.png" style="float:left;background-color:#{{magicitem.color_description['hex']}}" >
     The {{magicitem.name|title}} is {{magicitem.color_description['name'] | article}} {{magicitem.kind}} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.

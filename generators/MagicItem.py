@@ -16,8 +16,13 @@ class MagicItem(Generator):
         self.generate_features(self.kind)
         
         self.npc=NPC(redis)
-        print self.creator_template
 
+        self.build_creator()
+
+        text=self.render_template(self.name_template)
+        self.name=self.render_template(text)
+
+    def build_creator(self):
         environment = Environment()
         environment.filters['article'] = Filters.select_article
         environment.filters['pluralize'] = Filters.select_pluralize
@@ -25,8 +30,6 @@ class MagicItem(Generator):
 
         self.creator=template.render(npc=self.npc)
 
-        template= environment.from_string(self.name_template)
-        self.name=template.render(magicitem=self)
 
 #TODO move FILTER additions to generator
 #TODO same with template rendering

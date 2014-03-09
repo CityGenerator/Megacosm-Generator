@@ -3,10 +3,10 @@
 LPUSH magicitem_kind scroll
 
 
-LPUSH scroll_name_template {{ magicitem.strength['name'] }} {{ magicitem.effect_description['name'] }} scroll
-LPUSH scroll_name_template {{ magicitem.strength['name'] }} scroll of {{ magicitem.effect_description['name'] }}
-LPUSH scroll_name_template scroll of {{ magicitem.strength['name'] }} {{ magicitem.effect_description['name'] }}
-LPUSH scroll_name_template {{ magicitem.npc.name['firstname'] }}'s {{ magicitem.effect_description['name'] }}
+LPUSH scroll_name_template {{ params.strength['name'] }} {{ params.effect_description['name'] }} scroll
+LPUSH scroll_name_template {{ params.strength['name'] }} scroll of {{ params.effect_description['name'] }}
+LPUSH scroll_name_template scroll of {{ params.strength['name'] }} {{ params.effect_description['name'] }}
+LPUSH scroll_name_template {{ params.npc.name['firstname'] }}'s {{ params.effect_description['name'] }}
 
 #TODO need more like this (and need these formatted)
 #                <option type="daze">can daze an opponent for a few seconds</option>

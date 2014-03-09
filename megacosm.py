@@ -40,7 +40,7 @@ def indexpage():
     return render_template('index.html') 
 
 
-@app.route('/magic_item')
+@app.route('/magicitem')
 def GenerateMagicItem():
     """Generate a MagicItem"""
     seed=set_seed( request.args.get('seed') )
@@ -58,6 +58,20 @@ def GenerateMagicItem():
     magicitem=MagicItem.MagicItem(server, magicitemfeatures)
     kind= magicitem.kind
     return render_template('magicitem_'+kind+'.html',magicitem=magicitem) 
+
+@app.route('/magicitem_builder')
+def MagicItem_Builder():
+    """Generate an NPC"""
+
+    stats=server.lrange('magicitemstats',0,-1)
+    statinfo={}
+    kind=server.lrange('magicitem_kind',0,-1);
+    for stat in stats :
+        statinfo[stat]=[]
+        for statstring in server.zrange('magicitem_'+stat,0,-1):
+            statinfo[stat].append(json.loads(statstring))
+    
+    return render_template('magicitem_builder.html',statinfo=statinfo, otherstats={'kind':kind}) 
 
 @app.route('/npc')
 def GenerateNPC():
