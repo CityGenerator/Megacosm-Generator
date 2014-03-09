@@ -2,20 +2,7 @@
 
 LPUSH magicitem_kind weapon
 
-#The __________ is a 
-
-# painful sword[ of the bull]
-LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name']}}{%if params.ability_description%} of {{params.ability_description['name']}}{%endif%}
-# Bob's frigid sword
-LPUSH weapon_name_template {{ params.npc.name['firstname'] }}'s {{ params.category_description['name'] }}
-# Sharp sword of Bob
-LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
-# Sword of Bob
-LPUSH weapon_name_template {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
-
-#of darkness
-
-#materialpart:  "the blade of the sword is made of steel"
+#materialpart:  "the _____ of the ___ is made of steel"
 LPUSH weapon_category sword
 HSET weapon_category_description sword          {"name":"sword",        "materialpart":"blade"    }
 LPUSH weapon_category dagger
@@ -25,9 +12,9 @@ HSET weapon_category_description axe            {"name":"axe",          "materia
 LPUSH weapon_category mace
 HSET weapon_category_description mace           {"name":"mace",         "materialpart":"head"     }
 LPUSH weapon_category bow
-HSET weapon_category_description bow            {"name":"bow",          "materialpart":"limbs"    }
+HSET weapon_category_description bow            {"name":"bow",          "materialpart":"handle"    }
 LPUSH weapon_category crossbow
-HSET weapon_category_description crossbow       {"name":"crossbow",     "materialpart":"limbs"    }
+HSET weapon_category_description crossbow       {"name":"crossbow",     "materialpart":"stock"    }
 LPUSH weapon_category quarterstaff
 HSET weapon_category_description quarterstaff   {"name":"quarterstaff", "materialpart":"shaft"    }
 
@@ -124,4 +111,15 @@ LPUSH weapon_decoration carvings
 HSET weapon_decoration_description carvings {"name":"carvings", "description":"intricate carvings"                                   }
 LPUSH weapon_decoration writing
 HSET weapon_decoration_description writing  {"name":"writing",  "description":"beautiful writing in a strange language"              }
+
+#The __________ is a 
+
+# painful sword[ of the bull]
+LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name']}}{%if params.ability_description%} of {{params.ability_description['name']}}{%endif%}
+# Bob's frigid sword
+LPUSH weapon_name_template {{ params.npc.name['firstname'] }}'s {{ params.category_description['name'] }}
+# Sharp sword of Bob
+LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
+# Sword of Bob
+LPUSH weapon_name_template {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
 
