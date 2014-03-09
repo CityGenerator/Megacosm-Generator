@@ -887,9 +887,6 @@ HSET potion_color_description yellowgreen     {"name":"yellow green", "hex":"9AC
 
 
 
-
-
-
 SET   potion_sideeffect_chance 20
 LPUSH potion_sideeffect seizures
 LPUSH potion_sideeffect blindness
