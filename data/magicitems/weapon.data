@@ -81,6 +81,10 @@ LPUSH weapon_visualcause orc
 HSET weapon_visualcause_description orc      {"name":"orc",      "description":"exposed to orcs"         }
 LPUSH weapon_visualcause darkness
 HSET weapon_visualcause_description darkness {"name":"darkness", "description":"held in the darkness"    }
+LPUSH weapon_visualcause blood
+HSET weapon_visualcause_description blood    {"name":"blood",    "description":"covered with blood"    }
+LPUSH weapon_visualcause danger
+HSET weapon_visualcause_description danger   {"name":"danger",    "description":"danger is near"    }
 
 # When exposed to Orcs, the weapon  ____________________.
 SET  weapon_visualeffect_chance 10
@@ -94,12 +98,14 @@ LPUSH weapon_visualeffect electricity
 HSET weapon_visualeffect_description electricity {"name":"electricity", "description":"crackles with visible electricity"       }
 
 # the sword is made of __________
+LPUSH weapon_material coldiron
+HSET weapon_material_description coldiron {"name":"cold iron",       "description":"beautiful cold steel"    }
 LPUSH weapon_material steel
-HSET weapon_material_description steel   {"name":"steel",       "description":"high quality steel"          }
+HSET weapon_material_description steel    {"name":"steel",       "description":"high quality steel"          }
 LPUSH weapon_material crystal
-HSET weapon_material_description crystal {"name":"crystal",     "description":"a strange crystal"           }
+HSET weapon_material_description crystal  {"name":"crystal",     "description":"a strange crystal"           }
 LPUSH weapon_material bone
-HSET weapon_material_description bone    {"name":"bone",        "description":"a specially treated bone"    }
+HSET weapon_material_description bone     {"name":"bone",        "description":"a specially treated bone"    }
 
 # and the blade is decorated with __________________
 SET  weapon_decoration_chance 10
@@ -111,6 +117,8 @@ LPUSH weapon_decoration carvings
 HSET weapon_decoration_description carvings {"name":"carvings", "description":"intricate carvings"                                   }
 LPUSH weapon_decoration writing
 HSET weapon_decoration_description writing  {"name":"writing",  "description":"beautiful writing in a strange language"              }
+LPUSH weapon_decoration runes
+HSET weapon_decoration_description runes    {"name":"runes",  "description":"strange and cryptic runes"                              }
 
 #The __________ is a 
 
