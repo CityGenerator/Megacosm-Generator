@@ -22,6 +22,9 @@
     {%if magicitem.visualeffect%}
         When {{magicitem.visualcause_description['description']}}, the weapon {{magicitem.visualeffect_description['description']}}.
     {%endif%}
+    {%if magicitem.ability%}
+        This {{magicitem.category_description['name']}} {{magicitem.ability_description['description']}}.
+    {%endif%}
     </p>
     <p>
     Many consider it {{magicitem.strength['name']| article}} weapon and a {{magicitem.value['name']}}.
