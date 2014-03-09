@@ -10,11 +10,11 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magic_item?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
     <h2>Summary</h2>
     The {{magicitem.name|title}} is {{magicitem.quality['name']|article }} {{magicitem.material_description['name'] }} {{magicitem.category_description['name']}} with {{magicitem.effect_description['name'] |article}} enchantment that {{magicitem.effect_description['description']}}. It is {{magicitem.repair['name'] }}.
     <h2>Details</h2>
-
+    <p>
     This {{magicitem.quality['name']|article }} weapon was created {{magicitem.age['name']}} by {{magicitem.creator}}. The enchantment on it {{magicitem.effect_description['description']}}.
     {%if magicitem.decoration_description %}
         The {{magicitem.category_description['materialpart']}} is decorated with {{magicitem.decoration_description['description']}}.
@@ -22,16 +22,16 @@
     {%if magicitem.visualeffect%}
         When {{magicitem.visualcause_description['description']}}, the weapon {{magicitem.visualeffect_description['description']}}.
     {%endif%}
-    Many consider it {{magicitem.strength['name']}} weapon and a {{magicitem.value['name']}}.
-
+    </p>
+    <p>
+    Many consider it {{magicitem.strength['name']| article}} weapon and a {{magicitem.value['name']}}.
     {%if magicitem.flaw%}
         This {{magicitem.category_description['name']}} is rather distinctive due to {{magicitem.flaw_description['name'] |article}} on the {{magicitem.category_description['materialpart']}}.
     {%endif%}
-
+    </p>
     
     {% if magicitem.curse %}
-    <br><br>
-    <b>Danger:</b> 
+    <h2>Danger:</h2> 
     This scroll carries a curse of {{magicitem.curse_description['name']|title}}, which {{magicitem.curse_description['description']}}.
     The effects of the curse {{magicitem.curse_duration['name']}}.
     {% endif%}
@@ -48,24 +48,4 @@
             
 
     </blockquote> 
-<pre>
-{%for stat in magicitem.__dict__ %}
-    {{stat}}  {{magicitem[stat]}}
-    
-{%endfor%}
-<!--
-    This $item->{'value_description'} $item->{'effect'}
-        if (defined  $item->{'ability'}){
-            and $item->{'ability'}
-        }
-        if (defined  $item->{'flaw'}){
-            You notice $item->{'flaw'} on the weapon. 
-        }
-        if (defined  $item->{'curse'}){
-            Unbeknownst to the user, this weapon has ".A($item->{'curse_type'})." curse, meaning it $item->{'curse'}.
-        }
-        The $item->{'name'} was created by ".A($item->{'creator'}->{'build'})." $item->{'creator'}->{'race'} named $item->{'creator'}->{'name'}. 
--->
-
-</pre>
 {% endblock %}

@@ -42,7 +42,7 @@ LPUSH magicitem_location hidden on a sage
         
 #LPUSH magicitem_kind armor
 #LPUSH magicitem_kind weapon
-LPUSH magicitem_kind scroll
+#LPUSH magicitem_kind scroll
 #LPUSH magicitem_kind rings
 #LPUSH magicitem_kind rods
 #LPUSH magicitem_kind staves
