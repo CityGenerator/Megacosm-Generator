@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -232,6 +232,62 @@ def Rumor_Builder():
             statinfo[stat].append(statstring)
     
     return render_template('rumor_builder.html',statinfo=statinfo) 
+#########################################################################
+
+@app.route('/cuisine')
+def GenerateCuisine():
+    """Generate a simple cuisine"""
+    features=feature_filter('cuisine')
+
+    cuisine=Cuisine.Cuisine(server,features)
+
+    return render_template('cuisine.html', cuisine=cuisine )
+
+
+@app.route('/cuisine_builder')
+def Cuisine_Builder():
+    """Generate the basic data about a cuisine"""
+    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+    paramlist,paramstring,paramset=builder_form_data('cuisine')
+
+    return render_template('cuisine_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset) 
+
+#########################################################################
+
+def feature_filter(generator):
+    seed=set_seed( request.args.get('seed') )
+    print "MAH SEED:",seed
+    features={'seed':seed,}
+    for param in request.args :
+        if re.match('^'+generator+'_[a-z_]+_(roll|chance)$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            features[param]=int(request.args[param])
+        elif re.match('^'+generator+'_[a-z_]+$',param) and re.match('^\d{1,10000}$',request.args[param]):
+            fieldname= re.sub(generator+'_','', param)
+            features[fieldname]=server.lrange(param, int(request.args[param]), int(request.args[param]) )[0]
+    return features
+
+def builder_form_data(generator):
+    paramlist={}
+    paramstring={}
+    paramset={}
+    for key in server.keys(generator+'_*'):
+        print server.type(key)
+        fieldname=key.replace(generator+'_','')
+        if server.type(key) == 'list' :
+            paramlist[fieldname]=server.lrange(key,0,-1)
+        elif server.type(key) == 'string' :
+            paramstring[fieldname]=server.get(key)
+        elif server.type(key) == 'zset' :
+            result= server.zrangebyscore(key,1,100)
+            paramset[fieldname]=[]
+            for field in result:
+                paramset[fieldname].append( json.loads(field))
+            print paramset[fieldname]
+    return paramlist,paramstring,paramset
+
+
+
 
 
 @app.route('/deity')

@@ -32,12 +32,14 @@ class Generator(object):
         for key in self.redis.keys(namekey+'_*'):
             #print "testing key",key
             if  self.redis.exists(key+"_chance"):
-                chance=int(self.redis.get(key+"_chance"))
+                if not hasattr(self,key+"_chance"):
+                    setattr(self,key+"_chance", int(self.redis.get(key+"_chance")) )
+
                 #print "==",key,"_chance exists:",chance
                 if key+"_roll" not in self.__dict__:
                       setattr( self, key+"_roll", random.randint(1,100) )
-                if int(getattr(self,key+"_roll")) > chance:
-                    print key+"_roll (",getattr(self,key+"_roll"),") vs ",chance
+                if int(getattr(self,key+"_roll")) > getattr(self,key+"_chance"):
+                    print key+"_roll (",getattr(self,key+"_roll"),") vs ",getattr(self,key+"_chance")
                     print key," failed its roll"
                     continue
 

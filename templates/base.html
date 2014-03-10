@@ -54,22 +54,30 @@
                       </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc.<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Generator<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        {% for generator in ['NPC', 'Bond', 'Magic Item']%}
-                        <li class="divider" ></li>
-                        <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
-                        <li ><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
+                        {% for generator in ['NPC', 'Bond', 'Magic Item', 'Cuisine', 'Deity', 'Rumor']%}
+                            <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
                         {% endfor %}
-                        {% for generator in [ 'Deity', 'Rumor']%}
                         <li class="divider" ></li>
-                        <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
-                        {% endfor %}
 
                         {% for generator in [ 'Encounter', 'Spell Failure', 'Business','Flag', 'Faction']%}
+                            <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
+                        {% endfor %}
+
+                      </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Builder<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        {% for generator in ['NPC', 'Bond', 'Magic Item', 'Cuisine']%}
+                            <li ><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
+                        {% endfor %}
+
                         <li class="divider" ></li>
-                        <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
-                        <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
+                        {% for generator in [ 'Deity', 'Rumor','Encounter', 'Spell Failure', 'Business','Flag', 'Faction']%}
+                            <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
                         {% endfor %}
 
                       </ul>
