@@ -198,49 +198,24 @@ def Bond_Builder():
 @app.route('/rumor')
 def GenerateRumor():
     """Generate a simple rumor"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    rumorfeatures={'seed':seed,}
-
-    for param in request.args :
-        if re.match('^rumor_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            rumorfeatures[param]=int(request.args[param])
-        elif re.match('^rumor_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('rumor_template'):
-            rumorfeatures['template']=server.lrange('rumor_template', int(request.args[param]), int(request.args[param]) )[0]
-        elif re.match('^rumor_when_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('rumor_when'):
-            rumorfeatures['when']=server.lrange('rumor_when', int(request.args[param]), int(request.args[param]) )[0]
-        elif re.match('^rumor_[a-zA-Z]*$',param)  and re.match('^[a-zA-Z\']+$', request.args[param]):
-            fieldname=param.split('_',2)[1]
-            rumorfeatures[fieldname]=request.args[param]
-
-    rumor=Rumor.Rumor(server,rumorfeatures)
-
+    features=feature_filter('rumor')
+    rumor=Rumor.Rumor(server,features)
     return render_template('rumor.html', rumor=rumor )
 
 @app.route('/rumor_builder')
 def Rumor_Builder():
     """Generate the basic data about a rumor"""
+    paramlist,paramstring,paramset=builder_form_data('rumor')
 
-    statinfo={}
-    for stat in ['when', 'template']:
-        statinfo[stat]=[]
-        for statstring in server.lrange('rumor_'+stat,0,-1):
-            print "looking at rumor_",stat, statstring
-            statinfo[stat].append(statstring)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
     
-    return render_template('rumor_builder.html',statinfo=statinfo) 
 #########################################################################
 
 @app.route('/cuisine')
 def GenerateCuisine():
     """Generate a simple cuisine"""
     features=feature_filter('cuisine')
-
     cuisine=Cuisine.Cuisine(server,features)
-
     return render_template('cuisine.html', cuisine=cuisine )
 
 
@@ -249,8 +224,7 @@ def Cuisine_Builder():
     """Generate the basic data about a cuisine"""
     #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('cuisine')
-
-    return render_template('cuisine_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset) 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='cuisine') 
 
 #########################################################################
 
