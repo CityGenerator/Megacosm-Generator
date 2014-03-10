@@ -267,8 +267,8 @@ def select_article(s):
     return Filters.select_article(s)
 
 @app.template_filter('pluralize')
-def select_pluralize(s):
-    return Filters.select_pluralize(s)
+def select_pluralize(s,n):
+    return Filters.select_pluralize(s,n)
 
 
 if __name__ == '__main__':

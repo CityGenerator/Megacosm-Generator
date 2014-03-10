@@ -46,7 +46,7 @@ While in public, {{deity.clergytype}} of {{deity.avatar.name['firstname']}} may 
 
 {%if deity.sects%}
 <h2>Sects</h2>
-    {{deity.avatar.name['full']}} is known to have at least {{deity.sects|length}} sect[s].
+    {{deity.avatar.name['full']}} is known to have at least {{deity.sects|length}} {{ 'sect'|pluralize( deity.sects|length)}}.
     <ul>
     {%for sect in deity.sects%}
             <li>The {{sect.name['full']}} are {{sect.acceptance['name'] |article}} {{sect.kind}} that focuses on {{sect.domain['name']}}.
