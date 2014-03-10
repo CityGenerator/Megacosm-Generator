@@ -233,23 +233,16 @@ def Rumor_Builder():
     
     return render_template('rumor_builder.html',statinfo=statinfo) 
 #########################################################################
+
 @app.route('/cuisine')
 def GenerateCuisine():
     """Generate a simple cuisine"""
-    seed=set_seed( request.args.get('seed') )
+    features=feature_filter('cuisine')
 
-    print "MAH SEED:",seed
-
-    cuisinefeatures={'seed':seed,}
-
-    for param in request.args :
-        if re.match('^cuisine_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            cuisinefeatures[param]=int(request.args[param])
-
-    cuisine=Cuisine.Cuisine(server,cuisinefeatures)
+    cuisine=Cuisine.Cuisine(server,features)
 
     return render_template('cuisine.html', cuisine=cuisine )
+
 
 @app.route('/cuisine_builder')
 def Cuisine_Builder():
@@ -258,10 +251,21 @@ def Cuisine_Builder():
     paramlist,paramstring,paramset=builder_form_data('cuisine')
 
     return render_template('cuisine_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset) 
+
 #########################################################################
 
-
-
+def feature_filter(generator):
+    seed=set_seed( request.args.get('seed') )
+    print "MAH SEED:",seed
+    features={'seed':seed,}
+    for param in request.args :
+        if re.match('^'+generator+'_[a-z_]+_(roll|chance)$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            features[param]=int(request.args[param])
+        elif re.match('^'+generator+'_[a-z_]+$',param) and re.match('^\d{1,10000}$',request.args[param]):
+            fieldname= re.sub(generator+'_','', param)
+            features[fieldname]=server.lrange(param, int(request.args[param]), int(request.args[param]) )[0]
+    return features
 
 def builder_form_data(generator):
     paramlist={}
