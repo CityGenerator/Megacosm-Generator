@@ -1,0 +1,24 @@
+
+
+{% extends "base.html" %}
+{% block title %}What's for Dinner? {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>What's for Dinner? <a href="/cuisine?seed={{cuisine.seed}}">({{cuisine.seed}})</a></h1>
+
+    {% if cuisine %}
+        {{cuisine.text}} 
+    {%endif%}
+    {% if cuisines %}
+        <ul>
+        {%for cuisine in cuisines%}
+        <li>{{cuisine.text}} </li>
+        {%endfor%}
+        </ul>
+    {%endif%}
+
+
+{% endblock %}
