@@ -10,7 +10,7 @@
     <h1>What's for Dinner? <a href="/cuisine?seed={{cuisine.seed}}">({{cuisine.seed}})</a></h1>
 
     {% if cuisine %}
-        {{cuisine.text}} 
+        {{cuisine.text}}.  This dish is {{cuisine.rarity['name']}} to the region.
     {%endif%}
     {% if cuisines %}
         <ul>
