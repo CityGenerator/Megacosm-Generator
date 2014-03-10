@@ -1,5 +1,6 @@
+# TODO we need to create a stat list
 
-DEL  star_size
+
 ZADD star_size 5   {"text":"tiny",       "multiplier":0.5}
 ZADD star_size 10  {"text":"small",      "multiplier":0.8}
 ZADD star_size 65  {"text":"average",    "multiplier":1.0}
@@ -7,7 +8,6 @@ ZADD star_size 85  {"text":"large",      "multiplier":1.5}
 ZADD star_size 100 {"text":"massive",    "multiplier":3.0}
 
 
-DEL  star_color
 ZADD star_color 10  {"text":"blue",   "color":"0x4699ca", "luminosity":0.6}
 ZADD star_color 30  {"text":"white",  "color":"0xffffff", "luminosity":0.5}
 ZADD star_color 70  {"text":"yellow", "color":"0xffff79", "luminosity":0.4}
@@ -17,7 +17,6 @@ ZADD star_color 100 {"text":"red",    "color":"0xff0000", "luminosity":0.2}
 
 
 # The lack of underscore prevents it from gettnig sucked in as a feature
-DEL   starposition
 LPUSH starposition {"text": "companion",    "x":-150,    "y":4,  "z":4  }
 LPUSH starposition {"text": "companion",    "x":-150,    "y":4,  "z":-4 }
 LPUSH starposition {"text": "companion",    "x":-150,    "y":-4, "z":4  }

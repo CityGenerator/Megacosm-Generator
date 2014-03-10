@@ -1,8 +1,8 @@
 #
 
-LPUSH magicitemstats value
-LPUSH magicitemstats repair
-LPUSH magicitemstats quality
+LPUSH stat_magicitem value
+LPUSH stat_magicitem repair
+LPUSH stat_magicitem quality
 
 ZADD magicitem_value  25 {"name":"trivial magical item",  "score": 25   }
 ZADD magicitem_value  65 {"name":"minor magical item",    "score": 65   }

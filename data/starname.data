@@ -1,5 +1,5 @@
+#
 
-DEL   namestarpre
 LPUSH namestarpre To
 LPUSH namestarpre Na
 LPUSH namestarpre Wo
@@ -12,7 +12,6 @@ LPUSH namestarpre Be
 LPUSH namestarpre Ce
 LPUSH namestarpre Kro
 
-DEL   namestarroot
 LPUSH namestarroot r
 LPUSH namestarroot k
 LPUSH namestarroot l
@@ -23,7 +22,6 @@ LPUSH namestarroot n
 
 SET   namestarpost_chance 30
 
-DEL   namestarpost
 LPUSH namestarpost ay
 LPUSH namestarpost us
 LPUSH namestarpost or

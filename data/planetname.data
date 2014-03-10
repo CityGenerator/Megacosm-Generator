@@ -1,10 +1,10 @@
+#
+
 SET   nameplanettitle_chance 5
 
-DEL   nameplanettitle
 LPUSH nameplanettitle  New
 LPUSH nameplanettitle  Old
 
-DEL   nameplanetpre
 LPUSH nameplanetpre A
 LPUSH nameplanetpre Ab
 LPUSH nameplanetpre Acher
@@ -244,7 +244,6 @@ LPUSH nameplanetpre Zokk
 LPUSH nameplanetpre Zorg
 
 SET   nameplanetroot_chance 30
-DEL   nameplanetroot
 
 LPUSH nameplanetroot bah
 LPUSH nameplanetroot ket
@@ -467,7 +466,6 @@ LPUSH nameplanetroot ze
 LPUSH nameplanetroot zhen
 LPUSH nameplanetroot zo
 
-DEL   nameplanetpost
 LPUSH nameplanetpost a
 LPUSH nameplanetpost ah
 LPUSH nameplanetpost aita
@@ -550,7 +548,6 @@ LPUSH nameplanetpost wan
 
 
 SET   nameplanettrailer_chance 10
-DEL   nameplanettrailer
 
 LPUSH nameplanettrailer I
 LPUSH nameplanettrailer II

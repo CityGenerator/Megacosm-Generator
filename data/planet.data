@@ -1,24 +1,21 @@
 # Planet details
-LPUSH planetstats size
-LPUSH planetstats temp
-LPUSH planetstats atmosphere
-LPUSH planetstats wind
-LPUSH planetstats day
-LPUSH planetstats civilization
-LPUSH planetstats year
-LPUSH planetstats precipitation
-LPUSH planetstats mooncount
-LPUSH planetstats technology
+LPUSH stat_planet size
+LPUSH stat_planet temp
+LPUSH stat_planet atmosphere
+LPUSH stat_planet wind
+LPUSH stat_planet day
+LPUSH stat_planet civilization
+LPUSH stat_planet year
+LPUSH stat_planet precipitation
+LPUSH stat_planet mooncount
+LPUSH stat_planet technology
 
-
-DEL  planet_size
 ZADD planet_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   } 
 ZADD planet_size 10 {"name":"small",     "multiplier":0.7,  "score":10   } 
 ZADD planet_size 65 {"name":"average",   "multiplier":1.0,  "score":65   } 
 ZADD planet_size 85 {"name":"large",     "multiplier":1.5,  "score":85   } 
 ZADD planet_size 100 {"name":"massive",  "multiplier":2.0,  "score":100   } 
 
-DEL  planet_temp
 ZADD planet_temp 5   {"name":"unbearably cold", "multiplier":0.5,  "score":5   } 
 ZADD planet_temp 10  {"name":"freezing",        "multiplier":0.6,  "score":10   } 
 ZADD planet_temp 15  {"name":"cold",            "multiplier":0.7,  "score":15   } 
@@ -31,7 +28,6 @@ ZADD planet_temp 90  {"name":"hot",             "multiplier":1.3,  "score":90   
 ZADD planet_temp 95  {"name":"sweltering",      "multiplier":1.4,  "score":95   } 
 ZADD planet_temp 100 {"name":"unbearably hot",  "multiplier":1.5,  "score":100   } 
                               
-DEL  planet_atmosphere
 ZADD planet_atmosphere 5   {"name":"thin",     "opacity":0.01,  "score":5   } 
 ZADD planet_atmosphere 10  {"name":"meager",   "opacity":0.10,  "score":10   } 
 ZADD planet_atmosphere 25  {"name":"slight",   "opacity":0.30,  "score":25   } 
@@ -41,7 +37,6 @@ ZADD planet_atmosphere 95  {"name":"heavt",    "opacity":0.90,  "score":95   }
 ZADD planet_atmosphere 100 {"name":"dense",    "opacity":0.99,  "score":100   } 
 
 
-DEL  planet_wind
 ZADD planet_wind 5   {"name":"dead",         "multiplier":0.5,  "score":5   } 
 ZADD planet_wind 10  {"name":"soft",         "multiplier":0.7,  "score":10   } 
 ZADD planet_wind 25  {"name":"slight",       "multiplier":0.9,  "score":25   } 
@@ -50,28 +45,24 @@ ZADD planet_wind 85  {"name":"gusty",        "multiplier":1.1,  "score":85   }
 ZADD planet_wind 95  {"name":"heavy",        "multiplier":1.3,  "score":95   } 
 ZADD planet_wind 100 {"name":"overwhelming", "multiplier":1.5,  "score":100   } 
 
-DEL  planet_day
 ZADD planet_day 5   {"name":"short",       "minhour":10,     "maxhour":15 ,  "score":5   } 
 ZADD planet_day 10  {"name":"swift",       "minhour":16,     "maxhour":20 ,  "score":10   } 
 ZADD planet_day 90  {"name":"average",     "minhour":21,     "maxhour":40 ,  "score":90   } 
 ZADD planet_day 95  {"name":"slow",        "minhour":40,     "maxhour":50 ,  "score":95   } 
 ZADD planet_day 100 {"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } 
 
-DEL  planet_year
 ZADD planet_year 5   {"name":"short"    ,  "score":5   } 
 ZADD planet_year 10  {"name":"swift"    ,  "score":10   } 
 ZADD planet_year 90  {"name":"average"  ,  "score":90   } 
 ZADD planet_year 95  {"name":"slow"     ,  "score":95   } 
 ZADD planet_year 100 {"name":"long"     ,  "score":100   } 
 
-DEL  planet_civilization
 ZADD planet_civilization 5   {"name":"crude"       ,  "score":5   } 
 ZADD planet_civilization 10  {"name":"scattered"   ,  "score":10   } 
 ZADD planet_civilization 90  {"name":"moderate"    ,  "score":90   } 
 ZADD planet_civilization 95  {"name":"prosperous"  ,  "score":95   } 
 ZADD planet_civilization 100 {"name":"thriving"    ,  "score":100   } 
 
-DEL  planet_precipitation
 ZADD planet_precipitation  10 {"name":"scarce",    "multiplier":0.5 ,  "score":10   } 
 ZADD planet_precipitation  30 {"name":"rare",      "multiplier":0.8 ,  "score":30   } 
 ZADD planet_precipitation  55 {"name":"common",    "multiplier":0.9 ,  "score":55   } 
@@ -81,7 +72,6 @@ ZADD planet_precipitation 100 {"name":"excessive", "multiplier":1.5 ,  "score":1
 
 # Details for moons.
 
-DEL  planet_mooncount
 ZADD planet_mooncount 10     {"name":"no moons",         "count":0,  "score":10   } 
 ZADD planet_mooncount 70     {"name":"single moon",      "count":1,  "score":70   } 
 ZADD planet_mooncount 95     {"name":"double moon",      "count":2,  "score":95   } 
@@ -90,7 +80,6 @@ ZADD planet_mooncount 100    {"name":"quadruple moon",   "count":4,  "score":100
 
 
 # Most of this planet appears to be in the Stone Age, which is known for 
-DEL  planet_technology
 ZADD planet_technology 5    {"name":"Stone Age",        "description":"implements made of stone",          "score":5   } 
 ZADD planet_technology 10   {"name":"Bronze Age",       "description":"implements of copper and bronze",    "score":10   } 
 ZADD planet_technology 15   {"name":"Iron Age",         "description":"implements of iron and steel",       "score":15   } 

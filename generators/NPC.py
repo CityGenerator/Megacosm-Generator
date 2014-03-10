@@ -14,7 +14,7 @@ class NPC(Generator):
         self.select_names()
 
         # This list tells us which of the attributes are actually stats
-        self.stats=self.redis.lrange('npcstats',0,-1)
+        self.stats=self.redis.lrange('stat_npc',0,-1)
 
     def select_race(self):
         #print self.redis.llen('race')

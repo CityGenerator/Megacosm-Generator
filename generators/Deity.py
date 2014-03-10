@@ -25,7 +25,6 @@ class Deity(Generator):
         random.shuffle(avatarstats)
         self.favored_stat=avatarstats.pop()
         self.select_portfolio()
-        print "final portfolios:", self.portfolios
         self.generate_sects()
 
     def generate_sects(self): 
@@ -36,7 +35,6 @@ class Deity(Generator):
         for domain in sectdomains:
             if sectchance >= random.randint(1,100): 
                 sect= Sect(self.redis, {'deity':self,'domain':domain})
-                print "================your sect:",sect.__dict__
                 self.sects.append(sect)
                 sectchance=sectchance/2
 

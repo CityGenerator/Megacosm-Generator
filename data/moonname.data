@@ -1,4 +1,5 @@
-DEL   namemoonpre
+#
+
 LPUSH namemoonpre Mo
 LPUSH namemoonpre Dei
 LPUSH namemoonpre Pho
@@ -11,7 +12,7 @@ LPUSH namemoonpre The
 LPUSH namemoonpre Cha
 LPUSH namemoonpre Spo
 LPUSH namemoonpre Pro
-DEL   namemoonroot
+
 LPUSH namemoonroot ro
 LPUSH namemoonroot ka
 LPUSH namemoonroot di
@@ -20,8 +21,8 @@ LPUSH namemoonroot la
 LPUSH namemoonroot ta
 LPUSH namemoonroot le
 LPUSH namemoonroot me
+
 SET   namemoonpost_chance 30
-DEL   namemoonpost
 LPUSH namemoonpost bos
 LPUSH namemoonpost mos
 LPUSH namemoonpost pa

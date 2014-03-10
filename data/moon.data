@@ -1,5 +1,6 @@
-DEL moon_size
 # moon_s in our solar system range from Ganymede (1/4 earth) to Miranda (3.6% radius of earth)
+
+
 ZADD moon_size 10  {"text":"tiny",   "multiplier":0.05}
 ZADD moon_size 20  {"text":"tiny",   "multiplier":0.07}
 ZADD moon_size 30  {"text":"small",  "multiplier":0.1}
@@ -11,8 +12,6 @@ ZADD moon_size 80  {"text":"large",  "multiplier":0.6}
 ZADD moon_size 90  {"text":"large",  "multiplier":0.7}
 ZADD moon_size 100 {"text":"massive","multiplier":0.8}
 
-
-DEL moon_color
 ZADD moon_color 20 {"text":"light blue", "color":"0xb4dde1"}
 ZADD moon_color 40 {"text":"briliant silver", "color":"0xCCCCCC"}
 ZADD moon_color 60 {"text":"bone white", "color":"0xffffff"}

@@ -63,7 +63,7 @@ def GenerateMagicItem():
 def MagicItem_Builder():
     """Generate an NPC"""
 
-    stats=server.lrange('magicitemstats',0,-1)
+    stats=server.lrange('stat_magicitem',0,-1)
     statinfo={}
     kind=server.lrange('magicitem_kind',0,-1);
     for stat in stats :
@@ -107,7 +107,7 @@ def GenerateNPC():
 def NPC_Builder():
     """Generate an NPC"""
 
-    stats=server.lrange('npcstats',0,-1)
+    stats=server.lrange('stat_npc',0,-1)
     statinfo={}
     races=server.lrange('race',0,-1);
     professions=server.lrange('npc_profession',0,-1);
@@ -125,7 +125,7 @@ def NPC_Builder():
 def Planet_Builder():
     """Generate the basic data about a planet"""
 
-    stats=server.lrange('planetstats',0,-1)
+    stats=server.lrange('stat_planet',0,-1)
     statinfo={}
 
     for stat in stats :

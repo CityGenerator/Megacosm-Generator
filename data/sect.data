@@ -1,5 +1,6 @@
 #
 
+LPUSH stat_sect acceptance
 
 #    <acceptance><!--Sect members are see as _____ by the faithful -->
 ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
