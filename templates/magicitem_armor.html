@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block title %} You found {{magicitem.kind}} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind}}  ({{magicitem.seed}})</a></h1>
     <h2>Summary</h2>
     The {{magicitem.name|title}} is {{magicitem.quality['name']|article }} {{magicitem.material_description['name'] }} {{magicitem.category_description['name']}} with {{magicitem.effect_description['name'] |article}} enchantment that {{magicitem.effect_description['description']}}. It is {{magicitem.repair['name'] }}.
     <h2>Details</h2>
@@ -27,7 +27,7 @@
     {%endif%}
     </p>
     <p>
-    Many consider it {{magicitem.strength['name']| article}} {{magicitem.kind}} and a {{magicitem.value['name']}}.
+    Many consider it {{magicitem.strength['name'] }} {{magicitem.kind}} and a {{magicitem.value['name']}}.
     {%if magicitem.flaw%}
         This {{magicitem.category_description['name']}} is rather distinctive due to {{magicitem.flaw_description['name'] |article}} on the {{magicitem.category_description['materialpart']}}.
     {%endif%}
