@@ -74,7 +74,7 @@ ZADD npc_skill 100 {"name":"legendarily skilled",   "score":100  }
 ZADD npc_experience 5    {"name":"new",   "score":5  }
 ZADD npc_experience 10   {"name":"naive",   "score":10  }
 ZADD npc_experience 15   {"name":"green",   "score":15  }
-ZADD npc_experience 20   {"name":"amatuer",   "score":20  }
+ZADD npc_experience 20   {"name":"amateur",   "score":20  }
 ZADD npc_experience 25   {"name":"fledgling",   "score":25  }
 ZADD npc_experience 30   {"name":"inexperienced",   "score":30  }
 ZADD npc_experience 35   {"name":"rookie",   "score":35  }
@@ -89,7 +89,7 @@ ZADD npc_experience 75   {"name":"gifted",   "score":75  }
 ZADD npc_experience 80   {"name":"adept",   "score":80  }
 ZADD npc_experience 85   {"name":"worldly",   "score":85  }
 ZADD npc_experience 90   {"name":"expert",   "score":90  }
-ZADD npc_experience 95   {"name":"vetran",   "score":95  }
+ZADD npc_experience 95   {"name":"veteran",   "score":95  }
 ZADD npc_experience 100  {"name":"grizzled",   "score":100  }
 
 ZADD npc_strength 10     {"name":"weak",   "score":10  }
@@ -146,7 +146,7 @@ ZADD npc_charisma 80     {"name":"charming",   "score":80  }
 ZADD npc_charisma 100    {"name":"inspiring",   "score":100  }
 
 ZADD npc_intelligence 20    {"name":"dumb",   "score":20  }
-ZADD npc_intelligence 40    {"name":"dimwited",   "score":40  }
+ZADD npc_intelligence 40    {"name":"dimwitted",   "score":40  }
 ZADD npc_intelligence 60    {"name":"average",   "score":60  }
 ZADD npc_intelligence 80    {"name":"clever",   "score":80  }
 ZADD npc_intelligence 100   {"name":"brilliant",   "score":100  }
@@ -967,7 +967,7 @@ LPUSH npc_posessiondetail was a gift
 LPUSH npc_posessiondetail was a gift from a parent
 LPUSH npc_posessiondetail was a gift from a mentor
 LPUSH npc_posessiondetail was a gift from a lover
-LPUSH npc_posessiondetail was a gift from a frienbd
+LPUSH npc_posessiondetail was a gift from a friend
 LPUSH npc_posessiondetail was found on the ground recently
 LPUSH npc_posessiondetail was found on the ground years ago
 LPUSH npc_posessiondetail was found in a tavern months ago
@@ -1001,39 +1001,43 @@ LPUSH npc_posession lock of hair
 
 #If approached, bob will be
 LPUSH npc_attitude accusatory
+LPUSH npc_attitude agitated
 LPUSH npc_attitude apologetic
 LPUSH npc_attitude attentive
 LPUSH npc_attitude authoritarian
 LPUSH npc_attitude battle-ready
-LPUSH npc_attitude beligerent
+LPUSH npc_attitude belligerent
 LPUSH npc_attitude boastful
 LPUSH npc_attitude cautious
 LPUSH npc_attitude chatty
 LPUSH npc_attitude clumsy
-LPUSH npc_attitude conspirational
+LPUSH npc_attitude conspiratorial
 LPUSH npc_attitude contrarian
 LPUSH npc_attitude crude
 LPUSH npc_attitude conniving
 LPUSH npc_attitude cowed
 LPUSH npc_attitude deluded
+LPUSH npc_attitude distracted
+LPUSH npc_attitude distraught
 LPUSH npc_attitude drunken
 LPUSH npc_attitude easily offended
 LPUSH npc_attitude efficient
 LPUSH npc_attitude egotistical
 LPUSH npc_attitude embittered
 LPUSH npc_attitude exhausted
-LPUSH npc_attitude fashion concious
+LPUSH npc_attitude fashion conscious
 LPUSH npc_attitude fatalistic
 LPUSH npc_attitude flirtatious
 LPUSH npc_attitude forbidding
 LPUSH npc_attitude forgetful
 LPUSH npc_attitude giddy
 LPUSH npc_attitude gluttonous
-LPUSH npc_attitude gosipy
+LPUSH npc_attitude gossipy
 LPUSH npc_attitude greedy
 LPUSH npc_attitude grieving
 LPUSH npc_attitude guarded
 LPUSH npc_attitude guilty
+LPUSH npc_attitude harried
 LPUSH npc_attitude healthy
 LPUSH npc_attitude helpful
 LPUSH npc_attitude homesick
@@ -1056,14 +1060,17 @@ LPUSH npc_attitude nihilistic
 LPUSH npc_attitude nosy
 LPUSH npc_attitude outlandish
 LPUSH npc_attitude pacifistic
+LPUSH npc_attitude patient
 LPUSH npc_attitude patriotic
 LPUSH npc_attitude patronizing
 LPUSH npc_attitude pious
 LPUSH npc_attitude prejudiced
 LPUSH npc_attitude quiet
 LPUSH npc_attitude resentful
+LPUSH npc_attitude rushed
 LPUSH npc_attitude scattered
 LPUSH npc_attitude self-obsessed
+LPUSH npc_attitude self-righteous
 LPUSH npc_attitude shifty
 LPUSH npc_attitude sickly
 LPUSH npc_attitude skeptical
@@ -1071,7 +1078,9 @@ LPUSH npc_attitude smitten
 LPUSH npc_attitude smug
 LPUSH npc_attitude solemn
 LPUSH npc_attitude spiteful
+LPUSH npc_attitude suspicious
 LPUSH npc_attitude territorial
+LPUSH npc_attitude terse
 LPUSH npc_attitude thick
 LPUSH npc_attitude treasure-obsessed
 LPUSH npc_attitude trusting
@@ -1088,6 +1097,10 @@ LPUSH npc_regret accidentally killed an innocent person
 LPUSH npc_regret seriously injured a friend goofing around
 LPUSH npc_regret ran away from home long ago
 LPUSH npc_regret scared a child
+LPUSH npc_regret disappointed a mentor
+LPUSH npc_regret lost contact with a friend
+LPUSH npc_regret estranged a family member
+LPUSH npc_regret let an opportunity slip away
         
 LPUSH npc_height short
 LPUSH npc_height average height
@@ -1142,8 +1155,10 @@ LPUSH npc_eye bloodshot
 LPUSH npc_eye cross-eyed
 LPUSH npc_eye deep-set
 LPUSH npc_eye close-set
+LPUSH npc_eye wide-set
 LPUSH npc_eye heavy
 LPUSH npc_eye hollow
+LPUSH npc_eye hooded
 LPUSH npc_eye piggish
 LPUSH npc_eye sunken
 LPUSH npc_eye brooding
@@ -1204,11 +1219,13 @@ LPUSH npc_motivation traveling the world as an unemployed specialist
 LPUSH npc_motivation seeking thrills and adventure
 LPUSH npc_motivation seeking honest work
 LPUSH npc_motivation seeking dishonest work
+LPUSH npc_motivation seeking a quick buck
 LPUSH npc_motivation seeking revenge
 LPUSH npc_motivation seeking healing for a crippling injury
 
 LPUSH npc_motivation brokering a truce over a trade war
 LPUSH npc_motivation brokering a truce over escalating tension
+LPUSH npc_motivation brokering a truce over a religious conflict
 
 LPUSH npc_motivation doing something nefarious
 LPUSH npc_motivation doing something amazing
@@ -1344,7 +1361,7 @@ LPUSH npc_emotion jealous
 LPUSH npc_emotion jolly
 LPUSH npc_emotion jovial
 LPUSH npc_emotion joyful
-LPUSH npc_emotion jubiliant
+LPUSH npc_emotion jubilant
 LPUSH npc_emotion loathful
 LPUSH npc_emotion lonely
 LPUSH npc_emotion longing
@@ -1368,7 +1385,7 @@ LPUSH npc_emotion relieved
 LPUSH npc_emotion remorseful
 LPUSH npc_emotion resenting
 LPUSH npc_emotion revolted
-LPUSH npc_emotion sadened
+LPUSH npc_emotion saddened
 LPUSH npc_emotion satisfied
 LPUSH npc_emotion scornful
 LPUSH npc_emotion sentimental
@@ -1378,7 +1395,7 @@ LPUSH npc_emotion sorrowful
 LPUSH npc_emotion spiteful
 LPUSH npc_emotion suffering
 LPUSH npc_emotion surprised
-LPUSH npc_emotion suspensful
+LPUSH npc_emotion suspenseful
 LPUSH npc_emotion sympathetic
 LPUSH npc_emotion tender
 LPUSH npc_emotion terrorized

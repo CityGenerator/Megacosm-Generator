@@ -95,7 +95,35 @@ LPUSH cuisine_dish squid
 LPUSH cuisine_dish tentacle 
 LPUSH cuisine_dish veal
 LPUSH cuisine_dish veggie
-# TODO add more exotic meats...
+LPUSH cuisine_dish horse
+LPUSH cuisine_dish clam
+LPUSH cuisine_dish oyster
+LPUSH cuisine_dish shrimp
+LPUSH cuisine_dish frog
+LPUSH cuisine_dish tiger
+LPUSH cuisine_dish deer
+LPUSH cuisine_dish elephant
+LPUSH cuisine_dish cuttlefish
+LPUSH cuisine_dish crayfish
+LPUSH cuisine_dish eel
+LPUSH cuisine_dish mudskipper
+LPUSH cuisine_dish salmon
+LPUSH cuisine_dish rat
+LPUSH cuisine_dish mutton
+LPUSH cuisine_dish mouse
+LPUSH cuisine_dish rabbit
+LPUSH cuisine_dish goose
+LPUSH cuisine_dish zucchini
+LPUSH cuisine_dish melon
+LPUSH cuisine_dish cheese
+LPUSH cuisine_dish duck
+LPUSH cuisine_dish chevon
+LPUSH cuisine_dish tomato
+LPUSH cuisine_dish artichoke
+LPUSH cuisine_dish onion
+LPUSH cuisine_dish turnip
+LPUSH cuisine_dish tofu
+LPUSH cuisine_dish yogurt
 
 LPUSH cuisine_mealtype wrap
 LPUSH cuisine_mealtype casserole
@@ -103,6 +131,7 @@ LPUSH cuisine_mealtype crumble
 LPUSH cuisine_mealtype pudding
 LPUSH cuisine_mealtype pie
 LPUSH cuisine_mealtype soup
+LPUSH cuisine_mealtype cream soup
 LPUSH cuisine_mealtype sandwich
 LPUSH cuisine_mealtype on pasta
 LPUSH cuisine_mealtype cake
@@ -111,6 +140,8 @@ LPUSH cuisine_mealtype pancakes
 LPUSH cuisine_mealtype salad
 LPUSH cuisine_mealtype on rice
 LPUSH cuisine_mealtype on kale
+LPUSH cuisine_mealtype with flatbread
+LPUSH cuisine_mealtype porridge
 
 LPUSH cuisine_sauce red
 LPUSH cuisine_sauce white
@@ -135,6 +166,7 @@ LPUSH cuisine_sauce brown
 LPUSH cuisine_saucetype broth
 LPUSH cuisine_saucetype sauce
 LPUSH cuisine_saucetype gravy
+LPUSH cuisine_saucetype cream
 
 LPUSH cuisine_served hot
 LPUSH cuisine_served cold
