@@ -1,0 +1,35 @@
+# 
+
+
+
+
+# investigate a rumor, some ruins, or an event
+LPUSH adventure_category investigate 
+# negotiate between several parties, some of which are lying
+LPUSH adventure_category negotiate 
+# attack for retribution, greed, etc
+LPUSH adventure_category attack 
+# kill for a contract, assassination, etc
+LPUSH adventure_category kill 
+# Defeat someone to claim something
+LPUSH adventure_category defeat 
+# find a missing artifact, person, clue, etc
+LPUSH adventure_category find 
+# defend a place, an item, a person, etc
+LPUSH adventure_category defend 
+# create an artifact, town, event, etc
+LPUSH adventure_category create 
+# decide the fate of someone or something based on gathered information
+LPUSH adventure_category decide 
+# change the way something is currently done
+LPUSH adventure_category change 
+# challenge someone to change their ways, possibly with violence.
+LPUSH adventure_category challenge 
+# Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
+LPUSH adventure_category perform 
+    
+
+
+
+LPUSH adventure_reason For a reward
+
