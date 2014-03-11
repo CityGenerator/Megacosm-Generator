@@ -1,0 +1,22 @@
+
+category
+
+LPUSH landform_category cavern
+HSET  landform_category_description cavern     { "name":"cavern  ", "description":""    }
+LPUSH landform_category crater
+HSET  landform_category_description crater     { "name":"crater", "description":""    }
+LPUSH landform_category dells
+HSET  landform_category_description dells      { "name":"dells", "description":""    }
+LPUSH landform_category forest
+HSET  landform_category_description forest     { "name":"forest", "description":""    }
+LPUSH landform_category mountains
+HSET  landform_category_description mountains  { "name":"mountains", "description":""    }
+LPUSH landform_category rivers
+HSET  landform_category_description rivers     { "name":"rivers", "description":""    }
+LPUSH landform_category valleys
+HSET  landform_category_description valleys    { "name":"valleys", "description":""    }
+LPUSH landform_category volcano
+HSET  landform_category_description volcano    { "name":"volcano", "description":""    }
+LPUSH landform_category waterfall
+HSET  landform_category_description waterfall  { "name":"waterfall", "description":""    }
+
