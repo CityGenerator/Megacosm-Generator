@@ -17,6 +17,8 @@ LPUSH weapon_category crossbow
 HSET weapon_category_description crossbow       {"name":"crossbow",     "materialpart":"stock"    }
 LPUSH weapon_category quarterstaff
 HSET weapon_category_description quarterstaff   {"name":"quarterstaff", "materialpart":"shaft"    }
+LPUSH weapon_category polearm
+HSET weapon_category_description polearm        {"name":"polearm",      "materialpart":"tip"      }
 
 # the sharp sword of ________ will occasionally slice through anything and __________________________________.
 # the sharp sword of the bull will occasionally slice through anything and grants the user unnatural strength.
