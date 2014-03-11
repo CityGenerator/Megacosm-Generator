@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -209,6 +209,23 @@ def Rumor_Builder():
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
     
+#########################################################################
+
+@app.route('/continent')
+def GenerateContinent():
+    """Generate a simple continent"""
+    features=feature_filter('continent')
+    continent=Continent.Continent(server,features)
+    return render_template('continent.html', continent=continent )
+
+
+@app.route('/continent_builder')
+def Continent_Builder():
+    """Generate the basic data about a continent"""
+    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+    paramlist,paramstring,paramset=builder_form_data('continent')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='continent') 
+
 #########################################################################
 
 @app.route('/cuisine')

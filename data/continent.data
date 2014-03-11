@@ -1,0 +1,36 @@
+
+LPUSH stat_continent size
+LPUSH stat_continent civilization
+LPUSH stat_continent technology
+LPush stat_continent countrycount
+
+# East Amoro is a _______ continent
+ZADD continent_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   }
+ZADD continent_size 10 {"name":"small",     "multiplier":0.7,  "score":10   }
+ZADD continent_size 65 {"name":"average",   "multiplier":1.0,  "score":65   }
+ZADD continent_size 85 {"name":"large",     "multiplier":1.5,  "score":85   }
+ZADD continent_size 100 {"name":"massive",  "multiplier":2.0,  "score":100   }  
+
+# East Amoro is a _______ continent with ______ civilization.
+ZADD continent_civilization 5   {"name":"crude"       ,  "score":5   }
+ZADD continent_civilization 10  {"name":"scattered"   ,  "score":10   }
+ZADD continent_civilization 90  {"name":"moderate"    ,  "score":90   }
+ZADD continent_civilization 95  {"name":"prosperous"  ,  "score":95   }
+ZADD continent_civilization 100 {"name":"thriving"    ,  "score":100   }
+
+# Most civilized areas in  East Amoro have _________ technology
+ZADD continent_technology 5    {"name":"Stone Age",        "score":5   }
+ZADD continent_technology 10   {"name":"Bronze Age",       "score":10   }
+ZADD continent_technology 15   {"name":"Iron Age",         "score":15   }
+ZADD continent_technology 20   {"name":"Ancient Age",      "score":20   }
+ZADD continent_technology 90   {"name":"Middle Age",       "score":90   }
+ZADD continent_technology 95   {"name":"Modern Age",       "score":95   }
+ZADD continent_technology 100  {"name":"Contemporary Age", "score":100   }
+
+# The continent has ________ known countries:
+ZADD continent_countrydetails 10  {"name":"a single",     "score":10,  "mincount":1,   "maxcount":1   }
+ZADD continent_countrydetails 20  {"name":"a couple",     "score":20,  "mincount":2,   "maxcount":2   }
+ZADD continent_countrydetails 90  {"name":"several",      "score":90,  "mincount":3,   "maxcount":6   }
+ZADD continent_countrydetails 95  {"name":"many",         "score":95,  "mincount":6,   "maxcount":11  }
+ZADD continent_countrydetails 100 {"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  } 
+
