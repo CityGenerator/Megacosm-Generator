@@ -2,6 +2,25 @@
 
 
 
+# Theme
+
+
+Goal
+
+Hook
+Plot
+climax
+
+general setting
+
+specific location
+specific location
+
+
+
+
+
+
 
 # investigate a rumor, some ruins, or an event
 LPUSH adventure_category investigate 
@@ -28,8 +47,162 @@ LPUSH adventure_category challenge
 # Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
 LPUSH adventure_category perform 
     
+LPUSH adventure_category liberate
 
-
+LPUSH adventure_category escort
 
 LPUSH adventure_reason For a reward
 
+
+
+
+
+LPUSH adventure_villiantype isolated monster
+LPUSH adventure_villiantype political leader
+LPUSH adventure_villiantype criminal leader
+LPUSH adventure_villiantype gang leader
+LPUSH adventure_villiantype hive mind
+LPUSH adventure_villiantype cult leader
+LPUSH adventure_villiantype
+LPUSH adventure_villiantype
+LPUSH adventure_villiantype
+LPUSH adventure_villiantype
+LPUSH adventure_villiantype
+
+villian power type
+political, religious, criminal, civil
+
+why is the villian mad? are they mad?
+motivation
+
+power level
+
+
+
+
+villian type
+ally type
+location
+evidence
+
+
+
+LPUSH adventure_item weapon of unimaginable power
+LPUSH adventure_item key to a vault
+LPUSH adventure_item forbidden lore
+LPUSH adventure_item a spellbook
+LPUSH adventure_item a map
+LPUSH adventure_item deed 
+
+
+
+
+        <option base="alchemy"      type="thing"   />
+        <option base="anger"        type="thing"   />
+        <option base="armor"        type="thing"   />
+        <option base="adventure"    type="thing"   />
+        <option base="blessing"     type="thing"   />
+        <option base="blood"        type="thing"   />
+        <option base="book"         type="thing"   />
+        <option base="calamity"     type="thing"   />
+        <option base="choice"       type="thing"   />
+        <option base="claw"         type="thing"   />
+        <option base="club"         type="thing"   />
+        <option base="courage"      type="thing"   />
+        <option base="crystal"      type="thing"   />
+        <option base="cup"          type="thing"   />
+        <option base="curse"        type="thing"   />
+        <option base="dagger"       type="thing"   />
+        <option base="danger"       type="thing"   />
+        <option base="death"        type="thing"   />
+        <option base="desire"       type="thing"   />
+        <option base="disaster"     type="thing"   />
+        <option base="doom"         type="thing"   />
+        <option base="door"         type="thing"   />
+        <option base="dread"        type="thing"   />
+        <option base="echo"         type="thing"   />
+        <option base="effigy"       type="thing"   />
+        <option base="emperor"      type="person"  />
+        <option base="eye"          type="thing"   />
+        <option base="face"         type="thing"   />
+        <option base="fang"         type="thing"   />
+        <option base="fate"         type="thing"   />
+        <option base="freedom"      type="thing"   />
+        <option base="fungus"       type="thing"   />
+        <option base="ghost"        type="thing"   />
+        <option base="god"          type="thing"   />
+        <option base="gold"         type="thing"   />
+        <option base="hand"         type="thing"   />
+        <option base="hieroglyph"   type="thing"   />
+        <option base="holiness"     type="thing"   />
+        <option base="horror"       type="thing"   />
+        <option base="ice/fire"     type="thing"   />
+        <option base="illusion"     type="thing"   />
+        <option base="judgment"     type="thing"   />
+        <option base="karma"        type="thing"   />
+        <option base="king"         type="person"  />
+        <option base="knife"        type="thing"   />
+        <option base="knowledge"    type="thing"   />
+        <option base="legend"       type="thing"   />
+        <option base="lie"          type="thing"   />
+        <option base="life"         type="thing"   />
+        <option base="light"        type="thing"   />
+        <option base="luck"         type="thing"   />
+        <option base="machine"      type="thing"   />
+        <option base="magic"        type="thing"   />
+        <option base="mechanism"    type="thing"   />
+        <option base="melancholy"   type="thing"   />
+        <option base="mirror"       type="thing"   />
+        <option base="monarch"      type="person"  />
+        <option base="mouth"        type="thing"   />
+        <option base="night"        type="thing"   />
+        <option base="obscenity"    type="thing"   />
+        <option base="ordeal"       type="thing"   />
+        <option base="passion"      type="thing"   />
+        <option base="path"         type="thing"   />
+        <option base="princess"     type="person"  />
+        <option base="prince"       type="person"  />
+        <option base="queen"        type="person"  />
+        <option base="reason"       type="thing"   />
+        <option base="remorse"      type="thing"   />
+        <option base="rich"         type="thing"   />
+        <option base="rune"         type="thing"   />
+        <option base="sadness"      type="thing"   />
+        <option base="sleep"        type="thing"   />
+        <option base="slime"        type="thing"   />
+        <option base="slime"        type="thing"   />
+        <option base="sorcery"      type="thing"   />
+        <option base="sorrow"       type="thing"   />
+        <option base="soul"         type="thing"   />
+        <option base="sovereign"    type="thing"   />
+        <option base="statue"       type="thing"   />
+        <option base="stone"        type="thing"   />
+        <option base="sword"        type="thing"   />
+        <option base="symbol"       type="thing"   />
+        <option base="tale"         type="thing"   />
+        <option base="talon"        type="thing"   />
+        <option base="tome"         type="thing"   />
+        <option base="tragedy"      type="thing"   />
+        <option base="tree"         type="thing"   />
+        <option base="tyrant"       type="person"  />
+        <option base="vision"       type="thing"   />
+        <option base="wand"         type="thing"   />
+        <option base="wealth"       type="thing"   />
+        <option base="well"         type="thing"   />
+        <option base="wisdom"       type="thing"   />
+        <option base="women"        type="thing"   />
+        <option base="zeal"         type="thing"   />
+        <option base="zombie"       type="thing"   />
+
+
+
+LPUSH adventure_name_template VERB SUBJECT
+LPUSH adventure_name_template NEGATE VERB SUBJECT
+LPUSH adventure_name_template ADJECTIVE SUBJECT
+LPUSH adventure_name_template SUBJECT VERB.participle
+LPUSH adventure_name_template SUBJECT VERB.thirdperson
+LPUSH adventure_name_template SUBJECT of SUBJECT
+LPUSH adventure_name_template SUBJECT
+LPUSH adventure_name_template SUBJECT's SUBJECT
+LPUSH adventure_name_template SUBJECT VERB.thirdperson SUBJECT
+LPUSH adventure_name_template VERB.gerund SUBJECT
