@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %}
+{% block title %}The Ties that Bind Us... {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Beware the {{sect.name['full']}}, followers of {{sect.deity.name['full']}} <a href="/sect?seed={{sect.seed}}">({{sect.seed}})</a></h1>
+
+
+The {{sect.name['full']}} are {{sect.acceptance['name'] |article}} {{sect.kind}} that focuses on {{sect.domain['name']}}.
+
+
+
+
+
+
+{% endblock %}

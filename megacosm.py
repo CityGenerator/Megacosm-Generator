@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -228,6 +228,34 @@ def Continent_Builder():
     
 #########################################################################
 
+@app.route('/sect')
+def GenerateSect():
+    """Generate a simple sect"""
+#    if 'sect_domain' in request.args:
+#        request.args.rem('sect_domain')
+#    print request.args
+
+    features=feature_filter('sect')
+    sect=Sect.Sect(server,features)
+    return render_template('sect.html', sect=sect, name='sect' )
+
+
+@app.route('/sect_builder')
+def Sect_Builder():
+    """Generate the basic data about a sect"""
+    paramlist,paramstring,paramset=builder_form_data('sect')
+    result= server.zrange('portfolio_domain',0,-1)
+#    paramlist['domain']=[]
+#    for domain in result:
+#        paramlist['domain'].append(json.loads(domain)['name'])
+
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
+
+
+    
+#########################################################################
+
 @app.route('/country')
 def GenerateCountry():
     """Generate a simple country"""
@@ -313,6 +341,7 @@ def GenerateDeity():
             deityfeatures[param]=int(request.args[param])
 
     deity=Deity.Deity(server, deityfeatures)
+    deity.generate_sects()
     return render_template('deity.html',deity=deity) 
 
 

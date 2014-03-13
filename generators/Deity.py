@@ -14,7 +14,7 @@ class Deity(Generator):
         Generator.__init__(self,redis,features)
 
         self.avatar=NPC(redis)
-
+        self.name=self.avatar.name
         #print self.__dict__
         environment = Environment()
         environment.filters['article'] = Filters.select_article
@@ -25,7 +25,7 @@ class Deity(Generator):
         random.shuffle(avatarstats)
         self.favored_stat=avatarstats.pop()
         self.select_portfolio()
-        self.generate_sects()
+        #self.generate_sects()
 
     def generate_sects(self): 
         self.sects=[]
