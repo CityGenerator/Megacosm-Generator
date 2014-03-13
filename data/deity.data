@@ -139,77 +139,109 @@ LPUSH deity_worship supplication
 LPUSH deity_worship dances
 
         
-#        <primarycolor>
+LPUSH deity_primarycolor aquamarine
+HSET deity_primarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+LPUSH deity_primarycolor azure
+HSET deity_primarycolor_description azure     {"name":"azure", "hex":"F0FFFF" }
+LPUSH deity_primarycolor banana
+HSET deity_primarycolor_description banana     {"name":"banana", "hex":"E3CF57" }
+LPUSH deity_primarycolor beige
+HSET deity_primarycolor_description beige     {"name":"beige", "hex":"F5F5DC" }
+LPUSH deity_primarycolor bisque
+HSET deity_primarycolor_description bisque     {"name":"bisque", "hex":"FFE4C4" }
 LPUSH deity_primarycolor black
+HSET deity_primarycolor_description black     {"name":"black", "hex":"000000" }
+LPUSH deity_primarycolor blanchedalmond
+HSET deity_primarycolor_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
 LPUSH deity_primarycolor blue
+HSET deity_primarycolor_description blue     {"name":"blue", "hex":"0000FF" }
+LPUSH deity_primarycolor blueviolet
+HSET deity_primarycolor_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+LPUSH deity_primarycolor brick
+HSET deity_primarycolor_description brick     {"name":"brick", "hex":"9C661F" }
 LPUSH deity_primarycolor brown
-LPUSH deity_primarycolor dark blue
-LPUSH deity_primarycolor dark brown
-LPUSH deity_primarycolor dark green
-LPUSH deity_primarycolor dark grey
-LPUSH deity_primarycolor dark red
-LPUSH deity_primarycolor dark yellow
-LPUSH deity_primarycolor gold
-LPUSH deity_primarycolor green
-LPUSH deity_primarycolor grey
-LPUSH deity_primarycolor light blue
-LPUSH deity_primarycolor light brown
-LPUSH deity_primarycolor light green
-LPUSH deity_primarycolor light grey
-LPUSH deity_primarycolor light orange
-LPUSH deity_primarycolor light red
-LPUSH deity_primarycolor light yellow
-LPUSH deity_primarycolor orange
-LPUSH deity_primarycolor purple
-LPUSH deity_primarycolor red
-LPUSH deity_primarycolor very dark blue
-LPUSH deity_primarycolor very dark green
-LPUSH deity_primarycolor very dark grey
-LPUSH deity_primarycolor very dark red
-LPUSH deity_primarycolor very light blue
-LPUSH deity_primarycolor very light green
-LPUSH deity_primarycolor very light red
-LPUSH deity_primarycolor very light yellow
-LPUSH deity_primarycolor white
-LPUSH deity_primarycolor yellow
-LPUSH deity_primarycolor magenta
+HSET deity_primarycolor_description brown     {"name":"brown", "hex":"A52A2A" }
+LPUSH deity_primarycolor burlywood
+HSET deity_primarycolor_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+LPUSH deity_primarycolor burntsienna
+HSET deity_primarycolor_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+LPUSH deity_primarycolor burntumber
+HSET deity_primarycolor_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+LPUSH deity_primarycolor cadetblue
+HSET deity_primarycolor_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+LPUSH deity_primarycolor cadmiumorange
+HSET deity_primarycolor_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+LPUSH deity_primarycolor cadmiumyellow
+HSET deity_primarycolor_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+LPUSH deity_primarycolor carrot
+HSET deity_primarycolor_description carrot     {"name":"carrot", "hex":"ED9121" }
+LPUSH deity_primarycolor chartreuse
+HSET deity_primarycolor_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+LPUSH deity_primarycolor chocolate
+HSET deity_primarycolor_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+LPUSH deity_primarycolor cobalt
+HSET deity_primarycolor_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+LPUSH deity_primarycolor cobaltgreen
+HSET deity_primarycolor_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+LPUSH deity_primarycolor coldgrey
+HSET deity_primarycolor_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+LPUSH deity_primarycolor coral
+HSET deity_primarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
+LPUSH deity_primarycolor cornflowerblue
+HSET deity_primarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
         
-#        <secondarycolor>
-# TODO make secondarycolor optional in the template?
-LPUSH deity_secondarycolor black
-LPUSH deity_secondarycolor blue
-LPUSH deity_secondarycolor brown
-LPUSH deity_secondarycolor dark blue
-LPUSH deity_secondarycolor dark brown
-LPUSH deity_secondarycolor dark green
-LPUSH deity_secondarycolor dark grey
-LPUSH deity_secondarycolor dark red
-LPUSH deity_secondarycolor dark yellow
-LPUSH deity_secondarycolor gold
-LPUSH deity_secondarycolor green
-LPUSH deity_secondarycolor grey
-LPUSH deity_secondarycolor light blue
-LPUSH deity_secondarycolor light brown
-LPUSH deity_secondarycolor light green
-LPUSH deity_secondarycolor light grey
-LPUSH deity_secondarycolor light orange
-LPUSH deity_secondarycolor light red
-LPUSH deity_secondarycolor light yellow
-LPUSH deity_secondarycolor orange
-LPUSH deity_secondarycolor purple
-LPUSH deity_secondarycolor red
-LPUSH deity_secondarycolor very dark blue
-LPUSH deity_secondarycolor very dark green
-LPUSH deity_secondarycolor very dark grey
-LPUSH deity_secondarycolor very dark red
-LPUSH deity_secondarycolor very light blue
-LPUSH deity_secondarycolor very light green
-LPUSH deity_secondarycolor very light red
-LPUSH deity_secondarycolor very light yellow
-LPUSH deity_secondarycolor white
-LPUSH deity_secondarycolor yellow
-LPUSH deity_secondarycolor magenta
 
+        
+LPUSH deity_secondarycolor aquamarine
+HSET deity_secondarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+LPUSH deity_secondarycolor azure
+HSET deity_secondarycolor_description azure     {"name":"azure", "hex":"F0FFFF" }
+LPUSH deity_secondarycolor banana
+HSET deity_secondarycolor_description banana     {"name":"banana", "hex":"E3CF57" }
+LPUSH deity_secondarycolor beige
+HSET deity_secondarycolor_description beige     {"name":"beige", "hex":"F5F5DC" }
+LPUSH deity_secondarycolor bisque
+HSET deity_secondarycolor_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+LPUSH deity_secondarycolor black
+HSET deity_secondarycolor_description black     {"name":"black", "hex":"000000" }
+LPUSH deity_secondarycolor blanchedalmond
+HSET deity_secondarycolor_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+LPUSH deity_secondarycolor blue
+HSET deity_secondarycolor_description blue     {"name":"blue", "hex":"0000FF" }
+LPUSH deity_secondarycolor blueviolet
+HSET deity_secondarycolor_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+LPUSH deity_secondarycolor brick
+HSET deity_secondarycolor_description brick     {"name":"brick", "hex":"9C661F" }
+LPUSH deity_secondarycolor brown
+HSET deity_secondarycolor_description brown     {"name":"brown", "hex":"A52A2A" }
+LPUSH deity_secondarycolor burlywood
+HSET deity_secondarycolor_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+LPUSH deity_secondarycolor burntsienna
+HSET deity_secondarycolor_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+LPUSH deity_secondarycolor burntumber
+HSET deity_secondarycolor_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+LPUSH deity_secondarycolor cadetblue
+HSET deity_secondarycolor_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+LPUSH deity_secondarycolor cadmiumorange
+HSET deity_secondarycolor_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+LPUSH deity_secondarycolor cadmiumyellow
+HSET deity_secondarycolor_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+LPUSH deity_secondarycolor carrot
+HSET deity_secondarycolor_description carrot     {"name":"carrot", "hex":"ED9121" }
+LPUSH deity_secondarycolor chartreuse
+HSET deity_secondarycolor_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+LPUSH deity_secondarycolor chocolate
+HSET deity_secondarycolor_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+LPUSH deity_secondarycolor cobalt
+HSET deity_secondarycolor_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+LPUSH deity_secondarycolor cobaltgreen
+HSET deity_secondarycolor_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+LPUSH deity_secondarycolor coldgrey
+HSET deity_secondarycolor_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+LPUSH deity_secondarycolor coral
+HSET deity_secondarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
+LPUSH deity_secondarycolor cornflowerblue
+HSET deity_secondarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
         
 # in battle, Gokl prefers
 LPUSH deity_favored_weapon axes
@@ -271,85 +303,103 @@ LPUSH deity_favored_weapon tridents
 LPUSH deity_favored_weapon unarmed combat
 LPUSH deity_favored_weapon unique axes
 
-SET   deity_holysymbol_type_chance 10
-LPUSH deity_holysymbol_type bloody
+SET   deity_holysymbol_type_chance 50
 LPUSH deity_holysymbol_type broken
 LPUSH deity_holysymbol_type double
-LPUSH deity_holysymbol_type flaming
-LPUSH deity_holysymbol_type shining
-LPUSH deity_holysymbol_type sideways
-LPUSH deity_holysymbol_type single
-LPUSH deity_holysymbol_type stylized
-LPUSH deity_holysymbol_type triple
 LPUSH deity_holysymbol_type upside-down
+LPUSH deity_holysymbol_type sideways
+LPUSH deity_holysymbol_type triple
+LPUSH deity_holysymbol_type divided 
+LPUSH deity_holysymbol_type tilted
+LPUSH deity_holysymbol_type burning
+LPUSH deity_holysymbol_type fragmented
+LPUSH deity_holysymbol_type circled
+LPUSH deity_holysymbol_type rocking
+LPUSH deity_holysymbol_type swinging
+
+#LPUSH deity_holysymbol_type melting
+#LPUSH deity_holysymbol_type cartoonish
+#LPUSH deity_holysymbol_type angular
+#LPUSH deity_holysymbol_type jagged
+#LPUSH deity_holysymbol_type winged
+#LPUSH deity_holysymbol_type dragged?
+#LPUSH deity_holysymbol_type walking
+
+
+
+#LPUSH deity_holysymbol_type running
+#LPUSH deity_holysymbol_type decaying
+#LPUSH deity_holysymbol_type flaming
+#LPUSH deity_holysymbol_type shining
+#LPUSH deity_holysymbol_type stylized
+#LPUSH deity_holysymbol_type bloody
 
 
 LPUSH deity_holysymbol ankh
-LPUSH deity_holysymbol axe
-LPUSH deity_holysymbol bell
-LPUSH deity_holysymbol bone
-LPUSH deity_holysymbol book
-LPUSH deity_holysymbol bull
-LPUSH deity_holysymbol calf
-LPUSH deity_holysymbol candle
-LPUSH deity_holysymbol cat
-LPUSH deity_holysymbol circle
-LPUSH deity_holysymbol coin
-LPUSH deity_holysymbol crescent
-LPUSH deity_holysymbol cross
-LPUSH deity_holysymbol door
-LPUSH deity_holysymbol dragon
-LPUSH deity_holysymbol duck
-LPUSH deity_holysymbol ear
-LPUSH deity_holysymbol eye
-LPUSH deity_holysymbol feather
-LPUSH deity_holysymbol fish
-LPUSH deity_holysymbol fist
-LPUSH deity_holysymbol flame
-LPUSH deity_holysymbol flask
-LPUSH deity_holysymbol flower
-LPUSH deity_holysymbol gate
-LPUSH deity_holysymbol gauntlet
-LPUSH deity_holysymbol goat
-LPUSH deity_holysymbol hand
-LPUSH deity_holysymbol heart
-LPUSH deity_holysymbol helmet
-LPUSH deity_holysymbol heptagram
-LPUSH deity_holysymbol hexagon
-LPUSH deity_holysymbol hexagram
-LPUSH deity_holysymbol horse
-LPUSH deity_holysymbol insect
-LPUSH deity_holysymbol key
-LPUSH deity_holysymbol lamb
-LPUSH deity_holysymbol man
-LPUSH deity_holysymbol mask
-LPUSH deity_holysymbol moon
-LPUSH deity_holysymbol mouth
-LPUSH deity_holysymbol octogram
-LPUSH deity_holysymbol pearl
-LPUSH deity_holysymbol pentagon
-LPUSH deity_holysymbol pentagram
-LPUSH deity_holysymbol potato
-LPUSH deity_holysymbol pyramid
-LPUSH deity_holysymbol scroll
-LPUSH deity_holysymbol scythe
-LPUSH deity_holysymbol seahorse
-LPUSH deity_holysymbol shield
-LPUSH deity_holysymbol skull
-LPUSH deity_holysymbol snowflake
-LPUSH deity_holysymbol spider
-LPUSH deity_holysymbol spiral
-LPUSH deity_holysymbol square
-LPUSH deity_holysymbol star
-LPUSH deity_holysymbol statue
-LPUSH deity_holysymbol sun
-LPUSH deity_holysymbol sword
-LPUSH deity_holysymbol totem
-LPUSH deity_holysymbol tree
-LPUSH deity_holysymbol triangle
-LPUSH deity_holysymbol weapon
-LPUSH deity_holysymbol wolf
-LPUSH deity_holysymbol woman
+#LPUSH deity_holysymbol axe
+#LPUSH deity_holysymbol bell
+#LPUSH deity_holysymbol bone
+#LPUSH deity_holysymbol book
+#LPUSH deity_holysymbol bull
+#LPUSH deity_holysymbol candle
+#LPUSH deity_holysymbol cat
+#LPUSH deity_holysymbol circle
+#LPUSH deity_holysymbol coin
+#LPUSH deity_holysymbol crescent
+#LPUSH deity_holysymbol cross
+#LPUSH deity_holysymbol door
+#LPUSH deity_holysymbol dragon
+#LPUSH deity_holysymbol duck
+#LPUSH deity_holysymbol ear
+#LPUSH deity_holysymbol eye
+#LPUSH deity_holysymbol feather
+#LPUSH deity_holysymbol fish
+#LPUSH deity_holysymbol fist
+#LPUSH deity_holysymbol flame
+#LPUSH deity_holysymbol flask
+#LPUSH deity_holysymbol flower
+#LPUSH deity_holysymbol gate
+#LPUSH deity_holysymbol gauntlet
+#LPUSH deity_holysymbol goat
+#LPUSH deity_holysymbol hand
+#LPUSH deity_holysymbol heart
+#LPUSH deity_holysymbol helmet
+#LPUSH deity_holysymbol heptagram
+#LPUSH deity_holysymbol hexagon
+#LPUSH deity_holysymbol hexagram
+#LPUSH deity_holysymbol horse
+#LPUSH deity_holysymbol insect
+#LPUSH deity_holysymbol key
+#LPUSH deity_holysymbol lamb
+#LPUSH deity_holysymbol man
+#LPUSH deity_holysymbol mask
+#LPUSH deity_holysymbol moon
+#LPUSH deity_holysymbol mouth
+#LPUSH deity_holysymbol octogram
+#LPUSH deity_holysymbol pearl
+#LPUSH deity_holysymbol pentagon
+#LPUSH deity_holysymbol pentagram
+#LPUSH deity_holysymbol potato
+#LPUSH deity_holysymbol pyramid
+#LPUSH deity_holysymbol scroll
+#LPUSH deity_holysymbol scythe
+#LPUSH deity_holysymbol seahorse
+#LPUSH deity_holysymbol shield
+#LPUSH deity_holysymbol skull
+#LPUSH deity_holysymbol snowflake
+#LPUSH deity_holysymbol spider
+#LPUSH deity_holysymbol spiral
+#LPUSH deity_holysymbol square
+#LPUSH deity_holysymbol star
+#LPUSH deity_holysymbol statue
+#LPUSH deity_holysymbol sun
+#LPUSH deity_holysymbol sword
+#LPUSH deity_holysymbol totem
+#LPUSH deity_holysymbol tree
+#LPUSH deity_holysymbol triangle
+#LPUSH deity_holysymbol weapon
+#LPUSH deity_holysymbol wolf
+#LPUSH deity_holysymbol woman
     
 #Ganthidon sometimes chooses to appear as a _________ before his followers.
 LPUSH deity_form talking jackal
