@@ -335,7 +335,7 @@ LPUSH deity_holysymbol_type swinging
 #LPUSH deity_holysymbol_type bloody
 
 
-#LPUSH deity_holysymbol anchor
+LPUSH deity_holysymbol anchor
 LPUSH deity_holysymbol ankh
 #LPUSH deity_holysymbol anvil
 #LPUSH deity_holysymbol apple
