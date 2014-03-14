@@ -315,7 +315,6 @@ def GenerateDeity():
     deity=Deity.Deity(server,features)
     return render_template('deity.html', deity=deity, name='deity' )
 
-
 @app.route('/deity_builder')
 def Deity_Builder():
     """Generate the basic data about a deity"""
