@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Legend
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -208,6 +208,22 @@ def Rumor_Builder():
     paramlist,paramstring,paramset=builder_form_data('rumor')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
+    
+#########################################################################
+
+@app.route('/legend')
+def GenerateLegend():
+    """Generate a simple legend"""
+    features=feature_filter('legend')
+    legend=Legend.Legend(server,features)
+    return render_template('legend.html', legend=legend )
+
+@app.route('/legend_builder')
+def Legend_Builder():
+    """Generate the basic data about a legend"""
+    paramlist,paramstring,paramset=builder_form_data('legend')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='legend') 
     
 #########################################################################
 
