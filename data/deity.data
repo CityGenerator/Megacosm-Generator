@@ -336,7 +336,7 @@ LPUSH deity_holysymbol_type swinging
 
 
 LPUSH deity_holysymbol ankh
-#LPUSH deity_holysymbol axe
+LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol bell
 #LPUSH deity_holysymbol bone
 #LPUSH deity_holysymbol book
