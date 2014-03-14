@@ -40,5 +40,4 @@ class Bond(Generator):
             self.text=self.render_template(self.template) 
         self.text=self.text[0].capitalize()+self.text[1:]
             
-        print "wee",self.__dict__
 
