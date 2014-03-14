@@ -1,0 +1,1922 @@
+
+LPUSH business_type bus_adventurersguild
+SET   bus_adventurersguild_name adventurers guild
+SET   bus_adventurersguild_perbuilding 30
+SET   bus_adventurersguild_maxfloors 2
+SET   bus_adventurersguild_district professional
+LPUSH bus_adventurersguild_manager adventurer
+LPUSH bus_adventurersguild_manager mercenary
+
+LPUSH bus_adventurersguild_managerclass expert
+LPUSH bus_adventurersguild_managerclass warrior
+LPUSH bus_adventurersguild_managerclass rogue
+LPUSH bus_adventurersguild_managerclass barbarian
+LPUSH bus_adventurersguild_managerclass bard
+LPUSH bus_adventurersguild_managerclass fighter
+LPUSH bus_adventurersguild_managerclass sorcerer
+LPUSH bus_adventurersguild_managerclass wizard
+LPUSH bus_adventurersguild_managerclass ranger
+
+LPUSH bus_adventurersguild_service contracts
+LPUSH bus_adventurersguild_service protection
+LPUSH bus_adventurersguild_service assistance with minor problems
+
+LPUSH bus_adventurersguild_trailer hall
+LPUSH bus_adventurersguild_trailer security
+LPUSH bus_adventurersguild_trailer legion
+LPUSH bus_adventurersguild_trailer of hell
+LPUSH bus_adventurersguild_trailer mercenary
+LPUSH bus_adventurersguild_trailer union #101
+
+LPUSH bus_adventurersguild_smell scent of oil
+LPUSH bus_adventurersguild_smell smell of blood
+LPUSH bus_adventurersguild_smell weapons being sharpened
+LPUSH bus_adventurersguild_smell burning coals
+LPUSH bus_adventurersguild_smell damp earth
+
+LPUSH bus_adventurersguild_sound a dog barking
+LPUSH bus_adventurersguild_sound sound of sparring
+LPUSH bus_adventurersguild_sound people yelling
+LPUSH bus_adventurersguild_sound weapons being sharpened
+
+LPUSH bus_adventurersguild_sight weapons against the wall
+LPUSH bus_adventurersguild_sight equipment lying around
+LPUSH bus_adventurersguild_sight a still dripping tarp in the corner covering something
+
+SET   bus_alchemyshop_name alchemy shop
+SET   bus_alchemyshop_perbuilding 3
+SET   bus_alchemyshop_limit 
+SET   bus_alchemyshop_maxfloors 1
+SET   bus_alchemyshop_district shops
+
+LPUSH bus_alchemyshop_manager alchemist
+
+LPUSH bus_alchemyshop_managerclass expert
+LPUSH bus_alchemyshop_managerclass adept
+LPUSH bus_alchemyshop_managerclass sorcerer
+LPUSH bus_alchemyshop_managerclass wizard
+LPUSH bus_alchemyshop_managerclass aristocrat
+
+LPUSH bus_alchemyshop_service concotions
+LPUSH bus_alchemyshop_service service
+
+LPUSH bus_alchemyshop_trailer shop
+LPUSH bus_alchemyshop_trailer shoppe
+LPUSH bus_alchemyshop_trailer enchanters
+
+LPUSH bus_alchemyshop_smell burning coals
+LPUSH bus_alchemyshop_smell damp earth
+LPUSH bus_alchemyshop_smell a foul smell
+
+LPUSH bus_alchemyshop_sound a dog barking
+LPUSH bus_alchemyshop_sound a rythimic scraping
+LPUSH bus_alchemyshop_sound silence
+
+LPUSH bus_alchemyshop_sight a two headed chicken wandering around
+LPUSH bus_alchemyshop_sight strange bottles and tubes everywhere
+LPUSH bus_alchemyshop_sight odd smoke coming from a large vat with
+
+SET   bus_apothecary_name apothecary
+SET   bus_apothecary_perbuilding 4
+SET   bus_apothecary_limit 
+SET   bus_apothecary_maxfloors 1
+SET   bus_apothecary_district fine shops
+
+LPUSH bus_apothecary_manager apothecary
+
+LPUSH bus_apothecary_managerclass expert
+LPUSH bus_apothecary_managerclass cleric
+LPUSH bus_apothecary_managerclass druid
+LPUSH bus_apothecary_managerclass adept
+LPUSH bus_apothecary_managerclass sorcerer
+LPUSH bus_apothecary_managerclass wizard
+LPUSH bus_apothecary_managerclass ranger
+
+LPUSH bus_apothecary_service products
+LPUSH bus_apothecary_service service
+
+LPUSH bus_apothecary_trailer shop
+LPUSH bus_apothecary_trailer shoppe
+LPUSH bus_apothecary_trailer druggist
+
+LPUSH bus_apothecary_smell fresh herbs
+LPUSH bus_apothecary_smell damp earth
+
+LPUSH bus_apothecary_sound a cat mewing
+LPUSH bus_apothecary_sound a rythimic scraping
+LPUSH bus_apothecary_sound silence
+LPUSH bus_apothecary_sound yelling from the back of the shop
+
+LPUSH bus_apothecary_sight bottles vials and stacks of grian and herbs
+LPUSH bus_apothecary_sight a small boy grinding something into powder in a bowl
+
+SET   bus_armorsmithy_name armorsmithy
+SET   bus_armorsmithy_perbuilding 10
+SET   bus_armorsmithy_limit 
+SET   bus_armorsmithy_maxfloors 1
+SET   bus_armorsmithy_district trade
+
+LPUSH bus_armorsmithy_manager armorer
+
+LPUSH bus_armorsmithy_managerclass commoner
+LPUSH bus_armorsmithy_managerclass expert
+LPUSH bus_armorsmithy_managerclass warrior
+LPUSH bus_armorsmithy_managerclass fighter
+
+LPUSH bus_armorsmithy_service service
+
+LPUSH bus_armorsmithy_trailer group
+LPUSH bus_armorsmithy_trailer amory
+
+LPUSH bus_armorsmithy_smell a burning fire
+
+LPUSH bus_armorsmithy_sound the sound of a forge
+
+LPUSH bus_armorsmithy_sight bit of armor in various states of repiar
+
+SET   bus_astrologer_name astrologer
+SET   bus_astrologer_perbuilding 1
+SET   bus_astrologer_limit 
+SET   bus_astrologer_maxfloors 1
+SET   bus_astrologer_district fine shops
+
+LPUSH bus_astrologer_manager astrologer
+
+LPUSH bus_astrologer_managerclass expert
+LPUSH bus_astrologer_managerclass adept
+
+LPUSH bus_astrologer_service service
+
+LPUSH bus_astrologer_trailer star gazers
+LPUSH bus_astrologer_trailer magic eye piece
+
+LPUSH bus_astrologer_sight lots of charts with arcaine writing on them
+LPUSH bus_astrologer_sight scrolls leaning against the walls
+
+SET   bus_bakery_name bakery
+SET   bus_bakery_perbuilding 10
+SET   bus_bakery_limit 
+SET   bus_bakery_maxfloors 1
+SET   bus_bakery_district shops
+
+LPUSH bus_bakery_manager baker
+LPUSH bus_bakery_manager pastrycook
+
+LPUSH bus_bakery_managerclass commoner
+LPUSH bus_bakery_managerclass expert
+
+LPUSH bus_bakery_service a warm smile
+LPUSH bus_bakery_service hot buns
+
+LPUSH bus_bakery_trailer bakery
+LPUSH bus_bakery_trailer sweet house
+LPUSH bus_bakery_trailer shop
+
+LPUSH bus_bakery_smell scent fresh bread
+LPUSH bus_bakery_smell fresh flour
+
+LPUSH bus_bakery_sound yelling in the back of the store
+LPUSH bus_bakery_sound fire crackling
+LPUSH bus_bakery_sound a kitten mewing
+
+LPUSH bus_bakery_sight fresh rolls
+LPUSH bus_bakery_sight hot buns
+
+SET   bus_bank_name bank
+SET   bus_bank_perbuilding 30
+SET   bus_bank_limit 
+SET   bus_bank_maxfloors 2
+SET   bus_bank_district wealthy
+
+LPUSH bus_bank_manager banker
+
+LPUSH bus_bank_managerclass expert
+LPUSH bus_bank_managerclass aristocrat
+
+LPUSH bus_bank_service service
+
+LPUSH bus_bank_trailer money changers
+LPUSH bus_bank_trailer money lenders
+LPUSH bus_bank_trailer vault
+
+LPUSH bus_bank_smell earth
+
+LPUSH bus_bank_sound muffled voices from the back
+
+LPUSH bus_bank_sight and empty counter with bars in front of it
+
+SET   bus_barbershop_name barbershop
+SET   bus_barbershop_perbuilding 4
+SET   bus_barbershop_limit 
+SET   bus_barbershop_maxfloors 1
+SET   bus_barbershop_district trade
+
+LPUSH bus_barbershop_manager barber
+
+LPUSH bus_barbershop_managerclass commoner
+
+LPUSH bus_barbershop_service a good story
+LPUSH bus_barbershop_service a steady hand
+
+LPUSH bus_barbershop_trailer shoppe
+LPUSH bus_barbershop_trailer shop
+
+LPUSH bus_barbershop_smell disenfectant
+LPUSH bus_barbershop_smell fear
+
+LPUSH bus_barbershop_sound snipping sissors
+LPUSH bus_barbershop_sound a good laught
+LPUSH bus_barbershop_sound someone telling a story
+
+LPUSH bus_barbershop_sight hair clippings on the floor
+LPUSH bus_barbershop_sight somone in a chair covered by towels and a sheet
+
+SET   bus_barrack_name barrack
+SET   bus_barrack_perbuilding 50
+SET   bus_barrack_limit 
+SET   bus_barrack_maxfloors 2
+SET   bus_barrack_district civic
+
+LPUSH bus_barrack_manager soldier
+
+LPUSH bus_barrack_managerclass expert
+LPUSH bus_barrack_managerclass warrior
+LPUSH bus_barrack_managerclass fighter
+LPUSH bus_barrack_managerclass paladin
+
+LPUSH bus_barrack_service service
+
+LPUSH bus_barrack_trailer guard house
+LPUSH bus_barrack_trailer city guard
+LPUSH bus_barrack_trailer force
+
+LPUSH bus_barrack_smell sweat and beer
+
+LPUSH bus_barrack_sound voices
+
+LPUSH bus_barrack_sight bunk beds and lockers
+
+SET   bus_barrister_name barrister
+SET   bus_barrister_perbuilding 10
+SET   bus_barrister_limit 
+SET   bus_barrister_maxfloors 3
+SET   bus_barrister_district fine shops
+LPUSH bus_barrister_manager lawyer
+
+LPUSH bus_barrister_managerclass expert
+LPUSH bus_barrister_managerclass aristocrat
+
+LPUSH bus_barrister_service service
+
+LPUSH bus_barrister_trailer house of law
+LPUSH bus_barrister_trailer and associates
+LPUSH bus_barrister_trailer legal partners
+
+LPUSH bus_barrister_sight a framed contract signed in blood
+LPUSH bus_barrister_sight massive bookshelves full of legal texts
+LPUSH bus_barrister_sight cabinets full of case files
+
+LPUSH bus_barrister_smell the scent of pork
+LPUSH bus_barrister_smell the scent of ink and blood
+
+SET   bus_bathhouse_name bath house
+SET   bus_bathhouse_perbuilding 20
+SET   bus_bathhouse_limit 
+SET   bus_bathhouse_maxfloors 1
+SET   bus_bathhouse_district trade
+LPUSH bus_bathhouse_manager bather
+
+LPUSH bus_bathhouse_managerclass commoner
+
+LPUSH bus_bathhouse_service service
+
+LPUSH bus_bathhouse_trailer bath house
+LPUSH bus_bathhouse_trailer inpirationsl waters
+
+LPUSH bus_bathhouse_smell soap and flowers
+
+LPUSH bus_bathhouse_sound the sound of water running
+LPUSH bus_bathhouse_sound soft music
+LPUSH bus_bathhouse_sound low voices
+
+LPUSH bus_bathhouse_sight naked people walking around
+
+SET   bus_beerseller_name beer seller
+SET   bus_beerseller_perbuilding 4
+SET   bus_beerseller_limit 
+SET   bus_beerseller_maxfloors 1
+SET   bus_beerseller_district market
+LPUSH bus_beerseller_manager beer seller
+
+LPUSH bus_beerseller_managerclass commoner
+
+LPUSH bus_beerseller_service service
+
+LPUSH bus_beerseller_trailer tap house
+LPUSH bus_beerseller_trailer ale house
+LPUSH bus_beerseller_trailer brewery
+
+LPUSH bus_beerseller_smell beer and hops
+
+LPUSH bus_beerseller_sight casks of beer
+
+SET   bus_bleacher_name bleacher
+SET   bus_bleacher_perbuilding 20
+SET   bus_bleacher_limit 
+SET   bus_bleacher_maxfloors 1
+SET   bus_bleacher_district trade
+LPUSH bus_bleacher_manager bleacher
+
+LPUSH bus_bleacher_managerclass commoner
+
+LPUSH bus_bleacher_service service
+
+LPUSH bus_bleacher_trailer arena
+
+SET   bus_bookbinder_name bookbinder
+SET   bus_bookbinder_perbuilding 20
+SET   bus_bookbinder_limit 
+SET   bus_bookbinder_maxfloors 1
+SET   bus_bookbinder_district industry
+
+LPUSH bus_bookbinder_manager bookbinder
+
+LPUSH bus_bookbinder_managerclass commoner
+LPUSH bus_bookbinder_managerclass expert
+
+LPUSH bus_bookbinder_service service
+
+LPUSH bus_bookbinder_trailer bindary
+LPUSH bus_bookbinder_trailer shoppe
+LPUSH bus_bookbinder_trailer book smith
+
+LPUSH bus_bookbinder_smell old parchment
+
+LPUSH bus_bookbinder_sight books and papers everywhere
+
+SET   bus_bookstore_name bookstore
+SET   bus_bookstore_perbuilding 4
+SET   bus_bookstore_limit 
+SET   bus_bookstore_maxfloors 3
+SET   bus_bookstore_district fine shops
+LPUSH bus_bookstore_manager bookseller
+
+LPUSH bus_bookstore_managerclass commoner
+LPUSH bus_bookstore_managerclass expert
+
+LPUSH bus_bookstore_service service
+
+LPUSH bus_bookstore_trailer fine books
+LPUSH bus_bookstore_trailer book smith
+
+SET   bus_bowyer_name bowyer
+SET   bus_bowyer_perbuilding 5
+SET   bus_bowyer_limit 
+SET   bus_bowyer_maxfloors 1
+SET   bus_bowyer_district trade
+LPUSH bus_bowyer_manager bowyer
+
+LPUSH bus_bowyer_managerclass expert
+LPUSH bus_bowyer_managerclass ranger
+
+LPUSH bus_bowyer_service service
+
+LPUSH bus_bowyer_trailer fine bows
+LPUSH bus_bowyer_trailer archery
+
+SET   bus_brewery_name brewery
+SET   bus_brewery_perbuilding 20
+SET   bus_brewery_limit 
+SET   bus_brewery_maxfloors 3
+SET   bus_brewery_district industry
+LPUSH bus_brewery_manager brewer
+
+LPUSH bus_brewery_managerclass commoner
+LPUSH bus_brewery_managerclass expert
+
+LPUSH bus_brewery_service service
+
+LPUSH bus_brewery_trailer brewery
+LPUSH bus_brewery_trailer beer garden
+LPUSH bus_brewery_trailer pub
+
+LPUSH bus_brewery_smell hops and grain
+
+LPUSH bus_brewery_sound people singing
+LPUSH bus_brewery_sound laughing
+
+LPUSH bus_brewery_sight piles of grain
+LPUSH bus_brewery_sight bags of hops
+
+SET   bus_brothel_name brothel
+SET   bus_brothel_perbuilding 20
+SET   bus_brothel_limit 
+SET   bus_brothel_maxfloors 2
+SET   bus_brothel_district poor
+LPUSH bus_brothel_manager prostitute
+
+LPUSH bus_brothel_managerclass commoner
+
+LPUSH bus_brothel_service service
+LPUSH bus_brothel_service long back rubs
+
+LPUSH bus_brothel_trailer house of ill repute
+LPUSH bus_brothel_trailer whorehouse
+LPUSH bus_brothel_trailer temple
+
+LPUSH bus_brothel_smell scent of oil
+LPUSH bus_brothel_smell perfume
+
+LPUSH bus_brothel_sound loud moaning
+LPUSH bus_brothel_sound quiet music
+LPUSH bus_brothel_sound girls giggling
+
+LPUSH bus_brothel_sight barely clothed women
+LPUSH bus_brothel_sight candles and drapery
+
+SET   bus_bucklery_name bucklery
+SET   bus_bucklery_perbuilding 5
+SET   bus_bucklery_limit 
+SET   bus_bucklery_maxfloors 1
+SET   bus_bucklery_district shop
+LPUSH bus_bucklery_manager bucklemaker
+
+LPUSH bus_bucklery_managerclass commoner
+LPUSH bus_bucklery_managerclass expert
+
+LPUSH bus_bucklery_service service
+
+LPUSH bus_bucklery_trailer our motto is the buckle stops here
+
+SET   bus_butchershop_name butchershop
+SET   bus_butchershop_perbuilding 10
+SET   bus_butchershop_limit 
+SET   bus_butchershop_maxfloors 1
+SET   bus_butchershop_district market
+LPUSH bus_butchershop_manager butcher
+
+LPUSH bus_butchershop_managerclass commoner
+LPUSH bus_butchershop_managerclass expert
+
+LPUSH bus_butchershop_service service
+
+LPUSH bus_butchershop_trailer meat handlers
+LPUSH bus_butchershop_trailer meat house
+LPUSH bus_butchershop_trailer butchers
+
+SET   bus_cartwright_name cartwright
+SET   bus_cartwright_perbuilding 10
+SET   bus_cartwright_limit 
+SET   bus_cartwright_maxfloors 1
+SET   bus_cartwright_district industry
+LPUSH bus_cartwright_manager cartwright
+
+LPUSH bus_cartwright_managerclass commoner
+LPUSH bus_cartwright_managerclass expert
+
+LPUSH bus_cartwright_service service
+
+LPUSH bus_cartwright_trailer shop
+LPUSH bus_cartwright_trailer wainwright
+LPUSH bus_cartwright_trailer cart repairs
+
+SET   bus_chandleryshop_name chandlery shop
+SET   bus_chandleryshop_perbuilding 10
+SET   bus_chandleryshop_limit 
+SET   bus_chandleryshop_maxfloors 1
+SET   bus_chandleryshop_district industry
+LPUSH bus_chandleryshop_manager chandler
+
+LPUSH bus_chandleryshop_managerclass commoner
+LPUSH bus_chandleryshop_managerclass expert
+
+LPUSH bus_chandleryshop_service service
+
+LPUSH bus_chandleryshop_trailer supplies
+
+SET   bus_cheeseshop_name cheeseshop
+SET   bus_cheeseshop_perbuilding 20
+SET   bus_cheeseshop_limit 
+SET   bus_cheeseshop_maxfloors 1
+SET   bus_cheeseshop_district trade
+LPUSH bus_cheeseshop_manager cheesemaker
+
+LPUSH bus_cheeseshop_managerclass commoner
+LPUSH bus_cheeseshop_managerclass expert
+
+LPUSH bus_cheeseshop_service service
+
+LPUSH bus_cheeseshop_trailer shoppe
+
+LPUSH bus_cheeseshop_smell a slightly sweet smell of cheese
+
+LPUSH bus_cheeseshop_sound yelling in the back
+
+LPUSH bus_cheeseshop_sight many wheels of chese
+LPUSH bus_cheeseshop_sight jugs of milk and other tools
+
+SET   bus_church_name church
+SET   bus_church_perbuilding 10
+SET   bus_church_limit 
+SET   bus_church_maxfloors 1
+SET   bus_church_district mercy
+LPUSH bus_church_manager priest
+
+LPUSH bus_church_managerclass commoner
+LPUSH bus_church_managerclass expert
+LPUSH bus_church_managerclass monk
+LPUSH bus_church_managerclass cleric
+LPUSH bus_church_managerclass druid
+LPUSH bus_church_managerclass paladin
+
+LPUSH bus_church_service long prayers
+LPUSH bus_church_service clean sacrifices
+
+LPUSH bus_church_trailer temple
+LPUSH bus_church_trailer shrine
+LPUSH bus_church_trailer of all that is holy
+
+LPUSH bus_church_smell scent of oil
+LPUSH bus_church_smellsmell of blood
+LPUSH bus_church_smell weapons being sharpened
+
+LPUSH bus_church_sound rhythmic chanting
+LPUSH bus_church_sound a low moaning
+LPUSH bus_church_sound silence
+
+LPUSH bus_church_sight people walking around in a daze
+LPUSH bus_church_sight elegent golden decorations all around
+
+SET   bus_civiccenter_name civic center
+SET   bus_civiccenter_perbuilding 30
+SET   bus_civiccenter_limit 
+SET   bus_civiccenter_maxfloors 3
+SET   bus_civiccenter_district civic
+LPUSH bus_workshop_civiccenter_manager official
+
+LPUSH bus_civiccenter_managerclass commoner
+LPUSH bus_civiccenter_managerclass expert
+LPUSH bus_civiccenter_managerclass aristocrat
+
+LPUSH bus_civiccenter_service service
+
+LPUSH bus_civiccenter_trailer house
+LPUSH bus_civiccenter_trailer arena
+
+SET   bus_clinic_name clinic
+SET   bus_clinic_perbuilding 10
+SET   bus_clinic_limit 
+SET   bus_clinic_maxfloors 2
+SET   bus_clinic_district mercy
+LPUSH bus_clinic_manager physician
+
+LPUSH bus_clinic_managerclass commoner
+LPUSH bus_clinic_managerclass expert
+LPUSH bus_clinic_managerclass cleric
+LPUSH bus_clinic_managerclass adept
+
+LPUSH bus_clinic_service service
+
+LPUSH bus_clinic_trailer clinic
+LPUSH bus_clinic_trailer healers
+
+SET   bus_clothingshop_name clothing shop
+SET   bus_clothingshop_perbuilding 20
+SET   bus_clothingshop_limit 
+SET   bus_clothingshop_maxfloors 2
+SET   bus_clothingshop_district shops
+LPUSH bus_clothingshop_manager tailor
+
+LPUSH bus_clothingshop_managerclass commoner
+LPUSH bus_clothingshop_managerclass expert
+
+LPUSH bus_clothingshop_service service
+
+LPUSH bus_clothingshop_trailer wares
+LPUSH bus_clothingshop_trailer shop
+
+SET   bus_cobbler_name cobblershop
+SET   bus_cobbler_perbuilding 4
+SET   bus_cobbler_limit 
+SET   bus_cobbler_maxfloors 2
+SET   bus_cobbler_district market
+LPUSH bus_cobbler_manager cobbler
+
+LPUSH bus_cobbler_managerclass commoner
+LPUSH bus_cobbler_managerclass expert
+
+LPUSH bus_cobbler_service work
+LPUSH bus_cobbler_service goods
+
+LPUSH bus_cobbler_trailer shoppe
+LPUSH bus_cobbler_trailer shop
+
+LPUSH bus_cobbler_smell scent of leather
+LPUSH bus_cobbler_smell rthymic grinding
+
+LPUSH bus_cobbler_sound silence
+LPUSH bus_cobbler_sound the work of shoes
+LPUSH bus_cobbler_sound a kitten mewing
+
+LPUSH bus_cobbler_sight old shoes and bit of leather
+LPUSH bus_cobbler_sight a kitten
+
+SET   bus_cooperage_name cooperage
+SET   bus_cooperage_perbuilding 10
+SET   bus_cooperage_limit 
+SET   bus_cooperage_maxfloors 1
+SET   bus_cooperage_district industry
+LPUSH bus_cooperage_manager cooper
+
+LPUSH bus_cooperage_managerclass commoner
+LPUSH bus_cooperage_managerclass expert
+
+LPUSH bus_cooperage_service service
+
+LPUSH bus_cooperage_trailer barrels
+LPUSH bus_cooperage_trailer coop hoop
+
+SET   bus_copyoffice_name copyoffice
+SET   bus_copyoffice_perbuilding 20
+SET   bus_copyoffice_limit 
+SET   bus_copyoffice_maxfloors 3
+SET   bus_copyoffice_district professional
+LPUSH bus_copyoffice_manager copyist
+
+LPUSH bus_copyoffice_managerclass commoner
+LPUSH bus_copyoffice_managerclass expert
+
+LPUSH bus_copyoffice_service service
+
+LPUSH bus_copyoffice_trailer scribe
+LPUSH bus_copyoffice_trailer shop
+
+SET   bus_cutlery_name cutlery shop
+SET   bus_cutlery_perbuilding 5
+SET   bus_cutlery_limit 
+SET   bus_cutlery_maxfloors 1
+SET   bus_cutlery_district trade
+LPUSH bus_cutlery_manager cutler
+
+LPUSH bus_cutlery_managerclass commoner
+LPUSH bus_cutlery_managerclass expert
+
+LPUSH bus_cutlery_service service
+
+LPUSH bus_cutlery_trailer chop house
+LPUSH bus_cutlery_trailer fine forks
+
+SET   bus_dyer_name dyer
+SET   bus_dyer_perbuilding 20
+SET   bus_dyer_limit 
+SET   bus_dyer_maxfloors 1
+SET   bus_dyer_district trade
+LPUSH bus_dyer_manager dyer
+
+LPUSH bus_dyer_managerclass commoner
+LPUSH bus_dyer_managerclass expert
+
+LPUSH bus_dyer_service service
+
+LPUSH bus_dyer_trailer color shop
+LPUSH bus_dyer_trailer house of colors
+
+LPUSH bus_dyer_smell something fishy
+
+LPUSH bus_dyer_sound a bubbling sound
+
+LPUSH bus_dyer_sight lots of colored cloth and pots of dye
+
+SET   bus_engineering_name engineering firm
+SET   bus_engineering_perbuilding 20
+SET   bus_engineering_limit 
+SET   bus_engineering_maxfloors 3
+SET   bus_engineering_district professional
+LPUSH bus_engineering_manager engineer
+
+LPUSH bus_engineering_managerclass commoner
+LPUSH bus_engineering_managerclass expert
+
+LPUSH bus_engineering_service service
+
+LPUSH bus_engineering_trailer designs
+LPUSH bus_engineering_trailer builders
+
+SET   bus_fishery_name fishery
+SET   bus_fishery_perbuilding 20
+SET   bus_fishery_limit 
+SET   bus_fishery_maxfloors 1
+SET   bus_fishery_district industry
+LPUSH bus_fishery_manager fishmonger
+
+LPUSH bus_fishery_managerclass commoner
+LPUSH bus_fishery_managerclass expert
+
+LPUSH bus_fishery_service service
+
+LPUSH bus_fishery_trailer fish camp
+LPUSH bus_fishery_trailer fish house
+LPUSH bus_fishery_trailer sport house
+
+LPUSH bus_fishery_smell something fishy
+LPUSH bus_fishery_smell no fish
+
+SET   bus_furtrade_name furtrade
+SET   bus_furtrade_perbuilding 20
+SET   bus_furtrade_limit 
+SET   bus_furtrade_maxfloors 1
+SET   bus_furtrade_district trade
+LPUSH bus_furtrade_manager furrier
+
+LPUSH bus_furtrade_managerclass commoner
+LPUSH bus_furtrade_managerclass expert
+LPUSH bus_furtrade_managerclass ranger
+
+LPUSH bus_furtrade_service service
+
+LPUSH bus_furtrade_trailer furs
+
+SET   bus_generalstore_name general store
+SET   bus_generalstore_perbuilding 4
+SET   bus_generalstore_limit 
+SET   bus_generalstore_maxfloors 2
+SET   bus_generalstore_district market
+LPUSH bus_generalstore_manager outfitter
+
+LPUSH bus_generalstore_managerclass commoner
+LPUSH bus_generalstore_managerclass expert
+
+LPUSH bus_generalstore_service service
+
+LPUSH bus_generalstore_trailer general store
+LPUSH bus_generalstore_trailer general merchandise
+LPUSH bus_generalstore_trailer dry goods
+
+SET   bus_glassmaker_name glassmaker hut
+SET   bus_glassmaker_perbuilding 10
+SET   bus_glassmaker_limit 
+SET   bus_glassmaker_maxfloors 1
+SET   bus_glassmaker_district trade
+LPUSH bus_glassmaker_manager glassmaker
+
+LPUSH bus_glassmaker_managerclass commoner
+LPUSH bus_glassmaker_managerclass expert
+
+LPUSH bus_glassmaker_service service
+
+LPUSH bus_glassmaker_trailer blowers
+LPUSH bus_glassmaker_trailer glass crafters
+
+LPUSH bus_glassmaker_smell a burning forge
+
+LPUSH bus_glassmaker_sound a bellows pumping
+
+LPUSH bus_glassmaker_sight panes of glass and mirrors
+
+SET   bus_gloveshop_name glove shop
+SET   bus_gloveshop_perbuilding 5
+SET   bus_gloveshop_limit 
+SET   bus_gloveshop_maxfloors 1
+SET   bus_gloveshop_district trade
+LPUSH bus_gloveshop_manager glovemaker
+
+LPUSH bus_gloveshop_managerclass commoner
+LPUSH bus_gloveshop_managerclass expert
+
+LPUSH bus_gloveshop_service service
+
+LPUSH bus_gloveshop_trailer gloves
+LPUSH bus_gloveshop_trailer glove makers
+LPUSH bus_gloveshop_trailer glove shop
+LPUSH bus_gloveshop_trailer shoppe
+LPUSH bus_gloveshop_trailer 
+
+SET   bus_graveyard_name graveyard
+SET   bus_graveyard_perbuilding 10
+SET   bus_graveyard_limit 
+SET   bus_graveyard_maxfloors 1
+SET   bus_graveyard_district mercy
+LPUSH bus_graveyard_manager undertaker
+
+LPUSH bus_graveyard_managerclass commoner
+LPUSH bus_graveyard_managerclass expert
+LPUSH bus_graveyard_managerclass cleric
+
+LPUSH bus_graveyard_service service
+
+LPUSH bus_graveyard_trailer grave diggers
+LPUSH bus_graveyard_trailer night smiths
+
+SET   bus_groverystore_name grocery store
+SET   bus_groverystore_perbuilding 10
+SET   bus_groverystore_limit 
+SET   bus_groverystore_maxfloors 1
+SET   bus_groverystore_district market
+LPUSH bus_groverystore_manager grocer
+
+LPUSH bus_groverystore_managerclass commoner
+LPUSH bus_groverystore_managerclass expert
+
+LPUSH bus_groverystore_service service
+
+LPUSH bus_groverystore_trailer dry goods
+LPUSH bus_groverystore_trailer general mechandise
+
+SET   bus_harnessmaker_name harness maker
+SET   bus_harnessmaker_perbuilding 5
+SET   bus_harnessmaker_limit 
+SET   bus_harnessmaker_maxfloors 1
+SET   bus_harnessmaker_district shops
+
+LPUSH bus_harnessmaker_manager harness maker
+
+LPUSH bus_harnessmaker_managerclass commoner
+LPUSH bus_harnessmaker_managerclass expert
+
+LPUSH bus_harnessmaker_service service
+
+LPUSH bus_harnessmaker_trailer leather goods
+LPUSH bus_harnessmaker_trailer harnesses
+
+SET   bus_hatshop_name hat shop
+SET   bus_hatshop_perbuilding 10
+SET   bus_hatshop_limit 
+SET   bus_hatshop_maxfloors 1
+SET   bus_hatshop_district shops
+
+LPUSH bus_hatshop_manager hatmaker
+
+LPUSH bus_hatshop_managerclass commoner
+LPUSH bus_hatshop_managerclass expert
+
+LPUSH bus_hatshop_service service
+
+LPUSH bus_hatshop_trailer hats shop
+LPUSH bus_hatshop_trailer hatters
+
+SET   bus_haymerchant_name haymerchant
+SET   bus_haymerchant_perbuilding 5
+SET   bus_haymerchant_limit 
+SET   bus_haymerchant_maxfloors 2
+SET   bus_haymerchant_district industry
+
+LPUSH bus_haymerchant_manager haymerchant
+
+LPUSH bus_haymerchant_managerclass commoner
+LPUSH bus_haymerchant_managerclass expert
+
+LPUSH bus_haymerchant_service service
+
+LPUSH bus_haymerchant_trailer farms
+LPUSH bus_haymerchant_trailer farmers market
+
+SET   bus_herbalist_name herbalist shop
+SET   bus_herbalist_perbuilding 5
+SET   bus_herbalist_limit 
+SET   bus_herbalist_maxfloors 1
+SET   bus_herbalist_district fine shops
+
+LPUSH bus_herbalist_manager herbalist
+
+LPUSH bus_herbalist_managerclass commoner
+LPUSH bus_herbalist_managerclass expert
+LPUSH bus_herbalist_managerclass cleric
+LPUSH bus_herbalist_managerclass druid
+LPUSH bus_herbalist_managerclass adept
+LPUSH bus_herbalist_managerclass sorcerer
+LPUSH bus_herbalist_managerclass wizard
+LPUSH bus_herbalist_managerclass ranger
+
+LPUSH bus_herbalist_service service
+
+LPUSH bus_herbalist_trailer herbalist
+
+SET   bus_illuminator_name illuminator
+SET   bus_illuminator_perbuilding 5
+SET   bus_illuminator_limit 
+SET   bus_illuminator_maxfloors 1
+SET   bus_illuminator_district fine shops
+
+LPUSH bus_illuminator_manager illuminator
+
+LPUSH bus_illuminator_managerclass commoner
+LPUSH bus_illuminator_managerclass expert
+
+LPUSH bus_illuminator_service service
+
+LPUSH bus_illuminator_trailer candle maker
+
+SET   bus_inn_name inn
+SET   bus_inn_perbuilding 3
+SET   bus_inn_limit 
+SET   bus_inn_maxfloors 5
+SET   bus_inn_district shops
+
+LPUSH bus_inn_manager innkeeper
+
+LPUSH bus_inn_managerclass commoner
+
+LPUSH bus_inn_service service
+
+LPUSH bus_inn_trailer hostel
+LPUSH bus_inn_trailer inn
+LPUSH bus_inn_trailer lodge
+
+SET   bus_jailhouse_name jailhouse
+SET   bus_jailhouse_perbuilding 10
+SET   bus_jailhouse_limit 
+SET   bus_jailhouse_maxfloors 3
+SET   bus_jailhouse_district prison
+
+LPUSH bus_jailhouse_manager jailer
+
+LPUSH bus_jailhouse_managerclass commoner
+LPUSH bus_jailhouse_managerclass warrior
+
+LPUSH bus_jailhouse_service service
+
+LPUSH bus_jailhouse_trailer public jail
+LPUSH bus_jailhouse_trailer prison
+LPUSH bus_jailhouse_trailer correctional centre
+LPUSH bus_jailhouse_trailer work camp
+LPUSH bus_jailhouse_trailer gaol
+
+SET   bus_jeweler_name jewelery store
+SET   bus_jeweler_perbuilding 10
+SET   bus_jeweler_limit 
+SET   bus_jeweler_maxfloors 2
+SET   bus_jeweler_district shops
+
+LPUSH bus_jeweler_manager jeweler
+
+LPUSH bus_jeweler_managerclass commoner
+LPUSH bus_jeweler_managerclass expert
+LPUSH bus_jeweler_managerclass rogue
+LPUSH bus_jeweler_managerclass aristocrat
+
+LPUSH bus_jeweler_service service
+
+LPUSH bus_jeweler_trailer jewelers
+
+SET   bus_shrine_name shrine
+SET   bus_shrine_perbuilding 10
+SET   bus_shrine_limit 
+SET   bus_shrine_maxfloors 2
+SET   bus_shrine_district mercy
+
+LPUSH bus_shrine_manager priest
+
+LPUSH bus_shrine_managerclass commoner
+LPUSH bus_shrine_managerclass expert
+LPUSH bus_shrine_managerclass monk
+LPUSH bus_shrine_managerclass cleric
+LPUSH bus_shrine_managerclass druid
+LPUSH bus_shrine_managerclass paladin
+
+LPUSH bus_shrine_service service
+
+LPUSH bus_shrine_trailer shrine
+LPUSH bus_shrine_trailer temple
+LPUSH bus_shrine_trailer worship house
+
+SET   bus_temple_name temple
+SET   bus_temple_perbuilding 10
+SET   bus_temple_limit 
+SET   bus_temple_maxfloors 1
+SET   bus_temple_district mercy
+
+LPUSH bus_temple_manager priest
+
+LPUSH bus_temple_managerclass commoner
+LPUSH bus_temple_managerclass monk
+LPUSH bus_temple_managerclass cleric
+LPUSH bus_temple_managerclass druid
+LPUSH bus_temple_managerclass paladin
+
+LPUSH bus_temple_service service
+
+LPUSH bus_temple_trailer shrine
+LPUSH bus_temple_trailer temple
+LPUSH bus_temple_trailer worship house
+
+SET   bus_almhouse_name almshouse
+SET   bus_almhouse_perbuilding 10
+SET   bus_almhouse_limit 
+SET   bus_almhouse_maxfloors 4
+SET   bus_almhouse_district civic
+
+LPUSH bus_almhouse_manager social worker
+
+LPUSH bus_almhouse_managerclass cleric
+LPUSH bus_almhouse_managerclass commoner
+
+LPUSH bus_almhouse_service service
+
+LPUSH bus_almhouse_trailer charity
+LPUSH bus_almhouse_trailer poor house
+
+SET   bus_boathouse_name boat for hire
+SET   bus_boathouse_perbuilding 1
+SET   bus_boathouse_limit 
+SET   bus_boathouse_maxfloors 1
+SET   bus_boathouse_district port
+
+LPUSH bus_boathouse_manager ship captain
+
+LPUSH bus_boathouse_managerclass commoner
+LPUSH bus_boathouse_managerclass expert
+
+LPUSH bus_boathouse_service service
+
+LPUSH bus_boathouse_trailer docs
+LPUSH bus_boathouse_trailer wharf
+
+SET   bus_firepit_name firepit
+SET   bus_firepit_perbuilding 10
+SET   bus_firepit_limit 
+SET   bus_firepit_maxfloors 1
+SET   bus_firepit_district industry
+
+LPUSH bus_firepit_manager collier
+
+LPUSH bus_firepit_managerclass commoner
+
+LPUSH bus_firepit_service service
+
+LPUSH bus_firepit_trailer charcoalers
+LPUSH bus_firepit_trailer firepit
+LPUSH bus_firepit_trailer shoppe
+
+SET   bus_hospital_name hospital
+SET   bus_hospital_perbuilding 10
+SET   bus_hospital_limit 
+SET   bus_hospital_maxfloors 3
+SET   bus_hospital_district industry
+
+LPUSH bus_hospital_manager doctor
+
+LPUSH bus_hospital_managerclass cleric
+LPUSH bus_hospital_managerclass commoner
+LPUSH bus_hospital_managerclass expert
+
+LPUSH bus_hospital_service service
+
+LPUSH bus_hospital_trailer healers
+LPUSH bus_hospital_trailer clinic
+LPUSH bus_hospital_trailer healing house
+
+SET   bus_hostel_name hostel
+SET   bus_hostel_perbuilding 10
+SET   bus_hostel_limit 
+SET   bus_hostel_maxfloors 4
+SET   bus_hostel_district mercy
+
+LPUSH bus_hostel_manager good samaritan
+
+LPUSH bus_hostel_managerclass adept
+LPUSH bus_hostel_managerclass cleric
+LPUSH bus_hostel_managerclass commoner
+
+LPUSH bus_hostel_service service
+
+LPUSH bus_hostel_trailer Hostel
+LPUSH bus_hostel_trailer Youth Hostel
+
+SET   bus_junkyard_name junkyard
+SET   bus_junkyard_perbuilding 10
+SET   bus_junkyard_limit 
+SET   bus_junkyard_maxfloors 1
+SET   bus_junkyard_district trade
+
+LPUSH bus_junkyard_manager tinker
+
+LPUSH bus_junkyard_managerclass commoner
+LPUSH bus_junkyard_managerclass expert
+
+LPUSH bus_junkyard_service service
+
+LPUSH bus_junkyard_trailer Junkyard
+LPUSH bus_junkyard_trailer Depot
+LPUSH bus_junkyard_trailer Garbage Lot
+LPUSH bus_junkyard_trailer Pile
+LPUSH bus_junkyard_trailer Dumping Ground
+LPUSH bus_junkyard_trailer Disposal Area
+LPUSH bus_junkyard_trailer Waste Site
+
+SET   bus_lawenforcement_name law enforcement
+SET   bus_lawenforcement_perbuilding 20
+SET   bus_lawenforcement_limit 
+SET   bus_lawenforcement_maxfloors 2
+SET   bus_lawenforcement_district civic
+
+LPUSH bus_lawenforcement_manager deputy
+LPUSH bus_lawenforcement_manager sheriff
+
+LPUSH bus_lawenforcement_managerclass commoner
+LPUSH bus_lawenforcement_managerclass expert
+
+LPUSH bus_lawenforcement_service service
+
+LPUSH bus_lawenforcement_trailer inc.
+
+SET   bus_leathershop_name leathershop
+SET   bus_leathershop_perbuilding 10
+SET   bus_leathershop_limit 
+SET   bus_leathershop_maxfloors 2
+SET   bus_leathershop_district trade
+
+LPUSH bus_leathershop_manager leatherworker
+
+LPUSH bus_leathershop_managerclass commoner
+LPUSH bus_leathershop_managerclass expert
+
+LPUSH bus_leathershop_service service
+
+LPUSH bus_leathershop_trailer Leatherworks
+
+SET   bus_library_name library
+SET   bus_library_perbuilding 10
+SET   bus_library_limit 
+SET   bus_library_maxfloors 3
+SET   bus_library_district fine shops
+
+LPUSH bus_library_manager librarian
+LPUSH bus_library_manager sage
+LPUSH bus_library_manager scribe
+
+LPUSH bus_library_managerclass adept
+LPUSH bus_library_managerclass commoner
+LPUSH bus_library_managerclass expert
+
+LPUSH bus_library_service service
+
+LPUSH bus_library_trailer Public Library
+LPUSH bus_library_trailer Study
+LPUSH bus_library_trailer Reference Center
+
+SET   bus_locksmith_name locksmith
+SET   bus_locksmith_perbuilding 4
+SET   bus_locksmith_limit 
+SET   bus_locksmith_maxfloors 1
+SET   bus_locksmith_district trade
+
+LPUSH bus_locksmith_manager locksmith
+
+LPUSH bus_locksmith_managerclass adept
+LPUSH bus_locksmith_managerclass barbarian
+LPUSH bus_locksmith_managerclass bard
+LPUSH bus_locksmith_managerclass commoner
+LPUSH bus_locksmith_managerclass expert
+LPUSH bus_locksmith_managerclass rogue
+
+LPUSH bus_locksmith_service service
+
+LPUSH bus_locksmith_trailer Locksmith
+
+SET   bus_lumbermill_name lumbermill
+SET   bus_lumbermill_perbuilding 30
+SET   bus_lumbermill_limit 
+SET   bus_lumbermill_maxfloors 2
+SET   bus_lumbermill_district industry
+
+LPUSH bus_lumbermill_manager lumberjack
+
+LPUSH bus_lumbermill_managerclass commoner
+
+LPUSH bus_lumbermill_service service
+
+LPUSH bus_lumbermill_trailer Lumber Mill
+LPUSH bus_lumbermill_trailer Saw Mill
+LPUSH bus_lumbermill_trailer Timber Mill
+
+SET   bus_lumberyard_name lumberyard
+SET   bus_lumberyard_perbuilding 10
+SET   bus_lumberyard_limit 
+SET   bus_lumberyard_maxfloors 1
+SET   bus_lumberyard_district industry
+
+LPUSH bus_lumberyard_manager woodseller
+
+LPUSH bus_lumberyard_managerclass commoner
+
+LPUSH bus_lumberyard_service service
+
+LPUSH bus_lumberyard_trailer Lumberyard
+LPUSH bus_lumberyard_trailer Timberyard
+
+SET   bus_magicshop_name magic shop
+SET   bus_magicshop_perbuilding 3
+SET   bus_magicshop_limit 
+SET   bus_magicshop_maxfloors 2
+SET   bus_magicshop_district fine shops
+
+LPUSH bus_magicshop_manager magic dealer
+
+LPUSH bus_magicshop_managerclass adept
+LPUSH bus_magicshop_managerclass aristocrat
+LPUSH bus_magicshop_managerclass commoner
+LPUSH bus_magicshop_managerclass expert
+LPUSH bus_magicshop_managerclass rogue
+LPUSH bus_magicshop_managerclass sorcerer
+LPUSH bus_magicshop_managerclass wizard
+
+LPUSH bus_magicshop_service service
+
+LPUSH bus_magicshop_trailer Botique
+LPUSH bus_magicshop_trailer Shoppe
+LPUSH bus_magicshop_trailer Magic Shop
+
+SET   bus_masonry_name masonry shop
+SET   bus_masonry_perbuilding 20
+SET   bus_masonry_limit 
+SET   bus_masonry_maxfloors 1
+SET   bus_masonry_district industry
+
+LPUSH bus_masonry_manager mason
+
+LPUSH bus_masonry_managerclass commoner
+
+LPUSH bus_masonry_service service
+
+LPUSH bus_masonry_trailer inc.
+
+SET   bus_mercer_name mercer
+SET   bus_mercer_perbuilding 20
+SET   bus_mercer_limit 
+SET   bus_mercer_maxfloors 2
+SET   bus_mercer_district trade
+
+LPUSH bus_mercer_manager mercer
+
+LPUSH bus_mercer_managerclass aristocrat
+LPUSH bus_mercer_managerclass commoner
+LPUSH bus_mercer_managerclass expert
+
+LPUSH bus_mercer_service service
+
+LPUSH bus_mercer_trailer Textiles
+LPUSH bus_mercer_trailer Fabrics
+LPUSH bus_mercer_trailer Cloth
+
+SET   bus_mill_name mill
+SET   bus_mill_perbuilding 20
+SET   bus_mill_limit 
+SET   bus_mill_maxfloors 3
+SET   bus_mill_district industry
+
+LPUSH bus_mill_manager miller
+
+LPUSH bus_mill_managerclass commoner
+
+LPUSH bus_mill_service service
+
+LPUSH bus_mill_trailer Millers
+LPUSH bus_mill_trailer Mill
+
+SET   bus_postoffice_name post office
+SET   bus_postoffice_perbuilding 10
+SET   bus_postoffice_limit 
+SET   bus_postoffice_maxfloors 1
+SET   bus_postoffice_district embassy
+
+LPUSH bus_postoffice_manager messenger
+
+LPUSH bus_postoffice_managerclass commoner
+
+LPUSH bus_postoffice_service service
+
+LPUSH bus_postoffice_trailer Mail Service
+LPUSH bus_postoffice_trailer Postal Service
+LPUSH bus_postoffice_trailer Package Delivery
+
+SET   bus_pottery_name pottery
+SET   bus_pottery_perbuilding 10
+SET   bus_pottery_limit 
+SET   bus_pottery_maxfloors 1
+SET   bus_pottery_district trade
+
+LPUSH bus_pottery_manager potter
+
+LPUSH bus_pottery_managerclass commoner
+LPUSH bus_pottery_managerclass expert
+
+LPUSH bus_pottery_service service
+
+LPUSH bus_pottery_trailer Ceramics
+LPUSH bus_pottery_trailer Pots
+LPUSH bus_pottery_trailer Pottery House
+
+SET   bus_pursemaker_name pursemaker
+SET   bus_pursemaker_perbuilding 20
+SET   bus_pursemaker_limit 
+SET   bus_pursemaker_maxfloors 1
+SET   bus_pursemaker_district trade
+
+LPUSH bus_pursemaker_manager pursemaker
+
+LPUSH bus_pursemaker_managerclass commoner
+LPUSH bus_pursemaker_managerclass expert
+LPUSH bus_pursemaker_managerclass rogue
+
+LPUSH bus_pursemaker_service service
+
+LPUSH bus_pursemaker_trailer Purse Shop
+LPUSH bus_pursemaker_trailer Bags
+
+SET   bus_roofer_name roofer
+SET   bus_roofer_perbuilding 20
+SET   bus_roofer_limit 
+SET   bus_roofer_maxfloors 1
+SET   bus_roofer_district trade
+
+LPUSH bus_roofer_manager roofer
+
+LPUSH bus_roofer_managerclass commoner
+
+LPUSH bus_roofer_service service
+
+LPUSH bus_roofer_trailer Roofing
+LPUSH bus_roofer_trailer Construction
+
+SET   bus_ropemaker_name ropemaker
+SET   bus_ropemaker_perbuilding 20
+SET   bus_ropemaker_limit 
+SET   bus_ropemaker_maxfloors 1
+SET   bus_ropemaker_district industry
+
+LPUSH bus_ropemaker_manager ropemaker
+
+LPUSH bus_ropemaker_managerclass commoner
+
+LPUSH bus_ropemaker_service service
+
+LPUSH bus_ropemaker_trailer Ropes
+
+SET   bus_rugmaker_name rugmaker
+SET   bus_rugmaker_perbuilding 20
+SET   bus_rugmaker_limit 
+SET   bus_rugmaker_maxfloors 1
+SET   bus_rugmaker_district industry
+
+LPUSH bus_rugmaker_manager rugmaker
+
+LPUSH bus_rugmaker_managerclass commoner
+
+LPUSH bus_rugmaker_service service
+
+LPUSH bus_rugmaker_trailer Rug Shop
+LPUSH bus_rugmaker_trailer Rugs
+
+SET   bus_scabbardmaker_name scabbard maker
+SET   bus_scabbardmaker_perbuilding 10
+SET   bus_scabbardmaker_limit 
+SET   bus_scabbardmaker_maxfloors 1
+SET   bus_scabbardmaker_district trade
+
+LPUSH bus_scabbardmaker_manager scabbardmaker
+
+LPUSH bus_scabbardmaker_managerclass commoner
+LPUSH bus_scabbardmaker_managerclass expert
+
+LPUSH bus_scabbardmaker_service service
+
+LPUSH bus_scabbardmaker_trailer Scabbards
+LPUSH bus_scabbardmaker_trailer Sheath Store
+
+SET   bus_school_name school
+SET   bus_school_perbuilding 10
+SET   bus_school_limit 
+SET   bus_school_maxfloors 2
+SET   bus_school_district education
+
+LPUSH bus_school_manager teacher
+
+LPUSH bus_school_managerclass adept
+LPUSH bus_school_managerclass aristocrat
+LPUSH bus_school_managerclass bard
+LPUSH bus_school_managerclass cleric
+LPUSH bus_school_managerclass commoner
+LPUSH bus_school_managerclass expert
+LPUSH bus_school_managerclass monk
+LPUSH bus_school_managerclass wizard
+
+LPUSH bus_school_service service
+
+LPUSH bus_school_trailer Elementary School
+LPUSH bus_school_trailer Primary School
+LPUSH bus_school_trailer Secondary School
+LPUSH bus_school_trailer High School
+LPUSH bus_school_trailer Middle School
+LPUSH bus_school_trailer Reform School
+LPUSH bus_school_trailer Military School
+
+SET   bus_sculpting_name sculpting house
+SET   bus_sculpting_perbuilding 10
+SET   bus_sculpting_limit 
+SET   bus_sculpting_maxfloors 2
+SET   bus_sculpting_district professional
+
+LPUSH bus_sculpting_manager sculptor
+
+LPUSH bus_sculpting_managerclass commoner
+LPUSH bus_sculpting_managerclass expert
+
+LPUSH bus_sculpting_service service
+
+LPUSH bus_sculpting_trailer Sculptures
+LPUSH bus_sculpting_trailer Studio
+
+SET   bus_shipyard_name shipyard
+SET   bus_shipyard_perbuilding 30
+SET   bus_shipyard_limit 
+SET   bus_shipyard_maxfloors 1
+SET   bus_shipyard_district port
+
+LPUSH bus_shipyard_manager shipwright
+
+LPUSH bus_shipyard_managerclass commoner
+LPUSH bus_shipyard_managerclass expert
+
+LPUSH bus_shipyard_service service
+
+LPUSH bus_shipyard_trailer Shipyard
+LPUSH bus_shipyard_trailer Ship Repair
+LPUSH bus_shipyard_trailer Dock Company
+LPUSH bus_shipyard_trailer Dry Dock
+
+SET   bus_shoeshop_name shoe shop
+SET   bus_shoeshop_perbuilding 10
+SET   bus_shoeshop_limit 
+SET   bus_shoeshop_maxfloors 1
+SET   bus_shoeshop_district trade
+
+LPUSH bus_shoeshop_manager shoemaker
+
+LPUSH bus_shoeshop_managerclass commoner
+LPUSH bus_shoeshop_managerclass expert
+
+LPUSH bus_shoeshop_service service
+
+LPUSH bus_shoeshop_trailer Shoes
+LPUSH bus_shoeshop_trailer Shoes Inc.
+
+LPUSH bus_shoeshop_smell scent of leather
+LPUSH bus_shoeshop_smell rthymic grinding
+
+LPUSH bus_shoeshop_sound silence
+LPUSH bus_shoeshop_sound the work of shoes
+LPUSH bus_shoeshop_sound a kitten mewing
+
+LPUSH bus_shoeshop_sight old shoes and bit of leather
+LPUSH bus_shoeshop_sight a kitten
+
+SET   bus_shop_name shop
+SET   bus_shop_perbuilding 30
+SET   bus_shop_limit 
+SET   bus_shop_maxfloors 3
+SET   bus_shop_district trade
+
+LPUSH bus_shop_manager tinker
+LPUSH bus_shop_manager plasterer
+LPUSH bus_shop_manager seamstress
+
+LPUSH bus_shop_managerclass commoner
+LPUSH bus_shop_managerclass expert
+
+LPUSH bus_shop_service service
+
+LPUSH bus_shop_trailer Shop
+LPUSH bus_shop_trailer Shoppe
+LPUSH bus_shop_trailer Store
+LPUSH bus_shop_trailer Outlet
+
+SET   bus_slaughterhouse_name slaughterhouse
+SET   bus_slaughterhouse_perbuilding 20
+SET   bus_slaughterhouse_limit 
+SET   bus_slaughterhouse_maxfloors 1
+SET   bus_slaughterhouse_district trade
+
+LPUSH bus_slaughterhouse_manager chickenbutcher
+
+LPUSH bus_slaughterhouse_managerclass commoner
+LPUSH bus_slaughterhouse_managerclass expert
+
+LPUSH bus_slaughterhouse_service service
+
+LPUSH bus_slaughterhouse_trailer Kennels
+LPUSH bus_slaughterhouse_trailer Farm
+LPUSH bus_slaughterhouse_trailer Meats
+LPUSH bus_slaughterhouse_trailer Butchery
+LPUSH bus_slaughterhouse_trailer Stockyard
+
+SET   bus_smithy_name smithy
+SET   bus_smithy_perbuilding 5
+SET   bus_smithy_limit 
+SET   bus_smithy_maxfloors 1
+SET   bus_smithy_district shop
+
+LPUSH bus_smithy_manager blacksmith
+LPUSH bus_smithy_manager smith
+LPUSH bus_smithy_manager specialty smith
+
+LPUSH bus_smithy_managerclass commoner
+LPUSH bus_smithy_managerclass expert
+LPUSH bus_smithy_managerclass fighter
+LPUSH bus_smithy_managerclass warrior
+
+LPUSH bus_smithy_service service
+
+LPUSH bus_smithy_trailer inc.
+
+SET   bus_smokehouse_name smokehouse
+SET   bus_smokehouse_perbuilding 30
+SET   bus_smokehouse_limit 
+SET   bus_smokehouse_maxfloors 2
+SET   bus_smokehouse_district industry
+
+LPUSH bus_smokehouse_manager salter
+
+LPUSH bus_smokehouse_managerclass commoner
+
+LPUSH bus_smokehouse_service service
+
+LPUSH bus_smokehouse_trailer inc.
+
+SET   bus_spicemerchant_name spicemerchant
+SET   bus_spicemerchant_perbuilding 10
+SET   bus_spicemerchant_limit 
+SET   bus_spicemerchant_maxfloors 1
+SET   bus_spicemerchant_district market
+
+LPUSH bus_spicemerchant_manager spicemerchant
+
+LPUSH bus_spicemerchant_managerclass aristocrat
+LPUSH bus_spicemerchant_managerclass commoner
+LPUSH bus_spicemerchant_managerclass expert
+
+LPUSH bus_spicemerchant_service service
+
+LPUSH bus_spicemerchant_trailer inc.
+
+SET   bus_stable_name stable
+SET   bus_stable_perbuilding 5
+SET   bus_stable_limit 
+SET   bus_stable_maxfloors 1
+SET   bus_stable_district professional
+
+LPUSH bus_stable_manager ostler
+LPUSH bus_stable_manager stablehand
+
+LPUSH bus_stable_managerclass commoner
+
+LPUSH bus_stable_service service
+
+LPUSH bus_stable_trailer inc.
+
+SET   bus_studio_name studio
+SET   bus_studio_perbuilding 20
+SET   bus_studio_limit 
+SET   bus_studio_maxfloors 1
+SET   bus_studio_district trade
+
+LPUSH bus_studio_manager painter
+LPUSH bus_studio_manager artist
+
+LPUSH bus_studio_managerclass aristocrat
+LPUSH bus_studio_managerclass commoner
+LPUSH bus_studio_managerclass expert
+
+LPUSH bus_studio_service service
+
+LPUSH bus_studio_trailer inc.
+
+SET   bus_tackshop_name tack shop
+SET   bus_tackshop_perbuilding 5
+SET   bus_tackshop_limit 
+SET   bus_tackshop_maxfloors 1
+SET   bus_tackshop_district trade
+
+LPUSH bus_tackshop_manager saddler
+
+LPUSH bus_tackshop_managerclass commoner
+LPUSH bus_tackshop_managerclass expert
+
+LPUSH bus_tackshop_service service
+
+LPUSH bus_tackshop_trailer inc.
+
+SET   bus_tannery_name tannery
+SET   bus_tannery_perbuilding 10
+SET   bus_tannery_limit 
+SET   bus_tannery_maxfloors 1
+SET   bus_tannery_district industry
+
+LPUSH bus_tannery_manager tanner
+
+LPUSH bus_tannery_managerclass commoner
+LPUSH bus_tannery_managerclass expert
+
+LPUSH bus_tannery_service service
+
+LPUSH bus_tannery_trailer inc.
+
+LPUSH bus_tannery_smell leather
+
+LPUSH bus_tannery_sound an odd thumping sound
+
+LPUSH bus_tannery_sight skins stretching
+
+SET   bus_tavern_name tavern
+SET   bus_tavern_perbuilding 5
+SET   bus_tavern_limit 
+SET   bus_tavern_maxfloors 3
+SET   bus_tavern_district market
+
+LPUSH bus_tavern_manager tavern
+
+LPUSH bus_tavern_managerclass commoner
+
+LPUSH bus_tavern_service service
+
+LPUSH bus_tavern_trailer inc.
+
+SET   bus_theater_name theater
+SET   bus_theater_perbuilding 10
+SET   bus_theater_limit 
+SET   bus_theater_maxfloors 3
+SET   bus_theater_district entertainment
+
+LPUSH bus_theater_manager actor
+LPUSH bus_theater_manager entertainer
+
+LPUSH bus_theater_managerclass commoner
+LPUSH bus_theater_managerclass expert
+
+LPUSH bus_theater_service service
+
+LPUSH bus_theater_trailer inc.
+
+SET   bus_tileshop_name tile shop
+SET   bus_tileshop_perbuilding 10
+SET   bus_tileshop_limit 
+SET   bus_tileshop_maxfloors 1
+SET   bus_tileshop_district trade
+
+LPUSH bus_tileshop_manager tilemaker
+
+LPUSH bus_tileshop_managerclass commoner
+
+LPUSH bus_tileshop_service service
+
+LPUSH bus_tileshop_trailer inc.
+
+SET   bus_townhouse_name townhouse
+SET   bus_townhouse_perbuilding 10
+SET   bus_townhouse_limit 
+SET   bus_townhouse_maxfloors 2
+SET   bus_townhouse_district hotel
+
+LPUSH bus_townhouse_manager maidservant
+
+LPUSH bus_townhouse_managerclass commoner
+
+LPUSH bus_townhouse_service service
+
+LPUSH bus_townhouse_trailer inc.
+
+SET   bus_tradingpost_name trading post
+SET   bus_tradingpost_perbuilding 10
+SET   bus_tradingpost_limit 
+SET   bus_tradingpost_maxfloors 2
+SET   bus_tradingpost_district shop
+
+LPUSH bus_tradingpost_manager trader
+
+LPUSH bus_tradingpost_managerclass commoner
+LPUSH bus_tradingpost_managerclass expert
+
+LPUSH bus_tradingpost_service service
+
+LPUSH bus_tradingpost_trailer general store
+LPUSH bus_tradingpost_trailer shop
+LPUSH bus_tradingpost_trailer general goods
+
+SET   bus_translator_name translator
+SET   bus_translator_perbuilding 20
+SET   bus_translator_limit 
+SET   bus_translator_maxfloors 1
+SET   bus_translator_district embassy
+
+LPUSH bus_translator_manager interpreter
+
+LPUSH bus_translator_managerclass adept
+LPUSH bus_translator_managerclass commoner
+LPUSH bus_translator_managerclass expert
+
+LPUSH bus_translator_service service
+
+LPUSH bus_translator_trailer translations
+LPUSH bus_translator_trailer word smiths
+LPUSH bus_translator_trailer shop
+
+SET   bus_transportation_name transportation
+SET   bus_transportation_perbuilding 3
+SET   bus_transportation_limit 
+SET   bus_transportation_maxfloors 1
+SET   bus_transportation_district professional
+
+LPUSH bus_transportation_manager coach driver
+
+LPUSH bus_transportation_managerclass commoner
+
+LPUSH bus_transportation_service service
+
+LPUSH bus_transportation_trailer inc.
+
+SET   bus_university_name university
+SET   bus_university_perbuilding 20
+SET   bus_university_limit 
+SET   bus_university_maxfloors 3
+SET   bus_university_district education
+
+LPUSH bus_university_manager professor
+
+LPUSH bus_university_managerclass adept
+LPUSH bus_university_managerclass aristocrat
+LPUSH bus_university_managerclass commoner
+LPUSH bus_university_managerclass wizard
+
+LPUSH bus_university_service service
+
+LPUSH bus_university_trailer inc.
+
+SET   bus_vinyard_name vinyard
+SET   bus_vinyard_perbuilding 10
+SET   bus_vinyard_limit 
+SET   bus_vinyard_maxfloors 1
+SET   bus_vinyard_district professional
+
+LPUSH bus_vinyard_manager vintner
+
+LPUSH bus_vinyard_managerclass commoner
+LPUSH bus_vinyard_managerclass expert
+
+LPUSH bus_vinyard_service service
+
+LPUSH bus_vinyard_trailer vinters
+LPUSH bus_vinyard_trailer wine shoppe
+LPUSH bus_vinyard_trailer vineyards
+
+SET   bus_wagonyard_name wagon yard
+SET   bus_wagonyard_perbuilding 20
+SET   bus_wagonyard_limit 
+SET   bus_wagonyard_maxfloors 1
+SET   bus_wagonyard_district industry
+
+LPUSH bus_wagonyard_manager wagoneer
+
+LPUSH bus_wagonyard_managerclass commoner
+LPUSH bus_wagonyard_managerclass expert
+
+LPUSH bus_wagonyard_service service
+
+LPUSH bus_wagonyard_trailer inc.
+
+SET   bus_warehouse_name warehouse
+SET   bus_warehouse_perbuilding 10
+SET   bus_warehouse_limit 
+SET   bus_warehouse_maxfloors 2
+SET   bus_warehouse_district warehouse
+
+LPUSH bus_warehouse_manager laborer
+LPUSH bus_warehouse_manager teamster
+LPUSH bus_warehouse_manager warehouse worker
+
+LPUSH bus_warehouse_managerclass commoner
+
+LPUSH bus_warehouse_service service
+
+LPUSH bus_warehouse_trailer inc.
+
+SET   bus_dock_name dock
+SET   bus_dock_perbuilding 10
+SET   bus_dock_limit 
+SET   bus_dock_maxfloors 1
+SET   bus_dock_district docks
+
+LPUSH bus_dock_manager navigator
+LPUSH bus_dock_manager teamster
+LPUSH bus_dock_manager warehouse worker
+
+LPUSH bus_dock_managerclass commoner
+
+LPUSH bus_dock_service service
+
+LPUSH bus_dock_trailer inc.
+
+SET   bus_weaponshop_name weaponshop
+SET   bus_weaponshop_perbuilding 10
+SET   bus_weaponshop_limit 
+SET   bus_weaponshop_maxfloors 1
+SET   bus_weaponshop_district merchant
+
+LPUSH bus_weaponshop_manager weaponsmith
+
+LPUSH bus_weaponshop_managerclass commoner
+LPUSH bus_weaponshop_managerclass expert
+LPUSH bus_weaponshop_managerclass fighter
+LPUSH bus_weaponshop_managerclass rogue
+LPUSH bus_weaponshop_managerclass warrior
+
+LPUSH bus_weaponshop_service service
+
+LPUSH bus_weaponshop_trailer inc.
+
+SET   bus_weaver_name weaver
+SET   bus_weaver_perbuilding 10
+SET   bus_weaver_limit 
+SET   bus_weaver_maxfloors 1
+SET   bus_weaver_district industry
+
+LPUSH bus_weaver_manager weaver
+
+LPUSH bus_weaver_managerclass commoner
+LPUSH bus_weaver_managerclass expert
+
+LPUSH bus_weaver_service service
+
+LPUSH bus_weaver_trailer inc.
+
+SET   bus_winery_name winery
+SET   bus_winery_perbuilding 10
+SET   bus_winery_limit 
+SET   bus_winery_maxfloors 1
+SET   bus_winery_district merchant
+
+LPUSH bus_winery_manager wine seller
+
+LPUSH bus_winery_managerclass commoner
+
+LPUSH bus_winery_service service
+
+LPUSH bus_winery_trailer inc.
+
+SET   bus_woodshop_name woodshop
+SET   bus_woodshop_perbuilding 10
+SET   bus_woodshop_limit 
+SET   bus_woodshop_maxfloors 1
+SET   bus_woodshop_district trade
+
+LPUSH bus_woodshop_manager woodworker
+LPUSH bus_woodshop_manager woodcarver
+
+LPUSH bus_woodshop_managerclass commoner
+LPUSH bus_woodshop_managerclass expert
+
+LPUSH bus_woodshop_service service
+
+LPUSH bus_woodshop_trailer inc.
+
+SET   bus_sawmill_name sawmill
+SET   bus_sawmill_perbuilding 10
+SET   bus_sawmill_limit 
+SET   bus_sawmill_maxfloors 1
+SET   bus_sawmill_district industry
+
+LPUSH bus_sawmill_manager forester
+LPUSH bus_sawmill_manager carpenter
+LPUSH bus_sawmill_manager timberwright
+
+LPUSH bus_sawmill_managerclass commoner
+
+LPUSH bus_sawmill_service service
+
+LPUSH bus_sawmill_trailer inc.
+
+LPUSH bus_sawmill_smell sawdust
+
+LPUSH bus_sawmill_sound a naphtha powered buzzsaw
+
+LPUSH bus_sawmill_sight stacks of wood
+
+SET   bus_workshop_name workshop
+SET   bus_workshop_perbuilding 10
+SET   bus_workshop_limit 
+SET   bus_workshop_maxfloors 2
+SET   bus_workshop_district shop
+
+LPUSH bus_workshop_manager handyman
+
+LPUSH bus_workshop_managerclass commoner
+LPUSH bus_workshop_managerclass rogue
+
+LPUSH bus_workshop_service service
+
+LPUSH bus_workshop_trailer inc.
+
+LPUSH bus_workshop_smell sawdust
+
+LPUSH bus_workshop_sound hammering from the back
+
+LPUSH bus_workshop_sight tools and bits of wood lying around
+

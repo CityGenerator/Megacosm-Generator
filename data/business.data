@@ -1,0 +1,125 @@
+
+#        The Perfumed Twins Vinters is a[n] _______, disgusting-looking vinyard.
+ZADD business_size    5  { "name":"tiny"           }
+ZADD business_size   10  { "name":"insignificant"  }
+ZADD business_size   15  { "name":"squat"          }
+ZADD business_size   20  { "name":"small"          }
+ZADD business_size   25  { "name":"minor"          }
+ZADD business_size   30  { "name":"insubstantial"  }
+ZADD business_size   35  { "name":"paltry"         }
+ZADD business_size   40  { "name":"normal"         }
+ZADD business_size   45  { "name":"typical"        }
+ZADD business_size   50  { "name":"humdrum"        }
+ZADD business_size   55  { "name":"ordinary"       }
+ZADD business_size   60  { "name":"average"        }
+ZADD business_size   65  { "name":"familiar"       }
+ZADD business_size   70  { "name":"large"          }
+ZADD business_size   75  { "name":"sizeable"       }
+ZADD business_size   80  { "name":"epic"           }
+ZADD business_size   85  { "name":"monumental"     }
+ZADD business_size   90  { "name":"massive"        }
+ZADD business_size   95  { "name":"enormous"       }
+ZADD business_size  100  { "name":"vast"           }
+
+#   The Wet Frog is a garden-variety tavern that  ____________.
+ZADD business_popularity    5  { "name":"is avoided by the locals for reasons unknown"       }
+ZADD business_popularity   10  { "name":"is unappreciated by the locals"                     }
+ZADD business_popularity   15  { "name":"is usually empty"                                   }
+ZADD business_popularity   20  { "name":"is usually busy but is strangely quiet as of late"  }
+ZADD business_popularity   25  { "name":"holds the record for worst service in the region"   }
+ZADD business_popularity   30  { "name":"has strange opening hours"                          }
+ZADD business_popularity   35  { "name":"only attracts people from out of town"              }
+ZADD business_popularity   40  { "name":"is popular on market days"                          }
+ZADD business_popularity   45  { "name":"is eerily empty"                                    }
+ZADD business_popularity   50  { "name":"is completely abandoned, and often forgotten"       }
+ZADD business_popularity   55  { "name":"usually has few visitors"                           }
+ZADD business_popularity   60  { "name":"is empty during the day but busy in the evening"    }
+ZADD business_popularity   65  { "name":"is on the verge of closing"                         }
+ZADD business_popularity   70  { "name":"is busy most days"                                  }
+ZADD business_popularity   75  { "name":"is crowded every night"                             }
+ZADD business_popularity   80  { "name":"rarely has room for new business"                   }
+ZADD business_popularity   85  { "name":"has people queing out in the street"                }
+ZADD business_popularity   90  { "name":"is one of the busiest places in town"               }
+ZADD business_popularity   95  { "name":"is always busy, regardless of the time"             }
+ZADD business_popularity  100  { "name":"is constantly crowded"                              }
+
+
+# The tavern has a reputation for _____________.
+ZADD business_reputation  10 { "name":"deplorable clientele"                     }
+ZADD business_reputation  20 { "name":"being a hive of scum and villiany"        }
+ZADD business_reputation  30 { "name":"unpaid bills being bad for your health"   }
+ZADD business_reputation  40 { "name":"poor sanitation"                          }
+ZADD business_reputation  50 { "name":"unfortunate accidents"                    }
+ZADD business_reputation  60 { "name":"being dull"                               }
+ZADD business_reputation  70 { "name":"being open all hours"                     }
+ZADD business_reputation  80 { "name":"having good services"                     }
+ZADD business_reputation  90 { "name":"being a good place to find rumors"        }
+ZADD business_reputation 100 { "name":"being a pillar of the community"          }
+
+
+# ... is known for ______________ prices for...
+ZADD business_price   6 { "name":"suspiciously low"   }
+ZADD business_price  12 { "name":"next to nothing"    }
+ZADD business_price  18 { "name":"dirt cheap"         }
+ZADD business_price  24 { "name":"inexpensive"        }
+ZADD business_price  30 { "name":"fair"               }
+ZADD business_price  36 { "name":"slightly high"      }
+ZADD business_price  42 { "name":"minimal"            }
+ZADD business_price  48 { "name":"varying"            }
+ZADD business_price  54 { "name":"reasonable"         }
+ZADD business_price  60 { "name":"moderate"           }
+ZADD business_price  66 { "name":"steep"              }
+ZADD business_price  72 { "name":"unreasonable"       }
+ZADD business_price  78 { "name":"extravagant"        }
+ZADD business_price  94 { "name":"high"               }
+ZADD business_price 100 { "name":"very high"          }
+
+#TODO chance this to a stat
+LPUSH business_age old
+LPUSH business_age new
+
+#TODO turn this into a stat
+LPUSH business_neighborhood seedy
+LPUSH business_neighborhood trashy
+LPUSH business_neighborhood empty
+LPUSH business_neighborhood rundown
+LPUSH business_neighborhood new
+LPUSH business_neighborhood old
+LPUSH business_neighborhood nice
+LPUSH business_neighborhood expensive
+
+
+LPUSH business_rooftype tile
+LPUSH business_rooftype slate
+LPUSH business_rooftype thatch
+LPUSH business_rooftype turf
+
+LPUSH business_storefront lap board
+LPUSH business_storefront stone
+LPUSH business_storefront brick
+LPUSH business_storefront wood
+LPUSH business_storefront bamboo
+LPUSH business_storefront mud
+LPUSH business_storefront masonry
+LPUSH business_storefront split wood
+
+# The building has _______ windows.
+LPUSH business_windows no
+LPUSH business_windows round
+LPUSH business_windows barred
+LPUSH business_windows tiny
+LPUSH business_windows dirty
+LPUSH business_windows stained
+LPUSH business_windows broken
+LPUSH business_windows large
+LPUSH business_windows a few
+LPUSH business_windows clean
+LPUSH business_windows many
+LPUSH business_windows small
+LPUSH business_windows two
+LPUSH business_windows three
+
+LPUSH business_shade bright
+LPUSH business_shade dark
+
+
