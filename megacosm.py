@@ -322,7 +322,41 @@ def Cuisine_Builder():
     #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('cuisine')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='cuisine') 
+    
+#########################################################################
 
+@app.route('/deity')
+def GenerateDeity():
+    """Generate a simple deity"""
+
+    features=feature_filter('deity')
+    deity=Deity.Deity(server,features)
+    return render_template('deity.html', deity=deity, name='deity' )
+
+@app.route('/deity_builder')
+def Deity_Builder():
+    """Generate the basic data about a deity"""
+    paramlist,paramstring,paramset=builder_form_data('deity')
+    result= server.zrange('portfolio_domain',0,-1)
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='deity') 
+
+#@app.route('/deity')
+#def GenerateDeity():
+#    """Generate a Deity"""
+#    seed=set_seed( request.args.get('seed') )
+#
+#    print "MAH SEED:",seed
+#
+#    deityfeatures={'seed':seed,}
+#    for param in request.args :
+#        if re.match('^deity_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+#            print "param is",param,"=",request.args[param]
+#            deityfeatures[param]=int(request.args[param])
+#
+#    deity=Deity.Deity(server, deityfeatures)
+#    deity.generate_sects()
+#    return render_template('deity.html',deity=deity) 
 #########################################################################
 
 def feature_filter(generator):
@@ -361,22 +395,6 @@ def builder_form_data(generator):
 
 
 
-@app.route('/deity')
-def GenerateDeity():
-    """Generate a Deity"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    deityfeatures={'seed':seed,}
-    for param in request.args :
-        if re.match('^deity_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            deityfeatures[param]=int(request.args[param])
-
-    deity=Deity.Deity(server, deityfeatures)
-    deity.generate_sects()
-    return render_template('deity.html',deity=deity) 
 
 
 @app.errorhandler(404)
