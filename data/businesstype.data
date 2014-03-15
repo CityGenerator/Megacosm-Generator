@@ -1,5 +1,5 @@
 
-LPUSH business_type bus_adventurersguild
+LPUSH business_kind bus_adventurersguild
 SET   bus_adventurersguild_name adventurers guild
 SET   bus_adventurersguild_perbuilding 30
 SET   bus_adventurersguild_maxfloors 2
@@ -43,9 +43,10 @@ LPUSH bus_adventurersguild_sight weapons against the wall
 LPUSH bus_adventurersguild_sight equipment lying around
 LPUSH bus_adventurersguild_sight a still dripping tarp in the corner covering something
 
+LPUSH business_kind bus_alchemyshop
 SET   bus_alchemyshop_name alchemy shop
 SET   bus_alchemyshop_perbuilding 3
-SET   bus_alchemyshop_limit 
+
 SET   bus_alchemyshop_maxfloors 1
 SET   bus_alchemyshop_district shops
 
@@ -76,9 +77,10 @@ LPUSH bus_alchemyshop_sight a two headed chicken wandering around
 LPUSH bus_alchemyshop_sight strange bottles and tubes everywhere
 LPUSH bus_alchemyshop_sight odd smoke coming from a large vat with
 
+LPUSH business_kind bus_apothecary
 SET   bus_apothecary_name apothecary
 SET   bus_apothecary_perbuilding 4
-SET   bus_apothecary_limit 
+
 SET   bus_apothecary_maxfloors 1
 SET   bus_apothecary_district fine shops
 
@@ -110,9 +112,10 @@ LPUSH bus_apothecary_sound yelling from the back of the shop
 LPUSH bus_apothecary_sight bottles vials and stacks of grian and herbs
 LPUSH bus_apothecary_sight a small boy grinding something into powder in a bowl
 
+LPUSH business_kind bus_armorsmithy
 SET   bus_armorsmithy_name armorsmithy
 SET   bus_armorsmithy_perbuilding 10
-SET   bus_armorsmithy_limit 
+
 SET   bus_armorsmithy_maxfloors 1
 SET   bus_armorsmithy_district trade
 
@@ -134,9 +137,10 @@ LPUSH bus_armorsmithy_sound the sound of a forge
 
 LPUSH bus_armorsmithy_sight bit of armor in various states of repiar
 
+LPUSH business_kind bus_astrologer
 SET   bus_astrologer_name astrologer
 SET   bus_astrologer_perbuilding 1
-SET   bus_astrologer_limit 
+
 SET   bus_astrologer_maxfloors 1
 SET   bus_astrologer_district fine shops
 
@@ -153,9 +157,10 @@ LPUSH bus_astrologer_trailer magic eye piece
 LPUSH bus_astrologer_sight lots of charts with arcaine writing on them
 LPUSH bus_astrologer_sight scrolls leaning against the walls
 
+LPUSH business_kind bus_bakery
 SET   bus_bakery_name bakery
 SET   bus_bakery_perbuilding 10
-SET   bus_bakery_limit 
+
 SET   bus_bakery_maxfloors 1
 SET   bus_bakery_district shops
 
@@ -182,9 +187,10 @@ LPUSH bus_bakery_sound a kitten mewing
 LPUSH bus_bakery_sight fresh rolls
 LPUSH bus_bakery_sight hot buns
 
+LPUSH business_kind bus_bank
 SET   bus_bank_name bank
 SET   bus_bank_perbuilding 30
-SET   bus_bank_limit 
+
 SET   bus_bank_maxfloors 2
 SET   bus_bank_district wealthy
 
@@ -205,9 +211,10 @@ LPUSH bus_bank_sound muffled voices from the back
 
 LPUSH bus_bank_sight and empty counter with bars in front of it
 
+LPUSH business_kind bus_barbershop
 SET   bus_barbershop_name barbershop
 SET   bus_barbershop_perbuilding 4
-SET   bus_barbershop_limit 
+
 SET   bus_barbershop_maxfloors 1
 SET   bus_barbershop_district trade
 
@@ -231,9 +238,10 @@ LPUSH bus_barbershop_sound someone telling a story
 LPUSH bus_barbershop_sight hair clippings on the floor
 LPUSH bus_barbershop_sight somone in a chair covered by towels and a sheet
 
+LPUSH business_kind bus_barrack
 SET   bus_barrack_name barrack
 SET   bus_barrack_perbuilding 50
-SET   bus_barrack_limit 
+
 SET   bus_barrack_maxfloors 2
 SET   bus_barrack_district civic
 
@@ -256,9 +264,10 @@ LPUSH bus_barrack_sound voices
 
 LPUSH bus_barrack_sight bunk beds and lockers
 
+LPUSH business_kind bus_barrister
 SET   bus_barrister_name barrister
 SET   bus_barrister_perbuilding 10
-SET   bus_barrister_limit 
+
 SET   bus_barrister_maxfloors 3
 SET   bus_barrister_district fine shops
 LPUSH bus_barrister_manager lawyer
@@ -279,9 +288,10 @@ LPUSH bus_barrister_sight cabinets full of case files
 LPUSH bus_barrister_smell the scent of pork
 LPUSH bus_barrister_smell the scent of ink and blood
 
+LPUSH business_kind bus_bathhouse
 SET   bus_bathhouse_name bath house
 SET   bus_bathhouse_perbuilding 20
-SET   bus_bathhouse_limit 
+
 SET   bus_bathhouse_maxfloors 1
 SET   bus_bathhouse_district trade
 LPUSH bus_bathhouse_manager bather
@@ -301,9 +311,10 @@ LPUSH bus_bathhouse_sound low voices
 
 LPUSH bus_bathhouse_sight naked people walking around
 
+LPUSH business_kind bus_beerseller
 SET   bus_beerseller_name beer seller
 SET   bus_beerseller_perbuilding 4
-SET   bus_beerseller_limit 
+
 SET   bus_beerseller_maxfloors 1
 SET   bus_beerseller_district market
 LPUSH bus_beerseller_manager beer seller
@@ -320,9 +331,10 @@ LPUSH bus_beerseller_smell beer and hops
 
 LPUSH bus_beerseller_sight casks of beer
 
+LPUSH business_kind bus_bleacher
 SET   bus_bleacher_name bleacher
 SET   bus_bleacher_perbuilding 20
-SET   bus_bleacher_limit 
+
 SET   bus_bleacher_maxfloors 1
 SET   bus_bleacher_district trade
 LPUSH bus_bleacher_manager bleacher
@@ -333,9 +345,10 @@ LPUSH bus_bleacher_service service
 
 LPUSH bus_bleacher_trailer arena
 
+LPUSH business_kind bus_bookbinder
 SET   bus_bookbinder_name bookbinder
 SET   bus_bookbinder_perbuilding 20
-SET   bus_bookbinder_limit 
+
 SET   bus_bookbinder_maxfloors 1
 SET   bus_bookbinder_district industry
 
@@ -354,9 +367,10 @@ LPUSH bus_bookbinder_smell old parchment
 
 LPUSH bus_bookbinder_sight books and papers everywhere
 
+LPUSH business_kind bus_bookstore
 SET   bus_bookstore_name bookstore
 SET   bus_bookstore_perbuilding 4
-SET   bus_bookstore_limit 
+
 SET   bus_bookstore_maxfloors 3
 SET   bus_bookstore_district fine shops
 LPUSH bus_bookstore_manager bookseller
@@ -369,9 +383,10 @@ LPUSH bus_bookstore_service service
 LPUSH bus_bookstore_trailer fine books
 LPUSH bus_bookstore_trailer book smith
 
+LPUSH business_kind bus_bowyer
 SET   bus_bowyer_name bowyer
 SET   bus_bowyer_perbuilding 5
-SET   bus_bowyer_limit 
+
 SET   bus_bowyer_maxfloors 1
 SET   bus_bowyer_district trade
 LPUSH bus_bowyer_manager bowyer
@@ -384,9 +399,10 @@ LPUSH bus_bowyer_service service
 LPUSH bus_bowyer_trailer fine bows
 LPUSH bus_bowyer_trailer archery
 
+LPUSH business_kind bus_brewery
 SET   bus_brewery_name brewery
 SET   bus_brewery_perbuilding 20
-SET   bus_brewery_limit 
+
 SET   bus_brewery_maxfloors 3
 SET   bus_brewery_district industry
 LPUSH bus_brewery_manager brewer
@@ -408,9 +424,10 @@ LPUSH bus_brewery_sound laughing
 LPUSH bus_brewery_sight piles of grain
 LPUSH bus_brewery_sight bags of hops
 
+LPUSH business_kind bus_brothel
 SET   bus_brothel_name brothel
 SET   bus_brothel_perbuilding 20
-SET   bus_brothel_limit 
+
 SET   bus_brothel_maxfloors 2
 SET   bus_brothel_district poor
 LPUSH bus_brothel_manager prostitute
@@ -434,9 +451,10 @@ LPUSH bus_brothel_sound girls giggling
 LPUSH bus_brothel_sight barely clothed women
 LPUSH bus_brothel_sight candles and drapery
 
+LPUSH business_kind bus_bucklery
 SET   bus_bucklery_name bucklery
 SET   bus_bucklery_perbuilding 5
-SET   bus_bucklery_limit 
+
 SET   bus_bucklery_maxfloors 1
 SET   bus_bucklery_district shop
 LPUSH bus_bucklery_manager bucklemaker
@@ -448,9 +466,10 @@ LPUSH bus_bucklery_service service
 
 LPUSH bus_bucklery_trailer our motto is the buckle stops here
 
+LPUSH business_kind bus_butchershop
 SET   bus_butchershop_name butchershop
 SET   bus_butchershop_perbuilding 10
-SET   bus_butchershop_limit 
+
 SET   bus_butchershop_maxfloors 1
 SET   bus_butchershop_district market
 LPUSH bus_butchershop_manager butcher
@@ -464,9 +483,10 @@ LPUSH bus_butchershop_trailer meat handlers
 LPUSH bus_butchershop_trailer meat house
 LPUSH bus_butchershop_trailer butchers
 
+LPUSH business_kind bus_cartwright
 SET   bus_cartwright_name cartwright
 SET   bus_cartwright_perbuilding 10
-SET   bus_cartwright_limit 
+
 SET   bus_cartwright_maxfloors 1
 SET   bus_cartwright_district industry
 LPUSH bus_cartwright_manager cartwright
@@ -480,9 +500,10 @@ LPUSH bus_cartwright_trailer shop
 LPUSH bus_cartwright_trailer wainwright
 LPUSH bus_cartwright_trailer cart repairs
 
+LPUSH business_kind bus_chandleryshop
 SET   bus_chandleryshop_name chandlery shop
 SET   bus_chandleryshop_perbuilding 10
-SET   bus_chandleryshop_limit 
+
 SET   bus_chandleryshop_maxfloors 1
 SET   bus_chandleryshop_district industry
 LPUSH bus_chandleryshop_manager chandler
@@ -494,9 +515,10 @@ LPUSH bus_chandleryshop_service service
 
 LPUSH bus_chandleryshop_trailer supplies
 
+LPUSH business_kind bus_cheeseshop
 SET   bus_cheeseshop_name cheeseshop
 SET   bus_cheeseshop_perbuilding 20
-SET   bus_cheeseshop_limit 
+
 SET   bus_cheeseshop_maxfloors 1
 SET   bus_cheeseshop_district trade
 LPUSH bus_cheeseshop_manager cheesemaker
@@ -515,9 +537,10 @@ LPUSH bus_cheeseshop_sound yelling in the back
 LPUSH bus_cheeseshop_sight many wheels of chese
 LPUSH bus_cheeseshop_sight jugs of milk and other tools
 
+LPUSH business_kind bus_church
 SET   bus_church_name church
 SET   bus_church_perbuilding 10
-SET   bus_church_limit 
+
 SET   bus_church_maxfloors 1
 SET   bus_church_district mercy
 LPUSH bus_church_manager priest
@@ -547,9 +570,10 @@ LPUSH bus_church_sound silence
 LPUSH bus_church_sight people walking around in a daze
 LPUSH bus_church_sight elegent golden decorations all around
 
+LPUSH business_kind bus_civiccenter
 SET   bus_civiccenter_name civic center
 SET   bus_civiccenter_perbuilding 30
-SET   bus_civiccenter_limit 
+
 SET   bus_civiccenter_maxfloors 3
 SET   bus_civiccenter_district civic
 LPUSH bus_workshop_civiccenter_manager official
@@ -563,9 +587,10 @@ LPUSH bus_civiccenter_service service
 LPUSH bus_civiccenter_trailer house
 LPUSH bus_civiccenter_trailer arena
 
+LPUSH business_kind bus_clinic
 SET   bus_clinic_name clinic
 SET   bus_clinic_perbuilding 10
-SET   bus_clinic_limit 
+
 SET   bus_clinic_maxfloors 2
 SET   bus_clinic_district mercy
 LPUSH bus_clinic_manager physician
@@ -580,9 +605,10 @@ LPUSH bus_clinic_service service
 LPUSH bus_clinic_trailer clinic
 LPUSH bus_clinic_trailer healers
 
+LPUSH business_kind bus_clothingshop
 SET   bus_clothingshop_name clothing shop
 SET   bus_clothingshop_perbuilding 20
-SET   bus_clothingshop_limit 
+
 SET   bus_clothingshop_maxfloors 2
 SET   bus_clothingshop_district shops
 LPUSH bus_clothingshop_manager tailor
@@ -595,9 +621,10 @@ LPUSH bus_clothingshop_service service
 LPUSH bus_clothingshop_trailer wares
 LPUSH bus_clothingshop_trailer shop
 
+LPUSH business_kind bus_cobbler
 SET   bus_cobbler_name cobblershop
 SET   bus_cobbler_perbuilding 4
-SET   bus_cobbler_limit 
+
 SET   bus_cobbler_maxfloors 2
 SET   bus_cobbler_district market
 LPUSH bus_cobbler_manager cobbler
@@ -621,9 +648,10 @@ LPUSH bus_cobbler_sound a kitten mewing
 LPUSH bus_cobbler_sight old shoes and bit of leather
 LPUSH bus_cobbler_sight a kitten
 
+LPUSH business_kind bus_cooperage
 SET   bus_cooperage_name cooperage
 SET   bus_cooperage_perbuilding 10
-SET   bus_cooperage_limit 
+
 SET   bus_cooperage_maxfloors 1
 SET   bus_cooperage_district industry
 LPUSH bus_cooperage_manager cooper
@@ -636,9 +664,10 @@ LPUSH bus_cooperage_service service
 LPUSH bus_cooperage_trailer barrels
 LPUSH bus_cooperage_trailer coop hoop
 
+LPUSH business_kind bus_copyoffice
 SET   bus_copyoffice_name copyoffice
 SET   bus_copyoffice_perbuilding 20
-SET   bus_copyoffice_limit 
+
 SET   bus_copyoffice_maxfloors 3
 SET   bus_copyoffice_district professional
 LPUSH bus_copyoffice_manager copyist
@@ -651,9 +680,10 @@ LPUSH bus_copyoffice_service service
 LPUSH bus_copyoffice_trailer scribe
 LPUSH bus_copyoffice_trailer shop
 
+LPUSH business_kind bus_cutlery
 SET   bus_cutlery_name cutlery shop
 SET   bus_cutlery_perbuilding 5
-SET   bus_cutlery_limit 
+
 SET   bus_cutlery_maxfloors 1
 SET   bus_cutlery_district trade
 LPUSH bus_cutlery_manager cutler
@@ -666,9 +696,10 @@ LPUSH bus_cutlery_service service
 LPUSH bus_cutlery_trailer chop house
 LPUSH bus_cutlery_trailer fine forks
 
+LPUSH business_kind bus_dyer
 SET   bus_dyer_name dyer
 SET   bus_dyer_perbuilding 20
-SET   bus_dyer_limit 
+
 SET   bus_dyer_maxfloors 1
 SET   bus_dyer_district trade
 LPUSH bus_dyer_manager dyer
@@ -687,9 +718,10 @@ LPUSH bus_dyer_sound a bubbling sound
 
 LPUSH bus_dyer_sight lots of colored cloth and pots of dye
 
+LPUSH business_kind bus_engineering
 SET   bus_engineering_name engineering firm
 SET   bus_engineering_perbuilding 20
-SET   bus_engineering_limit 
+
 SET   bus_engineering_maxfloors 3
 SET   bus_engineering_district professional
 LPUSH bus_engineering_manager engineer
@@ -702,9 +734,10 @@ LPUSH bus_engineering_service service
 LPUSH bus_engineering_trailer designs
 LPUSH bus_engineering_trailer builders
 
+LPUSH business_kind bus_fishery
 SET   bus_fishery_name fishery
 SET   bus_fishery_perbuilding 20
-SET   bus_fishery_limit 
+
 SET   bus_fishery_maxfloors 1
 SET   bus_fishery_district industry
 LPUSH bus_fishery_manager fishmonger
@@ -721,9 +754,10 @@ LPUSH bus_fishery_trailer sport house
 LPUSH bus_fishery_smell something fishy
 LPUSH bus_fishery_smell no fish
 
+LPUSH business_kind bus_furtrade
 SET   bus_furtrade_name furtrade
 SET   bus_furtrade_perbuilding 20
-SET   bus_furtrade_limit 
+
 SET   bus_furtrade_maxfloors 1
 SET   bus_furtrade_district trade
 LPUSH bus_furtrade_manager furrier
@@ -736,9 +770,10 @@ LPUSH bus_furtrade_service service
 
 LPUSH bus_furtrade_trailer furs
 
+LPUSH business_kind bus_generalstore
 SET   bus_generalstore_name general store
 SET   bus_generalstore_perbuilding 4
-SET   bus_generalstore_limit 
+
 SET   bus_generalstore_maxfloors 2
 SET   bus_generalstore_district market
 LPUSH bus_generalstore_manager outfitter
@@ -752,9 +787,10 @@ LPUSH bus_generalstore_trailer general store
 LPUSH bus_generalstore_trailer general merchandise
 LPUSH bus_generalstore_trailer dry goods
 
+LPUSH business_kind bus_glassmaker
 SET   bus_glassmaker_name glassmaker hut
 SET   bus_glassmaker_perbuilding 10
-SET   bus_glassmaker_limit 
+
 SET   bus_glassmaker_maxfloors 1
 SET   bus_glassmaker_district trade
 LPUSH bus_glassmaker_manager glassmaker
@@ -773,9 +809,10 @@ LPUSH bus_glassmaker_sound a bellows pumping
 
 LPUSH bus_glassmaker_sight panes of glass and mirrors
 
+LPUSH business_kind bus_gloveshop
 SET   bus_gloveshop_name glove shop
 SET   bus_gloveshop_perbuilding 5
-SET   bus_gloveshop_limit 
+
 SET   bus_gloveshop_maxfloors 1
 SET   bus_gloveshop_district trade
 LPUSH bus_gloveshop_manager glovemaker
@@ -789,11 +826,11 @@ LPUSH bus_gloveshop_trailer gloves
 LPUSH bus_gloveshop_trailer glove makers
 LPUSH bus_gloveshop_trailer glove shop
 LPUSH bus_gloveshop_trailer shoppe
-LPUSH bus_gloveshop_trailer 
 
+LPUSH business_kind bus_graveyard
 SET   bus_graveyard_name graveyard
 SET   bus_graveyard_perbuilding 10
-SET   bus_graveyard_limit 
+
 SET   bus_graveyard_maxfloors 1
 SET   bus_graveyard_district mercy
 LPUSH bus_graveyard_manager undertaker
@@ -807,9 +844,10 @@ LPUSH bus_graveyard_service service
 LPUSH bus_graveyard_trailer grave diggers
 LPUSH bus_graveyard_trailer night smiths
 
+LPUSH business_kind bus_groverystore
 SET   bus_groverystore_name grocery store
 SET   bus_groverystore_perbuilding 10
-SET   bus_groverystore_limit 
+
 SET   bus_groverystore_maxfloors 1
 SET   bus_groverystore_district market
 LPUSH bus_groverystore_manager grocer
@@ -822,9 +860,10 @@ LPUSH bus_groverystore_service service
 LPUSH bus_groverystore_trailer dry goods
 LPUSH bus_groverystore_trailer general mechandise
 
+LPUSH business_kind bus_harnessmaker
 SET   bus_harnessmaker_name harness maker
 SET   bus_harnessmaker_perbuilding 5
-SET   bus_harnessmaker_limit 
+
 SET   bus_harnessmaker_maxfloors 1
 SET   bus_harnessmaker_district shops
 
@@ -838,9 +877,10 @@ LPUSH bus_harnessmaker_service service
 LPUSH bus_harnessmaker_trailer leather goods
 LPUSH bus_harnessmaker_trailer harnesses
 
+LPUSH business_kind bus_hatshop
 SET   bus_hatshop_name hat shop
 SET   bus_hatshop_perbuilding 10
-SET   bus_hatshop_limit 
+
 SET   bus_hatshop_maxfloors 1
 SET   bus_hatshop_district shops
 
@@ -854,9 +894,10 @@ LPUSH bus_hatshop_service service
 LPUSH bus_hatshop_trailer hats shop
 LPUSH bus_hatshop_trailer hatters
 
+LPUSH business_kind bus_haymerchant
 SET   bus_haymerchant_name haymerchant
 SET   bus_haymerchant_perbuilding 5
-SET   bus_haymerchant_limit 
+
 SET   bus_haymerchant_maxfloors 2
 SET   bus_haymerchant_district industry
 
@@ -870,9 +911,10 @@ LPUSH bus_haymerchant_service service
 LPUSH bus_haymerchant_trailer farms
 LPUSH bus_haymerchant_trailer farmers market
 
+LPUSH business_kind bus_herbalist
 SET   bus_herbalist_name herbalist shop
 SET   bus_herbalist_perbuilding 5
-SET   bus_herbalist_limit 
+
 SET   bus_herbalist_maxfloors 1
 SET   bus_herbalist_district fine shops
 
@@ -891,9 +933,10 @@ LPUSH bus_herbalist_service service
 
 LPUSH bus_herbalist_trailer herbalist
 
+LPUSH business_kind bus_illuminator
 SET   bus_illuminator_name illuminator
 SET   bus_illuminator_perbuilding 5
-SET   bus_illuminator_limit 
+
 SET   bus_illuminator_maxfloors 1
 SET   bus_illuminator_district fine shops
 
@@ -906,9 +949,10 @@ LPUSH bus_illuminator_service service
 
 LPUSH bus_illuminator_trailer candle maker
 
+LPUSH business_kind bus_inn
 SET   bus_inn_name inn
 SET   bus_inn_perbuilding 3
-SET   bus_inn_limit 
+
 SET   bus_inn_maxfloors 5
 SET   bus_inn_district shops
 
@@ -922,9 +966,10 @@ LPUSH bus_inn_trailer hostel
 LPUSH bus_inn_trailer inn
 LPUSH bus_inn_trailer lodge
 
+LPUSH business_kind bus_jailhouse
 SET   bus_jailhouse_name jailhouse
 SET   bus_jailhouse_perbuilding 10
-SET   bus_jailhouse_limit 
+
 SET   bus_jailhouse_maxfloors 3
 SET   bus_jailhouse_district prison
 
@@ -941,9 +986,10 @@ LPUSH bus_jailhouse_trailer correctional centre
 LPUSH bus_jailhouse_trailer work camp
 LPUSH bus_jailhouse_trailer gaol
 
+LPUSH business_kind bus_jeweler
 SET   bus_jeweler_name jewelery store
 SET   bus_jeweler_perbuilding 10
-SET   bus_jeweler_limit 
+
 SET   bus_jeweler_maxfloors 2
 SET   bus_jeweler_district shops
 
@@ -958,9 +1004,10 @@ LPUSH bus_jeweler_service service
 
 LPUSH bus_jeweler_trailer jewelers
 
+LPUSH business_kind bus_shrine
 SET   bus_shrine_name shrine
 SET   bus_shrine_perbuilding 10
-SET   bus_shrine_limit 
+
 SET   bus_shrine_maxfloors 2
 SET   bus_shrine_district mercy
 
@@ -979,9 +1026,10 @@ LPUSH bus_shrine_trailer shrine
 LPUSH bus_shrine_trailer temple
 LPUSH bus_shrine_trailer worship house
 
+LPUSH business_kind bus_temple
 SET   bus_temple_name temple
 SET   bus_temple_perbuilding 10
-SET   bus_temple_limit 
+
 SET   bus_temple_maxfloors 1
 SET   bus_temple_district mercy
 
@@ -999,9 +1047,10 @@ LPUSH bus_temple_trailer shrine
 LPUSH bus_temple_trailer temple
 LPUSH bus_temple_trailer worship house
 
+LPUSH business_kind bus_almhouse
 SET   bus_almhouse_name almshouse
 SET   bus_almhouse_perbuilding 10
-SET   bus_almhouse_limit 
+
 SET   bus_almhouse_maxfloors 4
 SET   bus_almhouse_district civic
 
@@ -1015,9 +1064,10 @@ LPUSH bus_almhouse_service service
 LPUSH bus_almhouse_trailer charity
 LPUSH bus_almhouse_trailer poor house
 
+LPUSH business_kind bus_boathouse
 SET   bus_boathouse_name boat for hire
 SET   bus_boathouse_perbuilding 1
-SET   bus_boathouse_limit 
+
 SET   bus_boathouse_maxfloors 1
 SET   bus_boathouse_district port
 
@@ -1031,9 +1081,10 @@ LPUSH bus_boathouse_service service
 LPUSH bus_boathouse_trailer docs
 LPUSH bus_boathouse_trailer wharf
 
+LPUSH business_kind bus_firepit
 SET   bus_firepit_name firepit
 SET   bus_firepit_perbuilding 10
-SET   bus_firepit_limit 
+
 SET   bus_firepit_maxfloors 1
 SET   bus_firepit_district industry
 
@@ -1047,9 +1098,10 @@ LPUSH bus_firepit_trailer charcoalers
 LPUSH bus_firepit_trailer firepit
 LPUSH bus_firepit_trailer shoppe
 
+LPUSH business_kind bus_hospital
 SET   bus_hospital_name hospital
 SET   bus_hospital_perbuilding 10
-SET   bus_hospital_limit 
+
 SET   bus_hospital_maxfloors 3
 SET   bus_hospital_district industry
 
@@ -1065,9 +1117,10 @@ LPUSH bus_hospital_trailer healers
 LPUSH bus_hospital_trailer clinic
 LPUSH bus_hospital_trailer healing house
 
+LPUSH business_kind bus_hostel
 SET   bus_hostel_name hostel
 SET   bus_hostel_perbuilding 10
-SET   bus_hostel_limit 
+
 SET   bus_hostel_maxfloors 4
 SET   bus_hostel_district mercy
 
@@ -1082,9 +1135,10 @@ LPUSH bus_hostel_service service
 LPUSH bus_hostel_trailer Hostel
 LPUSH bus_hostel_trailer Youth Hostel
 
+LPUSH business_kind bus_junkyard
 SET   bus_junkyard_name junkyard
 SET   bus_junkyard_perbuilding 10
-SET   bus_junkyard_limit 
+
 SET   bus_junkyard_maxfloors 1
 SET   bus_junkyard_district trade
 
@@ -1103,9 +1157,10 @@ LPUSH bus_junkyard_trailer Dumping Ground
 LPUSH bus_junkyard_trailer Disposal Area
 LPUSH bus_junkyard_trailer Waste Site
 
+LPUSH business_kind bus_lawenforcement
 SET   bus_lawenforcement_name law enforcement
 SET   bus_lawenforcement_perbuilding 20
-SET   bus_lawenforcement_limit 
+
 SET   bus_lawenforcement_maxfloors 2
 SET   bus_lawenforcement_district civic
 
@@ -1119,9 +1174,10 @@ LPUSH bus_lawenforcement_service service
 
 LPUSH bus_lawenforcement_trailer inc.
 
+LPUSH business_kind bus_leathershop
 SET   bus_leathershop_name leathershop
 SET   bus_leathershop_perbuilding 10
-SET   bus_leathershop_limit 
+
 SET   bus_leathershop_maxfloors 2
 SET   bus_leathershop_district trade
 
@@ -1134,9 +1190,10 @@ LPUSH bus_leathershop_service service
 
 LPUSH bus_leathershop_trailer Leatherworks
 
+LPUSH business_kind bus_library
 SET   bus_library_name library
 SET   bus_library_perbuilding 10
-SET   bus_library_limit 
+
 SET   bus_library_maxfloors 3
 SET   bus_library_district fine shops
 
@@ -1154,9 +1211,10 @@ LPUSH bus_library_trailer Public Library
 LPUSH bus_library_trailer Study
 LPUSH bus_library_trailer Reference Center
 
+LPUSH business_kind bus_locksmith
 SET   bus_locksmith_name locksmith
 SET   bus_locksmith_perbuilding 4
-SET   bus_locksmith_limit 
+
 SET   bus_locksmith_maxfloors 1
 SET   bus_locksmith_district trade
 
@@ -1173,9 +1231,10 @@ LPUSH bus_locksmith_service service
 
 LPUSH bus_locksmith_trailer Locksmith
 
+LPUSH business_kind bus_lumbermill
 SET   bus_lumbermill_name lumbermill
 SET   bus_lumbermill_perbuilding 30
-SET   bus_lumbermill_limit 
+
 SET   bus_lumbermill_maxfloors 2
 SET   bus_lumbermill_district industry
 
@@ -1189,9 +1248,10 @@ LPUSH bus_lumbermill_trailer Lumber Mill
 LPUSH bus_lumbermill_trailer Saw Mill
 LPUSH bus_lumbermill_trailer Timber Mill
 
+LPUSH business_kind bus_lumberyard
 SET   bus_lumberyard_name lumberyard
 SET   bus_lumberyard_perbuilding 10
-SET   bus_lumberyard_limit 
+
 SET   bus_lumberyard_maxfloors 1
 SET   bus_lumberyard_district industry
 
@@ -1204,9 +1264,10 @@ LPUSH bus_lumberyard_service service
 LPUSH bus_lumberyard_trailer Lumberyard
 LPUSH bus_lumberyard_trailer Timberyard
 
+LPUSH business_kind bus_magicshop
 SET   bus_magicshop_name magic shop
 SET   bus_magicshop_perbuilding 3
-SET   bus_magicshop_limit 
+
 SET   bus_magicshop_maxfloors 2
 SET   bus_magicshop_district fine shops
 
@@ -1226,9 +1287,10 @@ LPUSH bus_magicshop_trailer Botique
 LPUSH bus_magicshop_trailer Shoppe
 LPUSH bus_magicshop_trailer Magic Shop
 
+LPUSH business_kind bus_masonry
 SET   bus_masonry_name masonry shop
 SET   bus_masonry_perbuilding 20
-SET   bus_masonry_limit 
+
 SET   bus_masonry_maxfloors 1
 SET   bus_masonry_district industry
 
@@ -1240,9 +1302,10 @@ LPUSH bus_masonry_service service
 
 LPUSH bus_masonry_trailer inc.
 
+LPUSH business_kind bus_mercer
 SET   bus_mercer_name mercer
 SET   bus_mercer_perbuilding 20
-SET   bus_mercer_limit 
+
 SET   bus_mercer_maxfloors 2
 SET   bus_mercer_district trade
 
@@ -1258,9 +1321,10 @@ LPUSH bus_mercer_trailer Textiles
 LPUSH bus_mercer_trailer Fabrics
 LPUSH bus_mercer_trailer Cloth
 
+LPUSH business_kind bus_mill
 SET   bus_mill_name mill
 SET   bus_mill_perbuilding 20
-SET   bus_mill_limit 
+
 SET   bus_mill_maxfloors 3
 SET   bus_mill_district industry
 
@@ -1273,9 +1337,10 @@ LPUSH bus_mill_service service
 LPUSH bus_mill_trailer Millers
 LPUSH bus_mill_trailer Mill
 
+LPUSH business_kind bus_postoffice
 SET   bus_postoffice_name post office
 SET   bus_postoffice_perbuilding 10
-SET   bus_postoffice_limit 
+
 SET   bus_postoffice_maxfloors 1
 SET   bus_postoffice_district embassy
 
@@ -1289,9 +1354,10 @@ LPUSH bus_postoffice_trailer Mail Service
 LPUSH bus_postoffice_trailer Postal Service
 LPUSH bus_postoffice_trailer Package Delivery
 
+LPUSH business_kind bus_pottery
 SET   bus_pottery_name pottery
 SET   bus_pottery_perbuilding 10
-SET   bus_pottery_limit 
+
 SET   bus_pottery_maxfloors 1
 SET   bus_pottery_district trade
 
@@ -1306,9 +1372,10 @@ LPUSH bus_pottery_trailer Ceramics
 LPUSH bus_pottery_trailer Pots
 LPUSH bus_pottery_trailer Pottery House
 
+LPUSH business_kind bus_pursemaker
 SET   bus_pursemaker_name pursemaker
 SET   bus_pursemaker_perbuilding 20
-SET   bus_pursemaker_limit 
+
 SET   bus_pursemaker_maxfloors 1
 SET   bus_pursemaker_district trade
 
@@ -1323,9 +1390,10 @@ LPUSH bus_pursemaker_service service
 LPUSH bus_pursemaker_trailer Purse Shop
 LPUSH bus_pursemaker_trailer Bags
 
+LPUSH business_kind bus_roofer
 SET   bus_roofer_name roofer
 SET   bus_roofer_perbuilding 20
-SET   bus_roofer_limit 
+
 SET   bus_roofer_maxfloors 1
 SET   bus_roofer_district trade
 
@@ -1338,9 +1406,10 @@ LPUSH bus_roofer_service service
 LPUSH bus_roofer_trailer Roofing
 LPUSH bus_roofer_trailer Construction
 
+LPUSH business_kind bus_ropemaker
 SET   bus_ropemaker_name ropemaker
 SET   bus_ropemaker_perbuilding 20
-SET   bus_ropemaker_limit 
+
 SET   bus_ropemaker_maxfloors 1
 SET   bus_ropemaker_district industry
 
@@ -1352,9 +1421,10 @@ LPUSH bus_ropemaker_service service
 
 LPUSH bus_ropemaker_trailer Ropes
 
+LPUSH business_kind bus_rugmaker
 SET   bus_rugmaker_name rugmaker
 SET   bus_rugmaker_perbuilding 20
-SET   bus_rugmaker_limit 
+
 SET   bus_rugmaker_maxfloors 1
 SET   bus_rugmaker_district industry
 
@@ -1367,9 +1437,10 @@ LPUSH bus_rugmaker_service service
 LPUSH bus_rugmaker_trailer Rug Shop
 LPUSH bus_rugmaker_trailer Rugs
 
+LPUSH business_kind bus_scabbardmaker
 SET   bus_scabbardmaker_name scabbard maker
 SET   bus_scabbardmaker_perbuilding 10
-SET   bus_scabbardmaker_limit 
+
 SET   bus_scabbardmaker_maxfloors 1
 SET   bus_scabbardmaker_district trade
 
@@ -1383,9 +1454,10 @@ LPUSH bus_scabbardmaker_service service
 LPUSH bus_scabbardmaker_trailer Scabbards
 LPUSH bus_scabbardmaker_trailer Sheath Store
 
+LPUSH business_kind bus_school
 SET   bus_school_name school
 SET   bus_school_perbuilding 10
-SET   bus_school_limit 
+
 SET   bus_school_maxfloors 2
 SET   bus_school_district education
 
@@ -1410,9 +1482,10 @@ LPUSH bus_school_trailer Middle School
 LPUSH bus_school_trailer Reform School
 LPUSH bus_school_trailer Military School
 
+LPUSH business_kind bus_sculpting
 SET   bus_sculpting_name sculpting house
 SET   bus_sculpting_perbuilding 10
-SET   bus_sculpting_limit 
+
 SET   bus_sculpting_maxfloors 2
 SET   bus_sculpting_district professional
 
@@ -1426,9 +1499,10 @@ LPUSH bus_sculpting_service service
 LPUSH bus_sculpting_trailer Sculptures
 LPUSH bus_sculpting_trailer Studio
 
+LPUSH business_kind bus_shipyard
 SET   bus_shipyard_name shipyard
 SET   bus_shipyard_perbuilding 30
-SET   bus_shipyard_limit 
+
 SET   bus_shipyard_maxfloors 1
 SET   bus_shipyard_district port
 
@@ -1444,9 +1518,10 @@ LPUSH bus_shipyard_trailer Ship Repair
 LPUSH bus_shipyard_trailer Dock Company
 LPUSH bus_shipyard_trailer Dry Dock
 
+LPUSH business_kind bus_shoeshop
 SET   bus_shoeshop_name shoe shop
 SET   bus_shoeshop_perbuilding 10
-SET   bus_shoeshop_limit 
+
 SET   bus_shoeshop_maxfloors 1
 SET   bus_shoeshop_district trade
 
@@ -1470,9 +1545,10 @@ LPUSH bus_shoeshop_sound a kitten mewing
 LPUSH bus_shoeshop_sight old shoes and bit of leather
 LPUSH bus_shoeshop_sight a kitten
 
+LPUSH business_kind bus_shop
 SET   bus_shop_name shop
 SET   bus_shop_perbuilding 30
-SET   bus_shop_limit 
+
 SET   bus_shop_maxfloors 3
 SET   bus_shop_district trade
 
@@ -1490,9 +1566,10 @@ LPUSH bus_shop_trailer Shoppe
 LPUSH bus_shop_trailer Store
 LPUSH bus_shop_trailer Outlet
 
+LPUSH business_kind bus_slaughterhouse
 SET   bus_slaughterhouse_name slaughterhouse
 SET   bus_slaughterhouse_perbuilding 20
-SET   bus_slaughterhouse_limit 
+
 SET   bus_slaughterhouse_maxfloors 1
 SET   bus_slaughterhouse_district trade
 
@@ -1509,9 +1586,10 @@ LPUSH bus_slaughterhouse_trailer Meats
 LPUSH bus_slaughterhouse_trailer Butchery
 LPUSH bus_slaughterhouse_trailer Stockyard
 
+LPUSH business_kind bus_smithy
 SET   bus_smithy_name smithy
 SET   bus_smithy_perbuilding 5
-SET   bus_smithy_limit 
+
 SET   bus_smithy_maxfloors 1
 SET   bus_smithy_district shop
 
@@ -1528,9 +1606,10 @@ LPUSH bus_smithy_service service
 
 LPUSH bus_smithy_trailer inc.
 
+LPUSH business_kind bus_smokehouse
 SET   bus_smokehouse_name smokehouse
 SET   bus_smokehouse_perbuilding 30
-SET   bus_smokehouse_limit 
+
 SET   bus_smokehouse_maxfloors 2
 SET   bus_smokehouse_district industry
 
@@ -1542,9 +1621,10 @@ LPUSH bus_smokehouse_service service
 
 LPUSH bus_smokehouse_trailer inc.
 
+LPUSH business_kind bus_spicemerchant
 SET   bus_spicemerchant_name spicemerchant
 SET   bus_spicemerchant_perbuilding 10
-SET   bus_spicemerchant_limit 
+
 SET   bus_spicemerchant_maxfloors 1
 SET   bus_spicemerchant_district market
 
@@ -1558,9 +1638,10 @@ LPUSH bus_spicemerchant_service service
 
 LPUSH bus_spicemerchant_trailer inc.
 
+LPUSH business_kind bus_stable
 SET   bus_stable_name stable
 SET   bus_stable_perbuilding 5
-SET   bus_stable_limit 
+
 SET   bus_stable_maxfloors 1
 SET   bus_stable_district professional
 
@@ -1573,9 +1654,10 @@ LPUSH bus_stable_service service
 
 LPUSH bus_stable_trailer inc.
 
+LPUSH business_kind bus_studio
 SET   bus_studio_name studio
 SET   bus_studio_perbuilding 20
-SET   bus_studio_limit 
+
 SET   bus_studio_maxfloors 1
 SET   bus_studio_district trade
 
@@ -1590,9 +1672,10 @@ LPUSH bus_studio_service service
 
 LPUSH bus_studio_trailer inc.
 
+LPUSH business_kind bus_tackshop
 SET   bus_tackshop_name tack shop
 SET   bus_tackshop_perbuilding 5
-SET   bus_tackshop_limit 
+
 SET   bus_tackshop_maxfloors 1
 SET   bus_tackshop_district trade
 
@@ -1605,9 +1688,10 @@ LPUSH bus_tackshop_service service
 
 LPUSH bus_tackshop_trailer inc.
 
+LPUSH business_kind bus_tannery
 SET   bus_tannery_name tannery
 SET   bus_tannery_perbuilding 10
-SET   bus_tannery_limit 
+
 SET   bus_tannery_maxfloors 1
 SET   bus_tannery_district industry
 
@@ -1626,9 +1710,10 @@ LPUSH bus_tannery_sound an odd thumping sound
 
 LPUSH bus_tannery_sight skins stretching
 
+LPUSH business_kind bus_tavern
 SET   bus_tavern_name tavern
 SET   bus_tavern_perbuilding 5
-SET   bus_tavern_limit 
+
 SET   bus_tavern_maxfloors 3
 SET   bus_tavern_district market
 
@@ -1640,9 +1725,10 @@ LPUSH bus_tavern_service service
 
 LPUSH bus_tavern_trailer inc.
 
+LPUSH business_kind bus_theater
 SET   bus_theater_name theater
 SET   bus_theater_perbuilding 10
-SET   bus_theater_limit 
+
 SET   bus_theater_maxfloors 3
 SET   bus_theater_district entertainment
 
@@ -1656,9 +1742,10 @@ LPUSH bus_theater_service service
 
 LPUSH bus_theater_trailer inc.
 
+LPUSH business_kind bus_tileshop
 SET   bus_tileshop_name tile shop
 SET   bus_tileshop_perbuilding 10
-SET   bus_tileshop_limit 
+
 SET   bus_tileshop_maxfloors 1
 SET   bus_tileshop_district trade
 
@@ -1670,9 +1757,10 @@ LPUSH bus_tileshop_service service
 
 LPUSH bus_tileshop_trailer inc.
 
+LPUSH business_kind bus_townhouse
 SET   bus_townhouse_name townhouse
 SET   bus_townhouse_perbuilding 10
-SET   bus_townhouse_limit 
+
 SET   bus_townhouse_maxfloors 2
 SET   bus_townhouse_district hotel
 
@@ -1684,9 +1772,10 @@ LPUSH bus_townhouse_service service
 
 LPUSH bus_townhouse_trailer inc.
 
+LPUSH business_kind bus_tradingpost
 SET   bus_tradingpost_name trading post
 SET   bus_tradingpost_perbuilding 10
-SET   bus_tradingpost_limit 
+
 SET   bus_tradingpost_maxfloors 2
 SET   bus_tradingpost_district shop
 
@@ -1701,9 +1790,10 @@ LPUSH bus_tradingpost_trailer general store
 LPUSH bus_tradingpost_trailer shop
 LPUSH bus_tradingpost_trailer general goods
 
+LPUSH business_kind bus_translator
 SET   bus_translator_name translator
 SET   bus_translator_perbuilding 20
-SET   bus_translator_limit 
+
 SET   bus_translator_maxfloors 1
 SET   bus_translator_district embassy
 
@@ -1719,9 +1809,10 @@ LPUSH bus_translator_trailer translations
 LPUSH bus_translator_trailer word smiths
 LPUSH bus_translator_trailer shop
 
+LPUSH business_kind bus_transportation
 SET   bus_transportation_name transportation
 SET   bus_transportation_perbuilding 3
-SET   bus_transportation_limit 
+
 SET   bus_transportation_maxfloors 1
 SET   bus_transportation_district professional
 
@@ -1733,9 +1824,10 @@ LPUSH bus_transportation_service service
 
 LPUSH bus_transportation_trailer inc.
 
+LPUSH business_kind bus_university
 SET   bus_university_name university
 SET   bus_university_perbuilding 20
-SET   bus_university_limit 
+
 SET   bus_university_maxfloors 3
 SET   bus_university_district education
 
@@ -1750,9 +1842,10 @@ LPUSH bus_university_service service
 
 LPUSH bus_university_trailer inc.
 
+LPUSH business_kind bus_vinyard
 SET   bus_vinyard_name vinyard
 SET   bus_vinyard_perbuilding 10
-SET   bus_vinyard_limit 
+
 SET   bus_vinyard_maxfloors 1
 SET   bus_vinyard_district professional
 
@@ -1767,9 +1860,10 @@ LPUSH bus_vinyard_trailer vinters
 LPUSH bus_vinyard_trailer wine shoppe
 LPUSH bus_vinyard_trailer vineyards
 
+LPUSH business_kind bus_wagonyard
 SET   bus_wagonyard_name wagon yard
 SET   bus_wagonyard_perbuilding 20
-SET   bus_wagonyard_limit 
+
 SET   bus_wagonyard_maxfloors 1
 SET   bus_wagonyard_district industry
 
@@ -1782,9 +1876,10 @@ LPUSH bus_wagonyard_service service
 
 LPUSH bus_wagonyard_trailer inc.
 
+LPUSH business_kind bus_warehouse
 SET   bus_warehouse_name warehouse
 SET   bus_warehouse_perbuilding 10
-SET   bus_warehouse_limit 
+
 SET   bus_warehouse_maxfloors 2
 SET   bus_warehouse_district warehouse
 
@@ -1798,9 +1893,10 @@ LPUSH bus_warehouse_service service
 
 LPUSH bus_warehouse_trailer inc.
 
+LPUSH business_kind bus_dock
 SET   bus_dock_name dock
 SET   bus_dock_perbuilding 10
-SET   bus_dock_limit 
+
 SET   bus_dock_maxfloors 1
 SET   bus_dock_district docks
 
@@ -1814,9 +1910,10 @@ LPUSH bus_dock_service service
 
 LPUSH bus_dock_trailer inc.
 
+LPUSH business_kind bus_weaponshop
 SET   bus_weaponshop_name weaponshop
 SET   bus_weaponshop_perbuilding 10
-SET   bus_weaponshop_limit 
+
 SET   bus_weaponshop_maxfloors 1
 SET   bus_weaponshop_district merchant
 
@@ -1832,9 +1929,10 @@ LPUSH bus_weaponshop_service service
 
 LPUSH bus_weaponshop_trailer inc.
 
+LPUSH business_kind bus_weaver
 SET   bus_weaver_name weaver
 SET   bus_weaver_perbuilding 10
-SET   bus_weaver_limit 
+
 SET   bus_weaver_maxfloors 1
 SET   bus_weaver_district industry
 
@@ -1847,9 +1945,10 @@ LPUSH bus_weaver_service service
 
 LPUSH bus_weaver_trailer inc.
 
+LPUSH business_kind bus_winery
 SET   bus_winery_name winery
 SET   bus_winery_perbuilding 10
-SET   bus_winery_limit 
+
 SET   bus_winery_maxfloors 1
 SET   bus_winery_district merchant
 
@@ -1861,9 +1960,10 @@ LPUSH bus_winery_service service
 
 LPUSH bus_winery_trailer inc.
 
+LPUSH business_kind bus_woodshop
 SET   bus_woodshop_name woodshop
 SET   bus_woodshop_perbuilding 10
-SET   bus_woodshop_limit 
+
 SET   bus_woodshop_maxfloors 1
 SET   bus_woodshop_district trade
 
@@ -1877,9 +1977,10 @@ LPUSH bus_woodshop_service service
 
 LPUSH bus_woodshop_trailer inc.
 
+LPUSH business_kind bus_sawmill
 SET   bus_sawmill_name sawmill
 SET   bus_sawmill_perbuilding 10
-SET   bus_sawmill_limit 
+
 SET   bus_sawmill_maxfloors 1
 SET   bus_sawmill_district industry
 
@@ -1899,9 +2000,10 @@ LPUSH bus_sawmill_sound a naphtha powered buzzsaw
 
 LPUSH bus_sawmill_sight stacks of wood
 
+LPUSH business_kind bus_workshop
 SET   bus_workshop_name workshop
 SET   bus_workshop_perbuilding 10
-SET   bus_workshop_limit 
+
 SET   bus_workshop_maxfloors 2
 SET   bus_workshop_district shop
 
