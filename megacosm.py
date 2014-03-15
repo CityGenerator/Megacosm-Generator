@@ -398,6 +398,11 @@ def select_article(s):
 def select_pluralize(s,n):
     return Filters.select_pluralize(s,n)
 
+@app.template_filter('conjunction')
+def select_conjunction(wordlist):
+    return Filters.select_conjunction(wordlist)
+
+
 
 if __name__ == '__main__':
     app.debug = True

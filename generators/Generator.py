@@ -48,6 +48,10 @@ class Generator(object):
                 feature=key.replace(namekey+'_','')
                 #print "adding zset",feature,"to ", namekey
                 setattr( self, feature, Generator.select_by_roll(self,key) )
+            elif self.redis.type(key) == 'string':
+                feature=key.replace(namekey+'_','')
+                print "found a simple string",feature,"to ", namekey
+                setattr( self, feature, self.redis.get(key) )
             elif self.redis.type(key) == 'list' :
                 feature=key.replace(namekey+'_','')
                 if feature not in self.__dict__ :

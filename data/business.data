@@ -1,4 +1,16 @@
 
+# TODO we need entries for how business is going, current troubles, etc.
+# bob's hut has recently had  _____________
+set business_trouble_chance 20
+LPUSH business_trouble concerns over a recent rash of break-ins in the neighborhood
+LPUSH business_trouble problems with local law enforcement
+LPUSH business_trouble problems with petty theft
+LPUSH business_trouble supply caravans never show up
+LPUSH business_trouble problems with pests
+LPUSH business_trouble a fire
+LPUSH business_trouble slumping sales
+
+
 #        The Perfumed Twins Vinters is a[n] _______, disgusting-looking vinyard.
 ZADD business_size    5  { "name":"tiny"           }
 ZADD business_size   10  { "name":"insignificant"  }
@@ -74,6 +86,31 @@ ZADD business_price  78 { "name":"extravagant"        }
 ZADD business_price  94 { "name":"high"               }
 ZADD business_price 100 { "name":"very high"          }
 
+
+
+ZADD business_condition neat
+ZADD business_condition tidy
+ZADD business_condition messy
+ZADD business_condition crowded
+ZADD business_condition dirty
+ZADD business_condition clean
+ZADD business_condition packed
+ZADD business_condition orderly
+ZADD business_condition dusty
+ZADD business_condition cluttered
+ZADD business_condition damp
+ZADD business_condition smelly
+ZADD business_condition disgusting
+ZADD business_condition filthy
+
+
+
+
+
+
+
+
+
 #TODO chance this to a stat
 LPUSH business_age old
 LPUSH business_age new
@@ -121,5 +158,14 @@ LPUSH business_windows three
 
 LPUSH business_shade bright
 LPUSH business_shade dark
+
+LPUSH business_direction west
+LPUSH business_direction northwest
+LPUSH business_direction north
+LPUSH business_direction northeast
+LPUSH business_direction east
+LPUSH business_direction southeast
+LPUSH business_direction south
+LPUSH business_direction southwest
 
 

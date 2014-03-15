@@ -9,12 +9,46 @@
 
     <h1>Welcome to The {{business.name['full']}} <a href="/business?seed={{business.seed}}">({{business.seed}})</a></h1>
 
+<h2>Summary</h2>
+The {{business.name['full']}} is {{business.size['name']|article}}, {{business.condition}} {{business.floor}} floor {{business.kindname}}. The {{business.rooftype}}-roofed building faces {{business.direction}}, has {{business.windows}} windows, and has {{business.storefront|article}} storefront. 
+{%if business.senses%}
+Inside, {{ business.senses | conjunction    }}.
+{%endif %}
+
+
+<h2>Owner</h2>
+<p>It is located in {{business.neighborhood|article}} neighborhood of the {{business.district}} district, and is run by {{business.owner.attitude|article}} {{business.owner.race}} named {{business.owner.name['full']}}.
+
+
+<h2>Service</h2>
+The {{business.kindname}} is known for {{business.price['name']}} for the {{business.service}}, and {{business.popularity['name']}}. You will find {{business.patroncount}} {{ 'customer'|pluralize(business.patroncount  )}} in the {{business.kindname}}. 
+{% if business.trouble %}
+The {{business.name['full']}} has recently had {{business.trouble}}.
+
+{%endif%}
+
+
+<h2>Description When Found...</h2>
+<blockquote style="font-style:italic">
+"You come across {{business.size['name']|article}}, {{business.condition}} {{business.floor}} floor {{business.kindname}}. It has {{business.rooftype|article}} roof, faces {{business.direction}}, has {{business.windows}} windows, and has {{business.storefront|article}} storefront. {{business.owner.race|article}} {{business.manager}} appears to be in charge."
+</blockquote>
+
+<!--
 <pre>
 {%for field in business.__dict__ %}
 {{field}}  {{business[field]}}
 {%endfor%}
-</pre>
 
+managerclass  ranger
+
+age  old
+
+manager  apothecary
+
+shade  bright
+
+</pre>
+-->
 
 
 {% endblock %}
