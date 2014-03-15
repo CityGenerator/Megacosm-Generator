@@ -347,10 +347,9 @@ LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol bottle
 #LPUSH deity_holysymbol brain
 #LPUSH deity_holysymbol brush
-
 #LPUSH deity_holysymbol bull
 #LPUSH deity_holysymbol butterfly
-#LPUSH deity_holysymbol calf
+
 #LPUSH deity_holysymbol campfire
 #LPUSH deity_holysymbol candle
 #LPUSH deity_holysymbol cat
