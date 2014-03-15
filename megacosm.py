@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -224,6 +224,24 @@ def Legend_Builder():
     paramlist,paramstring,paramset=builder_form_data('legend')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='legend') 
+    
+#########################################################################
+
+@app.route('/business')
+def GenerateBusiness():
+    """Generate a simple business"""
+    features=feature_filter('business')
+    business=Business.Business(server,features)
+    return render_template('business.html', business=business )
+
+
+@app.route('/business_builder')
+def Business_Builder():
+    """Generate the basic data about a business"""
+    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+    paramlist,paramstring,paramset=builder_form_data('business')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='business') 
+    
     
 #########################################################################
 
