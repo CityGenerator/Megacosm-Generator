@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %}
+{% block title %}Behold {{star.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Behold {{star.name['full']}} <a href="/star?seed={{star.seed}}">({{star.seed}})</a></h1>
+
+
+{{star.name['full']}} is {{star.size['name'] |article}} {{star.color['name']}} star.
+
+
+
+
+
+
+{% endblock %}

@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -241,6 +241,44 @@ def Business_Builder():
     #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('business')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='business') 
+    
+    
+#########################################################################
+
+@app.route('/moon')
+def GenerateMoon():
+    """Generate a simple moon"""
+    features=feature_filter('moon')
+    moon=Moon.Moon(server,features)
+    return render_template('moon.html', moon=moon )
+
+
+@app.route('/moon_builder')
+def Moon_Builder():
+    """Generate the basic data about a moon"""
+    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+    paramlist,paramstring,paramset=builder_form_data('moon')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='moon') 
+    
+    
+    
+#########################################################################
+
+@app.route('/star')
+def GenerateStar():
+    """Generate a simple star"""
+    features=feature_filter('star')
+    star=Star.Star(server,features)
+    return render_template('star.html', star=star )
+
+
+@app.route('/star_builder')
+def Star_Builder():
+    """Generate the basic data about a star"""
+    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+    paramlist,paramstring,paramset=builder_form_data('star')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='star') 
+    
     
     
 #########################################################################
