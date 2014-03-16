@@ -1,0 +1,81 @@
+#
+
+SET   namecurrencypre_chance 30
+LPUSH namecurrencypre bo
+LPUSH namecurrencypre de
+LPUSH namecurrencypre no
+LPUSH namecurrencypre quala
+LPUSH namecurrencypre di
+LPUSH namecurrencypre nomo
+LPUSH namecurrencypre ban
+LPUSH namecurrencypre hol
+LPUSH namecurrencypre zin
+LPUSH namecurrencypre sul
+LPUSH namecurrencypre soo
+LPUSH namecurrencypre su
+LPUSH namecurrencypre nib
+LPUSH namecurrencypre yua
+        
+LPUSH namecurrencyroot plat
+LPUSH namecurrencyroot lat
+LPUSH namecurrencyroot cred
+LPUSH namecurrencyroot bol
+LPUSH namecurrencyroot hun
+LPUSH namecurrencyroot alb
+LPUSH namecurrencyroot pol
+LPUSH namecurrencyroot lud
+LPUSH namecurrencyroot din
+LPUSH namecurrencyroot dom
+LPUSH namecurrencyroot zom
+LPUSH namecurrencyroot zib
+LPUSH namecurrencyroot fen
+LPUSH namecurrencyroot fep
+LPUSH namecurrencyroot fel
+LPUSH namecurrencyroot chet
+LPUSH namecurrencyroot nar
+LPUSH namecurrencyroot bon
+LPUSH namecurrencyroot kol
+LPUSH namecurrencyroot dol
+LPUSH namecurrencyroot mul
+LPUSH namecurrencyroot pon
+LPUSH namecurrencyroot quat
+LPUSH namecurrencyroot wan
+LPUSH namecurrencyroot lod
+LPUSH namecurrencyroot juk
+LPUSH namecurrencyroot zin
+LPUSH namecurrencyroot pen
+LPUSH namecurrencyroot shil
+
+SET   namecurrencypost_chance 30
+LPUSH namecurrencypost rak
+LPUSH namecurrencypost nik
+LPUSH namecurrencypost dar
+LPUSH namecurrencypost bit
+LPUSH namecurrencypost inum
+LPUSH namecurrencypost oni
+LPUSH namecurrencypost olo
+LPUSH namecurrencypost abbi
+LPUSH namecurrencypost ish
+LPUSH namecurrencypost lar
+LPUSH namecurrencypost er
+LPUSH namecurrencypost un
+LPUSH namecurrencypost ny
+LPUSH namecurrencypost nie
+LPUSH namecurrencypost ett
+LPUSH namecurrencypost ull
+LPUSH namecurrencypost ack
+LPUSH namecurrencypost ik
+LPUSH namecurrencypost ing
+LPUSH namecurrencypost ar
+LPUSH namecurrencypost ma
+LPUSH namecurrencypost na
+LPUSH namecurrencypost re
+LPUSH namecurrencypost ra
+LPUSH namecurrencypost so
+LPUSH namecurrencypost tre
+LPUSH namecurrencypost pee
+LPUSH namecurrencypost kel
+LPUSH namecurrencypost it
+    
+
+

@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -210,6 +210,24 @@ def Rumor_Builder():
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
     
 #########################################################################
+
+
+@app.route('/currency')
+def GenerateCurrency():
+    """Generate a simple currency"""
+    features=feature_filter('currency')
+    currency=Currency.Currency(server,features)
+    return render_template('currency.html', currency=currency )
+
+@app.route('/currency_builder')
+def Currency_Builder():
+    """Generate the basic data about a currency"""
+    paramlist,paramstring,paramset=builder_form_data('currency')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='currency') 
+    
+#########################################################################
+
 
 @app.route('/legend')
 def GenerateLegend():

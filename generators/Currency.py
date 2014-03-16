@@ -9,14 +9,14 @@ from util import Filters
 
 
 
-class Rumor(Generator):
+class Currency(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
 
-        for person in ['victim', 'culprit', 'source', 'believer' ]:
+        for person in ['npc' ]:
             if not hasattr(self,person):
-                setattr(self,person,NPC(self.redis).name['full'])
+                setattr(self,person,NPC(self.redis))
         
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)

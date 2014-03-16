@@ -1,0 +1,16 @@
+
+
+{% extends "base.html" %}
+{% block title %}Spare Some Change? {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Space Some Change? <a href="/currency?seed={{currency.seed}}">({{currency.seed}})</a></h1>
+
+    {% if currency %}
+        {{currency.text}} 
+    {%endif%}
+
+{% endblock %}
