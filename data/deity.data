@@ -355,8 +355,8 @@ LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol circle
 #LPUSH deity_holysymbol cloud
 #LPUSH deity_holysymbol cog
-
 #LPUSH deity_holysymbol coin
+
 #LPUSH deity_holysymbol crescent
 #LPUSH deity_holysymbol cross
 #LPUSH deity_holysymbol diamond
