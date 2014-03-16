@@ -349,14 +349,13 @@ LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol brush
 #LPUSH deity_holysymbol bull
 #LPUSH deity_holysymbol butterfly
-
 #LPUSH deity_holysymbol campfire
 #LPUSH deity_holysymbol candle
-#LPUSH deity_holysymbol cat
 #LPUSH deity_holysymbol chalice
 #LPUSH deity_holysymbol circle
 #LPUSH deity_holysymbol cloud
 #LPUSH deity_holysymbol cog
+
 #LPUSH deity_holysymbol coin
 #LPUSH deity_holysymbol crescent
 #LPUSH deity_holysymbol cross
@@ -443,6 +442,9 @@ LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol wolf
 #LPUSH deity_holysymbol woman
 
+
+# Ones I don't wanna draw right now.
+#LPUSH deity_holysymbol cat
 
     
 #Ganthidon sometimes chooses to appear as a _________ before his followers.
