@@ -3,7 +3,6 @@
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire
-from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
 import random
@@ -19,59 +18,44 @@ from pprint import pprint
 
 p = inflect.engine()
 
-MAPWIDTH=500
-MAPHEIGHT=300
-
 config = ConfigParser.RawConfigParser()
 config.read( 'data/config.ini')
 
 url = config.get('redis', 'url')
 server=redis.from_url(url)
 
-#pool = redis.ConnectionPool(host=config.get('redis', 'host'), port=config.get('redis', 'port'), db=0, password=config.get('redis', 'password'),   )
-#server = redis.Redis(connection_pool=pool)    
-
 # This thing here.. does stuff.
 app = Flask(__name__)
+
+#########################################################################
 
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
     return render_template('index.html') 
 
+#########################################################################
 
 @app.route('/magicitem')
 def GenerateMagicItem():
     """Generate a MagicItem"""
-    seed=set_seed( request.args.get('seed') )
 
-    print "MAH SEED:",seed
+    features=feature_filter('magicitem')
+    magicitem=MagicItem.MagicItem(server,features)
 
-    magicitemfeatures={'seed':seed,}
-    for param in request.args :
-        if re.match('^magicitem_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            magicitemfeatures[param]=int(request.args[param])
-        elif re.match('^magicitem_kind$',param) and request.args[param] in server.lrange('magicitem_kind',0,-1):
-            magicitemfeatures['kind']=request.args[param]
-
-    magicitem=MagicItem.MagicItem(server, magicitemfeatures)
     kind= magicitem.kind
     return render_template('magicitem_'+kind+'.html',magicitem=magicitem) 
 
 @app.route('/magicitem_builder')
 def MagicItem_Builder():
     """Generate an NPC"""
-
-    stats=server.lrange('stat_magicitem',0,-1)
-    statinfo={}
-    kind=server.lrange('magicitem_kind',0,-1);
-    for stat in stats :
-        statinfo[stat]=[]
-        for statstring in server.zrange('magicitem_'+stat,0,-1):
-            statinfo[stat].append(json.loads(statstring))
     
-    return render_template('magicitem_builder.html',statinfo=statinfo, otherstats={'kind':kind}) 
+    paramlist,paramstring,paramset=builder_form_data('magicitem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='magicitem') 
+    
+#########################################################################
+
 
 @app.route('/npc')
 def GenerateNPC():
@@ -121,40 +105,25 @@ def NPC_Builder():
     
     return render_template('npc_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
 
+#########################################################################
+
 @app.route('/planet_builder')
 def Planet_Builder():
     """Generate the basic data about a planet"""
+    paramlist,paramstring,paramset=builder_form_data('planet')
 
-    stats=server.lrange('stat_planet',0,-1)
-    statinfo={}
-
-    for stat in stats :
-        statinfo[stat]=[]
-        for statstring in server.zrange('planet_'+stat,0,-1):
-            print "looking at planet_",stat, statstring
-            statinfo[stat].append(json.loads(statstring))
-    
-    return render_template('planet_builder.html',statinfo=statinfo) 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='planet') 
 
 
 @app.route('/planet')
 def GeneratePlanet():
     """Generate the basic data about a planet"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    planetfeatures={'seed':seed,}
-
-    for param in request.args :
-        if re.match('^planet_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            planetfeatures[param]=int(request.args[param])
-
-    planet=Planet.Planet(server,planetfeatures)
-
+    features=feature_filter('planet')
+    planet=Planet.Planet(server,features)
     return render_template('planet.html', planet=planet )
 
+
+#########################################################################
 
 @app.route('/bond')
 def GenerateBond():
@@ -194,6 +163,7 @@ def Bond_Builder():
     
     return render_template('bond_builder.html',statinfo=statinfo) 
 
+#########################################################################
 
 @app.route('/rumor')
 def GenerateRumor():
@@ -337,9 +307,6 @@ def Continent_Builder():
 @app.route('/sect')
 def GenerateSect():
     """Generate a simple sect"""
-#    if 'sect_domain' in request.args:
-#        request.args.rem('sect_domain')
-#    print request.args
 
     features=feature_filter('sect')
     sect=Sect.Sect(server,features)
@@ -351,10 +318,6 @@ def Sect_Builder():
     """Generate the basic data about a sect"""
     paramlist,paramstring,paramset=builder_form_data('sect')
     result= server.zrange('portfolio_domain',0,-1)
-#    paramlist['domain']=[]
-#    for domain in result:
-#        paramlist['domain'].append(json.loads(domain)['name'])
-
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
 
@@ -413,23 +376,16 @@ def Deity_Builder():
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='deity') 
 
-#@app.route('/deity')
-#def GenerateDeity():
-#    """Generate a Deity"""
-#    seed=set_seed( request.args.get('seed') )
-#
-#    print "MAH SEED:",seed
-#
-#    deityfeatures={'seed':seed,}
-#    for param in request.args :
-#        if re.match('^deity_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-#            print "param is",param,"=",request.args[param]
-#            deityfeatures[param]=int(request.args[param])
-#
-#    deity=Deity.Deity(server, deityfeatures)
-#    deity.generate_sects()
-#    return render_template('deity.html',deity=deity) 
+
+
+
 #########################################################################
+#########################################################################
+#########################################################################
+
+
+
+
 
 def feature_filter(generator):
     seed=set_seed( request.args.get('seed') )

@@ -1,5 +1,5 @@
 
-from generators.Business import Business
+from generators.Cuisine import Cuisine
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -12,22 +12,20 @@ config = ConfigParser.RawConfigParser()
 config.read('data/config.ini')
 url = config.get('redis', 'url')
 
-class TestBusiness(unittest.TestCase):
+class TestCuisine(unittest.TestCase):
 
     def setUp(self):
         """  """
         
         self.redis=redis.from_url(url)
-        self.seed=set_seed( '3' )
+#        self.seed=set_seed( "3" )
 
-    def test_business(self):
+    def test_random_cuisine(self):
         """  """
-        business = Business(self.redis )
+        cuisine = Cuisine(self.redis )
+        print cuisine.text
+        self.assertNotEqual(cuisine.text,'')
 
-    def test_senses(self):
-        """  """
-        business = Business(self.redis, {'smell': 'stank', 'sight':'ugly blinds', 'sound': 'cries for help'} )
-        print business.__dict__
 
 if __name__ == '__main__':
     unittest.main()

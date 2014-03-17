@@ -12,96 +12,96 @@ LPUSH business_trouble slumping sales
 
 
 #        The Perfumed Twins Vinters is a[n] _______, disgusting-looking vinyard.
-ZADD business_size    5  { "name":"tiny"           }
-ZADD business_size   10  { "name":"insignificant"  }
-ZADD business_size   15  { "name":"squat"          }
-ZADD business_size   20  { "name":"small"          }
-ZADD business_size   25  { "name":"minor"          }
-ZADD business_size   30  { "name":"insubstantial"  }
-ZADD business_size   35  { "name":"paltry"         }
-ZADD business_size   40  { "name":"normal"         }
-ZADD business_size   45  { "name":"typical"        }
-ZADD business_size   50  { "name":"humdrum"        }
-ZADD business_size   55  { "name":"ordinary"       }
-ZADD business_size   60  { "name":"average"        }
-ZADD business_size   65  { "name":"familiar"       }
-ZADD business_size   70  { "name":"large"          }
-ZADD business_size   75  { "name":"sizeable"       }
-ZADD business_size   80  { "name":"epic"           }
-ZADD business_size   85  { "name":"monumental"     }
-ZADD business_size   90  { "name":"massive"        }
-ZADD business_size   95  { "name":"enormous"       }
-ZADD business_size  100  { "name":"vast"           }
+ZADD business_size 5 {  "name":"tiny"           , "score":5  }
+ZADD business_size 10 {  "name":"insignificant"  , "score":10  }
+ZADD business_size 15 {  "name":"squat"          , "score":15  }
+ZADD business_size 20 {  "name":"small"          , "score":20  }
+ZADD business_size 25 {  "name":"minor"          , "score":25  }
+ZADD business_size 30 {  "name":"insubstantial"  , "score":30  }
+ZADD business_size 35 {  "name":"paltry"         , "score":35  }
+ZADD business_size 40 {  "name":"normal"         , "score":40  }
+ZADD business_size 45 {  "name":"typical"        , "score":45  }
+ZADD business_size 50 {  "name":"humdrum"        , "score":50  }
+ZADD business_size 55 {  "name":"ordinary"       , "score":55  }
+ZADD business_size 60 {  "name":"average"        , "score":60  }
+ZADD business_size 65 {  "name":"familiar"       , "score":65  }
+ZADD business_size 70 {  "name":"large"          , "score":70  }
+ZADD business_size 75 {  "name":"sizeable"       , "score":75  }
+ZADD business_size 80 {  "name":"epic"           , "score":80  }
+ZADD business_size 85 {  "name":"monumental"     , "score":85  }
+ZADD business_size 90 {  "name":"massive"        , "score":90  }
+ZADD business_size 95 {  "name":"enormous"       , "score":95  }
+ZADD business_size 100 {  "name":"vast"           , "score":100  }
 
 #   The Wet Frog is a garden-variety tavern that  ____________.
-ZADD business_popularity    5  { "name":"is avoided by the locals for reasons unknown"       }
-ZADD business_popularity   10  { "name":"is unappreciated by the locals"                     }
-ZADD business_popularity   15  { "name":"is usually empty"                                   }
-ZADD business_popularity   20  { "name":"is usually busy but is strangely quiet as of late"  }
-ZADD business_popularity   25  { "name":"holds the record for worst service in the region"   }
-ZADD business_popularity   30  { "name":"has strange opening hours"                          }
-ZADD business_popularity   35  { "name":"only attracts people from out of town"              }
-ZADD business_popularity   40  { "name":"is popular on market days"                          }
-ZADD business_popularity   45  { "name":"is eerily empty"                                    }
-ZADD business_popularity   50  { "name":"is completely abandoned, and often forgotten"       }
-ZADD business_popularity   55  { "name":"usually has few visitors"                           }
-ZADD business_popularity   60  { "name":"is empty during the day but busy in the evening"    }
-ZADD business_popularity   65  { "name":"is on the verge of closing"                         }
-ZADD business_popularity   70  { "name":"is busy most days"                                  }
-ZADD business_popularity   75  { "name":"is crowded every night"                             }
-ZADD business_popularity   80  { "name":"rarely has room for new business"                   }
-ZADD business_popularity   85  { "name":"has people queing out in the street"                }
-ZADD business_popularity   90  { "name":"is one of the busiest places in town"               }
-ZADD business_popularity   95  { "name":"is always busy, regardless of the time"             }
-ZADD business_popularity  100  { "name":"is constantly crowded"                              }
+ZADD business_popularity 5 {  "name":"is avoided by the locals for reasons unknown"       , "score":5  }
+ZADD business_popularity 10 {  "name":"is unappreciated by the locals"                     , "score":10  }
+ZADD business_popularity 15 {  "name":"is usually empty"                                   , "score":15  }
+ZADD business_popularity 20 {  "name":"is usually busy but is strangely quiet as of late"  , "score":20  }
+ZADD business_popularity 25 {  "name":"holds the record for worst service in the region"   , "score":25  }
+ZADD business_popularity 30 {  "name":"has strange opening hours"                          , "score":30  }
+ZADD business_popularity 35 {  "name":"only attracts people from out of town"              , "score":35  }
+ZADD business_popularity 40 {  "name":"is popular on market days"                          , "score":40  }
+ZADD business_popularity 45 {  "name":"is eerily empty"                                    , "score":45  }
+ZADD business_popularity 50 {  "name":"is completely abandoned, and often forgotten"       , "score":50  }
+ZADD business_popularity 55 {  "name":"usually has few visitors"                           , "score":55  }
+ZADD business_popularity 60 {  "name":"is empty during the day but busy in the evening"    , "score":60  }
+ZADD business_popularity 65 {  "name":"is on the verge of closing"                         , "score":65  }
+ZADD business_popularity 70 {  "name":"is busy most days"                                  , "score":70  }
+ZADD business_popularity 75 {  "name":"is crowded every night"                             , "score":75  }
+ZADD business_popularity 80 {  "name":"rarely has room for new business"                   , "score":80  }
+ZADD business_popularity 85 {  "name":"has people queing out in the street"                , "score":85  }
+ZADD business_popularity 90 {  "name":"is one of the busiest places in town"               , "score":90  }
+ZADD business_popularity 95 {  "name":"is always busy, regardless of the time"             , "score":95  }
+ZADD business_popularity 100 {  "name":"is constantly crowded"                              , "score":100  }
 
 
 # The tavern has a reputation for _____________.
-ZADD business_reputation  10 { "name":"deplorable clientele"                     }
-ZADD business_reputation  20 { "name":"being a hive of scum and villiany"        }
-ZADD business_reputation  30 { "name":"unpaid bills being bad for your health"   }
-ZADD business_reputation  40 { "name":"poor sanitation"                          }
-ZADD business_reputation  50 { "name":"unfortunate accidents"                    }
-ZADD business_reputation  60 { "name":"being dull"                               }
-ZADD business_reputation  70 { "name":"being open all hours"                     }
-ZADD business_reputation  80 { "name":"having good services"                     }
-ZADD business_reputation  90 { "name":"being a good place to find rumors"        }
-ZADD business_reputation 100 { "name":"being a pillar of the community"          }
+ZADD business_reputation 10 {  "name":"deplorable clientele"                     , "score":10  }
+ZADD business_reputation 20 {  "name":"being a hive of scum and villiany"        , "score":20  }
+ZADD business_reputation 30 {  "name":"unpaid bills being bad for your health"   , "score":30  }
+ZADD business_reputation 40 {  "name":"poor sanitation"                          , "score":40  }
+ZADD business_reputation 50 {  "name":"unfortunate accidents"                    , "score":50  }
+ZADD business_reputation 60 {  "name":"being dull"                               , "score":60  }
+ZADD business_reputation 70 {  "name":"being open all hours"                     , "score":70  }
+ZADD business_reputation 80 {  "name":"having good services"                     , "score":80  }
+ZADD business_reputation 90 {  "name":"being a good place to find rumors"        , "score":90  }
+ZADD business_reputation 100 {  "name":"being a pillar of the community"          , "score":100  }
 
 
 # ... is known for ______________ prices for...
-ZADD business_price   6 { "name":"suspiciously low"   }
-ZADD business_price  12 { "name":"next to nothing"    }
-ZADD business_price  18 { "name":"dirt cheap"         }
-ZADD business_price  24 { "name":"inexpensive"        }
-ZADD business_price  30 { "name":"fair"               }
-ZADD business_price  36 { "name":"slightly high"      }
-ZADD business_price  42 { "name":"minimal"            }
-ZADD business_price  48 { "name":"varying"            }
-ZADD business_price  54 { "name":"reasonable"         }
-ZADD business_price  60 { "name":"moderate"           }
-ZADD business_price  66 { "name":"steep"              }
-ZADD business_price  72 { "name":"unreasonable"       }
-ZADD business_price  78 { "name":"extravagant"        }
-ZADD business_price  94 { "name":"high"               }
-ZADD business_price 100 { "name":"very high"          }
+ZADD business_price 6 {  "name":"suspiciously low"   , "score":6  }
+ZADD business_price 12 {  "name":"next to nothing"    , "score":12  }
+ZADD business_price 18 {  "name":"dirt cheap"         , "score":18  }
+ZADD business_price 24 {  "name":"inexpensive"        , "score":24  }
+ZADD business_price 30 {  "name":"fair"               , "score":30  }
+ZADD business_price 36 {  "name":"slightly high"      , "score":36  }
+ZADD business_price 42 {  "name":"minimal"            , "score":42  }
+ZADD business_price 48 {  "name":"varying"            , "score":48  }
+ZADD business_price 54 {  "name":"reasonable"         , "score":54  }
+ZADD business_price 60 {  "name":"moderate"           , "score":60  }
+ZADD business_price 66 {  "name":"steep"              , "score":66  }
+ZADD business_price 72 {  "name":"unreasonable"       , "score":72  }
+ZADD business_price 78 {  "name":"extravagant"        , "score":78  }
+ZADD business_price 94 {  "name":"high"               , "score":94  }
+ZADD business_price 100 {  "name":"very high"          , "score":100  }
 
 
 
-ZADD business_condition neat
-ZADD business_condition tidy
-ZADD business_condition messy
-ZADD business_condition crowded
-ZADD business_condition dirty
-ZADD business_condition clean
-ZADD business_condition packed
-ZADD business_condition orderly
-ZADD business_condition dusty
-ZADD business_condition cluttered
-ZADD business_condition damp
-ZADD business_condition smelly
-ZADD business_condition disgusting
-ZADD business_condition filthy
+LPUSH business_condition neat
+LPUSH business_condition tidy
+LPUSH business_condition messy
+LPUSH business_condition crowded
+LPUSH business_condition dirty
+LPUSH business_condition clean
+LPUSH business_condition packed
+LPUSH business_condition orderly
+LPUSH business_condition dusty
+LPUSH business_condition cluttered
+LPUSH business_condition damp
+LPUSH business_condition smelly
+LPUSH business_condition disgusting
+LPUSH business_condition filthy
 
 
 

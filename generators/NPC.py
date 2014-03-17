@@ -1,6 +1,4 @@
 
-
-
 import random
 import json
 from generators.Generator import Generator

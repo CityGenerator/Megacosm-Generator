@@ -8,69 +8,93 @@ from util import Filters
 
 
 class Generator(object):
+    """ An abstracted Generator that all generators are based from """
     def __init__(self,redis, features={}):
-        """ set any features and generate a seed if one is not included. """
-
+        
+        # Redis is the source of all data.
         self.redis=redis
+
+        # We use our class name as a key for redis
         namekey= self.__class__.__name__.lower()
+
+        # For naming conventions, we use "name"+classname+"stuff"
         self.name=self.generate_name('name'+namekey)
 
         # For each feature, set it as an attribute for this generator
         for feature, value in features.iteritems():
+            # This bit of meta code saves soooo much hassle and getters/setters.
+            # especially with testing.
             setattr( self, feature, value)
-        # If a seed isn't included, generate one.
 
-        if 'seed' not in features:
+        if not hasattr(self, 'seed'):
             self.seed=random.randint(1,10000000)
 
+        # This is the guts of the Generator...
         self.generate_features(namekey)
+
 
     def generate_features(self,namekey):
         """ Given a namekey, add those features to this object."""
-        #print "my namekey", namekey
-        #print self.redis.keys(namekey+'_*')
+        # find all keys matching our namekey
         for key in self.redis.keys(namekey+'_*'):
-            #print "testing key",key
+
+            #check to see if your key has a related chance key
             if  self.redis.exists(key+"_chance"):
+                # make sure the value is not already set, then grab it.
                 if not hasattr(self,key+"_chance"):
                     setattr(self,key+"_chance", int(self.redis.get(key+"_chance")) )
 
-                #print "==",key,"_chance exists:",chance
-                if key+"_roll" not in self.__dict__:
+                # check to see if you have a preset roll; if not, roll 1-100                
+                if not hasattr(self, key+"_roll"):
                       setattr( self, key+"_roll", random.randint(1,100) )
+
+                # if the roll is greater than the chance, you have failed, and don't get to use this stat.
+                # Go to the next entry in the for loop.
                 if int(getattr(self,key+"_roll")) > getattr(self,key+"_chance"):
-                    print key+"_roll (",getattr(self,key+"_roll"),") vs ",getattr(self,key+"_chance")
-                    print key," failed its roll"
                     continue
 
-                
+            ##########################################################################################
+            # Provided you had no associated _chance or that you succeeded on the chance roll, you can
+            # Move on to actually setting the value.
+
+            # Most features don't need the namekey on the front since it's redundant
+            # so we shorten the name for brevity.
+            featurename=key.replace(namekey+'_','')
+
+            # Zset means it's a 1-100 stat;
             if self.redis.type(key) == 'zset':
-                feature=key.replace(namekey+'_','')
-                #print "adding zset",feature,"to ", namekey
-                setattr( self, feature, Generator.select_by_roll(self,key) )
+                setattr( self, featurename, Generator.select_by_roll(self,key) )
+
+            # string means it's a simple value that plugs right in
             elif self.redis.type(key) == 'string':
-                feature=key.replace(namekey+'_','')
-                print "found a simple string",feature,"to ", namekey
-                setattr( self, feature, self.redis.get(key) )
+                setattr( self, featurename, self.redis.get(key) )
+
+            # List gets a bit tricky; select a value, then see if it has an associated description
             elif self.redis.type(key) == 'list' :
-                feature=key.replace(namekey+'_','')
-                if feature not in self.__dict__ :
-                    #print "adding list",feature,"to ", namekey
-                    setattr( self, feature, Generator.rand_value(self,key) )
-                if self.redis.exists(key+"_description") and feature+"_description" not in self.__dict__ :
-                    #print "adding list",feature,"to ", namekey
-                    #print key+"_description", "has ",getattr(self,feature),"returns",self.redis.hmget(key+"_description",getattr(self,feature)  )
 
-                    setattr( self, feature+"_description", json.loads(self.redis.hmget(key+"_description",getattr(self,feature) )[0] ) )
-                
-            #else:
-                #print "no idea ",key,"what ",self.redis.type(key),"is."
-# 
+                # If feature isn't set, grab a rand value from the list.
+                if not hasattr(self, featurename):
+                    featurevalue=Generator.rand_value(self,key)
+                    setattr( self, featurename, featurevalue )
+                # if the description hasn't been set and exists in redis.
+                if not hasattr( self, featurename+"_description") and self.redis.exists(key+"_description"):
+                    featurevalue=json.loads(self.redis.hmget(key+"_description",getattr(self,featurename) )[0] ) 
+                    setattr( self, featurename+"_description", featurevalue )
+            else:
+                print "INFO: no idea ",key,"what ",self.redis.type(key),"is."
 
+
+####################################################
+# needs refactoring below here.
+
+
+
+
+    # FIXME this needs to be integrated with what NPC races use...
     def generate_name(self,key):
         """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.
             This creates the structure "Title PreRootPost Trailer"
-            Note that in the full name, the title has a trailing space and the triler has a preceeding space.
+            Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
             Pre, Root and Post have no spaces."""
         name={'full':''}
 
@@ -89,10 +113,8 @@ class Generator(object):
         if self.redis.exists(key+'trailer'):
             roll=random.randint(1,100)
             if (not self.redis.exists(key+'trailer_chance')) or (roll < int(self.redis.get(key+'trailer_chance'))):
-                #print "trailer set!"
                 name['trailer']=self.rand_value(key+'trailer')
                 name['full']+=' '+name['trailer']
-            #print name['full']
         return name   
 
     def rand_value(self,key):

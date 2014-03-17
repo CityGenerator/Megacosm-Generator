@@ -1,5 +1,4 @@
 
-from noise import snoise2
 import math
 import random
 import json
@@ -13,22 +12,27 @@ class Planet(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
 
-        #self.generate_continents()
-        self.generate_moons()
 
-
-    def generate_continents(self):
+    def add_continents(self):
         """ Generate the continents for this planet"""
-        self.continent_count=random.randint(1,5);
-        self.continent=[]
-        for continentID in xrange(self.continent_count):
-            self.continent.append( Continent(self.redis) )
+        # Ensure that we have a continents array
+        if not hasattr(self, 'continents'):
+            self.continents=[]
+
+        # Ensure that we have a target number of continents
+        if not hasattr(self, 'continentcount'):
+            self.continentcount=random.randint(1,5);
+        # Banzai, er generate continents!
+        for continentID in xrange(self.continentcount):
+            self.continents.append( Continent(self.redis) )
 
 
-
-
-    def generate_moons(self):
+    def add_moons(self):
         """ Generate a list of moons """
-        self.moons=[]
+        if not hasattr(self, 'moons'):
+            self.moons=[]
+
+        # Note that mooncount is a planet stat
+
         for moonId in xrange(self.mooncount['count']):
             self.moons.append(Moon(self.redis ))

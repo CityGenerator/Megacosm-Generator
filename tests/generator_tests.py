@@ -30,7 +30,7 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll(self):
         generator = Generator(self.redis, {'seed':1007, 'star_size_roll':37})
-        self.assertEquals({'text':'average',     'multiplier':1.0}, generator.select_by_roll('star_size'))
+        self.assertEquals({'name':'average',     'multiplier':1.0, u'score': 65}, generator.select_by_roll('star_size'))
 
     def test_select_by_roll_key_doesnt_exist(self):
         generator = Generator(self.redis, {'seed':1007})
@@ -39,9 +39,9 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll_highmin(self):
         generator = Generator(self.redis, {'seed':1007, "starsystem_starcount_roll":1037})
-        self.assertEquals({u'count': 3, u'text': u'trinary star'},generator.select_by_roll('starsystem_starcount'))
+        self.assertEquals({u'count': 3, u'name': u'trinary star',u'score': 100},generator.select_by_roll('starsystem_starcount'))
         generator = Generator(self.redis, {'seed':1007, "starsystem_starcount_roll":-1037})
-        self.assertEquals({u'count': 1, u'text': u'single star'},generator.select_by_roll('starsystem_starcount'))
+        self.assertEquals({u'count': 1, u'name': u'single star',u'score': 70},generator.select_by_roll('starsystem_starcount'))
 
     def test_select_by_roll_key_wrong_type(self):
         generator = Generator(self.redis, {'seed':1007, 'star_size_roll':37})

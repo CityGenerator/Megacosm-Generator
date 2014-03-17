@@ -6,7 +6,7 @@ from mock import MagicMock
 import redis
 import ConfigParser, os
 from util.Seeds import *
-
+import re
 
 config = ConfigParser.RawConfigParser()
 config.read('data/config.ini')
@@ -18,7 +18,7 @@ class TestNPC(unittest.TestCase):
         """  """
         
         self.redis=redis.from_url(url)
-        self.seed=set_seed( 3 )
+        self.seed=set_seed( '3' )
 
     def test_races(self):
         """  """
@@ -42,7 +42,7 @@ class TestNPC(unittest.TestCase):
         """  """
         npc = NPC(self.redis, { 'race':'human'})
         self.assertEqual(npc.race,'human')
-        self.assertEqual(npc.name['full'],'Bob Berling')
+        self.assertRegexpMatches(npc.name['full'], '.+ .+')
 
 if __name__ == '__main__':
     unittest.main()

@@ -4,91 +4,101 @@ import json
 from generators.Generator import Generator
 from generators.NPC import  NPC
 from generators.Sect import  Sect
-from jinja2 import Template
-from jinja2.environment import Environment
-from util import Filters
 
 class Deity(Generator):
+    """ Generate a god for your world"""
     def __init__(self, redis, features={}):
-
         Generator.__init__(self,redis,features)
+        self.generate_avatar()
+        self.generate_favored_stat()
+        self.select_portfolio()
 
-        self.avatar=NPC(redis)
-        self.name=self.avatar.name
-        #print self.__dict__
-        environment = Environment()
-        environment.filters['article'] = Filters.select_article
-        environment.filters['pluralize'] = Filters.select_pluralize
 
+    def generate_favored_stat(self):
+        """ Select a single stat and make that favored by the deity. """
+        # TODO change removal of sex to favoring men or women
         avatarstats=self.avatar.stats
+
+        # removing sex because "Gobo favors sex" just doesn't sound right
         avatarstats.remove('sex')
+
         random.shuffle(avatarstats)
         self.favored_stat=avatarstats.pop()
-        self.select_portfolio()
-        #self.generate_sects()
 
-    def generate_sects(self): 
-        self.sects=[]
+    def generate_avatar(self):
+        """ Many features of a god are determined by their avatar."""
+
+        # Theoretically Deity could be a child class of NPC, but I couldn't make it mesh.
+        self.avatar=NPC(self.redis)
+
+        # Steal the name for simplicity, leave the rest as avatar traits
+        self.name=self.avatar.name
+
+
+    def add_sects(self): #TODO make this more like countries for continents
+        """ each portfolio item except the largest domain can have a sect"""
+        if not hasattr(self, 'sect'):
+            self.sects=[]
+
+        # ignore the primary domain and shuffle the rest
         sectdomains=self.portfolios[1:]
         random.shuffle(sectdomains)
-        sectchance=100
+
+        # Note that the sectchance is inversely proportional to unity-
+        # The more unity, the less chance of fracturing
+        sectchance=100-self.deity_unity_roll
+
+        # give each domain a chance to have a sect, but each success lowers the 
+        # chance for the next one. A fractured church with many domains could
+        # have many different sects.
         for domain in sectdomains:
             if sectchance >= random.randint(1,100): 
                 sect= Sect(self.redis, {'deity':self,'domain':domain})
                 self.sects.append(sect)
                 sectchance=sectchance/2
 
+    
     def select_portfolio(self):
+        """  use the deity's importance to determine how many portfolios it has. """
+
         points=int(self.importance['points'])
+
+        # domains are split up by power level; the more valuable, the higher the power
+        # Values currently include: 16, 8, 6, 5, 4, 3, 2, 1
         powerlevels=self.redis.lrange('portfolio_level',0,-1)
-        self.portfolios=[]
+
+        # Only set this if it's empty.
+        if not hasattr(self, 'portfolios'):
+            self.portfolios=[]
+
+        # Danger, each assigned domain reduces the point count.
         while points>0:
+            # Grab the highest power level available
             powerlevel=int(powerlevels.pop())
-            #print "main loop with",points,"points, powerlevel", powerlevel
+            # Check to make sure this deity has the points to buy at that power level
             if powerlevel <= points:
-                #print "acceptable powerlevel",powerlevel
-                # This level is acceptable, try again next time
+                # shuffle the remaining power levels
+                # insert that power level at the back of the list; chances are we won't need it again.
                 random.shuffle(powerlevels)
                 powerlevels.insert(0,powerlevel)
-                # snag all portfolios for this level
+                
+                # get all the domains at the current powerlevel
                 portfolios=self.redis.zrevrangebyscore('portfolio_domain', powerlevel,powerlevel)
+                #shuffle them in python rather than redis to ensure repeatability.
                 random.shuffle(portfolios)
+                # While we can support this power level, lets use it until we can't.
                 while powerlevel <= points :
-                    newportfolio=json.loads(portfolios.pop())
-                    powerlevel=int(newportfolio['score'])
-                    #print "powerlevel:",powerlevel,"  points:",points
-                    #print "adding ",newportfolio,"to the list"
-                    self.portfolios.append(newportfolio)
-                    points=points- powerlevel
-            else:
-                print "can't support powerlevel",powerlevel,"with",points,"points"
-        #print "final portfolios:",self.portfolios
-        total=0
-        for portfolio in self.portfolios:
-            total+=portfolio['score']
-        #print total
-#TODO move FILTER additions to generator
-#TODO same with template rendering
+                    # pop a new portfolio off the list.
+                    newdomain=json.loads(portfolios.pop())
 
-#cult_acceptance
-#cult_kind
-#deity_age
-#deity_clergytype
-#deity_devotion
-#deity_favored_weapon
-#deity_followerzeal
-#deity_holysymbol
-#deity_holysymbol_type
-#deity_holysymbol_type_chance
-#deity_importance
-#deity_jealousy
-#deityportfolio
-#deity_primarycolor
-#deity_secondarycolor
-#deity_secrecy
-#deity_vow
-#deity_vow_description
-#deity_worship
-#
-#
-#'clergytype': 'abbots' 'jealousy': {u'score': 90 u'name': u'selfish'} 'holysymbol': 'insect' 'vow': 'purity' 'followers': {u'score': 70 u'name': u'wide spread'} 'holysymbol_type': 'shining' 'importance': {u'score': 80 u'name': u'intermediate deity' u'points': 10} 'secrecy': {u'score': 20 u'name': u'tight lipped'} 'name': {'full': ''} 'age': {u'score': 55 u'name': u'antiquated'} 'vow_description': {u'name': u'Purity' u'description': u'avoid contact with dead flesh'} 'primarycolor': 'very dark grey' 'devotion': {u'score': 60 u'name': u'an unknown number of' {'deity_age_roll': 75, 'clergytype': 'clergy', 'deity_jealousy_roll': 58, 'redis': Redis<ConnectionPool<Connection<host=127.0.0.1,port=6379,db=0>>>, 'holysymbol': 'bell', 'vow': 'chastity', 'deity_devotion_roll': 82, 'secondarycolor': 'light red', 'favored_weapon': 'butterfly swords', 'worship': 'supplication', 'jealousy': {u'score': 60, u'name': u'covetous'}, 'deity_secrecy_roll': 92, 'followers': {u'score': 80, u'name': u'everywhere'}, 'importance': {u'score': 50, u'name': u'lesser deity', u'points': 4}, 'deity_importance_roll': 43, 'secrecy': {u'score': 100, u'name': u'open'}, 'deity_holysymbol_type_roll': 43, 'name': {'full': ''}, 'age': {u'score': 75, u'name': u'primordial'}, 'deity_followers_roll': 73, 'seed': 80150, 'vow_description': {u'name': u'Chastity', u'description': u'refrain from marriage and sex'}, 'avatar': <generators.NPC.NPC object at 0x7fa8593d1f90>, 'primarycolor': 'brown', 'devotion': {u'score': 85, u'name': u'hundreds of thousands of'}}
+                    # make sure our powerlevel is still what we expect
+                    powerlevel=int(newdomain['score']) #TODO is this still needed??
+
+                    # append the new domain to our deity's list
+                    self.portfolios.append(newdomain)
+
+                    # subtract our new domain's power level from our available points
+                    points=points- powerlevel
+            #else:
+                #print "can't support powerlevel",powerlevel,"with",points,"points"
+
