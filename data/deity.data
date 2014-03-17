@@ -338,7 +338,7 @@ LPUSH deity_holysymbol_type swinging
 LPUSH deity_holysymbol anchor
 LPUSH deity_holysymbol ankh
 LPUSH deity_holysymbol anvil
-#LPUSH deity_holysymbol apple
+LPUSH deity_holysymbol apple
 LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol bell
 #LPUSH deity_holysymbol bird
