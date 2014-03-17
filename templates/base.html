@@ -56,7 +56,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Generator<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        {% for generator in ['NPC','Business', 'Bond', 'Magic Item', 'Cuisine', 'Rumor', 'Sect', 'Legend','Deity','Star','Moon','Currency' ]%}
+                        {% for generator in ['NPC','Business', 'Bond', 'Magic Item', 'Cuisine', 'Rumor', 'Sect', 'Legend','Deity','Star','Moon','Currency', 'Misfire' ]%}
                             <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
                         {% endfor %}
                         <li class="divider" ></li>
@@ -71,7 +71,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Builder<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        {% for generator in ['NPC', 'Business','Bond', 'Magic Item', 'Cuisine', 'Rumor','Sect', 'Legend','Deity','Star','Moon', 'Currency']%}
+                        {% for generator in ['NPC', 'Business','Bond', 'Magic Item', 'Cuisine', 'Rumor','Sect', 'Legend','Deity','Star','Moon', 'Currency', 'Misfire']%}
                             <li ><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
                         {% endfor %}
 

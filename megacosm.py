@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire
 from util.MakeMap import *
 from util.Seeds import *
 from util import Filters
@@ -208,6 +208,22 @@ def Rumor_Builder():
     paramlist,paramstring,paramset=builder_form_data('rumor')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
+    
+#########################################################################
+
+@app.route('/misfire')
+def GenerateMisfire():
+    """Generate a simple misfire"""
+    features=feature_filter('misfire')
+    misfire=Misfire.Misfire(server,features)
+    return render_template('misfire.html', misfire=misfire )
+
+@app.route('/misfire_builder')
+def Misfire_Builder():
+    """Generate the basic data about a misfire"""
+    paramlist,paramstring,paramset=builder_form_data('misfire')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='misfire') 
     
 #########################################################################
 
