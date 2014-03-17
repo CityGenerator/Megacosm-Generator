@@ -76,7 +76,7 @@
                         {% endfor %}
 
                         <li class="divider" ></li>
-                        {% for generator in [ 'Deity','Encounter', 'Spell Failure', 'Flag', 'Faction']%}
+                        {% for generator in [ 'Encounter', 'Spell Failure', 'Flag', 'Faction']%}
                             <li class="disabled"><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
                         {% endfor %}
 
