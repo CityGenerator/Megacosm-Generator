@@ -356,18 +356,13 @@ LPUSH deity_holysymbol axe
 #LPUSH deity_holysymbol cloud
 #LPUSH deity_holysymbol cog
 #LPUSH deity_holysymbol coin
-
 #LPUSH deity_holysymbol crescent
 #LPUSH deity_holysymbol cross
 #LPUSH deity_holysymbol diamond
-#LPUSH deity_holysymbol door
-#LPUSH deity_holysymbol dragon
 #LPUSH deity_holysymbol drop
-#LPUSH deity_holysymbol duck
-#LPUSH deity_holysymbol eagle
 #LPUSH deity_holysymbol ear
-#LPUSH deity_holysymbol earth
 #LPUSH deity_holysymbol egg
+
 #LPUSH deity_holysymbol eye
 #LPUSH deity_holysymbol feather
 #LPUSH deity_holysymbol fire
@@ -445,6 +440,11 @@ LPUSH deity_holysymbol axe
 
 # Ones I don't wanna draw right now.
 #LPUSH deity_holysymbol cat
+#LPUSH deity_holysymbol door
+#LPUSH deity_holysymbol dragon
+#LPUSH deity_holysymbol duck
+#LPUSH deity_holysymbol eagle
+#LPUSH deity_holysymbol earth
 
     
 #Ganthidon sometimes chooses to appear as a _________ before his followers.
