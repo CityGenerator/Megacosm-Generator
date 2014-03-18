@@ -286,6 +286,7 @@ def GenerateContinent():
     """Generate a simple continent"""
     features=feature_filter('continent')
     continent=Continent.Continent(server,features)
+    continent.add_countries()
     return render_template('continent.html', continent=continent )
 
 
