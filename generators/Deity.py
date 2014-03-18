@@ -47,12 +47,12 @@ class Deity(Generator):
         # Note that the sectchance is inversely proportional to unity-
         # The more unity, the less chance of fracturing
         sectchance=100-self.deity_unity_roll
-
         # give each domain a chance to have a sect, but each success lowers the 
         # chance for the next one. A fractured church with many domains could
         # have many different sects.
         for domain in sectdomains:
-            if sectchance >= random.randint(1,100): 
+            sectroll=random.randint(1,100)
+            if sectchance >= sectroll: 
                 sect= Sect(self.redis, {'deity':self,'domain':domain})
                 self.sects.append(sect)
                 sectchance=sectchance/2

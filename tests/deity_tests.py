@@ -26,11 +26,11 @@ class TestDeity(unittest.TestCase):
 
     def test_deity_sects(self):
         """  """
-        deity = Deity(self.redis, {'deity_unity_roll': 100} )
+        deity = Deity(self.redis, {'deity_unity_roll': 100, 'deity_importance_roll':100} )
         deity.add_sects()
-        self.assertEqual(0,len(deity.sects))
+        self.assertEqual(len(deity.sects),0)
 
-        deity = Deity(self.redis, {'deity_unity_roll': 0} )
+        deity = Deity(self.redis, {'deity_unity_roll': 0, 'deity_importance_roll':100} )
         deity.add_sects()
         self.assertGreaterEqual(len(deity.sects),1)
 
