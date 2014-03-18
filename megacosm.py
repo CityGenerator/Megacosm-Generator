@@ -425,7 +425,10 @@ def builder_form_data(generator):
             result= server.zrangebyscore(key,1,100)
             paramset[fieldname]=[]
             for field in result:
-                paramset[fieldname].append( json.loads(field))
+                try:
+                    paramset[fieldname].append( json.loads(field))
+                except ValueError as e:
+                    raise Exception ("failed to parse",key,"field", field)
     return paramlist,paramstring,paramset
 
 

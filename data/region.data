@@ -35,7 +35,7 @@ ZADD  region_countryapproval    10 { "name":"hate",           "score":10    }
 ZADD  region_countryapproval    15 { "name":"fear",           "score":15    }
 ZADD  region_countryapproval    20 { "name":"ridicule",       "score":20    }
 ZADD  region_countryapproval    25 { "name":"mock",           "score":25    }
-ZADD  region_countryapproval    30 { "name":"respect,         "score":30    }
+ZADD  region_countryapproval    30 { "name":"respect",        "score":30    }
 ZADD  region_countryapproval    80 { "name":"praise",         "score":80    }
 ZADD  region_countryapproval    90 { "name":"honor",          "score":90    }
 ZADD  region_countryapproval    95 { "name":"love",           "score":95    }
