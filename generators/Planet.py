@@ -11,7 +11,7 @@ class Planet(Generator):
 
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
-
+        self.add_moons()
 
     def add_continents(self):
         """ Generate the continents for this planet"""
