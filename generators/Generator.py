@@ -4,6 +4,7 @@ import random
 from jinja2 import Template
 from jinja2.environment import Environment
 from util import Filters
+from util import Seeds
 
 
 
@@ -17,6 +18,13 @@ class Generator(object):
         # We use our class name as a key for redis
         namekey= self.__class__.__name__.lower()
 
+        if 'seed' in features:
+            self.seed=Seeds.set_seed(features['seed'])
+        else:
+            self.seed=Seeds.set_seed()
+
+
+
         # For naming conventions, we use "name"+classname+"stuff"
         self.name=self.generate_name('name'+namekey)
 
@@ -26,8 +34,7 @@ class Generator(object):
             # especially with testing.
             setattr( self, feature, value)
 
-        if not hasattr(self, 'seed'):
-            self.seed=random.randint(1,10000000)
+
 
         # This is the guts of the Generator...
         self.generate_features(namekey)

@@ -26,4 +26,26 @@ The growth of civilization on {{planet.name['full'] }} is considered {{planet.ci
 The average technology level is {{planet.technology['name'] }}, which is known for {{planet.technology['description'] }}.
 
 
+{%if planet.moons%}
+<h2>Moons</h2>
+    <ul>
+    {%for moon in planet.moons %}
+        <li>{{moon.name['full']}} is {{moon.size['name'] |article}} {{moon.color['name']}} moon.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
+
+{%if planet.continents%}
+<h2>continents</h2>
+    <ul>
+    {%for continent in planet.continents %}
+        <li><a href="/continent?seed={{continent.seed}}">{{continent.name['full']}} ({{continent.seed}})</a> is {{continent.size['name'] |article }} continent with {{continent.civilization['name'] }} civilization.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
+
+
+
 {% endblock %}

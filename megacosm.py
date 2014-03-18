@@ -71,7 +71,6 @@ def GenerateNPC():
     emotions=server.lrange('npc_emotion',0,-1);
     for param in request.args :
         if re.match('^npc_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             npcfeatures[param]=int(request.args[param])
         elif re.match('^npc_race$',param) and request.args[param] in races:
             npcfeatures['race']=request.args[param]
@@ -112,13 +111,11 @@ def GenerateBond():
     """Generate a simple bond"""
     seed=set_seed( request.args.get('seed') )
 
-    print "MAH SEED:",seed
 
     bondfeatures={'seed':seed,}
 
     for param in request.args :
         if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             bondfeatures[param]=int(request.args[param])
         elif re.match('^bond_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('bond_template'):
             bondfeatures['template']=server.lrange('bond_template', int(request.args[param]), int(request.args[param]) )[0]
@@ -140,7 +137,6 @@ def Bond_Builder():
     for stat in ['when', 'template']:
         statinfo[stat]=[]
         for statstring in server.lrange('bond_'+stat,0,-1):
-            print "looking at bond_",stat, statstring
             statinfo[stat].append(statstring)
     
     return render_template('bond_builder.html',statinfo=statinfo) 
@@ -159,6 +155,7 @@ def GeneratePlanet():
     """Generate the basic data about a planet"""
     features=feature_filter('planet')
     planet=Planet.Planet(server,features)
+    planet.add_continents()
     return render_template('planet.html', planet=planet )
 
 
@@ -289,6 +286,7 @@ def GenerateContinent():
     """Generate a simple continent"""
     features=feature_filter('continent')
     continent=Continent.Continent(server,features)
+    continent.add_countries()
     return render_template('continent.html', continent=continent )
 
 
@@ -383,11 +381,11 @@ def Deity_Builder():
 
 def feature_filter(generator):
     seed=set_seed( request.args.get('seed') )
-    print "MAH SEED:",seed
+
+    print "MAH SEED:",seed, request.args.get('seed') 
     features={'seed':seed,}
     for param in request.args :
         if re.match('^'+generator+'_[a-z_]+_(roll|chance)$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             features[param]=int(request.args[param])
         elif re.match('^'+generator+'_[a-z_]+$',param) and re.match('^\d{1,10000}$',request.args[param]):
             fieldname= re.sub(generator+'_','', param)
@@ -399,7 +397,6 @@ def builder_form_data(generator):
     paramstring={}
     paramset={}
     for key in server.keys(generator+'_*'):
-        print server.type(key)
         fieldname=key.replace(generator+'_','')
         if server.type(key) == 'list' :
             paramlist[fieldname]=server.lrange(key,0,-1)
@@ -410,7 +407,6 @@ def builder_form_data(generator):
             paramset[fieldname]=[]
             for field in result:
                 paramset[fieldname].append( json.loads(field))
-            print paramset[fieldname]
     return paramlist,paramstring,paramset
 
 
