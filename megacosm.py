@@ -107,24 +107,6 @@ def NPC_Builder():
 
 #########################################################################
 
-@app.route('/planet_builder')
-def Planet_Builder():
-    """Generate the basic data about a planet"""
-    paramlist,paramstring,paramset=builder_form_data('planet')
-
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='planet') 
-
-
-@app.route('/planet')
-def GeneratePlanet():
-    """Generate the basic data about a planet"""
-    features=feature_filter('planet')
-    planet=Planet.Planet(server,features)
-    return render_template('planet.html', planet=planet )
-
-
-#########################################################################
-
 @app.route('/bond')
 def GenerateBond():
     """Generate a simple bond"""
@@ -162,6 +144,23 @@ def Bond_Builder():
             statinfo[stat].append(statstring)
     
     return render_template('bond_builder.html',statinfo=statinfo) 
+
+#########################################################################
+@app.route('/planet_builder')
+def Planet_Builder():
+    """Generate the basic data about a planet"""
+    paramlist,paramstring,paramset=builder_form_data('planet')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='planet') 
+
+
+@app.route('/planet')
+def GeneratePlanet():
+    """Generate the basic data about a planet"""
+    features=feature_filter('planet')
+    planet=Planet.Planet(server,features)
+    return render_template('planet.html', planet=planet )
+
 
 #########################################################################
 
@@ -242,7 +241,7 @@ def GenerateBusiness():
 @app.route('/business_builder')
 def Business_Builder():
     """Generate the basic data about a business"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
+
     paramlist,paramstring,paramset=builder_form_data('business')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='business') 
     
@@ -260,7 +259,6 @@ def GenerateMoon():
 @app.route('/moon_builder')
 def Moon_Builder():
     """Generate the basic data about a moon"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('moon')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='moon') 
     
@@ -279,7 +277,6 @@ def GenerateStar():
 @app.route('/star_builder')
 def Star_Builder():
     """Generate the basic data about a star"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('star')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='star') 
     
@@ -298,7 +295,6 @@ def GenerateContinent():
 @app.route('/continent_builder')
 def Continent_Builder():
     """Generate the basic data about a continent"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('continent')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='continent') 
     
@@ -336,7 +332,6 @@ def GenerateCountry():
 @app.route('/country_builder')
 def Country_Builder():
     """Generate the basic data about a country"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('country')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='country') 
 
@@ -354,7 +349,6 @@ def GenerateCuisine():
 @app.route('/cuisine_builder')
 def Cuisine_Builder():
     """Generate the basic data about a cuisine"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('cuisine')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='cuisine') 
     

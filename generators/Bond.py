@@ -44,7 +44,7 @@ class Bond(Generator):
             self.text=self.render_template(self.template) 
 
         #final sentence is stored as self.text.
-        # note the need for capitalization of the first character?
+        # note the need for capitalization of the first character
         self.text=self.text[0].capitalize()+self.text[1:]
             
 

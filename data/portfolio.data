@@ -1035,4 +1035,5 @@ LPUSH portfolio_level  4
 LPUSH portfolio_level  3
 LPUSH portfolio_level  2
 LPUSH portfolio_level  1
-# TODO switch this to a stat
+
+#TODO consider changing naming convention since portfolio is not a generator.
