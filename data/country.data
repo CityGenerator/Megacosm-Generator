@@ -266,3 +266,9 @@ LPUSH country_maintained through the acclaim of the nobles
 LPUSH country_maintained by unwavering supporters
 LPUSH country_maintained through the support of merchant groups
 
+ZADD country_regiondetails 10  {"name":"a single",     "score":10,  "mincount":1,   "maxcount":1   }
+ZADD country_regiondetails 20  {"name":"a couple",     "score":20,  "mincount":2,   "maxcount":2   }
+ZADD country_regiondetails 90  {"name":"several",      "score":90,  "mincount":3,   "maxcount":6   }
+ZADD country_regiondetails 95  {"name":"many",         "score":95,  "mincount":6,   "maxcount":11  }
+ZADD country_regiondetails 100 {"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }
+

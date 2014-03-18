@@ -40,7 +40,7 @@ The average technology level is {{planet.technology['name'] }}, which is known f
 <h2>continents</h2>
     <ul>
     {%for continent in planet.continents %}
-        <li><a href="/continent?seed={{continent.seed}}">{{continent.name['full']}} ({{continent.seed}})</a> is {{continent.size['name'] |article }} continent with {{continent.civilization['name'] }} civilization.</li>
+        <li><a href="/continent?seed={{continent.seed}}&planet_seed={{continent.planet.seed}}">{{continent.name['full']}} ({{continent.seed}})</a> is {{continent.size['name'] |article }} continent with {{continent.civilization['name'] }} civilization.</li>
     {%endfor%}
     </ul>
 
