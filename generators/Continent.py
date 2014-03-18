@@ -21,5 +21,5 @@ class Continent(Generator):
         if not hasattr(self, 'countries'):
             self.countries=[]
         for countryid in xrange(self.countrycount):
-            self.countries.append( Country(self.redis ) )
+            self.countries.append( Country(self.redis, {'continent':self} ) )
         

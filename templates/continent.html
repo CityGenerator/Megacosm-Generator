@@ -21,7 +21,7 @@
 
     <ul>
     {%for country in continent.countries %}
-        <li><a href="/country?seed={{country.seed}}">{{country.name['full']}} ({{country.seed}})</a> is {{country.age['name']|article}} {{country.size['name']}} country.</li>
+        <li><a href="/country?seed={{country.seed}}&continent_seed={{country.continent.seed}}">{{country.name['full']}} ({{country.seed}})</a> is {{country.age['name']|article}} {{country.size['name']}} country.</li>
     {%endfor%}
     </ul>
 

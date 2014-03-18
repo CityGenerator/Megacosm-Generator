@@ -2,7 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
 from util.Seeds import *
 from util import Filters
 import random
@@ -298,6 +298,24 @@ def Continent_Builder():
     
 #########################################################################
 
+@app.route('/region')
+def GenerateRegion():
+    """Generate a simple region"""
+    features=feature_filter('region')
+    region=Region.Region(server,features)
+#    region.add_cities()
+#    region.add_locations()()
+    return render_template('region.html', region=region )
+
+
+@app.route('/region_builder')
+def Region_Builder():
+    """Generate the basic data about a region"""
+    paramlist,paramstring,paramset=builder_form_data('region')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='region') 
+    
+#########################################################################
+
 @app.route('/sect')
 def GenerateSect():
     """Generate a simple sect"""
@@ -324,6 +342,7 @@ def GenerateCountry():
     """Generate a simple country"""
     features=feature_filter('country')
     country=Country.Country(server,features)
+    country.add_regions()
     return render_template('country.html', country=country )
 
 

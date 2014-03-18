@@ -4,7 +4,7 @@ import math
 import random
 import json
 from generators.Generator import Generator
-#from Region import Region
+from Region import Region
 
 import pprint
 
@@ -12,12 +12,13 @@ class Country(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
 
+        if not hasattr(self, 'regioncount'):
+            self.regioncount=random.randint(self.regiondetails['mincount'], self.regiondetails['maxcount'])
         
-# TODO start a separate fork for regions and enable this with the new class
-#    def add_regions(self):
-#        """ add regions to the country"""
-#        if not hasattr(self, 'regions'):
-#            self.regions=[]
-#        for regionid in xrange(self.regioncount):
-#            self.region.append( Region(self.redis ) )
+    def add_regions(self):
+        """ add regions to the country"""
+        if not hasattr(self, 'regions'):
+            self.regions=[]
+        for regionid in xrange(self.regioncount):
+            self.regions.append( Region(self.redis,{'country':self } ) )
         

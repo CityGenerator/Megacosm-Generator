@@ -24,7 +24,7 @@ class Planet(Generator):
             self.continentcount=random.randint(1,5);
         # Banzai, er generate continents!
         for continentID in xrange(self.continentcount):
-            self.continents.append( Continent(self.redis) )
+            self.continents.append( Continent(self.redis, {'planet':self}) )
 
 
     def add_moons(self):

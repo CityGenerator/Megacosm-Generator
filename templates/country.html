@@ -26,6 +26,18 @@ Other nations see {{country.name['full']}} as {{country.military['name']}}.
 Socially, {{country.name['full']}} is {{country.social['name']}} and {{country.economic['name']}}.
 The right to govern was granted by {{country.right}} and that power is maintained {{country.maintained}}.
 </p>
+{% if country.regions  %}
+    <h2>Regions</h2>
+
+    The country has {{country.regiondetails['name']}} known {{ 'region'|pluralize( country.regions|length)}}.
+
+    <ul>
+    {%for region in country.regions %}
+        <li><a href="/region?seed={{region.seed}}&countries_seed={{region.country.seed}}">{{region.name['full']}} ({{region.seed}})</a> is {{region.size['name']|article}} region.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
 
 
 {% endblock %}

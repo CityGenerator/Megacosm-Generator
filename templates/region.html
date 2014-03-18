@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to the Region of {{region.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Welcome to the Region <a href="/region?seed={{region.seed}}">{{region.name['full']}} ({{region.seed}})</a></h1>
+
+    <h2>Summary</h2>
+
+{{region.name['full'] }} is {{region.size['name'] |article }} region.
+
+
+{% if region.cities  %}
+    <h2>Cities</h2>
+
+    The region has {{region.citydetails['name']}} known {{ 'city'|pluralize( region.cities|length)}}.
+
+    <ul>
+    {%for city in region.cities %}
+        <li><a href="/city?seed={{city.seed}}">{{city.name['full']}} ({{city.seed}})</a> is {{city.age['name']|article}} {{city.size['name']}} city.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
+{% endblock %}
