@@ -449,6 +449,21 @@ def builder_form_data(generator):
                     raise Exception ("failed to parse",key,"field", field)
     return paramlist,paramstring,paramset
 
+@app.route('/flag')
+def GenerateFlag():
+    """Generate a flag"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    flagfeatures={'seed':seed,}
+    for param in request.args :
+        if re.match('^flag_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            flagfeatures[param]=int(request.args[param])
+
+    flag=Flag.Flag(server, flagfeatures)
+    return render_template('flag.html',flag=flag) 
 
 @app.errorhandler(404)
 def page_not_found(e):
