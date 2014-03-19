@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}{{wanted.title}} {% endblock %}
+{% block title %} {{wanted.title}} {{wanted.npc.name['full'] }}, wanted for {{wanted.crime}}. {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
