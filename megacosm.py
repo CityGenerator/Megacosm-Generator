@@ -3,6 +3,7 @@
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
+from generators import Wanted
 from util.Seeds import *
 from util import Filters
 import random
@@ -335,6 +336,23 @@ def Sect_Builder():
 
 
     
+#########################################################################
+
+@app.route('/wanted')
+def GenerateWanted():
+    """Generate a simple wanted"""
+    features=feature_filter('wanted')
+    wanted=Wanted.Wanted(server,features)
+    return render_template('wanted.html', wanted=wanted )
+
+
+@app.route('/wanted_builder')
+def Wanted_Builder():
+    """Generate the basic data about a wanted"""
+    paramlist,paramstring,paramset=builder_form_data('wanted')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='wanted') 
+
+
 #########################################################################
 
 @app.route('/country')
