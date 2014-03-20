@@ -1,32 +1,32 @@
 
 LPUSH naturalresource_kind harvest
 
-set naturalresource_harvest_name_type daily
-set naturalresource_harvest_name_type yearly
-set naturalresource_harvest_name_type seasonal
+LPUSH naturalresource_harvest_name_type daily
+LPUSH naturalresource_harvest_name_type yearly
+LPUSH naturalresource_harvest_name_type seasonal
 
 # Lala Land is know for it's
-set naturalresource_harvest_name harvest
+LPUSH naturalresource_harvest_name harvest
 
 # which provides
-set naturalresource_harvest_product live reptiles
-set naturalresource_harvest_product live serpents
-set naturalresource_harvest_product live lizards
-set naturalresource_harvest_product live whales
-set naturalresource_harvest_product live baby seals
-set naturalresource_harvest_product live pandas
-set naturalresource_harvest_product live kittens
-set naturalresource_harvest_product live puppies
-set naturalresource_harvest_product live polar bears
-set naturalresource_harvest_product live dragons
-set naturalresource_harvest_product live crabs
-set naturalresource_harvest_product live crayfish
-set naturalresource_harvest_product live finfish
-set naturalresource_harvest_product live lobsters
-set naturalresource_harvest_product live octopi
-set naturalresource_harvest_product fresh pearls
-set naturalresource_harvest_product fresh rubber
-set naturalresource_harvest_product live shrimp
-set naturalresource_harvest_product live squid
-set naturalresource_harvest_product live spiny lobster
+LPUSH naturalresource_harvest_product live reptiles
+LPUSH naturalresource_harvest_product live serpents
+LPUSH naturalresource_harvest_product live lizards
+LPUSH naturalresource_harvest_product live whales
+LPUSH naturalresource_harvest_product live baby seals
+LPUSH naturalresource_harvest_product live pandas
+LPUSH naturalresource_harvest_product live kittens
+LPUSH naturalresource_harvest_product live puppies
+LPUSH naturalresource_harvest_product live polar bears
+LPUSH naturalresource_harvest_product live dragons
+LPUSH naturalresource_harvest_product live crabs
+LPUSH naturalresource_harvest_product live crayfish
+LPUSH naturalresource_harvest_product live finfish
+LPUSH naturalresource_harvest_product live lobsters
+LPUSH naturalresource_harvest_product live octopi
+LPUSH naturalresource_harvest_product fresh pearls
+LPUSH naturalresource_harvest_product fresh rubber
+LPUSH naturalresource_harvest_product live shrimp
+LPUSH naturalresource_harvest_product live squid
+LPUSH naturalresource_harvest_product live spiny lobster
 

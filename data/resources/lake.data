@@ -1,15 +1,15 @@
 
 LPUSH naturalresource_kind lake
 
-set naturalresource_lake_name_type freshwater
-set naturalresource_lake_name_type saltwater
+LPUSH naturalresource_lake_name_type freshwater
+LPUSH naturalresource_lake_name_type saltwater
 # Lala Land is know for it's
-set naturalresource_lake_name lake
-set naturalresource_lake_name waterway
+LPUSH naturalresource_lake_name lake
+LPUSH naturalresource_lake_name waterway
 
 
 # which provides
-set naturalresource_lake_product sport fishing
-set naturalresource_lake_product fish
-set naturalresource_lake_product tourism
+LPUSH naturalresource_lake_product sport fishing
+LPUSH naturalresource_lake_product fish
+LPUSH naturalresource_lake_product tourism
 
