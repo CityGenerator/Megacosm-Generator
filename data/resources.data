@@ -1,0 +1,225 @@
+
+#ubiquity - Where can you find it? anywhere? just here?
+# This resource is _________ to this particular region,
+ZADD resource_ubiquity  50 {  "name":"very specific",      "score":50        }
+ZADD resource_ubiquity 100 {  "name":"not specific",       "score":100       }
+    
+#Utility -  Level of Usefulness; Wool sweaters are not as useful in the tropics.
+# which many consider ____________.
+ZADD resource_utility   50 {  "name":"useless",         "score":50       }
+ZADD resource_utility  100 {  "name":"useful",          "score":100      }
+
+#Value- what do people consider this? (can be recalulated rather than randomly selected)
+# slippers are often seen as a _______ resource.
+ZADD resource_value   50 {  "name":"worthless",         "score":50       }
+ZADD resource_value  100 {  "name":"valuable",          "score":100      }
+
+#Competition -  How available is the resource for the region? the country? is this place the sole supplier? Is there a trade war?
+#Competition in the frog market is ____
+ZADD resource_competition   50 {  "name":"negligible",         "score":50       }
+ZADD resource_competition  100 {  "name":"fierce",             "score":100      }
+
+#Renewable   - Is the resource renewable? will it run out?
+#Frogs are a ____ resource,
+ZADD resource_renewable   50 {  "name":"non-renewable",         "score":50       }
+ZADD resource_renewable  100 {  "name":"renewable",             "score":100      }
+
+#Management - Is any effort being put in place to artificially control the production?
+# And are ________ managed
+ZADD resource_management   50 {  "name":"poorly",         "score":50       }
+ZADD resource_management  100 {  "name":"well",           "score":100      }
+       
+# Depletion -  the amount of stuff left
+# The deep mines are ___________.
+ZADD resource_depletion   50 {  "name":"nearly-empty",         "score":50       }
+ZADD resource_depletion  100 {  "name":"bountiful",           "score":100      }
+
+# export region -  where does it get exported
+# the fruit crops are exported  ___________.
+ZADD resource_exportregion  50 {  "name":"to neighboring cities",         "score":50       }
+ZADD resource_exportregion 100 {  "name":"across the continent",           "score":100      }
+
+LPUSH resource_kind natural
+LPUSH resource_kind labor
+
+
+
+<resources>
+    <resource type="beaches">
+        <title>pristine</title>
+        <title>plentiful</title>
+        <title>ruined</title>
+        <title>stoney</title>
+        <title>rocky</title>
+        <title>wreckage strewn</title>
+        <title>narrow</title>
+        <title></title>
+        <root>yellow</root>
+        <root>red</root>
+        <root>white</root>
+        <root>black</root>
+        <root></root>
+        <trailer>sandy beaches</trailer>
+    </resource>
+    <resource type="wildlife">
+        <title>wild</title>
+        <title>dangerous</title>
+        <title>tame</title>
+        <title></title>
+        <root>carnivorous</root>
+        <root>poisonous</root>
+        <root>timid</root>
+        <root>woodland</root>
+        <root>aquatic</root>
+        <root>marine</root>
+        <root></root>
+        <trailer>wildlife</trailer>
+        <trailer>caterpillar</trailer>
+        <trailer>spiders</trailer>
+    </resource>
+
+
+    <resource type='herd animals'>
+        <title>daily</title>
+        <title>yearly</title>
+        <title>seasonal</title>
+        <root>cattle</root>
+        <root>goat</root>
+        <root>sheep</root>
+        <root>baby seal</root>
+        <root>llama</root>
+        <root>horse</root>
+        <root>pig</root>
+        <root>alligator</root>
+        <root>bison</root>
+        <root>deer</root>
+        <root>furry giraffe</root>
+        <root>kangaroo</root>
+        <trailer>herds</trailer>
+    </resource>
+
+    <resource type="locales">
+        <title></title>
+        <title>nearby</title>
+        <title>renowned</title>
+        <title>famous</title>
+        <title>amazing</title>
+        <root>glaciers</root>
+        <root>deepwater harbors</root>
+        <root>freshwater lakes</root>
+        <root>saltwater lakes</root>
+        <root>bays</root>
+        <root>beaches</root>
+        <root>forests</root>
+        <root>waterfalls</root>
+        <root>volcanoes</root>
+        <root>icebergs</root>
+        <root>costal areas</root>
+        <root>freshwater marshes</root>
+        <root>saltwater marshes</root>
+        <root>agricultural lands</root>
+        <root>arable lands</root>
+        <root>grazing lands</root>
+        <root>mineral springs</root>
+        <root>geothermal vents</root>
+        <root>deepwater ports</root>
+        <root>tar sands</root>
+        <root>coral reefs</root>
+    </resource>
+
+    <resource type="professionals">
+        <root>cheesemakers</root>
+        <root>beekeepers</root>
+        <root>bookmakers</root>
+        <root>weavers</root>
+        <root>smiths</root>
+        <root>whalers</root>
+        <root>fishers</root>
+        <root>loggers</root>
+        <root>artists</root>
+        <root>alchemists</root>
+        <root>apothecaries</root>
+        <root>armorers</root>
+        <root>bounty hunters</root>
+        <root>bakers</root>
+        <root>blacksmiths</root>
+        <root>brewers</root>
+        <root>brothels</root>
+        <root>chandlers</root>
+        <root>church</root>
+        <root>cobblers</root>
+        <root>engineers</root>
+        <root>entertainers</root>
+        <root>glassblowers</root>
+        <root>healers</root>
+        <root>laborers</root>
+        <root>leatherworkers</root>
+        <root>library</root>
+        <root>lumbermill</root>
+        <root>masons</root>
+        <root>merchants</root>
+        <root>millers</root>
+        <root>physicians</root>
+        <root>potters</root>
+        <root>sages</root>
+        <root>scribes</root>
+        <root>specialty smiths</root>
+        <root>tailors</root>
+        <root>temples</root>
+        <root>vintners</root>
+        <root>weaponsmiths</root>
+        <root>weaver</root>
+        <root>woodworkers</root>
+    </resource>
+
+    <resource type="product">
+        <title>exceptional</title>
+        <title>decorative</title>
+        <title>expensive</title>
+        <title>cheap</title>
+
+        <root>marbles</root>
+        <root>pottery</root>
+        <root>construction materials</root>
+        <root>petroleum jelly</root>
+        <root>palm oils</root>
+        <root>wax</root>
+        <root>mineral water</root>
+        <root>coffins</root>
+        <root>boxes</root>
+        <root>barrels</root>
+        <root>torches</root>
+        <root>wheels</root>
+        <root>flutes</root>
+        <root>drums</root>
+        <root>dolls</root>
+        <root>codpieces</root>
+        <root>chasity belts</root>
+        <root>iron maidens</root>
+        <root>penis sheathes</root>
+        <root>kitten mittens</root>
+        <root>monkey wrenches</root>
+        <root>small lyres</root>
+        <root>small bits of string</root>
+        <root>rocks</root>
+        <root>carrier pigeons</root>
+        <root>courtesans</root>
+        <root>singing frogs</root>
+        <root>horney toads</root>
+        <root>knives</root>
+        <root>swords</root>
+        <root>axes</root>
+        <root>maces</root>
+        <root>bows</root>
+        <root>saws</root>
+        <root>picks</root>
+        <root>shovels</root>
+        <root>clubs</root>
+        <root>dreamcatchers</root>
+        <root>poems</root>
+        <root>quilts</root>
+        <root>beer</root>
+        <root>wine</root>
+        <root>spirits</root>
+    </resource>
+</resources>

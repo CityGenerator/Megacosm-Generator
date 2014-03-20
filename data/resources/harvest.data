@@ -1,0 +1,32 @@
+
+LPUSH naturalresource_kind harvest
+
+set naturalresource_harvest_name_type daily
+set naturalresource_harvest_name_type yearly
+set naturalresource_harvest_name_type seasonal
+
+# Lala Land is know for it's
+set naturalresource_harvest_name harvest
+
+# which provides
+set naturalresource_harvest_product live reptiles
+set naturalresource_harvest_product live serpents
+set naturalresource_harvest_product live lizards
+set naturalresource_harvest_product live whales
+set naturalresource_harvest_product live baby seals
+set naturalresource_harvest_product live pandas
+set naturalresource_harvest_product live kittens
+set naturalresource_harvest_product live puppies
+set naturalresource_harvest_product live polar bears
+set naturalresource_harvest_product live dragons
+set naturalresource_harvest_product live crabs
+set naturalresource_harvest_product live crayfish
+set naturalresource_harvest_product live finfish
+set naturalresource_harvest_product live lobsters
+set naturalresource_harvest_product live octopi
+set naturalresource_harvest_product fresh pearls
+set naturalresource_harvest_product fresh rubber
+set naturalresource_harvest_product live shrimp
+set naturalresource_harvest_product live squid
+set naturalresource_harvest_product live spiny lobster
+

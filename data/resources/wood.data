@@ -1,0 +1,48 @@
+
+LPUSH naturalresource_kind forests
+
+set naturalresource_forests_name_type deep
+set naturalresource_forests_name_type replanted
+set naturalresource_forests_name_type ancient
+set naturalresource_forests_name_type haunted
+set naturalresource_forests_name_type creepy
+
+# Lala Land is know for it's
+set naturalresource_forests_name forest
+set naturalresource_forests_name jungle
+
+# which provides
+
+set naturalresource_forests_product lumber
+
+set naturalresource_forests_product ash 
+set naturalresource_forests_product banyon wood
+set naturalresource_forests_product black locust wood
+set naturalresource_forests_product buckeye wood
+set naturalresource_forests_product cedar wood
+set naturalresource_forests_product chokeberry wood
+set naturalresource_forests_product cinnamon bark
+set naturalresource_forests_product cork wood
+set naturalresource_forests_product cottonwood
+set naturalresource_forests_product crabapple wood
+set naturalresource_forests_product cypress
+set naturalresource_forests_product eucalyptus
+set naturalresource_forests_product hardwood
+set naturalresource_forests_product hickory
+set naturalresource_forests_product holly
+set naturalresource_forests_product ironwood
+set naturalresource_forests_product magnolia
+set naturalresource_forests_product mahogany
+set naturalresource_forests_product miro
+set naturalresource_forests_product oak
+set naturalresource_forests_product pine
+set naturalresource_forests_product rare wood
+set naturalresource_forests_product redbud
+set naturalresource_forests_product redwood
+set naturalresource_forests_product softwood
+set naturalresource_forests_product walnut
+set naturalresource_forests_product willow
+set naturalresource_forests_product witchhazel
+
+set naturalresource_forests_product coffee beans
+set naturalresource_forests_product various fruits

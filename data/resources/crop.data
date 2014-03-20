@@ -1,0 +1,44 @@
+
+LPUSH naturalresource_kind crop
+
+set naturalresource_crop_name_type wild
+set naturalresource_crop_name_type irrigated
+
+# Lala Land is know for it's
+set naturalresource_crop_name crop
+set naturalresource_crop_name field
+set naturalresource_crop_name plantation
+
+
+
+
+
+# which provides
+set naturalresource_crop_product cocoa beans
+set naturalresource_crop_product basil
+set naturalresource_crop_product carrots
+set naturalresource_crop_product catnip
+set naturalresource_crop_product cauliflower
+set naturalresource_crop_product celery
+set naturalresource_crop_product fruits
+set naturalresource_crop_product garlic
+set naturalresource_crop_product okra
+set naturalresource_crop_product parsley
+set naturalresource_crop_product peanuts
+set naturalresource_crop_product peas
+set naturalresource_crop_product rye
+set naturalresource_crop_product squash
+set naturalresource_crop_product zucchini
+set naturalresource_crop_product brussels sprouts
+set naturalresource_crop_product cotton
+set naturalresource_crop_product coconuts
+set naturalresource_crop_product grains
+set naturalresource_crop_product oats
+set naturalresource_crop_product pumice
+set naturalresource_crop_product rice
+set naturalresource_crop_product sugarcane
+set naturalresource_crop_product sunflower
+set naturalresource_crop_product fruits
+set naturalresource_crop_product vegetables
+
+
