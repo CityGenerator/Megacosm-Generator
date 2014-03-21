@@ -1,0 +1,24 @@
+LPUSH naturalresource_kind quarry
+# Lala Land is know for it's _________
+LPUSH naturalresource_quarry_name_type narrow
+LPUSH naturalresource_quarry_name_type wide
+LPUSH naturalresource_quarry_name_type deep
+LPUSH naturalresource_quarry_name_type shallow
+
+LPUSH naturalresource_quarry_name quarries
+#which ________ stuff
+SET naturalresource_quarry_method  provides
+
+# which provides
+LPUSH naturalresource_quarry_product gravel
+LPUSH naturalresource_quarry_product granite
+LPUSH naturalresource_quarry_product gravel and sand
+LPUSH naturalresource_quarry_product building stone
+LPUSH naturalresource_quarry_product limestone
+LPUSH naturalresource_quarry_product marble
+LPUSH naturalresource_quarry_product slate
+LPUSH naturalresource_quarry_product petroleum
+LPUSH naturalresource_quarry_product napitha
+LPUSH naturalresource_quarry_product oil
+
+

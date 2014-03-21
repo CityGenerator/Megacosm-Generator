@@ -4,6 +4,7 @@
 from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
 from generators import Wanted
+from generators import Resource
 from util.Seeds import *
 from util import Filters
 import random
@@ -128,7 +129,7 @@ def GenerateBond():
 
     bond=Bond.Bond(server,bondfeatures)
 
-    return render_template('bond.html', bond=bond )
+    return render_template('oneliner.html', oneliner=bond,titletext='The Ties that Bind Us... ', generator='bond' )
 
 @app.route('/bond_builder')
 def Bond_Builder():
@@ -162,12 +163,28 @@ def GeneratePlanet():
 
 #########################################################################
 
+@app.route('/resource')
+def GenerateResource():
+    """Generate a simple resource"""
+    features=feature_filter('resource')
+    resource=Resource.Resource(server,features)
+    return render_template('oneliner.html', oneliner=resource,titletext='At your disposal...', generator='resource' )
+
+@app.route('/resource_builder')
+def Resource_Builder():
+    """Generate the basic data about a resource"""
+    paramlist,paramstring,paramset=builder_form_data('resource')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='resource') 
+    
+#########################################################################
+
 @app.route('/rumor')
 def GenerateRumor():
     """Generate a simple rumor"""
     features=feature_filter('rumor')
     rumor=Rumor.Rumor(server,features)
-    return render_template('rumor.html', rumor=rumor )
+    return render_template('oneliner.html', oneliner=rumor,titletext='Did you hear?', generator='rumor' )
 
 @app.route('/rumor_builder')
 def Rumor_Builder():
@@ -183,7 +200,7 @@ def GenerateMisfire():
     """Generate a simple misfire"""
     features=feature_filter('misfire')
     misfire=Misfire.Misfire(server,features)
-    return render_template('misfire.html', misfire=misfire )
+    return render_template('oneliner.html', oneliner=misfire,titletext='My spell misfired!', generator='misfire' )
 
 @app.route('/misfire_builder')
 def Misfire_Builder():
@@ -200,7 +217,7 @@ def GenerateCurrency():
     """Generate a simple currency"""
     features=feature_filter('currency')
     currency=Currency.Currency(server,features)
-    return render_template('currency.html', currency=currency )
+    return render_template('oneliner.html', oneliner=currency ,titletext='Spare Some Change? ', generator='currency' )
 
 @app.route('/currency_builder')
 def Currency_Builder():
@@ -217,7 +234,7 @@ def GenerateLegend():
     """Generate a simple legend"""
     features=feature_filter('legend')
     legend=Legend.Legend(server,features)
-    return render_template('legend.html', legend=legend )
+    return render_template('oneliner.html', oneliner=legend ,titletext='Let me tell you a story...', generator='legend' )
 
 @app.route('/legend_builder')
 def Legend_Builder():
