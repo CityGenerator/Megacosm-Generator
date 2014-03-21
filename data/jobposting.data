@@ -1,0 +1,287 @@
+
+
+
+SET jobposting_request_chance 30
+LPUSH jobposting_request Help Needed:
+LPUSH jobposting_request Needed:
+LPUSH jobposting_request Help Wanted:
+LPUSH jobposting_request Wanted:
+LPUSH jobposting_request Help!
+LPUSH jobposting_request Required:
+    
+SET jobposting_hook_chance 30
+LPUSH jobposting_hook Looking for work?
+LPUSH jobposting_hook Looking for something new?
+LPUSH jobposting_hook Bored?
+LPUSH jobposting_hook Need a change of pace?
+LPUSH jobposting_hook Want to earn some quick coin?
+    
+SET jobposting_payment_chance 30
+LPUSH jobposting_payment Reward available. 
+LPUSH jobposting_payment Reward is a priceless heirloom. 
+LPUSH jobposting_payment Will pay in gold. 
+LPUSH jobposting_payment Reward is a secret. 
+LPUSH jobposting_payment Will reward you with valuable information. 
+LPUSH jobposting_payment Will reward you with a land deed. 
+LPUSH jobposting_payment Opportunity to earn a title. 
+LPUSH jobposting_payment Will owe you a huge favor. 
+    
+LPUSH jobposting_duration few hours
+LPUSH jobposting_duration day
+LPUSH jobposting_duration few days
+LPUSH jobposting_duration week
+LPUSH jobposting_duration few weeks
+    
+SET jobposting_requirement_chance 30
+LPUSH jobposting_requirement Prior experience required.
+LPUSH jobposting_requirement No previous experience required.
+LPUSH jobposting_requirement Must provide your own transportation.
+LPUSH jobposting_requirement Serious inquiries only.
+LPUSH jobposting_requirement Experienced professionals only.
+LPUSH jobposting_requirement References required.
+LPUSH jobposting_requirement Must submit to magical scrutiny.
+LPUSH jobposting_requirement Must submit to background check.
+LPUSH jobposting_requirement Guild membership required.
+LPUSH jobposting_requirement Accidental Death insurance required.
+LPUSH jobposting_requirement Discretion required.
+LPUSH jobposting_requirement Must be a quick learner.
+LPUSH jobposting_requirement Must be quick on your feet.
+LPUSH jobposting_requirement Must be clean.
+LPUSH jobposting_requirement Must not smell.
+LPUSH jobposting_requirement Special attire required.
+    
+SET jobposting_disclaimer_chance 30
+LPUSH jobposting_disclaimer May include some hazards.
+LPUSH jobposting_disclaimer Mild danger may be involved.
+LPUSH jobposting_disclaimer No pay until task is completed successfully.
+LPUSH jobposting_disclaimer A little danger is involved, so expect hazardous duty pay.
+LPUSH jobposting_disclaimer Length of job expected to be short.
+LPUSH jobposting_disclaimer Safety not guaranteed.
+    
+SET jobposting_detail_chance 30
+LPUSH jobposting_detail for more details
+LPUSH jobposting_detail for more information
+LPUSH jobposting_detail to learn more
+LPUSH jobposting_detail if interested
+LPUSH jobposting_detail if intrigued
+LPUSH jobposting_detail for further details
+    
+LPUSH jobposting_critter squirrels
+LPUSH jobposting_critter rats
+LPUSH jobposting_critter stirge
+LPUSH jobposting_critter carniverous butterflies
+LPUSH jobposting_critter rabbits
+LPUSH jobposting_critter gremlins
+LPUSH jobposting_critter giant spiders
+LPUSH jobposting_critter imps
+LPUSH jobposting_critter bats
+LPUSH jobposting_critter toads
+LPUSH jobposting_critter brain moles
+LPUSH jobposting_critter feral cats
+LPUSH jobposting_critter grigs
+LPUSH jobposting_critter homuncului
+LPUSH jobposting_critter lizards
+LPUSH jobposting_critter quazits
+LPUSH jobposting_critter mephits
+LPUSH jobposting_critter cockatrices
+LPUSH jobposting_critter darkmantles
+LPUSH jobposting_critter derros
+LPUSH jobposting_critter beaky brain monsters
+LPUSH jobposting_critter rust rats
+    
+LPUSH jobposting_skill drinking
+LPUSH jobposting_skill sewing
+LPUSH jobposting_skill boxing
+LPUSH jobposting_skill archery
+LPUSH jobposting_skill hotdog eating
+LPUSH jobposting_skill onion eating
+LPUSH jobposting_skill cooking
+LPUSH jobposting_skill brawling
+LPUSH jobposting_skill lock picking
+LPUSH jobposting_skill arm wrestling
+LPUSH jobposting_skill co-ed mud-wrestling
+LPUSH jobposting_skill caber-tossing
+LPUSH jobposting_skill carriage racing
+LPUSH jobposting_skill gnomish battle dancing
+LPUSH jobposting_skill ultimate fighting
+LPUSH jobposting_skill seed spitting
+LPUSH jobposting_skill pig wrestling
+LPUSH jobposting_skill sharpshooting
+LPUSH jobposting_skill woodcutting
+LPUSH jobposting_skill gator wrasslin'
+LPUSH jobposting_skill wood carving
+LPUSH jobposting_skill goblin wranglin'
+        
+LPUSH jobposting_item shoe
+LPUSH jobposting_item statue
+LPUSH jobposting_item artifact
+LPUSH jobposting_item painting
+LPUSH jobposting_item shovel
+LPUSH jobposting_item key
+LPUSH jobposting_item lucky stone
+LPUSH jobposting_item potato
+LPUSH jobposting_item bottle of wine
+LPUSH jobposting_item valuables
+LPUSH jobposting_item goat
+LPUSH jobposting_item peg leg
+LPUSH jobposting_item keg
+LPUSH jobposting_item jewel
+LPUSH jobposting_item ring of wishes
+LPUSH jobposting_item cerimonial knife
+LPUSH jobposting_item tomatoes
+LPUSH jobposting_item puppy
+LPUSH jobposting_item family heirloom
+LPUSH jobposting_item holy symbol
+LPUSH jobposting_item magic candle
+LPUSH jobposting_item relic
+LPUSH jobposting_item chalice
+LPUSH jobposting_item wagon wheel
+LPUSH jobposting_item golden skill
+LPUSH jobposting_item gemstone
+LPUSH jobposting_item bracelet
+LPUSH jobposting_item tiara
+LPUSH jobposting_item ring of Cerobleh
+    
+LPUSH jobposting_testitem saddle
+LPUSH jobposting_testitem cheese
+LPUSH jobposting_testitem dungeon goop
+LPUSH jobposting_testitem unknown potion
+LPUSH jobposting_testitem whiskey
+LPUSH jobposting_testitem wine
+LPUSH jobposting_testitem grog
+LPUSH jobposting_testitem artifact
+LPUSH jobposting_testitem non-lethal poison
+LPUSH jobposting_testitem armor
+LPUSH jobposting_testitem tincure
+LPUSH jobposting_testitem taste
+    
+LPUSH jobposting_supplies certain supplies
+LPUSH jobposting_supplies medical supplies
+LPUSH jobposting_supplies rare lichen
+LPUSH jobposting_supplies certain herbs
+LPUSH jobposting_supplies eye of newt
+LPUSH jobposting_supplies owlbear beak
+LPUSH jobposting_supplies fresh paper
+LPUSH jobposting_supplies hydra blood
+LPUSH jobposting_supplies a rat tail
+    
+LPUSH jobposting_subject math
+LPUSH jobposting_subject local lore
+LPUSH jobposting_subject herbalism
+LPUSH jobposting_subject alchemy
+LPUSH jobposting_subject astrology
+LPUSH jobposting_subject morbid obesity research
+LPUSH jobposting_subject self defense
+LPUSH jobposting_subject sorcery
+LPUSH jobposting_subject horseback riding
+LPUSH jobposting_subject juggling
+
+#TODO more
+LPUSH jobposting_class warrior
+LPUSH jobposting_class wizard
+    
+#    REQUEST HOOK TEMPLATE. REQUIREMENT DISCLAIMER Contact CONTACT at LOCATION DETAILS 
+LPUSH jobposting_template Bounty for {{params.critter}}, dead or alive.
+LPUSH jobposting_template {{params.skill}} contest this weekend. Special prize for first place finish.
+LPUSH jobposting_template {{params.npc.name['full']}} has been kidnapped! Generous payment for safe return.
+LPUSH jobposting_template Adventurers willing to explore recently discovered ruins and return any valuable artifacts.
+LPUSH jobposting_template Hearty souls needed to recover stolen {{params.item}}.
+LPUSH jobposting_template Someone stole my {{params.item}}. Find the louse, dead or alive.
+LPUSH jobposting_template Missing {{params.item}}. We suspect {{params.critter}} are the culprit.
+LPUSH jobposting_template I'm looking for rare {{params.critter}}, both live and dead. I have a list of the ones I need.
+LPUSH jobposting_template Scholar seeks rare supplies: Scholar unable to gather {{params.supplies}} due to age, seeks trustworthy agents to gather materials for research.
+LPUSH jobposting_template {{params.critter}}-catcher needed to keep the beasties away from the sheep and cattle.
+LPUSH jobposting_template Lockpick needed for totally legitimate reasons.
+LPUSH jobposting_template A passing {{params.class}} is needed for a small security job on the 3rd of the month.
+LPUSH jobposting_template Seeking inter-planar messenger.
+LPUSH jobposting_template World-famous {{params.class}} seeks apprentice.
+LPUSH jobposting_template Seasonal farm hands requested to help local farms bring in their harvest.
+LPUSH jobposting_template I'm looking for a Negotiator. Prior experience with troublesome {{params.critter}} required.
+LPUSH jobposting_template I'm looking for a Transcriber. Need expert to translate runes.
+LPUSH jobposting_template Require an instructor learned in {{params.subject}} to tutor my child.
+LPUSH jobposting_template I'm looking for investigator to look into someone's references.
+LPUSH jobposting_template Laborer required to bring stones to the castle. Wagon provided.
+LPUSH jobposting_template Merchant seeks caravan master, cartographer, navigator, and experienced mercenaries for trade expedition.
+LPUSH jobposting_template {{params.testitem}} tester wanted.
+LPUSH jobposting_template Mercenaries wanted for caravan protection.
+LPUSH jobposting_template I have {{params.critter}} in my basement, plz halp!
+LPUSH jobposting_template Accidentally lit your {{params.valuedpossession}} on fire? You just might be {{params.magicuser|article}}! Douse the {{params.valuedpossession}} and get help from Professionals! 
+LPUSH jobposting_template {{params.hazardlocation}} is overrun by {{params.critter}} please send help!
+LPUSH jobposting_template Missing {{params.item}}. We suspect {{params.critter}} are the culprit.
+LPUSH jobposting_template Translator Needed: Summoner seeks multilinguist willing to learn {{params.rarelanguage}} from "a guest"; fluency required within 2 weeks.
+
+LPUSH jobposting_template Uncle {{params.npc.name['firstname']}} needs {{params.favor|article}}.
+
+LPUSH jobposting_favor delivery
+LPUSH jobposting_favor favor
+LPUSH jobposting_favor specific item
+LPUSH jobposting_favor friend
+LPUSH jobposting_favor companion or two
+LPUSH jobposting_favor alibi
+
+LPUSH jobposting_magicuser sorcerer
+LPUSH jobposting_magicuser wizard
+LPUSH jobposting_magicuser mage-in-training
+LPUSH jobposting_magicuser witch/warlock
+LPUSH jobposting_magicuser evoker
+LPUSH jobposting_magicuser magician
+
+LPUSH jobposting_valuedpossession cat
+LPUSH jobposting_valuedpossession spouse
+LPUSH jobposting_valuedpossession house
+LPUSH jobposting_valuedpossession wagon
+LPUSH jobposting_valuedpossession field
+LPUSH jobposting_valuedpossession book
+
+LPUSH jobposting_hazardlocation my basement
+LPUSH jobposting_hazardlocation my attic
+LPUSH jobposting_hazardlocation my business
+LPUSH jobposting_hazardlocation my shop
+LPUSH jobposting_hazardlocation a cave outside town
+LPUSH jobposting_hazardlocation an abandoned building
+LPUSH jobposting_hazardlocation the abanoned temple outside of town
+
+LPUSH jobposting_rarelanguage abyssal
+LPUSH jobposting_rarelanguage aquan
+LPUSH jobposting_rarelanguage auran
+LPUSH jobposting_rarelanguage celestial
+LPUSH jobposting_rarelanguage demonic
+LPUSH jobposting_rarelanguage diabolan
+LPUSH jobposting_rarelanguage draconic
+LPUSH jobposting_rarelanguage drow sign language
+LPUSH jobposting_rarelanguage druidic (secret language)
+LPUSH jobposting_rarelanguage dwarven
+LPUSH jobposting_rarelanguage elven
+LPUSH jobposting_rarelanguage feline
+LPUSH jobposting_rarelanguage giant
+LPUSH jobposting_rarelanguage gnoll
+LPUSH jobposting_rarelanguage gnomish
+LPUSH jobposting_rarelanguage goblin
+LPUSH jobposting_rarelanguage grimlock
+LPUSH jobposting_rarelanguage ignan
+LPUSH jobposting_rarelanguage infernal
+LPUSH jobposting_rarelanguage kuo-toa
+LPUSH jobposting_rarelanguage mongrel
+LPUSH jobposting_rarelanguage orcish
+LPUSH jobposting_rarelanguage sahuagin
+LPUSH jobposting_rarelanguage slaad
+LPUSH jobposting_rarelanguage sphinx
+LPUSH jobposting_rarelanguage sylvan
+LPUSH jobposting_rarelanguage terran
+LPUSH jobposting_rarelanguage treant
+LPUSH jobposting_rarelanguage undercommon
+LPUSH jobposting_rarelanguage worg
+LPUSH jobposting_rarelanguage xeph
+LPUSH jobposting_rarelanguage yuan-ti
+
+
+
+#* $GROUP is looking for new members!
+#* Unsolved $CRIME, please help us find justice!
+#* $MONSTER have been attacking merchants on the road to $LOCATION. Adventurers wanted to take on these fiends! $CONTACT
+#* $TRIBE to the south is becoming a larger menace each month. People are getting robbed and even killed. The city guard is seeking able-bodied warriors, fighters and hunters to eliminate this threat to our lives. $CONTACT
+#* hav yu seen my kitty his names is flufy and is blak with a wite spot on his fase ~ Timmy
+#* [Local Kingdom] needs YOU! Good pay, good training, and all past crimes will be wiped. Conscript now!
+#-->
+    
+

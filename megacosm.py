@@ -6,6 +6,7 @@ from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Cont
 from generators import Wanted
 from generators import Resource
 from generators import Event
+from generators import JobPosting
 from util.Seeds import *
 from util import Filters
 import random
@@ -226,6 +227,23 @@ def Currency_Builder():
     paramlist,paramstring,paramset=builder_form_data('currency')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='currency') 
+    
+#########################################################################
+
+@app.route('/jobposting')
+def GenerateJobPosting():
+    """Generate a simple jobposting"""
+    features=feature_filter('jobposting')
+    jobposting=JobPosting.JobPosting(server,features)
+    return render_template('oneliner.html', oneliner=jobposting ,titletext='Help Wanted!', generator='jobposting' )
+
+@app.route('/jobposting_builder')
+def JobPosting_Builder():
+    """Generate the basic data about a jobposting"""
+    paramlist,paramstring,paramset=builder_form_data('jobposting')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='jobposting') 
+    
     
 #########################################################################
 
