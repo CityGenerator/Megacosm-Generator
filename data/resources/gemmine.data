@@ -7,6 +7,9 @@ LPUSH naturalresource_gemmines_name_type shallow
 LPUSH naturalresource_gemmines_name gem mines
 LPUSH naturalresource_gemmines_name gem deposits
  
+
+#which ________ diamonds
+SET naturalresource_gemmines_method provides
  
 # which provides
 LPUSH naturalresource_gemmines_product diamonds

@@ -7,7 +7,9 @@ LPUSH naturalresource_oremines_name_type shallow
 LPUSH naturalresource_oremines_name mines
 LPUSH naturalresource_oremines_name deposits
 LPUSH naturalresource_oremines_name ore deposits
- 
+
+#which ________ stuff
+SET naturalresource_oremines_method produce
  
 # which provides
 LPUSH naturalresource_oremines_product copper ore

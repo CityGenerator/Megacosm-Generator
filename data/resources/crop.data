@@ -11,6 +11,8 @@ LPUSH naturalresource_crop_name plantation
 
 
 
+#which ________ basil
+SET naturalresource_crop_method grows
 
 
 # which provides

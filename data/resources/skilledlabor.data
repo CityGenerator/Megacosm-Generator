@@ -8,6 +8,9 @@ LPUSH laborresource_skilledlabor_name_type uniquely
 # Lalabor is know for it's
 LPUSH laborresource_skilledlabor_name skilled labor
 
+#which ________ stuff
+SET laborresource_skilledlabor_method produces
+
 # which provides
 
 LPUSH laborresource_skilledlabor_product exquisite cheeses

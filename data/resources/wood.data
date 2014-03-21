@@ -11,6 +11,10 @@ LPUSH naturalresource_forests_name_type creepy
 LPUSH naturalresource_forests_name forest
 LPUSH naturalresource_forests_name jungle
 
+
+#which ________ stuff
+SET naturalresource_forests_method harvests
+
 # which provides
 
 LPUSH naturalresource_forests_product lumber

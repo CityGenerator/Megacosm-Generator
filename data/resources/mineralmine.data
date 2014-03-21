@@ -6,6 +6,9 @@ LPUSH naturalresource_mineralmines_name_type shallow
 LPUSH naturalresource_mineralmines_name mineral mines
 LPUSH naturalresource_mineralmines_name mineral deposits
 
+#which ________ stuff
+SET naturalresource_mineralmines_method includes
+
 
 # which provides
 LPUSH naturalresource_mineralmines_product gravel

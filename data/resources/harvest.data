@@ -8,6 +8,9 @@ LPUSH naturalresource_harvest_name_type seasonal
 # Lala Land is know for it's
 LPUSH naturalresource_harvest_name harvest
 
+#which ________ bears
+SET naturalresource_harvest_method captures
+
 # which provides
 LPUSH naturalresource_harvest_product live reptiles
 LPUSH naturalresource_harvest_product live serpents

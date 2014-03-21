@@ -7,6 +7,9 @@ LPUSH naturalresource_lake_name_type saltwater
 LPUSH naturalresource_lake_name lake
 LPUSH naturalresource_lake_name waterway
 
+#which ________ fish
+SET naturalresource_lake_method provides
+
 
 # which provides
 LPUSH naturalresource_lake_product sport fishing

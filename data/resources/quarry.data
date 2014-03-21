@@ -6,7 +6,8 @@ LPUSH naturalresource_quarry_name_type deep
 LPUSH naturalresource_quarry_name_type shallow
 
 LPUSH naturalresource_quarry_name quarries
-
+#which ________ stuff
+SET naturalresource_quarry_method  provides
 
 # which provides
 LPUSH naturalresource_quarry_product gravel
