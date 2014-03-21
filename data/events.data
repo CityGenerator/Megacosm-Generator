@@ -1,49 +1,72 @@
 
+
+#Magnitude - How important is this event?
+# The event is _________ to the people in the area.
+ZADD event_magnitude   0 {  "name":"negligible",                    "score":0        }
+ZADD event_magnitude   5 {  "name":"trivial",                       "score":5        }
+ZADD event_magnitude  10 {  "name":"unimportant",                   "score":10       }
+ZADD event_magnitude  15 {  "name":"of minor importance",           "score":15       }
+ZADD event_magnitude  20 {  "name":"of lesser concern",             "score":20       }
+ZADD event_magnitude  25 {  "name":"of casual interest",            "score":25       }
+ZADD event_magnitude  40 {  "name":"relevant",                      "score":40       }
+ZADD event_magnitude  45 {  "name":"of some importance",            "score":45       }
+ZADD event_magnitude  50 {  "name":"of some concern",               "score":50       }
+ZADD event_magnitude  55 {  "name":"worthy of consideration",       "score":55       }
+ZADD event_magnitude  70 {  "name":"important",                     "score":70       }
+ZADD event_magnitude  75 {  "name":"of significant import",         "score":75       }
+ZADD event_magnitude  80 {  "name":"of considerable importance",    "score":80       }
+ZADD event_magnitude  85 {  "name":"of major concern",              "score":85       }
+ZADD event_magnitude  90 {  "name":"of great significance",         "score":90       }
+ZADD event_magnitude  95 {  "name":"of critical concern",           "score":95       }
+ZADD event_magnitude 100 {  "name":"of dire importance",            "score":100      }
+
+
 LPUSH event_kind festival
-LPUSH eventfestival_kind a religious
-LPUSH eventfestival_kind a trade
+LPUSH eventfestival_variety a religious
+LPUSH eventfestival_variety a trade
+
    
 LPUSH event_kind celebration
-LPUSH eventcelebration_kind a birthday
-LPUSH eventcelebration_kind a wedding
-LPUSH eventcelebration_kind a new year
-LPUSH eventcelebration_kind a holiday
-LPUSH eventcelebration_kind a victory
-LPUSH eventcelebration_kind a spontaneous
+LPUSH eventcelebration_variety a birthday
+LPUSH eventcelebration_variety a wedding
+LPUSH eventcelebration_variety a new year
+LPUSH eventcelebration_variety a holiday
+LPUSH eventcelebration_variety a victory
+LPUSH eventcelebration_variety a spontaneous
    
 LPUSH event_kind trial
-LPUSH eventtrial_kind a murder
-LPUSH eventtrial_kind a witch
-LPUSH eventtrial_kind a spy
-LPUSH eventtrial_kind a briggand
-LPUSH eventtrial_kind a thief
+LPUSH eventtrial_variety a murder
+LPUSH eventtrial_variety a witch
+LPUSH eventtrial_variety a spy
+LPUSH eventtrial_variety a briggand
+LPUSH eventtrial_variety a thief
    
 LPUSH event_kind war
-LPUSH eventwar_kind preparations for
-LPUSH eventwar_kind on ongoing
-LPUSH eventwar_kind the aftermath of a
+LPUSH eventwar_variety preparations for
+LPUSH eventwar_variety on ongoing
+LPUSH eventwar_variety the aftermath of a
    
 LPUSH event_kind raid
-LPUSH eventraid_kind the midst of a
-LPUSH eventraid_kind the aftermath of a
+LPUSH eventraid_variety the midst of a
+LPUSH eventraid_variety the aftermath of a
    
 LPUSH event_kind hunt
-LPUSH eventhunt_kind lost child
-LPUSH eventhunt_kind wandering monster
-LPUSH eventhunt_kind escaped prisoner
-LPUSH eventhunt_kind food
-LPUSH eventhunt_kind vermin
+LPUSH eventhunt_variety lost child
+LPUSH eventhunt_variety wandering monster
+LPUSH eventhunt_variety escaped prisoner
+LPUSH eventhunt_variety food
+LPUSH eventhunt_variety vermin
    
 LPUSH event_kind disaster
-LPUSH eventdisaster_kind tornado
-LPUSH eventdisaster_kind flood
-LPUSH eventdisaster_kind earthquake
-LPUSH eventdisaster_kind massive storm
-LPUSH eventdisaster_kind tarrasque
-LPUSH eventdisaster_kind genocide
-LPUSH eventdisaster_kind riots
-LPUSH eventdisaster_kind drought
-LPUSH eventdisaster_kind crop failure
+LPUSH eventdisaster_variety tornado
+LPUSH eventdisaster_variety flood
+LPUSH eventdisaster_variety earthquake
+LPUSH eventdisaster_variety massive storm
+LPUSH eventdisaster_variety tarrasque
+LPUSH eventdisaster_variety genocide
+LPUSH eventdisaster_variety riots
+LPUSH eventdisaster_variety drought
+LPUSH eventdisaster_variety crop failure
    
 
 
