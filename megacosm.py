@@ -5,6 +5,7 @@ from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
 from generators import Wanted
 from generators import Resource
+from generators import Event
 from util.Seeds import *
 from util import Filters
 import random
@@ -225,6 +226,24 @@ def Currency_Builder():
     paramlist,paramstring,paramset=builder_form_data('currency')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='currency') 
+    
+#########################################################################
+
+
+@app.route('/event')
+def GenerateEvent():
+    """Generate a simple event"""
+    features=feature_filter('event')
+    event=Event.Event(server,features)
+    return render_template('oneliner.html', oneliner=event ,titletext='Look over there...', generator='event' )
+
+@app.route('/event_builder')
+def Event_Builder():
+    """Generate the basic data about a event"""
+    paramlist,paramstring,paramset=builder_form_data('event')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='event') 
+    
     
 #########################################################################
 
