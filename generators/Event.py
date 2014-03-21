@@ -17,7 +17,6 @@ class Event(Generator):
         self.generate_features('event'+self.kind )
 
         if not hasattr(self,'text'):
-            self.template="{{params.variety }} {{params.kind}}, which is {{params.magnitude['name']}} to the people in the area."
             self.text=self.render_template(self.template)
             self.text=self.render_template(self.text)
         self.text=self.text[0].capitalize()+self.text[1:]

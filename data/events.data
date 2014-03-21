@@ -1,5 +1,8 @@
 
 
+SET event_template {{params.variety }} {{params.kind}}, which is {{params.magnitude['name']}} to the people in the area.
+
+
 #Magnitude - How important is this event?
 # The event is _________ to the people in the area.
 ZADD event_magnitude   0 {  "name":"negligible",                    "score":0        }
