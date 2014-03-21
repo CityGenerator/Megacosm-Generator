@@ -1,0 +1,49 @@
+
+LPUSH event_kind festival
+LPUSH eventfestival_kind a religious
+LPUSH eventfestival_kind a trade
+   
+LPUSH event_kind celebration
+LPUSH eventcelebration_kind a birthday
+LPUSH eventcelebration_kind a wedding
+LPUSH eventcelebration_kind a new year
+LPUSH eventcelebration_kind a holiday
+LPUSH eventcelebration_kind a victory
+LPUSH eventcelebration_kind a spontaneous
+   
+LPUSH event_kind trial
+LPUSH eventtrial_kind a murder
+LPUSH eventtrial_kind a witch
+LPUSH eventtrial_kind a spy
+LPUSH eventtrial_kind a briggand
+LPUSH eventtrial_kind a thief
+   
+LPUSH event_kind war
+LPUSH eventwar_kind preparations for
+LPUSH eventwar_kind on ongoing
+LPUSH eventwar_kind the aftermath of a
+   
+LPUSH event_kind raid
+LPUSH eventraid_kind the midst of a
+LPUSH eventraid_kind the aftermath of a
+   
+LPUSH event_kind hunt
+LPUSH eventhunt_kind lost child
+LPUSH eventhunt_kind wandering monster
+LPUSH eventhunt_kind escaped prisoner
+LPUSH eventhunt_kind food
+LPUSH eventhunt_kind vermin
+   
+LPUSH event_kind disaster
+LPUSH eventdisaster_kind tornado
+LPUSH eventdisaster_kind flood
+LPUSH eventdisaster_kind earthquake
+LPUSH eventdisaster_kind massive storm
+LPUSH eventdisaster_kind tarrasque
+LPUSH eventdisaster_kind genocide
+LPUSH eventdisaster_kind riots
+LPUSH eventdisaster_kind drought
+LPUSH eventdisaster_kind crop failure
+   
+
+
