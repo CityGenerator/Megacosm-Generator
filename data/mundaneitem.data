@@ -105,37 +105,21 @@ LPUSH mundaneitem_kind wooden holy symbol
 #abacus
 #academic tome
 #adjustable wrench
-#adrenaline shot
 #adventurer's kit, standard
-#agaric spores
-#ahlspiess
 #air bladder
-#air elemental evolution pellet
 #alchemist's alchohol
-#alkali
-#aluminum
+#aluminum tube
 #animal call
 #ankh staff
 #anvil
-#aphrodisiac
-#apprentice's book of cantrips
 #apron, leather work
-#arbalest, heavy
-#arbalest, light
-#arcane amber material)
-#arcane magnification armour upgrade
 #arctic camouflage
-#armitars
 #armor care kit
-#arquebus, heavy
-#arquebus, light
 #ascender
 #assassin's friend
 #axle auger ranseur
-#baby of wonder
 #backpack frame, metal
 #backpack, leather
-#bag of halflings
 #ball and chain
 #ball, rubber
 #bamboo
@@ -146,17 +130,13 @@ LPUSH mundaneitem_kind wooden holy symbol
 #barbed wire
 #bardiche
 #barrel
-#bashaak
 #basket-hilt broadsword
 #basket, large
 #basket, small
 #bat'leth
 #battle book
 #battlehammer
-#battle-musket, heavy
-#battle-musket, light
 #battle scythe
-#bazooka
 #bead dispenser tube, large, metal
 #bead dispenser tube, small, metal
 #bead, glass, scored
@@ -168,35 +148,25 @@ LPUSH mundaneitem_kind wooden holy symbol
 #belly bow
 #belt
 #belt, money
-#beta lance
-#bidenhander
-#bikini armor template
 #bird cage
 #blackbark wine
 #black egg
-#black metals template
 #blackwater ale
-#bladebow
 #blanket, heavy
-#blasting kit
 #block & tackle
 #blood berry
-#blood drinker
-#blood metal
 #blood moss
 #blouse, cotton
 #blouse, silk
+
 #blowgun
 #body sleigh
 #body suit, silk
 #bolt cutters
-#boltgun
-#bolt magazine
 #bone joint straps
 #book/journal, blank
 #book of animal handling
 #book of skill
-#boomer™s bile
 #boots, climbing
 #boots, high, hard
 #boots, high, soft
@@ -204,8 +174,6 @@ LPUSH mundaneitem_kind wooden holy symbol
 #boots, low, hard
 #boots, low, soft
 #boots, ski
-#bow gun, heavy
-#bow gun, light
 #bowstring
 #box, metal, padded, airtight
 #box, small, gold
@@ -213,14 +181,11 @@ LPUSH mundaneitem_kind wooden holy symbol
 #branding iron
 #brandistock
 #brazier, adjustable height
-#bread spawn meat
-#bright crystal
 #broadaxe, dwarven
 #bronze
 #bronze piece
 #broom
 #broom, small, wisk
-#brown moss pellet
 #brush and comb set, hardwood
 #brush and comb set, silver
 #brush machete
@@ -230,7 +195,6 @@ LPUSH mundaneitem_kind wooden holy symbol
 #bucket
 #buster sword
 #butcher axe
-#cachin
 #cage, collapsible, bamboo
 #cage, collapsible, brass
 #caltrops
@@ -248,13 +212,11 @@ LPUSH mundaneitem_kind wooden holy symbol
 #cape
 #cape, heavy fur
 #carabiner
-#carbine, lever-action repeating
 #cards, playing
 #cards, tarot
 #case, bolt, wooden
 #case, dart, wooden
 #cask
-#cat launcher
 #cauldron
 #cavalry saber
 #ceremonial robes
@@ -271,18 +233,14 @@ LPUSH mundaneitem_kind wooden holy symbol
 #chest, wooden, large
 #chest, wooden, medium
 #chest, wooden, small
-#chigiriki
 #chime, small
 #chisel, heavy
-#chocobo greens
-#chocobo nuts
 #clay/beeswax block
 #climbing harness
 #climbing irons
 #clip
 #cloak
 #cloak, thieves
-#clockwork apocrypha
 #cloth, common
 #cloth, fine
 #cloth, rich
@@ -305,15 +263,15 @@ LPUSH mundaneitem_kind wooden holy symbol
 #compass, hand
 #compass, ships
 #conch poison
-#concrete
-#conjetium
 #cook book
 #cork
 #corkscrew
-#corrusium
 #corrusium sand
 #crampons
 #crook
+
+
+
 #crossbow, alchemal
 #crossbow, clockwork
 #crossbow, double barreled
