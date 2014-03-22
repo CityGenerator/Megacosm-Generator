@@ -135,13 +135,6 @@ LPUSH bus_armorsmithy_managerclass warrior
 LPUSH bus_armorsmithy_managerclass fighter
 
 LPUSH bus_armorsmithy_service service
-LPUSH bus_armorsmithy_service armor
-LPUSH bus_armorsmithy_service shields
-LPUSH bus_armorsmithy_service grieves
-LPUSH bus_armorsmithy_service pauldrons
-LPUSH bus_armorsmithy_service breastplates
-LPUSH bus_armorsmithy_service bracers
-LPUSH bus_armorsmithy_service gauntlets
 
 LPUSH bus_armorsmithy_trailer group
 LPUSH bus_armorsmithy_trailer amory
@@ -166,7 +159,7 @@ LPUSH bus_astrologer_managerclass expert
 LPUSH bus_astrologer_managerclass adept
 
 LPUSH bus_astrologer_service service
-LPUSH bus_astrologer_service horoscope
+LPUSH bus_astrologer_service horoscopes
 LPUSH bus_astrologer_service birth charts
 
 LPUSH bus_astrologer_trailer star gazers
@@ -275,8 +268,8 @@ LPUSH bus_barrack_managerclass fighter
 LPUSH bus_barrack_managerclass paladin
 
 LPUSH bus_barrack_service service
-LPUSH bus_barrack_service bed
-LPUSH bus_barrack_service bunk
+LPUSH bus_barrack_service beds
+LPUSH bus_barrack_service bunks
 
 LPUSH bus_barrack_trailer guard house
 LPUSH bus_barrack_trailer city guard
@@ -301,8 +294,6 @@ LPUSH bus_barrister_managerclass expert
 LPUSH bus_barrister_managerclass aristocrat
 
 LPUSH bus_barrister_service service
-LPUSH bus_barrister_service representation in court
-LPUSH bus_barrister_service building a case
 
 LPUSH bus_barrister_trailer house of law
 LPUSH bus_barrister_trailer and associates
@@ -330,7 +321,7 @@ LPUSH bus_bathhouse_service service
 LPUSH bus_bathhouse_service baths
 
 LPUSH bus_bathhouse_trailer bath house
-LPUSH bus_bathhouse_trailer inpirationsl waters
+LPUSH bus_bathhouse_trailer inspirational waters
 
 LPUSH bus_bathhouse_smell soap and flowers
 
@@ -353,6 +344,7 @@ LPUSH bus_beerseller_managerclass commoner
 
 LPUSH bus_beerseller_service service
 LPUSH bus_beerseller_service beer
+LPUSH bus_beerseller_service brews
 
 LPUSH bus_beerseller_trailer tap house
 LPUSH bus_beerseller_trailer ale house
@@ -415,6 +407,7 @@ LPUSH bus_bookstore_managerclass expert
 
 LPUSH bus_bookstore_service service
 LPUSH bus_bookstore_service books
+LPUSH bus_bookstore_service tomes
 
 LPUSH bus_bookstore_trailer fine books
 LPUSH bus_bookstore_trailer book smith
@@ -510,6 +503,7 @@ LPUSH bus_bucklery_managerclass commoner
 LPUSH bus_bucklery_managerclass expert
 
 LPUSH bus_bucklery_service service
+LPUSH bus_bucklery_service buckles
 
 LPUSH bus_bucklery_trailer our motto is the buckle stops here
 
@@ -555,6 +549,7 @@ LPUSH bus_cartwright_service axle replacements
 LPUSH bus_cartwright_service carts
 LPUSH bus_cartwright_service wheel repairs
 LPUSH bus_cartwright_service wheel replacements
+LPUSH bus_cartwright_service wheels
 
 LPUSH bus_cartwright_trailer shop
 LPUSH bus_cartwright_trailer wainwright
@@ -573,6 +568,7 @@ LPUSH bus_chandleryshop_managerclass commoner
 LPUSH bus_chandleryshop_managerclass expert
 
 LPUSH bus_chandleryshop_service service
+LPUSH bus_chandleryshop_service candles
 
 LPUSH bus_chandleryshop_trailer supplies
 
@@ -589,6 +585,11 @@ LPUSH bus_cheeseshop_managerclass commoner
 LPUSH bus_cheeseshop_managerclass expert
 
 LPUSH bus_cheeseshop_service service
+LPUSH bus_cheeseshop_service cheese
+LPUSH bus_cheeseshop_service brie
+LPUSH bus_cheeseshop_service bleu
+LPUSH bus_cheeseshop_service cheddar
+LPUSH bus_cheeseshop_service cheese wheels
 
 LPUSH bus_cheeseshop_trailer shoppe
 
@@ -709,8 +710,8 @@ LPUSH bus_cobbler_managerclass expert
 LPUSH bus_cobbler_service work
 LPUSH bus_cobbler_service goods
 LPUSH bus_cobbler_service new soles
-LPUSH bus_cobbler_service a softer insole
-LPUSH bus_cobbler_service repairing footwear
+LPUSH bus_cobbler_service softer insoles
+LPUSH bus_cobbler_service repairs
 
 LPUSH bus_cobbler_trailer shoppe
 LPUSH bus_cobbler_trailer shop
@@ -738,6 +739,10 @@ LPUSH bus_cooperage_managerclass commoner
 LPUSH bus_cooperage_managerclass expert
 
 LPUSH bus_cooperage_service service
+LPUSH bus_cooperage_service barrels
+LPUSH bus_cooperage_service buckets
+LPUSH bus_cooperage_service casks
+LPUSH bus_cooperage_service butter churns
 
 LPUSH bus_cooperage_trailer barrels
 LPUSH bus_cooperage_trailer coop hoop
@@ -755,6 +760,7 @@ LPUSH bus_copyoffice_managerclass commoner
 LPUSH bus_copyoffice_managerclass expert
 
 LPUSH bus_copyoffice_service service
+LPUSH bus_copyoffice_service copies
 
 LPUSH bus_copyoffice_trailer scribe
 LPUSH bus_copyoffice_trailer shop
@@ -772,6 +778,9 @@ LPUSH bus_cutlery_managerclass commoner
 LPUSH bus_cutlery_managerclass expert
 
 LPUSH bus_cutlery_service service
+LPUSH bus_cutlery_service spoons
+LPUSH bus_cutlery_service knives
+LPUSH bus_cutlery_service forks
 
 LPUSH bus_cutlery_trailer chop house
 LPUSH bus_cutlery_trailer fine forks
@@ -829,6 +838,7 @@ LPUSH bus_fishery_managerclass commoner
 LPUSH bus_fishery_managerclass expert
 
 LPUSH bus_fishery_service service
+LPUSH bus_fishery_service fish
 
 LPUSH bus_fishery_trailer fish camp
 LPUSH bus_fishery_trailer fish house
@@ -851,6 +861,8 @@ LPUSH bus_furtrade_managerclass expert
 LPUSH bus_furtrade_managerclass ranger
 
 LPUSH bus_furtrade_service service
+LPUSH bus_furtrade_service pelts
+LPUSH bus_furtrade_service furs
 
 LPUSH bus_furtrade_trailer furs
 
@@ -867,6 +879,7 @@ LPUSH bus_generalstore_managerclass commoner
 LPUSH bus_generalstore_managerclass expert
 
 LPUSH bus_generalstore_service service
+LPUSH bus_generalstore_service goods
 
 LPUSH bus_generalstore_trailer general store
 LPUSH bus_generalstore_trailer general merchandise
@@ -885,6 +898,8 @@ LPUSH bus_glassmaker_managerclass commoner
 LPUSH bus_glassmaker_managerclass expert
 
 LPUSH bus_glassmaker_service service
+LPUSH bus_glassmaker_service glass
+LPUSH bus_glassmaker_service ornaments
 
 LPUSH bus_glassmaker_trailer blowers
 LPUSH bus_glassmaker_trailer glass crafters
@@ -908,6 +923,7 @@ LPUSH bus_gloveshop_managerclass commoner
 LPUSH bus_gloveshop_managerclass expert
 
 LPUSH bus_gloveshop_service service
+LPUSH bus_gloveshop_service gloves
 
 LPUSH bus_gloveshop_trailer gloves
 LPUSH bus_gloveshop_trailer glove makers
@@ -928,26 +944,30 @@ LPUSH bus_graveyard_managerclass expert
 LPUSH bus_graveyard_managerclass cleric
 
 LPUSH bus_graveyard_service service
+LPUSH bus_graveyard_service plots
+LPUSH bus_graveyard_service grave sites
 
 LPUSH bus_graveyard_trailer grave diggers
 LPUSH bus_graveyard_trailer night smiths
 
 ########################################################
-LPUSH business_kind bus_groverystore
-SET   bus_groverystore_kindname grocery store
-SET   bus_groverystore_perbuilding 10
+LPUSH business_kind bus_grocerystore
+SET   bus_grocerystore_kindname grocery store
+SET   bus_grocerystore_perbuilding 10
 
-SET   bus_groverystore_maxfloors 1
-SET   bus_groverystore_district market
-LPUSH bus_groverystore_manager grocer
+SET   bus_grocerystore_maxfloors 1
+SET   bus_grocerystore_district market
+LPUSH bus_grocerystore_manager grocer
 
-LPUSH bus_groverystore_managerclass commoner
-LPUSH bus_groverystore_managerclass expert
+LPUSH bus_grocerystore_managerclass commoner
+LPUSH bus_grocerystore_managerclass expert
 
-LPUSH bus_groverystore_service service
+LPUSH bus_grocerystore_service service
+LPUSH bus_grocerystore_service food
+LPUSH bus_grocerystore_service produce
 
-LPUSH bus_groverystore_trailer dry goods
-LPUSH bus_groverystore_trailer general mechandise
+LPUSH bus_grocerystore_trailer dry goods
+LPUSH bus_grocerystore_trailer general merchandise
 
 ########################################################
 LPUSH business_kind bus_harnessmaker
@@ -963,6 +983,7 @@ LPUSH bus_harnessmaker_managerclass commoner
 LPUSH bus_harnessmaker_managerclass expert
 
 LPUSH bus_harnessmaker_service service
+LPUSH bus_harnessmaker_service harnesses
 
 LPUSH bus_harnessmaker_trailer leather goods
 LPUSH bus_harnessmaker_trailer harnesses
@@ -981,6 +1002,8 @@ LPUSH bus_hatshop_managerclass commoner
 LPUSH bus_hatshop_managerclass expert
 
 LPUSH bus_hatshop_service service
+LPUSH bus_hatshop_service hats
+LPUSH bus_hatshop_service caps
 
 LPUSH bus_hatshop_trailer hats shop
 LPUSH bus_hatshop_trailer hatters
@@ -999,6 +1022,7 @@ LPUSH bus_haymerchant_managerclass commoner
 LPUSH bus_haymerchant_managerclass expert
 
 LPUSH bus_haymerchant_service service
+LPUSH bus_haymerchant_service hay
 
 LPUSH bus_haymerchant_trailer farms
 LPUSH bus_haymerchant_trailer farmers market
@@ -1023,6 +1047,7 @@ LPUSH bus_herbalist_managerclass wizard
 LPUSH bus_herbalist_managerclass ranger
 
 LPUSH bus_herbalist_service service
+LPUSH bus_herbalist_service herbs
 
 LPUSH bus_herbalist_trailer herbalist
 
@@ -1040,6 +1065,8 @@ LPUSH bus_illuminator_managerclass commoner
 LPUSH bus_illuminator_managerclass expert
 
 LPUSH bus_illuminator_service service
+LPUSH bus_illuminator_service illustrations
+LPUSH bus_illuminator_service artwork
 
 LPUSH bus_illuminator_trailer candle maker
 
@@ -1056,6 +1083,7 @@ LPUSH bus_inn_manager innkeeper
 LPUSH bus_inn_managerclass commoner
 
 LPUSH bus_inn_service service
+LPUSH bus_inn_service rooms
 
 LPUSH bus_inn_trailer hostel
 LPUSH bus_inn_trailer inn
@@ -1098,6 +1126,12 @@ LPUSH bus_jeweler_managerclass rogue
 LPUSH bus_jeweler_managerclass aristocrat
 
 LPUSH bus_jeweler_service service
+LPUSH bus_jeweler_service cuts
+LPUSH bus_jeweler_service gems
+LPUSH bus_jeweler_service rings
+LPUSH bus_jeweler_service pendants
+LPUSH bus_jeweler_service necklaces
+LPUSH bus_jeweler_service bracelets
 
 LPUSH bus_jeweler_trailer jewelers
 
@@ -1235,6 +1269,8 @@ LPUSH bus_hostel_managerclass cleric
 LPUSH bus_hostel_managerclass commoner
 
 LPUSH bus_hostel_service service
+LPUSH bus_hostel_service rooms
+LPUSH bus_hostel_service beds
 
 LPUSH bus_hostel_trailer Hostel
 LPUSH bus_hostel_trailer Youth Hostel
@@ -1253,6 +1289,8 @@ LPUSH bus_junkyard_managerclass commoner
 LPUSH bus_junkyard_managerclass expert
 
 LPUSH bus_junkyard_service service
+LPUSH bus_junkyard_service parts
+LPUSH bus_junkyard_service junk
 
 LPUSH bus_junkyard_trailer Junkyard
 LPUSH bus_junkyard_trailer Depot
@@ -1314,6 +1352,7 @@ LPUSH bus_library_managerclass commoner
 LPUSH bus_library_managerclass expert
 
 LPUSH bus_library_service service
+LPUSH bus_library_service library cards
 
 LPUSH bus_library_trailer Public Library
 LPUSH bus_library_trailer Study
@@ -1337,6 +1376,9 @@ LPUSH bus_locksmith_managerclass expert
 LPUSH bus_locksmith_managerclass rogue
 
 LPUSH bus_locksmith_service service
+LPUSH bus_locksmith_service new keys
+LPUSH bus_locksmith_service new locks
+LPUSH bus_locksmith_service lock repairs
 
 LPUSH bus_locksmith_trailer Locksmith
 
@@ -1353,6 +1395,7 @@ LPUSH bus_lumbermill_manager lumberjack
 LPUSH bus_lumbermill_managerclass commoner
 
 LPUSH bus_lumbermill_service service
+LPUSH bus_lumbermill_service timber
 
 LPUSH bus_lumbermill_trailer Lumber Mill
 LPUSH bus_lumbermill_trailer Saw Mill
@@ -1371,6 +1414,8 @@ LPUSH bus_lumberyard_manager woodseller
 LPUSH bus_lumberyard_managerclass commoner
 
 LPUSH bus_lumberyard_service service
+LPUSH bus_lumberyard_service lumber
+LPUSH bus_lumberyard_service boards
 
 LPUSH bus_lumberyard_trailer Lumberyard
 LPUSH bus_lumberyard_trailer Timberyard
@@ -1394,6 +1439,7 @@ LPUSH bus_magicshop_managerclass sorcerer
 LPUSH bus_magicshop_managerclass wizard
 
 LPUSH bus_magicshop_service service
+LPUSH bus_magicshop_service scrolls
 
 LPUSH bus_magicshop_trailer Botique
 LPUSH bus_magicshop_trailer Shoppe
@@ -1412,6 +1458,9 @@ LPUSH bus_masonry_manager mason
 LPUSH bus_masonry_managerclass commoner
 
 LPUSH bus_masonry_service service
+LPUSH bus_masonry_service bricks
+LPUSH bus_masonry_service walls
+LPUSH bus_masonry_service facades
 
 LPUSH bus_masonry_trailer inc.
 
@@ -1430,6 +1479,9 @@ LPUSH bus_mercer_managerclass commoner
 LPUSH bus_mercer_managerclass expert
 
 LPUSH bus_mercer_service service
+LPUSH bus_mercer_service linen
+LPUSH bus_mercer_service cloth
+LPUSH bus_mercer_service silk
 
 LPUSH bus_mercer_trailer Textiles
 LPUSH bus_mercer_trailer Fabrics
@@ -1465,6 +1517,7 @@ LPUSH bus_postoffice_manager messenger
 LPUSH bus_postoffice_managerclass commoner
 
 LPUSH bus_postoffice_service service
+LPUSH bus_postoffice_service postage
 
 LPUSH bus_postoffice_trailer Mail Service
 LPUSH bus_postoffice_trailer Postal Service
@@ -1484,6 +1537,11 @@ LPUSH bus_pottery_managerclass commoner
 LPUSH bus_pottery_managerclass expert
 
 LPUSH bus_pottery_service service
+LPUSH bus_pottery_service pots
+LPUSH bus_pottery_service mugs
+LPUSH bus_pottery_service vases
+LPUSH bus_pottery_service jugs
+LPUSH bus_pottery_service ceramics
 
 LPUSH bus_pottery_trailer Ceramics
 LPUSH bus_pottery_trailer Pots
@@ -1504,6 +1562,8 @@ LPUSH bus_pursemaker_managerclass expert
 LPUSH bus_pursemaker_managerclass rogue
 
 LPUSH bus_pursemaker_service service
+LPUSH bus_pursemaker_service purses
+LPUSH bus_pursemaker_service bags
 
 LPUSH bus_pursemaker_trailer Purse Shop
 LPUSH bus_pursemaker_trailer Bags
@@ -1521,6 +1581,7 @@ LPUSH bus_roofer_manager roofer
 LPUSH bus_roofer_managerclass commoner
 
 LPUSH bus_roofer_service service
+LPUSH bus_roofer_service roofs
 
 LPUSH bus_roofer_trailer Roofing
 LPUSH bus_roofer_trailer Construction
@@ -1538,6 +1599,7 @@ LPUSH bus_ropemaker_manager ropemaker
 LPUSH bus_ropemaker_managerclass commoner
 
 LPUSH bus_ropemaker_service service
+LPUSH bus_ropemaker_service ropes
 
 LPUSH bus_ropemaker_trailer Ropes
 
@@ -1554,6 +1616,8 @@ LPUSH bus_rugmaker_manager rugmaker
 LPUSH bus_rugmaker_managerclass commoner
 
 LPUSH bus_rugmaker_service service
+LPUSH bus_rugmaker_service rugs
+LPUSH bus_rugmaker_service carpets
 
 LPUSH bus_rugmaker_trailer Rug Shop
 LPUSH bus_rugmaker_trailer Rugs
@@ -1572,6 +1636,8 @@ LPUSH bus_scabbardmaker_managerclass commoner
 LPUSH bus_scabbardmaker_managerclass expert
 
 LPUSH bus_scabbardmaker_service service
+LPUSH bus_scabbardmaker_service scabbards
+LPUSH bus_scabbardmaker_service scabbard repairs
 
 LPUSH bus_scabbardmaker_trailer Scabbards
 LPUSH bus_scabbardmaker_trailer Sheath Store
@@ -1596,6 +1662,7 @@ LPUSH bus_school_managerclass monk
 LPUSH bus_school_managerclass wizard
 
 LPUSH bus_school_service service
+LPUSH bus_school_service tuition
 
 LPUSH bus_school_trailer Elementary School
 LPUSH bus_school_trailer Primary School
@@ -1619,6 +1686,8 @@ LPUSH bus_sculpting_managerclass commoner
 LPUSH bus_sculpting_managerclass expert
 
 LPUSH bus_sculpting_service service
+LPUSH bus_sculpting_service busts
+LPUSH bus_sculpting_service statues
 
 LPUSH bus_sculpting_trailer Sculptures
 LPUSH bus_sculpting_trailer Studio
@@ -1657,6 +1726,8 @@ LPUSH bus_shoeshop_managerclass commoner
 LPUSH bus_shoeshop_managerclass expert
 
 LPUSH bus_shoeshop_service service
+LPUSH bus_shoeshop_service shoes
+LPUSH bus_shoeshop_service boots
 
 LPUSH bus_shoeshop_trailer Shoes
 LPUSH bus_shoeshop_trailer Shoes Inc.
@@ -1732,6 +1803,8 @@ LPUSH bus_smithy_managerclass fighter
 LPUSH bus_smithy_managerclass warrior
 
 LPUSH bus_smithy_service service
+LPUSH bus_smithy_service horseshoes
+LPUSH bus_smithy_service armor repairs
 
 LPUSH bus_smithy_trailer inc.
 
@@ -1766,6 +1839,7 @@ LPUSH bus_spicemerchant_managerclass commoner
 LPUSH bus_spicemerchant_managerclass expert
 
 LPUSH bus_spicemerchant_service service
+LPUSH bus_spicemerchant_service spices
 
 LPUSH bus_spicemerchant_trailer inc.
 
@@ -1783,6 +1857,7 @@ LPUSH bus_stable_manager stablehand
 LPUSH bus_stable_managerclass commoner
 
 LPUSH bus_stable_service service
+LPUSH bus_stable_service stables
 
 LPUSH bus_stable_trailer inc.
 
@@ -1836,6 +1911,7 @@ LPUSH bus_tannery_managerclass commoner
 LPUSH bus_tannery_managerclass expert
 
 LPUSH bus_tannery_service service
+LPUSH bus_tannery_service leather
 
 LPUSH bus_tannery_trailer inc.
 
@@ -1858,6 +1934,8 @@ LPUSH bus_tavern_manager tavern
 LPUSH bus_tavern_managerclass commoner
 
 LPUSH bus_tavern_service service
+LPUSH bus_tavern_service drinks
+LPUSH bus_tavern_service food
 
 LPUSH bus_tavern_trailer inc.
 
@@ -1876,6 +1954,7 @@ LPUSH bus_theater_managerclass commoner
 LPUSH bus_theater_managerclass expert
 
 LPUSH bus_theater_service service
+LPUSH bus_theater_service tickets
 
 LPUSH bus_theater_trailer inc.
 
@@ -1892,6 +1971,7 @@ LPUSH bus_tileshop_manager tilemaker
 LPUSH bus_tileshop_managerclass commoner
 
 LPUSH bus_tileshop_service service
+LPUSH bus_tileshop_service tiles
 
 LPUSH bus_tileshop_trailer inc.
 
@@ -1945,6 +2025,7 @@ LPUSH bus_translator_managerclass commoner
 LPUSH bus_translator_managerclass expert
 
 LPUSH bus_translator_service service
+LPUSH bus_translator_service translations
 
 LPUSH bus_translator_trailer translations
 LPUSH bus_translator_trailer word smiths
@@ -1982,6 +2063,7 @@ LPUSH bus_university_managerclass commoner
 LPUSH bus_university_managerclass wizard
 
 LPUSH bus_university_service service
+LPUSH bus_university_service tuition
 
 LPUSH bus_university_trailer inc.
 
@@ -1999,6 +2081,8 @@ LPUSH bus_vinyard_managerclass commoner
 LPUSH bus_vinyard_managerclass expert
 
 LPUSH bus_vinyard_service service
+LPUSH bus_vinyard_service grapes
+LPUSH bus_vinyard_service wine
 
 LPUSH bus_vinyard_trailer vinters
 LPUSH bus_vinyard_trailer wine shoppe
@@ -2018,6 +2102,7 @@ LPUSH bus_wagonyard_managerclass commoner
 LPUSH bus_wagonyard_managerclass expert
 
 LPUSH bus_wagonyard_service service
+LPUSH bus_wagonyard_service wagons
 
 LPUSH bus_wagonyard_trailer inc.
 
@@ -2107,6 +2192,7 @@ LPUSH bus_winery_manager wine seller
 LPUSH bus_winery_managerclass commoner
 
 LPUSH bus_winery_service service
+LPUSH bus_winery_service wine
 
 LPUSH bus_winery_trailer inc.
 
