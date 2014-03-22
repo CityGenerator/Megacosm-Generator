@@ -1,6 +1,6 @@
 
 LPUSH naturalresource_kind locale
-# Lala Land is know for it's _________
+# Lala Land is known for it's _________
 LPUSH naturalresource_locale_name_type renowned
 LPUSH naturalresource_locale_name_type nearby
 LPUSH naturalresource_locale_name_type famous
