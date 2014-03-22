@@ -583,6 +583,14 @@ def select_conjunction(wordlist):
     return Filters.select_conjunction(wordlist)
 
 
+@app.template_filter('plural_verb')
+def select_plural_verb(verb,subject ):
+    return Filters.select_plural_verb(verb,subject )
+
+@app.template_filter('plural_adj')
+def select_plural_adj(adj,subject ):
+    return Filters.select_plural_adj(adj,subject )
+
 
 if __name__ == '__main__':
     app.debug = True

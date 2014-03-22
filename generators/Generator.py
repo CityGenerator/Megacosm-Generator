@@ -156,6 +156,10 @@ class Generator(object):
         environment = Environment()
         environment.filters['article'] = Filters.select_article
         environment.filters['pluralize'] = Filters.select_pluralize
+        environment.filters['conjunction'] = Filters.select_conjunction
+        environment.filters['plural_verb'] = Filters.select_plural_verb
+        environment.filters['plural_adj'] = Filters.select_plural_adj
+
         template= environment.from_string(template)
 
         return template.render(params=self)
