@@ -1,0 +1,102 @@
+# Provided by bradoro
+
+LPUSH mundaneitem_kind arrows
+LPUSH mundaneitem_kind backpack 
+LPUSH mundaneitem_kind basket 
+LPUSH mundaneitem_kind bedroll
+LPUSH mundaneitem_kind bell
+LPUSH mundaneitem_kind belt
+LPUSH mundaneitem_kind blanket
+LPUSH mundaneitem_kind bolts
+LPUSH mundaneitem_kind bracelet
+LPUSH mundaneitem_kind braces
+LPUSH mundaneitem_kind brooch
+LPUSH mundaneitem_kind bucket 
+LPUSH mundaneitem_kind buckler
+LPUSH mundaneitem_kind caltrops
+LPUSH mundaneitem_kind candle
+LPUSH mundaneitem_kind canvas
+LPUSH mundaneitem_kind chain link
+LPUSH mundaneitem_kind chain shirt
+LPUSH mundaneitem_kind chalk
+LPUSH mundaneitem_kind cheese
+LPUSH mundaneitem_kind chest 
+LPUSH mundaneitem_kind chisel
+LPUSH mundaneitem_kind corset
+LPUSH mundaneitem_kind crowbar
+LPUSH mundaneitem_kind ear rings
+LPUSH mundaneitem_kind firewood
+LPUSH mundaneitem_kind fishhook
+LPUSH mundaneitem_kind fishing net
+LPUSH mundaneitem_kind flask 
+LPUSH mundaneitem_kind flint and steel
+LPUSH mundaneitem_kind gauntlet
+LPUSH mundaneitem_kind grappling hook
+LPUSH mundaneitem_kind greives
+LPUSH mundaneitem_kind hammer
+LPUSH mundaneitem_kind hammmer
+LPUSH mundaneitem_kind harp
+LPUSH mundaneitem_kind honey
+LPUSH mundaneitem_kind hourglass    
+LPUSH mundaneitem_kind ink (1 oz)
+LPUSH mundaneitem_kind inkpen
+LPUSH mundaneitem_kind jerkey
+LPUSH mundaneitem_kind jug, clay
+LPUSH mundaneitem_kind ladder, 10-foot
+LPUSH mundaneitem_kind lamp, common
+LPUSH mundaneitem_kind lantern, bullseye
+LPUSH mundaneitem_kind lantern, hooded
+LPUSH mundaneitem_kind lock, basic
+LPUSH mundaneitem_kind locket
+LPUSH mundaneitem_kind lyre
+LPUSH mundaneitem_kind magnifying glass
+LPUSH mundaneitem_kind manacles
+LPUSH mundaneitem_kind map case
+LPUSH mundaneitem_kind marbles
+LPUSH mundaneitem_kind metal wire
+LPUSH mundaneitem_kind metal hoop
+LPUSH mundaneitem_kind mirror, small glass
+LPUSH mundaneitem_kind mirror, small steel
+LPUSH mundaneitem_kind mug/tankard, clay
+LPUSH mundaneitem_kind oil (1-pint flask)
+LPUSH mundaneitem_kind oranges
+LPUSH mundaneitem_kind paint
+LPUSH mundaneitem_kind paper sheets
+LPUSH mundaneitem_kind parchment rolled
+LPUSH mundaneitem_kind pick, miner
+LPUSH mundaneitem_kind pitcher, clay
+LPUSH mundaneitem_kind piton
+LPUSH mundaneitem_kind pole, 10-foot
+LPUSH mundaneitem_kind pot, iron
+LPUSH mundaneitem_kind pouch, belt 
+LPUSH mundaneitem_kind prunes
+LPUSH mundaneitem_kind rope, hemp
+LPUSH mundaneitem_kind rope, silk
+LPUSH mundaneitem_kind sack 
+LPUSH mundaneitem_kind saw
+LPUSH mundaneitem_kind sealing wax
+LPUSH mundaneitem_kind sewing needle
+LPUSH mundaneitem_kind shield, light steel
+LPUSH mundaneitem_kind shield, light wooden
+LPUSH mundaneitem_kind shovel
+LPUSH mundaneitem_kind signal whistle
+LPUSH mundaneitem_kind signet ring
+LPUSH mundaneitem_kind sledge hammer
+LPUSH mundaneitem_kind small barrel  
+LPUSH mundaneitem_kind smokestick
+LPUSH mundaneitem_kind soap
+LPUSH mundaneitem_kind spyglass
+LPUSH mundaneitem_kind string
+LPUSH mundaneitem_kind studded belt
+LPUSH mundaneitem_kind sundial
+LPUSH mundaneitem_kind sunrod
+LPUSH mundaneitem_kind tent
+LPUSH mundaneitem_kind torch
+LPUSH mundaneitem_kind trail rations
+LPUSH mundaneitem_kind vambraces
+LPUSH mundaneitem_kind vial, ink or potion
+LPUSH mundaneitem_kind waterskin
+LPUSH mundaneitem_kind whetstone
+LPUSH mundaneitem_kind whistle
+LPUSH mundaneitem_kind wine bottle
+LPUSH mundaneitem_kind wooden holy symbol

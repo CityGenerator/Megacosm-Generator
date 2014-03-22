@@ -8,6 +8,7 @@ from generators import Resource
 from generators import Event
 from generators import JobPosting
 from generators import Gem
+from generators import MundaneItem
 from util.Seeds import *
 from util import Filters
 import random
@@ -280,6 +281,41 @@ def Gem_Builder():
     paramlist,paramstring,paramset=builder_form_data('gem')
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='gem') 
+    
+#########################################################################
+#@app.route('/mundaneitem')
+#def GenerateMundaneItem():
+#    """Generate a simple mundaneitem"""
+#    features=feature_filter('mundaneitem')
+#    if request.args['count'] and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+#    else:
+#        mundaneitem=MundaneItem.MundaneItem(server,features)
+#        return render_template('oneliner.html', oneliner=mundaneitem ,titletext='Look what I found!', generator='mundaneitem' )
+#
+
+
+@app.route('/mundaneitem')
+def GenerateMundaneItem():
+    """Generate a simple mundaneitem"""
+
+    features=feature_filter('mundaneitem')
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        mundaneitems=[]
+        for item in xrange(int(request.args['count'])):
+            print features
+            mundaneitems.append(MundaneItem.MundaneItem(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0] ,titletext='Look what I found!', generator='mundaneitem' )
+    else:
+        mundaneitem=MundaneItem.MundaneItem(server,features)
+        return render_template('oneliner.html', oneliner=mundaneitem ,titletext='Look what I found!', generator='mundaneitem' )
+
+@app.route('/mundaneitem_builder')
+def MundaneItem_Builder():
+    """Generate the basic data about a mundaneitem"""
+    paramlist,paramstring,paramset=builder_form_data('mundaneitem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='mundaneitem') 
     
 #########################################################################
 
