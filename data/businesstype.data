@@ -99,6 +99,10 @@ LPUSH bus_apothecary_managerclass ranger
 
 LPUSH bus_apothecary_service products
 LPUSH bus_apothecary_service service
+LPUSH bus_apothecary_service herbs
+LPUSH bus_apothecary_service reagents
+LPUSH bus_apothecary_service spell components
+LPUSH bus_apothecary_service medicine
 
 LPUSH bus_apothecary_trailer shop
 LPUSH bus_apothecary_trailer shoppe
@@ -131,6 +135,13 @@ LPUSH bus_armorsmithy_managerclass warrior
 LPUSH bus_armorsmithy_managerclass fighter
 
 LPUSH bus_armorsmithy_service service
+LPUSH bus_armorsmithy_service armor
+LPUSH bus_armorsmithy_service shields
+LPUSH bus_armorsmithy_service grieves
+LPUSH bus_armorsmithy_service pauldrons
+LPUSH bus_armorsmithy_service breastplates
+LPUSH bus_armorsmithy_service bracers
+LPUSH bus_armorsmithy_service gauntlets
 
 LPUSH bus_armorsmithy_trailer group
 LPUSH bus_armorsmithy_trailer amory
@@ -155,6 +166,8 @@ LPUSH bus_astrologer_managerclass expert
 LPUSH bus_astrologer_managerclass adept
 
 LPUSH bus_astrologer_service service
+LPUSH bus_astrologer_service horoscope
+LPUSH bus_astrologer_service birth charts
 
 LPUSH bus_astrologer_trailer star gazers
 LPUSH bus_astrologer_trailer magic eye piece
@@ -262,6 +275,8 @@ LPUSH bus_barrack_managerclass fighter
 LPUSH bus_barrack_managerclass paladin
 
 LPUSH bus_barrack_service service
+LPUSH bus_barrack_service bed
+LPUSH bus_barrack_service bunk
 
 LPUSH bus_barrack_trailer guard house
 LPUSH bus_barrack_trailer city guard
@@ -286,6 +301,8 @@ LPUSH bus_barrister_managerclass expert
 LPUSH bus_barrister_managerclass aristocrat
 
 LPUSH bus_barrister_service service
+LPUSH bus_barrister_service representation in court
+LPUSH bus_barrister_service building a case
 
 LPUSH bus_barrister_trailer house of law
 LPUSH bus_barrister_trailer and associates
@@ -310,6 +327,7 @@ LPUSH bus_bathhouse_manager bather
 LPUSH bus_bathhouse_managerclass commoner
 
 LPUSH bus_bathhouse_service service
+LPUSH bus_bathhouse_service baths
 
 LPUSH bus_bathhouse_trailer bath house
 LPUSH bus_bathhouse_trailer inpirationsl waters
@@ -334,6 +352,7 @@ LPUSH bus_beerseller_manager beer seller
 LPUSH bus_beerseller_managerclass commoner
 
 LPUSH bus_beerseller_service service
+LPUSH bus_beerseller_service beer
 
 LPUSH bus_beerseller_trailer tap house
 LPUSH bus_beerseller_trailer ale house
@@ -355,6 +374,7 @@ LPUSH bus_bleacher_manager bleacher
 LPUSH bus_bleacher_managerclass commoner
 
 LPUSH bus_bleacher_service service
+LPUSH bus_bleacher_service bleaching
 
 LPUSH bus_bleacher_trailer arena
 
@@ -394,6 +414,7 @@ LPUSH bus_bookstore_managerclass commoner
 LPUSH bus_bookstore_managerclass expert
 
 LPUSH bus_bookstore_service service
+LPUSH bus_bookstore_service books
 
 LPUSH bus_bookstore_trailer fine books
 LPUSH bus_bookstore_trailer book smith
@@ -411,6 +432,9 @@ LPUSH bus_bowyer_managerclass expert
 LPUSH bus_bowyer_managerclass ranger
 
 LPUSH bus_bowyer_service service
+LPUSH bus_bowyer_service bows
+LPUSH bus_bowyer_service bow repairs
+LPUSH bus_bowyer_service replacement bows
 
 LPUSH bus_bowyer_trailer fine bows
 LPUSH bus_bowyer_trailer archery
@@ -428,6 +452,10 @@ LPUSH bus_brewery_managerclass commoner
 LPUSH bus_brewery_managerclass expert
 
 LPUSH bus_brewery_service service
+LPUSH bus_brewery_service beer
+LPUSH bus_brewery_service ale
+LPUSH bus_brewery_service grog
+LPUSH bus_brewery_service lager
 
 LPUSH bus_brewery_trailer brewery
 LPUSH bus_brewery_trailer beer garden
@@ -498,6 +526,12 @@ LPUSH bus_butchershop_managerclass commoner
 LPUSH bus_butchershop_managerclass expert
 
 LPUSH bus_butchershop_service service
+LPUSH bus_butchershop_service lamb
+LPUSH bus_butchershop_service ham
+LPUSH bus_butchershop_service steaks
+LPUSH bus_butchershop_service shanks
+LPUSH bus_butchershop_service ribs
+LPUSH bus_butchershop_service venison
 
 LPUSH bus_butchershop_trailer meat handlers
 LPUSH bus_butchershop_trailer meat house
@@ -516,6 +550,11 @@ LPUSH bus_cartwright_managerclass commoner
 LPUSH bus_cartwright_managerclass expert
 
 LPUSH bus_cartwright_service service
+LPUSH bus_cartwright_service spoke replacements
+LPUSH bus_cartwright_service axle replacements
+LPUSH bus_cartwright_service carts
+LPUSH bus_cartwright_service wheel repairs
+LPUSH bus_cartwright_service wheel replacements
 
 LPUSH bus_cartwright_trailer shop
 LPUSH bus_cartwright_trailer wainwright
@@ -644,6 +683,13 @@ LPUSH bus_clothingshop_managerclass commoner
 LPUSH bus_clothingshop_managerclass expert
 
 LPUSH bus_clothingshop_service service
+LPUSH bus_clothingshop_service tunics
+LPUSH bus_clothingshop_service skirts
+LPUSH bus_clothingshop_service pants
+LPUSH bus_clothingshop_service underwear
+LPUSH bus_clothingshop_service stockings
+LPUSH bus_clothingshop_service coats
+LPUSH bus_clothingshop_service shirts
 
 LPUSH bus_clothingshop_trailer wares
 LPUSH bus_clothingshop_trailer shop
@@ -662,6 +708,9 @@ LPUSH bus_cobbler_managerclass expert
 
 LPUSH bus_cobbler_service work
 LPUSH bus_cobbler_service goods
+LPUSH bus_cobbler_service new soles
+LPUSH bus_cobbler_service a softer insole
+LPUSH bus_cobbler_service repairing footwear
 
 LPUSH bus_cobbler_trailer shoppe
 LPUSH bus_cobbler_trailer shop
