@@ -37,7 +37,7 @@ LPUSH resource_kind naturalresource
 LPUSH resource_kind laborresource
 
 
-LPUSH resource_template "{{params.place.name['full']}} is know for it's {{params.name_type}} {{params.name}} which {{params.method}} {{params.product}}. This resource is {{params.ubiquity['name']}} to the region. Many consider the {{params.product}} {{params.utility['name']}}, and are regardless seen as a {{params.value['name']}} resource. Competition in the {{params.product}} market is {{params.competition['name']}}, and the {{params.name}} resource as a whole are {{params.management['name']}} managed."
+LPUSH resource_template "{{params.place.name['full']}} is known for it's {{params.name_type}} {{params.name}} which {{params.method}} {{params.product}}. This resource is {{params.ubiquity['name']}} to the region. Many consider the {{params.product}} {{params.utility['name']}}, and are regardless seen as a {{params.value['name']}} resource. Competition in the {{params.product}} market is {{params.competition['name']}}, and the {{params.name}} resource as a whole are {{params.management['name']}} managed."
 
 
 
