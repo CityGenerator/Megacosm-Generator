@@ -158,7 +158,6 @@ LPUSH mundaneitem_kind wooden holy symbol
 #blood moss
 #blouse, cotton
 #blouse, silk
-
 #blowgun
 #body sleigh
 #body suit, silk
@@ -269,125 +268,68 @@ LPUSH mundaneitem_kind wooden holy symbol
 #corrusium sand
 #crampons
 #crook
-
-
-
-#crossbow, alchemal
-#crossbow, clockwork
-#crossbow, double barreled
-#crossbow, shielded
-#crossbow, sniper's
+#crossbow
 #crowbar
 #crowbar, large
 #crowbar, small
 #crucible
-#crusher blade
 #crystal ball w/stand
-#currency testing liquid
-#cut and thrust sword
-#damascus steel
-#dark camouflage
+#crystal ball
 #dark iron
 #dark mithral
-#darknut extract
-#darkwing extract
 #dead iron
-#dead iron material)
-#deathmetal
-#deceiver debris
-#defender
 #dentures
 #descender
-#desert goggles and head gear
-#desert goggles & headgear
-#destructive axe
-#devil's bane
+#desert goggles
 #dice, bone
 #dice, bone, loaded
 #dice, ivory
-#difficilium
 #diluted black lotus extract
-#discblade
 #diseased water
 #disguise kit
 #dishes/utensils, set of tin, cooking/eating
 #dish/plate or bowel, small
-#displacer steak
 #dog collar
-#dopamine
-#doru
-#double kusarigama
 #double trident
-#dragoncraft armor or shield
-#dragoncraft mantle
-#dragonfang weapons
-#dragon steaks
-#dragon water
-#dreammist
 #dreg venom
 #dress, common
 #dress, expensive
 #drill set, diamond tipped
 #druid's robes
-#dryoil
-#dueling cane
-#dueling katana
-#dueling pistol
-#dueling shield
-#duelist's hilt
-#dumathoins draught
-#dust of corrosion
 #dwarven light lance
 #ear muffs
-#earth elemental evolution pellet
 #earthly camouflage
-#ekrund rods
 #eku
 #elf bean coffee
 #elf whistle
 #elven battle blade
-#elven truesteel
-#elvenweave
-#eternium
 #eyeglasses, prescription
 #eye patch
 #eyepiece, jewelers/appraisers
 #ezurian saber
 #face mask, carnival type
 #fauchard
-#feather-light steel
 #fermented godsblood
 #fertilizer
 #festive lantern
 #file, metal
-#fire elemental evolution pellet
-#fireworks
 #fish hook
 #fishing gear
 #fishing net
 #fishing pole, sectioned
-#fixed bayonet
 #flagon
 #flag or banner
 #flaked stone
-#flak repeater
 #flask, glass
 #flask, glass, scored
 #flask, metal
 #flask, stone
 #flask, wooden
-#fluidsteel
 #folding cot
 #foliage camouflage
 #forgery kit
-#frostshard
 #frostshard ore
-#fukiya
-#fullblade, variant
-#fulminating gold
-#fulminating silver
 #garrote
-#gear glaive
 #ghillie suit
 #giant viper's poison
 #girdle, broad
@@ -404,68 +346,45 @@ LPUSH mundaneitem_kind wooden holy symbol
 #goblin spear
 #goggles
 #good quality rations
-#gorgon burst pistol
 #gossamer
 #gown, common
-#grand piano
 #grapnel
 #grapnel, fixed, 3 prong
 #grapnel, folding, 3 prong
-#grappling hook launcher
 #great annulat
-#greatbow helvruin
+
+#greatbow 
 #great cleaver
-#great dueling sword
-#great harquebus, heavy
-#great harquebus, light
-#great musket, heavy
-#great musket, light
 #greatspear
 #greatstaff
 #grek oil
 #groomers kit
 #guitar
-#gunpowder
-#gunstub
 #hacksaw
 #hair comb
 #half-moon katar
 #hammock
-#hand-and-a-half melee weapons
 #hand boar, wood
-#handcannon
-#hand crossbow, martial
-#hand crossbow, repeating
-#hand crossbow, reworked
+#hand crossbow
 #handcuffs
-#handgun
-#handgun, exotic
-#handgun, simple
 #harpoon
-#harquebus, heavy
-#harquebus, light
 #hat, hard
 #hat, jesters
 #hat, soft
-#haute cheese soupe
-#hazlar
 #head band
 #healers kit
 #healers kit, veterinary
 #healing kit
 #hearing cone
-#heavy dueling sword
-#heavy repeating crossbow, pump-action
-#heavy shuriken thrower
+
+
+
 #heavy war staff
-#hexagun
 #hiding cloak
-#high calibur rifle
 #high tension longbow
 #hinge removing kit
 #hobgoblin spear
 #hobgoblin warspear
-#hobnail
 #holy symbol, gold
 #holy symbol, iron
 #holy symbol, silver
@@ -477,21 +396,18 @@ LPUSH mundaneitem_kind wooden holy symbol
 #horn, signalling
 #horsebow
 #hour glass
-#housebreaker harness or spider
 #hunting horn
 #hydrogen peroxide
 #hypo canister
-#hypo pistol
 #idol, small, ivory
 #incense stick
-#inked ribbon for typewriter
 #inkpen
 #ink, small bottle
 #ink, standardized, scroll composing
 #insect repellent
 #instruments, dissection
 #investigator's kit
-#iridium
+#iridium ore
 #iron bar
 #iron box, large
 #iron box, medium
@@ -501,36 +417,22 @@ LPUSH mundaneitem_kind wooden holy symbol
 #iron wedge
 #jack
 #jagged hammer
-#jarate
 #jian
-#juggernaut
 #juggler's kit
+
 #jutte
-#jutte, variant
 #kakamas
-#kamayari
-#kanabo
 #katana
-#katana, variant
 #keg
 #key
 #key making kit
 #kite
 #knick nacks
 #knife, fork, and spoon
-#knife, stage
-#kodachi
-#kolir death drink
-#korath gas
-#krossian helvruin
-#kusari-fundo
-#kusarigama
-#kwama lager
-#kyoketsu shoge
+
 #ladder, metal, extendible
 #ladder, rope
 #ladder, wooden, fixed
-#lajatang
 #lance, footman's
 #lantern, beacon
 #lantern, bullseye
@@ -539,64 +441,39 @@ LPUSH mundaneitem_kind wooden holy symbol
 #lanterns silk.
 #lard
 #large cloak/cape
-#lasgun
 #laughing shroom
-#leaf sword
 #leash, animal, large
 #leash, animal, medium
 #leash, animal, small
+
 #leather piece
 #leatherweave
-#legendstone
 #leggings, wool
-#leprechaun shillelagh
 #level
 #life vest
-#light melee weapons
 #lightning rod
-#light shuriken thrower
-#liu xing chui
-#lochaber axe
 #lock, common
 #locket, stainless steel w/silver chain
 #lock, inferior
 #lock, superior
 #loin cloth
-#lomepick
 #longstaff
-#lounge, folding chase
-#lucerne hammer
-#lukazade
-#luminous water
-#lunarcrafted
 #lycanthropic saliva
-#lyganium
-#m24 sniper
 #mace, orc tribal
 #madiera wine
-#magic gun, pistol
-#magic gun, rifle
 #magnifying glass
-#magorian
 #main gauche
 #makeup, camouflage
 #mallet, cording
 #mallet, wooden
 #manacles
-#mana crystal
-#mankiri
-#manticore snacks
 #mantle, jesters
 #mantle, leather
-#maping kit
+#mapping kit
 #marbles
-#masakari
 #mask
-#matchcord
-#matter transformation armor upgrade
-#mechanical typewriter
-#megaton hammer
-#mellow-leaf wine
+
+
 #merchants scale w/weights
 #metal eating acid
 #metal plate
@@ -608,47 +485,28 @@ LPUSH mundaneitem_kind wooden holy symbol
 #mining helmet
 #mirror, large
 #mirror, small
-#mist pellet
-#mithralweave
 #mittens
 #mittens, asbestos
-#monk weapons
 #moonflower extract
 #moon staff
-#moonsteel
 #mortar & pestle set
-#mosin nagant
 #musical instrument
-#musket, heavy
-#musket, light
-#naginata
 #nail
 #needle, bone
 #needle, metal
 #net, hand
-#nights bane
-#ninja-to
-#nitroglycerin
-#nodachi
-#nodachi, variant
-#nullsteel
 #nut & bolt
 #oar, paddle
 #oars
+
 #obsidian
-#odachi helvruin
 #oil, flask of citronella
-#oil, flask of greek fire
 #oil, flask of lamp
-#oil of brick
 #oil, waterproofing
-#one-handed ranged weapons
 #orc battle-blade
 #orc dreadaxe
 #orc foodstuffs
-#otsuchi
-#p-53 colt wadjyt
-#p-83 colt wadjyt
+
 #paint
 #paintbrush, large
 #paintbrush, small
@@ -674,28 +532,21 @@ LPUSH mundaneitem_kind wooden holy symbol
 #parchment, untreated
 #parka, full length, heavy
 #parka, waist length, heavy
-#parral dust
+
+
 #parry blade
-#partisan
 #pavilion
 #pearl
 #perfume, vial
 #phoenix fire wine
 #phylactery, common arm band
-#phylactery, religious writings
 #pick, climbing
 #pick, mining
 #pig iron
 #pillow, small
 #pipe, smoking
-#pistol
-#pistol, alchemist's breachload
-#pistol, exotic
-#pistol, simple
 #pitton, climbing
 #pitton hammer
-#planeshifter outfit
-#planewalker outfit
 #plank, hardwood
 #plank, softwood
 #plant fiber
@@ -717,48 +568,29 @@ LPUSH mundaneitem_kind wooden holy symbol
 #pouch, shoulder, large
 #pouch, shoulder, small
 #powdered pearl
-#powder of sympathy
 #prayer beads
 #prosthetic limb, greater
 #prosthetic limb, lesser
-#proteum
 #protractor
 #pulley
 #puppet
-#quake hammer
-#quartz glassteel
-#quick loader
 #quill
-#quill, standardized, scroll composing
 #quilted studded doublet
 #quiver, arrow
 #quiver, javelin
 #rat's meat
 #rat trap
 #razor, shaving
-#rebel matchlock
-#red dust
-#red herb
 #reed, hollow
 #refined oil
 #repair kit
-#repeater module
+
+
+
 #restraining pole
-#retractable bastard sword
-#retractable longsword
-#retracting blade
-#revolver
-#revolver, single-action
-#revolver, variant
-#revolver varient
-#ribbon blade
-#rifle, alchemist's breachload
-#rifle, bolt-action repeating
-#rifle butt
 #ring blade
 #ring, finger/ear/nose
 #ring, signet/seal
-#rocket launcher
 #rope axe
 #rope, hemp
 #rope, silk
@@ -767,19 +599,15 @@ LPUSH mundaneitem_kind wooden holy symbol
 #sack, large
 #sack, small
 #sail, small
-#salvation-from-perdition
-#samarie's doomsteel
 #sandals
 #sash, cotton
 #sash, silk
-#sasumata
-#satchel of perfect preservation
-#sawnoff ahlspiess
+
+
 #saw, wood
 #saw, wood, two man
 #scarf
 #scissors
-#scouter
 #screw driver
 #scroll case
 #scroll tube, bone
@@ -793,7 +621,6 @@ LPUSH mundaneitem_kind wooden holy symbol
 #sheath, small weapon
 #sheath, spring loaded, wrist
 #shield, broad
-#shinobi shozoku
 #shirt, cotton
 #shirt, silk
 #shirt, wool
@@ -802,61 +629,36 @@ LPUSH mundaneitem_kind wooden holy symbol
 #shoes, soft, walking
 #shovel
 #shovel, small, folding
-#shuang gou
-#sica
-#side-sword
-#silverwood
 #simple fire gloves
-#six shooter
 #ski mask
 #skis
 #skullcap
-#slagdram
 #sledgehammer
 #sleeping sack
 #sleeping sack, tree mounting
 #slide ruler
 #smelling salts
-#snake-sword
-#sniper rifle
 #snowshoes
-#snow silver
-#snuffle stuff
 #soap
 #socks, cotton
 #socks, wool
-#sodegarami
 #soulrender acid
-#spanimint wine
-#spatha
-#spear cane
-#spell amber
 #spell book, wizards, large
 #spell book, wizards, standard
 #spell book, wizards, traveling
 #spell components, standardized
-#spell fuse chalk
 #spice kit
 #spicy peppers
 #spider egg, monstrous
 #spider silk rope
 #spiked hammer
 #spike, large, iron
-#spikra
 #sponge
 #spring sheath
-#spring steel
 #spyglass, telescopic, retractable
 #stake, wooden
-#std. set adventurers clothing.
-#steambolt minigun
-#steambolt rifle
-#steam engine, personal
-#steam pistol
-#steam pressure generator
-#steam sword
-#steel
-#steel, carbonized
+#adventurers clothing
+
 #stool, adjustable height
 #straight jacket
 #straps, long
@@ -864,36 +666,24 @@ LPUSH mundaneitem_kind wooden holy symbol
 #straps, short
 #straw mat
 #suit, finely tailored
-#sun spit
 #surcoat
-#sure-strike matches
 #suspenders
-#svonelium
+#svonelium ore
 #swim fins
-#sword, ambit
-#sword and shield umbrella
-#sword, long-handled
-#synthetic boomer bile
 #tabard
-#tabi
 #table, small, folding
-#tainted leather
-#tallenta sharrash
 #tarp, large
 #tarp, small
 #tattoo kit
-#tenro
 #tent, large
 #tent, medium
 #tent, small
 #thieves picks & tools
-#thonging
 #thorn sword
 #thread, reel of
 #three-section staff
 #tights, silk
 #tinderbox w/flint & steel
-#toadstool tears
 #toga
 #toilet seat
 #tools, complete set of, carpenters
@@ -905,65 +695,43 @@ LPUSH mundaneitem_kind wooden holy symbol
 #traveling duster
 #tree seat
 #truncheon
-#truth serum
-#tsukobo
 #tunic, cotton
 #tunic, leather
 #tunic, wool
 #twine
-#two-handed melee weapons
-#two-handed ranged weapons
 #two-tone camouflage poncho
-#type 95
-#types of alcohol
-#underbow wine
 #underwear, cotton
 #underwear, silk
 #underwear, wool
-#unguent of the elements
 #unicycle
 #utility belt
 #utility harness
 #utility jumpsuit, one piece
 #utility jumpsuit, one piece, camouflage
-#vanguard shield
-#venetian warhammer
 #vest, cotton
 #vest, leather
 #vest, wool
 #vial, glass
-#vilebone
 #violet fungus poison
 #violet mold paste
-#void force
-#voltaic steel
 #warmaul
 #war sickle
 #warwhip
 #water clock
-#water elemental evolution pelle
 #water purification tablet
 #water/wine skin
 #weaponblack
-#weapons harness
 #wedge, iron
 #wetsuit, rubber
 #wheelbarrel, folding
-#wheelock pistol
 #whetstone
 #whistle, common
 #whistle, dog
-#wine of nightshade
 #winter wolf pelt
 #wire
 #wire, 10 gauge
 #wire cutters
 #woodscrew
-#yari
-#yumi, daikyu
-#yumi, hankyu
-#zamac
-#zanbato
 #zephyrium ore
 
 # And More!
