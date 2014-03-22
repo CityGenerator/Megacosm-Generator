@@ -7,6 +7,7 @@ from generators import Wanted
 from generators import Resource
 from generators import Event
 from generators import JobPosting
+from generators import Gem
 from util.Seeds import *
 from util import Filters
 import random
@@ -262,6 +263,23 @@ def Event_Builder():
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='event') 
     
+    
+#########################################################################
+
+
+@app.route('/gem')
+def GenerateGem():
+    """Generate a simple gem"""
+    features=feature_filter('gem')
+    gem=Gem.Gem(server,features)
+    return render_template('oneliner.html', oneliner=gem ,titletext='Oh, shiny...', generator='gem' )
+
+@app.route('/gem_builder')
+def Gem_Builder():
+    """Generate the basic data about a gem"""
+    paramlist,paramstring,paramset=builder_form_data('gem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='gem') 
     
 #########################################################################
 
