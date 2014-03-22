@@ -1,4 +1,17 @@
-# Provided by bradoro
+# A Greatsword, which is  _______
+ZADD mundaneitem_repair   5 {"name":"broken",                    "score":5   }
+ZADD mundaneitem_repair  20 {"name":"in disrepair",              "score":20  }
+ZADD mundaneitem_repair  60 {"name":"intact",                    "score":60  }
+ZADD mundaneitem_repair  80 {"name":"well maintained",           "score":80  }
+ZADD mundaneitem_repair 100 {"name":"in pristine condition",     "score":100 }
+
+# Foo is a ________ greatsword that is well maintained
+ZADD mundaneitem_quality   5 {"name":"shoddy",   "score":5   }
+ZADD mundaneitem_quality  20 {"name":"poor",     "score":10  }
+ZADD mundaneitem_quality  80 {"name":"average",  "score":90  }
+ZADD mundaneitem_quality  95 {"name":"good",     "score":95  }
+ZADD mundaneitem_quality 100 {"name":"excellent","score":100 }
+
 
 
 LPUSH mundaneitem_kind 10-foot ladder
@@ -27,7 +40,7 @@ LPUSH mundaneitem_kind assorted wooden colored/decorative bead
 LPUSH mundaneitem_kind assorted wooden plain bead
 LPUSH mundaneitem_kind auger
 LPUSH mundaneitem_kind axle
-LPUSH mundaneitem_kind backpack 
+LPUSH mundaneitem_kind backpack
 LPUSH mundaneitem_kind ball and chain
 LPUSH mundaneitem_kind bamboo
 LPUSH mundaneitem_kind bandages
@@ -36,7 +49,7 @@ LPUSH mundaneitem_kind barbed wire
 LPUSH mundaneitem_kind bardiche
 LPUSH mundaneitem_kind barrel
 LPUSH mundaneitem_kind basic lock
-LPUSH mundaneitem_kind basket 
+LPUSH mundaneitem_kind basket
 LPUSH mundaneitem_kind basket-hilt broadsword
 LPUSH mundaneitem_kind bat'leth
 LPUSH mundaneitem_kind battle book
@@ -83,7 +96,7 @@ LPUSH mundaneitem_kind broom
 LPUSH mundaneitem_kind brush machete
 LPUSH mundaneitem_kind bubbleweed
 LPUSH mundaneitem_kind bucket
-LPUSH mundaneitem_kind bucket 
+LPUSH mundaneitem_kind bucket
 LPUSH mundaneitem_kind buckler
 LPUSH mundaneitem_kind bullseye lantern
 LPUSH mundaneitem_kind buster sword
@@ -111,7 +124,7 @@ LPUSH mundaneitem_kind chaps
 LPUSH mundaneitem_kind charcoal
 LPUSH mundaneitem_kind cheese
 LPUSH mundaneitem_kind chef's tools
-LPUSH mundaneitem_kind chest 
+LPUSH mundaneitem_kind chest
 LPUSH mundaneitem_kind chisel
 LPUSH mundaneitem_kind clay/beeswax block
 LPUSH mundaneitem_kind clay jug
@@ -213,7 +226,7 @@ LPUSH mundaneitem_kind fixed wooden ladder
 LPUSH mundaneitem_kind flag
 LPUSH mundaneitem_kind flagon
 LPUSH mundaneitem_kind flaked stone
-LPUSH mundaneitem_kind flask 
+LPUSH mundaneitem_kind flask
 LPUSH mundaneitem_kind flask of citronella oil
 LPUSH mundaneitem_kind flask of lamp oil
 LPUSH mundaneitem_kind flint and steel
@@ -250,7 +263,7 @@ LPUSH mundaneitem_kind gossamer
 LPUSH mundaneitem_kind grapnel
 LPUSH mundaneitem_kind grappling hook
 LPUSH mundaneitem_kind great annulat
-LPUSH mundaneitem_kind greatbow 
+LPUSH mundaneitem_kind greatbow
 LPUSH mundaneitem_kind great cleaver
 LPUSH mundaneitem_kind greater prosthetic limb
 LPUSH mundaneitem_kind greatspear
@@ -496,7 +509,7 @@ LPUSH mundaneitem_kind rope axe
 LPUSH mundaneitem_kind rope ladder
 LPUSH mundaneitem_kind rubber ball
 LPUSH mundaneitem_kind rubber wetsuit
-LPUSH mundaneitem_kind sack 
+LPUSH mundaneitem_kind sack
 LPUSH mundaneitem_kind sandals
 LPUSH mundaneitem_kind saw
 LPUSH mundaneitem_kind scarf
@@ -543,7 +556,7 @@ LPUSH mundaneitem_kind sleeping sack
 LPUSH mundaneitem_kind sleep poison
 LPUSH mundaneitem_kind slide ruler
 LPUSH mundaneitem_kind small animal leash
-LPUSH mundaneitem_kind small barrel  
+LPUSH mundaneitem_kind small barrel
 LPUSH mundaneitem_kind small basket
 LPUSH mundaneitem_kind small bell
 LPUSH mundaneitem_kind small belt pouch
@@ -598,7 +611,7 @@ LPUSH mundaneitem_kind sponge
 LPUSH mundaneitem_kind spring loaded wrist sheath
 LPUSH mundaneitem_kind spring sheath
 LPUSH mundaneitem_kind spyglass
-LPUSH mundaneitem_kind stainless steel w/silver chain locket
+LPUSH mundaneitem_kind stainless steel locket w/silver chain
 LPUSH mundaneitem_kind standard adventurer's kit
 LPUSH mundaneitem_kind standardized spell components
 LPUSH mundaneitem_kind stone flask

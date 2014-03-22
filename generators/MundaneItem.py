@@ -14,4 +14,7 @@ class MundaneItem(Generator):
 
         Generator.__init__(self,redis,features)
 
-        self.text=self.kind
+        if not hasattr(self,'text'):
+            self.text=self.render_template("{{params.quality['name']|article}} {{params.kind}}, {{params.repair['name']}}")
+        self.text=self.text[0].capitalize()+self.text[1:]
+
