@@ -272,8 +272,15 @@ def Event_Builder():
 def GenerateGem():
     """Generate a simple gem"""
     features=feature_filter('gem')
-    gem=Gem.Gem(server,features)
-    return render_template('oneliner.html', oneliner=gem ,titletext='Oh, shiny...', generator='gem' )
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        gems=[]
+        for item in xrange(int(request.args['count'])):
+            gems.append(Gem.Gem(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=gems, oneliner=gems[0] ,titletext='OOOH, Shiny...', generator='gem' )
+    else:
+        gem=Gem.Gem(server,features)
+        return render_template('oneliner.html', oneliner=gem ,titletext='OOOH, Shiny...', generator='gem' )
 
 @app.route('/gem_builder')
 def Gem_Builder():
@@ -283,16 +290,6 @@ def Gem_Builder():
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='gem') 
     
 #########################################################################
-#@app.route('/mundaneitem')
-#def GenerateMundaneItem():
-#    """Generate a simple mundaneitem"""
-#    features=feature_filter('mundaneitem')
-#    if request.args['count'] and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
-#    else:
-#        mundaneitem=MundaneItem.MundaneItem(server,features)
-#        return render_template('oneliner.html', oneliner=mundaneitem ,titletext='Look what I found!', generator='mundaneitem' )
-#
-
 
 @app.route('/mundaneitem')
 def GenerateMundaneItem():
@@ -302,7 +299,6 @@ def GenerateMundaneItem():
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
         mundaneitems=[]
         for item in xrange(int(request.args['count'])):
-            print features
             mundaneitems.append(MundaneItem.MundaneItem(server,features))
             features['seed']=set_seed( )
         return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0] ,titletext='Look what I found!', generator='mundaneitem' )
