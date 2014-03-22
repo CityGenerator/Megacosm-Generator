@@ -102,985 +102,911 @@ LPUSH mundaneitem_kind wine bottle
 LPUSH mundaneitem_kind wooden holy symbol
 
 
-#APRON, LEATHER WORK
-#BELT (CAPACITY 10#)
-#BELT, MONEY (W/ZIPPER)
-#BLOUSE, COTTON
-#BLOUSE, SILK
-#BODY SUIT, SILK
-#BOOTS, CLIMBING
-#BOOTS, HIGH, HARD
-#BOOTS, HIGH, SOFT
-#BOOTS, HIP (WADER TYPE)
-#BOOTS, LOW, HARD
-#BOOTS, LOW, SOFT
-#BOOTS, SKI
-#CAP
-#CAPE
-#CAPE, HEAVY FUR
-#CEREMONIAL ROBES
-#CHAPS
-#CLOAK
-#CLOAK, THIEVES
-#COAT, FULL LENGTH, FUR (N/ARMOR)
-#COAT, FULL LENGTH, LEATHER
-#COAT, FULL LENGTH, WOOL
-#COAT, RAIN (LEATHER & RUBBER)
-#COAT, WAIST LENGTH, FUR (N/ARMOR)
-#COAT, WAIST LENGTH, LEATHER
-#COAT, WAIST LENGTH, WOOL
-#COLLAR, SPIKED
-#DESERT GOGGLES AND HEAD GEAR
-#DISGUISE KIT (CONT. ACCOUTERMENTS FOR 3 DIFFERENT DISGUISES. W/LCC)
-#DRESS, COMMON
-#DRESS, EXPENSIVE
-#EAR MUFFS
-#EYE PATCH
-#EYEGLASSES, PRESCRIPTION
-#FACE MASK, CARNIVAL TYPE
-#GIRDLE, BROAD (CAPACITY 20#)
-#GIRDLE, NORMAL (CAPACITY 15#)
-#GLOVES, ALL PURPOSE, LEATHER
-#GLOVES, HEAVY DUTY, LEATHER
-#GLOVES, VERY FINE, LEATHER
-#GOWN, COMMON
-#HAT, HARD
-#HAT, JESTERS (THREE-CORNERED W/BELLS)
-#HAT, SOFT
-#HEAD BAND
-#HOOD, FUR
-#HOOD, WOOL
-#LEGGINGS, WOOL
-#LIFE VEST
-#LOIN CLOTH
-#MANTLE, JESTERS (STAR SHAPED W/BELLS)
-#MANTLE, LEATHER
-#MITTENS
-#MITTENS, ASBESTOS
-#PANTS, LONG, COTTON
-#PANTS, LONG, LEATHER
-#PANTS, LONG, SILK
-#PANTS, LONG, WOOL
-#PANTS, SHORT, COTTON
-#PANTS, SHORT, WOOL
-#PARKA, FULL LENGTH, HEAVY
-#PARKA, WAIST LENGTH, HEAVY
-#PHYLACTERY, COMMON ARM BAND
-#PHYLACTERY, RELIGIOUS WRITINGS
-#SANDALS
-#SASH, COTTON
-#SASH, SILK
-#SCARF
-#SHIRT, COTTON
-#SHIRT, SILK
-#SHIRT, WOOL
-#SHOES, HARD, WALKING
-#SHOES, SILENT (gives +4% to Move Silently chance)
-#SHOES, SOFT, WALKING
-#SKI MASK
-#SKIS (W/POLES)
-#SNOWSHOES
-#SOCKS, COTTON
-#SOCKS, WOOL
-#STD. SET ADVENTURERS CLOTHING. (COTTON SHIRT, LONG PANTS, SOCKS, UNDERWEAR; LOW HARD BOOTS)
-#STRAIGHT JACKET
-#SUIT, FINELY TAILORED
-#SURCOAT
-#SUSPENDERS
-#SWIM FINS
-#TABARD
-#TABI
-#TIGHTS, SILK
-#TOGA
-#TUNIC, COTTON
-#TUNIC, LEATHER
-#TUNIC, WOOL
-#UNDERWEAR, COTTON
-#UNDERWEAR, SILK
-#UNDERWEAR, WOOL
-#UTILITY JUMPSUIT, ONE PIECE
-#UTILITY JUMPSUIT, ONE PIECE, CAMOUFLAGE
-#VEST, COTTON
-#VEST, LEATHER
-#VEST, WOOL
-#WEAPONS HARNESS (CAPACITY 30#)
-#WETSUIT, RUBBER (W/GOGGLES & SNORKEL)
-#
-#
-#
-#BEAD, WOODEN, ASSORTED, COLORED/DECORATIVE
-#ACID, METAL EATING +4 OZ+ (EATS 1 CU. INCH/HOUR)
-#ANVIL
-#BANDAGES (IF USED W/HEALING PROF. GIVES +1 TO DAMAGE HEALED. ONE USE PER BANDAGE)
-#BEAD, GLASS, SCORED
-#BOOK/JOURNAL, BLANK +200 PG (2H/8.5W/11L)+
-#BOWSTRING +5'L+
-#BOX, METAL, PADDED, AIRTIGHT +3H/3W/3L+
-#BOX, SMALL, GOLD +2H/6W/6L+
-#BRUSH AND COMB SET, HARDWOOD
-#BRUSH, PAINT, SMALL
-#CANDLE, 1 INCH (BURNS 10 MINUTES/INCH)
-#CHAIN, HEAVY +12L+
-#CHALK +6L/.5D+
-#CLAY/BEESWAX BLOCK +1 CU INCH+
-#CLIP (USED TO SECURE ITEMS TO A BELT, ROPE, ETC.)
-#CORK
-#CRYSTAL BALL W/STAND
-#DICE, BONE, LOADED
-#DICE, BONE
-#DICE, IVORY
-#DRILL SET, DIAMOND TIPPED (W/LCC)
-#EYEGLASSES, PRESCRIPTION
-#FISH HOOK
-#FISHING GEAR (LINE, LURES, HOOKS, BOBBERS, SINKERS)
-#HOLY SYMBOL, GOLD
-#HORN, SIGNALLING (W/LEATHER SHOULDER STRAP)
-#INCENSE STICK +6L/.5D+
-#INKED RIBBON FOR TYPEWRITER
-#INK, SMALL BOTTLE +1 OZ+
-#JACK (LIFTS 2500 LBS 3')
-#KEY
-#KITE
-#KNIFE, FORK, AND SPOON (EATING UTENSILS W/WCC)
-#LANTERN, BEACON
-#LOCKET, STAINLESS STEEL W/SILVER CHAIN
-#LOCK, SUPERIOR
-#MAKEUP, CAMOUFLAGE (+2% to hide in shadows. 10 applications)
-#MECHANICAL TYPEWRITER
-#NAIL
-#NEEDLE, BONE
-#NEEDLE, METAL
-#NUT & BOLT
-#PAINT/DYE/PIGMENT (4OZ. GLASS VIAL)
-#PAPER, PAGE, EXTRA FINE (FOR SCROLLS) +11H/8.5W+
-#PAPER, PAGE, LOW GRADE (NOT SUITABLE FOR SCROLLS) +11H/8.5W+
-#PAPYRUS, PAGE, UNTREATED +11H/8.5W+
-#PAPYRUS, SHEET, UNTREATED +5'H/5'W+
-#PARACHUTE, SILK, LARGE
-#PARACHUTE, SILK, MEDIUM
-#PARACHUTE, SILK, SMALL
-#PARCHMENT, PAGE, TREATED +11H/8.5W+
-#PARCHMENT, PAGE, UNTREATED +11H/8.5W+
-#PARCHMENT, TREATED +5'H/5'W+
-#PARCHMENT, UNTREATED +5'H/5'W+
-#POISON, FEIGN DEATH (SINGLE DOSE, INGESTIVE/IMMEDIATE/FEIGN DEATH 1D20+10 RNDS, SVS POISON)
-#POISON, SLEEP (SINGLE DOSE, INJECTIVE/IMMEDIATE/SLEEP 1D6 RNDS, SVS POISON +2)
-#PRAYER BEADS (STRING OF 100)
-#QUILL
-#REED, HOLLOW
-#RING, FINGER/EAR/NOSE
-#RULER, WOODEN +12L+
-#SACK, SMALL (CAPACITY 15#)
-#SCROLL CASE (LEATHER CASE W/15 POCKETS ROLLS UP AND TIES SHUT) +18L/3D+
-#SCROLL TUBE, LEATHER (HOLDS 24 PAPER/12 PARCHMENT/6 PAPYRUS, PAGES)
-#SPELL BOOK, WIZARDS, LARGE (EMPTY, 200 PAGES) 90# ENC. +15H/12W/12L+
-#SPELL BOOK, WIZARDS, STANDARD (EMPTY, 100 PAGES) 45# ENC. +16H/12W/6L+
-#SPELL BOOK, WIZARDS, TRAVELING (EMPTY, 50 PAGES) 6# ENC.+12H/6W/1L+
-#SPELL COMPONENTS, STANDARDIZED (1ST LVL COST=1GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (2ND LVL COST=4GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (3RD LVL COST=9GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (4TH LVL COST=16GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (5TH LVL COST=25GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (6TH LVL COST=36GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (7TH LVL COST=49GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (8TH LVL COST=64GP. IN PRE PACKAGED PAPER PACKETS)
-#SPELL COMPONENTS, STANDARDIZED (9TH LVL COST=81GP. IN PRE PACKAGED PAPER PACKETS)
-#SPONGE (DRIED & PRESSED FOR STORAGE. ABSORBS 100 X WEIGHT)
-#SPYGLASS, TELESCOPIC, RETRACTABLE +12-36L/2D+ (5000 FT RNG, W/WCC)
-#TOOLS, TINKERERS POCKET (LEATHERMAN/GERBER TOOL)
-#VIAL, GLASS +4 OZ+
-#WATER CLOCK (ACCURATE TO THE SECOND FOR 1 YEAR)
-#WATER PURIFICATION TABLET (1 TABLET PURIFIES 1 GALLON)
-#WOODSCREW
-#BEAD, WOODEN, ASSORTED, PLAIN
-#ABACUS
-#ADJUSTABLE WRENCH
-#AIR BLADDER
-#ANIMAL CALL
-#ARMOR CARE KIT (MATERIAL TO REPAIR 6 ARMOR PUNCTURES. MUST HAVE ARMOR PROFICIENCY)
-#ASCENDER (MECHANICAL HAND GRIP DEVICE WHICH ONLY MOVES UP A ROPE)
-#BACKPACK FRAME, METAL (INCREASES LEATHER BACKPACK CAP. TO 85 #)
-#BACKPACK, LEATHER (CAPACITY 50#)
-#BALL, RUBBER +6D+
-#BAMBOO +10'H/1-2"W+
-#BANDOLIER, COMPONENT, CLOTH (HOLDS UP TO 100 COMPONENTS IN 25 POCKETS. 4/POCKET)
-#BANDOLIER, COMPONENT, LEATHER (HOLDS UP TO 100 COMPONENTS IN 25 POCKETS. 4/POCKET)
-#BANDOLIER, DAGGER, LEATHER (HOLDS UP TO 8 COMMON DAGGERS)
-#BARBED WIRE +36L+
-#BARREL +40 GAL+
-#BASKET, LARGE (CAPACITY 20#)
-#BASKET, SMALL (CAPACITY 10#)
-#BEAD DISPENSER TUBE, LARGE, METAL +10 BEADS+
-#BEAD DISPENSER TUBE, SMALL, METAL +5 BEADS+
-#BEAR TRAP
-#BELLOWS
-#BELL, SMALL
-#BELT, MONEY (W/DRAWSTRINGS CAPACITY 40 COINS)
-#BELT, MONEY (W/ZIPPER CAPACITY 20 COINS)
-#BIRD CAGE
-#BLANKET, HEAVY +7'H/7'W+
-#BLOCK & TACKLE (W/100'L ROPE. LIFTS 1000 LBS)
-#BLOCK & TACKLE (W/100'L ROPE. LIFTS 100 LBS)
-#BLOCK & TACKLE (W/100'L ROPE. LIFTS 200 LBS)
-#BLOCK & TACKLE (W/100'L ROPE. LIFTS 500 LBS)
-#BODY SLEIGH (CARRY UP TO LG. 10XSTR@3/4MV:20XSTR@1/2MV:25XSTR@1/4MV CON RNDS DURATION)
-#BOLT CUTTERS
-#BOX, METAL, PADDED, AIRTIGHT +3H/6W/12L+
-#BOX, SMALL, LEAD +2H/6W/6L+
-#BRANDING IRON
-#BRAZIER, ADJUSTABLE HEIGHT +36-6'H+
-#BRONZE PIECE +36H/36W+
-#BROOM
-#BROOM, SMALL, WISK
-#BRUSH AND COMB SET, SILVER
-#BRUSH, PAINT, LARGE
-#BUCKET
-#CAGE, COLLAPSIBLE, BAMBOO +TIT MOUSE TO FALCON+
-#CAGE, COLLAPSIBLE, BRASS +TIT MOUSE TO FALCON+
-#CALTROPS (BOX OF 100. SEE WEAPONS FOR EFFECTS)
-#CAMOUFLAGE MAKEUP +25 APPLICATIONS+ (Adds +2% to hide in shadows when appropriate)
-#CANDLE HOLDER, METAL
-#CANDLE, SCONCE, METAL +6 CANDLE+
-#CANDLE, SELF DOUSING (METAL BASE W/GLASS RESEVOIR HOLDS WATER)
-#CANDLE, TIMING (BURNS FOR 1 DAY W/GRADUATION MARKS FOR HRS & 5 MIN INCREMENTS)
-#CANE (WALKING STICK)
-#CANTEEN +64 OZ+ (4# EMPTY)
-#CANVAS+1 SQ YD+
-#CARABINER (ATTACHING CLIP)
-#CARDS, PLAYING
-#CARDS, TAROT
-#CASE, BOLT, WOODEN (CAPACITY 20)
-#CASE, DART, WOODEN (CAPACITY 20)
-#CASK +15 GAL+
-#CAULDRON +20 GAL+
-#CHAIN, LIGHT +12L+
-#CHAIR, FOLDING, LOUNGE
-#CHALK BOARD, SMALL (W/LCC & ERASING CLOTH) +12W/12H+
-#CHALK POWDER
-#CHARCOAL +16 OZ+
-#CHEST, WOODEN, LARGE (CAPACITY 100#) +18H/36W/24L+
-#CHEST, WOODEN, MEDIUM (CAPACITY 65#) +12H/24W/12L+
-#CHEST, WOODEN, SMALL (CAPACITY 40#) +3H/12W/6L+
-#CHIME, SMALL
-#CHISEL, HEAVY
-#CLIMBING HARNESS (Move silently chance reduced 15% when worn, unless secured)
-#CLIMBING IRONS (Gives +7% to Climb Walls when appropriate, -3 penalty to normal Movement until removed)
-#CLOTH, COMMON +10 SQ YDS+
-#CLOTH, FINE +10 SQ YDS+
-#CLOTH, RICH +10 SQ YDS+
-#COMPASS, HAND
-#COMPASS, SHIPS
-#CORKSCREW
-#CRAMPONS (PAIR. INC. CLIMB 15%/MNTNRNG +1. STOMP: 1D2/100#, MELEE: 1 DAM. DEX SV OR FALL IF MISS)
-#CROWBAR
-#CRUCIBLE (W/LADDLE. FOR LIQUIDATING SMALL QUANTITIES OF METALS) +3'H/1.5'D+
-#CURRENCY TESTING LIQUID (VIAL, TESTS 1000 COINS FOR PURITY) +1 OZ+
-#DESCENDER (BRAKE BAR)
-#DESERT GOGGLES & HEADGEAR
-#DISGUISE KIT (CONT. ACCOUTERMENTS FOR 3 DIFFERENT DISGUISES. W/LCC) +3 to Disguise proficiency))
-#DISHES/UTENSILS, SET OF TIN, COOKING/EATING (W/LCC)
-#DISH/PLATE OR BOWEL, SMALL
-#DOG COLLAR
-#EYEPIECE, JEWELERS/APPRAISERS
-#FILE, METAL (CUT THROUGH .25Ó OF IRON IN 1 TURN)
-#FISHING NET +10 SQ FT+
-#FISHING POLE, SECTIONED +12-8'L+ (W/CCC)
-#FLAGON
-#FLAG OR BANNER
-#FLASK, GLASS (.5# EMPTY)
-#FLASK, GLASS, SCORED (.5# EMPTY)
-#FLASK, METAL (1# EMPTY)
-#FLASK, STONE (2# EMPTY)
-#FLASK, WOODEN (.2# EMPTY)
-#FOLDING COT
-#GLASS CUTTERS KIT (W/LCC)
-#GLUE, WOOD/PAPER, JAR +16 OZ+
-#INK, STANDARDIZED, SCROLL COMPOSING (FOR 1 SPELL. COST IS PER LVL)
-#MUSICAL INSTRUMENT
-#QUILL, STANDARDIZED, SCROLL COMPOSING (FOR 1 SPELL. COST IS PER LVL)
-#SPELL COMPONENTS, STANDARDIZED (10TH LVL COST=100GP. IN PRE PACKAGED PAPER PACKETS)
-#GRAPNEL, FIXED, 3 PRONG
-#GRAPNEL, FOLDING, 3 PRONG (W/MCC)
-#GROOMERS KIT (FOR ANIMAL GROOMING) W/LCC
-#HACKSAW
-#HAIR COMB
-#HAMMOCK (CAPACITY 350#)
-#HAND BOAR, WOOD
-#HANDCUFFS
-#HEALERS KIT (GIVES +2 TO HEALING ROLL. 10 USES. W/LCC)
-#HEALERS KIT, VETERINARY (GIVES +2 TO HEALING ROLL. 10 USES. W/LCC)
-#HEARING CONE (Gives +5% on Hear Noises, when appropriate)
-#HINGE REMOVING KIT (W/LCC; MUST MAKE DEX CHECK AT +1; TAKES 1 TURN)
-#HOLY SYMBOL, IRON
-#HOLY SYMBOL, SILVER
-#HOLY SYMBOL, WOODEN
-#HOLY WATER, VIAL +4 OZ+
-#HOUR GLASS
-#HOUSEBREAKER HARNESS OR SPIDER (Move silently chance reduced 15% when worn, unless secured)
-#IDOL, SMALL, IVORY
-#INSTRUMENTS, DISSECTION (W/LCC) +8L/4W/3H+
-#IRON BAR +36L/1D+
-#IRON BOX, LARGE +15H/36W/24L+
-#IRON BOX, MEDIUM +12H/24W/12L+
-#IRON BOX, SMALL +2H/12W/6L+
-#IRON POT, SMALL
-#IRON WEDGE (FOR JAMMING/HOLDING THINGS OPEN)
-#KEG +5 GAL+
-#KEY MAKING KIT
-#KNIFE, STAGE (RETRACTABLE, FAKE, BLUNT)
-#LADDER, METAL, EXTENDIBLE (CAPACITY 1000#) +5'-20'L+
-#LADDER, ROPE (CAPACITY 600#) PER 4'L +18W/8-60'L+
-#LADDER, WOODEN, FIXED (CAPACITY 800#) +12'L+
-#LANTERN, BULLSEYE
-#LANTERN, BULLSEYE, WATERPROOF
-#LANTERN, HOODED
-#LARD +16 OZ+
-#LEASH, ANIMAL, LARGE
-#LEASH, ANIMAL, MEDIUM
-#LEASH, ANIMAL, SMALL
-#LEATHER PIECE +36H/36W+
-#LEVEL
-#LOCK, COMMON
-#LOCK, INFERIOR
-#LOUNGE, FOLDING CHASE
-#MAGNIFYING GLASS
-#MALLET, CORDING
-#MALLET, WOODEN
-#MANACLES (W/3' HEAVY CHAIN & KEY)
-#MAPING KIT (BONE SCROLL TUBE W/12 RULED MAPS, INK & QUILL)
-#MARBLES (BAG OF 100. MV @ 1/2 MV OR DEX CHECK FOR SLIPPING; FAILED CHECK MEANS FALL FOR 1 RND)
-#MERCHANTS SCALE W/WEIGHTS
-#METAL SHEARS
-#METAL TONGS +36L+
-#MINERS HARD HAT (W/REFLECTOR & SMALL OIL LAMP. LIGHT 15', BURNS 1 OZ. IN 4 HRS)
-#MIRROR, LARGE +24H/12W+
-#MIRROR, SMALL +2H/2W+
-#MORTAR & PESTLE SET
-#NET, HAND +36L/24D+
-#OAR, PADDLE
-#OARS +SET OF 2+
-#OIL, FLASK OF CITRONELLA +16 OZ+
-#OIL, FLASK OF GREEK FIRE +16 OZ+
-#OIL, FLASK OF LAMP +16 OZ+
-#OIL, WATERPROOFING
-#PAINT +16 OZ+
-#PAINTBRUSH, LARGE
-#PAINTBRUSH, SMALL
-#PAINT, OIL BASED, COLORED +1 GAL+
-#PAINT, OIL BASED, WHITE WASH +1 GAL+
-#PAVILION +10'H/20'W/20'L+
-#PERFUME, VIAL +4 OZ+
-#PICK, CLIMBING
-#PICK, MINING
-#PILLOW, SMALL
-#PIPE, SMOKING
-#PITTON, CLIMBING
-#PITTON HAMMER
-#PLANK, HARDWOOD +1H/6W/6'L+
-#PLANK, SOFTWOOD +1H/6W/6'L+
-#PLIERS
-#POCKET KNIFE
-#POLE, METAL, RETRACTABLE +24-20'L/1.5D+ (SUPPORTS 500 LBS)
-#POLE, WOODEN +10'L/1.5D+ (SUPPORTS 250 LBS)
-#POUCH, BELT, LARGE (CAPACITY 8#)
-#POUCH, BELT, SMALL (CAPACITY 5#)
-#POUCH, BELT, SMALL, LEAD-LINED (CAPACITY 2.5#)
-#POUCH, SHOULDER, LARGE (CAPACITY 10#)
-#POUCH, SHOULDER, SMALL (CAPACITY 5#)
-#PROTRACTOR
-#PULLEY
-#QUIVER, ARROW (CAPACITY 20)
-#QUIVER, JAVELIN (CAPACITY 4)
-#RAT TRAP
-#RAZOR, SHAVING (W/LCC)
-#RING, SIGNET/SEAL
-#ROPE, HEMP +50'L+
-#ROPE, SILK +50'L+
-#RUG, SMALL, PRAYER
-#SACK, LARGE (CAPACITY 30#)
-#SAIL, SMALL
-#SAW, WOOD
-#SAW, WOOD, TWO MAN
-#SCISSORS
-#SCREW DRIVER
-#SCROLL TUBE, BONE (HOLDS 24 PAPER/12 PARCHMENT/6 PAPYRUS, PAGES)
-#SCROLL TUBE, METAL (HOLDS 24 PAPER/12 PARCHMENT/6 PAPYRUS, PAGES)
-#SEALING WAX +16 OZ+
-#SEXTANT
-#SHEATH, LARGE WEAPON
-#SHEATH, SMALL WEAPON
-#SHEATH, SPRING LOADED, WRIST (FOR 1 SM. DAGGER ONLY, DIRK OR STILLETO)
-#SHOVEL
-#SHOVEL, SMALL, FOLDING
-#SLEEPING SACK
-#SLEEPING SACK, TREE MOUNTING (W/WOODEN FRAME. WHICH MUST BE ASSEMBLED TO USE IN TREE)
-#SLIDE RULER (HIGHLY COMPLEX, USED FOR PERFORMING VARIOUS MATHEMATICAL CALCULATIONS)
-#SOAP +16 OZ+
-#SPIKE, LARGE, IRON
-#STAKE, WOODEN +24L/1D+
-#STOOL, ADJUSTABLE HEIGHT +24-5'H+
-#STRAPS, LONG (3'-6')
-#STRAPS, MEDIUM (1'-3')
-#STRAPS, SHORT (6Ó-1')
-#STRAW MAT
-#TABLE, SMALL, FOLDING +36H/36W/36L+
-#TARP, LARGE (W/GROMMETS) +10'H/10'W+
-#TARP, SMALL (W/GROMMETS) +5'H/5'W+
-#TENT, LARGE (10 MAN)
-#TENT, MEDIUM (5 MAN)
-#TENT, SMALL (2 MAN)
-#THIEVES PICKS & TOOLS (W/LCC)
-#THONGING +5'L+
-#THREAD, REEL OF +100'L+
-#TINDERBOX W/FLINT & STEEL (MAY BE USED TO START 12 FIRES. W/LCC)
-#TOOLS, COMPLETE SET OF, CARPENTERS (IN WOODEN TOOLBOX) +10H/20W/10L+
-#TOOL/TACKLE BOX, WOODEN +8H/6W/16L+
-#TORCH
-#TOWEL, COTTON
-#TREE SEAT (1 PERSON)
-#TWINE +50'L+
-#WATER/WINE SKIN (4# EMPTY) +64 OZ+
-#WEAPONBLACK (FOR 10 KNIVES/2 SWORDS) +6 0Z.+ (Thieves coating weapons with this gain +5% bonus to H.I.S)
-#WEAPONS HARNESS
-#WEDGE, IRON
-#WHEELBARREL, FOLDING (CAPACITY 300 LBS)
-#WHETSTONE
-#WHISTLE, COMMON
-#WHISTLE, DOG
-#WIRE, 10 GAUGE +10'L+
-#WIRE CUTTERS
-#
-#
-#
-#
-#Adventurer's Kit, Standard
-#Arcane magnification armour upgrade
-#Arctic Camouflage
-#Baby of Wonder
-#Bag of Halflings
-#Bolt Magazine
-#Bowstring
-#Dark Camouflage
-#Dentures
-#Dragoncraft Mantle
-#Dust of Corrosion
-#Earthly Camouflage
-#Elf Whistle
-#Eye Patch
-#Festive Lantern
-#Foliage Camouflage
-#Glasses
-#Goggles
-#Grappling Hook Launcher
-#Gunpowder (4e
-#InkPen
-#Lanterns Silk.
-#Mana Crystal
-#Matchcord
-#Matter transformation armor upgrade
-#Mining Helmet
-#Planeshifter Outfit
-#Planewalker Outfit
-#Poncho
-#Prosthetic Limb, Greater
-#Prosthetic Limb, Lesser
-#Repeater Module
-#SLAGDRAM
-#Satchel of Perfect Preservation
-#Seal's Blubber
-#Senali Mask
-#Simple Fire Gloves (4e
-#Spider Egg, Monstrous
-#Spider Silk Rope
-#Spring Sheath
-#Steam Engine, Personal
-#Steam Pressure Generator
-#Traveling Duster
-#
-#
-#
-#Adrenaline
-#Air Elemental Evolution Pellet
-#Alchemist's Alchohol
-#Alkali
-#Arcane magnification armour upgrade
-#Black Egg
-#Blood Moss
-#Boomer™s Bile
-#Brown Moss pellet
-#Corrusium Sand
-#Dopamine
-#Dreammist
-#DryOil
-#Earth Elemental Evolution Pellet
-#Fertilizer
-#Fire Elemental Evolution Pellet
-#Fireworks
-#Frostshard
-#Fulminating Gold
-#Fulminating Silver
-#Hazlar
-#Hydrogen Peroxide
-#Insect Repellent
-#Jarate
-#Knick Nacks
-#Lightning Rod
-#Luminous Water
-#Matter transformation armor upgrade
-#Mist Pellet
-#Nitroglycerin
-#Oil of Brick
-#Plating Canister
-#Powder of Sympathy
-#Powdered Pearl
-#Red Herb
-#Refined Oil
-#Smelling Salts
-#Soulrender Acid
-#Spell Fuse Chalk
-#Synthetic Boomer Bile
-#Truth Serum
-#Unguent of the Elements
-#Water Elemental Evolution Pelle
-#
-#
-#Academic Tome
-#Apprentice's Book of Cantrips
-#Arcane magnification armour upgrade
-#Blasting Kit
-#Bone Joint Straps
-#Book of Animal Handling
-#Book of Skill
-#Cauldron
-#Chef's Tools
-#Clown's Kit
-#Collection of Epic Tales
-#Cook Book
-#Crowbar, Large
-#Crowbar, Small
-#Duelist's Hilt
-#Forgery kit
-#Grapnel
-#Guitar
-#Gunstub
-#Healing Kit
-#Hypo Canister
-#Hypo Pistol
-#Investigator's Kit
-#Juggler's Kit
-#Matter transformation armor upgrade
-#Portable painting easel
-#Puppet
-#Quick loader
-#Repair Kit
-#Restraining Pole
-#Scouter
-#Spice Kit
-#Sure-Strike Matches
-#Tattoo Kit
-#Torturer's Lab
-#Unicycle
-#Utility Belt
-#
-#
-#
-#
-#Arcane magnification armour upgrade
-#Blackbark Wine
-#Blackwater Ale
-#Blood Berry
-#Bread Spawn Meat
-#Bubbleweed
-#Chocobo Greens
-#Chocobo Nuts
-#Displacer Steak
-#Dragon Steaks
-#Dumathoins Draught
-#Elf Bean Coffee
-#Glowcap Mushrooms
-#Good Quality Rations
-#Haute Cheese Soupe
-#Kwama Lager
-#Laughing Shroom
-#Lukazade
-#Madiera Wine
-#Manticore Snacks
-#Matter transformation armor upgrade
-#Mellow-leaf Wine
-#Orc Foodstuffs
-#Phoenix Fire Wine
-#Rat's Meat
-#Spanimint wine
-#Spicy Peppers
-#Types of Alcohol (Zyanya Supplement)
-#Underbow Wine
-#Wine of Nightshade
-#
-#
-#Aalbintite
-#Aluminum
-#Arcane Amber Material)
-#Black Metals Template
-#Blood Metal
-#Bright Crystal
-#Bronze
-#Concrete
-#Conjetium
-#Corrusium
-#Damascus Steel
-#Damascus Steel (LD)
-#Dark Iron
-#Dark Mithral
-#Dead Iron
-#Dead Iron Material)
-#Deathmetal
-#Deceiver Debris
-#Difficilium
-#Dragon Water
-#Dragoncraft Armor or Shield
-#Dragonfang Weapons
-#Elven Truesteel
-#Elvenweave
-#Eternium
-#Feather-Light Steel
-#Flaked Stone
-#Fluidsteel
-#Frostshard Ore
-#Glass
-#Gossamer
-#Iridium
-#Leatherweave
-#Legendstone
-#Lunarcrafted
-#Lycanthropic Saliva
-#Lyganium
-#Magorian
-#Mithralweave
-#Moonsteel
-#Nullsteel
-#Obsidian
-#Pearl
-#Pig Iron
-#Plant Fiber
-#Plated Metal
-#Platinum
-#Proteum
-#Quartz Glassteel
-#Samarie's Doomsteel
-#Silverwood
-#Snow Silver
-#Spell Amber
-#Spring Steel
-#Steel, Carbonized
-#Steel
-#Sun Spit
-#Svonelium
-#Tainted Leather
-#Vilebone
-#Void Force
-#Voltaic Steel
-#Winter Wolf Pelt
-#Zamac
-#Zephyrium Ore
-#
-#
-#Agaric Spores
-#Aphrodisiac
-#Arcane magnification armour upgrade
-#Cachin
-#Common Poison
-#Conch Poison
-#Darknut Extract
-#Darkwing Extract
-#Devil's Bane
-#Diluted Black Lotus Extract
-#Diseased Water
-#Dreg Venom
-#Fermented Godsblood
-#Giant Viper's Poison
-#Grek Oil
-#Kolir Death Drink
-#Korath Gas
-#Matter transformation armor upgrade
-#Moonflower Extract
-#Parral Dust
-#Red Dust
-#Snuffle Stuff
-#Toadstool Tears
-#Violet Fungus Poison
-#Violet Mold Paste
-#
-#Arcane magnification armour upgrade
-#Bikini Armor Template
-#Dragoncraft Mantle
-#Druid's Robes
-#Ghillie Suit
-#Hiding Cloak
-#Lanterns Silk.
-#Large Cloak/Cape
-#Mask
-#Matter transformation armor upgrade
-#Quilted Studded Doublet
-#Shinobi Shozoku
-#Skullcap
-#Two-tone Camouflage Poncho
-#Utility Harness
-#
-#
-#Armitars
-#Basket-hilt Broadsword
-#Blood Drinker
-#Brush Machete
-#Cane
-#Clockwork Apocrypha
-#Combat Frying Pan
-#Combat Umbrella
-#Cut and Thrust Sword
-#Defender
-#Dueling Cane
-#Dueling Katana
-#Dwarven Light Lance
-#Ekrund Rods
-#Ezurian Saber
-#Gear Glaive
-#Goblin Spear
-#Hobgoblin Spear
-#Hobgoblin Warspear
-#Hobnail
-#Hook Sword
-#Jian
-#Jutte, Variant
-#Jutte
-#Katana
-#Kodachi
-#Lance, Footman's
-#Leaf Sword
-#Leprechaun Shillelagh
-#Lomepick
-#Masakari
-#Ninja-To
-#Orc Battle-Blade
-#Parry Blade
-#Retractable Bastard Sword
-#Retractable Longsword
-#Retracting Blade
-#Sawnoff Ahlspiess
-#Shield, Broad
-#Shuang Gou
-#Sica
-#Side-sword
-#Snake-Sword
-#Spatha
-#Spear Cane
-#Sword, Long-Handled
-#Thorn Sword
-#Truncheon
-#Vanguard Shield
-#Venetian Warhammer
-#War Sickle
-#
-#Light Melee Weapons
-#Assassin's Friend
-#Cane-sword
-#Combat Knife
-#Half-Moon Katar
-#Katana, Variant
-#Main Gauche
-#Nights Bane
-#Ribbon Blade
-#Sword and Shield Umbrella
-#
-#Hand-and-a-Half Melee Weapons
-#Cavalry Saber
-#Great Cleaver
-#Warmaul
-#
-#Two-Handed Melee Weapons
-#Ankh Staff
-#Axle Auger Ranseur
-#Ball and Chain
-#Bashaak
-#Bat'leth
-#Battle Book
-#Battle Scythe
-#Battlehammer
-#Beta Lance
-#Bidenhander
-#Brandistock
-#Broadaxe, Dwarven
-#Buster Sword
-#Butcher Axe
-#Chain, Weighted
-#Chainsaw
-#Chigiriki
-#Combat Fishing Rod
-#Combat Shovel v2
-#Crook
-#Crusher blade
-#Destructive Axe
-#Discblade
-#Doru
-#Double Kusarigama
-#Double Trident
-#Dueling Shield
-#Eku
-#Elven battle blade
-#Fixed Bayonet
-#Fullblade, Variant
-#Garrote
-#Grand Piano
-#Great Annulat
-#Great Dueling Sword
-#Heavy Dueling Sword
-#Heavy War Staff
-#Hunting Horn
-#Jagged Hammer
-#Juggernaut
-#Kakamas
-#Kamayari
-#Kanabo
-#Krossian Helvruin
-#Kusari-fundo
-#Kusarigama
-#Kyoketsu Shoge
-#Liu Xing Chui
-#Mace, Orc Tribal
-#Mankiri
-#Megaton Hammer
-#Metal Plate
-#Meteor Hammer
-#Moon Staff
-#Nodachi, Variant
-#Nodachi
-#Odachi Helvruin
-#Orc Dreadaxe
-#Otsuchi
-#Quake Hammer
-#Rifle Butt
-#Ring Blade
-#Rope Axe
-#Salvation-From-Perdition
-#Sledgehammer
-#Sodegarami
-#Spiked Hammer
-#Steam Sword
-#Sword, Ambit
-#Tallenta Sharrash
-#Tenro
-#Three-Section Staff
-#Toilet Seat
-#Tsukobo
-#Yari
-#Zanbato
-#
-#Polearms
-#Ahlspiess
-#Bardiche
-#Fauchard
-#Greatspear
-#Greatstaff
-#Iron-Shod Staff
-#Lajatang
-#Lochaber axe
-#Longstaff
-#Lucerne Hammer
-#Military Fork
-#Naginata
-#Partisan
-#Sasumata
-#
-#One-Handed Ranged Weapons
-#Belly Bow
-#Blowgun
-#Dueling Pistol
-#Flak Repeater
-#Fukiya
-#Glass Arrows
-#Gorgon Burst Pistol (4e
-#Hand Crossbow, Martial
-#Hand Crossbow, Repeating
-#Hand Crossbow, Reworked
-#Handgun, Exotic
-#Handgun, Simple
-#Handgun
-#Horsebow
-#Magic Gun, Pistol
-#P-53 Colt Wadjyt
-#P-83 Colt Wadjyt
-#Pistol, Exotic
-#Pistol, Simple
-#Pistol
-#Revolver, Single-Action
-#Revolver, Variant
-#Revolver
-#Revolver Varient
-#Six Shooter
-#Spikra
-#Steam Pistol (3.5
-#Warwhip
-#Wheelock Pistol
-#
-#Two-Handed Ranged Weapons
-#AK-47
-#Arbalest, Heavy
-#Arbalest, Light
-#Arquebus, Heavy
-#Arquebus, Light
-#Battle-Musket, Heavy
-#Battle-Musket, Light
-#Bazooka
-#Bladebow
-#Boltgun
-#Bow Gun, heavy
-#Bow Gun, light
-#Carbine, Lever-Action Repeating
-#Cat Launcher
-#Chaingun
-#Crossbow, Alchemal
-#Crossbow, Clockwork
-#Crossbow, Double Barreled
-#Crossbow, Shielded
-#Crossbow, Sniper's
-#Great Harquebus, Heavy
-#Great Harquebus, Light
-#Great Musket, Heavy
-#Great Musket, Light
-#Greatbow Helvruin
-#Handcannon
-#Harpoon
-#Harquebus, Heavy
-#Harquebus, Light
-#Heavy Repeating Crossbow, Pump-action
-#Heavy Shuriken Thrower
-#Hexagun
-#High Tension Longbow
-#High calibur rifle
-#Lasgun
-#Light Shuriken Thrower
-#M24 Sniper
-#Magic Gun, Rifle
-#Mosin Nagant
-#Musket, Heavy
-#Musket, Light
-#Pistol, Alchemist's Breachload
-#Rebel Matchlock
-#Rifle, Alchemist's Breachload
-#Rifle, Bolt-Action Repeating
-#Rocket Launcher
-#Sniper Rifle
-#Steambolt Minigun
-#Steambolt Rifle
-#Type 95
-#Wire
-#Yumi, Daikyu
-#Yumi, Hankyu
-#
-#Monk Weapons
-#Iron-Shod Staff
-#Lajatang
-#Liu Xing Chui
-#Longstaff
-#
+#abacus
+#academic tome
+#adjustable wrench
+#adrenaline shot
+#adventurer's kit, standard
+#agaric spores
+#ahlspiess
+#air bladder
+#air elemental evolution pellet
+#alchemist's alchohol
+#alkali
+#aluminum
+#animal call
+#ankh staff
+#anvil
+#aphrodisiac
+#apprentice's book of cantrips
+#apron, leather work
+#arbalest, heavy
+#arbalest, light
+#arcane amber material)
+#arcane magnification armour upgrade
+#arctic camouflage
+#armitars
+#armor care kit
+#arquebus, heavy
+#arquebus, light
+#ascender
+#assassin's friend
+#axle auger ranseur
+#baby of wonder
+#backpack frame, metal
+#backpack, leather
+#bag of halflings
+#ball and chain
+#ball, rubber
+#bamboo
+#bandages
+#bandolier, component, cloth
+#bandolier, component, leather
+#bandolier, dagger, leather
+#barbed wire
+#bardiche
+#barrel
+#bashaak
+#basket-hilt broadsword
+#basket, large
+#basket, small
+#bat'leth
+#battle book
+#battlehammer
+#battle-musket, heavy
+#battle-musket, light
+#battle scythe
+#bazooka
+#bead dispenser tube, large, metal
+#bead dispenser tube, small, metal
+#bead, glass, scored
+#bead, wooden, assorted, colored/decorative
+#bead, wooden, assorted, plain
+#bear trap
+#bellows
+#bell, small
+#belly bow
+#belt
+#belt, money
+#beta lance
+#bidenhander
+#bikini armor template
+#bird cage
+#blackbark wine
+#black egg
+#black metals template
+#blackwater ale
+#bladebow
+#blanket, heavy
+#blasting kit
+#block & tackle
+#blood berry
+#blood drinker
+#blood metal
+#blood moss
+#blouse, cotton
+#blouse, silk
+#blowgun
+#body sleigh
+#body suit, silk
+#bolt cutters
+#boltgun
+#bolt magazine
+#bone joint straps
+#book/journal, blank
+#book of animal handling
+#book of skill
+#boomer™s bile
+#boots, climbing
+#boots, high, hard
+#boots, high, soft
+#boots, hip
+#boots, low, hard
+#boots, low, soft
+#boots, ski
+#bow gun, heavy
+#bow gun, light
+#bowstring
+#box, metal, padded, airtight
+#box, small, gold
+#box, small, lead
+#branding iron
+#brandistock
+#brazier, adjustable height
+#bread spawn meat
+#bright crystal
+#broadaxe, dwarven
+#bronze
+#bronze piece
+#broom
+#broom, small, wisk
+#brown moss pellet
+#brush and comb set, hardwood
+#brush and comb set, silver
+#brush machete
+#brush, paint, large
+#brush, paint, small
+#bubbleweed
+#bucket
+#buster sword
+#butcher axe
+#cachin
+#cage, collapsible, bamboo
+#cage, collapsible, brass
+#caltrops
+#camouflage makeup
+#candle, 1 inch
+#candle holder, metal
+#candle, sconce, metal
+#candle, self dousing
+#candle, timing
+#cane
+#cane-sword
+#canteen
+#canvas
+#cap
+#cape
+#cape, heavy fur
+#carabiner
+#carbine, lever-action repeating
+#cards, playing
+#cards, tarot
+#case, bolt, wooden
+#case, dart, wooden
+#cask
+#cat launcher
+#cauldron
+#cavalry saber
+#ceremonial robes
+#chain, heavy
+#chain, light
+#chain, weighted
+#chair, folding, lounge
+#chalk
+#chalk board, small
+#chalk powder
+#chaps
+#charcoal
+#chef's tools
+#chest, wooden, large
+#chest, wooden, medium
+#chest, wooden, small
+#chigiriki
+#chime, small
+#chisel, heavy
+#chocobo greens
+#chocobo nuts
+#clay/beeswax block
+#climbing harness
+#climbing irons
+#clip
+#cloak
+#cloak, thieves
+#clockwork apocrypha
+#cloth, common
+#cloth, fine
+#cloth, rich
+#clown's kit
+#coat, full length, fur
+#coat, full length, leather
+#coat, full length, wool
+#coat, rain
+#coat, waist length, fur
+#coat, waist length, leather
+#coat, waist length, wool
+#collar, spiked
+#collection of epic tales
+#combat fishing rod
+#combat frying pan
+#combat knife
+#combat shovel v2
+#combat umbrella
+#common poison
+#compass, hand
+#compass, ships
+#conch poison
+#concrete
+#conjetium
+#cook book
+#cork
+#corkscrew
+#corrusium
+#corrusium sand
+#crampons
+#crook
+#crossbow, alchemal
+#crossbow, clockwork
+#crossbow, double barreled
+#crossbow, shielded
+#crossbow, sniper's
+#crowbar
+#crowbar, large
+#crowbar, small
+#crucible
+#crusher blade
+#crystal ball w/stand
+#currency testing liquid
+#cut and thrust sword
+#damascus steel
+#dark camouflage
+#dark iron
+#dark mithral
+#darknut extract
+#darkwing extract
+#dead iron
+#dead iron material)
+#deathmetal
+#deceiver debris
+#defender
+#dentures
+#descender
+#desert goggles and head gear
+#desert goggles & headgear
+#destructive axe
+#devil's bane
+#dice, bone
+#dice, bone, loaded
+#dice, ivory
+#difficilium
+#diluted black lotus extract
+#discblade
+#diseased water
+#disguise kit
+#dishes/utensils, set of tin, cooking/eating
+#dish/plate or bowel, small
+#displacer steak
+#dog collar
+#dopamine
+#doru
+#double kusarigama
+#double trident
+#dragoncraft armor or shield
+#dragoncraft mantle
+#dragonfang weapons
+#dragon steaks
+#dragon water
+#dreammist
+#dreg venom
+#dress, common
+#dress, expensive
+#drill set, diamond tipped
+#druid's robes
+#dryoil
+#dueling cane
+#dueling katana
+#dueling pistol
+#dueling shield
+#duelist's hilt
+#dumathoins draught
+#dust of corrosion
+#dwarven light lance
+#ear muffs
+#earth elemental evolution pellet
+#earthly camouflage
+#ekrund rods
+#eku
+#elf bean coffee
+#elf whistle
+#elven battle blade
+#elven truesteel
+#elvenweave
+#eternium
+#eyeglasses, prescription
+#eye patch
+#eyepiece, jewelers/appraisers
+#ezurian saber
+#face mask, carnival type
+#fauchard
+#feather-light steel
+#fermented godsblood
+#fertilizer
+#festive lantern
+#file, metal
+#fire elemental evolution pellet
+#fireworks
+#fish hook
+#fishing gear
+#fishing net
+#fishing pole, sectioned
+#fixed bayonet
+#flagon
+#flag or banner
+#flaked stone
+#flak repeater
+#flask, glass
+#flask, glass, scored
+#flask, metal
+#flask, stone
+#flask, wooden
+#fluidsteel
+#folding cot
+#foliage camouflage
+#forgery kit
+#frostshard
+#frostshard ore
+#fukiya
+#fullblade, variant
+#fulminating gold
+#fulminating silver
+#garrote
+#gear glaive
+#ghillie suit
+#giant viper's poison
+#girdle, broad
+#girdle, normal
+#glass
+#glass arrows
+#glass cutters kit
+#glasses
+#gloves, all purpose, leather
+#gloves, heavy duty, leather
+#gloves, very fine, leather
+#glowcap mushrooms
+#glue, wood/paper, jar
+#goblin spear
+#goggles
+#good quality rations
+#gorgon burst pistol
+#gossamer
+#gown, common
+#grand piano
+#grapnel
+#grapnel, fixed, 3 prong
+#grapnel, folding, 3 prong
+#grappling hook launcher
+#great annulat
+#greatbow helvruin
+#great cleaver
+#great dueling sword
+#great harquebus, heavy
+#great harquebus, light
+#great musket, heavy
+#great musket, light
+#greatspear
+#greatstaff
+#grek oil
+#groomers kit
+#guitar
+#gunpowder
+#gunstub
+#hacksaw
+#hair comb
+#half-moon katar
+#hammock
+#hand-and-a-half melee weapons
+#hand boar, wood
+#handcannon
+#hand crossbow, martial
+#hand crossbow, repeating
+#hand crossbow, reworked
+#handcuffs
+#handgun
+#handgun, exotic
+#handgun, simple
+#harpoon
+#harquebus, heavy
+#harquebus, light
+#hat, hard
+#hat, jesters
+#hat, soft
+#haute cheese soupe
+#hazlar
+#head band
+#healers kit
+#healers kit, veterinary
+#healing kit
+#hearing cone
+#heavy dueling sword
+#heavy repeating crossbow, pump-action
+#heavy shuriken thrower
+#heavy war staff
+#hexagun
+#hiding cloak
+#high calibur rifle
+#high tension longbow
+#hinge removing kit
+#hobgoblin spear
+#hobgoblin warspear
+#hobnail
+#holy symbol, gold
+#holy symbol, iron
+#holy symbol, silver
+#holy symbol, wooden
+#holy water, vial
+#hood, fur
+#hood, wool
+#hook sword
+#horn, signalling
+#horsebow
+#hour glass
+#housebreaker harness or spider
+#hunting horn
+#hydrogen peroxide
+#hypo canister
+#hypo pistol
+#idol, small, ivory
+#incense stick
+#inked ribbon for typewriter
+#inkpen
+#ink, small bottle
+#ink, standardized, scroll composing
+#insect repellent
+#instruments, dissection
+#investigator's kit
+#iridium
+#iron bar
+#iron box, large
+#iron box, medium
+#iron box, small
+#iron pot, small
+#iron-shod staff
+#iron wedge
+#jack
+#jagged hammer
+#jarate
+#jian
+#juggernaut
+#juggler's kit
+#jutte
+#jutte, variant
+#kakamas
+#kamayari
+#kanabo
+#katana
+#katana, variant
+#keg
+#key
+#key making kit
+#kite
+#knick nacks
+#knife, fork, and spoon
+#knife, stage
+#kodachi
+#kolir death drink
+#korath gas
+#krossian helvruin
+#kusari-fundo
+#kusarigama
+#kwama lager
+#kyoketsu shoge
+#ladder, metal, extendible
+#ladder, rope
+#ladder, wooden, fixed
+#lajatang
+#lance, footman's
+#lantern, beacon
+#lantern, bullseye
+#lantern, bullseye, waterproof
+#lantern, hooded
+#lanterns silk.
+#lard
+#large cloak/cape
+#lasgun
+#laughing shroom
+#leaf sword
+#leash, animal, large
+#leash, animal, medium
+#leash, animal, small
+#leather piece
+#leatherweave
+#legendstone
+#leggings, wool
+#leprechaun shillelagh
+#level
+#life vest
+#light melee weapons
+#lightning rod
+#light shuriken thrower
+#liu xing chui
+#lochaber axe
+#lock, common
+#locket, stainless steel w/silver chain
+#lock, inferior
+#lock, superior
+#loin cloth
+#lomepick
+#longstaff
+#lounge, folding chase
+#lucerne hammer
+#lukazade
+#luminous water
+#lunarcrafted
+#lycanthropic saliva
+#lyganium
+#m24 sniper
+#mace, orc tribal
+#madiera wine
+#magic gun, pistol
+#magic gun, rifle
+#magnifying glass
+#magorian
+#main gauche
+#makeup, camouflage
+#mallet, cording
+#mallet, wooden
+#manacles
+#mana crystal
+#mankiri
+#manticore snacks
+#mantle, jesters
+#mantle, leather
+#maping kit
+#marbles
+#masakari
+#mask
+#matchcord
+#matter transformation armor upgrade
+#mechanical typewriter
+#megaton hammer
+#mellow-leaf wine
+#merchants scale w/weights
+#metal eating acid
+#metal plate
+#metal shears
+#metal tongs
+#meteor hammer
+#military fork
+#miners hard hat
+#mining helmet
+#mirror, large
+#mirror, small
+#mist pellet
+#mithralweave
+#mittens
+#mittens, asbestos
+#monk weapons
+#moonflower extract
+#moon staff
+#moonsteel
+#mortar & pestle set
+#mosin nagant
+#musical instrument
+#musket, heavy
+#musket, light
+#naginata
+#nail
+#needle, bone
+#needle, metal
+#net, hand
+#nights bane
+#ninja-to
+#nitroglycerin
+#nodachi
+#nodachi, variant
+#nullsteel
+#nut & bolt
+#oar, paddle
+#oars
+#obsidian
+#odachi helvruin
+#oil, flask of citronella
+#oil, flask of greek fire
+#oil, flask of lamp
+#oil of brick
+#oil, waterproofing
+#one-handed ranged weapons
+#orc battle-blade
+#orc dreadaxe
+#orc foodstuffs
+#otsuchi
+#p-53 colt wadjyt
+#p-83 colt wadjyt
+#paint
+#paintbrush, large
+#paintbrush, small
+#paint/dye/pigment
+#paint, oil based, colored
+#paint, oil based, white wash
+#pants, long, cotton
+#pants, long, leather
+#pants, long, silk
+#pants, long, wool
+#pants, short, cotton
+#pants, short, wool
+#paper, page, extra fine
+#paper, page, low grade
+#papyrus, page, untreated
+#papyrus, sheet, untreated
+#parachute, silk, large
+#parachute, silk, medium
+#parachute, silk, small
+#parchment, page, treated
+#parchment, page, untreated
+#parchment, treated
+#parchment, untreated
+#parka, full length, heavy
+#parka, waist length, heavy
+#parral dust
+#parry blade
+#partisan
+#pavilion
+#pearl
+#perfume, vial
+#phoenix fire wine
+#phylactery, common arm band
+#phylactery, religious writings
+#pick, climbing
+#pick, mining
+#pig iron
+#pillow, small
+#pipe, smoking
+#pistol
+#pistol, alchemist's breachload
+#pistol, exotic
+#pistol, simple
+#pitton, climbing
+#pitton hammer
+#planeshifter outfit
+#planewalker outfit
+#plank, hardwood
+#plank, softwood
+#plant fiber
+#plated metal
+#plating canister
+#platinum
+#pliers
+#pocket knife
+#poison, feign death
+#poison, sleep
+#polearms
+#pole, metal, retractable
+#pole, wooden
+#poncho
+#portable painting easel
+#pouch, belt, large
+#pouch, belt, small
+#pouch, belt, small, lead-lined
+#pouch, shoulder, large
+#pouch, shoulder, small
+#powdered pearl
+#powder of sympathy
+#prayer beads
+#prosthetic limb, greater
+#prosthetic limb, lesser
+#proteum
+#protractor
+#pulley
+#puppet
+#quake hammer
+#quartz glassteel
+#quick loader
+#quill
+#quill, standardized, scroll composing
+#quilted studded doublet
+#quiver, arrow
+#quiver, javelin
+#rat's meat
+#rat trap
+#razor, shaving
+#rebel matchlock
+#red dust
+#red herb
+#reed, hollow
+#refined oil
+#repair kit
+#repeater module
+#restraining pole
+#retractable bastard sword
+#retractable longsword
+#retracting blade
+#revolver
+#revolver, single-action
+#revolver, variant
+#revolver varient
+#ribbon blade
+#rifle, alchemist's breachload
+#rifle, bolt-action repeating
+#rifle butt
+#ring blade
+#ring, finger/ear/nose
+#ring, signet/seal
+#rocket launcher
+#rope axe
+#rope, hemp
+#rope, silk
+#rug, small, prayer
+#ruler, wooden
+#sack, large
+#sack, small
+#sail, small
+#salvation-from-perdition
+#samarie's doomsteel
+#sandals
+#sash, cotton
+#sash, silk
+#sasumata
+#satchel of perfect preservation
+#sawnoff ahlspiess
+#saw, wood
+#saw, wood, two man
+#scarf
+#scissors
+#scouter
+#screw driver
+#scroll case
+#scroll tube, bone
+#scroll tube, leather
+#scroll tube, metal
+#sealing wax
+#seal's blubber
+#senali mask
+#sextant
+#sheath, large weapon
+#sheath, small weapon
+#sheath, spring loaded, wrist
+#shield, broad
+#shinobi shozoku
+#shirt, cotton
+#shirt, silk
+#shirt, wool
+#shoes, hard, walking
+#shoes, silent
+#shoes, soft, walking
+#shovel
+#shovel, small, folding
+#shuang gou
+#sica
+#side-sword
+#silverwood
+#simple fire gloves
+#six shooter
+#ski mask
+#skis
+#skullcap
+#slagdram
+#sledgehammer
+#sleeping sack
+#sleeping sack, tree mounting
+#slide ruler
+#smelling salts
+#snake-sword
+#sniper rifle
+#snowshoes
+#snow silver
+#snuffle stuff
+#soap
+#socks, cotton
+#socks, wool
+#sodegarami
+#soulrender acid
+#spanimint wine
+#spatha
+#spear cane
+#spell amber
+#spell book, wizards, large
+#spell book, wizards, standard
+#spell book, wizards, traveling
+#spell components, standardized
+#spell fuse chalk
+#spice kit
+#spicy peppers
+#spider egg, monstrous
+#spider silk rope
+#spiked hammer
+#spike, large, iron
+#spikra
+#sponge
+#spring sheath
+#spring steel
+#spyglass, telescopic, retractable
+#stake, wooden
+#std. set adventurers clothing.
+#steambolt minigun
+#steambolt rifle
+#steam engine, personal
+#steam pistol
+#steam pressure generator
+#steam sword
+#steel
+#steel, carbonized
+#stool, adjustable height
+#straight jacket
+#straps, long
+#straps, medium
+#straps, short
+#straw mat
+#suit, finely tailored
+#sun spit
+#surcoat
+#sure-strike matches
+#suspenders
+#svonelium
+#swim fins
+#sword, ambit
+#sword and shield umbrella
+#sword, long-handled
+#synthetic boomer bile
+#tabard
+#tabi
+#table, small, folding
+#tainted leather
+#tallenta sharrash
+#tarp, large
+#tarp, small
+#tattoo kit
+#tenro
+#tent, large
+#tent, medium
+#tent, small
+#thieves picks & tools
+#thonging
+#thorn sword
+#thread, reel of
+#three-section staff
+#tights, silk
+#tinderbox w/flint & steel
+#toadstool tears
+#toga
+#toilet seat
+#tools, complete set of, carpenters
+#tools, tinkerers pocket
+#tool/tackle box, wooden
+#torch
+#torturer's lab
+#towel, cotton
+#traveling duster
+#tree seat
+#truncheon
+#truth serum
+#tsukobo
+#tunic, cotton
+#tunic, leather
+#tunic, wool
+#twine
+#two-handed melee weapons
+#two-handed ranged weapons
+#two-tone camouflage poncho
+#type 95
+#types of alcohol
+#underbow wine
+#underwear, cotton
+#underwear, silk
+#underwear, wool
+#unguent of the elements
+#unicycle
+#utility belt
+#utility harness
+#utility jumpsuit, one piece
+#utility jumpsuit, one piece, camouflage
+#vanguard shield
+#venetian warhammer
+#vest, cotton
+#vest, leather
+#vest, wool
+#vial, glass
+#vilebone
+#violet fungus poison
+#violet mold paste
+#void force
+#voltaic steel
+#warmaul
+#war sickle
+#warwhip
+#water clock
+#water elemental evolution pelle
+#water purification tablet
+#water/wine skin
+#weaponblack
+#weapons harness
+#wedge, iron
+#wetsuit, rubber
+#wheelbarrel, folding
+#wheelock pistol
+#whetstone
+#whistle, common
+#whistle, dog
+#wine of nightshade
+#winter wolf pelt
+#wire
+#wire, 10 gauge
+#wire cutters
+#woodscrew
+#yari
+#yumi, daikyu
+#yumi, hankyu
+#zamac
+#zanbato
+#zephyrium ore
 
 # And More!
 #http://members.tripod.com/Lord_Eadric/netequip.html
