@@ -1,0 +1,89 @@
+#
+ZADD weather_temp  10  { "name":"unbearably cold",  "score":10      }
+ZADD weather_temp  20  { "name":"freezing",         "score":20      }
+ZADD weather_temp  30  { "name":"cold",             "score":30      }
+ZADD weather_temp  40  { "name":"chilly",           "score":40      }
+ZADD weather_temp  50  { "name":"cool",             "score":50      }
+ZADD weather_temp  60  { "name":"mild",             "score":60      }
+ZADD weather_temp  70  { "name":"pleasant",         "score":70      }
+ZADD weather_temp  80  { "name":"warm",             "score":80      }
+ZADD weather_temp  90  { "name":"hot",              "score":90      }
+ZADD weather_temp 100  { "name":"unbearably hot",   "score":100     }
+
+
+# The wind is
+ZADD weather_wind  10  { "name":"calm",      "score":10      }
+ZADD weather_wind  20  { "name":"light",     "score":20      }
+ZADD weather_wind  30  { "name":"gentle",    "score":30      }
+ZADD weather_wind  40  { "name":"breezy",    "score":40      }
+ZADD weather_wind  50  { "name":"moderate",  "score":50      }
+ZADD weather_wind  60  { "name":"fresh",     "score":60      }
+ZADD weather_wind  70  { "name":"strong",    "score":70      }
+ZADD weather_wind  80  { "name":"gale",      "score":80      }
+ZADD weather_wind  90  { "name":"storm",     "score":90      }
+ZADD weather_wind 100  { "name":"hurricane", "score":100     }
+
+
+# There is ____ drizzle at the moment.
+ZADD weather_precipitation  10  { "name":"no",       "score":10      }
+ZADD weather_precipitation  20  { "name":"light",    "score":20      }
+ZADD weather_precipitation  60  { "name":"moderate", "score":60      }
+ZADD weather_precipitation  90  { "name":"dense ",   "score":90      }
+ZADD weather_precipitation 100  { "name":"heavy",    "score":100     }
+
+# There is heavy ______ at the moment.
+LPUSH weather_precipitation_type drizzle
+LPUSH weather_precipitation_type rain
+LPUSH weather_precipitation_type freezing drizzle
+LPUSH weather_precipitation_type freezing rain
+LPUSH weather_precipitation_type snow
+LPUSH weather_precipitation_type sleet
+LPUSH weather_precipitation_type hail
+LPUSH weather_precipitation_type graupel
+
+
+SET   weather_storm_chance 30
+LPUSH weather_storm ice storm
+LPUSH weather_storm blizzard
+LPUSH weather_storm snow storm
+LPUSH weather_storm wind storm
+LPUSH weather_storm gale
+LPUSH weather_storm thunderstorm
+LPUSH weather_storm cyclone
+LPUSH weather_storm hailstorm
+LPUSH weather_storm downburst
+LPUSH weather_storm dust storm
+LPUSH weather_storm hurricane
+LPUSH weather_storm lightning storm
+LPUSH weather_storm thunder snow storm
+LPUSH weather_storm thunderstorm
+LPUSH weather_storm tropical storm
+LPUSH weather_storm winter storm
+
+
+# There are ______ clouds.
+LPUSH weather_cloudcover whispy
+LPUSH weather_cloudcover light
+LPUSH weather_cloudcover thick
+LPUSH weather_cloudcover dark
+LPUSH weather_cloudcover brooding
+
+LPUSH weather_forecast clear
+LPUSH weather_forecast overcast
+LPUSH weather_forecast stormy
+
+
+LPUSH weather_time at daybreak
+LPUSH weather_time mid-morning
+LPUSH weather_time around noon
+LPUSH weather_time in the afternoon
+LPUSH weather_time mid-day
+LPUSH weather_time in the early evening
+LPUSH weather_time before nightfall
+LPUSH weather_time after nightfall
+LPUSH weather_time at midnight
+LPUSH weather_time in the dead of night
+LPUSH weather_time before dawn
+
+
+
