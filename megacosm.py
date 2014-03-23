@@ -5,6 +5,7 @@ from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
 from generators import Wanted
 from generators import Weather
+from generators import Govt
 from generators import Resource
 from generators import Event
 from generators import JobPosting
@@ -438,6 +439,24 @@ def Sect_Builder():
     result= server.zrange('portfolio_domain',0,-1)
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
+
+    
+#########################################################################
+
+@app.route('/govt')
+def GenerateGovt():
+    """Generate a simple govt"""
+    features=feature_filter('govt')
+    govt=Govt.Govt(server,features)
+    return render_template('govt.html', govt=govt )
+
+
+@app.route('/govt_builder')
+def Govt_Builder():
+    """Generate the basic data about a govt"""
+    paramlist,paramstring,paramset=builder_form_data('govt')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='govt') 
+
 
     
 #########################################################################
