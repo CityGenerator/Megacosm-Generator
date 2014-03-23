@@ -1,0 +1,51 @@
+
+#  1. Biological needs
+lpush motivation_kind air
+lpush motivation_kind food
+lpush motivation_kind drink
+lpush motivation_kind shelter
+lpush motivation_kind warmth
+lpush motivation_kind sex
+lpush motivation_kind sleep
+lpush motivation_kind stimulation
+lpush motivation_kind clothing
+#
+##  2. Safety needs
+lpush motivation_kind protectionfromelements
+lpush motivation_kind security
+lpush motivation_kind order
+lpush motivation_kind law
+#lpush motivation_kind limits
+#lpush motivation_kind stability
+#
+##  3. Belongingness and Love needs
+#lpush motivation_kind family
+#lpush motivation_kind affection
+#lpush motivation_kind relationships
+#lpush motivation_kind teams
+#lpush motivation_kind clubs
+#lpush motivation_kind comradeship
+#
+##  4. Esteem needs
+#lpush motivation_kind self-esteem
+#lpush motivation_kind achievement
+#lpush motivation_kind mastery
+#lpush motivation_kind independence
+#lpush motivation_kind status
+#lpush motivation_kind dominance
+#lpush motivation_kind prestige
+#lpush motivation_kind responsibility
+#lpush motivation_kind competition
+#lpush motivation_kind recognition
+#
+##  5. Cognitive needs
+#lpush motivation_kind knowledge
+#lpush motivation_kind meaning
+#lpush motivation_kind challenge
+#lpush motivation_kind experiences
+#lpush motivation_kind nature
+#lpush motivation_kind art
+#lpush motivation_kind growth
+
+
+

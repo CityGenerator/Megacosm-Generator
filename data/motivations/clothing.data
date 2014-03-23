@@ -1,0 +1,6 @@
+# Bob is motivated by
+
+lpush motivationclothing_category the need to find warm clothing
+lpush motivationclothing_category the need to find dry clothing
+lpush motivationclothing_category the need to find fitting clothes
+
