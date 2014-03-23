@@ -14,4 +14,5 @@ class Govt(Generator):
         self.generate_features('govt'+self.kind)
 
         if not hasattr(self, 'body'):
+            #TODO this should have an if statement on kind and also do cities
             self.body=Country(self.redis)
