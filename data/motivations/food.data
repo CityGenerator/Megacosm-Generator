@@ -1,0 +1,5 @@
+
+# Bob is motivated by
+
+lpush motivationfood_category severe hunger
+lpush motivationfood_category the munchies

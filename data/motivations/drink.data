@@ -1,0 +1,6 @@
+
+# Bob is motivated by
+
+lpush motivationdrink_category the need to get a drink
+lpush motivationdrink_category severe thirst
+lpush motivationdrink_category dehydration
