@@ -1,6 +1,18 @@
 
 #kind of Governments
 
+# This government has been in power
+
+ZADD govt_age  10 { "name":"for a short time",                  "score":10       }
+ZADD govt_age  20 { "name":"for mere hours",                    "score":20       }
+ZADD govt_age  30 { "name":"for mere days",                     "score":30       }
+ZADD govt_age  40 { "name":"for a few months",                  "score":40       }
+ZADD govt_age  50 { "name":"for years",                         "score":50       }
+ZADD govt_age  60 { "name":"for several years",                 "score":60       }
+ZADD govt_age  70 { "name":"for many years",                    "score":70       }
+ZADD govt_age  80 { "name":"for decades",                       "score":80       }
+ZADD govt_age  90 { "name":"for several decades",               "score":90       }
+ZADD govt_age 100 { "name":"far longer than should be allowed", "score":100      }
 
 ZADD govt_reputation  10   { "name":"despised",   "score":10       }
 ZADD govt_reputation  20   { "name":"hated",      "score":20       }
@@ -191,12 +203,6 @@ LPUSH govt_influencereason food shortages in the region
 LPUSH govt_influencereason racial tensions
 LPUSH govt_influencereason a thwarted assassination attempt
 
-
-
-
-
-
-
 #    <feature>
 #
 #        <right>
@@ -213,17 +219,6 @@ LPUSH govt_influencereason a thwarted assassination attempt
 #        </right>
 #    
 #    
-#        <length> <!-- The King has been in power-->
-#            <option>for mere hours</option>
-#            <option>for mere days</option>
-#            <option>for a few months</option>
-#            <option>for years</option>
-#            <option>for several years</option>
-#            <option>for many years</option>
-#            <option>for decades</option>
-#            <option>for several decades</option>
-#            <option>far longer than should be allowed</option>
-#        </length>
 #        <maintained><!-- and that power is maintained __________ -->
 #            <option >through the tip of a sword</option>
 #            <option >through random violence</option>
@@ -256,73 +251,3 @@ LPUSH govt_influencereason a thwarted assassination attempt
 #
 #
 #
-#
-#
-#
-#<secondarypower>
-#    <plot>openly assists</plot>
-#    <plot>openly denounces</plot>
-#    <plot>quietly denounces</plot>
-#    <plot>quietly assists</plot>
-#    
-#    <power type="a dragon" subplot_chance="50">
-#        <subplot>wishing to enslave the city</subplot>
-#        <subplot>watching out for the common man</subplot>
-#        <subplot>despising the current leader</subplot>
-#        <subplot>agreeing with the current leader</subplot>
-#    </power>
-#    <power type="a wizard" subplot_chance="50">
-#        <subplot>attempting to attain immortality</subplot>
-#        <subplot>watching out for the common man</subplot>
-#        <subplot>despising the current leader</subplot>
-#        <subplot>agreeing with the current leader</subplot>
-#    </power>
-#    <power type="a merchant guild" subplot_chance="50">
-#        <subplot>attempting to buy influence</subplot>
-#        <subplot>attempting to sell influence</subplot>
-#        <subplot>pushing for war with trade adversary</subplot>
-#        <subplot>pushing to open trade with adversary</subplot>
-#    </power>
-#    <power type="an elected representative" subplot_chance="50">
-#        <subplot>using position for personal gain</subplot>
-#        <subplot>amassing power</subplot>
-#    </power>
-#    <power type="an advisor" subplot_chance="50">
-#        <subplot>pulling strings for personal gain</subplot>
-#        <subplot>blackmailing the government</subplot>
-#        <subplot>working for enemies</subplot>
-#    </power>
-#    <power type="a prophet" subplot_chance="50">
-#        <subplot>attempting to lead religious revolution</subplot>
-#        <subplot>denying legitimacy of leading power</subplot>
-#        <subplot>calling for genocide of a minority</subplot>
-#    </power>
-#    <power type="a thieves guild" subplot_chance="50">
-#        <subplot>moving to assert black market dominance</subplot>
-#        <subplot>backing leading power for leniency</subplot>
-#    </power>
-#    <power type="traveler" subplot_chance="50">
-#        <subplot>looking to bring justice</subplot>
-#        <subplot>looking to overthrow the government</subplot>
-#    </power>
-#    <power type="an ex-blacksmith" subplot_chance="50">
-#        <subplot>plotting to overthrow the corrupt leadership for personal gain</subplot>
-#        <subplot>being blackmailed by a guild</subplot>
-#        <subplot>pulling strings with a trade adversary</subplot>
-#    </power>
-#    <power type="a barbarian" subplot_chance="50">
-#        <subplot>plotting to start war with another nation</subplot>
-#        <subplot>being manipulated by the denizens of the city whore house</subplot>
-#        <subplot>wishing to rule with a violent, iron fist</subplot>
-#    </power>
-#    <power type="a recluse" subplot_chance="50">
-#        <subplot>pulling strings for personal gain</subplot>
-#        <subplot>a fiend in disguise</subplot>
-#        <subplot>an angel in disguise</subplot>
-#        <subplot>a dragon in disguise</subplot>
-#        <subplot>a god in disguise</subplot>
-#        <subplot>a fiend that secretly looks out for the good of the common man</subplot>
-#        <subplot>an angel that seeks to enslave the common man</subplot>
-#    </power>
-#</secondarypower>
-#</data>
