@@ -4,6 +4,7 @@
 from flask import Flask, send_file, render_template, request, url_for
 from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
 from generators import Wanted
+from generators import Weather
 from generators import Resource
 from generators import Event
 from generators import JobPosting
@@ -437,6 +438,23 @@ def Sect_Builder():
     result= server.zrange('portfolio_domain',0,-1)
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
+
+    
+#########################################################################
+
+@app.route('/weather')
+def GenerateWeather():
+    """Generate a simple weather"""
+    features=feature_filter('weather')
+    weather=Weather.Weather(server,features)
+    return render_template('weather.html', weather=weather )
+
+
+@app.route('/weather_builder')
+def Weather_Builder():
+    """Generate the basic data about a weather"""
+    paramlist,paramstring,paramset=builder_form_data('weather')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='weather') 
 
 
     
