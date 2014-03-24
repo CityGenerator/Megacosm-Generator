@@ -1,51 +1,462 @@
 
 #  1. Biological needs
-lpush motivation_kind air
-lpush motivation_kind food
-lpush motivation_kind drink
-lpush motivation_kind shelter
-lpush motivation_kind warmth
-lpush motivation_kind sex
-lpush motivation_kind sleep
-lpush motivation_kind stimulation
-lpush motivation_kind clothing
+LPUSH motivation_kind air
+LPUSH motivation_kind food
+LPUSH motivation_kind drink
+LPUSH motivation_kind shelter
+LPUSH motivation_kind warmth
+LPUSH motivation_kind sex
+#LPUSH motivation_kind excretion
+#LPUSH motivation_kind comfort
+LPUSH motivation_kind sleep
+LPUSH motivation_kind stimulation
+LPUSH motivation_kind clothing
 #
 ##  2. Safety needs
-lpush motivation_kind protectionfromelements
-lpush motivation_kind security
-lpush motivation_kind order
-lpush motivation_kind law
-#lpush motivation_kind limits
-#lpush motivation_kind stability
+LPUSH motivation_kind protectionfromelements
+LPUSH motivation_kind security
+LPUSH motivation_kind order
+LPUSH motivation_kind law
+LPUSH motivation_kind physicalsafety
+LPUSH motivation_kind emotionalsafety
+LPUSH motivation_kind familysafety
+LPUSH motivation_kind health
+LPUSH motivation_kind propertysafety
+#LPUSH motivation_kind limits
+#LPUSH motivation_kind stability
 #
 ##  3. Belongingness and Love needs
-#lpush motivation_kind family
-#lpush motivation_kind affection
-#lpush motivation_kind relationships
-#lpush motivation_kind teams
-#lpush motivation_kind clubs
-#lpush motivation_kind comradeship
+#LPUSH motivation_kind family
+#LPUSH motivation_kind friendship
+#LPUSH motivation_kind intimacy
+#LPUSH motivation_kind affection
+#LPUSH motivation_kind relationships
+#LPUSH motivation_kind teams
+#LPUSH motivation_kind clubs
+#LPUSH motivation_kind comradeship
 #
 ##  4. Esteem needs
-#lpush motivation_kind self-esteem
-#lpush motivation_kind achievement
-#lpush motivation_kind mastery
-#lpush motivation_kind independence
-#lpush motivation_kind status
-#lpush motivation_kind dominance
-#lpush motivation_kind prestige
-#lpush motivation_kind responsibility
-#lpush motivation_kind competition
-#lpush motivation_kind recognition
+#LPUSH motivation_kind self-esteem
+#LPUSH motivation_kind confidence
+#LPUSH motivation_kind achievement
+#LPUSH motivation_kind respect
+#LPUSH motivation_kind freedom
+#LPUSH motivation_kind mastery
+#LPUSH motivation_kind independence
+#LPUSH motivation_kind status
+#LPUSH motivation_kind dominance
+#LPUSH motivation_kind prestige
+#LPUSH motivation_kind responsibility
+#LPUSH motivation_kind competition
+#LPUSH motivation_kind recognition
 #
 ##  5. Cognitive needs
-#lpush motivation_kind knowledge
-#lpush motivation_kind meaning
-#lpush motivation_kind challenge
-#lpush motivation_kind experiences
-#lpush motivation_kind nature
-#lpush motivation_kind art
-#lpush motivation_kind growth
+#LPUSH motivation_kind knowledge
+#LPUSH motivation_kind meaning
+#LPUSH motivation_kind challenge
+#LPUSH motivation_kind experiences
+#LPUSH motivation_kind nature
+#LPUSH motivation_kind art
+#LPUSH motivation_kind growth
 
 
 
+# UN bill of human rights#
+
+
+#Article 1.
+#
+#All human beings are born free and equal in dignity and rights.They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.
+#^ Top
+#
+#Article 2.
+#
+#Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status. Furthermore, no distinction shall be made on the basis of the political, jurisdictional or international status of the country or territory to which a person belongs, whether it be independent, trust, non-self-governing or under any other limitation of sovereignty.
+#^ Top
+#
+#Article 3.
+#
+#Everyone has the right to life, liberty and security of person.
+#^ Top
+#
+#Article 4.
+#
+#No one shall be held in slavery or servitude; slavery and the slave trade shall be prohibited in all their forms.
+#^ Top
+#
+#Article 5.
+#
+#No one shall be subjected to torture or to cruel, inhuman or degrading treatment or punishment.
+#^ Top
+#
+#Article 6.
+#
+#Everyone has the right to recognition everywhere as a person before the law.
+#^ Top
+#
+#Article 7.
+#
+#All are equal before the law and are entitled without any discrimination to equal protection of the law. All are entitled to equal protection against any discrimination in violation of this Declaration and against any incitement to such discrimination.
+#^ Top
+#
+#Article 8.
+#
+#Everyone has the right to an effective remedy by the competent national tribunals for acts violating the fundamental rights granted him by the constitution or by law.
+#^ Top
+#
+#Article 9.
+#
+#No one shall be subjected to arbitrary arrest, detention or exile.
+#^ Top
+#
+#Article 10.
+#
+#Everyone is entitled in full equality to a fair and public hearing by an independent and impartial tribunal, in the determination of his rights and obligations and of any criminal charge against him.
+#^ Top
+#
+#Article 11.
+#
+#(1) Everyone charged with a penal offence has the right to be presumed innocent until proved guilty according to law in a public trial at which he has had all the guarantees necessary for his defence.
+#(2) No one shall be held guilty of any penal offence on account of any act or omission which did not constitute a penal offence, under national or international law, at the time when it was committed. Nor shall a heavier penalty be imposed than the one that was applicable at the time the penal offence was committed.
+#^ Top
+#
+#Article 12.
+#
+#No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks.
+#^ Top
+#
+#Article 13.
+#
+#(1) Everyone has the right to freedom of movement and residence within the borders of each state.
+#(2) Everyone has the right to leave any country, including his own, and to return to his country.
+#^ Top
+#
+#Article 14.
+#
+#(1) Everyone has the right to seek and to enjoy in other countries asylum from persecution.
+#(2) This right may not be invoked in the case of prosecutions genuinely arising from non-political crimes or from acts contrary to the purposes and principles of the United Nations.
+#^ Top
+#
+#Article 15.
+#
+#(1) Everyone has the right to a nationality.
+#(2) No one shall be arbitrarily deprived of his nationality nor denied the right to change his nationality.
+#^ Top
+#
+#Article 16.
+#
+#(1) Men and women of full age, without any limitation due to race, nationality or religion, have the right to marry and to found a family. They are entitled to equal rights as to marriage, during marriage and at its dissolution.
+#(2) Marriage shall be entered into only with the free and full consent of the intending spouses.
+#(3) The family is the natural and fundamental group unit of society and is entitled to protection by society and the State.
+#^ Top
+#
+#Article 17.
+#
+#(1) Everyone has the right to own property alone as well as in association with others.
+#(2) No one shall be arbitrarily deprived of his property.
+#^ Top
+#
+#Article 18.
+#
+#Everyone has the right to freedom of thought, conscience and religion; this right includes freedom to change his religion or belief, and freedom, either alone or in community with others and in public or private, to manifest his religion or belief in teaching, practice, worship and observance.
+#^ Top
+#
+#Article 19.
+#
+#Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers.
+#^ Top
+#
+#Article 20.
+#
+#(1) Everyone has the right to freedom of peaceful assembly and association.
+#(2) No one may be compelled to belong to an association.
+#^ Top
+#
+#Article 21.
+#
+#(1) Everyone has the right to take part in the government of his country, directly or through freely chosen representatives.
+#(2) Everyone has the right of equal access to public service in his country.
+#(3) The will of the people shall be the basis of the authority of government; this will shall be expressed in periodic and genuine elections which shall be by universal and equal suffrage and shall be held by secret vote or by equivalent free voting procedures.
+#^ Top
+#
+#Article 22.
+#
+#Everyone, as a member of society, has the right to social security and is entitled to realization, through national effort and international co-operation and in accordance with the organization and resources of each State, of the economic, social and cultural rights indispensable for his dignity and the free development of his personality.
+#^ Top
+#
+#Article 23.
+#
+#(1) Everyone has the right to work, to free choice of employment, to just and favourable conditions of work and to protection against unemployment.
+#(2) Everyone, without any discrimination, has the right to equal pay for equal work.
+#(3) Everyone who works has the right to just and favourable remuneration ensuring for himself and his family an existence worthy of human dignity, and supplemented, if necessary, by other means of social protection.
+#(4) Everyone has the right to form and to join trade unions for the protection of his interests.
+#^ Top
+#
+#Article 24.
+#
+#Everyone has the right to rest and leisure, including reasonable limitation of working hours and periodic holidays with pay.
+#^ Top
+#
+#Article 25.
+#
+#(1) Everyone has the right to a standard of living adequate for the health and well-being of himself and of his family, including food, clothing, housing and medical care and necessary social services, and the right to security in the event of unemployment, sickness, disability, widowhood, old age or other lack of livelihood in circumstances beyond his control.
+#(2) Motherhood and childhood are entitled to special care and assistance. All children, whether born in or out of wedlock, shall enjoy the same social protection.
+#^ Top
+#
+#Article 26.
+#
+#(1) Everyone has the right to education. Education shall be free, at least in the elementary and fundamental stages. Elementary education shall be compulsory. Technical and professional education shall be made generally available and higher education shall be equally accessible to all on the basis of merit.
+#(2) Education shall be directed to the full development of the human personality and to the strengthening of respect for human rights and fundamental freedoms. It shall promote understanding, tolerance and friendship among all nations, racial or religious groups, and shall further the activities of the United Nations for the maintenance of peace.
+#(3) Parents have a prior right to choose the kind of education that shall be given to their children.
+#^ Top
+#
+#Article 27.
+#
+#(1) Everyone has the right freely to participate in the cultural life of the community, to enjoy the arts and to share in scientific advancement and its benefits.
+#(2) Everyone has the right to the protection of the moral and material interests resulting from any scientific, literary or artistic production of which he is the author.
+#^ Top
+#
+#Article 28.
+#
+#Everyone is entitled to a social and international order in which the rights and freedoms set forth in this Declaration can be fully realized.
+#^ Top
+#
+#Article 29.
+#
+#(1) Everyone has duties to the community in which alone the free and full development of his personality is possible.
+#(2) In the exercise of his rights and freedoms, everyone shall be subject only to such limitations as are determined by law solely for the purpose of securing due recognition and respect for the rights and freedoms of others and of meeting the just requirements of morality, public order and the general welfare in a democratic society.
+#(3) These rights and freedoms may in no case be exercised contrary to the purposes and principles of the United Nations.
+#^ Top
+#
+#Article 30.
+#
+#Nothing in this Declaration may be interpreted as implying for any State, group or person any right to engage in any activity or to perform any act aimed at the destruction of any of the rights and freedoms set forth herein.
+# 
+
+
+
+# These should all get classified into the above groups
+#LPUSH npc_motivation on a mission from the gods
+#LPUSH npc_motivation on a mission for diplomacy
+#LPUSH npc_motivation on a mission to collect a debt
+#LPUSH npc_motivation on a mission to capture someone
+#
+#LPUSH npc_motivation traveling with a diplomat
+#LPUSH npc_motivation traveling with a circus
+#LPUSH npc_motivation traveling with an expedition
+#LPUSH npc_motivation traveling with an important person
+#LPUSH npc_motivation traveling with an acting troupe
+#
+#LPUSH npc_motivation following rumors of riches
+#LPUSH npc_motivation following rediscovered ancient lore
+#LPUSH npc_motivation following the voices
+#LPUSH npc_motivation following a message from an angel
+#
+#LPUSH npc_motivation fleeing the law
+#LPUSH npc_motivation fleeing an assassin
+#LPUSH npc_motivation fleeing debtors
+#LPUSH npc_motivation fleeing an abusive lover
+#LPUSH npc_motivation fleeing a natural disaster
+#LPUSH npc_motivation fleeing overdue taxes
+#LPUSH npc_motivation fleeing a bad family situation
+#LPUSH npc_motivation fleeing from forced labor
+#
+#LPUSH npc_motivation traveling the world as a trader
+#LPUSH npc_motivation traveling the world as a pilgrim
+#LPUSH npc_motivation traveling the world as a missionary
+#LPUSH npc_motivation traveling the world as a beggar
+#LPUSH npc_motivation traveling the world as an unemployed specialist
+#
+#LPUSH npc_motivation seeking thrills and adventure
+#LPUSH npc_motivation seeking honest work
+#LPUSH npc_motivation seeking dishonest work
+#LPUSH npc_motivation seeking revenge
+#LPUSH npc_motivation seeking healing for a crippling injury
+#
+#LPUSH npc_motivation brokering a truce over a trade war
+#LPUSH npc_motivation brokering a truce over escalating tension
+#
+#LPUSH npc_motivation doing something nefarious
+#LPUSH npc_motivation doing something amazing
+#LPUSH npc_motivation doing something impossible
+#LPUSH npc_motivation doing something secret
+#LPUSH npc_motivation doing something questionable
+#
+#LPUSH npc_motivation seeing the world
+#LPUSH npc_motivation seeing the city
+
+#1. Romance. Villains frequently have ulterior motives (like marrying Aunt May to steal the nuclear power plant she inherited?) and improper means (such as sabotaging rivals). True romances are rare for villains and can make them deeper and more interesting. Mr. Freeze’s romance with his wife Nora in Heart of Ice turned him from a corny ice-themed punchline into an Emmy winner. (He later devolved into a corny ice-themed punchline after being played by Arnold Schwarzenegger, but some things can’t be helped).
+#
+# 
+#
+#2. Revenge. This might be heroic if the crime is particularly heinous and/or the regular authorities are not willing or able to resolve the situation. It might be villainous if the character is overreacting or not being careful enough about hitting only the people responsible.  When working with revenge plots, I think it’s usually more interesting if the revenge develops into something more than just killing/stopping people A, B and C.  For example, in Scott Pilgrim Vs. the World, the villain is getting back at the love interest that rejected him, which introduces relationship issues that present their own challenges to a protagonist trying to get over a long-dead relationship of his own.
+#
+# 
+#
+#3. To distinguish oneself. It depends on why the character wants to distinguish himself. A hero whose main goal is fame/status will probably gain a more substantial goal over the course of the story. (For example, Booster Gold). I think it’s seen as a superficial, temporary goal. In contrast, “be true to yourself” is more purely heroic… Unless being true to yourself involves psychically decapitating people and sucking out their brains.
+#
+# 
+#
+#4. To fit in/gain acceptance. A lot of heroes seek to gain the respect of their peers (see any story about “the new guy,” particularly students). However, gaining acceptance might be more sinister based on who the protagonist wants to impress and/or what will impress them. For example, 1984 ends with Winston Smith rather unhappily gaining acceptance by betraying his innocent girlfriend: ”…he had won the victory over himself. He loved Big Brother.”
+#
+# 
+#
+#5. Justice. This is like revenge, but usually less lethal and targeted more carefully against the perpetrators. Nonetheless, justice can sometimes be villainous. For example, the main goal of the robot antagonists in the I, Robot movie is to prevent humans from getting hurt, and they think that putting human under house arrest is the most logical way to do so.
+#
+#
+# 
+#
+#6. Greed. Although realistic, I think this motivation tends to be used in a one-dimensional way. For a bit more depth, maybe the character is hoarding something (money, power, remote-control ninja stars) on behalf of somebody else. Also, I think it’s cliche for antiheroes to be sort of greedy because their authors are afraid to let them do anything actually unpleasant. I’d recommend going all the way.
+#
+# 
+#
+#7. Fear. This strikes me as a more interesting, dramatic motivation than greed. It’s usually more morally complex because the character might actually be right. Maybe Lex Luthor is correct that Superman will eventually turn on us. Fearful heroes usually perceive threats that are current rather than potential, but they may be paranoid wrecks anyway (see Question/Rorschach, possibly the psychiatrist from Halloween and Batman, etc).
+#
+# 
+#
+#8. Desperation. I feel this is a more interesting motivation for both antagonists and protagonists than greed because it raises the stakes and heightens the conflict. A greedy character is usually driven by stupidity: stupidity is the only reason he can’t be satisfied with what he has. In contrast, a desperate character can’t back away from the plot. He can’t escape the conflict.
+#
+# 
+#
+#9. Social cohesion. Most commonly, this means keeping a family together. However, any books with significant racial or class-based conflict probably deal with this to some extent. Some examples: X-Men, probably Harry Potter, American Beauty, The Incredibles, Dark Cloud Descending, etc.
+#
+# 
+#
+#10. A desire to better oneself. Depending on what the character is trying to change about himself, we may approve of the transformation. Here’s a thought for your hero: is he trying to change anything about himself besides becoming more powerful? What about the villain? This could play out in a more sinister way if the character’s desire for self-improvement or self-advancement gets other people hurt. (For example, it’d be really shady for a police officer to put down a case just because pursuing the case could harm his career).
+#
+# 
+#
+#11. A desire to better humanity and/or society. I find altruistic villains especially fresh. They’re harder to dismiss as stereotypically evil, cardboard cutouts.
+#
+# 
+#
+#12. Curiosity/search for knowledge. A hero searching for understanding may be an amnesiac, some sort of wanderer, etc. A villain is probably uncovering secrets better left untouched, although his intentions may have been pure. More unexpectedly, an eventual villain might go on an innocuous search for understanding but come away with exactly the wrong lessons from life. If starting point A is a relatively normal person and ending point C is a villain that kicks dogs without any hesitation, the journey is what connects the two points. What sort of life experiences would warp someone that much? (See The Heart of Darkness, for example).
+#
+# 
+#
+#13. A desire to gain power to achieve a goal. This training/self-development angle comes up in many superhero stories, particularly those with rookie protagonists (such as Kickass). However, it was notably missing from Scott Pilgrim vs. the World.
+#
+# 
+#
+#Could I recommend against a stereotypically heroic goal for the heroes or a stereotypically villainous goal for the villains? While world domination is a fine feat, it is not exactly uncharted territory for supervillains. If the villain is vying for world domination, why? It might be more interesting if his bid for supremacy is somehow tied to altruism, fear or desperation. For example, maybe the villain is a time-traveler that knows about some grave threat, so he’s trying to take over because he’s the only one that knows how to avert disaster. If the alien invasion starts in 20 years, you don’t have very much time to unite the Earth. (Also, this would lend itself rather well to a sequel: the hero successfully stops the “villain” at the end of the book, but discovers that he has to defeat the impending alien invasion).
+#
+# 
+#
+#14. To escape one’s destiny. This comes up quite a lot in classic American literature, such as The Grapes of Wrath, Catch-22 and The Great Gatsby. In contemporary superhero stories, the element of fighting destiny comes up most often when a character decides to become a superhero. Very few superheroes are born into their line of work. What leads the protagonists to decide that this is their calling? A supervillain rebelling against destiny, such as Sylar or the Kingpin, is usually born into a decidedly mundane and powerless family. Another common type of escaping destiny is fighting with one’s parents and/or dealing with stereotypes.
+
+ 
+
+#15. To achieve one’s destiny. The favored goal of Chosen Ones and megalomaniacs everywhere. I don’t think this is nearly as interesting as escaping destiny because a destined hero isn’t really driving his own story so much as conducting a train on a track laid by somebody else. If I had to shroud a character in destiny, I’d rather make it the villain The Boy That Lived, The Chosen One, the child born under a rare astrological sign, the subject of a great prophecy, the heir to an ancient and illustrious organization, etc. It’ll make the hero’s journey all the more challenging if he has to overcome all that on his own.
+
+ 
+
+
+#Abstract Apotheosis: Character become an abstract concept like hope or love, whether literally or in a metaphorical sense.
+#Because Destiny Says So: Characters want to fulfill a prophecy.
+#Because You Were Nice to Me: One character is loyal to another due to a single kind act.
+#Career Building Blunder: When an early mistake provides the motivation for a character
+#Chronic Hero Syndrome: Character is compelled to help everyone, all the time.
+#Concepts Are Cheap: Characters have vague one word motivations that could really mean anything.
+#Darwinist Desire: A character wants to reproduce with the fittest mate possible.
+#Debt Detester: Character repays debts as soon as possible so as to not owe others.
+#Declaration of Protection: A person has their entire motivation built around protecting a vulnerable person (usually a girl).
+#Desperately Looking for a Purpose in Life: A character on a journey to find a meaningful place in the world.
+#Despotism Justifies the Means: Bad guys who want only power and will do anything to achieve it
+#Dismotivation: Characters try hard to achieve nothing.
+#Driven by Envy: A character wants something someone else has, and resents them for it.
+#Dystopia Justifies the Means: Bad guys whose goal is to create a nightmarish Crapsack World.
+#Embodiment Of Virtue: A character is driven by the desire to achieve perfection in a certain moral virtue.
+#Enemies Equals Greatness: Opposition or mistreatment from others is what gets a character highly motivated to do great things.
+#Failure Knight: A character failed to protect someone once, and is determined not to fail again.
+#Family Honor: A character wants to live up to their family name, and bring credit to their family.
+#Food As Bribe: Some people will do anything for food.
+#For Great Justice: Good guys fight so that Justice Will Prevail.
+#For Happiness: A character wants to spread joy and cheer.
+#For Science!: A character wants to make scientific discoveries with no real practical purposes.
+#For the Evulz: Bad guys do evil because they love evil.
+#For the Funnyz: A character makes a joke, usually against their own self-interest, because they love jokes.
+#The Four Loves: A character searches for love, in any form.
+#Freudian Excuse: Something in a villain's past causes them to act the way they do, often parental abuse.
+#Glory Seeker: A character wants other people to consider him/her to be a Badass.
+#Goal in Life: A character's main motivation through life.
+#Gotta Catch Them All: A character wants to pursue a collection.
+#Hidden Agenda Villain: They have a motive, but we're not sure what it is.
+#Home Sweet Home: A character is just trying to settle things so they can stay home.
+#Honor Before Reason: A character only wants to do the right thing above all else.
+#Humble Goal: A character wants to do or have something that happens to be simple.
+#I Just Want to Be Badass: A character wants to be strong.
+#I Just Want to Be Beautiful: A character wants to remain or become beautiful.
+#I Just Want To Be Free: A character wants freedom from some sort of bondage.
+#I Just Want to Be Normal: A character living an abnormal life wants to live a life without excitement.
+#I Just Want to Be Special: A character living a mundane life wants to be more exciting.
+#I Just Want to Be You: A character wants to be literally the person they envy.
+#I Just Want to Have Friends: A character or a person who wants friends.
+#In Harm's Way: Characters want excitement and danger in their lives.
+#I Owe You My Life: A character feels indebted to someone who saved their life.
+#It Amused Me: A character who acts purely for their own entertainment.
+#It Is Beyond Saving: A character or group of characters wants a society destroyed and/or abandoned under the impression that it is beyond saving.
+#It's Personal: A character does something for a personal reason.
+#I Want My Beloved to Be Happy: A character wants the person they love to be happy, even at the risk of their own happiness.
+#"I Want" Song: Exposition of a character's motivation in the form of a song at the beginning of the story.
+#I Want to Be a Real Man: A character wants to be masculine or prove his masculinity.
+#I Will Find You: A character wants to find a lost or kidnapped loved one, whatever the cost.
+#MacGuffin: It doesn't matter what it does, but all the characters want it.
+#Motivation on a Stick
+#Motive Decay: A character has a great motivation, but forgets it eventually.
+#The Dark Side Will Make You Forget: A character who uses evil means to accomplish a good goal loses sight of the goal over time.
+#Never Be Hurt Again: A character seeks to ensure that no one will ever hurt or take advantage of them again, usually by becoming a Badass.
+#New Year's Resolution: A character tries to use the promise of a New Year to create motivation.
+#Only in It for the Money: A character does something heroic only for the money.
+#Pinocchio Syndrome: A character wants to be a real human.
+#The Power of Friendship: A character is motivated by his friends.
+#Pursue the Dream Job: A character desires a specific job and follows his heart.
+#Rage Against the Heavens: A character wants the gods to pay for what they've done.
+#Revenge: A character wants another character to pay for what he's done.
+#Rich Boredom: A character wants to need to do something.
+#Screw Destiny: Characters want to go against a prophecy and prove it wrong.
+#Seven Deadly Sins
+#Greed: Characters just want more.
+#Lust: Characters just want sex.
+#Envy: Characters want what other people have.
+#Pride: Characters want other characters to recognize how great they are.
+#Survivor Guilt: A character doesn't want anyone else to die in their stead.
+#There's No Place Like Home: A character wants to go home again.
+#To Create A Playground For Evil: A character wants to make the world a more evil place.
+#They Called Me Mad!: A character is motivated by the mockery he's received in the past.
+#Trapped In Villainy: A villain only performs villainous acts because, if they dont, they'll die.
+#Undying Loyalty : A character is motivated by desire to help someone or something they care about.
+#Utopia Justifies the Means: Characters, usually bad guys, who wish to create a better world but will go to extreme lengths to achieve it.
+#"Well Done, Son" Guy/"Well Done, Dad" Guy: A character wants someone to acknowledge them.
+#Well-Intentioned Extremist: A character has noble goals, but goes about achieving them ruthlessly.
+#Working For A Body Upgrade: Characters want their boss to repair or improve their physique/looks/abilities.
+
+
+
+#EXTERNAL: 
+#Bold-face is obverse aspect (stuff in parens = goals, effects, or other association)
+#
+#Survival/safety; Fear of the world (food, water, escape from danger)
+#Physical comfort; gluttony (shelter, warmth, good food, health)
+#Pleasure; hedonism (sex, great food, culture, games)
+#Dominance; tyranny (power, social standing, competition, respect)
+#Acquisitiveness; greed (wealth, materialism, collecting, excellence)
+#Curiosity; voyeurism (learning, searching, investigating)
+#Mastery; perfectionism (excellence, conquest, discipline, achievement)
+#Reproduction; profligacy (children, creativity, family-building)
+#
+#INTERNAL:
+#
+#Autonomy; isolation (self-sufficiency, freedom, non-confinement)
+#Affiliation; conformity (security, cooperation, loyalty, clan)
+#Love; lust/ownership (connection, passion, sex, mirroring, approval, giving)
+#Revenge; justice (righting wrongs, recognition of grievance, vengeance)
+#Guilt; denial of guilt (responsibility, shame, punishment, redemption, forgiveness)
+#Identity; self-centeredness (self-esteem, self-knowledge, self-protection)
+#Surcease; conflict avoidance (peace, escape from anxiety, death)
+#Spirituality; fetishism (religion, transcendence, transformation)
+#Growth; decay, aging (learning, maturation, wisdom)
+#Ambition; insecurity/anxiety (fear of failure, inferiority, stress)
+#Vindication; rationalization (success, proving self, apology)
+#
+#The primary external motivation: Self-preservation 
+#The primary internal motivation: Self-protection 

@@ -1,6 +1,6 @@
 
 # Bob is motivated by
 
-lpush motivationair_category the fight to breathe
-lpush motivationair_category breathing problems
-lpush motivationair_category a near death situation involving suffocation
+lpush motivationair_text the fight to breathe
+lpush motivationair_text breathing problems
+lpush motivationair_text a near death situation involving suffocation

@@ -1,6 +1,6 @@
 
 # Bob is motivated by
 
-lpush motivationsex_category the need to have children
-lpush motivationsex_category the need to find a spouse
-lpush motivationsex_category getting laid
+lpush motivationsex_text the need to have children
+lpush motivationsex_text the need to find a spouse
+lpush motivationsex_text getting laid

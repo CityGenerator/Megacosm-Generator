@@ -1,4 +1,4 @@
 # Bob is motivated by
 
-lpush motivationstimulation_category boredom
+lpush motivationstimulation_text boredom
 

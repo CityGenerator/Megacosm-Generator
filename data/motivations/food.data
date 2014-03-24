@@ -1,5 +1,5 @@
 
 # Bob is motivated by
 
-lpush motivationfood_category severe hunger
-lpush motivationfood_category the munchies
+lpush motivationfood_text severe hunger
+lpush motivationfood_text the munchies
