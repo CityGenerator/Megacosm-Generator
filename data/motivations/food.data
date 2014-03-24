@@ -1,5 +1,5 @@
 
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationfood_text severe hunger
-lpush motivationfood_text the munchies
+LPUSH motivationfood_text by severe hunger
+LPUSH motivationfood_text by the munchies

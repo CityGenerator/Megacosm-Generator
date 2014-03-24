@@ -1,4 +1,4 @@
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationstimulation_text boredom
+LPUSH motivationstimulation_text by boredom
 

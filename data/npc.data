@@ -14,8 +14,8 @@ LPUSH stat_npc skill
 LPUSH stat_npc bravery
 LPUSH stat_npc honor
 
-ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her",   "score":51  }
-ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him",   "score":100  }
+ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
+ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
 
 #TODO add npc_piety
 

@@ -1,4 +1,4 @@
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationprotectionfromelements_text a fear of lightning
-lpush motivationprotectionfromelements_text a fear of the dark
+LPUSH motivationprotectionfromelements_text to hide from lightning
+LPUSH motivationprotectionfromelements_text to stay out of the sun

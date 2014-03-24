@@ -1,6 +1,6 @@
 
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationdrink_text the need to get a drink
-lpush motivationdrink_text severe thirst
-lpush motivationdrink_text dehydration
+LPUSH motivationdrink_text to grab a drink
+LPUSH motivationdrink_text by severe thirst
+LPUSH motivationdrink_text by dehydration

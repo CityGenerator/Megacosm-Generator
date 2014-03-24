@@ -1,4 +1,4 @@
 
-#bob is motivated by 
+#bob is motivated
 
-lpush motivationwarmth_text the need to keep warm
+LPUSH motivationwarmth_text to keep warm

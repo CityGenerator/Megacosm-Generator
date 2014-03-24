@@ -1,3 +1,4 @@
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationlaw_text the need to enforce the law
+LPUSH motivationlaw_text to enforce the law
+LPUSH motivationlaw_text to make sure the law is enforced

@@ -1,7 +1,7 @@
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationsecurity_text a fear of being robbed
-lpush motivationsecurity_text a fear of criminals
-lpush motivationsecurity_text a fear of being murdered
-lpush motivationsecurity_text the need to track down a murderer
+LPUSH motivationsecurity_text to avoid being robbed
+LPUSH motivationsecurity_text to avoid criminals
+LPUSH motivationsecurity_text to not be murdered
+LPUSH motivationsecurity_text to track down a murderer
 
