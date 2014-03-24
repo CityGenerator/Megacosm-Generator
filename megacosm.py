@@ -275,6 +275,7 @@ def Event_Builder():
 def GenerateMotivation():
     """Generate a simple motivation"""
     features=feature_filter('motivation')
+    features['npc']=NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
         motivations=[]
         for item in xrange(int(request.args['count'])):

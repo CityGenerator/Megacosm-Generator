@@ -17,4 +17,3 @@ class Motivation(Generator):
             self.npc=generators.NPC.NPC(self.redis, {'motivation':self})
 
         self.text=self.render_template(self.text)
-        print "a motivation", self.__dict__
