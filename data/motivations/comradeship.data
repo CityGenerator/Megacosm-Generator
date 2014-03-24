@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationcomradeship_text to protect {{params.npc.sex['possessive']}} colleagues
+LPUSH motivationcomradeship_text to bond with {{params.npc.sex['possessive']}} friends
+LPUSH motivationcomradeship_text to provide an alibi for {{params.npc.sex['possessive']}} comrades

@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationrespect_text to get the respect {{params.npc.sex['pronoun']}} deserves
+LPUSH motivationrespect_text to be respected by {{params.npc.sex['possessive']}} peers
+LPUSH motivationrespect_text by gestures of respect

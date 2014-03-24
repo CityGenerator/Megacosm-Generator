@@ -1,0 +1,5 @@
+LPUSH motivationfear_text by a strong fear of {{params.npc.phobia}}
+LPUSH motivationfear_text by an overpower fear of {{params.npc.phobia}}
+LPUSH motivationfear_text by a mild fear of {{params.npc.phobia}}
+
+

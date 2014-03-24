@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationaffection_text by love
+LPUSH motivationaffection_text by {{params.npc.sex['possessive']}} lover
+LPUSH motivationaffection_text to protect those {{params.npc.sex['pronoun']}} cares about

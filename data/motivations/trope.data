@@ -1,0 +1,91 @@
+#bob is motivated
+
+LPUSH motivationtrope_text to repay the loyalty of someone
+LPUSH motivationtrope_text to recover from a disasterous mistake
+LPUSH motivationtrope_text to help everyone
+LPUSH motivationtrope_text to find the meaning behind a certain word.
+LPUSH motivationtrope_text to find the best person to be {{params.npc.sex['possessive']}} {{params.npc.sex['spouse']}}
+LPUSH motivationtrope_text to repay a debt before something bad happens
+LPUSH motivationtrope_text to protect an important person
+LPUSH motivationtrope_text to protect a vulnberable person
+LPUSH motivationtrope_text to find a purpose in life
+LPUSH motivationtrope_text to find a meaningful place in the world
+LPUSH motivationtrope_text to do anything to get what {{params.npc.sex['he']}} wants
+LPUSH motivationtrope_text to acquire power at any cost
+LPUSH motivationtrope_text to relax
+LPUSH motivationtrope_text to chill out
+LPUSH motivationtrope_text to try harder
+LPUSH motivationtrope_text by nothing
+LPUSH motivationtrope_text to do absolutely nothing
+LPUSH motivationtrope_text to beat a rival at their own game
+LPUSH motivationtrope_text to prove they are better than a rival
+LPUSH motivationtrope_text to bring about the end times
+LPUSH motivationtrope_text to achieve perfection
+LPUSH motivationtrope_text to enforce morality
+LPUSH motivationtrope_text to fight the opposition
+LPUSH motivationtrope_text to fight tyranny
+LPUSH motivationtrope_text to never fail again
+LPUSH motivationtrope_text to protect the family name
+LPUSH motivationtrope_text by a sense of honor
+LPUSH motivationtrope_text by food
+LPUSH motivationtrope_text by justice
+LPUSH motivationtrope_text by the happiness of others
+LPUSH motivationtrope_text for the sake of evil
+LPUSH motivationtrope_text for the sake of good
+LPUSH motivationtrope_text to prove {{params.npc.sex['possessive']}} father wrong
+LPUSH motivationtrope_text to find glory 
+LPUSH motivationtrope_text to glorify {{params.npc.sex['possessive']}} god.
+LPUSH motivationtrope_text to accomplish a specific goal
+LPUSH motivationtrope_text to complete a collection
+LPUSH motivationtrope_text to complete a hidden agenda
+LPUSH motivationtrope_text to get things settled and go home
+LPUSH motivationtrope_text to do the right thing above all else
+LPUSH motivationtrope_text to do something simple
+LPUSH motivationtrope_text by a simple goal
+LPUSH motivationtrope_text to become beautiful
+LPUSH motivationtrope_text to become stronger
+LPUSH motivationtrope_text to become more talented
+LPUSH motivationtrope_text to be free
+LPUSH motivationtrope_text to be normal
+LPUSH motivationtrope_text to live a normal life
+LPUSH motivationtrope_text to be special
+LPUSH motivationtrope_text to be someone else
+LPUSH motivationtrope_text to steal someone's life
+LPUSH motivationtrope_text to have friends
+LPUSH motivationtrope_text to live an exciting life
+LPUSH motivationtrope_text to live a boring life
+LPUSH motivationtrope_text to find danger and excitement
+LPUSH motivationtrope_text to return a favor
+LPUSH motivationtrope_text to amuse themselves by any means/
+LPUSH motivationtrope_text to secretly destroy another group
+LPUSH motivationtrope_text by personal reasons 
+LPUSH motivationtrope_text to make {{params.npc.sex['possessive']}} {{params.npc.sex['spouse']}} happy
+LPUSH motivationtrope_text to prove {{params.npc.sex['possessive']}} grit
+LPUSH motivationtrope_text to fulfill a vendetta
+LPUSH motivationtrope_text to find someone and make them pay
+LPUSH motivationtrope_text to find an object of special value
+LPUSH motivationtrope_text less and less 
+LPUSH motivationtrope_text to fight evil with evil
+LPUSH motivationtrope_text to fight fire with fire
+LPUSH motivationtrope_text to never be hurt again
+LPUSH motivationtrope_text to keep a promise 
+LPUSH motivationtrope_text to do something for the money
+LPUSH motivationtrope_text to become a real {{params.npc.profession}}
+LPUSH motivationtrope_text by {{params.npc.sex['possessive']}} friends
+LPUSH motivationtrope_text to find the right job
+LPUSH motivationtrope_text to make the gods pay
+LPUSH motivationtrope_text to make someone pay
+LPUSH motivationtrope_text to find something to do
+LPUSH motivationtrope_text to disprove a prophecy
+LPUSH motivationtrope_text to survive
+LPUSH motivationtrope_text to go home
+LPUSH motivationtrope_text to open a portal
+LPUSH motivationtrope_text to disprove something
+LPUSH motivationtrope_text to disprove someone
+LPUSH motivationtrope_text to prove {{params.npc.sex['possessive']}} mentor was right
+LPUSH motivationtrope_text to prove {{params.npc.sex['pronoun']}} isn't crazy
+LPUSH motivationtrope_text to prove {{params.npc.sex['possessive']}} loyalty
+LPUSH motivationtrope_text to create a utopia by any means
+LPUSH motivationtrope_text by noble goals
+LPUSH motivationtrope_text to play a game
+
