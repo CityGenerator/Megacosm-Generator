@@ -6,8 +6,8 @@ LPUSH motivation_kind drink
 LPUSH motivation_kind shelter
 LPUSH motivation_kind warmth
 LPUSH motivation_kind sex
-#LPUSH motivation_kind excretion
-#LPUSH motivation_kind comfort
+LPUSH motivation_kind excretion
+LPUSH motivation_kind comfort
 LPUSH motivation_kind sleep
 LPUSH motivation_kind stimulation
 LPUSH motivation_kind clothing
@@ -17,16 +17,15 @@ LPUSH motivation_kind protectionfromelements
 LPUSH motivation_kind security
 LPUSH motivation_kind order
 LPUSH motivation_kind law
-#LPUSH motivation_kind physicalsafety
-#LPUSH motivation_kind emotionalsafety
-#LPUSH motivation_kind familysafety
+LPUSH motivation_kind physicalsafety
+LPUSH motivation_kind familysafety
 #LPUSH motivation_kind health
 #LPUSH motivation_kind propertysafety
 #LPUSH motivation_kind limits
 #LPUSH motivation_kind stability
 #
 ##  3. Belongingness and Love needs
-#LPUSH motivation_kind family
+LPUSH motivation_kind family
 #LPUSH motivation_kind friendship
 #LPUSH motivation_kind intimacy
 #LPUSH motivation_kind affection

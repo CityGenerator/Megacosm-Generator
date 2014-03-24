@@ -1,6 +1,6 @@
 
 
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationsleep_text the need to get to sleep
-lpush motivationsleep_text severe exhaustion
+LPUSH motivationsleep_text to get some sleep
+LPUSH motivationsleep_text by severe exhaustion

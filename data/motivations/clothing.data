@@ -1,6 +1,6 @@
-# Bob is motivated by
+# Bob is motivated
 
-lpush motivationclothing_text the need to find warm clothing
-lpush motivationclothing_text the need to find dry clothing
-lpush motivationclothing_text the need to find fitting clothes
+LPUSH motivationclothing_text to find warm clothing
+LPUSH motivationclothing_text to find dry clothing
+LPUSH motivationclothing_text to find fitting clothes
 

@@ -280,10 +280,10 @@ def GenerateMotivation():
         for item in xrange(int(request.args['count'])):
             motivations.append(Motivation.Motivation(server,features))
             features['seed']=set_seed( )
-        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext='My Motivation?', generator='motivation' )
+        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext='I\'m Motivated...', generator='motivation' )
     else:
         motivation=Motivation.Motivation(server,features)
-        return render_template('oneliner.html', oneliner=motivation ,titletext='My Motivation?', generator='motivation' )
+        return render_template('oneliner.html', oneliner=motivation ,titletext='I\'m Motivated...', generator='motivation' )
 
 @app.route('/motivation_builder')
 def Motivation_Builder():
