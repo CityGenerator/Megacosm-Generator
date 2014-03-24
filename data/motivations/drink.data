@@ -1,6 +1,6 @@
 
 # Bob is motivated by
 
-lpush motivationdrink_category the need to get a drink
-lpush motivationdrink_category severe thirst
-lpush motivationdrink_category dehydration
+lpush motivationdrink_text the need to get a drink
+lpush motivationdrink_text severe thirst
+lpush motivationdrink_text dehydration

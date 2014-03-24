@@ -1,5 +1,5 @@
 
 # Bob is motivated by
 
-lpush motivationshelter_category the need to find a new home
-lpush motivationshelter_category the loss of {{npc.sex['posession']}} home
+lpush motivationshelter_text the need to find a new home
+lpush motivationshelter_text the loss of {{params.npc.sex['posession']}} home

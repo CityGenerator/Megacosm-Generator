@@ -2,5 +2,5 @@
 
 # Bob is motivated by
 
-lpush motivationsleep_category the need to get to sleep
-lpush motivationsleep_category severe exhaustion
+lpush motivationsleep_text the need to get to sleep
+lpush motivationsleep_text severe exhaustion
