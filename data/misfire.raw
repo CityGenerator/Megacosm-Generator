@@ -1121,3 +1121,4293 @@ LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
+# which will last ___
+
+LPUSH misfire_duration a few minutes
+LPUSH misfire_duration a week
+LPUSH misfire_duration a year
+LPUSH misfire_duration indefinitely
+
+
+# ___ are covered
+
+LPUSH misfire_target you
+LPUSH misfire_target the target
+LPUSH misfire_target the caster
+LPUSH misfire_target allies
+LPUSH misfire_target enemies
+LPUSH misfire_target you and your allies
+LPUSH misfire_target you and your enemies
+LPUSH misfire_target you, your enemies, and your allies
+        
+
+LPUSH misfire_growth head
+LPUSH misfire_growth leg
+LPUSH misfire_growth finger
+LPUSH misfire_growth hand
+LPUSH misfire_growth arm
+LPUSH misfire_growth foot
+LPUSH misfire_growth toe
+        
+
+LPUSH misfire_animal horse
+LPUSH misfire_animal cat
+LPUSH misfire_animal elephant
+LPUSH misfire_animal camel
+LPUSH misfire_animal cow
+LPUSH misfire_animal dire wolf
+LPUSH misfire_animal snail
+        
+# the dog is ___ towards you
+
+LPUSH misfire_disposition friendly
+LPUSH misfire_disposition aggressive
+LPUSH misfire_disposition suspicious
+LPUSH misfire_disposition fearful
+LPUSH misfire_disposition protective
+LPUSH misfire_disposition vicious
+        
+
+LPUSH misfire_size tiny
+LPUSH misfire_size small
+LPUSH misfire_size normal
+LPUSH misfire_size large
+LPUSH misfire_size huge
+LPUSH misfire_size gigantic
+LPUSH misfire_size colossal
+        
+#the monster appears ____ from you
+
+LPUSH misfire_distance several centimeters
+LPUSH misfire_distance a meter
+LPUSH misfire_distance several meters
+LPUSH misfire_distance twenty meters
+LPUSH misfire_distance a hundred meters
+LPUSH misfire_distance two hundred meters
+LPUSH misfire_distance a kilometer
+LPUSH misfire_distance several kilometers
+LPUSH misfire_distance many kilometers
+        
+# the cloud appears ___ of you
+
+LPUSH misfire_direction north
+LPUSH misfire_direction south
+LPUSH misfire_direction east
+LPUSH misfire_direction west
+LPUSH misfire_direction underneath
+LPUSH misfire_direction overhead
+LPUSH misfire_direction atop
+LPUSH misfire_direction in front
+LPUSH misfire_direction to the right
+LPUSH misfire_direction to the left
+        
+#you are hit with a glow ball that does ____ damage
+
+LPUSH misfire_damagetype fire
+LPUSH misfire_damagetype acidic
+LPUSH misfire_damagetype sonic
+LPUSH misfire_damagetype frost
+LPUSH misfire_damagetype electrical
+LPUSH misfire_damagetype elemental
+LPUSH misfire_damagetype necrotic
+LPUSH misfire_damagetype holy
+        
+# your nose is filled with the scent of ______
+
+LPUSH misfire_smell smoke
+LPUSH misfire_smell skunk
+LPUSH misfire_smell mint
+LPUSH misfire_smell decomposition
+LPUSH misfire_smell decay
+LPUSH misfire_smell citrus
+LPUSH misfire_smell vomit
+LPUSH misfire_smell wet dog
+LPUSH misfire_smell blood
+LPUSH misfire_smell urine
+        
+LPUSH misfire_color red
+LPUSH misfire_color blue
+LPUSH misfire_color green
+LPUSH misfire_color black
+
+# target = The Caster, The Target, Allies, All Enemies
+
+LPUSH misfire_template {{params.target }}'s skin is now {{params.color}}.
+LPUSH misfire_template {{params.target }} will grow an extra {{params.growth}} which hangs limply and occasionally mimics the movement of other {{params.growth}}s.
+LPUSH misfire_template {{params.target }} are covered with a glowing aura that protects from aggressive magics.
+LPUSH misfire_template Surprise fireballs! {{params.target |capitalize}} get damage from several {{params.size}} fireballs exploding at once.
+LPUSH misfire_template You summon forth a {{params.size}} {{params.color}} {{params.animal}} that is {{params.disposition}} towards {{params.target}}.
+LPUSH misfire_template {{params.target }} contract uncontrollable, loud hiccups that prevent stealth or concentration.
+LPUSH misfire_template The magic affects everyone within a quarter mile radius except the intended target.
+LPUSH misfire_template A horrible taste overcomes {{params.target}}. They have a 25% chance of throwing up.
+LPUSH misfire_template An {{params.size}} {{params.animal}} suddenly appears in front of you, explains that he's very sorry he didn't show up earlier and wanders off humming.
+LPUSH misfire_template In a 200 ft radius centered on {{params.target}}, snow begins to fall, and will follow {{params.target}} indoors and out.
+LPUSH misfire_template The spell hits with reduced intensity.
+LPUSH misfire_template The spell hits with enhanced intensity.
+LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful and unique body odor that smells of {{params.smell}}. While not putrid, it is not pleasant.
+LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
+LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
+LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+
