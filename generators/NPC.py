@@ -2,6 +2,7 @@
 import random
 import json
 from generators.Generator import Generator
+import generators
 
 class NPC(Generator):
     def __init__(self, redis, features={}):
@@ -13,6 +14,10 @@ class NPC(Generator):
 
         # This list tells us which of the attributes are actually stats
         self.stats=self.redis.lrange('stat_npc',0,-1)
+
+        if not hasattr(self,'motivation'):
+            self.motivation=generators.Motivation.Motivation(self.redis, {'npc':self})
+
 
     def select_race(self):
         #print self.redis.llen('race')
