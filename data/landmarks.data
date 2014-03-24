@@ -1,18 +1,14 @@
-ok, jumping around a bit... what continental/regional landmarks can you think of?
-
-
-LPUSH landmark_scale continent
-LPUSH landmark_scale region
-LPUSH landmark_scale city
-
-LPUSH continentlandmark_kind mountainrange
-LPUSH continentlandmark_kind inlandsea
-
-
 
 #the Korshak region is known for the _________, ___________ 
-LPUSH regionlandmark_kind 
 
+
+# The following need to be put in the following format:
+#      name    | description that completes the sentence "Foo Bar is ________________."
+# For example:
+#      Foo Bar | a tall, circular rock shaped like a monkey
+
+
+#Yes, this big ol' list.
 
 ait
 arête
