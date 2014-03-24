@@ -48,3 +48,5 @@ class Business(Generator):
             self.floor= random.randint(1,int(self.maxfloors))
 
 
+    def __str__(self):
+        return "%s %s" %(self.name['full'], self.kind)

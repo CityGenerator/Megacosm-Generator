@@ -20,4 +20,4 @@ class Sect(Generator):
             random.shuffle(portfolio)
             self.domain=portfolio[0]
 
-
+#TODO this should have an __str__; is it using the text->template pattern?

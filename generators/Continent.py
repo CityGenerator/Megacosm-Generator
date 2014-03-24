@@ -23,3 +23,5 @@ class Continent(Generator):
         for countryid in xrange(self.countrycount):
             self.countries.append( Country(self.redis, {'continent':self} ) )
         
+    def __str__(self):
+        return "%s with %s countries" %(self.name['full'], self.countrycount)
