@@ -17,11 +17,11 @@ LPUSH motivation_kind protectionfromelements
 LPUSH motivation_kind security
 LPUSH motivation_kind order
 LPUSH motivation_kind law
-LPUSH motivation_kind physicalsafety
-LPUSH motivation_kind emotionalsafety
-LPUSH motivation_kind familysafety
-LPUSH motivation_kind health
-LPUSH motivation_kind propertysafety
+#LPUSH motivation_kind physicalsafety
+#LPUSH motivation_kind emotionalsafety
+#LPUSH motivation_kind familysafety
+#LPUSH motivation_kind health
+#LPUSH motivation_kind propertysafety
 #LPUSH motivation_kind limits
 #LPUSH motivation_kind stability
 #

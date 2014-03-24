@@ -2,7 +2,7 @@
 import random
 import json
 from generators.Generator import Generator
-from generators.NPC import NPC
+import  generators
 
 from util import Filters
 
@@ -14,7 +14,7 @@ class Motivation(Generator):
         self.generate_features('motivation'+self.kind)
 
         if not hasattr(self, 'npc'):
-            self.npc=NPC(self.redis, {'motivation':self})
+            self.npc=generators.NPC.NPC(self.redis, {'motivation':self})
 
         self.text=self.render_template(self.text)
         print "a motivation", self.__dict__
