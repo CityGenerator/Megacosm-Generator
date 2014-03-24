@@ -1,15 +1,233 @@
 ok, jumping around a bit... what continental/regional landmarks can you think of?
 
-Natural
-* Rivers
-* Mountains
-* Valleys
-* Dells
-* Waterfall
-* Forest
-* Volcano
-* Cavern
+
+LPUSH landmark_scale continent
+LPUSH landmark_scale region
+LPUSH landmark_scale city
+
+LPUSH continentlandmark_kind mountainrange
+LPUSH continentlandmark_kind inlandsea
+
+
+
+#the Korshak region is known for the _________, ___________ 
+LPUSH regionlandmark_kind 
+
+
+ait
+arête
+ayre
+badlands
+barchan dunes
+bay
+bayou
+beach
+bight
+blowhole
+bluff
+bornhardt
+braided channel
+butte
+calanque
+canyon
+cape
+cave
+cavern
+channel
+cirque
+cliff
+coast
+complex volcano
+confluence
+coral reef
+cove
 crater
+crater lake
+crevasse
+cryovolcano
+cuspate foreland
+cutbank
+dale
+defile
+dell
+desert pavement
+desert varnish
+dirt cone
+draw
+drumlin and drumlin field
+dry lake
+dune system
+escarpment 
+esker
+estuary
+firth
+fjard
+fjord
+flatiron
+floodplain
+forest
+geyser
+glacial horn
+glacier
+glacier cave
+glen
+gorge 
+gulch
+gully
+gyser
+hanging valley
+headland
+hill
+hogback
+hoodoo
+inlet
+island, islet
+isthmus
+jungle
+kettle lake
+knoll
+lagoon
+lake
+lava dome
+lava flow and lava plain
+lavaka
+lava lake
+lava spine
+lava tube
+limestone pavement
+loess
+maar
+machair
+malpais
+marine terrace
+marsh
+mesa
+mid-ocean ridge
+monadnock
+mountain
+mountain cove
+mountain pass
+mountain range
+mud flat
+mud volcano
+natural arch
+natural levee
+natural pool
+nunatak
+oasis
+outwash plain
+pediplain
+peneplain
+peninsula
+pingo
+pit crater
+plain
+plateau
+plunge pool
+pond
+proglacial lake
+pseudocrater
+rapid
+ravine
+ria
+ridge
+riffle
+river
+river basin
+river delta
+river island
+roche moutonnée
+rock-cut basin
+rock shelter
+salt flat
+salt marsh
+salt pan
+sand dune
+sandhill
+sand sea
+sand volcano
+scree
+sea
+sea cave
+shield volcano
+shoal
+shoreline
+shut-in river
+sound
+spit
+spring
+stack and stump
+stone formations
+strait
+strandflat
+strath
+stratovolcano
+stream
+subglacial mound
+submarine volcano
+summit
+supervolcano
+surge channel
+swamp
+tea table
+tepui
+terrace
+tombolo
+tor
+trim line
+tunnel valley
+tuya
+u-shaped valley
+vale
+valley
+volcanic arc
+volcanic caldera
+volcanic cone
+volcanic crater
+volcanic dam
+volcanic field
+volcanic group
+volcanic island
+volcanic landforms[edit]
+volcanic landforms include:
+volcanic plateau
+volcanic vent
+volcano
+waterfall
+yardang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Civilization
 ruins
