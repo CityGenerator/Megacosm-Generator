@@ -11,6 +11,7 @@ from generators import Event
 from generators import JobPosting
 from generators import Gem
 from generators import MundaneItem
+from generators import Motivation
 from util.Seeds import *
 from util import Filters
 import random
@@ -266,6 +267,30 @@ def Event_Builder():
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='event') 
     
+    
+#########################################################################
+
+
+@app.route('/motivation')
+def GenerateMotivation():
+    """Generate a simple motivation"""
+    features=feature_filter('motivation')
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        motivations=[]
+        for item in xrange(int(request.args['count'])):
+            motivations.append(Motivation.Motivation(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext='My Motivation?', generator='motivation' )
+    else:
+        motivation=Motivation.Motivation(server,features)
+        return render_template('oneliner.html', oneliner=motivation ,titletext='My Motivation?', generator='motivation' )
+
+@app.route('/motivation_builder')
+def Motivation_Builder():
+    """Generate the basic data about a motivation"""
+    paramlist,paramstring,paramset=builder_form_data('motivation')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='motivation') 
     
 #########################################################################
 
