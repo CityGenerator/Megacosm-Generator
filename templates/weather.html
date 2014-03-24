@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+{% block title %}Look Outside... {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Look Outside... <a href="/weather?seed={{weather.seed}}">({{weather.seed}})</a></h1>
+
+<p>Right now it is {{weather.temp['name']}} outside, with {{weather.wind['name']}} winds.</p>
+
+{%if weather.precipitation%}
+<p>It is {{weather.precipitation['none'] }} {{weather.precipitation_type}} at the moment.</p>
+{%endif%}
+
+{%if weather.cloud%}
+<p>There are {{ weather.cloud }} clouds in the sky above.</p>
+{%endif%}
+
+{%if weather.storm%}
+<p>{{ weather.storm |article |capitalize}} is approaching, and will hit {{weather.time}}.</p>
+{%endif%}
+
+{% endblock %}

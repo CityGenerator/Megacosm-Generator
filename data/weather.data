@@ -1,0 +1,99 @@
+# Right now it is ___________,
+ZADD weather_temp  10  { "name":"unbearably cold",  "score":10      }
+ZADD weather_temp  20  { "name":"freezing",         "score":20      }
+ZADD weather_temp  30  { "name":"cold",             "score":30      }
+ZADD weather_temp  40  { "name":"chilly",           "score":40      }
+ZADD weather_temp  50  { "name":"cool",             "score":50      }
+ZADD weather_temp  60  { "name":"mild",             "score":60      }
+ZADD weather_temp  70  { "name":"pleasant",         "score":70      }
+ZADD weather_temp  80  { "name":"warm",             "score":80      }
+ZADD weather_temp  90  { "name":"hot",              "score":90      }
+ZADD weather_temp 100  { "name":"unbearably hot",   "score":100     }
+
+# Right now it is mild, with ______ winds.
+ZADD weather_wind  10  { "name":"calm",             "score":10      }
+ZADD weather_wind  20  { "name":"light",            "score":20      }
+ZADD weather_wind  30  { "name":"gentle",           "score":30      }
+ZADD weather_wind  40  { "name":"breezy",           "score":40      }
+ZADD weather_wind  50  { "name":"moderate",         "score":50      }
+ZADD weather_wind  60  { "name":"fresh",            "score":60      }
+ZADD weather_wind  70  { "name":"strong",           "score":70      }
+ZADD weather_wind  80  { "name":"gale-force",       "score":80      }
+ZADD weather_wind  90  { "name":"storm-force",      "score":90      }
+ZADD weather_wind 100  { "name":"hurricane-force",  "score":100     }
+
+# it is ____ drizzling at the moment.
+SET  weather_precipitation_chance 20
+ZADD weather_precipitation  20  { "name":"lightly",    "score":20      }
+ZADD weather_precipitation  60  { "name":"moderately", "score":60      }
+ZADD weather_precipitation  90  { "name":"densely",    "score":90      }
+ZADD weather_precipitation 100  { "name":"heavily",    "score":100     }
+
+# It is heavily ______ at the moment.
+LPUSH weather_precipitation_type drizzling
+LPUSH weather_precipitation_type raining
+LPUSH weather_precipitation_type freeze-drizzling
+LPUSH weather_precipitation_type freeze-raining
+LPUSH weather_precipitation_type snowing
+LPUSH weather_precipitation_type sleeting
+LPUSH weather_precipitation_type hailing
+LPUSH weather_precipitation_type graupeling
+
+# There are ______ clouds in the sky above
+SET   weather_cloud_chance 30
+
+LPUSH weather_cloud cirrus
+LPUSH weather_cloud cirrostratus
+LPUSH weather_cloud cirrocumulus
+LPUSH weather_cloud altostratus
+LPUSH weather_cloud altocumulus
+LPUSH weather_cloud stratus
+LPUSH weather_cloud stratocumulus
+LPUSH weather_cloud nimbostratus
+LPUSH weather_cloud cumulus
+LPUSH weather_cloud cumulus congestus
+LPUSH weather_cloud cumulonimbus
+LPUSH weather_cloud wall
+LPUSH weather_cloud shelf
+LPUSH weather_cloud fractus
+LPUSH weather_cloud mammatus
+LPUSH weather_cloud contrail
+
+
+
+
+# A __________ is approaching,
+SET   weather_storm_chance 30
+LPUSH weather_storm ice storm
+LPUSH weather_storm blizzard
+LPUSH weather_storm snow storm
+LPUSH weather_storm wind storm
+LPUSH weather_storm gale
+LPUSH weather_storm thunderstorm
+LPUSH weather_storm cyclone
+LPUSH weather_storm hailstorm
+LPUSH weather_storm downburst
+LPUSH weather_storm dust storm
+LPUSH weather_storm hurricane
+LPUSH weather_storm lightning storm
+LPUSH weather_storm thunder snow storm
+LPUSH weather_storm thunderstorm
+LPUSH weather_storm tropical storm
+LPUSH weather_storm winter storm
+
+# and will hit at ________
+
+LPUSH weather_time at daybreak
+LPUSH weather_time mid-morning
+LPUSH weather_time around noon
+LPUSH weather_time in the afternoon
+LPUSH weather_time mid-day
+LPUSH weather_time in the early evening
+LPUSH weather_time before nightfall
+LPUSH weather_time after nightfall
+LPUSH weather_time at midnight
+LPUSH weather_time in the dead of night
+LPUSH weather_time before dawn
+
+
+

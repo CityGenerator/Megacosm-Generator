@@ -1,0 +1,23 @@
+
+LPUSH naturalresource_kind dangerouswildlife
+# Lala Land is know for it's _________
+LPUSH naturalresource_dangerouswildlife_name_type dangerous
+LPUSH naturalresource_dangerouswildlife_name_type mutated
+
+LPUSH naturalresource_dangerouswildlife_name wildlife
+LPUSH naturalresource_dangerouswildlife_name animals
+
+#which ________ bears
+SET naturalresource_dangerouswildlife_method includes
+
+# which includes _________
+LPUSH naturalresource_dangerouswildlife_product carniverous game
+LPUSH naturalresource_dangerouswildlife_product giant turkeys
+LPUSH naturalresource_dangerouswildlife_product hungry bears
+LPUSH naturalresource_dangerouswildlife_product agressive deer
+LPUSH naturalresource_dangerouswildlife_product rabid giraffes
+LPUSH naturalresource_dangerouswildlife_product man-eating spiders
+LPUSH naturalresource_dangerouswildlife_product unspeakable abominations
+
+
+

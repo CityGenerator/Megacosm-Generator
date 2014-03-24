@@ -31,5 +31,7 @@ class MagicItem(Generator):
         self.creator=template.render(npc=self.npc)
 
 
+# TODO needs real testing!
+
 #TODO move FILTER additions to generator
 #TODO same with template rendering

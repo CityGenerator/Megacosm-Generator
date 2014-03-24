@@ -2,8 +2,16 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine
-from util.MakeMap import *
+from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
+from generators import Wanted
+from generators import Weather
+from generators import Govt
+from generators import Resource
+from generators import Event
+from generators import JobPosting
+from generators import Gem
+from generators import MundaneItem
+from generators import Motivation
 from util.Seeds import *
 from util import Filters
 import random
@@ -19,59 +27,44 @@ from pprint import pprint
 
 p = inflect.engine()
 
-MAPWIDTH=500
-MAPHEIGHT=300
-
 config = ConfigParser.RawConfigParser()
 config.read( 'data/config.ini')
 
 url = config.get('redis', 'url')
 server=redis.from_url(url)
 
-#pool = redis.ConnectionPool(host=config.get('redis', 'host'), port=config.get('redis', 'port'), db=0, password=config.get('redis', 'password'),   )
-#server = redis.Redis(connection_pool=pool)    
-
 # This thing here.. does stuff.
 app = Flask(__name__)
+
+#########################################################################
 
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
     return render_template('index.html') 
 
+#########################################################################
 
 @app.route('/magicitem')
 def GenerateMagicItem():
     """Generate a MagicItem"""
-    seed=set_seed( request.args.get('seed') )
 
-    print "MAH SEED:",seed
+    features=feature_filter('magicitem')
+    magicitem=MagicItem.MagicItem(server,features)
 
-    magicitemfeatures={'seed':seed,}
-    for param in request.args :
-        if re.match('^magicitem_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            magicitemfeatures[param]=int(request.args[param])
-        elif re.match('^magicitem_kind$',param) and request.args[param] in server.lrange('magicitem_kind',0,-1):
-            magicitemfeatures['kind']=request.args[param]
-
-    magicitem=MagicItem.MagicItem(server, magicitemfeatures)
     kind= magicitem.kind
     return render_template('magicitem_'+kind+'.html',magicitem=magicitem) 
 
 @app.route('/magicitem_builder')
 def MagicItem_Builder():
     """Generate an NPC"""
-
-    stats=server.lrange('stat_magicitem',0,-1)
-    statinfo={}
-    kind=server.lrange('magicitem_kind',0,-1);
-    for stat in stats :
-        statinfo[stat]=[]
-        for statstring in server.zrange('magicitem_'+stat,0,-1):
-            statinfo[stat].append(json.loads(statstring))
     
-    return render_template('magicitem_builder.html',statinfo=statinfo, otherstats={'kind':kind}) 
+    paramlist,paramstring,paramset=builder_form_data('magicitem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='magicitem') 
+    
+#########################################################################
+
 
 @app.route('/npc')
 def GenerateNPC():
@@ -87,7 +80,6 @@ def GenerateNPC():
     emotions=server.lrange('npc_emotion',0,-1);
     for param in request.args :
         if re.match('^npc_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             npcfeatures[param]=int(request.args[param])
         elif re.match('^npc_race$',param) and request.args[param] in races:
             npcfeatures['race']=request.args[param]
@@ -121,53 +113,18 @@ def NPC_Builder():
     
     return render_template('npc_builder.html',statinfo=statinfo, otherstats={'race':races,'profession':professions,'attitude':attitudes,'motivation':motivations,'emotion':emotions}) 
 
-@app.route('/planet_builder')
-def Planet_Builder():
-    """Generate the basic data about a planet"""
-
-    stats=server.lrange('stat_planet',0,-1)
-    statinfo={}
-
-    for stat in stats :
-        statinfo[stat]=[]
-        for statstring in server.zrange('planet_'+stat,0,-1):
-            print "looking at planet_",stat, statstring
-            statinfo[stat].append(json.loads(statstring))
-    
-    return render_template('planet_builder.html',statinfo=statinfo) 
-
-
-@app.route('/planet')
-def GeneratePlanet():
-    """Generate the basic data about a planet"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    planetfeatures={'seed':seed,}
-
-    for param in request.args :
-        if re.match('^planet_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            planetfeatures[param]=int(request.args[param])
-
-    planet=Planet.Planet(server,planetfeatures)
-
-    return render_template('planet.html', planet=planet )
-
+#########################################################################
 
 @app.route('/bond')
 def GenerateBond():
     """Generate a simple bond"""
     seed=set_seed( request.args.get('seed') )
 
-    print "MAH SEED:",seed
 
     bondfeatures={'seed':seed,}
 
     for param in request.args :
         if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             bondfeatures[param]=int(request.args[param])
         elif re.match('^bond_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('bond_template'):
             bondfeatures['template']=server.lrange('bond_template', int(request.args[param]), int(request.args[param]) )[0]
@@ -179,7 +136,7 @@ def GenerateBond():
 
     bond=Bond.Bond(server,bondfeatures)
 
-    return render_template('bond.html', bond=bond )
+    return render_template('oneliner.html', oneliner=bond,titletext='The Ties that Bind Us... ', generator='bond' )
 
 @app.route('/bond_builder')
 def Bond_Builder():
@@ -189,18 +146,52 @@ def Bond_Builder():
     for stat in ['when', 'template']:
         statinfo[stat]=[]
         for statstring in server.lrange('bond_'+stat,0,-1):
-            print "looking at bond_",stat, statstring
             statinfo[stat].append(statstring)
     
     return render_template('bond_builder.html',statinfo=statinfo) 
 
+#########################################################################
+@app.route('/planet_builder')
+def Planet_Builder():
+    """Generate the basic data about a planet"""
+    paramlist,paramstring,paramset=builder_form_data('planet')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='planet') 
+
+
+@app.route('/planet')
+def GeneratePlanet():
+    """Generate the basic data about a planet"""
+    features=feature_filter('planet')
+    planet=Planet.Planet(server,features)
+    planet.add_continents()
+    return render_template('planet.html', planet=planet )
+
+
+#########################################################################
+
+@app.route('/resource')
+def GenerateResource():
+    """Generate a simple resource"""
+    features=feature_filter('resource')
+    resource=Resource.Resource(server,features)
+    return render_template('oneliner.html', oneliner=resource,titletext='At your disposal...', generator='resource' )
+
+@app.route('/resource_builder')
+def Resource_Builder():
+    """Generate the basic data about a resource"""
+    paramlist,paramstring,paramset=builder_form_data('resource')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='resource') 
+    
+#########################################################################
 
 @app.route('/rumor')
 def GenerateRumor():
     """Generate a simple rumor"""
     features=feature_filter('rumor')
     rumor=Rumor.Rumor(server,features)
-    return render_template('rumor.html', rumor=rumor )
+    return render_template('oneliner.html', oneliner=rumor,titletext='Did you hear?', generator='rumor' )
 
 @app.route('/rumor_builder')
 def Rumor_Builder():
@@ -209,6 +200,344 @@ def Rumor_Builder():
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
     
+#########################################################################
+
+@app.route('/misfire')
+def GenerateMisfire():
+    """Generate a simple misfire"""
+    features=feature_filter('misfire')
+    misfire=Misfire.Misfire(server,features)
+    return render_template('oneliner.html', oneliner=misfire,titletext='My spell misfired!', generator='misfire' )
+
+@app.route('/misfire_builder')
+def Misfire_Builder():
+    """Generate the basic data about a misfire"""
+    paramlist,paramstring,paramset=builder_form_data('misfire')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='misfire') 
+    
+#########################################################################
+
+
+@app.route('/currency')
+def GenerateCurrency():
+    """Generate a simple currency"""
+    features=feature_filter('currency')
+    currency=Currency.Currency(server,features)
+    return render_template('oneliner.html', oneliner=currency ,titletext='Spare Some Change? ', generator='currency' )
+
+@app.route('/currency_builder')
+def Currency_Builder():
+    """Generate the basic data about a currency"""
+    paramlist,paramstring,paramset=builder_form_data('currency')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='currency') 
+    
+#########################################################################
+
+@app.route('/jobposting')
+def GenerateJobPosting():
+    """Generate a simple jobposting"""
+    features=feature_filter('jobposting')
+    jobposting=JobPosting.JobPosting(server,features)
+    return render_template('oneliner.html', oneliner=jobposting ,titletext='Help Wanted!', generator='jobposting' )
+
+@app.route('/jobposting_builder')
+def JobPosting_Builder():
+    """Generate the basic data about a jobposting"""
+    paramlist,paramstring,paramset=builder_form_data('jobposting')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='jobposting') 
+    
+    
+#########################################################################
+
+
+@app.route('/event')
+def GenerateEvent():
+    """Generate a simple event"""
+    features=feature_filter('event')
+    event=Event.Event(server,features)
+    return render_template('oneliner.html', oneliner=event ,titletext='Look over there...', generator='event' )
+
+@app.route('/event_builder')
+def Event_Builder():
+    """Generate the basic data about a event"""
+    paramlist,paramstring,paramset=builder_form_data('event')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='event') 
+    
+    
+#########################################################################
+
+
+@app.route('/motivation')
+def GenerateMotivation():
+    """Generate a simple motivation"""
+    features=feature_filter('motivation')
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        motivations=[]
+        for item in xrange(int(request.args['count'])):
+            motivations.append(Motivation.Motivation(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext='I\'m Motivated...', generator='motivation' )
+    else:
+        motivation=Motivation.Motivation(server,features)
+        return render_template('oneliner.html', oneliner=motivation ,titletext='I\'m Motivated...', generator='motivation' )
+
+@app.route('/motivation_builder')
+def Motivation_Builder():
+    """Generate the basic data about a motivation"""
+    paramlist,paramstring,paramset=builder_form_data('motivation')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='motivation') 
+    
+#########################################################################
+
+
+@app.route('/gem')
+def GenerateGem():
+    """Generate a simple gem"""
+    features=feature_filter('gem')
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        gems=[]
+        for item in xrange(int(request.args['count'])):
+            gems.append(Gem.Gem(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=gems, oneliner=gems[0] ,titletext='OOOH, Shiny...', generator='gem' )
+    else:
+        gem=Gem.Gem(server,features)
+        return render_template('oneliner.html', oneliner=gem ,titletext='OOOH, Shiny...', generator='gem' )
+
+@app.route('/gem_builder')
+def Gem_Builder():
+    """Generate the basic data about a gem"""
+    paramlist,paramstring,paramset=builder_form_data('gem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='gem') 
+    
+#########################################################################
+
+@app.route('/mundaneitem')
+def GenerateMundaneItem():
+    """Generate a simple mundaneitem"""
+
+    features=feature_filter('mundaneitem')
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        mundaneitems=[]
+        for item in xrange(int(request.args['count'])):
+            mundaneitems.append(MundaneItem.MundaneItem(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0] ,titletext='Look what I found!', generator='mundaneitem' )
+    else:
+        mundaneitem=MundaneItem.MundaneItem(server,features)
+        return render_template('oneliner.html', oneliner=mundaneitem ,titletext='Look what I found!', generator='mundaneitem' )
+
+@app.route('/mundaneitem_builder')
+def MundaneItem_Builder():
+    """Generate the basic data about a mundaneitem"""
+    paramlist,paramstring,paramset=builder_form_data('mundaneitem')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='mundaneitem') 
+    
+#########################################################################
+
+
+@app.route('/legend')
+def GenerateLegend():
+    """Generate a simple legend"""
+    features=feature_filter('legend')
+    legend=Legend.Legend(server,features)
+    return render_template('oneliner.html', oneliner=legend ,titletext='Let me tell you a story...', generator='legend' )
+
+@app.route('/legend_builder')
+def Legend_Builder():
+    """Generate the basic data about a legend"""
+    paramlist,paramstring,paramset=builder_form_data('legend')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='legend') 
+    
+#########################################################################
+
+@app.route('/business')
+def GenerateBusiness():
+    """Generate a simple business"""
+    features=feature_filter('business')
+    business=Business.Business(server,features)
+    return render_template('business.html', business=business )
+
+
+@app.route('/business_builder')
+def Business_Builder():
+    """Generate the basic data about a business"""
+
+    paramlist,paramstring,paramset=builder_form_data('business')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='business') 
+    
+    
+#########################################################################
+
+@app.route('/moon')
+def GenerateMoon():
+    """Generate a simple moon"""
+    features=feature_filter('moon')
+    moon=Moon.Moon(server,features)
+    return render_template('moon.html', moon=moon )
+
+
+@app.route('/moon_builder')
+def Moon_Builder():
+    """Generate the basic data about a moon"""
+    paramlist,paramstring,paramset=builder_form_data('moon')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='moon') 
+    
+    
+    
+#########################################################################
+
+@app.route('/star')
+def GenerateStar():
+    """Generate a simple star"""
+    features=feature_filter('star')
+    star=Star.Star(server,features)
+    return render_template('star.html', star=star )
+
+
+@app.route('/star_builder')
+def Star_Builder():
+    """Generate the basic data about a star"""
+    paramlist,paramstring,paramset=builder_form_data('star')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='star') 
+    
+    
+    
+#########################################################################
+
+@app.route('/continent')
+def GenerateContinent():
+    """Generate a simple continent"""
+    features=feature_filter('continent')
+    continent=Continent.Continent(server,features)
+    continent.add_countries()
+    return render_template('continent.html', continent=continent )
+
+
+@app.route('/continent_builder')
+def Continent_Builder():
+    """Generate the basic data about a continent"""
+    paramlist,paramstring,paramset=builder_form_data('continent')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='continent') 
+    
+#########################################################################
+
+@app.route('/region')
+def GenerateRegion():
+    """Generate a simple region"""
+    features=feature_filter('region')
+    region=Region.Region(server,features)
+#    region.add_cities()
+#    region.add_locations()()
+    return render_template('region.html', region=region )
+
+
+@app.route('/region_builder')
+def Region_Builder():
+    """Generate the basic data about a region"""
+    paramlist,paramstring,paramset=builder_form_data('region')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='region') 
+    
+#########################################################################
+
+@app.route('/sect')
+def GenerateSect():
+    """Generate a simple sect"""
+
+    features=feature_filter('sect')
+    sect=Sect.Sect(server,features)
+    return render_template('sect.html', sect=sect, name='sect' )
+
+
+@app.route('/sect_builder')
+def Sect_Builder():
+    """Generate the basic data about a sect"""
+    paramlist,paramstring,paramset=builder_form_data('sect')
+    result= server.zrange('portfolio_domain',0,-1)
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
+
+    
+#########################################################################
+
+@app.route('/govt')
+def GenerateGovt():
+    """Generate a simple govt"""
+    features=feature_filter('govt')
+    govt=Govt.Govt(server,features)
+    return render_template('govt.html', govt=govt )
+
+
+@app.route('/govt_builder')
+def Govt_Builder():
+    """Generate the basic data about a govt"""
+    paramlist,paramstring,paramset=builder_form_data('govt')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='govt') 
+
+
+    
+#########################################################################
+
+@app.route('/weather')
+def GenerateWeather():
+    """Generate a simple weather"""
+    features=feature_filter('weather')
+    weather=Weather.Weather(server,features)
+    return render_template('weather.html', weather=weather )
+
+
+@app.route('/weather_builder')
+def Weather_Builder():
+    """Generate the basic data about a weather"""
+    paramlist,paramstring,paramset=builder_form_data('weather')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='weather') 
+
+
+    
+#########################################################################
+
+@app.route('/wanted')
+def GenerateWanted():
+    """Generate a simple wanted"""
+    features=feature_filter('wanted')
+    wanted=Wanted.Wanted(server,features)
+    return render_template('wanted.html', wanted=wanted )
+
+
+@app.route('/wanted_builder')
+def Wanted_Builder():
+    """Generate the basic data about a wanted"""
+    paramlist,paramstring,paramset=builder_form_data('wanted')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='wanted') 
+
+
+#########################################################################
+
+@app.route('/country')
+def GenerateCountry():
+    """Generate a simple country"""
+    features=feature_filter('country')
+    country=Country.Country(server,features)
+    country.add_regions()
+    return render_template('country.html', country=country )
+
+
+@app.route('/country_builder')
+def Country_Builder():
+    """Generate the basic data about a country"""
+    paramlist,paramstring,paramset=builder_form_data('country')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='country') 
+
+
 #########################################################################
 
 @app.route('/cuisine')
@@ -222,19 +551,45 @@ def GenerateCuisine():
 @app.route('/cuisine_builder')
 def Cuisine_Builder():
     """Generate the basic data about a cuisine"""
-    #TODO see what else we can refactor this builder into- rumor? legend? magic items? NPC?
     paramlist,paramstring,paramset=builder_form_data('cuisine')
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='cuisine') 
+    
+#########################################################################
+
+@app.route('/deity')
+def GenerateDeity():
+    """Generate a simple deity"""
+
+    features=feature_filter('deity')
+    deity=Deity.Deity(server,features)
+    return render_template('deity.html', deity=deity, name='deity' )
+
+@app.route('/deity_builder')
+def Deity_Builder():
+    """Generate the basic data about a deity"""
+    paramlist,paramstring,paramset=builder_form_data('deity')
+    result= server.zrange('portfolio_domain',0,-1)
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='deity') 
+
+
+
 
 #########################################################################
+#########################################################################
+#########################################################################
+
+
+
+
 
 def feature_filter(generator):
     seed=set_seed( request.args.get('seed') )
-    print "MAH SEED:",seed
+
+    print "MAH SEED:",seed, request.args.get('seed') 
     features={'seed':seed,}
     for param in request.args :
         if re.match('^'+generator+'_[a-z_]+_(roll|chance)$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
             features[param]=int(request.args[param])
         elif re.match('^'+generator+'_[a-z_]+$',param) and re.match('^\d{1,10000}$',request.args[param]):
             fieldname= re.sub(generator+'_','', param)
@@ -246,7 +601,6 @@ def builder_form_data(generator):
     paramstring={}
     paramset={}
     for key in server.keys(generator+'_*'):
-        print server.type(key)
         fieldname=key.replace(generator+'_','')
         if server.type(key) == 'list' :
             paramlist[fieldname]=server.lrange(key,0,-1)
@@ -256,29 +610,16 @@ def builder_form_data(generator):
             result= server.zrangebyscore(key,1,100)
             paramset[fieldname]=[]
             for field in result:
-                paramset[fieldname].append( json.loads(field))
-            print paramset[fieldname]
+                try:
+                    paramset[fieldname].append( json.loads(field))
+                except ValueError as e:
+                    raise Exception ("failed to parse",key,"field", field)
     return paramlist,paramstring,paramset
 
 
 
 
 
-@app.route('/deity')
-def GenerateDeity():
-    """Generate a Deity"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    deityfeatures={'seed':seed,}
-    for param in request.args :
-        if re.match('^deity_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            deityfeatures[param]=int(request.args[param])
-
-    deity=Deity.Deity(server, deityfeatures)
-    return render_template('deity.html',deity=deity) 
 
 
 @app.errorhandler(404)
@@ -299,6 +640,19 @@ def select_article(s):
 @app.template_filter('pluralize')
 def select_pluralize(s,n):
     return Filters.select_pluralize(s,n)
+
+@app.template_filter('conjunction')
+def select_conjunction(wordlist):
+    return Filters.select_conjunction(wordlist)
+
+
+@app.template_filter('plural_verb')
+def select_plural_verb(verb,subject ):
+    return Filters.select_plural_verb(verb,subject )
+
+@app.template_filter('plural_adj')
+def select_plural_adj(adj,subject ):
+    return Filters.select_plural_adj(adj,subject )
 
 
 if __name__ == '__main__':

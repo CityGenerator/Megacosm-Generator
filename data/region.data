@@ -1,0 +1,124 @@
+
+
+ZADD  region_size    5    {"name":"tiny",     "mincities":1,   "maxcities":2,       "score":5     }
+ZADD  region_size    30   {"name":"small",    "mincities":2,   "maxcities":5,       "score":30    }
+ZADD  region_size    70   {"name":"medium",   "mincities":2,   "maxcities":10,      "score":70    }
+ZADD  region_size   100   {"name":"large",    "mincities":5,   "maxcities":20,      "score":100   }
+
+
+#People think the government of Bogoland is _____________________,
+
+ZADD  region_corruption    5  { "name":"the epitome of corruption",     "score":5    }
+ZADD  region_corruption    10  { "name":"corrupt and nefarious",     "score":10    }
+ZADD  region_corruption    15  { "name":"willing to look the other way for the right price",     "score":15    }
+ZADD  region_corruption    20  { "name":"crooked",         "score":20    }
+ZADD  region_corruption    25  { "name":"on the take",     "score":25    }
+ZADD  region_corruption    30  { "name":"underhanded",     "score":30    }
+ZADD  region_corruption    35  { "name":"unethical",       "score":35    }
+ZADD  region_corruption    40  { "name":"disreputable",    "score":40    }
+ZADD  region_corruption    45  { "name":"equitable",       "score":45    }
+ZADD  region_corruption    50  { "name":"reasonable",      "score":50    }
+ZADD  region_corruption    55  { "name":"fair",            "score":55    }
+ZADD  region_corruption    60  { "name":"honest",          "score":60    }
+ZADD  region_corruption    65  { "name":"principled",      "score":65    }
+ZADD  region_corruption    70  { "name":"decent",          "score":70    }
+ZADD  region_corruption    75  { "name":"resolute",        "score":75    }
+ZADD  region_corruption    80  { "name":"honorable",       "score":80    }
+ZADD  region_corruption    85  { "name":"trustworthy",     "score":85    }
+ZADD  region_corruption    90  { "name":"upright",         "score":90    }
+ZADD  region_corruption    95  { "name":"virtuous",        "score":95    }
+ZADD  region_corruption    100  { "name":"incorruptible",   "score":100    }
+
+# citizens _________ of the country's leadership
+ZADD  region_countryapproval     5 { "name":"despise",        "score":5     }
+ZADD  region_countryapproval    10 { "name":"hate",           "score":10    }
+ZADD  region_countryapproval    15 { "name":"fear",           "score":15    }
+ZADD  region_countryapproval    20 { "name":"ridicule",       "score":20    }
+ZADD  region_countryapproval    25 { "name":"mock",           "score":25    }
+ZADD  region_countryapproval    30 { "name":"respect",        "score":30    }
+ZADD  region_countryapproval    80 { "name":"praise",         "score":80    }
+ZADD  region_countryapproval    90 { "name":"honor",          "score":90    }
+ZADD  region_countryapproval    95 { "name":"love",           "score":95    }
+ZADD  region_countryapproval   100 { "name":"revere",         "score":100   }
+
+
+# The region's Government is often described as ____________________
+ZADD  region_efficiency     5  { "name":"the pinnacle of inefficiency",       "score":5     }
+ZADD  region_efficiency    10  { "name":"incapable of even simple tasks",     "score":10    }
+ZADD  region_efficiency    15  { "name":"clearly incompetent",                "score":15    }
+ZADD  region_efficiency    20  { "name":"horribly inefficient",               "score":20    }
+ZADD  region_efficiency    25  { "name":"sloppy and disorganized",            "score":25    }
+ZADD  region_efficiency    30  { "name":"inept and inadequate",               "score":30    }
+ZADD  region_efficiency    35  { "name":"slipshod",                           "score":35    }
+ZADD  region_efficiency    40  { "name":"minimally competent",                "score":40    }
+ZADD  region_efficiency    45  { "name":"somwhat capable",                    "score":45    }
+ZADD  region_efficiency    50  { "name":"adequate",                           "score":50    }
+ZADD  region_efficiency    55  { "name":"satisfactory",                       "score":55    }
+ZADD  region_efficiency    60  { "name":"mostly sufficient",                  "score":60    }
+ZADD  region_efficiency    65  { "name":"surprisingly decent",                "score":65    }
+ZADD  region_efficiency    70  { "name":"effective overall",                  "score":70    }
+ZADD  region_efficiency    75  { "name":"on the ball",                        "score":75    }
+ZADD  region_efficiency    80  { "name":"efficient",                          "score":80    }
+ZADD  region_efficiency    85  { "name":"shrewd",                             "score":85    }
+ZADD  region_efficiency    90  { "name":"surprisingly skillful",              "score":90    }
+ZADD  region_efficiency    95  { "name":"magnificently organized",            "score":95    }
+ZADD  region_efficiency   100  { "name":"ruthlessly effective",               "score":100   }
+
+
+# The political influence of __region__ in the country is __INFLUENCE__ 
+ZADD  region_influence     5  { "name":"negligible",            "score":5     }
+ZADD  region_influence    10  { "name":"dwindling rapidly",     "score":10    }
+ZADD  region_influence    15  { "name":"wilting",               "score":15    }
+ZADD  region_influence    20  { "name":"wasting away",          "score":20    }
+ZADD  region_influence    25  { "name":"shrinking",             "score":25    }
+ZADD  region_influence    30  { "name":"declining",             "score":30    }
+ZADD  region_influence    35  { "name":"receding",              "score":35    }
+ZADD  region_influence    40  { "name":"consistent",            "score":40    }
+ZADD  region_influence    45  { "name":"steady",                "score":45    }
+ZADD  region_influence    50  { "name":"lasting",               "score":50    }
+ZADD  region_influence    55  { "name":"enduring",              "score":55    }
+ZADD  region_influence    60  { "name":"steadfast",             "score":60    }
+ZADD  region_influence    65  { "name":"unwavering",            "score":65    }
+ZADD  region_influence    70  { "name":"broadening",            "score":70    }
+ZADD  region_influence    75  { "name":"improving",             "score":75    }
+ZADD  region_influence    80  { "name":"spreading",             "score":80    }
+ZADD  region_influence    85  { "name":"growing",               "score":85    }
+ZADD  region_influence    90  { "name":"maturing",              "score":90    }
+ZADD  region_influence    95  { "name":"flourishing",           "score":95    }
+ZADD  region_influence   100  { "name":"thriving",              "score":100   }
+
+# In times of crisis, the population ___________.
+ZADD  region_unity    10  { "name":"turns against itself",                               "score":10    }
+ZADD  region_unity    20  { "name":"is eager to point fingers",                          "score":20    }
+ZADD  region_unity    30  { "name":"gives up their freedom in exchange for security",    "score":30    }
+ZADD  region_unity    40  { "name":"flees for the hills",                                "score":40    }
+ZADD  region_unity    50  { "name":"cowers in fear",                                     "score":50    }
+ZADD  region_unity    60  { "name":"squabbles amongst themselves",                       "score":60    }
+ZADD  region_unity    70  { "name":"stages ineffective protests",                        "score":70    }
+ZADD  region_unity    80  { "name":"overcomes their differences",                        "score":80    }
+ZADD  region_unity    90  { "name":"comes together and fights as one",                   "score":90    }
+ZADD  region_unity   100  { "name":"rallies behind its leaders",                         "score":100   }
+
+# Socially, Bogoland is _______________
+
+ZADD  region_social     5   {"name":"libertarian",         "score":5     }
+ZADD  region_social    10   {"name":"populist",            "score":10    }
+ZADD  region_social    30   {"name":"individualistic",     "score":30    }
+ZADD  region_social    40   {"name":"balanced",            "score":40    }
+ZADD  region_social    60   {"name":"rigid",               "score":60    }
+ZADD  region_social    80   {"name":"harsh",               "score":80    }
+ZADD  region_social    95   {"name":"disciplinarian",      "score":95    }
+ZADD  region_social   100   {"name":"authoritarian",       "score":100   }
+
+# and _______________
+
+ZADD  region_economic    10   {"name":"liberal",          "score":10    }
+ZADD  region_economic    20   {"name":"progressive",      "score":20    }
+ZADD  region_economic    30   {"name":"lenient",          "score":30    }
+ZADD  region_economic    40   {"name":"permissive",       "score":40    }
+ZADD  region_economic    60   {"name":"understanding",    "score":60    }
+ZADD  region_economic    70   {"name":"strict",           "score":70    }
+ZADD  region_economic    80   {"name":"limited",          "score":80    }
+ZADD  region_economic    90   {"name":"intolerant",       "score":90    }
+ZADD  region_economic   100   {"name":"conservative",     "score":100   }
+

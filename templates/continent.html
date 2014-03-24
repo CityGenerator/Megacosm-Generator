@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to the Continent of {{continent.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Welcome to the Continent <a href="/continent?seed={{continent.seed}}">{{continent.name['full']}} ({{continent.seed}})</a></h1>
+
+    <h2>Summary</h2>
+
+{{continent.name['full'] }} is {{continent.size['name'] |article }} continent with {{continent.civilization['name'] }} civilization.
+ Most civilized areas in {{continent.name['full'] }} have {{continent.technology['name'] }} technology.
+
+
+{% if continent.countries  %}
+    <h2>Countries</h2>
+
+    The continent has {{continent.countrydetails['name']}} known {{ 'country'|pluralize( continent.countries|length)}}.
+
+    <ul>
+    {%for country in continent.countries %}
+        <li><a href="/country?seed={{country.seed}}&continent_seed={{country.continent.seed}}">{{country.name['full']}} ({{country.seed}})</a> is {{country.age['name']|article}} {{country.size['name']}} country.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
+{% endblock %}

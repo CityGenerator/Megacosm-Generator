@@ -1,0 +1,115 @@
+
+
+LPUSH event_template {{params.variety }} {{params.kind}}, which is {{params.magnitude['name']}} to the people in the area.
+
+
+#Magnitude - How important is this event?
+# The event is _________ to the people in the area.
+ZADD event_magnitude   0 {  "name":"negligible",                    "score":0        }
+ZADD event_magnitude   5 {  "name":"trivial",                       "score":5        }
+ZADD event_magnitude  10 {  "name":"unimportant",                   "score":10       }
+ZADD event_magnitude  15 {  "name":"of minor importance",           "score":15       }
+ZADD event_magnitude  20 {  "name":"of lesser concern",             "score":20       }
+ZADD event_magnitude  25 {  "name":"of casual interest",            "score":25       }
+ZADD event_magnitude  40 {  "name":"relevant",                      "score":40       }
+ZADD event_magnitude  45 {  "name":"of some importance",            "score":45       }
+ZADD event_magnitude  50 {  "name":"of some concern",               "score":50       }
+ZADD event_magnitude  55 {  "name":"worthy of consideration",       "score":55       }
+ZADD event_magnitude  70 {  "name":"important",                     "score":70       }
+ZADD event_magnitude  75 {  "name":"of significant import",         "score":75       }
+ZADD event_magnitude  80 {  "name":"of considerable importance",    "score":80       }
+ZADD event_magnitude  85 {  "name":"of major concern",              "score":85       }
+ZADD event_magnitude  90 {  "name":"of great significance",         "score":90       }
+ZADD event_magnitude  95 {  "name":"of critical concern",           "score":95       }
+ZADD event_magnitude 100 {  "name":"of dire importance",            "score":100      }
+
+
+LPUSH event_kind festival
+LPUSH eventfestival_variety a religious
+LPUSH eventfestival_variety a trade
+
+   
+LPUSH event_kind celebration
+LPUSH eventcelebration_variety a birthday
+LPUSH eventcelebration_variety a wedding
+LPUSH eventcelebration_variety a new year
+LPUSH eventcelebration_variety a holiday
+LPUSH eventcelebration_variety a victory
+LPUSH eventcelebration_variety a spontaneous
+   
+LPUSH event_kind trial
+LPUSH eventtrial_variety a murder
+LPUSH eventtrial_variety a witch
+LPUSH eventtrial_variety a spy
+LPUSH eventtrial_variety a briggand
+LPUSH eventtrial_variety a thief
+   
+LPUSH event_kind war
+LPUSH eventwar_variety preparations for
+LPUSH eventwar_variety on ongoing
+LPUSH eventwar_variety the aftermath of a
+   
+LPUSH event_kind raid
+LPUSH eventraid_variety the midst of a
+LPUSH eventraid_variety the aftermath of a
+   
+LPUSH event_kind hunt
+LPUSH eventhunt_variety lost child
+LPUSH eventhunt_variety wandering monster
+LPUSH eventhunt_variety escaped prisoner
+LPUSH eventhunt_variety food
+LPUSH eventhunt_variety vermin
+LPUSH eventhunt_variety fox
+LPUSH eventhunt_variety sport
+   
+LPUSH event_kind disaster
+
+LPUSH eventdisaster_variety animal infestation
+LPUSH eventdisaster_variety avalanche
+LPUSH eventdisaster_variety biological
+LPUSH eventdisaster_variety blizzard
+LPUSH eventdisaster_variety chemical
+LPUSH eventdisaster_variety civil unrest
+LPUSH eventdisaster_variety cold snap 
+LPUSH eventdisaster_variety creature infestation
+LPUSH eventdisaster_variety crop failure
+LPUSH eventdisaster_variety cyclone
+LPUSH eventdisaster_variety displaced population
+LPUSH eventdisaster_variety drought
+LPUSH eventdisaster_variety earthquake
+LPUSH eventdisaster_variety electrical storm
+LPUSH eventdisaster_variety epidemic
+LPUSH eventdisaster_variety explosion
+LPUSH eventdisaster_variety famine
+LPUSH eventdisaster_variety flash flood
+LPUSH eventdisaster_variety flood
+LPUSH eventdisaster_variety gamma ray burst
+LPUSH eventdisaster_variety genocide
+LPUSH eventdisaster_variety geomagnetic storm
+LPUSH eventdisaster_variety heatwave
+LPUSH eventdisaster_variety impact event
+LPUSH eventdisaster_variety insect infestation
+LPUSH eventdisaster_variety land slip
+LPUSH eventdisaster_variety limnic eruption
+LPUSH eventdisaster_variety magical
+LPUSH eventdisaster_variety massive storm
+LPUSH eventdisaster_variety meteor strike
+LPUSH eventdisaster_variety mudflow
+LPUSH eventdisaster_variety mudslide
+LPUSH eventdisaster_variety plague
+LPUSH eventdisaster_variety riots
+LPUSH eventdisaster_variety rock fall
+LPUSH eventdisaster_variety rockslide
+LPUSH eventdisaster_variety rock topple
+LPUSH eventdisaster_variety sinkhole
+LPUSH eventdisaster_variety tarrasque
+LPUSH eventdisaster_variety tornado
+LPUSH eventdisaster_variety tsunami
+LPUSH eventdisaster_variety violent storm
+LPUSH eventdisaster_variety volcano
+LPUSH eventdisaster_variety wildfire 
+LPUSH eventdisaster_variety wind storm 
+   
+
+
+

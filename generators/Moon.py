@@ -1,7 +1,6 @@
 
 import random
 
-
 from generators.Generator import Generator
 
 

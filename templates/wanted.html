@@ -1,0 +1,40 @@
+
+
+{% extends "base.html" %}
+{% block title %} {{wanted.title}} {{wanted.npc.name['full'] }}, wanted for {{wanted.crime}}. {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div style="margin:auto; text-align:center;">
+    <h1 ><a href="/wanted?seed={{wanted.seed}}">({{wanted.seed}})</a> </h1>
+    <h1 >{{wanted.headline }} </h1>
+    <h2> {{wanted.npc.name['full']}} </h2>
+
+    {% if wanted.title %}
+        <p>A.K.A.</p>
+        <h2>{{wanted.title}} {{wanted.npc.name['firstname'] }}</h2>
+    {%endif%}
+
+    <h3>Wanted for {{wanted.crime}} by the {{wanted.by}}. </h3>
+    <p>{{wanted.npc.name['full']}} was last seen {{wanted.lastseen}}. May claim to be a {{wanted.npc.skill['name']}} {{wanted.npc.profession}}.
+
+    {% if wanted.npc.mark   %}
+        {% if wanted.npc.firstname%}
+            {{wanted.npc.firstname}}
+        {%else %}
+            {{wanted.npc.sex['pronoun'] |capitalize}}
+        {%endif %}
+         is recognizable by a {{wanted.npc.mark}} on {{wanted.npc.sex['possessive']}} {{wanted.npc.mark_location}}.
+    {% endif %}
+    </p>
+    <p>Description: {{wanted.npc.attitude}} {{wanted.npc.sex['name']}} {{wanted.npc.race}}, {{wanted.npc.height}}, {{wanted.npc.build}}, with {{wanted.npc.eye}} eyes. </p>
+    {% if  wanted.warning   %}
+        <h2>Warning! {{wanted.npc.sex['pronoun'] |capitalize}} {{wanted.warning }}.</h2>
+    {% endif %}
+    <p>A reward of {{wanted.reward}} for {{wanted.condition}}.</p>
+
+</div>
+
+
+{% endblock %}

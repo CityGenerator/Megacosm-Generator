@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %}
+{% block title %}Behold {{moon.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Behold {{moon.name['full']}} <a href="/moon?seed={{moon.seed}}">({{moon.seed}})</a></h1>
+
+
+{{moon.name['full']}} is {{moon.size['name'] |article}} {{moon.color['name']}} moon.
+
+
+
+
+
+
+{% endblock %}

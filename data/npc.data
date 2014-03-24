@@ -14,8 +14,8 @@ LPUSH stat_npc skill
 LPUSH stat_npc bravery
 LPUSH stat_npc honor
 
-ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her",   "score":51  }
-ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him",   "score":100  }
+ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
+ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
 
 #TODO add npc_piety
 
@@ -74,7 +74,7 @@ ZADD npc_skill 100 {"name":"legendarily skilled",   "score":100  }
 ZADD npc_experience 5    {"name":"new",   "score":5  }
 ZADD npc_experience 10   {"name":"naive",   "score":10  }
 ZADD npc_experience 15   {"name":"green",   "score":15  }
-ZADD npc_experience 20   {"name":"amateur",   "score":20  }
+ZADD npc_experience 20   {"name":"amatuer",   "score":20  }
 ZADD npc_experience 25   {"name":"fledgling",   "score":25  }
 ZADD npc_experience 30   {"name":"inexperienced",   "score":30  }
 ZADD npc_experience 35   {"name":"rookie",   "score":35  }
@@ -1219,13 +1219,11 @@ LPUSH npc_motivation traveling the world as an unemployed specialist
 LPUSH npc_motivation seeking thrills and adventure
 LPUSH npc_motivation seeking honest work
 LPUSH npc_motivation seeking dishonest work
-LPUSH npc_motivation seeking a quick buck
 LPUSH npc_motivation seeking revenge
 LPUSH npc_motivation seeking healing for a crippling injury
 
 LPUSH npc_motivation brokering a truce over a trade war
 LPUSH npc_motivation brokering a truce over escalating tension
-LPUSH npc_motivation brokering a truce over a religious conflict
 
 LPUSH npc_motivation doing something nefarious
 LPUSH npc_motivation doing something amazing

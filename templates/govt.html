@@ -1,0 +1,28 @@
+
+
+{% extends "base.html" %}
+{% block title %}The Ruling Class... {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>The Ruling Class... <a href="/govt?seed={{govt.seed}}">({{govt.seed}})</a></h1>
+
+
+
+
+<p>{{govt.body.name['full']}} is {{govt.kind |article}} that is governed through {{govt.govttype_description['name']| article}}, where {{govt.govttype_description['description']}}. It has been in power {{govt.age['name']}}.</p>
+
+<p>The government as a whole is seen as {{govt.efficiency['name']}}.</p>
+
+<p>Officials in {{govt.body.name['full']}} are often seen as {{govt.corruption['name']}} and the policies are {{govt.approval['name']}}.</p>
+
+<p>The political influence of {{govt.body.name['full']}} in the region is {{govt.influence['name']}}{%if govt.influencereason %} due to {{govt.influencereason}}{%endif%}.</p>
+<p>In times of crisis, the population {{govt.unity['name']}}.</p>
+
+
+
+
+
+{% endblock %}

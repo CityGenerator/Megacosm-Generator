@@ -14,11 +14,9 @@ class Rumor(Generator):
 
         Generator.__init__(self,redis,features)
 
-        
         for person in ['victim', 'culprit', 'source', 'believer' ]:
             if not hasattr(self,person):
                 setattr(self,person,NPC(self.redis).name['full'])
-
         
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)

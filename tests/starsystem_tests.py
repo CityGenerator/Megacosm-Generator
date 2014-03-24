@@ -23,10 +23,9 @@ class TestStarSystem(unittest.TestCase):
 
     def test_starcount(self):
         """ """ 
-        star = StarSystem(self.redis,{'seed':1,'star_count':3})
-        self.assertEqual(star.seed,1)
-        self.assertEqual(star.star_count,3)
-        self.assertEqual(len(star.stars),3)
+        stars = StarSystem(self.redis,{'seed':1,'starsystem_starcount_roll':100})
+        self.assertEqual(stars.seed,1)
+        self.assertEqual(len(stars.stars),3)
  
 
 if __name__ == '__main__':
