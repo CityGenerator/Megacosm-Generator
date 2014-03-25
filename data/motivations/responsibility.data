@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationresponsibility_text to keep things afloat
+LPUSH motivationresponsibility_text by {{params.npc.sex['possessive']}} responsibility to others
+LPUSH motivationresponsibility_text to be responsible

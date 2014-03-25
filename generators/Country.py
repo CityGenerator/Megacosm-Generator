@@ -1,5 +1,4 @@
 
-from noise import snoise2
 import math
 import random
 import json
@@ -22,3 +21,5 @@ class Country(Generator):
         for regionid in xrange(self.regioncount):
             self.regions.append( Region(self.redis,{'country':self } ) )
         
+    def __str__(self):
+        return "%s with %s countries" %(self.name['full'], self.countrycount)

@@ -1,5 +1,4 @@
 
-from noise import snoise2
 import math
 import random
 import json
@@ -19,19 +18,6 @@ class JobPosting(Generator):
                 setattr(self,field,NPC(self.redis))
         if not hasattr(self,'business'):
             setattr(self,'business',Business(self.redis))
-
-
-
-
-#    $posting->{'template'}=$posting->{'template'}." Contact ".$posting->{'contact'};
-#    if (defined $posting->{'location'}){
-#       $posting->{'template'}=$posting->{'template'}."at ".$posting->{'location'};
-#    }
-#    if (defined $posting->{'detail'}){
-#       $posting->{'template'}=$posting->{'template'}." ".$posting->{'detail'};
-#    }
-#    $posting->{'template'}.=".";
-
 
 
         if not hasattr(self,'text'):
@@ -55,4 +41,6 @@ class JobPosting(Generator):
             self.text=self.render_template(self.text)
         self.text=self.text[0].capitalize()+self.text[1:]
 
+    def __str__(self):
+        return self.text
 

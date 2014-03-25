@@ -1,4 +1,8 @@
 # Bob is motivated
 
 LPUSH motivationstimulation_text by boredom
+LPUSH motivationstimulation_text to find something interesting to do
+LPUSH motivationstimulation_text by an urge to tinker
+LPUSH motivationstimulation_text to read
+LPUSH motivationstimulation_text to tell someone about {{params.npc.sex['possessive']}} discovery
 

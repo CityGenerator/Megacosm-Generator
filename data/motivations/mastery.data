@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationmastery_text to become the greatest {{params.profession}} of all time
+LPUSH motivationmastery_text to master a certain skill
+LPUSH motivationmastery_text to with a championchip competition

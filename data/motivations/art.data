@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationart_text to create a masterpiece
+LPUSH motivationart_text to acquire a masterpiece
+LPUSH motivationart_text to help others recognize the beauty of art

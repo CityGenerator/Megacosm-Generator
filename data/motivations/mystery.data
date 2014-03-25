@@ -1,0 +1,11 @@
+# Bob is motivated
+LPUSH motivationmystery_text to do somethingi
+LPUSH motivationmystery_text to do something nefarious
+LPUSH motivationmystery_text to do something amazing
+LPUSH motivationmystery_text to do something impossible
+LPUSH motivationmystery_text to do something secret
+LPUSH motivationmystery_text to do something questionable
+LPUSH motivationmystery_text by an unsolved mystery 
+LPUSH motivationmystery_text by something mysterious
+LPUSH motivationmystery_text by something {{params.npc.sex['pronoun']}} can't make sense of
+

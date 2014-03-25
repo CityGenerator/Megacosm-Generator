@@ -23,3 +23,5 @@ class Rumor(Generator):
             self.text=self.render_template(self.text)
         self.text=self.text[0].capitalize()+self.text[1:]
 
+    def __str__(self):
+        return self.text

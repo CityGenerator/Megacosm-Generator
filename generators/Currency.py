@@ -8,7 +8,6 @@ from jinja2.environment import Environment
 from util import Filters
 
 
-
 class Currency(Generator):
     """ Define a currency to be used in your game """
     def __init__(self, redis, features={}):
@@ -25,3 +24,5 @@ class Currency(Generator):
             self.text=self.render_template(self.text)
         self.text=self.text[0].capitalize()+self.text[1:]
 
+    def __str__(self):
+        return self.text

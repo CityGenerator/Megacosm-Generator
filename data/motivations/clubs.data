@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationclubs_text to join a new group
+LPUSH motivationclubs_text to get into a secret organization
+LPUSH motivationclubs_text to hide the secrets of his affiliation

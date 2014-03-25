@@ -26,3 +26,5 @@ class Cuisine(Generator):
         #remember to capitalize!
         self.text=self.text[0].capitalize()+self.text[1:]
 
+    def __str__(self):
+        return self.text
