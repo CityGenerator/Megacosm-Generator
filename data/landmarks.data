@@ -1,4 +1,3 @@
-
 # The following need to be put in the following format:
 #      name    | description that completes the sentence "Foo Bar is ________________."
 # For example:
@@ -7,98 +6,98 @@
 
 #Yes, this big ol' list.
 
-ait
-arête
-ayre
-badlands
-barchan dunes
-bay
-bayou
-beach
-bight
-blowhole
-bluff
-bornhardt
-braided channel
-butte
-calanque
-canyon
-cape
-cave
-cavern
-channel
-cirque
-cliff
-coast
-complex volcano
-confluence
-coral reef
-cove
-crater
-crater lake
-crevasse
-cryovolcano
-cuspate foreland
-cutbank
-dale
-defile
-dell
-desert pavement
-desert varnish
-dirt cone
-draw
-drumlin and drumlin field
-dry lake
-dune system
-escarpment 
-esker
-estuary
-firth
-fjard
-fjord
-flatiron
-floodplain
-forest
-geyser
-glacial horn
-glacier
-glacier cave
-glen
-gorge 
-gulch
-gully
-gyser
-hanging valley
-headland
-hill
-hogback
-hoodoo
-inlet
-island, islet
-isthmus
-jungle
-kettle lake
-knoll
-lagoon
-lake
-lava dome
-lava flow and lava plain
-lavaka
-lava lake
-lava spine
-lava tube
-limestone pavement
-loess
-maar
-machair
-malpais
-marine terrace
-marsh
-mesa
-mid-ocean ridge
-monadnock
-mountain
-mountain cove
+ait | a small island
+arête | a sharp mountain ridge
+ayre | a storm beach forming a narrow spit of shingle or sand cutting across the landward and seaward ends of a shallow bay.
+badlands | a type of dry terrain where softer sedimentary rocks and clay-rich soils have been extensively eroded by wind and water.
+barchan dunes | a large, crescent-shaped dune lying at right angles to the prevailing wind and having a steep, concave leeward side with the crescent tips pointing downwind.
+bay | a broad inlet of the sea where the land curves inward.
+bayou | a marshy outlet of a lake or river.
+beach | a pebbly or sandy shore, esp. by the ocean between high- and low-water marks.
+bight | a curve or recess in a coastline, river, or other geographical feature (or a large bay).
+blowhole |  a hole in a sea cliff or coastal terrace through which columns of spray are jetted upward.
+bluff | a cliff, headland, or hill with a broad, steep face.
+bornhardt | a dome-shaped, steep-sided, bald rock outcropping at least 30 metres (100 ft) in height and several hundred metres in width.
+braided channel | a type of stream made up of many small interconnected channels, separated by small islands of deposited material.
+butte | an isolated hill with steep sides and a flat top (similar to but narrower than a mesa).
+calanque | a steep-walled inlet, cove, or bay that is developed in limestone, dolomite, or other carbonate strata
+canyon | a deep gorge, typically one with a river flowing through it.
+cape | a piece of land jutting into the sea or some other large body of water.
+cave | a hollow or natural passage under or into the earth, especially one with an opening to the surface.
+cavern | a large natural underground chamber
+channel | a length of water wider than a strait, joining two larger areas of water, especially two seas.
+cirque | a half-open steep-sided hollow at the head of a valley or on a mountainside, formed by glacial erosion.
+cliff | a steep rock face, esp. at the edge of the sea.
+coast | the part of the land near the sea; the edge of the land.
+complex volcano | is a volcano with more than one feature and formed by changes in their eruptive locations or characteristics. 
+confluence | the junction of two rivers, esp. rivers of approximately equal width.
+coral reef | a reef composed mainly of coral and other organic matter of which parts have solidified into limestone.
+cove | a small sheltered bay.
+crater | a large, bowl-shaped cavity in the ground or on the surface of a planet or the moon, typically one caused by an explosion or the impact of a meteorite or other celestial body.
+crater lake | a body of water occupying a roughly circular, steep-sided volcanic crater or caldera. 
+crevasse | a deep open crack, esp. one in a glacier.
+cryovolcano | a volcano that erupts volatiles such as water, ammonia or methane, instead of molten rock.
+cuspate foreland | a triangular accumulation of sand and/or gravel located along the coastline and formed by the joining of two spits.
+cutbank | a nearly vertical cliff produced by erosion of the banks of a stream. 
+dale | a valley, esp. a broad one.
+defile | a narrow pass or gorge between mountains or hills.
+dell | a small wooded valley
+desert pavement | a desert surface that is covered with closely packed, interlocking angular or rounded rock fragments of pebble and cobble size.
+desert varnish | an orange-yellow to black coating found on exposed rock surfaces in arid environments.
+dirt cone |  a feature of a glacier or snow patch, in which dirt or debris has fallen onto ice, firn or snow.
+draw | a small, natural drainageway with a shallow bed; gully.
+drumlin and drumlin field | oval or elongated hill believed to have been formed by the streamlined movement of glacial ice sheets across rock debris.
+dry lake | a tract of land in a desert region over which a shallow lake is formed during the rainy season or after prolonged heavy rains.
+dune system | a hill or ridge of wind-blown sand.
+escarpment | a long, steep slope, esp. one at the edge of a plateau or separating areas of land at different heights.
+esker | a long ridge of gravel and other sediment, typically having a winding course, deposited by meltwater from a retreating glacier or ice sheet.
+estuary | the tidal mouth of a large river, where the tide meets the stream.
+firth | a narrow inlet of the sea
+fjard | a rocky inlet of the sea, usually found along relatively low-lying coasts
+fjord | a long, narrow, deep inlet of the sea between high cliffs
+flatiron |  a triangular hogback that resembles a flatiron resting on its base.
+floodplain | an area of low-lying ground adjacent to a river, formed mainly of river sediments and subject to flooding.
+forest | a large area covered chiefly with trees and undergrowth.
+geyser | a hot spring in which water intermittently boils, sending a tall column of water and steam into the air.
+glacial horn | a sharp peak formed where the ridges separating three or more cirques intersect
+glacier | a slowly moving mass or river of ice formed by the accumulation and compaction of snow on mountains or near the poles.
+glacier cave | is a cave formed within the ice of a glacier; often called ice caves.
+glen | a narrow valley.
+gorge  | a narrow valley between hills or mountains, typically with steep rocky walls and a stream running through it.
+gulch | a narrow and steep-sided ravine marking the course of a fast stream.
+gully | a water-worn ravine.
+gyser | a natural hot spring that intermittently ejects a column of water and steam into the air.
+hanging valley | a valley, the lower end of which opens high above a shore, usually caused by the rapid erosion of a cliff.
+headland | a narrow piece of land that projects from a coastline into the sea.
+hill | a naturally raised area of land, not as high or craggy as a mountain.
+hogback | a long hill or mountain ridge with steep sides.
+hoodoo | a column or pinnacle of weathered rock.
+inlet | a small arm of the sea, a lake, or a river.
+island, islet | a piece of land surrounded by water.
+isthmus | a narrow strip of land with sea on either side, forming a link between two larger areas of land.
+jungle | an area of land overgrown with dense forest and tangled vegetation, typically in the tropics.
+kettle lake |  a shallow, sediment-filled body of water formed by retreating glaciers or draining floodwaters.
+knoll | a small, rounded hill
+lagoon | a stretch of salt water separated from the sea by a low sandbank or coral reef.
+lake | a large body of water surrounded by land.
+lava dome | a mound of viscous lava that has been extruded from a volcanic vent.
+lava flow and lava plain | a mass of flowing or solidified lava.
+lavaka | a "hole", usually found on the side of a hill
+lava lake | is a large volume of molten lava, usually basaltic, contained in a volcanic vent, crater, or broad depression.
+lava spine |  vertically growing monolith of viscous lava that is slowly forced from a volcanic vent
+lava tube | a natural tunnel within a solidified lava flow, formerly occupied by flowing molten lava.
+limestone pavement | a horizontal surface of exposed limestone in which the joints have been enlarged, cutting the surface into roughly rectangular blocks.
+loess | a loosely compacted yellowish-gray deposit of windblown sediment of which extensive deposits occur
+maar | a broad, shallow crater, typically filled by a lake, formed by a volcanic explosion with little lava.
+machair | a strip of sandy, grassy, often lime-rich land just above the high-water mark at a sandy shore
+malpais | an extensive area of rough, barren lava flows.
+marine terrace | a flat surface at the base of a cliff formed by erosion by waves. 
+marsh |  an area of low-lying land that is flooded in wet seasons or at high tide, and typically remains waterlogged at all times.
+mesa | an isolated flat-topped hill with steep sides, found in landscapes with horizontal strata.
+mid-ocean ridge | a long, seismically active submarine ridge system situated in the middle of an ocean basin and marking the site of the upwelling of magma associated with seafloor spreading.
+monadnock | an isolated hill or ridge or erosion-resistant rock rising above a peneplain.
+mountain | a large natural elevation of the earth's surface rising abruptly from the surrounding level; a large steep hill.
+mountain cove | a deep recess or small valley in the side of a mountain.
 mountain pass
 mountain range
 mud flat
