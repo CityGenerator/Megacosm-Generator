@@ -1,0 +1,370 @@
+
+leader_kind country
+
+
+
+
+
+
+
+
+        <option type="absolute monarchy"            description="the monarch rules unhindered">
+                <option male="King"    female="Queen"   ></option>
+                <option male="Emperor" female="Empress" ></option>
+                <option male="Raja"    female="Rani"    ></option>
+                <option male="Sultan"  female="Sultana" ></option>
+                <option male="Shah"    female="Shahbanu"></option>
+                <option male="Prince"  female="Princess"></option>
+        </option>
+        <option type="authoritarian government"     description="state authority is imposed onto many aspects of citizens' lives">
+                <option male="Boss"       ></option>
+                <option male="Captain"    ></option>
+                <option male="Chairman"   ></option>
+                <option male="Chief"      ></option>
+                <option male="Commander"  ></option>
+                <option male="Czar"       ></option>
+                <option male="Despot"     ></option>
+                <option male="General"    ></option>
+                <option male="Governor"   ></option>
+                <option male="Inquisitor" ></option>
+                <option male="Leader"     ></option>
+                <option male="Lord"       ></option>
+                <option male="Master"     ></option>
+                <option male="Overlord"   ></option>
+                <option male="Overseer"   ></option>
+                <option male="Premier"    ></option>
+                <option male="Sovereign"  ></option>
+                <option male="Steward"    ></option>
+                <option male="Supervisor" ></option>
+                <option male="Tyrant"     ></option>
+                <option male="Vizier"     ></option>
+                <option male="Warlord"    ></option>
+        </option>
+        <option type="commonwealth"                 description="state authority is founded on law and united by a compact of the people for the common good">
+                <option male="Prime Minister" ></option>
+                <option male="Chancellor" ></option>
+                <option male="Steward"    ></option>
+        </option>
+        <option type="communist government"         description="the state plans and controls the economy and a single party holds power">
+                <option male="Prime Minister" ></option>
+                <option male="President" ></option>
+                <option male="Chancellor" ></option>
+        </option>
+        <option type="constitutional government"    description="an authoritative document sets forth the system of fundamental laws and limits of that government">
+                <option male="Prime Minister" ></option>
+                <option male="Governor"    ></option>
+                <option male="President" ></option>
+        </option>
+        <option type="democracy"                    description="the supreme power is retained by the people, but is exercised through a system of representation">
+                <option male="Prime Minister" ></option>
+                <option male="Governor"    ></option>
+                <option male="President" ></option>
+        </option>
+        <option type="dictatorship"                 description="the ruler or small clique wield absolute power (not restricted by a constitution or laws)">
+                <option male="Boss"       ></option>
+                <option male="Captain"    ></option>
+                <option male="Chairman"   ></option>
+                <option male="Chief"      ></option>
+                <option male="Commander"  ></option>
+                <option male="Czar"       ></option>
+                <option male="Despot"     ></option>
+                <option male="General"    ></option>
+                <option male="Governor"   ></option>
+                <option male="Inquisitor" ></option>
+                <option male="Leader"     ></option>
+                <option male="Lord"       ></option>
+                <option male="Master"     ></option>
+                <option male="Overlord"   ></option>
+                <option male="Overseer"   ></option>
+                <option male="Premier"    ></option>
+                <option male="Sovereign"  ></option>
+                <option male="Steward"    ></option>
+                <option male="Supervisor" ></option>
+                <option male="Tyrant"     ></option>
+                <option male="Warlord"    ></option>
+        </option>
+        <option type="ecclesiastical government"    description="the government administrated by a church.">
+                <option male="Prime Minister" ></option>
+                <option male="Pontifex" ></option>
+                <option male="Saint" ></option>
+                <option male="Chief" ></option>
+                <option male="Father" female="Mother" ></option>
+                <option male="Bishop" ></option>
+                <option male="Archbishop" ></option>
+                <option male="Elder" ></option>
+                <option male="President" ></option>
+                <option male="Brother"  female="Sister" ></option>
+                <option male="Guru" ></option>
+                <option male="Lord Chancellor" ></option>
+                <option male="Lord" female="Lady"></option>
+                <option male="Chancellor" ></option>
+                <option male="Steward"    ></option>
+                <option male="Cardinal" ></option>
+                <option male="Caliph" ></option>
+        </option>
+        <option type="emirate"                      description="the supreme power is in the hands of an emir, who may be an absolute overlord with constitutionally limited authority">
+                <option male="Prime Minister" ></option>
+                <option male="Saint" ></option>
+                <option male="Chief" ></option>
+                <option male="Father" female="Mother" ></option>
+                <option male="Bishop" ></option>
+                <option male="Archbishop" ></option>
+                <option male="Elder" ></option>
+                <option male="President" ></option>
+                <option male="Brother"  female="Sister" ></option>
+                <option male="Guru" ></option>
+                <option male="Steward"    ></option>
+                <option male="Lord Chancellor" ></option>
+                <option male="Lord" female="Lady"></option>
+                <option male="Chancellor" ></option>
+                <option male="Cardinal" ></option>
+                <option male="Caliph" ></option>
+        </option>
+        <option type="federation"                   description=" sovereign power is formally divided between a central authority and a number of constituent regions">
+                <option male="Commander"  ></option>
+                <option male="General"    ></option>
+                <option male="Governor"    ></option>
+                <option male="Prime Minister" ></option>
+                <option male="President" ></option>
+                <option male="Steward"    ></option>
+        </option>
+        <option type="monarchy"                     description="the supreme power is lodged in the hands of a monarch who reigns with constitutionally limited authority">
+                <option male="King"    female="Queen"   ></option>
+                <option male="Emperor" female="Empress" ></option>
+                <option male="Raja"    female="Rani"    ></option>
+                <option male="Sultan"  female="Sultana" ></option>
+                <option male="Shah"    female="Shahbanu"></option>
+                <option male="Prince"  female="Princess"></option>
+        </option>
+        <option type="oligarchy"                    description="control is exercised by a small group of individuals whose authority generally is based on wealth or power">
+                <option male="Commander"  ></option>
+                <option male="General"    ></option>
+                <option male="Governor"    ></option>
+                <option male="Prime Minister" ></option>
+                <option male="President" ></option>
+        </option>
+
+        <option type="parliamentary government"     description="members are nominated to their positions by a parliament and can be dissolved by the parliament if it can no longer function">
+                <option male="Commander"  ></option>
+                <option male="General"    ></option>
+                <option male="Governor"    ></option>
+                <option male="Prime Minister" ></option>
+                <option male="Steward"    ></option>
+                <option male="President" ></option>
+        </option>
+
+        <option type="republic"                     description="the people's elected representatives, not the people themselves, vote on legislation.">
+                <option male="Commander"  ></option>
+                <option male="General"    ></option>
+                <option male="Governor"    ></option>
+                <option male="Prime Minister" ></option>
+                <option male="President" ></option>
+        </option>
+        <option type="theocracy"                    description="a deity is recognized as the supreme civil ruler, but the deity's laws are interpreted by ecclesiastical authorities">
+                <option male="Prime minister" ></option>
+                <option male="Saint" ></option>
+                <option male="Chief" ></option>
+                <option male="Father" female="Mother" ></option>
+                <option male="Bishop" ></option>
+                <option male="Archbishop" ></option>
+                <option male="Elder" ></option>
+                <option male="President" ></option>
+                <option male="Brother"  female="Sister" ></option>
+                <option male="Guru" ></option>
+                <option male="Lord Chancellor" ></option>
+                <option male="Steward"    ></option>
+                <option male="Lord" female="Lady"></option>
+                <option male="Chancellor" ></option>
+                <option male="Cardinal" ></option>
+                <option male="Caliph" ></option>
+         </option>
+        <option type="totalitarian government"      description="the government subordinates individuals by controlling all political and economic matters, as well as the attitudes, values, and beliefs">
+                <option male="Boss"       ></option>
+                <option male="Captain"    ></option>
+                <option male="Chairman"   ></option>
+                <option male="Chief"      ></option>
+                <option male="Commander"  ></option>
+                <option male="Czar"       ></option>
+                <option male="Despot"     ></option>
+                <option male="General"    ></option>
+                <option male="Governor"   ></option>
+                <option male="Inquisitor" ></option>
+                <option male="Leader"     ></option>
+                <option male="Lord"       ></option>
+                <option male="Master"     ></option>
+                <option male="Overlord"   ></option>
+                <option male="Overseer"   ></option>
+                <option male="Premier"    ></option>
+                <option male="Sovereign"  ></option>
+                <option male="Steward"    ></option>
+                <option male="Supervisor" ></option>
+                <option male="Tyrant"     ></option>
+                <option male="Warlord"    ></option>
+        </option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+leader_kind city
+
+
+    </govtypes>
+<secondarypower>
+    <plot>openly assists</plot>
+    <plot>openly denounces</plot>
+    <plot>quietly denounces</plot>
+    <plot>quietly assists</plot>
+    
+    <power type="a dragon" subplot_chance="50">
+        <subplot>wishing to enslave the city</subplot>
+        <subplot>watching out for the common man</subplot>
+        <subplot>despising the current leader</subplot>
+        <subplot>agreeing with the current leader</subplot>
+    </power>
+    <power type="a wizard" subplot_chance="50">
+        <subplot>attempting to attain immortality</subplot>
+        <subplot>watching out for the common man</subplot>
+        <subplot>despising the current leader</subplot>
+        <subplot>agreeing with the current leader</subplot>
+    </power>
+    <power type="a merchant guild" subplot_chance="50">
+        <subplot>attempting to buy influence</subplot>
+        <subplot>attempting to sell influence</subplot>
+        <subplot>pushing for war with trade adversary</subplot>
+        <subplot>pushing to open trade with adversary</subplot>
+    </power>
+    <power type="an elected representative" subplot_chance="50">
+        <subplot>using position for personal gain</subplot>
+        <subplot>amassing power</subplot>
+    </power>
+    <power type="an advisor" subplot_chance="50">
+        <subplot>pulling strings for personal gain</subplot>
+        <subplot>blackmailing the government</subplot>
+        <subplot>working for enemies</subplot>
+    </power>
+    <power type="a prophet" subplot_chance="50">
+        <subplot>attempting to lead religious revolution</subplot>
+        <subplot>denying legitimacy of leading power</subplot>
+        <subplot>calling for genocide of a minority</subplot>
+    </power>
+    <power type="a thieves guild" subplot_chance="50">
+        <subplot>moving to assert black market dominance</subplot>
+        <subplot>backing leading power for leniency</subplot>
+    </power>
+    <power type="traveler" subplot_chance="50">
+        <subplot>looking to bring justice</subplot>
+        <subplot>looking to overthrow the government</subplot>
+    </power>
+    <power type="an ex-blacksmith" subplot_chance="50">
+        <subplot>plotting to overthrow the corrupt leadership for personal gain</subplot>
+        <subplot>being blackmailed by a guild</subplot>
+        <subplot>pulling strings with a trade adversary</subplot>
+    </power>
+    <power type="a barbarian" subplot_chance="50">
+        <subplot>plotting to start war with another nation</subplot>
+        <subplot>being manipulated by the denizens of the city whore house</subplot>
+        <subplot>wishing to rule with a violent, iron fist</subplot>
+    </power>
+    <power type="a recluse" subplot_chance="50">
+        <subplot>pulling strings for personal gain</subplot>
+        <subplot>a fiend in disguise</subplot>
+        <subplot>an angel in disguise</subplot>
+        <subplot>a dragon in disguise</subplot>
+        <subplot>a god in disguise</subplot>
+        <subplot>a fiend that secretly looks out for the good of the common man</subplot>
+        <subplot>an angel that seeks to enslave the common man</subplot>
+    </power>
+</secondarypower>
+</data>
+        <right>
+            <option>by forgery</option>
+            <option>by divine will</option>
+            <option>by consensus</option>
+            <option>by constitution</option>
+            <option>by hereditary succession</option>
+            <option>by election</option>
+            <option>by appointment</option>
+            <option>by force</option>
+            <option>by revolution</option>
+            <option>by foreign imposition</option>
+        </right>
+    
+    
+        <length> <!-- The King has been in power-->
+            <option>for mere hours</option>
+            <option>for mere days</option>
+            <option>for a few months</option>
+            <option>for years</option>
+            <option>for several years</option>
+            <option>for many years</option>
+            <option>for decades</option>
+            <option>for several decades</option>
+            <option>far longer than should be allowed</option>
+        </length>
+        <maintained><!-- and that power is maintained __________ -->
+            <option >through the tip of a sword</option>
+            <option >through random violence</option>
+            <option >through the ignorance of the plebeian society</option>
+            <option >through vague threats and a constant state of fear</option>
+            <option >through financial oppression</option>
+            <option >by secret police raiding homes in the dead of night</option>
+            <option >by strict laws and corrupt guards</option>
+            <option >by strict laws and incorruptible guards</option>
+            <option >by draconian laws and underpaid guards</option>
+            <option >through spying and assassination</option>
+            <option >through a fair and just legal system</option>
+            <option >through the writ of law</option>
+            <option >through a knowledgeable and just populace</option>
+            <option >through vague promises and a constant state of hope</option>
+            <option >through sheer willpower</option>
+            <option >through the acclaim of the nobles</option>
+            <option >by unwavering supporters</option>
+            <option >through the support of merchant groups</option>
+        </maintained>
+    
+        <influencereason>
+            <option >riots in the region</option>
+            <option >food shortages in the region</option>
+            <option >racial tensions</option>
+            <option >a thwarted assassination attempt</option>
+        </influencereason>
+    </feature>
+
