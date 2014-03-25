@@ -1,0 +1,21 @@
+
+
+{% extends "base.html" %}
+{% block title %} We Venture Deeper... {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1> We Venture Deeper... <a href="/dungeon?seed={{dungeon.seed}}">({{dungeon.seed}})</a></h1>
+    <canvas id='dungeonmap' height='350'  >
+    </canvas>
+
+    <script type="text/javascript">
+        create_dungeon({{jsondata|safe }});
+    </script>
+
+<pre>
+{{dungeon.map}} 
+</pre>
+{% endblock %}
