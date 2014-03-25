@@ -1,0 +1,56 @@
+
+
+
+# size of military
+active
+reserve
+paramilitary
+
+
+
+Ready fortifications
+
+preparation
+
+favored tactic
+
+reputation
+
+favored weapon
+weapon reputation
+
+
+number of troops
+type of troops
+quality of training
+quality of gear
+level of loyalty
+level of technology
+supply levels
+financing
+rank structure
+
+
+alliances
+
+
+
+
+
+
+
+
+
+
+
+        <military>
+            <option          max="20" >negative</option>
+            <option min="21" max="30" >disinterested</option>
+
+            <option min="31" max="50" >neutral</option>
+            <option min="51" max="70" >laid back</option>
+
+            <option min="71" max="80" >positive</option>
+            <option min="81"          >reverent</option>
+        </military>
+
