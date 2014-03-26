@@ -11,12 +11,11 @@ import pprint
 
 class Dungeon(Generator):
     def __init__(self, redis, features={}):
-#    def __init__(self):
         """ test """
         Generator.__init__(self,redis,features)
 
         #print self.seed
-        self.floor=DungeonFloor(64,40)
+        self.floor=DungeonFloor(80,50)
 
         self.map=self.floor.printfloor()
 
@@ -63,17 +62,12 @@ class DungeonFloor(object):
         MAX_ROOMS =20
         loop=1
         for r in range(MAX_ROOMS):
-#            print "my room loop",loop
             loop +=1
-            #random width and height
             new_room=self.create_random_room()
 
             failed = False
             for other_room in self.rooms:
-#                print "loop", new_room.roomid
                 if new_room.intersect(other_room):
-#                    print  new_room.roomid,"conficts with",other_room.roomid
-#                    print "destroying", new_room.roomid
                     failed = True
                     break
             if not failed:
@@ -82,11 +76,10 @@ class DungeonFloor(object):
                 new_room.roomid,", it's center is",new_x,",",new_y
                 if len(self.rooms) == 0:
                     """d"""
-#                    print new_room.roomid," is the first room, so skip it- it's center is",new_x,",",new_y
                 else:
                     #center coordinates of previous room
-                    (prev_x, prev_y) = self.rooms[-1].center()
-#                    print self.rooms[-1].roomid," is the previous room, it's center is",prev_x,",",prev_y
+#                    (prev_x, prev_y) = self.rooms[-1].center() ; random.randint(1,2) # meh
+                    (prev_x, prev_y) = random.choice(self.rooms).center()
                     pathtype=random.randint(0,3)
                     if pathtype == 0:
                         ymidpoint=random.randint(min(prev_y,new_y),max(prev_y,new_y))
@@ -110,23 +103,18 @@ class DungeonFloor(object):
                         self.paint_h_tunnel(prev_x, new_x, new_y)
                 self.rooms.append(new_room)
  
-            #finally, append the new room to the list
-
 
     def paint_room(self,room):
         for x in range(room.x1 + 1, room.x2):
             for y in range(room.y1 + 1, room.y2):
                 self.spaces[y][x]=FloorTile()
-#                self.spaces[y][x]=room.roomid
     def paint_h_tunnel(self,x1, x2, y):
         for x in range(min(x1, x2), max(x1, x2) + 1):
                 self.spaces[y][x]=FloorTile()
-                #self.spaces[y][x]='-'
     
     def paint_v_tunnel(self,y1, y2, x):
         for y in range(min(y1, y2), max(y1, y2) + 1):
                 self.spaces[y][x]=FloorTile()
-                #self.spaces[y][x]='|'
 
     def paint_zig_tunnel(self,x1,y1,x2,y2):
         """ TODO """
@@ -219,7 +207,6 @@ class PortalTile(DungeonTile):
 
 class WaterTile(DungeonTile):
     def __init__(self, char=u'ω'):
-#    def __init__(self, char=u'ѡ'):
         """ test """
         self.char=char
         self.passable=False
