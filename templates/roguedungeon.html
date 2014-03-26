@@ -15,6 +15,9 @@
 
     <script type="text/javascript">
         create_dungeon({{jsondata|safe }},document.getElementById('roguedungeonmap'));
+        {%for room in roguedungeon.floor.rooms%}
+            label_room({{loop.index}}, [{{room.center[0]}},  {{room.center[1]}}],document.getElementById('roguedungeonmap') );
+        {%endfor%}
     </script>
 <!--
 <pre style="font-size:10px;">

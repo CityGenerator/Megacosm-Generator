@@ -30,16 +30,15 @@ class RogueDungeon(Generator):
     
         def convert_to_json(self):
             resultmatrix=[]
-            for evenrow,oddrow in zip(self.spaces[0::2], self.spaces[1::2]):
-                row=[]
-                for a,b,c,d in zip(evenrow[0::2], evenrow[1::2], oddrow[0::2], oddrow[1::2],):
-                    tile=self.tiletype(a,b,c,d)
-                    row.append(tile)
-                resultmatrix.append(row)
+
+            for row in self.spaces:
+                resultrow=[]
+                for cell in row:
+                    resultrow.append(int(cell.passable)  )
+                resultmatrix.append(resultrow)
             return resultmatrix
+
     
-        def tiletype(self,a,b,c,d):
-            return str(int(a.passable))+str(int(b.passable))+str(int(c.passable))+str(int(d.passable))
     
     
         def create_random_room(self):
@@ -53,7 +52,7 @@ class RogueDungeon(Generator):
             return RogueDungeon.Room(x, y, w, h)
     
         def generate_rooms(self):
-            MAX_ROOMS =20
+            MAX_ROOMS =30
             loop=1
             for r in range(MAX_ROOMS):
                 loop +=1
@@ -66,14 +65,14 @@ class RogueDungeon(Generator):
                         break
                 if not failed:
                     self.paint_room(new_room)
-                    (new_x, new_y) = new_room.center()
+                    (new_x, new_y) = new_room.center
                     new_room.roomid,", it's center is",new_x,",",new_y
                     if len(self.rooms) == 0:
                         """d"""
                     else:
                         #center coordinates of previous room
     #                    (prev_x, prev_y) = self.rooms[-1].center() ; random.randint(1,2) # meh
-                        (prev_x, prev_y) = random.choice(self.rooms).center()
+                        (prev_x, prev_y) = random.choice(self.rooms).center
                         pathtype=random.randint(0,3)
                         if pathtype == 0:
                             ymidpoint=random.randint(min(prev_y,new_y),max(prev_y,new_y))
@@ -148,10 +147,10 @@ class RogueDungeon(Generator):
             self.y1 = y
             self.x2 = x + w
             self.y2 = y + h
-        def center(self):
             center_x = (self.x1 + self.x2) / 2
             center_y = (self.y1 + self.y2) / 2
-            return (center_x, center_y)
+            self.center=(center_x,center_y)
+
      
         def intersect(self, other):
             #returns true if this rectangle intersects with another one
