@@ -12,7 +12,7 @@ from generators import JobPosting
 from generators import Gem
 from generators import MundaneItem
 from generators import Motivation
-from generators import Dungeon
+from generators import RogueDungeon
 from util.Seeds import *
 from util import Filters
 import random
@@ -523,19 +523,19 @@ def Wanted_Builder():
 
 #########################################################################
 
-@app.route('/dungeon')
-def GenerateDungeon():
+@app.route('/roguedungeon')
+def GenerateRogueDungeon():
     """Generate a simple dungeon"""
-    features=feature_filter('dungeon')
-    dungeon=Dungeon.Dungeon(server,features)
-    return render_template('dungeon.html', dungeon=dungeon,jsondata=dungeon.floor.convert_to_json() )
+    features=feature_filter('roguedungeon')
+    roguedungeon=RogueDungeon.RogueDungeon(server,features)
+    return render_template('roguedungeon.html', roguedungeon=roguedungeon,jsondata=roguedungeon.floor.convert_to_json() )
 
 
-@app.route('/dungeon_builder')
-def Dungeon_Builder():
+@app.route('/roguedungeon_builder')
+def RogueDungeon_Builder():
     """Generate the basic data about a dungeon"""
-    paramlist,paramstring,paramset=builder_form_data('dungeon')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='dungeon') 
+    paramlist,paramstring,paramset=builder_form_data('roguedungeon')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rogueoungeon') 
 
 
 #########################################################################

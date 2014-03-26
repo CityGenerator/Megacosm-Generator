@@ -9,16 +9,16 @@
 {% endblock %}
 {% block content %}
 
-    <h1> We Venture Deeper... <a href="/dungeon?seed={{dungeon.seed}}">({{dungeon.seed}})</a></h1>
-    <canvas id='dungeonmap' height='500' width='800'  >
+    <h1> We Venture Deeper... <a href="/roguedungeon?seed={{roguedungeon.seed}}">({{roguedungeon.seed}})</a></h1>
+    <canvas id='roguedungeonmap' height='500' width='800'  >
     </canvas>
 
     <script type="text/javascript">
-        create_dungeon({{jsondata|safe }},document.getElementById('dungeonmap'));
+        create_dungeon({{jsondata|safe }},document.getElementById('roguedungeonmap'));
     </script>
 <!--
 <pre style="font-size:10px;">
-{{dungeon.map}} 
+{{roguedungeon.map}} 
 </pre>
 -->
 {% endblock %}
