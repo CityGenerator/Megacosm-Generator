@@ -1,10 +1,24 @@
+#
 
-ZADD dungeon_size  25 {"name":"tiny",     "score": 25   }
-ZADD dungeon_size  65 {"name":"small",    "score": 65   }
-ZADD dungeon_size  90 {"name":"medium",   "score": 90   }
-ZADD dungeon_size  97 {"name":"large",    "score": 97   }
-ZADD dungeon_size 100 {"name":"gigantic", "score": 100  }
+ZADD roguedungeon_size  25 {"name":"tiny",     "minsize":20, "maxsize":20,   "score": 25   }
+ZADD roguedungeon_size  65 {"name":"small",    "minsize":30, "maxsize":30,   "score": 65   }
+ZADD roguedungeon_size  90 {"name":"medium",   "minsize":40, "maxsize":40,   "score": 90   }
+ZADD roguedungeon_size  97 {"name":"large",    "minsize":50, "maxsize":50,   "score": 97   }
+ZADD roguedungeon_size 100 {"name":"gigantic", "minsize":60, "maxsize":60,   "score": 100  }
 
+
+
+ZADD roguedungeon_room_count  25 {"name":"few",        "minsize":3,  "maxsize":5,   "score": 25   }
+ZADD roguedungeon_room_count  65 {"name":"several",    "minsize":5,  "maxsize":10,  "score": 65   }
+ZADD roguedungeon_room_count  90 {"name":"many",       "minsize":10, "maxsize":25,  "score": 90   }
+ZADD roguedungeon_room_count 100 {"name":"lots",       "minsize":25, "maxsize":50,  "score": 100  }
+
+
+
+ZADD roguedungeon_room_size  25 {"name":"tiny",     "minsize":3,  "maxsize":4,    "score": 25   }
+ZADD roguedungeon_room_size  65 {"name":"small",    "minsize":3,  "maxsize":10,   "score": 65   }
+ZADD roguedungeon_room_size  90 {"name":"medium",   "minsize":3,  "maxsize":15,   "score": 90   }
+ZADD roguedungeon_room_size 100 {"name":"gigantic", "minsize":3,  "maxsize":20,   "score": 100  }
 
 
 
