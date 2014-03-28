@@ -14,7 +14,10 @@
     </canvas>
         <ol>
         {%for room in roguedungeon.rooms%}
-            <li> {{room.kind}}
+            <li> <strong>{{room.kind_description['name']|title}}</strong>
+                {%if room.kind_description['description']%}
+                   - {{room.kind_description['description']|capitalize}}
+                {%endif%}
         {%endfor%}
         </ol>
     <script type="text/javascript">

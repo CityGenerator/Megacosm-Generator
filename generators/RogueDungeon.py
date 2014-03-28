@@ -65,10 +65,14 @@ class RogueDungeon(Generator):
         for room in rooms:
                 if previous_room == None:
                     room.kind="entrance"
+                    room.kind_description={'name':'entrance', "description":"the way in"}
                     room.egress=True
                 else:
                     self.connect_rooms( room, previous_room )
                     room.kind=self.rand_value('roguedungeonroom_kind')
+                    kinddesc=self.redis.hmget("roguedungeonroom_kind_description",room.kind )
+                    print kinddesc
+                    room.kind_description=json.loads(kinddesc[0] )
                 previous_room=room
 
 
