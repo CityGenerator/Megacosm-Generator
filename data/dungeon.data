@@ -33,6 +33,10 @@ ZADD roguedungeon_refinement  65 {"name":"dungeon and caves",                   
 ZADD roguedungeon_refinement 100 {"name":"dungeon",                             "score": 100  }
 
 
+LPUSH roguedungeon_theme elvish
+LPUSH roguedungeon_theme human
+LPUSH roguedungeon_theme royal
+LPUSH roguedungeon_theme fiendish
 LPUSH roguedungeon_theme dwarven
 LPUSH roguedungeon_theme goblin
 LPUSH roguedungeon_theme gnomish
@@ -46,7 +50,10 @@ LPUSH roguedungeon_theme ruins
 LPUSH roguedungeon_theme mines
 LPUSH roguedungeon_theme decorated
 LPUSH roguedungeon_theme crypts
-
+LPUSH roguedungeon_theme fortress
+LPUSH roguedungeon_theme dreamworld
+LPUSH roguedungeon_theme underworld
+LPUSH roguedungeon_theme hideout
 
 
 # Room 7: ________
@@ -128,7 +135,6 @@ LPUSH roguedungeonroom_kind statue
 LPUSH roguedungeonroom_kind stockade
 LPUSH roguedungeonroom_kind storageroom
 LPUSH roguedungeonroom_kind storeroom
-LPUSH roguedungeonroom_kind strongroom
 LPUSH roguedungeonroom_kind study
 LPUSH roguedungeonroom_kind summoning
 LPUSH roguedungeonroom_kind temple
