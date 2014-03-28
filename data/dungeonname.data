@@ -1,0 +1,131 @@
+#
+
+
+
+
+LPUSH roguedungeon_descriptor accursed
+LPUSH roguedungeon_descriptor ancient
+LPUSH roguedungeon_descriptor baneful
+LPUSH roguedungeon_descriptor batrachian
+LPUSH roguedungeon_descriptor black
+LPUSH roguedungeon_descriptor bloodstained
+LPUSH roguedungeon_descriptor cold
+LPUSH roguedungeon_descriptor dark
+LPUSH roguedungeon_descriptor devouring
+LPUSH roguedungeon_descriptor diabolical
+LPUSH roguedungeon_descriptor ebony
+LPUSH roguedungeon_descriptor ivory
+LPUSH roguedungeon_descriptor eldritch
+LPUSH roguedungeon_descriptor forbidden
+LPUSH roguedungeon_descriptor forgotten
+LPUSH roguedungeon_descriptor haunted
+LPUSH roguedungeon_descriptor hidden
+LPUSH roguedungeon_descriptor lonely
+LPUSH roguedungeon_descriptor lost
+LPUSH roguedungeon_descriptor malevolent
+LPUSH roguedungeon_descriptor misplaced
+LPUSH roguedungeon_descriptor nameless
+LPUSH roguedungeon_descriptor ophidian
+LPUSH roguedungeon_descriptor scarlet
+LPUSH roguedungeon_descriptor secret
+LPUSH roguedungeon_descriptor shrouded
+LPUSH roguedungeon_descriptor squamous
+LPUSH roguedungeon_descriptor strange
+LPUSH roguedungeon_descriptor tenebrous
+LPUSH roguedungeon_descriptor uncanny
+LPUSH roguedungeon_descriptor unspeakable
+LPUSH roguedungeon_descriptor unvanquishable
+LPUSH roguedungeon_descriptor unwholesome
+LPUSH roguedungeon_descriptor vanishing
+LPUSH roguedungeon_descriptor weird
+
+LPUSH roguedungeon_place abyss
+LPUSH roguedungeon_place catacombs
+LPUSH roguedungeon_place caverns
+LPUSH roguedungeon_place citadel
+LPUSH roguedungeon_place city
+LPUSH roguedungeon_place depths
+LPUSH roguedungeon_place dungeon
+LPUSH roguedungeon_place fane
+LPUSH roguedungeon_place fortress
+LPUSH roguedungeon_place halls
+LPUSH roguedungeon_place keep
+LPUSH roguedungeon_place labyrinth
+LPUSH roguedungeon_place mines
+LPUSH roguedungeon_place mountain
+LPUSH roguedungeon_place oubliette
+LPUSH roguedungeon_place panopticon
+LPUSH roguedungeon_place pits
+LPUSH roguedungeon_place ruins
+LPUSH roguedungeon_place sanctum
+LPUSH roguedungeon_place shambles
+LPUSH roguedungeon_place temple
+LPUSH roguedungeon_place undercity
+LPUSH roguedungeon_place underworld
+LPUSH roguedungeon_place tower
+LPUSH roguedungeon_place vault
+
+# accursed ruins of blood
+LPUSH roguedungeon_template {{params.descriptor}} {{params.place}} of {{params.thing}}
+LPUSH roguedungeon_template {{params.place}} of the {{params.descriptor}} {{params.thing}}
+LPUSH roguedungeon_template {{params.descriptor}} {{params.place}} of the {{params.thing}} {{params.thingtype}}
+LPUSH roguedungeon_template {{params.descriptor}} {{params.place}} of the {{params.thingtype}} of {{params.thing}}
+
+LPUSH roguedungeon_thingtype cult
+LPUSH roguedungeon_thingtype curse
+LPUSH roguedungeon_thingtype geas 
+LPUSH roguedungeon_thingtype harlots
+LPUSH roguedungeon_thingtype idol
+LPUSH roguedungeon_thingtype king
+LPUSH roguedungeon_thingtype lord
+LPUSH roguedungeon_thingtype mirrors
+LPUSH roguedungeon_thingtype monsters
+LPUSH roguedungeon_thingtype one
+LPUSH roguedungeon_thingtype ones
+LPUSH roguedungeon_thingtype tomb
+
+LPUSH roguedungeon_thing bane
+LPUSH roguedungeon_thing blasphemy
+LPUSH roguedungeon_thing blood
+LPUSH roguedungeon_thing bones
+LPUSH roguedungeon_thing cataclysm
+LPUSH roguedungeon_thing chaos
+LPUSH roguedungeon_thing death
+LPUSH roguedungeon_thing demon
+LPUSH roguedungeon_thing despair
+LPUSH roguedungeon_thing devil
+LPUSH roguedungeon_thing doom
+LPUSH roguedungeon_thing dread
+LPUSH roguedungeon_thing evil
+LPUSH roguedungeon_thing fire
+LPUSH roguedungeon_thing frost
+LPUSH roguedungeon_thing gloom
+LPUSH roguedungeon_thing hell
+LPUSH roguedungeon_thing hex
+LPUSH roguedungeon_thing horror
+LPUSH roguedungeon_thing ichor
+LPUSH roguedungeon_thing iron
+LPUSH roguedungeon_thing madness
+LPUSH roguedungeon_thing mist
+LPUSH roguedungeon_thing mystery
+LPUSH roguedungeon_thing necromancy
+LPUSH roguedungeon_thing oath
+LPUSH roguedungeon_thing oblivion
+LPUSH roguedungeon_thing peril
+LPUSH roguedungeon_thing phantasm
+LPUSH roguedungeon_thing plague
+LPUSH roguedungeon_thing ruin
+LPUSH roguedungeon_thing secrets
+LPUSH roguedungeon_thing shadow
+LPUSH roguedungeon_thing shame
+LPUSH roguedungeon_thing sigils
+LPUSH roguedungeon_thing skulls
+LPUSH roguedungeon_thing slaughter
+LPUSH roguedungeon_thing sorcery
+LPUSH roguedungeon_thing terror
+LPUSH roguedungeon_thing torment
+LPUSH roguedungeon_thing treasure
+LPUSH roguedungeon_thing unknown
+
+
+# http://rpgmaker.net/articles/3/

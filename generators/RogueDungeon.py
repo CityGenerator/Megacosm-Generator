@@ -11,17 +11,26 @@ import pprint
 
 class RogueDungeon(Generator):
     def __init__(self, redis, features={}):
-        """ test """
+        """ Generate a Rogue-like dungeon """
         Generator.__init__(self,redis,features)
-        print self.__dict__ 
 
-        diamlength=random.randint( self.size['minsize'], self.size['maxsize'])
-        self.width=int(diamlength*1.8)
-        self.height=diamlength
-        self.spaces = [ [ RogueDungeon.Tile() for i in range(self.width) ] for j in range(self.height) ]
-        self.rooms = []
+        self.apply_text_template()
+        self.generate_grid()
         self.generate_rooms()
-        self.map=self.printfloor()
+        self.generate_halls()
+
+    def apply_text_template(self):
+        if not hasattr(self,'text'):
+            self.text=self.render_template(self.template)
+            self.text=self.render_template(self.text)
+        self.text=self.text.title()
+
+    def generate_grid(self):
+        gridsize=random.randint( self.size['minsize'], self.size['maxsize'])
+        self.height=gridsize
+        self.width=int(gridsize*1.8)
+
+        self.spaces = [ [ RogueDungeon.Tile() for i in range(self.width) ] for j in range(self.height) ]
 
     def convert_to_json(self):
         resultmatrix=[]
@@ -29,12 +38,15 @@ class RogueDungeon(Generator):
         for row in self.spaces:
             resultrow=[]
             for cell in row:
-                resultrow.append(int(cell.passable)  )
+                resultrow.append({ 
+                            "passable": int(cell.passable), 
+                            "doorway": int(cell.isdoorway), 
+                            "class":cell.__class__.__name__.lower() 
+                            } )
             resultmatrix.append(resultrow)
         return resultmatrix
 
     def create_random_room(self):
-
 
         # TODO FIXME  w and h is too large, need to make sure it fits in self.width
         w =min(self.width-1,  random.randint( self.room_size['minsize'], self.room_size['maxsize']) )
@@ -45,65 +57,98 @@ class RogueDungeon(Generator):
         y = random.randint( 0, self.height - h - 1)
         return RogueDungeon.Room(x, y, w, h)
     
+
+    def generate_halls(self):
+        previous_room=None
+        rooms=self.rooms
+        random.shuffle(rooms)
+        for room in rooms:
+                if previous_room == None:
+                    room.kind="entrance"
+                    room.egress=True
+                else:
+                    self.connect_rooms( room, previous_room )
+                    room.kind=self.rand_value('roguedungeonroom_kind')
+                previous_room=room
+
+
     def generate_rooms(self):
-        MAX_ROOMS =random.randint( self.room_count['minsize'], self.room_count['maxsize'])
-        loop=1
-        for r in range(MAX_ROOMS):
-            loop +=1
+        self.rooms = []
+        max_rooms =random.randint( self.room_count['minsize'], self.room_count['maxsize'])
+
+        for r in range(max_rooms):
             new_room=self.create_random_room()
     
-            failed = False
+            conflict = False
             for other_room in self.rooms:
                 if new_room.intersect(other_room):
-                    failed = True
+                    conflict = True
                     break
-            if not failed:
+            if not conflict:
                 self.paint_room(new_room)
-                (new_x, new_y) = new_room.center
-                if len(self.rooms) != 0:
-
-                    (prev_x, prev_y) = random.choice(self.rooms).center
-                    pathtype=random.randint(0,3)
-                    pathtype=3
-                    if pathtype == 0:
-                        ymidpoint=random.randint(min(prev_y,new_y),max(prev_y,new_y))
-                        xmidpoint=random.randint(min(prev_x,new_x),max(prev_x,new_x))
-                        self.paint_h_tunnel(prev_x, xmidpoint, prev_y)
-                        self.paint_v_tunnel(prev_y, new_y, xmidpoint)
-                        self.paint_h_tunnel(xmidpoint, new_x, new_y)
-                    elif pathtype ==1:
-                        ymidpoint=random.randint(min(prev_y,new_y),max(prev_y,new_y))
-                        xmidpoint=random.randint(min(prev_x,new_x),max(prev_x,new_x))
-                        self.paint_v_tunnel(prev_y, ymidpoint, prev_x)
-                        self.paint_h_tunnel(prev_x, new_x, ymidpoint)
-                        self.paint_v_tunnel(ymidpoint, new_y, new_x)
-                    elif pathtype ==2:
-                        #first move horizontally, then vertically
-                        self.paint_h_tunnel(prev_x, new_x, prev_y)
-                        self.paint_v_tunnel(prev_y, new_y, new_x)
-                    else:
-                        #first move vertically, then horizontally
-                        self.paint_v_tunnel(prev_y, new_y, prev_x)
-                        self.paint_h_tunnel(prev_x, new_x, new_y)
                 self.rooms.append(new_room)
     
+    def connect_rooms(self,new_room,old_room):
+        pathtype=random.randint(0,3)
+        ymidpoint=random.randint(min(new_room.center['y'],old_room.center['y']),max(new_room.center['y'],old_room.center['y']))
+        xmidpoint=random.randint(min(new_room.center['x'],old_room.center['x']),max(new_room.center['x'],old_room.center['x']))
+
+        if pathtype == 0:
+            # startroom new_room
+            self.paint_h_tunnel(new_room.center['x'], xmidpoint, new_room.center['y'])
+            self.paint_v_tunnel(new_room.center['y'], old_room.center['y'], xmidpoint)
+            self.paint_h_tunnel(xmidpoint, old_room.center['x'], old_room.center['y'])
+        elif pathtype ==1:
+            # startroom room a
+            self.paint_v_tunnel(new_room.center['y'], ymidpoint, new_room.center['x'])
+            self.paint_h_tunnel(new_room.center['x'], old_room.center['x'], ymidpoint)
+            self.paint_v_tunnel(ymidpoint, old_room.center['y'], old_room.center['x'])
+        elif pathtype ==2:
+            # startroom new_room
+            self.paint_h_tunnel(new_room.center['x'], old_room.center['x'], new_room.center['y'])
+            self.paint_v_tunnel(new_room.center['y'], old_room.center['y'], old_room.center['x'])
+        else:
+            #startroom old_room
+            print "mapping from ",new_room.center['y'], "to",old_room.center['y'],"along",new_room.center['x']
+            self.paint_v_tunnel(new_room.center['y'], old_room.center['y'], new_room.center['x'])
+            self.paint_h_tunnel(new_room.center['x'], old_room.center['x'], old_room.center['y'])
+
+
     
     def paint_room(self,room):
         for x in range(room.x1 + 1, room.x2):
             for y in range(room.y1 + 1, room.y2):
-                self.spaces[y][x]=RogueDungeon.RoomTile()
+                self.spaces[y][x]=RogueDungeon.RoomTile(room.roomid)
+
     def paint_h_tunnel(self,x1, x2, y):
+        lasttile=None
         for x in range(min(x1, x2), max(x1, x2) + 1):
-                print type(self.spaces[y][x])
-                if type(self.spaces[y][x]) is not RogueDungeon.RoomTile:
-                    if type(self.spaces[y][x]) is RogueDungeon.Tile:
-                        self.spaces[y][x]=RogueDungeon.HallTile()
-    
+                if type(self.spaces[y][x]) is RogueDungeon.RoomTile and type(lasttile) is RogueDungeon.HallTile:
+                    # Ignore room tiles, but track that the last tile was a room tile
+                    lasttile.isdoorway=True
+                elif type(self.spaces[y][x]) is RogueDungeon.Tile:
+                    self.spaces[y][x]=RogueDungeon.HallTile()
+                    if type(lasttile) is RogueDungeon.RoomTile:
+                        self.spaces[y][x].isdoorway=True
+                lasttile=self.spaces[y][x]
+
     def paint_v_tunnel(self,y1, y2, x):
+        lasttile=None
         for y in range(min(y1, y2), max(y1, y2) + 1):
-                if type(self.spaces[y][x]) is not RogueDungeon.RoomTile:
-                    if type(self.spaces[y][x]) is RogueDungeon.Tile:
-                        self.spaces[y][x]=RogueDungeon.HallTile()
+                if type(self.spaces[y][x]) is RogueDungeon.RoomTile and type(lasttile) is RogueDungeon.HallTile:
+                    # Ignore room tiles, but track that the last tile was a room tile
+                    lasttile.isdoorway=True
+                elif type(self.spaces[y][x]) is RogueDungeon.Tile:
+                    self.spaces[y][x]=RogueDungeon.HallTile()
+                    if type(lasttile) is RogueDungeon.RoomTile:
+                        self.spaces[y][x].isdoorway=True
+                lasttile=self.spaces[y][x]
+
+
+
+
+
+
     
     def printfloor(self):
         output=""
@@ -121,21 +166,25 @@ class RogueDungeon(Generator):
         #def __init__(self, char='#'):
             """ test """
             self.char=char
+            self.isdoorway=False
             self.passable=False
     
         def __str__(self):
             return self.char.encode('utf8')
 
     class RoomTile(Tile):
-        def __init__(self, char='.'):
+        def __init__(self, roomid):
             """ test """
-            self.char=char
+            self.roomid=roomid
+            self.char='.'
+            self.isdoorway=False
             self.passable=True
 
     class HallTile(Tile):
         def __init__(self, char='.'):
             """ test """
             self.char=char
+            self.isdoorway=False
             self.passable=True
   
     class Room(object):
@@ -143,6 +192,7 @@ class RogueDungeon(Generator):
         def __init__(self, x, y, w, h):
             """ test """
             RogueDungeon.Room.roomid+=1
+            self.egress=False
             self.roomid=RogueDungeon.Room.roomid
             self.x1 = x
             self.y1 = y
@@ -150,7 +200,7 @@ class RogueDungeon(Generator):
             self.y2 = y + h
             center_x = (self.x1 + self.x2) / 2
             center_y = (self.y1 + self.y2) / 2
-            self.center=(center_x,center_y)
+            self.center={"x":center_x,"y":center_y}
 
      
         def intersect(self, other):
@@ -163,11 +213,6 @@ class RogueDungeon(Generator):
 
 
 #http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_python%2Blibtcod,_part_3
-
-
-
-
-
 
 
 
