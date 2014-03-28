@@ -1,0 +1,255 @@
+#
+
+ZADD roguedungeon_size  25 {"name":"tiny",     "minsize":20, "maxsize":20,   "score": 25   }
+ZADD roguedungeon_size  65 {"name":"small",    "minsize":30, "maxsize":30,   "score": 65   }
+ZADD roguedungeon_size  90 {"name":"medium",   "minsize":40, "maxsize":40,   "score": 90   }
+ZADD roguedungeon_size  97 {"name":"large",    "minsize":50, "maxsize":50,   "score": 97   }
+ZADD roguedungeon_size 100 {"name":"gigantic", "minsize":60, "maxsize":60,   "score": 100  }
+
+
+
+ZADD roguedungeon_room_count  25 {"name":"few",        "minsize":3,  "maxsize":5,   "score": 25   }
+ZADD roguedungeon_room_count  65 {"name":"several",    "minsize":5,  "maxsize":10,  "score": 65   }
+ZADD roguedungeon_room_count  90 {"name":"many",       "minsize":10, "maxsize":25,  "score": 90   }
+ZADD roguedungeon_room_count 100 {"name":"lots",       "minsize":25, "maxsize":50,  "score": 100  }
+
+
+
+ZADD roguedungeon_room_size  25 {"name":"tiny",     "minsize":3,  "maxsize":4,    "score": 25   }
+ZADD roguedungeon_room_size  65 {"name":"small",    "minsize":3,  "maxsize":10,   "score": 65   }
+ZADD roguedungeon_room_size  90 {"name":"medium",   "minsize":3,  "maxsize":15,   "score": 90   }
+ZADD roguedungeon_room_size 100 {"name":"gigantic", "minsize":3,  "maxsize":20,   "score": 100  }
+
+
+ZADD roguedungeon_build  25 {"name":"natural caves",        "score": 25   }
+ZADD roguedungeon_build  65 {"name":"dungeon",              "score": 65   }
+ZADD roguedungeon_build 100 {"name":"dungeon and caves",    "score": 100  }
+
+
+ZADD roguedungeon_refinement  25 {"name":"natural caves",                       "score": 25   }
+ZADD roguedungeon_refinement  25 {"name":"natural caves with smoothed floors",  "score": 25   }
+ZADD roguedungeon_refinement  25 {"name":"widened caves",                       "score": 25   }
+ZADD roguedungeon_refinement  65 {"name":"dungeon and caves",                   "score": 65   }
+ZADD roguedungeon_refinement 100 {"name":"dungeon",                             "score": 100  }
+
+
+LPUSH roguedungeon_theme dwarven
+LPUSH roguedungeon_theme goblin
+LPUSH roguedungeon_theme gnomish
+LPUSH roguedungeon_theme storage
+LPUSH roguedungeon_theme deathtrap
+LPUSH roguedungeon_theme prison
+LPUSH roguedungeon_theme laboratory
+LPUSH roguedungeon_theme tomb
+LPUSH roguedungeon_theme lair
+LPUSH roguedungeon_theme ruins
+LPUSH roguedungeon_theme mines
+LPUSH roguedungeon_theme decorated
+LPUSH roguedungeon_theme crypts
+
+
+
+# Room 7: ________
+
+LPUSH roguedungeonroom_kind abandoned
+LPUSH roguedungeonroom_kind animalpen
+LPUSH roguedungeonroom_kind antechamber
+LPUSH roguedungeonroom_kind armory
+LPUSH roguedungeonroom_kind arsenal
+LPUSH roguedungeonroom_kind assemblage
+LPUSH roguedungeonroom_kind audiencechamber
+LPUSH roguedungeonroom_kind audiencehall
+LPUSH roguedungeonroom_kind aviary
+LPUSH roguedungeonroom_kind banquethall
+LPUSH roguedungeonroom_kind barracks
+LPUSH roguedungeonroom_kind bath
+LPUSH roguedungeonroom_kind bedroom
+LPUSH roguedungeonroom_kind bestiary
+LPUSH roguedungeonroom_kind chantry
+LPUSH roguedungeonroom_kind chapel
+LPUSH roguedungeonroom_kind cistern
+LPUSH roguedungeonroom_kind classroom
+LPUSH roguedungeonroom_kind closet
+LPUSH roguedungeonroom_kind collapsedroom
+LPUSH roguedungeonroom_kind combatpit
+LPUSH roguedungeonroom_kind commandroom
+LPUSH roguedungeonroom_kind conjuringroom
+LPUSH roguedungeonroom_kind courtroom
+LPUSH roguedungeonroom_kind crypt
+LPUSH roguedungeonroom_kind diningroom
+LPUSH roguedungeonroom_kind divinationroom
+LPUSH roguedungeonroom_kind dormitory
+LPUSH roguedungeonroom_kind dressingroom
+LPUSH roguedungeonroom_kind exerciseroom
+LPUSH roguedungeonroom_kind forge
+LPUSH roguedungeonroom_kind foyer
+LPUSH roguedungeonroom_kind gallery
+LPUSH roguedungeonroom_kind gameroom
+LPUSH roguedungeonroom_kind grandhall
+LPUSH roguedungeonroom_kind greathall
+LPUSH roguedungeonroom_kind guardroom
+LPUSH roguedungeonroom_kind hall
+LPUSH roguedungeonroom_kind harem
+LPUSH roguedungeonroom_kind kennel
+LPUSH roguedungeonroom_kind kitchen
+LPUSH roguedungeonroom_kind laboratory
+LPUSH roguedungeonroom_kind lair
+LPUSH roguedungeonroom_kind larder
+LPUSH roguedungeonroom_kind library
+LPUSH roguedungeonroom_kind lounge
+LPUSH roguedungeonroom_kind maproom
+LPUSH roguedungeonroom_kind meditationchamber
+LPUSH roguedungeonroom_kind mine
+LPUSH roguedungeonroom_kind monster
+LPUSH roguedungeonroom_kind museum
+LPUSH roguedungeonroom_kind naturalroom
+LPUSH roguedungeonroom_kind observatory
+LPUSH roguedungeonroom_kind office
+LPUSH roguedungeonroom_kind pantry
+LPUSH roguedungeonroom_kind personalroom
+LPUSH roguedungeonroom_kind pool
+LPUSH roguedungeonroom_kind prayer
+LPUSH roguedungeonroom_kind prison
+LPUSH roguedungeonroom_kind prisoncell
+LPUSH roguedungeonroom_kind privy
+LPUSH roguedungeonroom_kind receptionroom
+LPUSH roguedungeonroom_kind refectory
+LPUSH roguedungeonroom_kind riftbridgeroom
+LPUSH roguedungeonroom_kind robingroom
+LPUSH roguedungeonroom_kind salon
+LPUSH roguedungeonroom_kind secretroom
+LPUSH roguedungeonroom_kind sentrypost
+LPUSH roguedungeonroom_kind shrine
+LPUSH roguedungeonroom_kind sittingroom
+LPUSH roguedungeonroom_kind smithy
+LPUSH roguedungeonroom_kind solarium
+LPUSH roguedungeonroom_kind stable
+LPUSH roguedungeonroom_kind statue
+LPUSH roguedungeonroom_kind stockade
+LPUSH roguedungeonroom_kind storageroom
+LPUSH roguedungeonroom_kind storeroom
+LPUSH roguedungeonroom_kind strongroom
+LPUSH roguedungeonroom_kind study
+LPUSH roguedungeonroom_kind summoning
+LPUSH roguedungeonroom_kind temple
+LPUSH roguedungeonroom_kind throneroom
+LPUSH roguedungeonroom_kind toilet
+LPUSH roguedungeonroom_kind tomb
+LPUSH roguedungeonroom_kind torturechamber
+LPUSH roguedungeonroom_kind trainingroom
+LPUSH roguedungeonroom_kind trappedroom
+LPUSH roguedungeonroom_kind trashroom
+LPUSH roguedungeonroom_kind treasureroom
+LPUSH roguedungeonroom_kind trophyroom
+LPUSH roguedungeonroom_kind vault
+LPUSH roguedungeonroom_kind verticalcavern
+LPUSH roguedungeonroom_kind waitingroom
+LPUSH roguedungeonroom_kind warroom
+LPUSH roguedungeonroom_kind well
+LPUSH roguedungeonroom_kind workpit
+LPUSH roguedungeonroom_kind workroom
+LPUSH roguedungeonroom_kind workshop
+
+
+
+
+HSET roguedungeonroom_kind_description abandoned         { "name":"abandoned",          "description":""   }
+HSET roguedungeonroom_kind_description animalpen         { "name":"animal pen",         "description":""   }
+HSET roguedungeonroom_kind_description antechamber       { "name":"antechamber",        "description":""   }
+HSET roguedungeonroom_kind_description armory            { "name":"armory",             "description":""   }
+HSET roguedungeonroom_kind_description arsenal           { "name":"arsenal",            "description":""   }
+HSET roguedungeonroom_kind_description assemblage        { "name":"assemblage",         "description":""   }
+HSET roguedungeonroom_kind_description audiencechamber   { "name":"audience chamber",   "description":""   }
+HSET roguedungeonroom_kind_description audiencehall      { "name":"audience hall",      "description":""   }
+HSET roguedungeonroom_kind_description aviary            { "name":"aviary",             "description":""   }
+HSET roguedungeonroom_kind_description banquethall       { "name":"banquet hall",       "description":""   }
+HSET roguedungeonroom_kind_description barracks          { "name":"barracks",           "description":""   }
+HSET roguedungeonroom_kind_description bath              { "name":"bath",               "description":""   }
+HSET roguedungeonroom_kind_description bedroom           { "name":"bedroom",            "description":""   }
+HSET roguedungeonroom_kind_description bestiary          { "name":"bestiary",           "description":""   }
+HSET roguedungeonroom_kind_description chantry           { "name":"chantry",            "description":""   }
+HSET roguedungeonroom_kind_description chapel            { "name":"chapel",             "description":""   }
+HSET roguedungeonroom_kind_description cistern           { "name":"cistern",            "description":""   }
+HSET roguedungeonroom_kind_description classroom         { "name":"classroom",          "description":""   }
+HSET roguedungeonroom_kind_description closet            { "name":"closet",             "description":""   }
+HSET roguedungeonroom_kind_description collapsedroom     { "name":"collapsed room",     "description":""   }
+HSET roguedungeonroom_kind_description combatpit         { "name":"combat pit",         "description":""   }
+HSET roguedungeonroom_kind_description commandroom       { "name":"command room",       "description":""   }
+HSET roguedungeonroom_kind_description conjuringroom     { "name":"conjuring room",     "description":""   }
+HSET roguedungeonroom_kind_description courtroom         { "name":"courtroom",          "description":""   }
+HSET roguedungeonroom_kind_description crypt             { "name":"crypt",              "description":""   }
+HSET roguedungeonroom_kind_description diningroom        { "name":"diningroom",         "description":""   }
+HSET roguedungeonroom_kind_description divinationroom    { "name":"divination room",    "description":""   }
+HSET roguedungeonroom_kind_description dormitory         { "name":"dormitory",          "description":""   }
+HSET roguedungeonroom_kind_description dressingroom      { "name":"dressing room",      "description":""   }
+HSET roguedungeonroom_kind_description exerciseroom      { "name":"exercise room",      "description":""   }
+HSET roguedungeonroom_kind_description forge             { "name":"forge",              "description":""   }
+HSET roguedungeonroom_kind_description foyer             { "name":"foyer",              "description":""   }
+HSET roguedungeonroom_kind_description gallery           { "name":"gallery",            "description":""   }
+HSET roguedungeonroom_kind_description gameroom          { "name":"game room",          "description":""   }
+HSET roguedungeonroom_kind_description grandhall         { "name":"grandhall",          "description":""   }
+HSET roguedungeonroom_kind_description greathall         { "name":"greathall",          "description":""   }
+HSET roguedungeonroom_kind_description guardroom         { "name":"guard room",         "description":""   }
+HSET roguedungeonroom_kind_description hall              { "name":"hall",               "description":""   }
+HSET roguedungeonroom_kind_description harem             { "name":"harem",              "description":""   }
+HSET roguedungeonroom_kind_description kennel            { "name":"kennel",             "description":""   }
+HSET roguedungeonroom_kind_description kitchen           { "name":"kitchen",            "description":""   }
+HSET roguedungeonroom_kind_description laboratory        { "name":"laboratory",         "description":""   }
+HSET roguedungeonroom_kind_description lair              { "name":"lair",               "description":""   }
+HSET roguedungeonroom_kind_description larder            { "name":"larder",             "description":""   }
+HSET roguedungeonroom_kind_description library           { "name":"library",            "description":""   }
+HSET roguedungeonroom_kind_description lounge            { "name":"lounge",             "description":""   }
+HSET roguedungeonroom_kind_description maproom           { "name":"map room",           "description":""   }
+HSET roguedungeonroom_kind_description meditationchamber { "name":"meditation chamber", "description":""   }
+HSET roguedungeonroom_kind_description mine              { "name":"mine",               "description":""   }
+HSET roguedungeonroom_kind_description monster           { "name":"monster",            "description":""   }
+HSET roguedungeonroom_kind_description museum            { "name":"museum",             "description":""   }
+HSET roguedungeonroom_kind_description naturalroom       { "name":"natural room",       "description":""   }
+HSET roguedungeonroom_kind_description observatory       { "name":"observatory",        "description":""   }
+HSET roguedungeonroom_kind_description office            { "name":"office",             "description":""   }
+HSET roguedungeonroom_kind_description pantry            { "name":"pantry",             "description":""   }
+HSET roguedungeonroom_kind_description personalroom      { "name":"personal room",      "description":""   }
+HSET roguedungeonroom_kind_description pool              { "name":"pool",               "description":""   }
+HSET roguedungeonroom_kind_description prayer            { "name":"prayer",             "description":""   }
+HSET roguedungeonroom_kind_description prison            { "name":"prison",             "description":""   }
+HSET roguedungeonroom_kind_description prisoncell        { "name":"prison cell",        "description":""   }
+HSET roguedungeonroom_kind_description privy             { "name":"privy",              "description":""   }
+HSET roguedungeonroom_kind_description receptionroom     { "name":"reception room",     "description":""   }
+HSET roguedungeonroom_kind_description refectory         { "name":"refectory",          "description":""   }
+HSET roguedungeonroom_kind_description riftbridgeroom    { "name":"rift/bridge room",   "description":""   }
+HSET roguedungeonroom_kind_description robingroom        { "name":"robing room",        "description":""   }
+HSET roguedungeonroom_kind_description salon             { "name":"salon",              "description":""   }
+HSET roguedungeonroom_kind_description secretroom        { "name":"secret room",        "description":""   }
+HSET roguedungeonroom_kind_description sentrypost        { "name":"sentry post",        "description":""   }
+HSET roguedungeonroom_kind_description shrine            { "name":"shrine",             "description":""   }
+HSET roguedungeonroom_kind_description sittingroom       { "name":"sitting room",       "description":""   }
+HSET roguedungeonroom_kind_description smithy            { "name":"smithy",             "description":""   }
+HSET roguedungeonroom_kind_description solarium          { "name":"solarium",           "description":""   }
+HSET roguedungeonroom_kind_description stable            { "name":"stable",             "description":""   }
+HSET roguedungeonroom_kind_description statue            { "name":"statue",             "description":""   }
+HSET roguedungeonroom_kind_description stockade          { "name":"stockade",           "description":""   }
+HSET roguedungeonroom_kind_description storageroom       { "name":"storage room",       "description":""   }
+HSET roguedungeonroom_kind_description storeroom         { "name":"store room",         "description":""   }
+HSET roguedungeonroom_kind_description strongroom        { "name":"strong room",        "description":""   }
+HSET roguedungeonroom_kind_description study             { "name":"study",              "description":""   }
+HSET roguedungeonroom_kind_description summoning         { "name":"summoning",          "description":""   }
+HSET roguedungeonroom_kind_description temple            { "name":"temple",             "description":""   }
+HSET roguedungeonroom_kind_description throneroom        { "name":"throne room",        "description":""   }
+HSET roguedungeonroom_kind_description toilet            { "name":"toilet",             "description":""   }
+HSET roguedungeonroom_kind_description tomb              { "name":"tomb",               "description":""   }
+HSET roguedungeonroom_kind_description torturechamber    { "name":"torture chamber",    "description":""   }
+HSET roguedungeonroom_kind_description trainingroom      { "name":"training room",      "description":""   }
+HSET roguedungeonroom_kind_description trappedroom       { "name":"trapped room",       "description":""   }
+HSET roguedungeonroom_kind_description trashroom         { "name":"trash room",         "description":""   }
+HSET roguedungeonroom_kind_description treasureroom      { "name":"treasure room",      "description":""   }
+HSET roguedungeonroom_kind_description trophyroom        { "name":"trophy room",        "description":""   }
+HSET roguedungeonroom_kind_description vault             { "name":"vault",              "description":""   }
+HSET roguedungeonroom_kind_description verticalcavern    { "name":"vertical cavern",    "description":""   }
+HSET roguedungeonroom_kind_description waitingroom       { "name":"waiting room",       "description":""   }
+HSET roguedungeonroom_kind_description warroom           { "name":"war room",           "description":""   }
+HSET roguedungeonroom_kind_description well              { "name":"well",               "description":""   }
+HSET roguedungeonroom_kind_description workpit           { "name":"work pit",           "description":""   }
+HSET roguedungeonroom_kind_description workroom          { "name":"work room",          "description":""   }
+HSET roguedungeonroom_kind_description workshop          { "name":"workshop",           "description":""   }
+
+

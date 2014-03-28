@@ -12,6 +12,7 @@ from generators import JobPosting
 from generators import Gem
 from generators import MundaneItem
 from generators import Motivation
+from generators import RogueDungeon
 from util.Seeds import *
 from util import Filters
 import random
@@ -521,6 +522,24 @@ def Wanted_Builder():
 
 
 #########################################################################
+
+@app.route('/roguedungeon')
+def GenerateRogueDungeon():
+    """Generate a simple dungeon"""
+    features=feature_filter('roguedungeon')
+    roguedungeon=RogueDungeon.RogueDungeon(server,features)
+    return render_template('roguedungeon.html', roguedungeon=roguedungeon,jsondata=roguedungeon.convert_to_json() )
+
+
+@app.route('/roguedungeon_builder')
+def RogueDungeon_Builder():
+    """Generate the basic data about a dungeon"""
+    paramlist,paramstring,paramset=builder_form_data('roguedungeon')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='roguedungeon') 
+
+
+#########################################################################
+
 
 @app.route('/country')
 def GenerateCountry():

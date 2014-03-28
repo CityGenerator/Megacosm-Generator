@@ -1,0 +1,29 @@
+
+
+{% extends "base.html" %}
+{% block title %} {{roguedungeon.text}} {% endblock %}
+{% block head %}
+  {{ super() }}
+        <script src='/static/js/dungeon.js' ></script>
+
+{% endblock %}
+{% block content %}
+
+    <h1> {{roguedungeon.text}} <a href="/roguedungeon?seed={{roguedungeon.seed}}">({{roguedungeon.seed}})</a></h1>
+    <canvas id='roguedungeonmap' style="float:left; padding-right:30px; ">
+    </canvas>
+        <ol>
+        {%for room in roguedungeon.rooms%}
+            <li> <strong>{{room.kind_description['name']|title}}</strong>
+                {%if room.kind_description['description']%}
+                   - {{room.kind_description['description']|capitalize}}
+                {%endif%}
+        {%endfor%}
+        </ol>
+    <script type="text/javascript">
+        create_dungeon({{jsondata|safe }},document.getElementById('roguedungeonmap'));
+        {%for room in roguedungeon.rooms%}
+            label_room({{loop.index}}, [{{room.center['x']}},  {{room.center['y']}}],document.getElementById('roguedungeonmap') );
+        {%endfor%}
+    </script>
+{% endblock %}
