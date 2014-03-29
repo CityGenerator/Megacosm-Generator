@@ -13,6 +13,7 @@ from generators import Gem
 from generators import MundaneItem
 from generators import Motivation
 from generators import RogueDungeon
+from generators import GeomorphDungeon
 from util.Seeds import *
 from util import Filters
 import random
@@ -521,6 +522,23 @@ def Wanted_Builder():
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='wanted') 
 
 
+
+#########################################################################
+
+@app.route('/geomorphdungeon')
+def GenerateGeomorphDungeon():
+    """Generate a simple geomorphdungeon"""
+    features=feature_filter('geomorphdungeon')
+    geomorphdungeon=GeomorphDungeon.GeomorphDungeon(server,features)
+    return render_template('geomorphdungeon.html', geomorphdungeon=geomorphdungeon,jsondata=geomorphdungeon.convert_to_json() )
+
+@app.route('/geomorphdungeon_builder')
+def GeomorphDungeon_Builder():
+    """Generate the basic data about a geomorphdungeon"""
+    paramlist,paramstring,paramset=builder_form_data('geomorphdungeon')
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='geomorphdungeon') 
+    
 #########################################################################
 
 @app.route('/roguedungeon')

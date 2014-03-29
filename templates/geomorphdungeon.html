@@ -1,0 +1,18 @@
+
+
+{% extends "base.html" %}
+{% block title %} {{geomorphdungeon.text}} {% endblock %}
+{% block head %}
+  {{ super() }}
+        <script src='/static/js/dungeon.js' ></script>
+
+{% endblock %}
+{% block content %}
+
+    <h1> {{geomorphdungeon.text}} <a href="/geomorphdungeon?seed={{geomorphdungeon.seed}}">({{geomorphdungeon.seed}})</a></h1>
+    <canvas id='geomorphdungeonmap' style="float:left; padding-right:30px; ">
+    </canvas>
+    <script type="text/javascript">
+        create_geomorphdungeon({{jsondata|safe }},document.getElementById('geomorphdungeonmap'));
+    </script>
+{% endblock %}
