@@ -71,31 +71,35 @@ function create_geomorphdungeon(jsonblock,canvas) {
             var tiledata = jsonblock[y][x];
             var newtile = new Image();
             newtile.src = tiledata.path;
-            newtile.onload = drawTile(canvas, x, y, newtile, tiledata.rotation);
+            var geomorphx=x*geomorphTileSize;
+            var geomorphy=y*geomorphTileSize;
+            var rotation=tiledata.rotation;
+            newtile.onload = drawTile(canvas, geomorphx, geomorphy, newtile, rotation);
+
+
+
         }
     }
 }
 
 
-function drawTile(canvas, x, y, tile, rotation) {
+function drawTile(canvas, geox, geoy, tile, rotate) {
     var TO_RADIANS = Math.PI / 180;
     var ctx = canvas.getContext("2d");
     ctx.save();
 
-    var degrees = 90 * rotation;
-    ctx.translate( x*geomorphTileSize+geomorphTileSize/2, y*geomorphTileSize+ geomorphTileSize/2 );
+    var degrees = 90 * rotate;
+    ctx.translate( geox+geomorphTileSize/2, geoy+ geomorphTileSize/2 );
     ctx.rotate( degrees*TO_RADIANS );
-    ctx.translate(  -(x*geomorphTileSize+geomorphTileSize/2), -(y*geomorphTileSize+ geomorphTileSize/2));
-    ctx.drawImage(tile, x*geomorphTileSize, y*geomorphTileSize);
+    ctx.translate(  -( geox+geomorphTileSize/2), -(geoy+ geomorphTileSize/2));
+    ctx.drawImage(tile, geox, geoy);
 
     ctx.restore();
 
     //This is where we want the pivot point; it should stay in the center of the black box.    
-    ctx.rect(x * geomorphTileSize + geomorphTileSize / 2, y * geomorphTileSize + geomorphTileSize / 2, 2, 2);
+    ctx.rect( geox + geomorphTileSize / 2, geoy  + geomorphTileSize / 2, 2, 2);
     ctx.fillStyle = "red";
     ctx.fill();
-    
-
 }
 
 

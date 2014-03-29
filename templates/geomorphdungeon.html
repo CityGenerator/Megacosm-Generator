@@ -13,6 +13,8 @@
     <canvas id='geomorphdungeonmap' style="float:left; padding-right:30px; ">
     </canvas>
     <script type="text/javascript">
-        create_geomorphdungeon({{jsondata|safe }},document.getElementById('geomorphdungeonmap'));
+        var jsondata={{jsondata|safe }};
+
+        create_geomorphdungeon(jsondata,document.getElementById('geomorphdungeonmap'));
     </script>
 {% endblock %}
