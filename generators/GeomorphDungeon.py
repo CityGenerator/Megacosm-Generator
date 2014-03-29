@@ -95,7 +95,7 @@ class GeomorphDungeon(Generator):
             elif self.spaces[cell.y-1][cell.x].bottom != None :
                 cell.top=self.spaces[cell.y-1][cell.x].bottom
             else:
-                if random.randint(0,3) ==1:
+                if random.randint(0,self.segmentation['solidchance']) ==0:
                     cell.top=False
                 else:
                     cell.top=True
@@ -106,7 +106,7 @@ class GeomorphDungeon(Generator):
             elif self.spaces[cell.y][cell.x+1].left != None :
                 cell.right=self.spaces[cell.y][cell.x+1].left
             else:
-                if random.randint(0,3) ==1:
+                if random.randint(0,self.segmentation['solidchance']) ==0:
                     cell.right=False
                 else:
                     cell.right=True
@@ -117,7 +117,7 @@ class GeomorphDungeon(Generator):
             elif self.spaces[cell.y+1][cell.x].top != None :
                 cell.bottom=self.spaces[cell.y+1][cell.x].top
             else:
-                if random.randint(0,3) ==1:
+                if random.randint(0,self.segmentation['solidchance']) ==0:
                     cell.bottom=False
                 else:
                     cell.bottom=True
@@ -128,7 +128,7 @@ class GeomorphDungeon(Generator):
             elif self.spaces[cell.y][cell.x-1].right != None :
                 cell.left=self.spaces[cell.y][cell.x-1].right
             else:
-                if random.randint(0,3) ==1:
+                if random.randint(0,self.segmentation['solidchance']) ==0:
                     cell.left=False
                 else:
                     cell.left=True
