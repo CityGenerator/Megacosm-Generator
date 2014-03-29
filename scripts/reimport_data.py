@@ -5,6 +5,7 @@ import ConfigParser, os
 import glob
 import sys
 from pprint import pprint
+import re
 
 
 COMMANDCOUNT=0
@@ -65,8 +66,35 @@ for filename in glob.glob("data/*.data") :
 for filename in glob.glob("data/*/*.data") :
     parse_file(pipe, filename)
 
+
+IMAGECOUNT=0
+def create_image_record(pipe, image):
+    m = re.search('geomorphs/([0-5])/([^/]+).png', image)
+    global IMAGECOUNT
+    if m:
+        imagetype = m.group(1)
+        pipe.lpush('geomorph_type_'+imagetype,'/'+image)
+        IMAGECOUNT+=1
+    else:
+        print "WARNING,",image,"is not in the right format."
+#static/images/geomorphs/1/basic2.png
+
+
+
+
+
+for image in glob.glob("static/images/geomorphs/*/*.png") :
+    create_image_record(pipe, image);
+
+
+
+
+
+
+
 pipe.execute()
 
 print COMMANDCOUNT, "Commands were run."
+print IMAGECOUNT, "geomorphs documented."
 
 

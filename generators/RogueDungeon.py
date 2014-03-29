@@ -13,6 +13,7 @@ class RogueDungeon(Generator):
     def __init__(self, redis, features={}):
         """ Generate a Rogue-like dungeon """
         Generator.__init__(self,redis,features)
+        self.generate_features('dungeon')
 
         self.apply_text_template()
         self.generate_grid()

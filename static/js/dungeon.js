@@ -35,9 +35,9 @@ function create_dungeon(jsonblock,canvas) {
         }
     }
 
-
-
 }
+
+
 
 function label_room(roomid, coords, canvas) {
     var ctx = canvas.getContext("2d");
@@ -51,3 +51,61 @@ function label_room(roomid, coords, canvas) {
     ctx.fillText(roomid,(coords[0])*tileSize +tileSize/2,(coords[1])*tileSize+tileSize/2);
 
 }
+
+
+
+
+var geomorphTileSize = 100;
+
+var TO_RADIANS = Math.PI / 180;
+
+function create_geomorphdungeon(jsonblock,canvas) {
+
+    canvas.width = geomorphTileSize * jsonblock[0].length;
+    canvas.height = geomorphTileSize * jsonblock.length;
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#A88442";
+    ctx.fillRect(0, 0, jsonblock[0].length * geomorphTileSize, jsonblock.length * geomorphTileSize);
+    
+    for (var y = 0; y < jsonblock.length; y++) {
+        for (var x = 0; x < jsonblock[y].length; x++) {
+            var geomorphx=x*geomorphTileSize;
+            var geomorphy=y*geomorphTileSize;
+
+            var tiledata = jsonblock[y][x];
+
+            drawTile(geomorphx, geomorphy, tiledata, canvas)
+            function drawTile( geomorphx, geomorphy, tiledata, canvas) {
+
+
+                var newtile = new Image();
+                newtile.onload = function(){
+                    var ctx = canvas.getContext("2d");
+                    var geox=geomorphx
+                    var geoy=geomorphy
+                    ctx.save();
+                    var degrees = 90 * tiledata.rotation;
+                    ctx.translate( geox+geomorphTileSize/2, geoy+ geomorphTileSize/2 );
+                    ctx.rotate( degrees*TO_RADIANS );
+                    ctx.translate(  -( geox+geomorphTileSize/2), -(geoy+ geomorphTileSize/2));
+                    ctx.drawImage(newtile, geox, geoy);
+                    ctx.restore();
+    
+                    ctx.rect( geox + geomorphTileSize / 2, geoy  + geomorphTileSize / 2, 2, 2);
+                    ctx.fillStyle = "red";
+                    ctx.fill();
+                }
+            newtile.src = tiledata.path;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
