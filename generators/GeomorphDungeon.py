@@ -61,13 +61,14 @@ class GeomorphDungeon(Generator):
 
     def set_tiletypes(self):
         # basic.png is just a placeholder, TODO pull actual results from filesystem or redis.
-        image="basic.png"
         for row in self.spaces:
             for cell in row:
                 """s"""
                 cell.tiletype=bin( (cell.left << 3) + (cell.bottom << 2) + (cell.right<<1) + ( cell.top<<0 ))
                 cell.imagetype=int(self.CELL_TYPES[cell.tiletype]['type'],2)
-                cell.image='/static/images/geomorphs/'+ str(cell.imagetype)+"/"+image
+                cell.image= "/"+self.rand_value('geomorph_type_'+str(cell.imagetype))
+                print 'geomorph_type_'+str(cell.imagetype)
+
                 cell.imagerotation= self.CELL_TYPES[cell.tiletype]['rotation']
                 print "Cell", cell.x,",",cell.y,", type",cell.tiletype, " imagerotation",cell.imagerotation, cell.top ,cell.right,cell.bottom,cell.left
 
