@@ -73,7 +73,7 @@ def create_image_record(pipe, image):
     global IMAGECOUNT
     if m:
         imagetype = m.group(1)
-        pipe.lpush('geomorph_type_'+imagetype,image)
+        pipe.lpush('geomorph_type_'+imagetype,'/'+image)
         IMAGECOUNT+=1
     else:
         print "WARNING,",image,"is not in the right format."

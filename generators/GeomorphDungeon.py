@@ -34,16 +34,22 @@ class GeomorphDungeon(Generator):
     def __init__(self, redis, features={}):
         """ Generate a Geomorph-like dungeon """
         Generator.__init__(self,redis,features)
-        #self.apply_text_template() FIXME refactor with RogueDungeon on dungeon names...
-        self.text="Our New Dungeon"
-        #self.width=self.gridwidth['tiles']
-        #self.height=self.gridheight['tiles']
-        self.width=6
-        self.height=4
+        self.generate_features('dungeon')
+
+        self.apply_text_template() #FIXME refactor with RogueDungeon on dungeon names...
+        self.width=self.gridwidth['tiles']
+        self.height=self.gridheight['tiles']
 
         self.generate_grid()
         self.generate_connections()
         self.set_tiletypes()
+
+    def apply_text_template(self):
+        if not hasattr(self,'text'):
+            self.text=self.render_template(self.template)
+            self.text=self.render_template(self.text)
+        self.text=self.text.title()
+
 
     def convert_to_json(self):
         resultmatrix=[]
@@ -52,7 +58,6 @@ class GeomorphDungeon(Generator):
             for cell in row:
                 resultrow.append({
                             "path":cell.image,
-                            "origtype":cell.tiletype,
                             "rotation":cell.imagerotation,
                             } )
             resultmatrix.append(resultrow)
@@ -60,19 +65,22 @@ class GeomorphDungeon(Generator):
 
 
     def set_tiletypes(self):
-        # basic.png is just a placeholder, TODO pull actual results from filesystem or redis.
         for row in self.spaces:
             for cell in row:
-                """s"""
+                #calculate the binary "cell type"
                 cell.tiletype=bin( (cell.left << 3) + (cell.bottom << 2) + (cell.right<<1) + ( cell.top<<0 ))
-                cell.imagetype=int(self.CELL_TYPES[cell.tiletype]['type'],2)
-                cell.image= "/"+self.rand_value('geomorph_type_'+str(cell.imagetype))
-                print 'geomorph_type_'+str(cell.imagetype)
 
+                #translate it with the table
+                cell.imagetype=int(self.CELL_TYPES[cell.tiletype]['type'],2)
+
+                #Using the proper cell type, select an image from redis
+                cell.image= self.rand_value('geomorph_type_'+str(cell.imagetype))
+
+                # Make sure to capture the rotation needed
                 cell.imagerotation= self.CELL_TYPES[cell.tiletype]['rotation']
-                print "Cell", cell.x,",",cell.y,", type",cell.tiletype, " imagerotation",cell.imagerotation, cell.top ,cell.right,cell.bottom,cell.left
 
     def generate_grid(self):
+        
         self.spaces = [ [ GeomorphDungeon.Tile(i,j) for i in range(self.width) ] for j in range(self.height) ]
 
     def generate_connections(self):
