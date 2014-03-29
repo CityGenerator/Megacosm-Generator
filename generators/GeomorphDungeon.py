@@ -36,8 +36,10 @@ class GeomorphDungeon(Generator):
         Generator.__init__(self,redis,features)
         #self.apply_text_template() FIXME refactor with RogueDungeon on dungeon names...
         self.text="Our New Dungeon"
-        self.width=self.gridwidth['tiles']
-        self.height=self.gridheight['tiles']
+        #self.width=self.gridwidth['tiles']
+        #self.height=self.gridheight['tiles']
+        self.width=3
+        self.height=2
 
         self.generate_grid()
         self.generate_connections()
