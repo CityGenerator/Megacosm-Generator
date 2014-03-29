@@ -6,27 +6,27 @@ from util import Seeds
 
 class GeomorphDungeon(Generator):
 
-#     x  x   x   x    x
-#  0  1  2x  3   4x  x5x
-#            x   x    x
 
-    CELL_TYPES={ 
-                   '0b0': {'type':'0000', 'rotation':0  },   # correct
-                   '0b1': {'type':'0001', 'rotation':0  },   # top  ok
-                  '0b10': {'type':'0001', 'rotation':1  },   # right ok
-                  '0b11': {'type':'0010', 'rotation':0  },
-                 '0b100': {'type':'0001', 'rotation':2  },   # downok
-                 '0b101': {'type':'0011', 'rotation':0  },
-                 '0b110': {'type':'0010', 'rotation':1  },
-                 '0b111': {'type':'0100', 'rotation':0  },
-                '0b1000': {'type':'0001', 'rotation':3  },   # left ok
-                '0b1001': {'type':'0010', 'rotation':3  },
-                '0b1010': {'type':'0011', 'rotation':1  },
-                '0b1011': {'type':'0100', 'rotation':3  },
-                '0b1100': {'type':'0010', 'rotation':2  },
-                '0b1101': {'type':'0100', 'rotation':2  },
-                '0b1110': {'type':'0100', 'rotation':1  },
-                '0b1111': {'type':'0101', 'rotation':0  }
+
+    # This is a simple translation table 
+    # bits are sorted [ left bottom right top ]
+    CELL_TYPES={  
+                   '0b0': {'type':'0000', 'rotation':0  }, # No connections
+                   '0b1': {'type':'0001', 'rotation':0  },   # one side
+                  '0b10': {'type':'0001', 'rotation':1  },   # one side
+                  '0b11': {'type':'0010', 'rotation':0  },     # twoside corner
+                 '0b100': {'type':'0001', 'rotation':2  },   # one side
+                 '0b101': {'type':'0011', 'rotation':0  },     # twoside straight
+                 '0b110': {'type':'0010', 'rotation':1  },     # twosided corner
+                 '0b111': {'type':'0100', 'rotation':0  },       #Three sides
+                '0b1000': {'type':'0001', 'rotation':3  },   # one side
+                '0b1001': {'type':'0010', 'rotation':3  },     # twosided corner
+                '0b1010': {'type':'0011', 'rotation':1  },     # twosided straight
+                '0b1011': {'type':'0100', 'rotation':3  },       # three sides
+                '0b1100': {'type':'0010', 'rotation':2  },     # twosided corner
+                '0b1101': {'type':'0100', 'rotation':2  },       # threesided
+                '0b1110': {'type':'0100', 'rotation':1  },       # three sides
+                '0b1111': {'type':'0101', 'rotation':0  }          # Four connections
                 }
 
 
