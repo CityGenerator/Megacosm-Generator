@@ -176,9 +176,21 @@ def GeneratePlanet():
 @app.route('/resource')
 def GenerateResource():
     """Generate a simple resource"""
+
     features=feature_filter('resource')
-    resource=Resource.Resource(server,features)
-    return render_template('oneliner.html', oneliner=resource,titletext='At your disposal...', generator='resource' )
+    titletext='At Your Disposal...'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        resources=[]
+        for item in xrange(int(request.args['count'])):
+            resources.append(Resource.Resource(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=resources, oneliner=resources[0] ,titletext=titletext, generator='resource' )
+    else:
+        resource=Resource.Resource(server,features)
+        return render_template('oneliner.html', oneliner=resource ,titletext=titletext, generator='resource' )
+
+
 
 @app.route('/resource_builder')
 def Resource_Builder():
@@ -193,8 +205,19 @@ def Resource_Builder():
 def GenerateRumor():
     """Generate a simple rumor"""
     features=feature_filter('rumor')
-    rumor=Rumor.Rumor(server,features)
-    return render_template('oneliner.html', oneliner=rumor,titletext='Did you hear?', generator='rumor' )
+    titletext='Did You Hear?'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        rumors=[]
+        for item in xrange(int(request.args['count'])):
+            rumors.append(Rumor.Rumor(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=rumors, oneliner=rumors[0] ,titletext=titletext, generator='rumor' )
+    else:
+        rumor=Rumor.Rumor(server,features)
+        return render_template('oneliner.html', oneliner=rumor ,titletext=titletext, generator='rumor' )
+
+
 
 @app.route('/rumor_builder')
 def Rumor_Builder():
@@ -208,9 +231,20 @@ def Rumor_Builder():
 @app.route('/misfire')
 def GenerateMisfire():
     """Generate a simple misfire"""
+
     features=feature_filter('misfire')
-    misfire=Misfire.Misfire(server,features)
-    return render_template('oneliner.html', oneliner=misfire,titletext='My spell misfired!', generator='misfire' )
+    titletext='My Spell Misfired!'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        misfires=[]
+        for item in xrange(int(request.args['count'])):
+            misfires.append(Misfire.Misfire(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=misfires, oneliner=misfires[0] ,titletext=titletext, generator='misfire' )
+    else:
+        misfire=Misfire.Misfire(server,features)
+        return render_template('oneliner.html', oneliner=misfire ,titletext=titletext, generator='misfire' )
+
 
 @app.route('/misfire_builder')
 def Misfire_Builder():
@@ -226,8 +260,19 @@ def Misfire_Builder():
 def GenerateCurrency():
     """Generate a simple currency"""
     features=feature_filter('currency')
-    currency=Currency.Currency(server,features)
-    return render_template('oneliner.html', oneliner=currency ,titletext='Spare Some Change? ', generator='currency' )
+    titletext='Space Some Change?'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        currencys=[]
+        for item in xrange(int(request.args['count'])):
+            currencys.append(Currency.Currency(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=currencys, oneliner=currencys[0] ,titletext=titletext, generator='currency' )
+    else:
+        currency=Currency.Currency(server,features)
+        return render_template('oneliner.html', oneliner=currency ,titletext=titletext, generator='currency' )
+
+
 
 @app.route('/currency_builder')
 def Currency_Builder():
