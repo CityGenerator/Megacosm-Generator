@@ -351,8 +351,15 @@ def MundaneItem_Builder():
 def GenerateLegend():
     """Generate a simple legend"""
     features=feature_filter('legend')
-    legend=Legend.Legend(server,features)
-    return render_template('oneliner.html', oneliner=legend ,titletext='Let me tell you a story...', generator='legend' )
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        legends=[]
+        for item in xrange(int(request.args['count'])):
+            legends.append(Legend.Legend(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=legends, oneliner=legends[0] ,titletext='Let me tell you a story...', generator='legend' )
+    else:
+        legend=Legend.Legend(server,features)
+        return render_template('oneliner.html', oneliner=legend ,titletext='Let me tell you a story...', generator='legend' )
 
 @app.route('/legend_builder')
 def Legend_Builder():
