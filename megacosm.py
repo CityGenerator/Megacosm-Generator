@@ -94,6 +94,7 @@ def GenerateNPC():
         elif re.match('^npc_emotion$',param) and request.args[param] in emotions:
             npcfeatures['emotion']=request.args[param]
 
+    npcfeatures['deity']=Deity.Deity(server)
     npc=NPC.NPC(server,npcfeatures)
     return render_template('npc.html',npc=npc) 
 
