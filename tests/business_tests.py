@@ -1,5 +1,6 @@
 
 from generators.Business import Business
+from generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
