@@ -660,8 +660,17 @@ def Country_Builder():
 def GenerateCuisine():
     """Generate a simple cuisine"""
     features=feature_filter('cuisine')
-    cuisine=Cuisine.Cuisine(server,features)
-    return render_template('cuisine.html', cuisine=cuisine )
+    features['region']=Region.Region(server)
+    titletext='What\'s for Dinner?'
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        cuisines=[]
+        for item in xrange(int(request.args['count'])):
+            cuisines.append(Cuisine.Cuisine(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=cuisines, oneliner=cuisines[0] ,titletext=titletext, generator='cuisine' )
+    else:
+        cuisine=Cuisine.Cuisine(server,features)
+        return render_template('oneliner.html', oneliner=cuisine ,titletext=titletext, generator='cuisine' )
 
 
 @app.route('/cuisine_builder')

@@ -1,6 +1,7 @@
 
 from generators.Cuisine import Cuisine
 from generators.Motivation import Motivation
+from generators.Region import Region
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -19,11 +20,12 @@ class TestCuisine(unittest.TestCase):
         """  """
         
         self.redis=redis.from_url(url)
+        self.region=Region(self.redis)
 #        self.seed=set_seed( "3" )
 
     def test_random_cuisine(self):
         """  """
-        cuisine = Cuisine(self.redis )
+        cuisine = Cuisine(self.redis, {'region':self.region} )
         print cuisine.text
         self.assertNotEqual(cuisine.text,'')
 

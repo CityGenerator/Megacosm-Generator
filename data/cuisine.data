@@ -16,12 +16,30 @@ ZADD cuisine_rarity  90 {"name":"native",      "score":90   }
 ZADD cuisine_rarity  95 {"name":"exclusive",   "score":95   }
 ZADD cuisine_rarity 100 {"name":"unique",      "score":100  }
 
+# Travelers consider the dish spice_ and presentation to the eye_. Portions are usually size
+ZADD cuisine_spice   5 {"name":"bland",     "score":5    }
+ZADD cuisine_spice  30 {"name":"mild",      "score":30   }
+ZADD cuisine_spice  70 {"name":"peppery",   "score":70   }
+ZADD cuisine_spice  95 {"name":"fiery",     "score":95   }
+ZADD cuisine_spice 100 {"name":"spicy",     "score":100  }
 
+# The dish is ________ to the eye
+ZADD cuisine_presentation   5 {"name":"ugly",           "score":5    }
+ZADD cuisine_presentation  30 {"name":"unsightly",      "score":30   }
+ZADD cuisine_presentation  70 {"name":"plain",          "score":70   }
+ZADD cuisine_presentation  80 {"name":"pleasing",       "score":80   }
+ZADD cuisine_presentation  95 {"name":"interesting",    "score":95   }
+ZADD cuisine_presentation 100 {"name":"beautiful",      "score":100  }
 
+# and seen as ____
+ZADD cuisine_size   5 {"name":"tiny",           "score":5    }
+ZADD cuisine_size  30 {"name":"small",          "score":30   }
+ZADD cuisine_size  70 {"name":"sufficient",     "score":70   }
+ZADD cuisine_size  80 {"name":"filling",        "score":80   }
+ZADD cuisine_size  95 {"name":"large",          "score":95   }
+ZADD cuisine_size 100 {"name":"gigantic",       "score":100  }
 #Common folk consider it _____________
 # popularity
-
-# Spice level
 
 
 LPUSH cuisine_method baked 
@@ -152,7 +170,8 @@ SET   cuisine_sauce_chance 30
 SET   cuisine_served_chance 20 
 
 
-LPUSH cuisine_template {%if params.method%}{{params.method}} {%endif%}{%if params.flavor%}{{params.flavor}} {%endif%}{{params.dish}}{%if params.mealtype%} {{params.mealtype}}{%endif%}{%if params.sauce%} in {{params.sauce}} {{params.saucetype}}{%endif%}{%if params.served%}, served {{params.served}}{%endif%}
+LPUSH cuisine_template {%if params.method%}{{params.method}} {%endif%}{%if params.flavor%}{{params.flavor}} {%endif%}{{params.dish}}{%if params.mealtype%} {{params.mealtype}}{%endif%}{%if params.sauce%} in {{params.sauce}} {{params.saucetype}}{%endif%}{%if params.served%}, served {{params.served}}{%endif%} This dish is {{params.rarity['name']}} to the {{params.region.name['full']}}. Travelers consider the dish {{params.spice['name']}} and {{params.presentation['name']}} to the eye. Portions are usually {{params.size['name']}}.
+
 # The above tempalte is a mess, but here's what it makes....
 #{%if params.method%}{{params.method}} {%endif%}
 #{%if params.flavor%}{{params.flavor}} {%endif%}
