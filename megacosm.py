@@ -176,9 +176,21 @@ def GeneratePlanet():
 @app.route('/resource')
 def GenerateResource():
     """Generate a simple resource"""
+
     features=feature_filter('resource')
-    resource=Resource.Resource(server,features)
-    return render_template('oneliner.html', oneliner=resource,titletext='At your disposal...', generator='resource' )
+    titletext='At Your Disposal...'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        resources=[]
+        for item in xrange(int(request.args['count'])):
+            resources.append(Resource.Resource(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=resources, oneliner=resources[0] ,titletext=titletext, generator='resource' )
+    else:
+        resource=Resource.Resource(server,features)
+        return render_template('oneliner.html', oneliner=resource ,titletext=titletext, generator='resource' )
+
+
 
 @app.route('/resource_builder')
 def Resource_Builder():
@@ -193,8 +205,19 @@ def Resource_Builder():
 def GenerateRumor():
     """Generate a simple rumor"""
     features=feature_filter('rumor')
-    rumor=Rumor.Rumor(server,features)
-    return render_template('oneliner.html', oneliner=rumor,titletext='Did you hear?', generator='rumor' )
+    titletext='Did You Hear?'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        rumors=[]
+        for item in xrange(int(request.args['count'])):
+            rumors.append(Rumor.Rumor(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=rumors, oneliner=rumors[0] ,titletext=titletext, generator='rumor' )
+    else:
+        rumor=Rumor.Rumor(server,features)
+        return render_template('oneliner.html', oneliner=rumor ,titletext=titletext, generator='rumor' )
+
+
 
 @app.route('/rumor_builder')
 def Rumor_Builder():
@@ -208,9 +231,20 @@ def Rumor_Builder():
 @app.route('/misfire')
 def GenerateMisfire():
     """Generate a simple misfire"""
+
     features=feature_filter('misfire')
-    misfire=Misfire.Misfire(server,features)
-    return render_template('oneliner.html', oneliner=misfire,titletext='My spell misfired!', generator='misfire' )
+    titletext='My Spell Misfired!'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        misfires=[]
+        for item in xrange(int(request.args['count'])):
+            misfires.append(Misfire.Misfire(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=misfires, oneliner=misfires[0] ,titletext=titletext, generator='misfire' )
+    else:
+        misfire=Misfire.Misfire(server,features)
+        return render_template('oneliner.html', oneliner=misfire ,titletext=titletext, generator='misfire' )
+
 
 @app.route('/misfire_builder')
 def Misfire_Builder():
@@ -226,8 +260,19 @@ def Misfire_Builder():
 def GenerateCurrency():
     """Generate a simple currency"""
     features=feature_filter('currency')
-    currency=Currency.Currency(server,features)
-    return render_template('oneliner.html', oneliner=currency ,titletext='Spare Some Change? ', generator='currency' )
+    titletext='Space Some Change?'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        currencys=[]
+        for item in xrange(int(request.args['count'])):
+            currencys.append(Currency.Currency(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=currencys, oneliner=currencys[0] ,titletext=titletext, generator='currency' )
+    else:
+        currency=Currency.Currency(server,features)
+        return render_template('oneliner.html', oneliner=currency ,titletext=titletext, generator='currency' )
+
+
 
 @app.route('/currency_builder')
 def Currency_Builder():
@@ -241,9 +286,21 @@ def Currency_Builder():
 @app.route('/jobposting')
 def GenerateJobPosting():
     """Generate a simple jobposting"""
+
     features=feature_filter('jobposting')
-    jobposting=JobPosting.JobPosting(server,features)
-    return render_template('oneliner.html', oneliner=jobposting ,titletext='Help Wanted!', generator='jobposting' )
+    titletext='Help Wanted!'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        jobpostings=[]
+        for item in xrange(int(request.args['count'])):
+            jobpostings.append(JobPosting.JobPosting(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=jobpostings, oneliner=jobpostings[0] ,titletext=titletext, generator='jobposting' )
+    else:
+        jobposting=JobPosting.JobPosting(server,features)
+        return render_template('oneliner.html', oneliner=jobposting ,titletext=titletext, generator='jobposting' )
+
+
 
 @app.route('/jobposting_builder')
 def JobPosting_Builder():
@@ -259,9 +316,19 @@ def JobPosting_Builder():
 @app.route('/event')
 def GenerateEvent():
     """Generate a simple event"""
+
     features=feature_filter('event')
-    event=Event.Event(server,features)
-    return render_template('oneliner.html', oneliner=event ,titletext='Look over there...', generator='event' )
+    titletext='Look over there...'
+    features['npc']=NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        events=[]
+        for item in xrange(int(request.args['count'])):
+            events.append(Event.Event(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=events, oneliner=events[0] ,titletext=titletext, generator='event' )
+    else:
+        event=Event.Event(server,features)
+        return render_template('oneliner.html', oneliner=event ,titletext=titletext, generator='event' )
 
 @app.route('/event_builder')
 def Event_Builder():
@@ -278,16 +345,17 @@ def Event_Builder():
 def GenerateMotivation():
     """Generate a simple motivation"""
     features=feature_filter('motivation')
+    titletext='I\'m Motivated...'
     features['npc']=NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
         motivations=[]
         for item in xrange(int(request.args['count'])):
             motivations.append(Motivation.Motivation(server,features))
             features['seed']=set_seed( )
-        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext='I\'m Motivated...', generator='motivation' )
+        return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0] ,titletext=titletext, generator='motivation' )
     else:
         motivation=Motivation.Motivation(server,features)
-        return render_template('oneliner.html', oneliner=motivation ,titletext='I\'m Motivated...', generator='motivation' )
+        return render_template('oneliner.html', oneliner=motivation ,titletext=titletext, generator='motivation' )
 
 @app.route('/motivation_builder')
 def Motivation_Builder():
@@ -303,15 +371,16 @@ def Motivation_Builder():
 def GenerateGem():
     """Generate a simple gem"""
     features=feature_filter('gem')
+    titletext='OOOH, Shiny...'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
         gems=[]
         for item in xrange(int(request.args['count'])):
             gems.append(Gem.Gem(server,features))
             features['seed']=set_seed( )
-        return render_template('oneliner.html', oneliners=gems, oneliner=gems[0] ,titletext='OOOH, Shiny...', generator='gem' )
+        return render_template('oneliner.html', oneliners=gems, oneliner=gems[0] ,titletext=titletext, generator='gem' )
     else:
         gem=Gem.Gem(server,features)
-        return render_template('oneliner.html', oneliner=gem ,titletext='OOOH, Shiny...', generator='gem' )
+        return render_template('oneliner.html', oneliner=gem ,titletext=titletext, generator='gem' )
 
 @app.route('/gem_builder')
 def Gem_Builder():
@@ -327,15 +396,16 @@ def GenerateMundaneItem():
     """Generate a simple mundaneitem"""
 
     features=feature_filter('mundaneitem')
+    titletext='Look what I found!'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
         mundaneitems=[]
         for item in xrange(int(request.args['count'])):
             mundaneitems.append(MundaneItem.MundaneItem(server,features))
             features['seed']=set_seed( )
-        return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0] ,titletext='Look what I found!', generator='mundaneitem' )
+        return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0] ,titletext=titletext, generator='mundaneitem' )
     else:
         mundaneitem=MundaneItem.MundaneItem(server,features)
-        return render_template('oneliner.html', oneliner=mundaneitem ,titletext='Look what I found!', generator='mundaneitem' )
+        return render_template('oneliner.html', oneliner=mundaneitem ,titletext=titletext, generator='mundaneitem' )
 
 @app.route('/mundaneitem_builder')
 def MundaneItem_Builder():
@@ -351,8 +421,16 @@ def MundaneItem_Builder():
 def GenerateLegend():
     """Generate a simple legend"""
     features=feature_filter('legend')
-    legend=Legend.Legend(server,features)
-    return render_template('oneliner.html', oneliner=legend ,titletext='Let me tell you a story...', generator='legend' )
+    titletext='Let me tell you a story...'
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count'])>1 and int(request.args['count'])<=100:
+        legends=[]
+        for item in xrange(int(request.args['count'])):
+            legends.append(Legend.Legend(server,features))
+            features['seed']=set_seed( )
+        return render_template('oneliner.html', oneliners=legends, oneliner=legends[0] ,titletext=titletext, generator='legend' )
+    else:
+        legend=Legend.Legend(server,features)
+        return render_template('oneliner.html', oneliner=legend ,titletext=titletext, generator='legend' )
 
 @app.route('/legend_builder')
 def Legend_Builder():

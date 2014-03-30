@@ -53,12 +53,35 @@
 
                       </ul>
                 </li>
+                {% set onelinerlist= [ 
+                                        'Currency', 'Event', 'Gem', 'Job Posting', 
+                                        'Legend', 'Misfire', 'Motivation', 'Mundane Item', 
+                                        'Resource', 'Rumor'
+                                        ]%}
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">One-Liner Generators<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        {% for generator in onelinerlist%}
+                            <li ><a href="/{{generator|lower|replace(' ','')}}" >{{generator}}</a></li>
+                        {% endfor %}
+                        <li class="divider" ></li>
+                      </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">One-Liner Builders<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        {% for generator in onelinerlist%}
+                            <li ><a href="/{{generator|lower|replace(' ','')}}_builder">{{generator}} Builder</a></li>
+                        {% endfor %}
+                      </ul>
+                </li>
 
 
                 {% set classlist= [ 'NPC','Business', 'Bond', 'Magic Item', 'Cuisine', 
-                                    'Rumor', 'Sect', 'Legend','Deity','Star','Moon',
-                                    'Currency', 'Misfire', 'Wanted','Resource', 'Event', 
-                                    'Job Posting', 'Gem', 'Mundane Item', 'Weather', 'Govt','Motivation', 'Rogue Dungeon','Geomorph Dungeon' ]%}
+                                     'Sect', 'Deity','Star','Moon',
+                                     'Wanted','Resource', 'Event', 
+                                     'Weather', 'Govt','Rogue Dungeon','Geomorph Dungeon' ]%}
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Generator<b class="caret"></b></a>
@@ -77,6 +100,9 @@
                         {% endfor %}
                       </ul>
                 </li>
+
+
+
 
 
           </ul>
