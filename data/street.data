@@ -1,0 +1,162 @@
+# Willis is a[n] _______ settlement.
+
+# street name
+
+
+ZADD  street_age  10  { "name":"young",           "score":10    }
+ZADD  street_age  20  { "name":"youthful",        "score":20    }
+ZADD  street_age  30  { "name":"new",             "score":30    }
+ZADD  street_age  40  { "name":"established",     "score":40    }
+ZADD  street_age  60  { "name":"modern",          "score":60    }
+ZADD  street_age  70  { "name":"mature",          "score":70    }
+ZADD  street_age  80  { "name":"old",             "score":80    }
+ZADD  street_age  90  { "name":"elderly",         "score":90    }
+ZADD  street_age 100  { "name":"ancient",         "score":100   }
+
+#        <terrain>
+#            <option          max:'10' >flat
+#            <option min:'11' max:'20' >even
+#            <option min:'21' max:'30' >rolling
+#            <option min:'31' max:'40' >hilly
+#            <option min:'41' max:'60' >uneven
+#            <option min:'61' max:'70' >rough
+#            <option min:'71' max:'80' >rugged
+#            <option min:'81' max:'90' >broken
+#            <option min:'91'          >jagged
+#
+#        <pollution>
+#            <option          max:'10' >pristine
+#            <option min:'11' max:'20' >sterile
+#            <option min:'21' max:'30' >clean
+#            <option min:'31' max:'40' >tidy
+#            <option min:'41' max:'60' >disheveled
+#            <option min:'61' max:'70' >grungy
+#            <option min:'71' max:'80' >poluted
+#            <option min:'81' max:'90' >filthy
+#            <option min:'91'          >squalid
+#
+#        <moral>
+#            <option          max:"4"  >untrustworthy
+#            <option min:"5"  max:"8"  >mean
+#            <option min:"9"  max:"12" >venomous
+#            <option min:"13" max:"16" >corrupt
+#            <option min:"17" max:"20" >repungent
+#            <option min:"21" max:"24" >unpleasant
+#            <option min:"25" max:"28" >opportunistic
+#            <option min:"29" max:"32" >villianous
+#            <option min:"33" max:"36" >nefarious
+#
+#            <option min:"37" max:"40" >cold
+#            <option min:"41" max:"45" >unconcerned
+#            <option min:"46" max:"50" >undecided
+#            <option min:"51" max:"55" >uncomitted
+#            <option min:"56" max:"60" >indifferent
+#            <option min:"61" max:"65" >indifferent
+#
+#            <option min:"66" max:"70" >well meaning
+#            <option min:"71" max:"75" >trustworty
+#            <option min:"76" max:"80" >nice
+#            <option min:"81" max:"85" >ethical
+#            <option min:"86" max:"90" >honest
+#            <option min:"91" max:"95" >praise-worthy
+#            <option min:"96"          >virtuous
+#
+#
+#
+#        <order>
+#            <option          max:"5"  >unreliable
+#            <option min:"6"  max:"10" >irresponsible
+#            <option min:"11" max:"15" >questionable
+#            <option min:"16" max:"20" >unpredictable
+#            <option min:"21" max:"25" >deranged
+#            <option min:"26" max:"30" >incoherent
+#            <option min:"31" max:"35" >vague
+#
+#            <option min:"36" max:"40" >bystanding
+#            <option min:"41" max:"45" >detached
+#            <option min:"46" max:"50" >non-participating
+#            <option min:"51" max:"55" >non-conformist
+#            <option min:"56" max:"60" >unflappable
+#
+#            <option min:"61" max:"65" >reliable
+#            <option min:"66" max:"70" >dependable
+#            <option min:"71" max:"75" >sure
+#            <option min:"76" max:"80" >legitimized
+#            <option min:"81" max:"85" >organized
+#            <option min:"86" max:"90" >dutiful
+#            <option min:"91"          >honorable
+#
+#
+#        <tolerance>
+#            <option          max:"20" >despise
+#            <option min:"21" max:"30" >hate
+#            <option min:"31" max:"40" >are critical of
+#            <option min:"41" max:"50" >ignore
+#            <option min:"51" max:"60" >are neutral towards
+#            <option min:"61" max:"70" >are accepting of
+#            <option min:"71" max:"80" >accept
+#            <option min:"81"          >love
+#
+#        <economy>
+#            <option          max:"6"  >crumbling
+#            <option min:"7"  max:"12" >failing
+#            <option min:"13" max:"18"  >uncertain
+#            <option min:"19" max:"24" >shaky
+#            <option min:"25" max:"30" >weak
+#
+#            <option min:"31" max:"36" >calm
+#            <option min:"37" max:"42" >stable
+#            <option min:"43" max:"48" >insulated
+#            <option min:"49" max:"54" >unwavering
+#            <option min:"55" max:"60" >steady
+#            <option min:"61" max:"66" >steadfast
+#
+#            <option min:"67" max:"72" >good
+#            <option min:"73" max:"78" >healthy
+#            <option min:"79" max:"84" >flourishing
+#            <option min:"85" max:"90" >growing
+#            <option min:"91" max:"96" >vibrant
+#            <option min:"97"          >lively
+#
+#        <crime>
+#            <option           max:"10">rampant
+#            <option min:"11"  max:"30">common
+#            <option min:"31"  max:"50">occasional
+#            <option min:"51"  max:"70">unusual
+#            <option min:"71"  max:"90">rare
+#            <option min:"91"          >unheard of
+#
+#    <streets>
+#        <title>rough
+#        <title>broken
+#        <title>pristine
+#        <title>irregular
+#        <title>smooth
+#        <title>bumpy
+#        <title>crude
+#        <title>even
+#        <title>well-maintained
+#        <title>filthy
+#        <title>muddy
+#        <root>dirt roads
+#        <root>dirt tracks
+#        <root>cobblestone streets
+#        <root>cobblestone paths
+#        <trailer>in a grid pattern
+#        <trailer>in a ray pattern
+#        <trailer>in a contour-forming pattern
+#        <trailer>in an irregular pattern
+#        <trailer>in a random mesh pattern
+#        <trailer>in an organic pattern
+#        <trailer>in a fragmented parallel pattern
+#        <trailer>in a looped pattern
+#        <trailer>in a warped parallel pattern
+#        <trailer>in a linear pattern
+#        <trailer>in a wheel and spoke pattern
+#
+#    <popdensity>
+#        <option          max:"20" type:"sparsely"   />
+#        <option min:"21" max:"40" type:"lightly"    />
+#        <option min:"41" max:"60" type:"nominally"  />
+#        <option min:"61" max:"80" type:"moderately" />
+#        <option min:"81"          type:"densely"    />
