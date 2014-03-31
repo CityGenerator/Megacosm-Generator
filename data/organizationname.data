@@ -1,0 +1,5 @@
+
+LPUSH organization_template "{{params.leader.name['full']}}'s {{params.kind}}"
+
+
+

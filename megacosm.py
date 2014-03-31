@@ -30,6 +30,7 @@ from generators import MundaneItem
 from generators import Motivation
 from generators import RogueDungeon
 from generators import GeomorphDungeon
+from generators import Organization
 from util.Seeds import *
 from util import Filters
 import random
@@ -466,6 +467,24 @@ def Legend_Builder():
     paramlist,paramstring,paramset=builder_form_data(classname)
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+    
+#########################################################################
+
+@app.route('/organization')
+def GenerateOrganization():
+    """Generate a simple organization"""
+    features=feature_filter('organization')
+    organization=Organization.Organization(server,features)
+    return render_template('organization.html', organization=organization )
+
+
+@app.route('/organization_builder')
+def Organization_Builder():
+    """Generate the basic data about a organization"""
+
+    paramlist,paramstring,paramset=builder_form_data('organization')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='organization') 
+    
     
 #########################################################################
 
