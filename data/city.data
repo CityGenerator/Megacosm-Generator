@@ -1,0 +1,228 @@
+# city info!
+
+ZADD city_size 10   { "name":"settlement",      minpop:"25",      maxpop:"100",    min_density:"10",   max_density:"400"    }
+ZADD city_size 30   { "name":"hamlet",          minpop:"101",     maxpop:"500",    min_density:"20",   max_density:"2000"   }
+ZADD city_size 35   { "name":"small village",   minpop:"501",     maxpop:"600",    min_density:"30",   max_density:"2400"   }
+ZADD city_size 40   { "name":"village",         minpop:"601",     maxpop:"750",    min_density:"60",   max_density:"3000"   }
+ZADD city_size 45   { "name":"large village",   minpop:"751",     maxpop:"1000",   min_density:"75",   max_density:"4000"   }
+ZADD city_size 60   { "name":"small town",      minpop:"1001",    maxpop:"1500",   min_density:"90",   max_density:"6000"   }
+ZADD city_size 70   { "name":"town",            minpop:"1501",    maxpop:"3500",   min_density:"100",  max_density:"9000"   }
+ZADD city_size 80   { "name":"large town",      minpop:"3501",    maxpop:"5000",   min_density:"110",  max_density:"10000"  }
+ZADD city_size 85   { "name":"small city",      minpop:"5001",    maxpop:"8000",   min_density:"150",  max_density:"15000"  }
+ZADD city_size 90   { "name":"city",            minpop:"8001",    maxpop:"15000",  min_density:"180",  max_density:"22000"  }
+ZADD city_size 94   { "name":"large city",      minpop:"15001",   maxpop:"22000",  min_density:"200",  max_density:"28000"  }
+ZADD city_size 99   { "name":"metropolis",      minpop:"22001",   maxpop:"30000",  min_density:"220",  max_density:"30000"  }
+ZADD city_size 100  { "name":"capitol",         minpop:"30001",   maxpop:"80000",  min_density:"240",  max_density:"40000"  }
+
+ZADD city_density 20 { "name": "sparsely",   "score":20   }
+ZADD city_density 40 { "name": "lightly",    "score":40   }
+ZADD city_density 60 { "name": "nominally",  "score":60   }
+ZADD city_density 80 { "name": "moderately", "score":80   }
+ZADD city_density 81 { "name": "densely",    "score":81   }
+
+
+# Citizens of Willis are mentally _____  and pyhsically feeble.
+ZADD  city_happiness  10  { "name":"in despair",  "score":10    }
+ZADD  city_happiness  20  { "name":"miserable",   "score":20    }
+ZADD  city_happiness  30  { "name":"disappointed","score":30    }
+ZADD  city_happiness  40  { "name":"bored",       "score":40    }
+ZADD  city_happiness  60  { "name":"content",     "score":60    }
+ZADD  city_happiness  70  { "name":"happy",       "score":70    }
+ZADD  city_happiness  80  { "name":"joyous",      "score":80    }
+ZADD  city_happiness  90  { "name":"overjoyed",   "score":90    }
+ZADD  city_happiness 100  { "name":"estatic",     "score":100   }
+
+# citiziens of willis are mentall bored and physically __________
+ZADD  city_health  10  { "name":"diseased",       "score":10    }
+ZADD  city_health  20  { "name":"sickly",         "score":20    }
+ZADD  city_health  30  { "name":"ailing",         "score":30    }
+ZADD  city_health  40  { "name":"feeble",         "score":40    }
+ZADD  city_health  60  { "name":"able-bodied",    "score":60    }
+ZADD  city_health  70  { "name":"healthy",        "score":70    }
+ZADD  city_health  80  { "name":"hardy",          "score":80    }
+ZADD  city_health  90  { "name":"sturdy",         "score":90    }
+ZADD  city_health 100  { "name":"vigorous",       "score":100   }
+
+# Willis is a[n] _______ settlement.
+ZADD  city_age  10  { "name":"young",             "score":10    }
+ZADD  city_age  20  { "name":"youthful",          "score":20    }
+ZADD  city_age  30  { "name":"new",               "score":30    }
+ZADD  city_age  40  { "name":"established",       "score":40    }
+ZADD  city_age  60  { "name":"modern",            "score":60    }
+ZADD  city_age  70  { "name":"mature",            "score":70    }
+ZADD  city_age  80  { "name":"old",               "score":80    }
+ZADD  city_age  90  { "name":"elderly",           "score":90    }
+ZADD  city_age 100  { "name":"ancient",           "score":100    }
+
+ZADD city_terrain  10 { "name": "flat",           "score":10   }
+ZADD city_terrain  20 { "name": "even",           "score":20   }
+ZADD city_terrain  30 { "name": "rolling",        "score":30   }
+ZADD city_terrain  40 { "name": "hilly",          "score":40   }
+ZADD city_terrain  60 { "name": "uneven",         "score":60   }
+ZADD city_terrain  70 { "name": "rough",          "score":70   }
+ZADD city_terrain  80 { "name": "rugged",         "score":80   }
+ZADD city_terrain  90 { "name": "tiered",         "score":90   }
+ZADD city_terrain 100 { "name": "jagged",         "score":100   }
+
+ZADD city_pollution  10 { "name": "pristine",     "score":10   }
+ZADD city_pollution  20 { "name": "sterile",      "score":20   }
+ZADD city_pollution  30 { "name": "clean",        "score":30   }
+ZADD city_pollution  40 { "name": "tidy",         "score":40   }
+ZADD city_pollution  60 { "name": "disheveled",   "score":60   }
+ZADD city_pollution  70 { "name": "grungy",       "score":70   }
+ZADD city_pollution  80 { "name": "poluted",      "score":80   }
+ZADD city_pollution  90 { "name": "filthy",       "score":90   }
+ZADD city_pollution 100 { "name": "squalid",      "score":100  }
+
+ZADD city_moral  4 { "name": "untrustworthy",     "score":4   }
+ZADD city_moral  8 { "name": "mean",              "score":8   }
+ZADD city_moral  12 { "name": "venomous",         "score":12   }
+ZADD city_moral  16 { "name": "corrupt",          "score":16   }
+ZADD city_moral  20 { "name": "repungent",        "score":20   }
+ZADD city_moral  24 { "name": "unpleasant",       "score":24   }
+ZADD city_moral  28 { "name": "opportunistic",    "score":28   }
+ZADD city_moral  32 { "name": "villianous",       "score":32   }
+ZADD city_moral  36 { "name": "nefarious",        "score":36   }
+ZADD city_moral  40 { "name": "cold",             "score":40   }
+ZADD city_moral  45 { "name": "unconcerned",      "score":45   }
+ZADD city_moral  50 { "name": "undecided",        "score":50   }
+ZADD city_moral  55 { "name": "uncomitted",       "score":55   }
+ZADD city_moral  60 { "name": "indifferent",      "score":60   }
+ZADD city_moral  65 { "name": "indifferent",      "score":65   }
+ZADD city_moral  70 { "name": "well meaning",     "score":70   }
+ZADD city_moral  75 { "name": "trustworty",       "score":75   }
+ZADD city_moral  80 { "name": "nice",             "score":80   }
+ZADD city_moral  85 { "name": "ethical",          "score":85   }
+ZADD city_moral  90 { "name": "honest",           "score":90   }
+ZADD city_moral  95 { "name": "praise-worthy",    "score":95   }
+ZADD city_moral 100 { "name": "virtuous",         "score":100   }
+
+
+
+ZADD city_order 5 { "name": "unreliable",         "score":5   }
+ZADD city_order 10 { "name": "irresponsible",     "score":10   }
+ZADD city_order 15 { "name": "questionable",      "score":15   }
+ZADD city_order 20 { "name": "unpredictable",     "score":20   }
+ZADD city_order 25 { "name": "deranged",          "score":25   }
+ZADD city_order 30 { "name": "incoherent",        "score":30   }
+ZADD city_order 35 { "name": "vague",             "score":35   }
+ZADD city_order 40 { "name": "bystanding",        "score":40   }
+ZADD city_order 45 { "name": "detached",          "score":45   }
+ZADD city_order 50 { "name": "non-participating", "score":50   }
+ZADD city_order 55 { "name": "non-conformist",    "score":55   }
+ZADD city_order 60 { "name": "unflappable",       "score":60   }
+ZADD city_order 65 { "name": "reliable",          "score":65   }
+ZADD city_order 70 { "name": "dependable",        "score":70   }
+ZADD city_order 75 { "name": "sure",              "score":75   }
+ZADD city_order 80 { "name": "legitimized",       "score":80   }
+ZADD city_order 85 { "name": "organized",         "score":85   }
+ZADD city_order 90 { "name": "dutiful",           "score":90   }
+ZADD city_order 100 { "name": "honorable",         "score":100   }
+
+
+ZADD city_tolerance 20 { "name": "despise",                     "score":20   }
+ZADD city_tolerance 30 { "name": "hate",                        "score":30   }
+ZADD city_tolerance 40 { "name": "are critical of",             "score":40   }
+ZADD city_tolerance 50 { "name": "ignore",                      "score":50   }
+ZADD city_tolerance 60 { "name": "are neutral towards",         "score":60   }
+ZADD city_tolerance 70 { "name": "are accepting of",            "score":70   }
+ZADD city_tolerance 80 { "name": "accept",                      "score":80   }
+ZADD city_tolerance 100 { "name": "love",                        "score":100   }
+
+ZADD city_economy 6 { "name": "crumbling",                      "score":6   }
+ZADD city_economy 12 { "name": "failing",                       "score":12   }
+ZADD city_economy 18 { "name": "uncertain",                     "score":18   }
+ZADD city_economy 24 { "name": "shaky",                         "score":24   }
+ZADD city_economy 30 { "name": "weak",                          "score":30   }
+ZADD city_economy 36 { "name": "calm",                          "score":36   }
+ZADD city_economy 42 { "name": "stable",                        "score":42   }
+ZADD city_economy 48 { "name": "insulated",                     "score":48   }
+ZADD city_economy 54 { "name": "unwavering",                    "score":54   }
+ZADD city_economy 60 { "name": "steady",                        "score":60   }
+ZADD city_economy 66 { "name": "steadfast",                     "score":66   }
+ZADD city_economy 72 { "name": "good",                          "score":72   }
+ZADD city_economy 78 { "name": "healthy",                       "score":78   }
+ZADD city_economy 84 { "name": "flourishing",                   "score":84   }
+ZADD city_economy 90 { "name": "growing",                       "score":90   }
+ZADD city_economy 96 { "name": "vibrant",                       "score":96   }
+ZADD city_economy 100 { "name": "lively",                        "score":100   }
+
+ZADD city_military 20 { "name": "negative",                     "score":20   }
+ZADD city_military 30 { "name": "disinterested",                "score":30   }
+ZADD city_military 50 { "name": "neutral",                      "score":50   }
+ZADD city_military 70 { "name": "laid back",                    "score":70   }
+ZADD city_military 80 { "name": "positive",                     "score":80   }
+ZADD city_military 100 { "name": "reverent",                     "score":100   }
+
+ZADD city_magic 10 { "name": "unwelcome",                       "score":10   }
+ZADD city_magic 20 { "name": "rarely used",                     "score":20   }
+ZADD city_magic 30 { "name": "rare",                            "score":30   }
+ZADD city_magic 40 { "name": "rare but accepted",               "score":40   }
+ZADD city_magic 50 { "name": "instutionalized",                 "score":50   }
+ZADD city_magic 60 { "name": "allowed",                         "score":60   }
+ZADD city_magic 70 { "name": "accepted",                        "score":70   }
+ZADD city_magic 80 { "name": "plentiful",                       "score":80   }
+ZADD city_magic 90 { "name": "flourishing",                     "score":90   }
+ZADD city_magic 100 { "name": "growing",                         "score":100   }
+
+ZADD city_education 8 { "name": "mocked",                       "score":8   }
+ZADD city_education 16 { "name": "poor",                        "score":16   }
+ZADD city_education 24 { "name": "low",                         "score":24   }
+ZADD city_education 32 { "name": "rare",                        "score":32   }
+ZADD city_education 40 { "name": "middling",                    "score":40   }
+ZADD city_education 48 { "name": "mediocre",                    "score":48   }
+ZADD city_education 56 { "name": "allowed, but not enforced",   "score":56   }
+ZADD city_education 64 { "name": "instutionalized",             "score":64   }
+ZADD city_education 72 { "name": "enforced",                    "score":72   }
+ZADD city_education 80 { "name": "high",                        "score":80   }
+ZADD city_education 88 { "name": "expected",                    "score":88   }
+ZADD city_education 96 { "name": "growing",                     "score":96   }
+ZADD city_education 100 { "name": "wonderful",                   "score":100   }
+
+
+ZADD city_authority 20 { "name": "ignores",                     "score":20   }
+ZADD city_authority 30 { "name": "is neutral towards",          "score":30   }
+ZADD city_authority 50 { "name": "is chaotic",                  "score":50   }
+ZADD city_authority 70 { "name": "is a mess",                   "score":70   }
+ZADD city_authority 80 { "name": "is very strict",              "score":80   }
+ZADD city_authority 100 { "name": "is very authoritarian",       "score":100   }
+
+ZADD city_crime 10 { "name": "rampant",                         "score":10   }
+ZADD city_crime 30 { "name": "common",                          "score":30   }
+ZADD city_crime 50 { "name": "occasional",                      "score":50   }
+ZADD city_crime 70 { "name": "unusual",                         "score":70   }
+ZADD city_crime 90 { "name": "rare",                            "score":90   }
+ZADD city_crime 100 { "name": "unheard of",                      "score":100   }
+
+
+
+
+    <feature>
+        <cityshape><!--The densly populated town proper is a circular 0.58 hectare region.-->
+            <option>circular
+            <option>oval
+            <option>square
+            <option>rectangular
+            <option>hexagonal
+            <option>octagonal
+
+
+    <popdensity>
+
+
+    <arable>
+        <option type:"poor"     min:'1' max:'33'>desolate
+        <option type:"neutral"  min:'34' max:'66'>modest
+        <option type:"rich"     min:'67' >fertile
+
+
+    <dominance chance:'30'>
+        <option          max:"20" >snobbish
+        <option min:"21" max:"40" >mean
+        <option min:"41" max:"60" >cruel
+        <option min:"61" max:"80" >very oppressive
+        <option min:"81"          >brutally oppressive
+
+
+
+
