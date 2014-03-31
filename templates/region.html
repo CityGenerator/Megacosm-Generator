@@ -10,7 +10,13 @@
 
     <h2>Summary</h2>
 
-{{region.name['full'] }} is {{region.size['name'] |article }} region.
+{{region.name['full'] }} is {{region.size['name'] |article }} region. The political influence of {{region.name['full']}} in the region is {{region.influence['name']}}.
+    Religion in this region {{region.theology['name']}}.
+
+    <h2>National Relationship</h2>
+    People in the region think the national government is {{region.corruption['name']}} and many citizens {{region.countryapproval['name']}} it.
+    They also describe the national government as {{region.efficiency['name']}} and feels the rest of the regions {{region.unity['name']}}.
+
 
 
 {% if region.cities  %}
@@ -24,5 +30,10 @@
     {%endfor%}
     </ul>
 
+    <pre>
+    {%for field in region.__dict__%}
+        {{field}} {{region[field]}}
+    {%endfor%}
+    </pre>
 {%endif%}
 {% endblock %}
