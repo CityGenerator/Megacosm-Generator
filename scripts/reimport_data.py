@@ -29,7 +29,7 @@ def parse_file(pipe, filename):
                     if command == 'SET':
                         key,value=args.split(None,1)
                         pipe.set(key,value)
-                        print "setting",key,"to",value
+                        #print "setting",key,"to",value
                     elif command == "LPUSH":
                         key,value=args.split(' ',1)
                         pipe.lpush(key,value)
@@ -42,7 +42,7 @@ def parse_file(pipe, filename):
                     elif command == "DEL":
                         pipe.delete(args)
                     else:
-                        print "I have no idea what ",line,"is."
+                        #print "I have no idea what ",line,"is."
                         raise Exception("line #%s in %s: %s is an unsupported command." % (linenumber, filename, command) )
                 except ValueError:
                     print "There was a problem reading",filename,"near line",linenumber,""
@@ -69,11 +69,13 @@ for filename in glob.glob("data/*/*.data") :
 
 IMAGECOUNT=0
 def create_image_record(pipe, image):
-    m = re.search('geomorphs/([0-5])/([^/]+).png', image)
+    m = re.search('geomorphs/(.*)/(.*)/([0-5])/.*\.png', image)
     global IMAGECOUNT
     if m:
-        imagetype = m.group(1)
-        pipe.lpush('geomorph_type_'+imagetype,'/'+image)
+        author = m.group(1)
+        tileset = m.group(2)
+        imagetype = m.group(3)
+        pipe.lpush('geomorph_type_'+imagetype,' { "path":"/%s", "author":"%s", "tileset":"%s"   }' % (image, author,tileset )  )
         IMAGECOUNT+=1
     else:
         print "WARNING,",image,"is not in the right format."
@@ -83,7 +85,7 @@ def create_image_record(pipe, image):
 
 
 
-for image in glob.glob("static/images/geomorphs/*/*.png") :
+for image in glob.glob("static/images/geomorphs/*/*/*/*.png") :
     create_image_record(pipe, image);
 
 

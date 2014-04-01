@@ -3,7 +3,7 @@
 import random
 from generators.Generator import Generator
 from util import Seeds
-
+import json
 class GeomorphDungeon(Generator):
 
 
@@ -74,8 +74,10 @@ class GeomorphDungeon(Generator):
                 cell.imagetype=int(self.CELL_TYPES[cell.tiletype]['type'],2)
 
                 #Using the proper cell type, select an image from redis
-                cell.image= self.rand_value('geomorph_type_'+str(cell.imagetype))
-
+                tiledata= json.loads( self.rand_value('geomorph_type_'+str(cell.imagetype)) )
+                cell.image=str(tiledata['path'])
+                cell.author=str(tiledata['author'])
+                cell.tileset=str(tiledata['tileset'])
                 # Make sure to capture the rotation needed
                 cell.imagerotation= self.CELL_TYPES[cell.tiletype]['rotation']
 
