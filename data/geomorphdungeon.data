@@ -1,23 +1,18 @@
 #
 
 ZADD geomorphdungeon_gridwidth   5 {"name":"1",     "tiles":1,    "score": 25   }
-ZADD geomorphdungeon_gridwidth  25 {"name":"2",     "tiles":2,    "score": 25   }
-ZADD geomorphdungeon_gridwidth  30 {"name":"3",     "tiles":3,    "score": 30   }
-ZADD geomorphdungeon_gridwidth  40 {"name":"4",     "tiles":4,    "score": 40   }
-ZADD geomorphdungeon_gridwidth  50 {"name":"5",     "tiles":5,    "score": 50   }
-ZADD geomorphdungeon_gridwidth  60 {"name":"6",     "tiles":6,    "score": 60   }
-ZADD geomorphdungeon_gridwidth  70 {"name":"7",     "tiles":7,    "score": 70   }
-ZADD geomorphdungeon_gridwidth  80 {"name":"8",     "tiles":8,    "score": 80  }
-ZADD geomorphdungeon_gridwidth  90 {"name":"9",     "tiles":9,    "score": 90   }
-ZADD geomorphdungeon_gridwidth 100 {"name":"10",    "tiles":10,   "score": 100  }
+ZADD geomorphdungeon_gridwidth  30 {"name":"2",     "tiles":2,    "score": 30   }
+ZADD geomorphdungeon_gridwidth  50 {"name":"3",     "tiles":3,    "score": 50   }
+ZADD geomorphdungeon_gridwidth  70 {"name":"4",     "tiles":4,    "score": 70   }
+ZADD geomorphdungeon_gridwidth  90 {"name":"5",     "tiles":5,    "score": 90   }
+ZADD geomorphdungeon_gridwidth 100 {"name":"6",     "tiles":6,   "score": 100  }
 
 
 
 ZADD geomorphdungeon_gridheight   5 {"name":"1",    "tiles":1,    "score": 25   }
 ZADD geomorphdungeon_gridheight  35 {"name":"2",    "tiles":2,    "score": 35   }
-ZADD geomorphdungeon_gridheight  80 {"name":"3",    "tiles":3,    "score": 80   }
-ZADD geomorphdungeon_gridheight  90 {"name":"4",    "tiles":4,    "score": 90   }
-ZADD geomorphdungeon_gridheight 100 {"name":"5",    "tiles":5,    "score": 100  }
+ZADD geomorphdungeon_gridheight  90 {"name":"3",    "tiles":3,    "score": 90   }
+ZADD geomorphdungeon_gridheight 100 {"name":"4",    "tiles":4,    "score": 100  }
 
 # solid chance means 1 in ____ chance that a side is solid. lower the solidchance nubmer, 
 # higher the chance of a solid, the more segmentation
