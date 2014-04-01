@@ -59,14 +59,31 @@ var geomorphTileSize = 200;
 
 var TO_RADIANS = Math.PI / 180;
 
-function create_geomorphdungeon(jsonblock,canvas) {
+function create_geomorphdungeon(jsonblock,canvas,canvasbg, bgimage) {
 
     canvas.width = geomorphTileSize * jsonblock[0].length;
     canvas.height = geomorphTileSize * jsonblock.length;
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#A88442";
-    ctx.fillRect(0, 0, jsonblock[0].length * geomorphTileSize, jsonblock.length * geomorphTileSize);
-    
+//    ctx.fillStyle = "#A88442";
+//    ctx.fillRect(0, 0, jsonblock[0].length * geomorphTileSize, jsonblock.length * geomorphTileSize);
+   
+
+
+    var ctxbg = canvasbg.getContext("2d");
+    canvasbg.width = geomorphTileSize * jsonblock[0].length;
+    canvasbg.height = geomorphTileSize * jsonblock.length;
+    var img = new Image();
+    img.src = "/static/images/backgrounds/"+bgimage+".png";
+    img.onload = function(){
+        // create pattern
+        var ptrn = ctxbg.createPattern(img, 'repeat'); // Create a pattern with this image, and set it to "repeat".
+        ctxbg.fillStyle = ptrn;
+        ctxbg.fillRect(0, 0, canvas.width, canvas.height); // ctxbg.fillRect(x, y, width, height);
+    }
+
+
+
+ 
     for (var y = 0; y < jsonblock.length; y++) {
         for (var x = 0; x < jsonblock[y].length; x++) {
             var geomorphx=x*geomorphTileSize;
