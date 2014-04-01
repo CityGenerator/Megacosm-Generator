@@ -68,7 +68,7 @@ for filename in glob.glob("data/*/*.data") :
 
 
 IMAGECOUNT=0
-def create_image_record(pipe, image):
+def create_geomorphimage_record(pipe, image):
     m = re.search('geomorphs/(.*)/(.*)/([0-5])/.*\.png', image)
     global IMAGECOUNT
     if m:
@@ -81,14 +81,26 @@ def create_image_record(pipe, image):
         print "WARNING,",image,"is not in the right format."
 #static/images/geomorphs/1/basic2.png
 
-
-
-
-
 for image in glob.glob("static/images/geomorphs/*/*/*/*.png") :
-    create_image_record(pipe, image);
+    create_geomorphimage_record(pipe, image);
 
 
+
+
+
+
+def create_dungeonbackground_record(pipe, image):
+    m = re.search('backgrounds/(.*)\.png', image)
+    global IMAGECOUNT
+    if m:
+        tilename = m.group(1)
+        pipe.lpush('geomorphdungeon_background' ,tilename  )
+        IMAGECOUNT+=1
+    else:
+        print "WARNING,",image,"is not in the right format."
+
+for image in glob.glob("static/images/backgrounds/*.png") :
+    create_dungeonbackground_record(pipe, image);
 
 
 
