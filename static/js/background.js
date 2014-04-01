@@ -14,9 +14,10 @@ function generate_scene() {
     document.scene = new THREE.Scene();
     // A Camera
     document.camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.1, 1000);
-    //document.camera.position.y = 4;
+    //document.camera.position.y = 6
+    document.scene.add(new THREE.AmbientLight(0x222222));
     document.camera.position.z = -3;
-    document.camera.position.x = 6;
+    document.camera.position.x = 3;
     // And a renderer
     document.renderer = new THREE.WebGLRenderer( {antialias:true} );
 

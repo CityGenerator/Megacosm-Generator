@@ -16,7 +16,7 @@ function generate_planet(seed, size){
     document.clouds.rotation.y = 0;
     document.clouds.castShadow=true;
     document.clouds.receiveShadow=true;
-    document.scene.add(document.clouds)
+    //document.scene.add(document.clouds)
 }
 
 function createPlanet(radius, segments, seed) {
@@ -25,7 +25,7 @@ function createPlanet(radius, segments, seed) {
         new THREE.MeshPhongMaterial({
             map:         THREE.ImageUtils.loadTexture('/worldmap.png?seed='+seed),
             bumpMap:     THREE.ImageUtils.loadTexture('/worldbumpmap.png?seed='+seed),
-            bumpScale:   0.05,
+            bumpScale:   0.02,
             specularMap: THREE.ImageUtils.loadTexture('/worldspecularmap.png?seed='+seed),
             specular:    new THREE.Color(0x222222)
         })
