@@ -55,7 +55,7 @@ function label_room(roomid, coords, canvas) {
 
 
 
-var geomorphTileSize = 100;
+var geomorphTileSize = 200;
 
 var TO_RADIANS = Math.PI / 180;
 
