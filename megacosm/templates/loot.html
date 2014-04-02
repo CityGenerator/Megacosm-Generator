@@ -1,0 +1,34 @@
+
+
+{% extends "base.html" %}
+{% block title %}You Found Loot! {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>You Found Loot! <a href="/{{tempobj.__class__.__name__|lower}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+{%if tempobj.gems%}
+    <h2>Gems</h2>
+    <ul>
+        {%for item in tempobj.gems %}
+            <li><a href="/gem?seed={{item.seed}}">{{item.kind_description['name']|article}} ({{item.seed}})</a></li>
+        {%endfor%}
+    </ul>
+{%endif%}
+{%if tempobj.currencies%}
+    <h2>Currencies</h2>
+    <ul>
+        {%for item in tempobj.currencies %}
+            <li><a href="/currency?seed={{item.seed}}">{{item.name['full']|article}} ({{item.seed}})</a></li>
+        {%endfor%}
+    </ul>
+{%endif%}
+<pre>
+{%for field in tempobj.__dict__%}
+    {{field}}  {{tempobj[field]}}
+ {%endfor%}
+</pre>
+
+{% endblock %}
