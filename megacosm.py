@@ -654,6 +654,25 @@ def City_Builder():
     
 #########################################################################
 
+@app.route('/city')
+def GenerateCity():
+    """Generate a simple city"""
+    features=feature_filter('city')
+    tempobj=City.City(server,features)
+    return render_template('city.html', tempobj=tempobj )
+
+
+@app.route('/city_builder')
+def City_Builder():
+    """Generate the basic data about a city"""
+    classname='city'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname) 
+
+
+    
+#########################################################################
+
 @app.route('/weather')
 def generateweather():
     """Generate a weather"""
