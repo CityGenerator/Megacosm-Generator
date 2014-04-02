@@ -26,6 +26,7 @@ from generators import Resource
 from generators import Event
 from generators import JobPosting
 from generators import Gem
+from generators import Loot
 from generators import MundaneItem
 from generators import Motivation
 from generators import RogueDungeon
@@ -670,6 +671,25 @@ def GenerateRogueDungeon():
 def RogueDungeon_Builder():
     """Generate the basic data about a dungeon"""
     classname='roguedungeon'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+
+
+#########################################################################
+
+
+@app.route('/loot')
+def GenerateLoot():
+    """Generate a simple loot"""
+    features=feature_filter('loot')
+    tempobj=Loot.Loot(server,features)
+    return render_template('loot.html', tempobj=tempobj )
+
+
+@app.route('/loot_builder')
+def Loot_Builder():
+    """Generate the basic data about loot"""
+    classname='loot'
     paramlist,paramstring,paramset=builder_form_data(classname)
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 

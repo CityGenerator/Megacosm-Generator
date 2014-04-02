@@ -44,51 +44,54 @@ class Generator(object):
         """ Given a namekey, add those features to this object."""
         # find all keys matching our namekey
         for key in self.redis.keys(namekey+'_*'):
+            self.generate_feature(namekey, key)
 
-            #check to see if your key has a related chance key
-            if  self.redis.exists(key+"_chance"):
-                # make sure the value is not already set, then grab it.
-                if not hasattr(self,key+"_chance"):
-                    setattr(self,key+"_chance", int(self.redis.get(key+"_chance")) )
 
-                # check to see if you have a preset roll; if not, roll 1-100                
-                if not hasattr(self, key+"_roll"):
-                      setattr( self, key+"_roll", random.randint(1,100) )
+    def generate_feature(self,namekey,key):
+        #check to see if your key has a related chance key
+        if  self.redis.exists(key+"_chance"):
+            # make sure the value is not already set, then grab it.
+            if not hasattr(self,key+"_chance"):
+                setattr(self,key+"_chance", int(self.redis.get(key+"_chance")) )
 
-                # if the roll is greater than the chance, you have failed, and don't get to use this stat.
-                # Go to the next entry in the for loop.
-                if int(getattr(self,key+"_roll")) > getattr(self,key+"_chance"):
-                    continue
+            # check to see if you have a preset roll; if not, roll 1-100                
+            if not hasattr(self, key+"_roll"):
+                  setattr( self, key+"_roll", random.randint(1,100) )
 
-            ##########################################################################################
-            # Provided you had no associated _chance or that you succeeded on the chance roll, you can
-            # Move on to actually setting the value.
+            # if the roll is greater than the chance, you have failed, and don't get to use this stat.
+            # Go to the next entry in the for loop.
+            if int(getattr(self,key+"_roll")) > getattr(self,key+"_chance"):
+                return
 
-            # Most features don't need the namekey on the front since it's redundant
-            # so we shorten the name for brevity.
-            featurename=key.replace(namekey+'_','')
+        ##########################################################################################
+        # Provided you had no associated _chance or that you succeeded on the chance roll, you can
+        # Move on to actually setting the value.
 
-            # Zset means it's a 1-100 stat;
-            if self.redis.type(key) == 'zset':
-                setattr( self, featurename, Generator.select_by_roll(self,key) )
+        # Most features don't need the namekey on the front since it's redundant
+        # so we shorten the name for brevity.
+        featurename=key.replace(namekey+'_','')
 
-            # string means it's a simple value that plugs right in
-            elif self.redis.type(key) == 'string':
-                setattr( self, featurename, self.redis.get(key) )
+        # Zset means it's a 1-100 stat;
+        if self.redis.type(key) == 'zset':
+            setattr( self, featurename, Generator.select_by_roll(self,key) )
 
-            # List gets a bit tricky; select a value, then see if it has an associated description
-            elif self.redis.type(key) == 'list' :
+        # string means it's a simple value that plugs right in
+        elif self.redis.type(key) == 'string':
+            setattr( self, featurename, self.redis.get(key) )
 
-                # If feature isn't set, grab a rand value from the list.
-                if not hasattr(self, featurename):
-                    featurevalue=Generator.rand_value(self,key)
-                    setattr( self, featurename, featurevalue )
-                # if the description hasn't been set and exists in redis.
-                if not hasattr( self, featurename+"_description") and self.redis.exists(key+"_description"):
-                    featurevalue=json.loads(self.redis.hmget(key+"_description",getattr(self,featurename) )[0] ) 
-                    setattr( self, featurename+"_description", featurevalue )
-            else:
-                print "INFO: no idea ",key,"what ",self.redis.type(key),"is."
+        # List gets a bit tricky; select a value, then see if it has an associated description
+        elif self.redis.type(key) == 'list' :
+
+            # If feature isn't set, grab a rand value from the list.
+            if not hasattr(self, featurename):
+                featurevalue=Generator.rand_value(self,key)
+                setattr( self, featurename, featurevalue )
+            # if the description hasn't been set and exists in redis.
+            if not hasattr( self, featurename+"_description") and self.redis.exists(key+"_description"):
+                featurevalue=json.loads(self.redis.hmget(key+"_description",getattr(self,featurename) )[0] ) 
+                setattr( self, featurename+"_description", featurevalue )
+        else:
+            print "INFO: no idea ",key,"what ",self.redis.type(key),"is."
 
 
 ####################################################
