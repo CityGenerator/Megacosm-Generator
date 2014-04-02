@@ -16,11 +16,11 @@ ZADD gem_value  10 { "name":"near worthless",           "score":10  }
 ZADD gem_value  20 { "name":"of little value",          "score":20  }
 ZADD gem_value  30 { "name":"worth a few coins",        "score":30  }
 ZADD gem_value  40 { "name":"cheap",                    "score":40  }
-ZADD gem_value  50 { "name":"of moderate value",        "score":50  }
+ZADD gem_value  50 { "name":"moderately valuable",      "score":50  }
 ZADD gem_value  60 { "name":"costly",                   "score":60  }
 ZADD gem_value  70 { "name":"very valuable",            "score":70  }
 ZADD gem_value  80 { "name":"worth a small fortune",    "score":80  }
-ZADD gem_value  90 { "name":"of inestimable value",     "score":90  }
+ZADD gem_value  90 { "name":"insanely valuable",        "score":90  }
 ZADD gem_value 100 { "name":"worth a king's ransom",    "score":100  }
 
 ZADD gem_saturation  10 { "name":"blanched",    "score":10  }
