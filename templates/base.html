@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/static/css/sticky-footer.css">
 
+<style type="text/css">
+#openhatch-wannahelp-button:hover, #openhatch-wannahelp-button:focus {  text-decoration:none; }
+#openhatch-wannahelp-button { background: #C8E29D url('http://openhatch.org/static/images/wannahelp-button-bg.png') repeat-x scroll center top; border:3px solid #fff;  cursor:pointer; cursor: hand; font-family: Helvetica, sans-serif; font-size:13pt; font-weight:normal; text-align:center; text-shadow:0 1px 0 #fff; white-space:normal; }
+#openhatch-wannahelp-button { color: #444; float:right;  }
+#openhatch-wannahelp-button:focus { outline-color:-moz-use-text-color; outline-style:none; outline-width:medium; }
+</style>
+
+
     {% endblock %}
   </head>
   <body>
@@ -132,7 +140,12 @@
       {% block footer %}
       <div class="container">
         <p class="text-muted">
-            <span style="float:right">
+            <form method="POST" action="http://openhatch.org/+do/project.views.wanna_help_do">
+                <input type="hidden" name="from_offsite" value="True" />
+                <input type="hidden" value="10312" name="project"/>
+                <input type="submit" value="Want to Help?" rel="tipsy-south" id="openhatch-wannahelp-button" original-title="Click to add yourself to the list of people who want to contribute. People of all levels are welcome!"/>
+            </form>
+            <span style="float:right; margin-top:5px;margin-right:10px;">
             &copy; Copyright 2014 by <a href="http://morgajel.net/">morgajel</a>.
             </span>
             <!-- Place this tag after the last +1 button tag. -->
@@ -154,5 +167,6 @@
       ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');
     </script>
+<script type="text/javascript" src="http://openhatch.org/static/packed/selections_for_widget.js?1295813773"></script>
   </body>
 </html>
