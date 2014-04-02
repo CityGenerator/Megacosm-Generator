@@ -2,7 +2,23 @@
 
 # Import the stuffs!
 from flask import Flask, send_file, render_template, request, url_for
-from generators import Planet, NPC, MagicItem, Deity, Bond, Rumor, Cuisine, Continent, Country, Sect, Legend, Business, Star, Moon, Currency, Misfire, Region
+from generators import Planet
+from generators import NPC
+from generators import MagicItem
+from generators import Deity
+from generators import Bond
+from generators import Rumor
+from generators import Cuisine
+from generators import Continent
+from generators import Country
+from generators import Sect
+from generators import Legend
+from generators import Business
+from generators import Star
+from generators import Moon
+from generators import Currency
+from generators import Misfire
+from generators import Region
 from generators import Wanted
 from generators import Weather
 from generators import Govt
@@ -61,9 +77,10 @@ def GenerateMagicItem():
 def MagicItem_Builder():
     """Generate an NPC"""
     
-    paramlist,paramstring,paramset=builder_form_data('magicitem')
+    classname='magicitem'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='magicitem') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -157,9 +174,10 @@ def Bond_Builder():
 @app.route('/planet_builder')
 def Planet_Builder():
     """Generate the basic data about a planet"""
-    paramlist,paramstring,paramset=builder_form_data('planet')
+    classname='planet'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='planet') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
 @app.route('/planet')
@@ -195,9 +213,10 @@ def GenerateResource():
 @app.route('/resource_builder')
 def Resource_Builder():
     """Generate the basic data about a resource"""
-    paramlist,paramstring,paramset=builder_form_data('resource')
+    classname='resource'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='resource') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -222,9 +241,10 @@ def GenerateRumor():
 @app.route('/rumor_builder')
 def Rumor_Builder():
     """Generate the basic data about a rumor"""
-    paramlist,paramstring,paramset=builder_form_data('rumor')
+    classname='rumor'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='rumor') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -249,9 +269,10 @@ def GenerateMisfire():
 @app.route('/misfire_builder')
 def Misfire_Builder():
     """Generate the basic data about a misfire"""
-    paramlist,paramstring,paramset=builder_form_data('misfire')
+    classname='misfire'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='misfire') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -277,9 +298,10 @@ def GenerateCurrency():
 @app.route('/currency_builder')
 def Currency_Builder():
     """Generate the basic data about a currency"""
-    paramlist,paramstring,paramset=builder_form_data('currency')
+    classname='currency'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='currency') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -305,9 +327,10 @@ def GenerateJobPosting():
 @app.route('/jobposting_builder')
 def JobPosting_Builder():
     """Generate the basic data about a jobposting"""
-    paramlist,paramstring,paramset=builder_form_data('jobposting')
+    classname='jobposting'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='jobposting') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
     
 #########################################################################
@@ -333,9 +356,10 @@ def GenerateEvent():
 @app.route('/event_builder')
 def Event_Builder():
     """Generate the basic data about a event"""
-    paramlist,paramstring,paramset=builder_form_data('event')
+    classname='event'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='event') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
     
 #########################################################################
@@ -360,9 +384,10 @@ def GenerateMotivation():
 @app.route('/motivation_builder')
 def Motivation_Builder():
     """Generate the basic data about a motivation"""
-    paramlist,paramstring,paramset=builder_form_data('motivation')
+    classname='motivation'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='motivation') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -385,9 +410,10 @@ def GenerateGem():
 @app.route('/gem_builder')
 def Gem_Builder():
     """Generate the basic data about a gem"""
-    paramlist,paramstring,paramset=builder_form_data('gem')
+    classname='gem'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='gem') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -410,9 +436,10 @@ def GenerateMundaneItem():
 @app.route('/mundaneitem_builder')
 def MundaneItem_Builder():
     """Generate the basic data about a mundaneitem"""
-    paramlist,paramstring,paramset=builder_form_data('mundaneitem')
+    classname='mundaneitem'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='mundaneitem') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -435,9 +462,10 @@ def GenerateLegend():
 @app.route('/legend_builder')
 def Legend_Builder():
     """Generate the basic data about a legend"""
-    paramlist,paramstring,paramset=builder_form_data('legend')
+    classname='legend'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='legend') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -453,8 +481,9 @@ def GenerateBusiness():
 def Business_Builder():
     """Generate the basic data about a business"""
 
-    paramlist,paramstring,paramset=builder_form_data('business')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='business') 
+    classname='business'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
     
 #########################################################################
@@ -470,8 +499,9 @@ def GenerateMoon():
 @app.route('/moon_builder')
 def Moon_Builder():
     """Generate the basic data about a moon"""
-    paramlist,paramstring,paramset=builder_form_data('moon')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='moon') 
+    classname='moon'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
     
     
@@ -488,8 +518,9 @@ def GenerateStar():
 @app.route('/star_builder')
 def Star_Builder():
     """Generate the basic data about a star"""
-    paramlist,paramstring,paramset=builder_form_data('star')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='star') 
+    classname='star'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
     
     
@@ -507,8 +538,9 @@ def GenerateContinent():
 @app.route('/continent_builder')
 def Continent_Builder():
     """Generate the basic data about a continent"""
-    paramlist,paramstring,paramset=builder_form_data('continent')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='continent') 
+    classname='continent'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -525,8 +557,9 @@ def GenerateRegion():
 @app.route('/region_builder')
 def Region_Builder():
     """Generate the basic data about a region"""
-    paramlist,paramstring,paramset=builder_form_data('region')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='region') 
+    classname='region'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -542,10 +575,11 @@ def GenerateSect():
 @app.route('/sect_builder')
 def Sect_Builder():
     """Generate the basic data about a sect"""
-    paramlist,paramstring,paramset=builder_form_data('sect')
+    classname='sect'
+    paramlist,paramstring,paramset=builder_form_data(classname)
     result= server.zrange('portfolio_domain',0,-1)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='sect') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
     
 #########################################################################
@@ -561,8 +595,9 @@ def GenerateGovt():
 @app.route('/govt_builder')
 def Govt_Builder():
     """Generate the basic data about a govt"""
-    paramlist,paramstring,paramset=builder_form_data('govt')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='govt') 
+    classname='govt'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
     
@@ -579,8 +614,9 @@ def GenerateWeather():
 @app.route('/weather_builder')
 def Weather_Builder():
     """Generate the basic data about a weather"""
-    paramlist,paramstring,paramset=builder_form_data('weather')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='weather') 
+    classname='weather'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
     
@@ -597,8 +633,9 @@ def GenerateWanted():
 @app.route('/wanted_builder')
 def Wanted_Builder():
     """Generate the basic data about a wanted"""
-    paramlist,paramstring,paramset=builder_form_data('wanted')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='wanted') 
+    classname='wanted'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
 
@@ -614,9 +651,10 @@ def GenerateGeomorphDungeon():
 @app.route('/geomorphdungeon_builder')
 def GeomorphDungeon_Builder():
     """Generate the basic data about a geomorphdungeon"""
-    paramlist,paramstring,paramset=builder_form_data('geomorphdungeon')
+    classname='geomorphdungeon'
+    paramlist,paramstring,paramset=builder_form_data(classname)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='geomorphdungeon') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -631,8 +669,9 @@ def GenerateRogueDungeon():
 @app.route('/roguedungeon_builder')
 def RogueDungeon_Builder():
     """Generate the basic data about a dungeon"""
-    paramlist,paramstring,paramset=builder_form_data('roguedungeon')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='roguedungeon') 
+    classname='roguedungeon'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
 #########################################################################
@@ -650,8 +689,9 @@ def GenerateCountry():
 @app.route('/country_builder')
 def Country_Builder():
     """Generate the basic data about a country"""
-    paramlist,paramstring,paramset=builder_form_data('country')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='country') 
+    classname='country'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
 #########################################################################
@@ -676,8 +716,9 @@ def GenerateCuisine():
 @app.route('/cuisine_builder')
 def Cuisine_Builder():
     """Generate the basic data about a cuisine"""
-    paramlist,paramstring,paramset=builder_form_data('cuisine')
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='cuisine') 
+    classname='cuisine'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
     
 #########################################################################
 
@@ -692,10 +733,11 @@ def GenerateDeity():
 @app.route('/deity_builder')
 def Deity_Builder():
     """Generate the basic data about a deity"""
-    paramlist,paramstring,paramset=builder_form_data('deity')
+    classname='deity'
+    paramlist,paramstring,paramset=builder_form_data(classname)
     result= server.zrange('portfolio_domain',0,-1)
 
-    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='deity') 
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
 
 
 
