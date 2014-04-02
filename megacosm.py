@@ -21,6 +21,7 @@ from generators import Moon
 from generators import Currency
 from generators import Misfire
 from generators import Region
+from generators import City
 from generators import Wanted
 from generators import Weather
 from generators import Govt
@@ -632,6 +633,25 @@ def govt_builder():
 
 
 
+#########################################################################
+
+@app.route('/city')
+def GenerateCity():
+    """Generate a simple city"""
+    features=feature_filter('city')
+    tempobj=City.City(server,features)
+    return render_template('city.html', tempobj=tempobj )
+
+
+@app.route('/city_builder')
+def City_Builder():
+    """Generate the basic data about a city"""
+    classname='city'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname) 
+
+
+    
 #########################################################################
 
 @app.route('/weather')
