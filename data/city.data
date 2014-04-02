@@ -1,24 +1,18 @@
 # city info!
 
-ZADD city_size 10   { "name":"settlement",      minpop:"25",      maxpop:"100",    min_density:"10",   max_density:"400"    }
-ZADD city_size 30   { "name":"hamlet",          minpop:"101",     maxpop:"500",    min_density:"20",   max_density:"2000"   }
-ZADD city_size 35   { "name":"small village",   minpop:"501",     maxpop:"600",    min_density:"30",   max_density:"2400"   }
-ZADD city_size 40   { "name":"village",         minpop:"601",     maxpop:"750",    min_density:"60",   max_density:"3000"   }
-ZADD city_size 45   { "name":"large village",   minpop:"751",     maxpop:"1000",   min_density:"75",   max_density:"4000"   }
-ZADD city_size 60   { "name":"small town",      minpop:"1001",    maxpop:"1500",   min_density:"90",   max_density:"6000"   }
-ZADD city_size 70   { "name":"town",            minpop:"1501",    maxpop:"3500",   min_density:"100",  max_density:"9000"   }
-ZADD city_size 80   { "name":"large town",      minpop:"3501",    maxpop:"5000",   min_density:"110",  max_density:"10000"  }
-ZADD city_size 85   { "name":"small city",      minpop:"5001",    maxpop:"8000",   min_density:"150",  max_density:"15000"  }
-ZADD city_size 90   { "name":"city",            minpop:"8001",    maxpop:"15000",  min_density:"180",  max_density:"22000"  }
-ZADD city_size 94   { "name":"large city",      minpop:"15001",   maxpop:"22000",  min_density:"200",  max_density:"28000"  }
-ZADD city_size 99   { "name":"metropolis",      minpop:"22001",   maxpop:"30000",  min_density:"220",  max_density:"30000"  }
-ZADD city_size 100  { "name":"capitol",         minpop:"30001",   maxpop:"80000",  min_density:"240",  max_density:"40000"  }
-
-ZADD city_density 20 { "name": "sparsely",   "score":20   }
-ZADD city_density 40 { "name": "lightly",    "score":40   }
-ZADD city_density 60 { "name": "nominally",  "score":60   }
-ZADD city_density 80 { "name": "moderately", "score":80   }
-ZADD city_density 81 { "name": "densely",    "score":81   }
+ZADD city_size 10   { "name":"settlement",     "minpop":"25",      "maxpop":"100",   "min_density":"10",  "max_density":"400"    }
+ZADD city_size 30   { "name":"hamlet",         "minpop":"101",     "maxpop":"500",   "min_density":"20",  "max_density":"2000"   }
+ZADD city_size 35   { "name":"small village",  "minpop":"501",     "maxpop":"600",   "min_density":"30",  "max_density":"2400"   }
+ZADD city_size 40   { "name":"village",        "minpop":"601",     "maxpop":"750",   "min_density":"60",  "max_density":"3000"   }
+ZADD city_size 45   { "name":"large village",  "minpop":"751",     "maxpop":"1000",  "min_density":"75",  "max_density":"4000"   }
+ZADD city_size 60   { "name":"small town",     "minpop":"1001",    "maxpop":"1500",  "min_density":"90",  "max_density":"6000"   }
+ZADD city_size 70   { "name":"town",           "minpop":"1501",    "maxpop":"3500",  "min_density":"100", "max_density":"9000"   }
+ZADD city_size 80   { "name":"large town",     "minpop":"3501",    "maxpop":"5000",  "min_density":"110", "max_density":"10000"  }
+ZADD city_size 85   { "name":"small city",     "minpop":"5001",    "maxpop":"8000",  "min_density":"150", "max_density":"15000"  }
+ZADD city_size 90   { "name":"city",           "minpop":"8001",    "maxpop":"15000", "min_density":"180", "max_density":"22000"  }
+ZADD city_size 94   { "name":"large city",     "minpop":"15001",   "maxpop":"22000", "min_density":"200", "max_density":"28000"  }
+ZADD city_size 99   { "name":"metropolis",     "minpop":"22001",   "maxpop":"30000", "min_density":"220", "max_density":"30000"  }
+ZADD city_size 100  { "name":"capitol",        "minpop":"30001",   "maxpop":"80000", "min_density":"240", "max_density":"40000"  }
 
 
 # Citizens of Willis are mentally _____  and pyhsically feeble.
@@ -187,6 +181,7 @@ ZADD city_authority 70 { "name": "is a mess",                   "score":70   }
 ZADD city_authority 80 { "name": "is very strict",              "score":80   }
 ZADD city_authority 100 { "name": "is very authoritarian",       "score":100   }
 
+# Crime is ________.
 ZADD city_crime 10 { "name": "rampant",                         "score":10   }
 ZADD city_crime 30 { "name": "common",                          "score":30   }
 ZADD city_crime 50 { "name": "occasional",                      "score":50   }
@@ -195,34 +190,12 @@ ZADD city_crime 90 { "name": "rare",                            "score":90   }
 ZADD city_crime 100 { "name": "unheard of",                      "score":100   }
 
 
-
-
-    <feature>
-        <cityshape><!--The densly populated town proper is a circular 0.58 hectare region.-->
-            <option>circular
-            <option>oval
-            <option>square
-            <option>rectangular
-            <option>hexagonal
-            <option>octagonal
-
-
-    <popdensity>
-
-
-    <arable>
-        <option type:"poor"     min:'1' max:'33'>desolate
-        <option type:"neutral"  min:'34' max:'66'>modest
-        <option type:"rich"     min:'67' >fertile
-
-
-    <dominance chance:'30'>
-        <option          max:"20" >snobbish
-        <option min:"21" max:"40" >mean
-        <option min:"41" max:"60" >cruel
-        <option min:"61" max:"80" >very oppressive
-        <option min:"81"          >brutally oppressive
-
-
+#The densly populated town proper is a circular 0.58 hectare region.
+LPUSH city_shape circular
+LPUSH city_shape oval
+LPUSH city_shape square
+LPUSH city_shape rectangular
+LPUSH city_shape hexagonal
+LPUSH city_shape octagonal
 
 
