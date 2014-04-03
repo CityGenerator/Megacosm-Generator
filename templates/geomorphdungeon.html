@@ -12,16 +12,11 @@
     <h1> {{geomorphdungeon.text}} <a href="/geomorphdungeon?seed={{geomorphdungeon.seed}}">({{geomorphdungeon.seed}})</a></h1>
 
     
-    <div style="position: initial;">
-    <div style="position: relative;">
-        <canvas id='geomorphdungeonmapbackground'   style="float:left; padding-right:30px;position: absolute; left: 0; top: 0; z-index: 5; "></canvas>
-        <canvas id='geomorphdungeonmap'             style="float:left; padding-right:30px;position: absolute; left: 0; top: 0; z-index: 10; "></canvas>
-    </div>
-    </div>
+    <canvas id='geomorphdungeonmap'></canvas>
 
     <script type="text/javascript">
         var jsondata={{jsondata|safe }};
 
-        create_geomorphdungeon(jsondata,document.getElementById('geomorphdungeonmap'),document.getElementById('geomorphdungeonmapbackground'),"{{geomorphdungeon.background}}");
+        create_geomorphdungeon(jsondata,document.getElementById('geomorphdungeonmap'),"{{geomorphdungeon.background}}");
     </script>
 {% endblock %}
