@@ -471,6 +471,24 @@ def Legend_Builder():
     
 #########################################################################
 
+@app.route('/organization')
+def GenerateOrganization():
+    """Generate a simple organization"""
+    features=feature_filter('organization')
+    organization=Organization.Organization(server,features)
+    return render_template('organization.html', organization=organization )
+
+
+@app.route('/organization_builder')
+def Organization_Builder():
+    """Generate the basic data about a organization"""
+
+    paramlist,paramstring,paramset=builder_form_data('organization')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='organization') 
+    
+    
+#########################################################################
+
 @app.route('/business')
 def GenerateBusiness():
     """Generate a simple business"""
