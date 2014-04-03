@@ -79,7 +79,6 @@ function load_geomorphtiles(jsonblock, canvas){
 
             var tiledata = jsonblock[y][x];
 
-            drawTile(geomorphx, geomorphy, tiledata, canvas)
             function drawTile( geox, geoy, tiledata, canvas) {
 
                 var newtile = new Image();
@@ -98,8 +97,9 @@ function load_geomorphtiles(jsonblock, canvas){
                     ctx.fillStyle = "red";
                     ctx.fill();
                 }
-            newtile.src = tiledata.path;
+                newtile.src = tiledata.path;
             }
+            drawTile(geomorphx, geomorphy, tiledata, canvas)
 
         }
     }
