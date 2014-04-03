@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} {{geomorphdungeon.text}} {% endblock %}
+{% block title %} {{tempobj.text}} {% endblock %}
 {% block head %}
   {{ super() }}
         <script src='/static/js/dungeon.js' ></script>
@@ -9,14 +9,14 @@
 {% endblock %}
 {% block content %}
 
-    <h1> {{geomorphdungeon.text}} <a href="/geomorphdungeon?seed={{geomorphdungeon.seed}}">({{geomorphdungeon.seed}})</a></h1>
+    <h1> {{tempobj.text}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
     
-    <canvas id='geomorphdungeonmap'></canvas>
+    <canvas id='geomorphmap'></canvas>
 
     <script type="text/javascript">
         var jsondata={{jsondata|safe }};
 
-        create_geomorphdungeon(jsondata,document.getElementById('geomorphdungeonmap'),"{{geomorphdungeon.background}}");
+        create_geomorphdungeon(jsondata,document.getElementById('geomorphmap'),"{{tempobj.background}}");
     </script>
 {% endblock %}

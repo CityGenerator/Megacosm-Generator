@@ -7,20 +7,20 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Look Outside... <a href="/weather?seed={{weather.seed}}">({{weather.seed}})</a></h1>
+    <h1>Look Outside... <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
-<p>Right now it is {{weather.temp['name']}} outside, with {{weather.wind['name']}} winds.</p>
+<p>Right now it is {{tempobj.temp['name']}} outside, with {{tempobj.wind['name']}} winds.</p>
 
-{%if weather.precipitation%}
-<p>It is {{weather.precipitation['none'] }} {{weather.precipitation_type}} at the moment.</p>
+{%if tempobj.precipitation%}
+<p>It is {{tempobj.precipitation['none'] }} {{tempobj.precipitation_type}} at the moment.</p>
 {%endif%}
 
-{%if weather.cloud%}
-<p>There are {{ weather.cloud }} clouds in the sky above.</p>
+{%if tempobj.cloud%}
+<p>There are {{ tempobj.cloud }} clouds in the sky above.</p>
 {%endif%}
 
-{%if weather.storm%}
-<p>{{ weather.storm |article |capitalize}} is approaching, and will hit {{weather.time}}.</p>
+{%if tempobj.storm%}
+<p>{{ tempobj.storm |article |capitalize}} is approaching, and will hit {{tempobj.time}}.</p>
 {%endif%}
 
 {% endblock %}

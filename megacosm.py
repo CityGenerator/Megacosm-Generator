@@ -72,7 +72,7 @@ def GenerateMagicItem():
     magicitem=MagicItem.MagicItem(server,features)
 
     kind= magicitem.kind
-    return render_template('magicitem_'+kind+'.html',magicitem=magicitem) 
+    return render_template('magicitem_'+kind+'.html',tempobj=magicitem) 
 
 @app.route('/magicitem_builder')
 def MagicItem_Builder():
@@ -114,7 +114,7 @@ def GenerateNPC():
 
     npcfeatures['deity']=Deity.Deity(server)
     npc=NPC.NPC(server,npcfeatures)
-    return render_template('npc.html',npc=npc) 
+    return render_template('npc.html',tempobj=npc) 
 
 @app.route('/npc_builder')
 def NPC_Builder():
@@ -187,7 +187,7 @@ def GeneratePlanet():
     features=feature_filter('planet')
     planet=Planet.Planet(server,features)
     planet.add_continents()
-    return render_template('planet.html', planet=planet )
+    return render_template('planet.html', tempobj=planet )
 
 
 #########################################################################
@@ -475,7 +475,7 @@ def GenerateBusiness():
     """Generate a simple business"""
     features=feature_filter('business')
     business=Business.Business(server,features)
-    return render_template('business.html', business=business )
+    return render_template('business.html', tempobj=business )
 
 
 @app.route('/business_builder')
@@ -513,7 +513,7 @@ def GenerateMoon():
     """Generate a simple moon"""
     features=feature_filter('moon')
     moon=Moon.Moon(server,features)
-    return render_template('moon.html', moon=moon )
+    return render_template('moon.html', tempobj=moon )
 
 
 @app.route('/moon_builder')
@@ -532,7 +532,7 @@ def GenerateStar():
     """Generate a simple star"""
     features=feature_filter('star')
     star=Star.Star(server,features)
-    return render_template('star.html', star=star )
+    return render_template('star.html', tempobj=star )
 
 
 @app.route('/star_builder')
@@ -552,7 +552,7 @@ def GenerateContinent():
     features=feature_filter('continent')
     continent=Continent.Continent(server,features)
     continent.add_countries()
-    return render_template('continent.html', continent=continent )
+    return render_template('continent.html', tempobj=continent )
 
 
 @app.route('/continent_builder')
@@ -571,7 +571,7 @@ def GenerateRegion():
     region=Region.Region(server,features)
 #    region.add_cities()
 #    region.add_locations()()
-    return render_template('region.html', region=region )
+    return render_template('region.html', tempobj=region )
 
 
 @app.route('/region_builder')
@@ -589,7 +589,7 @@ def GenerateSect():
 
     features=feature_filter('sect')
     sect=Sect.Sect(server,features)
-    return render_template('sect.html', sect=sect, name='sect' )
+    return render_template('sect.html', tempobj=sect )
 
 
 @app.route('/sect_builder')
@@ -609,7 +609,7 @@ def GenerateGovt():
     """Generate a simple govt"""
     features=feature_filter('govt')
     govt=Govt.Govt(server,features)
-    return render_template('govt.html', govt=govt )
+    return render_template('govt.html', tempobj=govt )
 
 
 @app.route('/govt_builder')
@@ -628,7 +628,7 @@ def GenerateWeather():
     """Generate a simple weather"""
     features=feature_filter('weather')
     weather=Weather.Weather(server,features)
-    return render_template('weather.html', weather=weather )
+    return render_template('weather.html', tempobj=weather )
 
 
 @app.route('/weather_builder')
@@ -647,7 +647,7 @@ def GenerateWanted():
     """Generate a simple wanted"""
     features=feature_filter('wanted')
     wanted=Wanted.Wanted(server,features)
-    return render_template('wanted.html', wanted=wanted )
+    return render_template('wanted.html', tempobj=wanted )
 
 
 @app.route('/wanted_builder')
@@ -666,7 +666,7 @@ def GenerateGeomorphDungeon():
     """Generate a simple geomorphdungeon"""
     features=feature_filter('geomorphdungeon')
     geomorphdungeon=GeomorphDungeon.GeomorphDungeon(server,features)
-    return render_template('geomorphdungeon.html', geomorphdungeon=geomorphdungeon,jsondata=geomorphdungeon.convert_to_json() )
+    return render_template('geomorphdungeon.html', tempobj=geomorphdungeon,jsondata=geomorphdungeon.convert_to_json() )
 
 @app.route('/geomorphdungeon_builder')
 def GeomorphDungeon_Builder():
@@ -683,7 +683,7 @@ def GenerateRogueDungeon():
     """Generate a simple dungeon"""
     features=feature_filter('roguedungeon')
     roguedungeon=RogueDungeon.RogueDungeon(server,features)
-    return render_template('roguedungeon.html', roguedungeon=roguedungeon,jsondata=roguedungeon.convert_to_json() )
+    return render_template('roguedungeon.html', tempobj=roguedungeon,jsondata=roguedungeon.convert_to_json() )
 
 
 @app.route('/roguedungeon_builder')
@@ -703,7 +703,7 @@ def GenerateCountry():
     features=feature_filter('country')
     country=Country.Country(server,features)
     country.add_regions()
-    return render_template('country.html', country=country )
+    return render_template('country.html', tempobj=country )
 
 
 @app.route('/country_builder')
@@ -748,7 +748,7 @@ def GenerateDeity():
 
     features=feature_filter('deity')
     deity=Deity.Deity(server,features)
-    return render_template('deity.html', deity=deity, name='deity' )
+    return render_template('deity.html', tempobj=deity )
 
 @app.route('/deity_builder')
 def Deity_Builder():

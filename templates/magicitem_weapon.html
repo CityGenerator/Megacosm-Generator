@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block title %} You found {{tempobj.kind|article }} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,33 +10,33 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
-    The {{magicitem.name|title}} is {{magicitem.quality['name']|article }} {{magicitem.material_description['name'] }} {{magicitem.category_description['name']}} with {{magicitem.effect_description['name'] |article}} enchantment that {{magicitem.effect_description['description']}}. It is {{magicitem.repair['name'] }}.
+    The {{tempobj.name|title}} is {{tempobj.quality['name']|article }} {{tempobj.material_description['name'] }} {{tempobj.category_description['name']}} with {{tempobj.effect_description['name'] |article}} enchantment that {{tempobj.effect_description['description']}}. It is {{tempobj.repair['name'] }}.
     <h2>Details</h2>
     <p>
-    This {{magicitem.quality['name']|article }} {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}. The enchantment on it {{magicitem.effect_description['description']}}.
-    {%if magicitem.decoration_description %}
-        The {{magicitem.category_description['materialpart']}} is decorated with {{magicitem.decoration_description['description']}}.
+    This {{tempobj.quality['name']|article }} {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}. The enchantment on it {{tempobj.effect_description['description']}}.
+    {%if tempobj.decoration_description %}
+        The {{tempobj.category_description['materialpart']}} is decorated with {{tempobj.decoration_description['description']}}.
     {%endif %}
-    {%if magicitem.visualeffect%}
-        When {{magicitem.visualcause_description['description']}}, the {{magicitem.kind}} {{magicitem.visualeffect_description['description']}}.
+    {%if tempobj.visualeffect%}
+        When {{tempobj.visualcause_description['description']}}, the {{tempobj.kind}} {{tempobj.visualeffect_description['description']}}.
     {%endif%}
-    {%if magicitem.ability%}
-        This {{magicitem.category_description['name']}} {{magicitem.ability_description['description']}}.
+    {%if tempobj.ability%}
+        This {{tempobj.category_description['name']}} {{tempobj.ability_description['description']}}.
     {%endif%}
     </p>
     <p>
-    Many consider it {{magicitem.strength['name']| article}} {{magicitem.kind}} and a {{magicitem.value['name']}}.
-    {%if magicitem.flaw%}
-        This {{magicitem.category_description['name']}} is rather distinctive due to {{magicitem.flaw_description['name'] |article}} on the {{magicitem.category_description['materialpart']}}.
+    Many consider it {{tempobj.strength['name']| article}} {{tempobj.kind}} and a {{tempobj.value['name']}}.
+    {%if tempobj.flaw%}
+        This {{tempobj.category_description['name']}} is rather distinctive due to {{tempobj.flaw_description['name'] |article}} on the {{tempobj.category_description['materialpart']}}.
     {%endif%}
     </p>
     
-    {% if magicitem.curse %}
+    {% if tempobj.curse %}
     <h2>Danger:</h2> 
-    This {{magicitem.kind}} carries a curse of {{magicitem.curse_description['name']|title}}, which {{magicitem.curse_description['description']}}.
-    The effects of the curse {{magicitem.curse_duration['name']}}.
+    This {{tempobj.kind}} carries a curse of {{tempobj.curse_description['name']|title}}, which {{tempobj.curse_description['description']}}.
+    The effects of the curse {{tempobj.curse_duration['name']}}.
     {% endif%}
 
 
@@ -44,9 +44,9 @@
 
     <h2>Description If Found...</h2>
     <blockquote style="font-style:italic">
-        "{{magicitem.location|capitalize}} you find {{magicitem.material_description['name'] |article}}  {{magicitem.category_description['name']}}. It is {{magicitem.repair['name'] }}.
-        {%if magicitem.decoration_description %}
-            The {{magicitem.category_description['materialpart']}} is decorated with {{magicitem.decoration_description['description']}}.
+        "{{tempobj.location|capitalize}} you find {{tempobj.material_description['name'] |article}}  {{tempobj.category_description['name']}}. It is {{tempobj.repair['name'] }}.
+        {%if tempobj.decoration_description %}
+            The {{tempobj.category_description['materialpart']}} is decorated with {{tempobj.decoration_description['description']}}.
         {%endif %}
             
 

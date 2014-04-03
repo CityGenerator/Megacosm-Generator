@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block title %} You found {{tempobj.kind|article }} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,37 +10,37 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
 
 
-    The {{magicitem.name|title}} is {{magicitem.material | article}} scroll that {{magicitem.effect_description['description']}}.
-    It is stored in {{magicitem.repair['name'] | article}} {{magicitem.container_type}}.
+    The {{tempobj.name|title}} is {{tempobj.material | article}} scroll that {{tempobj.effect_description['description']}}.
+    It is stored in {{tempobj.repair['name'] | article}} {{tempobj.container_type}}.
     
-    {%if magicitem.container_label %}
-    The label on the {{magicitem.container_type}} is {{magicitem.container_label}}.
+    {%if tempobj.container_label %}
+    The label on the {{tempobj.container_type}} is {{tempobj.container_label}}.
     {%endif%}
-    The scroll itself is covered with {{magicitem.writingtype}} {{magicitem.writingform}}.
-    The {{magicitem.material }} is {{magicitem.quality['name']}} quality, and the container is {{magicitem.repair['name']}}.
-    It is considered {{magicitem.value['name']|article}}.
+    The scroll itself is covered with {{tempobj.writingtype}} {{tempobj.writingform}}.
+    The {{tempobj.material }} is {{tempobj.quality['name']}} quality, and the container is {{tempobj.repair['name']}}.
+    It is considered {{tempobj.value['name']|article}}.
 
-    This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
-    {% if magicitem.sideeffect %}
+    This {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}.
+    {% if tempobj.sideeffect %}
     <br><br>
-    <b>Warning:</b> Side effects may include {{magicitem.sideeffect}}, which are temporary.
+    <b>Warning:</b> Side effects may include {{tempobj.sideeffect}}, which are temporary.
     {% endif%}
-    {% if magicitem.curse %}
+    {% if tempobj.curse %}
     <br><br>
     <b>Danger:</b> 
-    This scroll carries a curse of {{magicitem.curse_description['name']|title}}, which {{magicitem.curse_description['description']}}.
-    The effects of the curse {{magicitem.curse_duration['name']}}.
+    This scroll carries a curse of {{tempobj.curse_description['name']|title}}, which {{tempobj.curse_description['description']}}.
+    The effects of the curse {{tempobj.curse_duration['name']}}.
     {% endif%}
 
     <h2>Description If Found...</h2>
     <blockquote style="font-style:italic">
-        "{{magicitem.location|capitalize}} you find {{magicitem.container_type | article}} containing {{magicitem.material | article}} scroll covered with {{magicitem.writingtype}} {{magicitem.writingform}}. 
-        {%if magicitem.container_label %}
-        The label on the {{magicitem.container_type}} is {{magicitem.container_label}}.
+        "{{tempobj.location|capitalize}} you find {{tempobj.container_type | article}} containing {{tempobj.material | article}} scroll covered with {{tempobj.writingtype}} {{tempobj.writingform}}. 
+        {%if tempobj.container_label %}
+        The label on the {{tempobj.container_type}} is {{tempobj.container_label}}.
         {%endif%}"
 
 

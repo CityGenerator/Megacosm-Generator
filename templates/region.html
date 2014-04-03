@@ -1,39 +1,34 @@
 
 {% extends "base.html" %}
-{% block title %}Welcome to the Region of {{region.name['full']}} {% endblock %}
+{% block title %}Welcome to the Region of {{tempobj.name['full']}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Welcome to the Region <a href="/region?seed={{region.seed}}">{{region.name['full']}} ({{region.seed}})</a></h1>
+    <h1>Welcome to the Region <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
 
     <h2>Summary</h2>
 
-{{region.name['full'] }} is {{region.size['name'] |article }} region. The political influence of {{region.name['full']}} in the region is {{region.influence['name']}}.
-    Religion in this region {{region.theology['name']}}.
+{{tempobj.name['full'] }} is {{tempobj.size['name'] |article }} region. The political influence of {{tempobj.name['full']}} in the country is {{tempobj.influence['name']}}.
+    Religion in this region {{tempobj.theology['name']}}.
 
     <h2>National Relationship</h2>
-    People in the region think the national government is {{region.corruption['name']}} and many citizens {{region.countryapproval['name']}} it.
-    They also describe the national government as {{region.efficiency['name']}} and feels the rest of the regions {{region.unity['name']}}.
+    People in the region think the national government is {{tempobj.corruption['name']}} and many citizens {{tempobj.countryapproval['name']}} it.
+    They also describe the national government as {{tempobj.efficiency['name']}} and feels the rest of the regionss {{tempobj.unity['name']}}.
 
 
 
-{% if region.cities  %}
+{% if tempobj.cities  %}
     <h2>Cities</h2>
 
-    The region has {{region.citydetails['name']}} known {{ 'city'|pluralize( region.cities|length)}}.
+    The region has {{tempobj.citydetails['name']}} known {{ 'city'|pluralize( tempobj.cities|length)}}.
 
     <ul>
-    {%for city in region.cities %}
+    {%for city in tempobj.cities %}
         <li><a href="/city?seed={{city.seed}}">{{city.name['full']}} ({{city.seed}})</a> is {{city.age['name']|article}} {{city.size['name']}} city.</li>
     {%endfor%}
     </ul>
 
-    <pre>
-    {%for field in region.__dict__%}
-        {{field}} {{region[field]}}
-    {%endfor%}
-    </pre>
 {%endif%}
 {% endblock %}

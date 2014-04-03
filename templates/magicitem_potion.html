@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} You found {{magicitem.kind|article }} {% endblock %}
+{% block title %} You found {{tempobj.kind|article }} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,22 +10,22 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/magicitem?seed={{magicitem.seed}}">{{magicitem.kind|article}}  ({{magicitem.seed}})</a></h1>
+    <h1>You found <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
-    <img src="/static/images/potion.png" style="float:left;background-color:#{{magicitem.color_description['hex']}}" >
-    The {{magicitem.name|title}} is {{magicitem.color_description['name'] | article}} {{magicitem.kind}} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
-    The {{magicitem.effect_description['name']}} {{magicitem.kind}} {{magicitem.effect_description['description']}}.
-    The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and smells of {{magicitem.smell}}. 
-    The {{magicitem.strength['name']}} {{magicitem.variety}} is considered {{magicitem.value['name']|article}}. 
-    This {{magicitem.kind}} was created {{magicitem.age['name']}} by {{magicitem.creator}}.
-    {% if magicitem.sideeffect %}
+    <img src="/static/images/potion.png" style="float:left;background-color:#{{tempobj.color_description['hex']}}" >
+    The {{tempobj.name|title}} is {{tempobj.color_description['name'] | article}} {{tempobj.kind}} in {{tempobj.container_material | article}} {{tempobj.container_shape}}.
+    The {{tempobj.effect_description['name']}} {{tempobj.kind}} {{tempobj.effect_description['description']}}.
+    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and smells of {{tempobj.smell}}. 
+    The {{tempobj.strength['name']}} {{tempobj.variety}} is considered {{tempobj.value['name']|article}}. 
+    This {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}.
+    {% if tempobj.sideeffect %}
     <br><br>
-    <b>Warning:</b> May cause {{magicitem.sideeffect}}.
+    <b>Warning:</b> May cause {{tempobj.sideeffect}}.
     {% endif%}
 
     <h2>Description If Found...</h2>
-    <blockquote style="font-style:italic">"{{magicitem.location|capitalize}} is {{magicitem.kind|article }} in {{magicitem.container_material | article}} {{magicitem.container_shape}}.
-    The {{magicitem.container_shape}} is {{magicitem.repair['name']}} and contains {{magicitem.consistency['name']|article}}, {{magicitem.color_description['name']}} {{magicitem.variety}} that smells of {{magicitem.smell}}."</blockquote> 
+    <blockquote style="font-style:italic">"{{tempobj.location|capitalize}} is {{tempobj.kind|article }} in {{tempobj.container_material | article}} {{tempobj.container_shape}}.
+    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and contains {{tempobj.consistency['name']|article}}, {{tempobj.color_description['name']}} {{tempobj.variety}} that smells of {{tempobj.smell}}."</blockquote> 
 
  
 

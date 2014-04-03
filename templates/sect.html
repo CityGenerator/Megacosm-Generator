@@ -1,16 +1,16 @@
 
 
 {% extends "base.html" %}
-{% block title %}Beware the {{sect.name['full']}} {% endblock %}
+{% block title %}Beware the {{tempobj.name['full']}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Beware the {{sect.name['full']}}, followers of {{sect.deity.name['full']}} <a href="/sect?seed={{sect.seed}}">({{sect.seed}})</a></h1>
+    <h1>Beware the {{tempobj.name['full']}}, followers of {{tempobj.deity.name['full']}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
 
-The {{sect.name['full']}} are {{sect.acceptance['name'] |article}} {{sect.kind}} that focuses on {{sect.domain['name']}}.
+The {{tempobj.name['full']}} are {{tempobj.acceptance['name'] |article}} {{tempobj.kind}} that focuses on {{tempobj.domain['name']}}.
 
 
 

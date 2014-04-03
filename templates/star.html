@@ -1,16 +1,16 @@
 
 
 {% extends "base.html" %}
-{% block title %}Behold {{star.name['full']}} {% endblock %}
+{% block title %}Behold {{tempobj.name['full']}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Behold {{star.name['full']}} <a href="/star?seed={{star.seed}}">({{star.seed}})</a></h1>
+    <h1>Behold {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
 
-{{star.name['full']}} is {{star.size['name'] |article}} {{star.color['name']}} star.
+{{tempobj.name['full']}} is {{tempobj.size['name'] |article}} {{tempobj.color['name']}} star.
 
 
 

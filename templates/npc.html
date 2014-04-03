@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}Meet {{npc.name['full']}} {% endblock %}
+{% block title %}Meet {{tempobj.name['full']}} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,19 +10,19 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Meet <a href="/npc?seed={{npc.seed}}">{{npc.name['full']}} ({{npc.seed}})</a></h1>
+    <h1>Meet <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
-    {{npc.name['full']}} is {{npc.age['name']|article}} {{npc.race}} {{npc.sex['name']}} who is {{npc.skill['name'] | article}} {{npc.profession}} by trade. {{npc.name['firstname']}} is motivated {{npc.motivation.text}}.
+    {{tempobj.name['full']}} is {{tempobj.age['name']|article}} {{tempobj.race}} {{tempobj.sex['name']}} who is {{tempobj.skill['name'] | article}} {{tempobj.profession}} by trade. {{tempobj.name['firstname']}} is motivated {{tempobj.motivation.text}}.
     
     <h2>Description</h2>
-    {{npc.name['full']}} is {{npc.height| article}} {{npc.race}} with {{npc.complexion| article}} complexion. {{npc.name['firstname']}} appears {{npc.build}} and has {{npc.eye}} eyes. 
+    {{tempobj.name['full']}} is {{tempobj.height| article}} {{tempobj.race}} with {{tempobj.complexion| article}} complexion. {{tempobj.name['firstname']}} appears {{tempobj.build}} and has {{tempobj.eye}} eyes. 
 
-    {{npc.sex['possessive']|capitalize}} friends describe {{npc.sex['third-person']}} as {{npc.charisma['name']}}, while others see {{npc.name['firstname']}} as {{npc.attractiveness['name']}}. Physically, {{npc.sex['pronoun']}} appears {{npc.strength['name']}} and {{npc.endurance['name']}}.
+    {{tempobj.sex['possessive']|capitalize}} friends describe {{tempobj.sex['third-person']}} as {{tempobj.charisma['name']}}, while others see {{tempobj.name['firstname']}} as {{tempobj.attractiveness['name']}}. Physically, {{tempobj.sex['pronoun']}} appears {{tempobj.strength['name']}} and {{tempobj.endurance['name']}}.
 
     <h2>Behavior</h2>
-    {{npc.name['firstname']}} appears {{npc.emotion}}, but if approached, {{npc.sex['pronoun']}} will act {{npc.attitude}}.  When provoked, {{npc.name['firstname']}} is {{npc.bravery['name']}}. Peers consider {{npc.sex['third-person']}} {{npc.intelligence['name']}}. People who know {{npc.name['firstname']}} think {{npc.sex['pronoun']}} is {{npc.honor['name']}}. Looking back, {{npc.sex['pronoun']}} is {{npc.satisfaction['name']}} of {{npc.sex['possessive']}} past choices. {{npc.name['firstname']}} is motivated {{npc.motivation.text}}.
+    {{tempobj.name['firstname']}} appears {{tempobj.emotion}}, but if approached, {{tempobj.sex['pronoun']}} will act {{tempobj.attitude}}.  When provoked, {{tempobj.name['firstname']}} is {{tempobj.bravery['name']}}. Peers consider {{tempobj.sex['third-person']}} {{tempobj.intelligence['name']}}. People who know {{tempobj.name['firstname']}} think {{tempobj.sex['pronoun']}} is {{tempobj.honor['name']}}. Looking back, {{tempobj.sex['pronoun']}} is {{tempobj.satisfaction['name']}} of {{tempobj.sex['possessive']}} past choices. {{tempobj.name['firstname']}} is motivated {{tempobj.motivation.text}}.
 
-{{npc.sex['pronoun']|capitalize}} considers {{npc.sex['third-person']}}self {{npc.piety['name']|article}} worshipper of the {{npc.deity.importance['name']}} <a href="/deity?seed={{npc.deity.seed}}">{{npc.deity.name['full']}}</q>.
+{{tempobj.sex['pronoun']|capitalize}} considers {{tempobj.sex['third-person']}}self {{tempobj.piety['name']|article}} worshipper of the {{tempobj.deity.importance['name']}} <a href="/deity?seed={{tempobj.deity.seed}}">{{tempobj.deity.name['full']}}</q>.
 
 
 
