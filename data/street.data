@@ -44,7 +44,7 @@ ZADD street_pollution 60  {"name":"disheveled",     "score":60  }
 ZADD street_pollution 70  {"name":"grungy",     "score":70  }
 ZADD street_pollution 80  {"name":"poluted",     "score":80  }
 ZADD street_pollution 90  {"name":"filthy",     "score":90  }
-ZADD street_pollution 91  {"name":"squalid",     "score":91  }
+ZADD street_pollution 100  {"name":"squalid",     "score":100  }
 
 
 #        <terrain>
@@ -56,7 +56,7 @@ ZADD street_terrain 60  {"name":"uneven",     "score":60  }
 ZADD street_terrain 70  {"name":"rough",     "score":70  }
 ZADD street_terrain 80  {"name":"rugged",     "score":80  }
 ZADD street_terrain 90  {"name":"broken",     "score":90  }
-ZADD street_terrain 91  {"name":"jagged",     "score":91  }
+ZADD street_terrain 100  {"name":"jagged",     "score":100  }
 #
 #        <pollution>
 #
@@ -84,7 +84,7 @@ ZADD street_moral 80  {"name":"nice",                                    "score"
 ZADD street_moral 85  {"name":"ethical",                                    "score":85  }
 ZADD street_moral 90  {"name":"honest",                                    "score":90  }
 ZADD street_moral 95  {"name":"praise-worthy",                                    "score":95  }
-ZADD street_moral 96  {"name":"virtuous",                                    "score":96  }
+ZADD street_moral 100  {"name":"virtuous",                                    "score":100  }
 #
 #
 #
@@ -109,7 +109,7 @@ ZADD street_order 75  {"name":"sure",                                         "s
 ZADD street_order 80  {"name":"legitimized",                                         "score":80  }
 ZADD street_order 85  {"name":"organized",                                         "score":85  }
 ZADD street_order 90  {"name":"dutiful",                                         "score":90  }
-ZADD street_order 91  {"name":"honorable",                                         "score":91  }
+ZADD street_order 100  {"name":"honorable",                                         "score":100  }
 #
 #
 #        <tolerance>
@@ -120,7 +120,7 @@ ZADD street_tolerance 50  {"name":"ignore",                                     
 ZADD street_tolerance 60  {"name":"are neutral towards",                                         "score":60  }
 ZADD street_tolerance 70  {"name":"are accepting of",                                         "score":70  }
 ZADD street_tolerance 80  {"name":"accept",                                         "score":80  }
-ZADD street_tolerance 81  {"name":"love",                                         "score":81  }
+ZADD street_tolerance 100  {"name":"love",                                         "score":100  }
 #
 #        <economy>
 ZADD street_economy 6  {"name":"crumbling",                                         "score":6  }
@@ -141,7 +141,7 @@ ZADD street_economy 78  {"name":"healthy",                                      
 ZADD street_economy 84  {"name":"flourishing",                                         "score":84  }
 ZADD street_economy 90  {"name":"growing",                                         "score":90  }
 ZADD street_economy 96  {"name":"vibrant",                                         "score":96  }
-ZADD street_economy 97  {"name":"lively",                                         "score":97  }
+ZADD street_economy 100  {"name":"lively",                                         "score":100  }
 #
 #        <crime>
 ZADD street_crime 10  {"name":"rampant",                                         "score":10  }
@@ -149,7 +149,7 @@ ZADD street_crime 30  {"name":"common",                                         
 ZADD street_crime 50  {"name":"occasional",                                         "score":50  }
 ZADD street_crime 70  {"name":"unusual",                                         "score":70  }
 ZADD street_crime 90  {"name":"rare",                                         "score":90  }
-ZADD street_crime 91  {"name":"unheard of",                                         "score":91  }
+ZADD street_crime 100  {"name":"unheard of",                                         "score":100  }
 #
 #    <streets>
 #        <title>rough

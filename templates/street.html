@@ -1,0 +1,19 @@
+
+
+{% extends "base.html" %}
+{% block title %}How to get to {{tempobj.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>How to get to {{tempobj.name['full']}} <a href="/tempobj?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+
+
+
+{% include 'debug.html' %}
+
+
+
+{% endblock %}
