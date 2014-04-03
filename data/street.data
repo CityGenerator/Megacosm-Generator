@@ -1,8 +1,9 @@
-# Willis is a[n] _______ settlement.
 
 # street name
 
-# Corning street is a popular wide steet that is a[n] _________ primary route in the district
+# {{tempobj.name['full']}} is {{tempobj.popularity['name']|article}} {{tempobj.size['name']}} {{tempobj.kind}} that is {{tempobj.age['name']|article}} {{tempobj.important['name']}} route in the location.
+
+
 ZADD  street_age  30  { "name":"new",             "score":30    }
 ZADD  street_age  40  { "name":"established",     "score":40    }
 ZADD  street_age  60  { "name":"modern",          "score":60    }
@@ -13,6 +14,12 @@ ZADD  street_age 100  { "name":"ancient",         "score":100   }
 ZADD  street_important  50  { "name":"minor",      "score":50    }
 ZADD  street_important  90  { "name":"major",      "score":90    }
 ZADD  street_important 100  { "name":"primary",    "score":100   }
+
+# Corning street is an unpopular narrow road that is an ancient major route in the _______
+ZADD  street_scope  25  { "name":"district",    "score":25    }
+ZADD  street_scope  50  { "name":"city",        "score":50    }
+ZADD  street_scope  75  { "name":"region",      "score":75    }
+ZADD  street_scope 100  { "name":"country",     "score":100   }
 
 # Corning street is an unpopular ______ road that is an ancient major route in the region
 ZADD  street_size  50  { "name":"narrow",           "score":50    }
@@ -36,29 +43,29 @@ LPUSH street_kind street
 LPUSH street_kind route
 LPUSH street_kind throughway
 
-ZADD street_pollution 10  {"name":"pristine",     "score":10  }
-ZADD street_pollution 20  {"name":"sterile",     "score":20  }
-ZADD street_pollution 30  {"name":"clean",     "score":30  }
-ZADD street_pollution 40  {"name":"tidy",     "score":40  }
+#        <pollution>
+ZADD street_pollution 10  {"name":"pristine",       "score":10  }
+ZADD street_pollution 20  {"name":"sterile",        "score":20  }
+ZADD street_pollution 30  {"name":"clean",          "score":30  }
+ZADD street_pollution 40  {"name":"tidy",           "score":40  }
 ZADD street_pollution 60  {"name":"disheveled",     "score":60  }
-ZADD street_pollution 70  {"name":"grungy",     "score":70  }
-ZADD street_pollution 80  {"name":"poluted",     "score":80  }
-ZADD street_pollution 90  {"name":"filthy",     "score":90  }
-ZADD street_pollution 100  {"name":"squalid",     "score":100  }
+ZADD street_pollution 70  {"name":"grungy",         "score":70  }
+ZADD street_pollution 80  {"name":"polluted",       "score":80  }
+ZADD street_pollution 90  {"name":"filthy",         "score":90  }
+ZADD street_pollution 100 {"name":"squalid",        "score":100 }
 
 
 #        <terrain>
-ZADD street_terrain 10  {"name":"flat",     "score":10  }
-ZADD street_terrain 20  {"name":"even",     "score":20  }
-ZADD street_terrain 30  {"name":"rolling",     "score":30  }
-ZADD street_terrain 40  {"name":"hilly",     "score":40  }
-ZADD street_terrain 60  {"name":"uneven",     "score":60  }
-ZADD street_terrain 70  {"name":"rough",     "score":70  }
-ZADD street_terrain 80  {"name":"rugged",     "score":80  }
-ZADD street_terrain 90  {"name":"broken",     "score":90  }
-ZADD street_terrain 100  {"name":"jagged",     "score":100  }
+ZADD street_terrain 10  {"name":"flat",         "score":10  }
+ZADD street_terrain 20  {"name":"even",         "score":20  }
+ZADD street_terrain 30  {"name":"rolling",      "score":30  }
+ZADD street_terrain 40  {"name":"hilly",        "score":40  }
+ZADD street_terrain 60  {"name":"uneven",       "score":60  }
+ZADD street_terrain 70  {"name":"rough",        "score":70  }
+ZADD street_terrain 80  {"name":"rugged",       "score":80  }
+ZADD street_terrain 90  {"name":"broken",       "score":90  }
+ZADD street_terrain 100  {"name":"jagged",      "score":100 }
 #
-#        <pollution>
 #
 #        <moral>
 ZADD street_moral 4  {"name":"untrustworthy",                                    "score":4  }
@@ -70,14 +77,12 @@ ZADD street_moral 24  {"name":"unpleasant",                                    "
 ZADD street_moral 28  {"name":"opportunistic",                                    "score":28  }
 ZADD street_moral 32  {"name":"villianous",                                    "score":32  }
 ZADD street_moral 36  {"name":"nefarious",                                    "score":36  }
-#
 ZADD street_moral 40  {"name":"cold",                                    "score":40  }
 ZADD street_moral 45  {"name":"unconcerned",                                    "score":45  }
 ZADD street_moral 50  {"name":"undecided",                                    "score":50  }
 ZADD street_moral 55  {"name":"uncomitted",                                    "score":55  }
 ZADD street_moral 60  {"name":"indifferent",                                    "score":60  }
 ZADD street_moral 65  {"name":"indifferent",                                    "score":65  }
-#
 ZADD street_moral 70  {"name":"well meaning",                                    "score":70  }
 ZADD street_moral 75  {"name":"trustworty",                                    "score":75  }
 ZADD street_moral 80  {"name":"nice",                                    "score":80  }
@@ -96,13 +101,11 @@ ZADD street_order 20  {"name":"unpredictable",                                  
 ZADD street_order 25  {"name":"deranged",                                         "score":25  }
 ZADD street_order 30  {"name":"incoherent",                                         "score":30  }
 ZADD street_order 35  {"name":"vague",                                         "score":35  }
-#
 ZADD street_order 40  {"name":"bystanding",                                         "score":40  }
 ZADD street_order 45  {"name":"detached",                                         "score":45  }
 ZADD street_order 50  {"name":"non-participating",                                         "score":50  }
 ZADD street_order 55  {"name":"non-conformist",                                         "score":55  }
 ZADD street_order 60  {"name":"unflappable",                                         "score":60  }
-#
 ZADD street_order 65  {"name":"reliable",                                         "score":65  }
 ZADD street_order 70  {"name":"dependable",                                         "score":70  }
 ZADD street_order 75  {"name":"sure",                                         "score":75  }
@@ -128,14 +131,12 @@ ZADD street_economy 12  {"name":"failing",                                      
 ZADD street_economy 18  {"name":"uncertain",                                         "score":18  }
 ZADD street_economy 24  {"name":"shaky",                                         "score":24  }
 ZADD street_economy 30  {"name":"weak",                                         "score":30  }
-#
 ZADD street_economy 36  {"name":"calm",                                         "score":36  }
 ZADD street_economy 42  {"name":"stable",                                         "score":42  }
 ZADD street_economy 48  {"name":"insulated",                                         "score":48  }
 ZADD street_economy 54  {"name":"unwavering",                                         "score":54  }
 ZADD street_economy 60  {"name":"steady",                                         "score":60  }
 ZADD street_economy 66  {"name":"steadfast",                                         "score":66  }
-#
 ZADD street_economy 72  {"name":"good",                                         "score":72  }
 ZADD street_economy 78  {"name":"healthy",                                         "score":78  }
 ZADD street_economy 84  {"name":"flourishing",                                         "score":84  }
@@ -144,29 +145,36 @@ ZADD street_economy 96  {"name":"vibrant",                                      
 ZADD street_economy 100  {"name":"lively",                                         "score":100  }
 #
 #        <crime>
-ZADD street_crime 10  {"name":"rampant",                                         "score":10  }
+ZADD street_crime 10  {"name":"rampant",                                        "score":10  }
 ZADD street_crime 30  {"name":"common",                                         "score":30  }
-ZADD street_crime 50  {"name":"occasional",                                         "score":50  }
-ZADD street_crime 70  {"name":"unusual",                                         "score":70  }
-ZADD street_crime 90  {"name":"rare",                                         "score":90  }
-ZADD street_crime 100  {"name":"unheard of",                                         "score":100  }
+ZADD street_crime 50  {"name":"occasional",                                     "score":50  }
+ZADD street_crime 70  {"name":"unusual",                                        "score":70  }
+ZADD street_crime 90  {"name":"rare",                                           "score":90  }
+ZADD street_crime 100 {"name":"unheard of",                                     "score":100  }
+
+
+#muddy filthy
 #
-#    <streets>
-#        <title>rough
-#        <title>broken
-#        <title>pristine
-#        <title>irregular
-#        <title>smooth
-#        <title>bumpy
-#        <title>crude
-#        <title>even
-#        <title>well-maintained
-#        <title>filthy
-#        <title>muddy
-#        <root>dirt roads
-#        <root>dirt tracks
-#        <root>cobblestone streets
-#        <root>cobblestone paths
+ZADD street_repair  10  { "name":"broken",              "score":10   }
+ZADD street_repair  20  { "name":"rough",               "score":20   }
+ZADD street_repair  30  { "name":"crude",               "score":30   }
+ZADD street_repair  40  { "name":"irregular",           "score":40   }
+ZADD street_repair  50  { "name":"bumpy",               "score":50   }
+ZADD street_repair  60  { "name":"even",                "score":60   }
+ZADD street_repair  70  { "name":"smooth",              "score":70   }
+ZADD street_repair  80  { "name":"well-maintained",     "score":80   }
+ZADD street_repair 100  { "name":"pristine",            "score":100   }
+
+
+LPUSH street_material dirt
+LPUSH street_material gravel
+LPUSH street_material cobblestone
+LPUSH street_material pavingstone
+
+
+
+
+
 #        <trailer>in a grid pattern
 #        <trailer>in a ray pattern
 #        <trailer>in a contour-forming pattern
