@@ -37,7 +37,7 @@ The average technology level is {{tempobj.technology['name'] }}, which is known 
 {%endif%}
 
 {%if tempobj.continents%}
-<h2>continents</h2>
+<h2>Continents</h2>
     <ul>
     {%for continent in tempobj.continents %}
         <li><a href="/continent?seed={{continent.seed}}&planet_seed={{continent.planet.seed}}">{{continent.name['full']}} ({{continent.seed}})</a> is {{continent.size['name'] |article }} continent with {{continent.civilization['name'] }} civilization.</li>
