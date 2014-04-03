@@ -85,10 +85,10 @@ ZADD street_moral 85  {"name":"ethical",                                    "sco
 ZADD street_moral 90  {"name":"honest",                                    "score":90  }
 ZADD street_moral 95  {"name":"praise-worthy",                                    "score":95  }
 ZADD street_moral 96  {"name":"virtuous",                                    "score":96  }
-
-
-
-
+#
+#
+#
+#        <order>
 ZADD street_order 5  {"name":"unreliable",                                         "score":5  }
 ZADD street_order 10  {"name":"irresponsible",                                         "score":10  }
 ZADD street_order 15  {"name":"questionable",                                         "score":15  }
