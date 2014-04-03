@@ -94,9 +94,9 @@ function load_geomorphtiles(jsonblock, canvas){
                     ctx.drawImage(newtile, geox, geoy);
                     ctx.restore();
     
-                    ctx.rect( geox + geomorphTileSize / 2, geoy  + geomorphTileSize / 2, 2, 2);
-                    ctx.fillStyle = "red";
-                    ctx.fill();
+                    //ctx.rect( geox + geomorphTileSize / 2, geoy  + geomorphTileSize / 2, 2, 2);
+                    //ctx.fillStyle = "red";
+                    //ctx.fill();
                 }
                 newtile.src = tiledata.path;
             }
