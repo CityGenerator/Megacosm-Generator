@@ -773,12 +773,16 @@ def Deity_Builder():
 def feature_filter(generator):
     seed=set_seed( request.args.get('seed') )
 
+    seedregex=re.compile('^\d{1,10000}$')
+    genregex=re.compile('^'+generator+'_[a-z_]+$')
+    genrollregex=re.compile('^'+generator+'_[a-z_]+_(roll|chance)$')
+
     print "MAH SEED:",seed, request.args.get('seed') 
     features={'seed':seed,}
     for param in request.args :
-        if re.match('^'+generator+'_[a-z_]+_(roll|chance)$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if genrollregex.match(param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             features[param]=int(request.args[param])
-        elif re.match('^'+generator+'_[a-z_]+$',param) and re.match('^\d{1,10000}$',request.args[param]):
+        elif genregex.match(param) and seedregex.match(request.args[param]):
             fieldname= re.sub(generator+'_','', param)
             features[fieldname]=server.lrange(param, int(request.args[param]), int(request.args[param]) )[0]
     return features
