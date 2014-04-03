@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Welcome to The {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <h1>Welcome to The {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
 <h2>Summary</h2>
 The {{tempobj.name['full']}} is {{tempobj.size['name']|article}}, {{tempobj.condition}} {{tempobj.floor}} floor {{tempobj.kindname}}. The {{tempobj.rooftype}}-roofed building faces {{tempobj.direction}}, has {{tempobj.windows}} windows, and has {{tempobj.storefront|article}} storefront. 

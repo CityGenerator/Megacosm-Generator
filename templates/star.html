@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Behold {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <h1>Behold {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
 
 {{tempobj.name['full']}} is {{tempobj.size['name'] |article}} {{tempobj.color['name']}} star.

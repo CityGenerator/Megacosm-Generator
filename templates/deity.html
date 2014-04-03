@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Tremble Before <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.avatar.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Tremble Before <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.avatar.name['full']}} ({{tempobj.seed}})</a></h1>
 
 
 

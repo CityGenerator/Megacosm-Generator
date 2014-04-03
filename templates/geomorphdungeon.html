@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1> {{tempobj.text}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <h1> {{tempobj.text}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
     
     <canvas id='geomorphmap'></canvas>

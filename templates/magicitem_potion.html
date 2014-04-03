@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
+    <h1>You found <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
     <img src="/static/images/potion.png" style="float:left;background-color:#{{tempobj.color_description['hex']}}" >
     The {{tempobj.name|title}} is {{tempobj.color_description['name'] | article}} {{tempobj.kind}} in {{tempobj.container_material | article}} {{tempobj.container_shape}}.

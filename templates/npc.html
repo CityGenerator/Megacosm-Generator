@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Meet <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Meet <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
     {{tempobj.name['full']}} is {{tempobj.age['name']|article}} {{tempobj.race}} {{tempobj.sex['name']}} who is {{tempobj.skill['name'] | article}} {{tempobj.profession}} by trade. {{tempobj.name['firstname']}} is motivated {{tempobj.motivation.text}}.
     

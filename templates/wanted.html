@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 <div style="margin:auto; text-align:center;">
-    <h1 ><a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a> </h1>
+    <h1 ><a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a> </h1>
     <h1 >{{tempobj.headline }} </h1>
     <h2> {{tempobj.npc.name['full']}} </h2>
 

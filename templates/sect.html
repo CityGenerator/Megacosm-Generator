@@ -7,7 +7,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Beware the {{tempobj.name['full']}}, followers of {{tempobj.deity.name['full']}} <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <h1>Beware the {{tempobj.name['full']}}, followers of {{tempobj.deity.name['full']}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
 
 The {{tempobj.name['full']}} are {{tempobj.acceptance['name'] |article}} {{tempobj.kind}} that focuses on {{tempobj.domain['name']}}.

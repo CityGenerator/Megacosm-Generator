@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>You found <a href="/{{tempobj.__class__.__name__}}?seed={{tempobj.seed}}">{{tempobj.kind}}  ({{tempobj.seed}})</a></h1>
+    <h1>You found <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.kind}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
     The {{tempobj.name|title}} is {{tempobj.quality['name']|article }} {{tempobj.material_description['name'] }} {{tempobj.category_description['name']}} with {{tempobj.effect_description['name'] |article}} enchantment that {{tempobj.effect_description['description']}}. It is {{tempobj.repair['name'] }}.
     <h2>Details</h2>
