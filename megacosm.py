@@ -30,6 +30,7 @@ from generators import MundaneItem
 from generators import Motivation
 from generators import RogueDungeon
 from generators import GeomorphDungeon
+from generators import Street
 from util.Seeds import *
 from util import Filters
 import random
@@ -484,6 +485,25 @@ def Business_Builder():
     classname='business'
     paramlist,paramstring,paramset=builder_form_data(classname)
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+    
+#########################################################################
+
+@app.route('/street')
+def GenerateStreet():
+    """Generate a simple street"""
+    features=feature_filter('street')
+    tempobj=Street.Street(server,features)
+    return render_template('street.html', tempobj=tempobj )
+
+
+@app.route('/street_builder')
+def Street_Builder():
+    """Generate the basic data about a street"""
+
+    classname='street'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+    
     
     
 #########################################################################
