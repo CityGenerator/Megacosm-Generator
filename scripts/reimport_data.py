@@ -104,6 +104,23 @@ for image in glob.glob("static/images/backgrounds/*.png") :
 
 
 
+pipe.set("geomorphdungeon_decoration_chance",30);
+def create_dungeondecoration_record(pipe, image):
+    m = re.search('decorations/(.*)\.png', image)
+    global IMAGECOUNT
+    if m:
+        tilename = m.group(1)
+        pipe.lpush('geomorphdungeon_decoration' ,tilename  )
+        IMAGECOUNT+=1
+    else:
+        print "WARNING,",image,"is not in the right format."
+
+for image in glob.glob("static/images/decorations/*.png") :
+    create_dungeondecoration_record(pipe, image);
+
+
+
+
 
 
 pipe.execute()
