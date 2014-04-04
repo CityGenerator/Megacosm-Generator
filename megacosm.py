@@ -774,7 +774,6 @@ def Deity_Builder():
 def feature_filter(generator):
     seed=set_seed( request.args.get('seed') )
 
-    seedregex=re.compile('^\d{1,10000000}$')
     genregex=re.compile('^'+generator+'_[a-z_]+$')
     genrollregex=re.compile('^'+generator+'_[a-z_]+_(roll|chance)$')
 
@@ -783,7 +782,7 @@ def feature_filter(generator):
     for param in request.args :
         if genrollregex.match(param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             features[param]=int(request.args[param])
-        elif genregex.match(param) and seedregex.match(request.args[param]):
+        elif genregex.match(param) and str(request.args[param]).isdigit():
             fieldname= re.sub(generator+'_','', param)
             features[fieldname]=server.lrange(param, int(request.args[param]), int(request.args[param]) )[0]
     return features
