@@ -42,6 +42,7 @@ import os
 import sys
 import inflect
 import re
+import traceback
 from pprint import pprint
 
 p = inflect.engine()
@@ -822,6 +823,8 @@ def page_not_found(e):
 def page_borked(e):
     """Return a custom 500 error. Only hit when debugging is off."""
     message="You Broke it!"
+    print "problem with ",request
+    traceback.print_exc()
     return message, 500
 
 @app.template_filter('article')
