@@ -1,5 +1,11 @@
- 
-//#############################################################################################3
+ //#############################################################################################3
+
+function save_as_png(canvasname){
+    var canvas=document.getElementById(canvasname);
+    window.location = canvas.toDataURL("image/png");
+
+}
+
 
 
 var geomorphTileSize = 200;
