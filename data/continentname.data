@@ -1,30 +1,30 @@
 # what
 
-SET   namecontinenttitle_chance 10
-LPUSH namecontinenttitle North
-LPUSH namecontinenttitle South
-LPUSH namecontinenttitle East
-LPUSH namecontinenttitle West
+SET   name_continenttitle_chance 10
+LPUSH name_continenttitle North
+LPUSH name_continenttitle South
+LPUSH name_continenttitle East
+LPUSH name_continenttitle West
 
-LPUSH namecontinentpre As
-LPUSH namecontinentpre Eur
-LPUSH namecontinentpre An
-LPUSH namecontinentpre Del
-LPUSH namecontinentpre Mon
-LPUSH namecontinentpre Na
-LPUSH namecontinentpre Ko
+LPUSH name_continentpre As
+LPUSH name_continentpre Eur
+LPUSH name_continentpre An
+LPUSH name_continentpre Del
+LPUSH name_continentpre Mon
+LPUSH name_continentpre Na
+LPUSH name_continentpre Ko
 
-LPUSH namecontinentroot sar
-LPUSH namecontinentroot gar
-LPUSH namecontinentroot bel
-LPUSH namecontinentroot por
-LPUSH namecontinentroot ama
-LPUSH namecontinentroot lax
+LPUSH name_continentroot sar
+LPUSH name_continentroot gar
+LPUSH name_continentroot bel
+LPUSH name_continentroot por
+LPUSH name_continentroot ama
+LPUSH name_continentroot lax
 
-SET   namecontinentpost_chance 30
-LPUSH namecontinentpost ica
-LPUSH namecontinentpost iv
-LPUSH namecontinentpost ek
-LPUSH namecontinentpost ar
+SET   name_continentpost_chance 30
+LPUSH name_continentpost ica
+LPUSH name_continentpost iv
+LPUSH name_continentpost ek
+LPUSH name_continentpost ar
 
 

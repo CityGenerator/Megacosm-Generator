@@ -34,7 +34,7 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll_key_doesnt_exist(self):
         generator = Generator(self.redis, {'seed':1007})
-        with self.assertRaisesRegexp(Exception, 'the key \(funion\) doesn\'t appear') as context:
+        with self.assertRaisesRegexp(IndexError, 'Is funion a valid key?') as context:
             generator.select_by_roll('funion')
 
     def test_select_by_roll_highmin(self):
@@ -45,12 +45,12 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll_key_wrong_type(self):
         generator = Generator(self.redis, {'seed':1007, 'star_size_roll':37})
-        with self.assertRaisesRegexp(Exception, "the key \(namestarpre\) doesn't appear to exist or isn't a zset \(list\).") as context:
-            generator.select_by_roll('namestarpre')
+        with self.assertRaisesRegexp(Exception, "the key \(name_starpre\) doesn't appear to exist or isn't a zset \(list\).") as context:
+            generator.select_by_roll('name_starpre')
         
     def test_rand_value(self):
         generator = Generator(self.redis, {'seed':1007})
-        self.assertIs(str, type(generator.rand_value('namestarpre')))
+        self.assertIs(str, type(generator.rand_value('name_starpre')))
 
     def test_rand_value_key_wrong_type(self):
         generator = Generator(self.redis, {'seed':1007})
