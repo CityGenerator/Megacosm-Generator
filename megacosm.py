@@ -12,6 +12,7 @@ from generators import Cuisine
 from generators import Continent
 from generators import Country
 from generators import Sect
+from generators import Leader
 from generators import Legend
 from generators import Business
 from generators import Star
@@ -759,6 +760,27 @@ def Deity_Builder():
     result= server.zrange('portfolio_domain',0,-1)
 
     return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+
+#########################################################################
+
+@app.route('/leader')
+def GenerateLeader():
+    """Generate a simple leader"""
+
+    features=feature_filter('leader')
+    leader=Leader.Leader(server,features)
+    return render_template('leader.html', tempobj=leader )
+
+@app.route('/leader_builder')
+def Leader_Builder():
+    """Generate the basic data about a leader"""
+    classname='leader'
+    paramlist,paramstring,paramset=builder_form_data(classname)
+    result= server.zrange('portfolio_domain',0,-1)
+
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name=classname)
+
+
 
 
 
