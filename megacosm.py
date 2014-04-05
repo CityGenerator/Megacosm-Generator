@@ -100,8 +100,9 @@ def GenerateNPC():
     attitudes=server.lrange('npc_attitude',0,-1);
     motivations=server.lrange('npc_motivation',0,-1);
     emotions=server.lrange('npc_emotion',0,-1);
+
     for param in request.args :
-        if re.match('^npc_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^npc_[a-z_]+_roll$',param) and  isvalidscore(request.args[param]) :
             npcfeatures[param]=int(request.args[param])
         elif re.match('^npc_race$',param) and request.args[param] in races:
             npcfeatures['race']=request.args[param]
@@ -147,7 +148,7 @@ def GenerateBond():
     bondfeatures={'seed':app.seed,}
 
     for param in request.args :
-        if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if re.match('^bond_[a-z_]+_roll$',param) and isvalidscore(request.args[param]) :
             bondfeatures[param]=int(request.args[param])
         elif re.match('^bond_template_id$',param)  and int(request.args[param])>=0 and int(request.args[param]) < server.llen('bond_template'):
             bondfeatures['template']=server.lrange('bond_template', int(request.args[param]), int(request.args[param]) )[0]
@@ -802,7 +803,7 @@ def feature_filter(generator):
     print "MAH SEED:",app.seed, request.args.get('seed') 
     features={'seed':app.seed,}
     for param in request.args :
-        if genrollregex.match(param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+        if genrollregex.match(param) and isvalidscore(request.args[param]) :
             features[param]=int(request.args[param])
         elif genregex.match(param) and str(request.args[param]).isdigit():
             fieldname= re.sub(generator+'_','', param)
@@ -828,6 +829,12 @@ def builder_form_data(generator):
                 except ValueError as e:
                     raise Exception ("failed to parse",key,"field", field)
     return paramlist,paramstring,paramset
+
+def isvalidscore(value):
+    if value.isdigit() and int(value)<=0 and int(value)<=100:
+        return True
+    else:
+        return False
 
 
 
