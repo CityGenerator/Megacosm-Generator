@@ -91,9 +91,9 @@ def MagicItem_Builder():
 @app.route('/npc')
 def GenerateNPC():
     """Generate an NPC"""
-    seed=set_seed( request.args.get('seed') )
+    app.seed=set_seed( request.args.get('seed') )
 
-    npcfeatures={'seed':seed,}
+    npcfeatures={'seed':app.seed,}
 
     races=server.lrange('race',0,-1);
     professions=server.lrange('npc_profession',0,-1);
@@ -141,10 +141,10 @@ def NPC_Builder():
 @app.route('/bond')
 def GenerateBond():
     """Generate a simple bond"""
-    seed=set_seed( request.args.get('seed') )
+    app.seed=set_seed( request.args.get('seed') )
 
 
-    bondfeatures={'seed':seed,}
+    bondfeatures={'seed':app.seed,}
 
     for param in request.args :
         if re.match('^bond_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
@@ -794,13 +794,13 @@ def Leader_Builder():
 
 
 def feature_filter(generator):
-    seed=set_seed( request.args.get('seed') )
+    app.seed=set_seed( request.args.get('seed') )
 
     genregex=re.compile('^'+generator+'_[a-z_]+$')
     genrollregex=re.compile('^'+generator+'_[a-z_]+_(roll|chance)$')
 
-    print "MAH SEED:",seed, request.args.get('seed') 
-    features={'seed':seed,}
+    print "MAH SEED:",app.seed, request.args.get('seed') 
+    features={'seed':app.seed,}
     for param in request.args :
         if genrollregex.match(param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
             features[param]=int(request.args[param])
@@ -845,6 +845,8 @@ def page_borked(e):
     """Return a custom 500 error. Only hit when debugging is off."""
     message="You Broke it!"
     print "problem with ",request
+    print "on seed",app.seed
+
     traceback.print_exc()
     return message, 500
 
