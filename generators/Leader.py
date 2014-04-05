@@ -5,7 +5,7 @@ from generators.Generator import Generator
 from generators.NPC import  NPC
 from generators.Sect import  Sect
 from generators.Country import Country
-from generators.City import City
+#from generators.City import City
 
 
 class Leader(NPC):
