@@ -10,14 +10,14 @@ from util import Seeds
 
 class Generator(object):
     """ An abstracted Generator that all generators are based from """
-    def __init__(self,redis, features={}):
+    def __init__(self,redis, features={},namekey=None):
         
         # Redis is the source of all data.
         self.redis=redis
         self.pipeline=self.redis.pipeline
         # We use our class name as a key for redis
-        namekey= self.__class__.__name__.lower()
-
+        if namekey is None:
+            namekey= self.__class__.__name__.lower()
 
         # see if we have a seed to use, otherwise generate a new one.
         if 'seed' in features:
