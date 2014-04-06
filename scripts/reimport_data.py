@@ -60,10 +60,10 @@ pipe=server.pipeline()
 
 pipe.flushall()
 
-for filename in glob.glob("data/*.data") :
+for filename in sorted(glob.glob("data/*.data")) :
     parse_file(pipe, filename)
 
-for filename in glob.glob("data/*/*.data") :
+for filename in sorted(glob.glob("data/*/*.data")) :
     parse_file(pipe, filename)
 
 
@@ -99,7 +99,7 @@ def create_dungeonbackground_record(pipe, image):
     else:
         print "WARNING,",image,"is not in the right format."
 
-for image in glob.glob("static/images/backgrounds/*.png") :
+for image in sorted(glob.glob("static/images/backgrounds/*.png")) :
     create_dungeonbackground_record(pipe, image);
 
 
@@ -115,7 +115,7 @@ def create_dungeondecoration_record(pipe, image):
     else:
         print "WARNING,",image,"is not in the right format."
 
-for image in glob.glob("static/images/decorations/*.png") :
+for image in sorted(glob.glob("static/images/decorations/*.png")) :
     create_dungeondecoration_record(pipe, image);
 
 
