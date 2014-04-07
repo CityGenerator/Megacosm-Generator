@@ -827,19 +827,14 @@ def builder_form_data(generator):
                 try:
                     paramset[fieldname].append( json.loads(field))
                 except ValueError as e:
-                    raise Exception ("failed to parse",key,"field", field)
+                    raise ValueError ("failed to parse %s field %s" % (key, field))
     return paramlist,paramstring,paramset
 
 def isvalidscore(value):
-    if value.isdigit() and int(value)<=0 and int(value)<=100:
+    if value.isdigit() and int(value)>=0 and int(value)<=100:
         return True
     else:
         return False
-
-
-
-
-
 
 
 @app.errorhandler(404)
