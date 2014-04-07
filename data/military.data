@@ -1,56 +1,78 @@
 
+# The Varjat Region has a[n] _______ military, consisting of _______% of the viable population.
+ZADD military_size   5 {"name":"tiny",       "score":5,   "percent":10 }
+ZADD military_size  10 {"name":"small",      "score":10,  "percent":20 }
+ZADD military_size  65 {"name":"moderate",   "score":65,  "percent":30 }
+ZADD military_size  85 {"name":"large",      "score":85,  "percent":40 }
+ZADD military_size 100 {"name":"massive",    "score":100, "percent":70 }
+
+# _______% of the force are active while %______ are reserves.
+#active
+#reserve
+
+#Of the active troops, _________% are ____________.
+LPUSH military_para_kind special forces
+LPUSH military_para_kind paramilitary
+
+#The Troops are considered _________ trained,
+ZADD military_training  50 {"name":"poorly",       "score":50   }
+ZADD military_training 100 {"name":"highly",       "score":100  }
+
+# _________ supplied
+ZADD military_supply  30 {"name":"poorly",     "score":30     }
+ZADD military_supply  60 {"name":"well",       "score":60     }
+ZADD military_supply 100 {"name":"abundantly", "score":100    }
+
+# with __________ gear,
+ZADD military_gear  30 {"name":"old",         "score":30     }
+ZADD military_gear  60 {"name":"modern",      "score":60     }
+ZADD military_gear 100 {"name":"advanced",    "score":100    }
+
+#and _______ prepared.
+ZADD military_prepared  30 {"name":"poorly",      "score":30     }
+ZADD military_prepared  60 {"name":"well",        "score":60     }
+ZADD military_prepared 100 {"name":"amply",       "score":100    }
+
+#The troops are _________,
+ZADD military_prepared  30 {"name":"disloyal",              "score":30     }
+ZADD military_prepared  60 {"name":"easily spooked",        "score":60     }
+ZADD military_prepared 100 {"name":"paragons of loyalty",   "score":100    }
+
+# The Gonzo Militia relies heavily on ____________ tactics,
+# http://en.wikipedia.org/wiki/List_of_military_tactics
+
+# and are known to favor __________ when in battle.
+# weapontypes can be copied from other files- maybe magicitems/weapons.data?
+
+#and have a reputation for ________.
+LPUSH military_reputation taking no prisoners
+LPUSH military_reputation leaving no survivors
+LPUSH military_reputation fighting honorably
+LPUSH military_reputation fighting to the last
 
 
-# size of military
-active
-reserve
-paramilitary
+#The Xilen are also known to have _____________ troops;
+LPUSH military_special calvary
+LPUSH military_special shock
+LPUSH military_special berzerker
+LPUSH military_special heavily armored
+
+# The Fooboo army relies heavily on ________ to maintain fortified positions
+# http://en.wikipedia.org/wiki/Fortification
+
+# The general populace ___________ the military.
+ZADD military_popularity  30 {"name":"hates",               "score":30     }
+ZADD military_popularity  60 {"name":"is neutral towards",  "score":60     }
+ZADD military_popularity  90 {"name":"supports",            "score":90     }
+ZADD military_popularity 100 {"name":"reveres",             "score":100    }
 
 
 
-Ready fortifications
-
-preparation
-
-favored tactic
-
-reputation
-
-favored weapon
-weapon reputation
+#rank structure
+# Rank/structure may be able to pull from Organization- perhaps military should be a subset or organization?
 
 
-number of troops
-type of troops
-quality of training
-quality of gear
-level of loyalty
-level of technology
-supply levels
-financing
-rank structure
+# alliances
+# Handled elsewhere
 
-
-alliances
-
-
-
-
-
-
-
-
-
-
-
-        <military>
-            <option          max="20" >negative</option>
-            <option min="21" max="30" >disinterested</option>
-
-            <option min="31" max="50" >neutral</option>
-            <option min="51" max="70" >laid back</option>
-
-            <option min="71" max="80" >positive</option>
-            <option min="81"          >reverent</option>
-        </military>
 

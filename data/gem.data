@@ -30,6 +30,11 @@ ZADD gem_quality  60 { "name":"flawless"    , "score":60   }
 ZADD gem_quality  80 { "name":"radiant"     , "score":80   }
 ZADD gem_quality 100 { "name":"perfect"     , "score":100  }
 
+ZADD gem_size 5  {"name":"tiny",       "score":5   }
+ZADD gem_size 10 {"name":"small",      "score":10   }
+ZADD gem_size 65 {"name":"moderate",   "score":65   }
+ZADD gem_size 85 {"name":"large",      "score":85   }
+ZADD gem_size 100 {"name":"massive",   "score":100   }
 
 SET   gem_cut_chance 50
 LPUSH gem_cut baguette

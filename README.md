@@ -8,6 +8,8 @@ A tool for creating fantasy campaign settings, including maps, regions, flags, c
 # Set Up The Dev Environment
 
 * make sure you have python 2.7
+apt-get install git python-dev python-virtualenv redis
+
 * make sure you have python's virtualenv installed
 * set up Redis or (have access to one, like redistogo).
 
