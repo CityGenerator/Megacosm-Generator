@@ -4,6 +4,7 @@ import redis
 import ConfigParser, os
 import glob
 import sys
+import json
 from pprint import pprint
 import re
 
@@ -38,6 +39,7 @@ def parse_file(pipe, filename):
                         pipe.zadd(key,value,score)
                     elif command == "HSET":
                         name,key,value=args.split(None,2)
+                        validate_json(value, filename, linenumber)
                         pipe.hset(name,key,value)
                     elif command == "DEL":
                         pipe.delete(args)
@@ -48,6 +50,15 @@ def parse_file(pipe, filename):
                     print "There was a problem reading",filename,"near line",linenumber,""
     raw_data.close()
 
+
+def validate_json(value, filename, linenumber):
+    try:
+        json.loads(value)
+    except Exception:
+        print "ERROR: The following value is not proper JSON:"
+        print filename,"near line",linenumber,":"
+        print value
+        sys.exit(1)
 
 
 config = ConfigParser.RawConfigParser()
