@@ -35,8 +35,6 @@ class TestCountry(unittest.TestCase):
 #        print country.__dict__
 
 
-if __name__ == '__main__':
-    unittest.main()
 
 
 

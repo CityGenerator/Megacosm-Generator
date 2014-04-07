@@ -27,9 +27,3 @@ class TestMoon(unittest.TestCase):
         self.assertNotEqual(moon.size,'')
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-

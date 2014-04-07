@@ -350,7 +350,3 @@ class MegacosmFlaskTestCast(flask.ext.testing.TestCase):
         self.assert200(response)
 
 
-
-
-if __name__ == '__main__':
-    unittest.main()

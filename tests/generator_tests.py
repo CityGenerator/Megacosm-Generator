@@ -63,8 +63,3 @@ class TestGenerator(unittest.TestCase):
             generator.rand_value('somekey')
        
        
-
-if __name__ == '__main__':
-    unittest.main()
-
-

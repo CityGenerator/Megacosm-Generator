@@ -25,11 +25,6 @@ class TestMisfire(unittest.TestCase):
         misfire = Misfire(self.redis )
         print misfire.text
         self.assertNotEqual(misfire.text,'')
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-
+        self.assertEqual("%s" % (misfire),   misfire.text)
 
 

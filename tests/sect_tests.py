@@ -26,9 +26,3 @@ class TestSect(unittest.TestCase):
         self.assertNotEqual(sect.domain,'')
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-

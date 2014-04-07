@@ -44,9 +44,3 @@ class TestNPC(unittest.TestCase):
         self.assertEqual(npc.race,'human')
         self.assertRegexpMatches(npc.name['full'], '.+ .+')
 
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-
