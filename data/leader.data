@@ -425,11 +425,11 @@ HSET  leadermayorcouncil_leader_description mayor { "male":"Mayor",      "female
 LPUSH leadercommission_leader commissioner
 HSET  leadercommission_leader_description commissioner { "male":"Commissioner",      "female":"Commissioner"      }
 
-LPUSH leadertownmeeting_leaderkind elder
-HSET  leadertownmeeting_leaderkind_description elder { "male":"Elder",      "female":"Elder"      }
+LPUSH leadertownmeeting_leader elder
+HSET  leadertownmeeting_leader_description elder { "male":"Elder",      "female":"Elder"      }
 
-LPUSH leadermagistrate_leaderkind magistrate
-HSET  leadermagistrate_leaderkind_description magistrate { "male":"Magistrate",      "female":"Magistrate"      }
+LPUSH leadermagistrate_leader magistrate
+HSET  leadermagistrate_leader_description magistrate { "male":"Magistrate",      "female":"Magistrate"      }
 
 #
 #

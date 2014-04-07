@@ -29,5 +29,7 @@ class Leader(NPC):
         self.set_title()
 
     def set_title(self):
-        self.name['title']=self.leaderkind_description[self.sex['name']]
+        print self.__dict__
+        print "stuff"
+        self.name['title']=self.leader_description[self.sex['name']]
         self.name['fulltitled']=self.name['title'] +" "+self.name['full']
