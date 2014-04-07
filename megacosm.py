@@ -37,6 +37,7 @@ from util import Filters
 import random
 import redis
 import ConfigParser
+import datetime
 import pprint
 import json
 import os
@@ -840,17 +841,21 @@ def isvalidscore(value):
 @app.errorhandler(404)
 def page_not_found(e):
     """Return a custom 404 error."""
-    return 'Sorry, Nothing at this URL.', 404
+    print "======================="
+    time=str(datetime.datetime.now())
+    return render_template("400.html",request=request,time=time ), 404
 
 @app.errorhandler(500)
 def page_borked(e):
     """Return a custom 500 error. Only hit when debugging is off."""
-    message="You Broke it!"
-    print "problem with ",request
-    print "on seed",app.seed
-
+    print "======================="
+    print "problem with ",request.url
+    time=str(datetime.datetime.now())
+    print "on seed",app.seed,"at",time
+    print "Exception:",e.args[0]
     traceback.print_exc()
-    return message, 500
+
+    return render_template("500.html",seed=app.seed, request=request,e=e,time=time ), 500
 
 @app.template_filter('article')
 def select_article(s):
