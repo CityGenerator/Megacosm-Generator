@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/CityGenerator/Megacosm-Generator/badge.png)](https://coveralls.io/r/CityGenerator/Megacosm-Generator)
+
 Megacosm-Generator
 ==================
 
