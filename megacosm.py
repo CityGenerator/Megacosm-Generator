@@ -84,78 +84,39 @@ def magicitem_builder():
 @app.route('/npc')
 def generatenpc():
     """Generate an NPC"""
-    app.seed = set_seed(request.args.get('seed'))
 
-    npcfeatures = {'seed':app.seed, }
-
-    races = server.lrange('race', 0, -1)
-    professions = server.lrange('npc_profession', 0, -1)
-    attitudes = server.lrange('npc_attitude', 0, -1)
-    motivations = server.lrange('npc_motivation', 0, -1)
-    emotions = server.lrange('npc_emotion', 0, -1)
-
-    for param in request.args:
-        paramval = request.args[param]
-        if re.match('^npc_[a-z_]+_roll$', param) and  isvalidscore(paramval):
-            npcfeatures[param] = int(paramval)
-        elif re.match('^npc_race$', param) and paramval in races:
-            npcfeatures['race'] = paramval
-        elif re.match('^npc_profession$', param) and paramval in professions:
-            npcfeatures['profession'] = paramval
-        elif re.match('^npc_attitude$', param) and paramval in attitudes:
-            npcfeatures['attitude'] = paramval
-        elif re.match('^npc_motivation$', param) and paramval in motivations:
-            npcfeatures['motivation'] = paramval
-        elif re.match('^npc_emotion$', param) and paramval in emotions:
-            npcfeatures['emotion'] = paramval
-
-    npcfeatures['deity'] = Deity.Deity(server)
-    npc = NPC.NPC(server, npcfeatures)
-    return render_template('npc.html', tempobj=npc)
+    features = feature_filter('npc')
+    features['deity'] = Deity.Deity(server)
+    tempobj = NPC.NPC(server, features)
+    return render_template('npc.html', tempobj=tempobj)
 
 @app.route('/npc_builder')
 def npc_builder():
     """Build an NPC"""
+    classname = 'npc'
+    plist, pstring, pset = builder_form_data(classname)
 
-    stats = server.lrange('stat_npc', 0, -1)
-    statinfo = {}
-    races = server.lrange('race', 0, -1)
-    professions = server.lrange('npc_profession', 0, -1)
-    attitudes = server.lrange('npc_attitude', 0, -1)
-    motivations = server.lrange('npc_motivation', 0, -1)
-    emotions = server.lrange('npc_emotion', 0, -1)
-    for stat in stats:
-        statinfo[stat] = []
-        for statstring in server.zrange('npc_'+stat, 0, -1):
-            statinfo[stat].append(json.loads(statstring))
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-    return render_template('npc_builder.html', statinfo=statinfo, otherstats={'race':races, 'profession':professions, 'attitude':attitudes, 'motivation':motivations, 'emotion':emotions})
 
 #########################################################################
 
 @app.route('/bond')
 def generatebond():
     """Generate a bond"""
-    app.seed = set_seed(request.args.get('seed'))
 
-
-    bondfeatures = {'seed':app.seed, }
-
-    for param in request.args:
-        paramval = request.args[param]
-        if re.match('^bond_[a-z_]+_roll$', param) and isvalidscore(paramval):
-            bondfeatures[param] = int(paramval)
-        elif re.match('^bond_template_id$', param)  and int(paramval) >= 0 and int(paramval) < server.llen('bond_template'):
-            bondfeatures['template'] = server.lrange('bond_template', int(paramval), int(paramval))[0]
-        elif re.match('^bond_when_id$', param)  and int(paramval) >= 0 and int(paramval) < server.llen('bond_when'):
-            bondfeatures['when'] = server.lrange('bond_when', int(paramval), int(paramval))[0]
-        elif re.match('^bond_[a-zA-Z]*$', param)  and re.match('^[a-zA-Z\']+$', paramval):
-            fieldname = param.split('_', 2)[1]
-            bondfeatures[fieldname] = paramval
-
-    bond = Bond.Bond(server, bondfeatures)
-
-    return render_template('oneliner.html', oneliner=bond, titletext='The Ties that Bind Us... ', generator='bond')
+    features = feature_filter('bond')
+    titletext = 'The Ties that Bind Us..'
+    features['npc'] = NPC.NPC(server)
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
+        bonds = []
+        for _ in xrange(int(request.args['count'])):
+            bonds.append(Bond.Bond(server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=bonds, oneliner=bonds[0], titletext=titletext, generator='bond')
+    else:
+        bond = Bond.Bond(server, features)
+        return render_template('oneliner.html', oneliner=bond, titletext=titletext, generator='bond')
 
 @app.route('/bond_builder')
 def bond_builder():
