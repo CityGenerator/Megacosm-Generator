@@ -20,10 +20,6 @@ gunicorn>=18.0
 inflect>=0.2.4
 coveralls
 pylint
-pylint-mccabe
-fluff
 pyflakes
-githooks
 flakeplus
-pymetrics
-PythonTidy
+

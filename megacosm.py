@@ -32,7 +32,7 @@ from generators import Motivation
 from generators import RogueDungeon
 from generators import GeomorphDungeon
 from generators import Street
-from util.Seeds import *
+from util.Seeds import set_seed
 from util import Filters
 import redis
 import ConfigParser
@@ -40,7 +40,6 @@ import datetime
 import json
 import re
 import traceback
-from pprint import pprint
 
 CONFIG = ConfigParser.RawConfigParser()
 CONFIG.read('data/config.ini')
@@ -200,7 +199,7 @@ def generateresource():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         resources = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             resources.append(Resource.Resource(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=resources, oneliner=resources[0], titletext=titletext, generator='resource')
@@ -228,7 +227,7 @@ def generaterumor():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         rumors = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             rumors.append(Rumor.Rumor(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=rumors, oneliner=rumors[0], titletext=titletext, generator='rumor')
@@ -257,7 +256,7 @@ def generatemisfire():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         misfires = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             misfires.append(Misfire.Misfire(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=misfires, oneliner=misfires[0], titletext=titletext, generator='misfire')
@@ -285,7 +284,7 @@ def generatecurrency():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         currencys = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             currencys.append(Currency.Currency(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=currencys, oneliner=currencys[0], titletext=titletext, generator='currency')
@@ -314,7 +313,7 @@ def generatejobposting():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         jobpostings = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             jobpostings.append(JobPosting.JobPosting(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=jobpostings, oneliner=jobpostings[0], titletext=titletext, generator='jobposting')
@@ -345,7 +344,7 @@ def generateevent():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         events = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             events.append(Event.Event(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=events, oneliner=events[0], titletext=titletext, generator='event')
@@ -373,7 +372,7 @@ def generatemotivation():
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         motivations = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             motivations.append(Motivation.Motivation(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=motivations, oneliner=motivations[0], titletext=titletext, generator='motivation')
@@ -399,7 +398,7 @@ def generategem():
     titletext = 'OOOH, Shiny...'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         gems = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             gems.append(Gem.Gem(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=gems, oneliner=gems[0], titletext=titletext, generator='gem')
@@ -425,7 +424,7 @@ def generatemundaneitem():
     titletext = 'Look what I found!'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         mundaneitems = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             mundaneitems.append(MundaneItem.MundaneItem(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=mundaneitems, oneliner=mundaneitems[0], titletext=titletext, generator='mundaneitem')
@@ -451,7 +450,7 @@ def generatelegend():
     titletext = 'Let me tell you a story...'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         legends = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             legends.append(Legend.Legend(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=legends, oneliner=legends[0], titletext=titletext, generator='legend')
@@ -596,7 +595,6 @@ def sect_builder():
     """Build a a sect"""
     classname = 'sect'
     plist, pstring, pset = builder_form_data(classname)
-    result = server.zrange('portfolio_domain', 0, -1)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
@@ -723,7 +721,7 @@ def generatecuisine():
     titletext = 'What\'s for Dinner?'
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         cuisines = []
-        for item in xrange(int(request.args['count'])):
+        for _ in xrange(int(request.args['count'])):
             cuisines.append(Cuisine.Cuisine(server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=cuisines, oneliner=cuisines[0], titletext=titletext, generator='cuisine')
@@ -754,7 +752,6 @@ def deity_builder():
     """Build a a deity"""
     classname = 'deity'
     plist, pstring, pset = builder_form_data(classname)
-    result = server.zrange('portfolio_domain', 0, -1)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
@@ -773,7 +770,6 @@ def leader_builder():
     """Build a a leader"""
     classname = 'leader'
     plist, pstring, pset = builder_form_data(classname)
-    result = server.zrange('portfolio_domain', 0, -1)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
@@ -857,23 +853,30 @@ def page_borked(error):
 
 @app.template_filter('article')
 def select_article(noun):
+    """Select the proper article for a noun."""
     return Filters.select_article(noun)
 
 @app.template_filter('pluralize')
 def select_pluralize(verb, count):
+    """Select the proper verb for a count."""
     return Filters.select_pluralize(verb, count)
 
 @app.template_filter('conjunction')
 def select_conjunction(wordlist):
+    """Join a list with commas and such."""
     return Filters.select_conjunction(wordlist)
 
 
 @app.template_filter('plural_verb')
 def select_plural_verb(verb, subject):
+    """select the proper plural verb."""
+    # FIXME is this a duplicate of select_pluralize???
     return Filters.select_plural_verb(verb, subject)
 
 @app.template_filter('plural_adj')
 def select_plural_adj(adj, subject):
+    """Select the proper version of an adjective."""
+    #FIXME is this correct? or is it count-based?
     return Filters.select_plural_adj(adj, subject)
 
 
