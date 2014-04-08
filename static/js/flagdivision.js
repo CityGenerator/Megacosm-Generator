@@ -25,20 +25,20 @@ function select_division( params){
 }
 
 //==================================================
-function draw_quaddiagonals(params){ 
-     draw_quaddiagonal( params, "north" ); 
-     draw_quaddiagonal( params, "south" ); 
-     draw_quaddiagonal( params, "east"  ); 
-     draw_quaddiagonal( params, "west"  ); 
-} 
- 
-function draw_quaddiagonal(params, side, color){ 
-    var a=0, b=0, c=0,d=0; 
-    if (side=="east" ){a=params.canvas.width} 
-    if (side=="south" ){b=params.canvas.height} 
-    if (side=="north" || side=="east"  ||side=="south"){c=params.canvas.width} 
-    if (side=="east"  || side=="south" ||side=="west" ){d=params.canvas.height} 
-    console.log('quaddiag'+side) 
+function draw_quaddiagonals(params){
+     draw_quaddiagonal( params, "north" );
+     draw_quaddiagonal( params, "south" );
+     draw_quaddiagonal( params, "east"  );
+     draw_quaddiagonal( params, "west"  );
+}
+
+function draw_quaddiagonal(params, side, color){
+    var a=0, b=0, c=0,d=0;
+    if (side=="east" ){a=params.canvas.width}
+    if (side=="south" ){b=params.canvas.height}
+    if (side=="north" || side=="east"  ||side=="south"){c=params.canvas.width}
+    if (side=="east"  || side=="south" ||side=="west" ){d=params.canvas.height}
+    console.log('quaddiag'+side)
     if (!color ){
         if (side == "north" || side == "south"){
             color=params.colors[0].hex;
@@ -69,41 +69,41 @@ function draw_quaddiagonal(params, side, color){
 
 //==================================================
 
-function draw_solid( params){ 
-        params.flag.fillStyle=params.colors[0].hex; 
-        params.flag.fillRect(0,0, params.canvas.width,params.canvas.height);  
-        return params.flag; 
- 
-} 
-function draw_quads(params){ 
- 
-    draw_quad( params, "nw" ); 
-    draw_quad( params, "ne" ); 
-    draw_quad( params, "sw" ); 
-    draw_quad( params, "se" ); 
-} 
-function draw_quad(params, quadrant, color){ 
-    var a=0,b=0,c=params.canvas.width/2, d=params.canvas.height/2; 
-    if (quadrant == "ne" || quadrant == "se" ){ 
-        a=params.canvas.width/2; 
-    } 
-    if (quadrant == "se" || quadrant == "sw" ){ 
-        b=params.canvas.height/2; 
-    } 
+function draw_solid( params){
+        params.flag.fillStyle=params.colors[0].hex;
+        params.flag.fillRect(0,0, params.canvas.width,params.canvas.height);
+        return params.flag;
 
-    if ( color == undefined) { 
-        if (quadrant == "nw" || quadrant == "se" ){ 
-            color=params.colors[0].hex; 
-        }else{ 
-            color=params.colors[1].hex; 
-        } 
-    } 
- 
-     
-    params.flag.fillStyle=color; 
- 
-    params.flag.fillRect( a, b, c, d ); 
-} 
+}
+function draw_quads(params){
+
+    draw_quad( params, "nw" );
+    draw_quad( params, "ne" );
+    draw_quad( params, "sw" );
+    draw_quad( params, "se" );
+}
+function draw_quad(params, quadrant, color){
+    var a=0,b=0,c=params.canvas.width/2, d=params.canvas.height/2;
+    if (quadrant == "ne" || quadrant == "se" ){
+        a=params.canvas.width/2;
+    }
+    if (quadrant == "se" || quadrant == "sw" ){
+        b=params.canvas.height/2;
+    }
+
+    if ( color == undefined) {
+        if (quadrant == "nw" || quadrant == "se" ){
+            color=params.colors[0].hex;
+        }else{
+            color=params.colors[1].hex;
+        }
+    }
+
+
+    params.flag.fillStyle=color;
+
+    params.flag.fillRect( a, b, c, d );
+}
 //==================================================
 
 
@@ -125,7 +125,7 @@ function draw_stripe(params, side, count, id,color){
     if (side=="horizontal"){
         var thickness=Math.floor(params.canvas.height/count);
         params.flag.fillRect(0, (thickness*id)   ,params.canvas.width,thickness);
-        
+
     }else {
         var thickness=Math.floor(params.canvas.width/count);
         params.flag.fillRect( (thickness*id),0 ,thickness  ,params.canvas.height);

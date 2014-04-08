@@ -1,3 +1,57 @@
+
+    // overlay should use colors 3
+function select_overlay( params ){
+    var color=params.colors[3].hex;
+    console.log("overlay: "+params.overlay['name'])
+    switch(params.overlay['name']){
+            case 'stripe':
+                draw_stripe(params, params['overlay_stripe_side'], params['overlay_stripe_count'],params['overlay_stripe_countselected'], color);
+                break;
+            case 'quaddiag':
+                draw_quaddiagonal(params, params['overlay_quaddiag_side'], color);
+                break;
+            case 'quad':
+                draw_quad(params, params['overlay_quad_side'], color);
+                break;
+            case 'diamond':
+                draw_overlay_diamond(params); //TODO pass in 2 colors so it can be used as a symbol
+                break;
+            case 'circle':
+                draw_overlay_circle(params );
+                break;
+            case  'rays':
+                draw_overlay_rays( params );
+                break;
+            case 'cross':
+                draw_overlay_cross(params);
+                break;
+            case 'slash':
+                draw_slash(params);
+                break;
+            case 'x':
+                draw_slash(params,'left-to-right');
+                draw_slash(params,'right-to-left');
+                break;
+// FIXME both jack and asterisk need to be rewritten
+//            case 'jack':
+//                draw_slash(params,'left-to-right');
+//                draw_slash(params,'right-to-left');
+//                draw_overlay_cross(params);
+//                break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 function draw_overlay_diamond(params){
     params.flag.save();
     params.flag.beginPath();
@@ -98,7 +152,7 @@ function draw_vertical_crossbar(params){
     var startx=params.canvas.width/2 - width/2;
     var starty= (params.canvas.height-length)/2
     params.flag.fillStyle=params.colors[3].hex;
-    
+
     params.flag.fillRect( startx, starty, width,  length );
 }
 
@@ -110,7 +164,7 @@ function draw_horizontal_crossbar(params){
     var starty=params.canvas.height*params.overlay_cross_horpos - width/2
     params.flag.fillStyle=params.colors[3].hex;
     params.flag.fillRect( startx, starty,length,width);
-    
+
 }
 
 

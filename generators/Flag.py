@@ -1,6 +1,7 @@
 
 import random
 import json
+import string
 from generators.Generator import Generator
 
 class Flag(Generator):
@@ -11,7 +12,8 @@ class Flag(Generator):
         self.select_colors()
 
         self.overlay_stripe_countselected=random.randint(0,int(self.overlay_stripe_count))
-
+        if not hasattr(self, 'letter'):
+            self.letter=random.choice(string.ascii_uppercase)
 
 
 
