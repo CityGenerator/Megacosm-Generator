@@ -9,21 +9,17 @@
 {% endblock %}
 {% block content %}
 
-    <div>
-        <canvas id='flag' height='350'  >
+    <div style="background-color:#ffeeff" >
+        <canvas id='flag' height='200' >
         </canvas>
-
-        <div id="flagjson" style="font-family:serif;">
-        </div>
     </div>
 
     <script type="text/javascript">
-        //create_flag( {flag|tojson|safe},  "flag");
+        create_flag( {{flagjson|safe}},  document.getElementById("flag") );
     </script>
-
 <pre>
-    {%for detail in flag.__dict__%}
-        {{detail}} {{flag[detail]}}
-    {%endfor%}
+{{flagjson}}
 </pre>
+
+
 {% endblock %}

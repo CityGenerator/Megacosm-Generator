@@ -70,8 +70,8 @@ HSET flagcolor_description white              {"name":"white",             "hex"
 
 ZADD  flag_shape  50 {"name":"square",      "score":50    }
 ZADD  flag_shape  60 {"name":"para",        "score":60    }
-ZADD  flag_shape  70 {"name":"tri",         "score":70    }
-ZADD  flag_shape  80 {"name":"pennant",     "score":80    }
+ZADD  flag_shape  70 {"name":"pennant",     "score":70    }
+ZADD  flag_shape  80 {"name":"tri",         "score":80    }
 ZADD  flag_shape  90 {"name":"swallow",     "score":90    }
 ZADD  flag_shape 100 {"name":"tongued",     "score":100   }
 
@@ -93,28 +93,29 @@ LPUSH flag_shape_tongued_depth 0.3
 LPUSH flag_shape_tongued_depth 0.1
 LPUSH flag_shape_tongued_depth 0.2
 
-ZADD  flag_ratio  10  {"name":"1"  }
-ZADD  flag_ratio  20  {"name":"1.15"  }
-ZADD  flag_ratio  30  {"name":"1.25"  }
-ZADD  flag_ratio  40  {"name":"1.33"  }
-ZADD  flag_ratio  50  {"name":"1.32"  }
-ZADD  flag_ratio  55  {"name":"1.38"  }
-ZADD  flag_ratio  60  {"name":"1.39"  }
-ZADD  flag_ratio  65  {"name":"1.50"  }
-ZADD  flag_ratio  70  {"name":"1.6"  }
-ZADD  flag_ratio  75  {"name":"1.67"  }
-ZADD  flag_ratio  80  {"name":"1.9"  }
-ZADD  flag_ratio  90  {"name":"2.0"  }
-ZADD  flag_ratio 100  {"name":"2.55"  }
+ZADD  flag_ratio  10  { "name":"1", "score":10  }
+ZADD  flag_ratio  20  { "name":"1.15", "score":20  }
+ZADD  flag_ratio  30  { "name":"1.25", "score":30  }
+ZADD  flag_ratio  40  { "name":"1.33", "score":40  }
+ZADD  flag_ratio  50  { "name":"1.32", "score":50  }
+ZADD  flag_ratio  55  { "name":"1.38", "score":55  }
+ZADD  flag_ratio  60  { "name":"1.39", "score":60  }
+ZADD  flag_ratio  65  { "name":"1.50", "score":65  }
+ZADD  flag_ratio  70  { "name":"1.6", "score":70  }
+ZADD  flag_ratio  75  { "name":"1.67", "score":75  }
+ZADD  flag_ratio  80  { "name":"1.9", "score":80  }
+ZADD  flag_ratio  90  { "name":"2.0", "score":90  }
+ZADD  flag_ratio  100  { "name":"2.55", "score":100  }
     
-ZADD  flag_division  20  {"name":"none"  }
-ZADD  flag_division  40  {"name":"quads"  }
-ZADD  flag_division  60  {"name":"diagquads"  }
-ZADD  flag_division  80  {"name":"diagonal"  }
+ZADD  flag_division  20  { "name":"none", "score":20  }
+ZADD  flag_division  40  { "name":"quads", "score":40  }
+ZADD  flag_division  60  { "name":"diagquads", "score":60  }
+ZADD  flag_division  80  { "name":"diagonal", "score":80  }
+ZADD  flag_division  100  { "name":"stripes", "score":100  }
+
 LPUSH flag_division_diagonal_direction right-to-left
 LPUSH flag_division_diagonal_direction left-to-right
 
-ZADD  flag_division 100  {"name":"stripes"  }
 LPUSH flag_division_stripes_side vertical
 LPUSH flag_division_stripes_side horizontal
 LPUSH flag_division_stripes_count 2
@@ -125,20 +126,27 @@ LPUSH flag_division_stripes_count 13
 LPUSH flag_division_stripes_colorcount 2
 LPUSH flag_division_stripes_colorcount 3
    
+ZADD  flag_overlay   5  { "name":"none", "score":5  }
+ZADD  flag_overlay  10  { "name":"quaddiag", "score":10  }
+ZADD  flag_overlay  20  { "name":"quad", "score":20  }
+ZADD  flag_overlay  30  { "name":"stripe", "score":30  }
+ZADD  flag_overlay  40  { "name":"slash", "score":40  }
+#ZADD  flag_overlay  50  { "name":"asterisk", "score":50  }
+ZADD  flag_overlay  60  { "name":"x", "score":60  }
+ZADD  flag_overlay  70  { "name":"jack", "score":70  }
+ZADD  flag_overlay  80  { "name":"cross", "score":80  }
+ZADD  flag_overlay  90  { "name":"diamond", "score":90  }
+ZADD  flag_overlay  95  { "name":"circle", "score":95  }
+ZADD  flag_overlay  100  { "name":"rays", "score":100  }
 
- 
-ZADD  flag_overlay  10  {"name":"quaddiag"  }
 LPUSH flag_overlay_quaddiag_side north
 LPUSH flag_overlay_quaddiag_side south
 LPUSH flag_overlay_quaddiag_side east
 LPUSH flag_overlay_quaddiag_side west
-ZADD  flag_overlay  20  {"name":"quad"  }
 LPUSH flag_overlay_quad_side ne
 LPUSH flag_overlay_quad_side nw
 LPUSH flag_overlay_quad_side se
 LPUSH flag_overlay_quad_side sw
-
-ZADD  flag_overlay  30  {"name":"stripe"  }
 LPUSH flag_overlay_stripe_side vertical
 LPUSH flag_overlay_stripe_side horizontal
 LPUSH flag_overlay_stripe_count 2
@@ -146,29 +154,20 @@ LPUSH flag_overlay_stripe_count 3
 LPUSH flag_overlay_stripe_count 5
 LPUSH flag_overlay_stripe_count 9
 LPUSH flag_overlay_stripe_count 13
-                
-ZADD  flag_overlay  40  {"name":"slash"  }
 LPUSH flag_overlay_slash_direction right-to-left
 LPUSH flag_overlay_slash_direction left-to-right
 LPUSH flag_overlay_slash_width 0.2
 LPUSH flag_overlay_slash_width 0.15
 LPUSH flag_overlay_slash_width 0.1
 LPUSH flag_overlay_slash_width 0.05
-                
-ZADD  flag_overlay  50  {"name":"asterisk"  }
-LPUSH flag_overlay_asterisk_outline true
-LPUSH flag_overlay_asterisk_outline false
-            
-ZADD  flag_overlay  60  {"name":"x"  }
+#LPUSH flag_overlay_asterisk_outline true
+#LPUSH flag_overlay_asterisk_outline false
 LPUSH flag_overlay_x_outline true
 LPUSH flag_overlay_x_outline false
-                
 LPUSH flag_overlay_x_width 0.2
 LPUSH flag_overlay_x_width 0.15
 LPUSH flag_overlay_x_width 0.1
 LPUSH flag_overlay_x_width 0.05
-                
-ZADD  flag_overlay  70  {"name":"jack"  }
 LPUSH flag_overlay_jack_width 0.2
 LPUSH flag_overlay_jack_width 0.15
 LPUSH flag_overlay_jack_width 0.1
@@ -186,8 +185,6 @@ LPUSH flag_overlay_jack_vertwidth 0.1
 LPUSH flag_overlay_jack_vertwidth 0.075
 LPUSH flag_overlay_jack_vertwidth 0.05
 LPUSH flag_overlay_jack_horpos 0.5
-        
-ZADD  flag_overlay  80  {"name":"cross"  }
 LPUSH flag_overlay_cross_vertlength 1
 LPUSH flag_overlay_cross_vertlength 0.8
 LPUSH flag_overlay_cross_vertwidth 0.2
@@ -204,12 +201,8 @@ LPUSH flag_overlay_cross_horlength 0.9
 LPUSH flag_overlay_cross_horlength 1
 LPUSH flag_overlay_cross_horpos 0.33
 LPUSH flag_overlay_cross_horpos 0.5
-                
-ZADD  flag_overlay  90  {"name":"diamond"  }
 LPUSH flag_overlay_diamond_outline true
 LPUSH flag_overlay_diamond_outline false
-                
-ZADD  flag_overlay   95 {"name":"circle"  }
 LPUSH flag_overlay_circle_outlinewidth 1
 LPUSH flag_overlay_circle_outlinewidth 2
 LPUSH flag_overlay_circle_outlinewidth 5
@@ -246,8 +239,6 @@ LPUSH flag_overlay_circle_radius .75
 LPUSH flag_overlay_circle_radius 1
 LPUSH flag_overlay_circle_radius 1.5
 LPUSH flag_overlay_circle_radius 2
-                
-ZADD  flag_overlay 100  {"name":"rays"  }
 LPUSH flag_overlay_rays_offset 0
 LPUSH flag_overlay_rays_offset .05
 LPUSH flag_overlay_rays_offset .15
@@ -283,8 +274,10 @@ LPUSH flag_overlay_rays_y .75
 LPUSH flag_overlay_rays_y 1
 LPUSH flag_overlay_rays_y 2
                 
-ZADD  flag_symbol  25  {"name":"none"  }
-ZADD  flag_symbol  50  {"name":"circle"  }
+ZADD  flag_symbol  25 { "name":"none", "score":25  }
+ZADD  flag_symbol  50 { "name":"circle", "score":50  }
+ZADD  flag_symbol  75 { "name":"star", "score":75  }
+ZADD  flag_symbol 100 { "name":"letter", "score":100  }
 LPUSH flag_symbol_circle_outline true
 LPUSH flag_symbol_circle_outline false
 LPUSH flag_symbol_circle_radiusdirection horizontal
@@ -297,8 +290,7 @@ LPUSH flag_symbol_circle_radius .10
 LPUSH flag_symbol_circle_radius .15
 LPUSH flag_symbol_circle_radius .20
 LPUSH flag_symbol_circle_radius .25
-                
-ZADD  flag_symbol  75  {"name":"star"  }
+               
 LPUSH flag_symbol_star_points 4
 LPUSH flag_symbol_star_points 5
 LPUSH flag_symbol_star_points 6
@@ -313,7 +305,6 @@ LPUSH flag_symbol_star_x .5
 LPUSH flag_symbol_star_y .25
 LPUSH flag_symbol_star_y .5
         
-ZADD  flag_symbol 100  {"name":"letter"  }
 LPUSH flag_symbol_letter_fontfamily Arial Black
 LPUSH flag_symbol_letter_fontfamily Comic Sans MS Bold
 LPUSH flag_symbol_letter_fontfamily Courier New Bold
@@ -328,19 +319,19 @@ LPUSH flag_symbol_letter_fontfamily Verdana
 LPUSH flag_symbol_letter_fontfamily Verdana Bold
 LPUSH flag_symbol_letter_fontfamily Verdana Bold Italic
 LPUSH flag_symbol_letter_fontfamily sans serif
-                
+               
 LPUSH flag_symbol_letter_size .40
 LPUSH flag_symbol_letter_size .30
 LPUSH flag_symbol_letter_size .25
-                
+               
 LPUSH flag_symbol_letter_x .25
 LPUSH flag_symbol_letter_x .5
-                
+               
 LPUSH flag_symbol_letter_y .25
 LPUSH flag_symbol_letter_y .5
-                
-ZADD  flag_border  50  {"name":"none"  }       
-ZADD  flag_border 100  {"name":"solid"  }
+               
+ZADD  flag_border  50  { "name":"none", "score":50  }       
+ZADD  flag_border  100  { "name":"solid", "score":100  }
 LPUSH flag_border_solid_size .08
 LPUSH flag_border_solid_size .05
 LPUSH flag_border_solid_size .01

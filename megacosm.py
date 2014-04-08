@@ -735,6 +735,24 @@ def leader_builder():
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
+#########################################################################
+
+@app.route('/flag')
+def generateflag():
+    """Generate a flag"""
+
+    features = feature_filter('flag')
+    flag = Flag.Flag(server, features)
+    return render_template('flag.html', tempobj=flag, flagjson=flag.tojson())
+
+@app.route('/flag_builder')
+def flag_builder():
+    """Build a a flag"""
+    classname = 'flag'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
 
 
 
@@ -792,22 +810,6 @@ def isvalidscore(value):
         return True
     else:
         return False
-
-@app.route('/flag')
-def GenerateFlag():
-    """Generate a flag"""
-    seed=set_seed( request.args.get('seed') )
-
-    print "MAH SEED:",seed
-
-    flagfeatures={'seed':seed,}
-    for param in request.args :
-        if re.match('^flag_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
-            print "param is",param,"=",request.args[param]
-            flagfeatures[param]=int(request.args[param])
-
-    flag=Flag.Flag(server, flagfeatures)
-    return render_template('flag.html',flag=flag) 
 
 @app.errorhandler(404)
 def page_not_found():
