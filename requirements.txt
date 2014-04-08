@@ -18,4 +18,12 @@ redis==2.9.1
 mock>=1.0.1
 gunicorn>=18.0
 inflect>=0.2.4
-coveralls>=0.3
+coveralls
+pylint
+pylint-mccabe
+fluff
+pyflakes
+githooks
+flakeplus
+pymetrics
+PythonTidy
