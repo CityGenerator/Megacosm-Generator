@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}Behold the Flag {% endblock %}
+{% block title %}A Wild Flag Appears...{% endblock %}
 {% block head %}
   {{ super() }}
     <script type="text/javascript" src="/static/js/flagshape.js"></script>
@@ -13,8 +13,8 @@
 
 {% endblock %}
 {% block content %}
-
-    <div style="background-color:#ffeeff" >
+    <h1> A Wild Flag Appears...</h1>
+    <div>
         <canvas id='flag' height='200' >
         </canvas>
     </div>
@@ -22,9 +22,6 @@
     <script type="text/javascript">
         create_flag( {{flagjson|safe}},  document.getElementById("flag") );
     </script>
-<pre>
-{{flagjson}}
-</pre>
 
 
 {% endblock %}
