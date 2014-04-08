@@ -32,6 +32,7 @@ from generators import Motivation
 from generators import RogueDungeon
 from generators import GeomorphDungeon
 from generators import Street
+from generators import Flag
 from util.Seeds import set_seed
 from util import Filters
 import redis
@@ -734,6 +735,24 @@ def leader_builder():
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
+#########################################################################
+
+@app.route('/flag')
+def generateflag():
+    """Generate a flag"""
+
+    features = feature_filter('flag')
+    flag = Flag.Flag(server, features)
+    return render_template('flag.html', tempobj=flag, flagjson=flag.tojson())
+
+@app.route('/flag_builder')
+def flag_builder():
+    """Build a a flag"""
+    classname = 'flag'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
 
 
 
@@ -791,7 +810,6 @@ def isvalidscore(value):
         return True
     else:
         return False
-
 
 @app.errorhandler(404)
 def page_not_found():
