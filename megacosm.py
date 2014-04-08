@@ -32,6 +32,7 @@ from generators import Motivation
 from generators import RogueDungeon
 from generators import GeomorphDungeon
 from generators import Street
+from generators import Flag
 from util.Seeds import set_seed
 from util import Filters
 import redis
@@ -792,6 +793,22 @@ def isvalidscore(value):
     else:
         return False
 
+@app.route('/flag')
+def GenerateFlag():
+    """Generate a flag"""
+    seed=set_seed( request.args.get('seed') )
+
+    print "MAH SEED:",seed
+
+    flagfeatures={'seed':seed,}
+    for param in request.args :
+        if re.match('^flag_[a-z_]+_roll$',param) and int(request.args[param])>=0 and int(request.args[param])<=100 :
+            print "param is",param,"=",request.args[param]
+            flagfeatures[param]=int(request.args[param])
+
+    flag=Flag.Flag(server, flagfeatures)
+    print flag.get_json()
+    return render_template('flag.html',flag=flag, json=flag.get_json()) 
 
 @app.errorhandler(404)
 def page_not_found():
