@@ -67,7 +67,6 @@ HSET flagcolor_description purple             {"name":"purple",            "hex"
 HSET flagcolor_description black              {"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }
 HSET flagcolor_description white              {"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }
 
-
 ZADD  flag_shape  50 {"name":"square",      "score":50    }
 ZADD  flag_shape  60 {"name":"para",        "score":60    }
 ZADD  flag_shape  70 {"name":"pennant",     "score":70    }
@@ -78,7 +77,6 @@ ZADD  flag_shape 100 {"name":"tongued",     "score":100   }
 LPUSH flag_shape_swallow_depth 10
 LPUSH flag_shape_swallow_depth 20
 LPUSH flag_shape_swallow_depth 30
-
 
 LPUSH flag_shape_tongued_shape square
 LPUSH flag_shape_tongued_shape triangle
@@ -133,7 +131,7 @@ ZADD  flag_overlay  30  { "name":"stripe", "score":30  }
 ZADD  flag_overlay  40  { "name":"slash", "score":40  }
 #ZADD  flag_overlay  50  { "name":"asterisk", "score":50  }
 ZADD  flag_overlay  60  { "name":"x", "score":60  }
-ZADD  flag_overlay  70  { "name":"jack", "score":70  }
+#ZADD  flag_overlay  70  { "name":"jack", "score":70  }
 ZADD  flag_overlay  80  { "name":"cross", "score":80  }
 ZADD  flag_overlay  90  { "name":"diamond", "score":90  }
 ZADD  flag_overlay  95  { "name":"circle", "score":95  }
@@ -168,23 +166,23 @@ LPUSH flag_overlay_x_width 0.2
 LPUSH flag_overlay_x_width 0.15
 LPUSH flag_overlay_x_width 0.1
 LPUSH flag_overlay_x_width 0.05
-LPUSH flag_overlay_jack_width 0.2
-LPUSH flag_overlay_jack_width 0.15
-LPUSH flag_overlay_jack_width 0.1
-LPUSH flag_overlay_jack_width 0.05
-LPUSH flag_overlay_jack_outline true
-LPUSH flag_overlay_jack_outline false
-LPUSH flag_overlay_jack_horlength 1
-LPUSH flag_overlay_jack_vertlength 1
-LPUSH flag_overlay_jack_horwidth 0.2
-LPUSH flag_overlay_jack_horwidth 0.15
-LPUSH flag_overlay_jack_horwidth 0.10
-LPUSH flag_overlay_jack_vertwidth 0.2
-LPUSH flag_overlay_jack_vertwidth 0.15
-LPUSH flag_overlay_jack_vertwidth 0.1
-LPUSH flag_overlay_jack_vertwidth 0.075
-LPUSH flag_overlay_jack_vertwidth 0.05
-LPUSH flag_overlay_jack_horpos 0.5
+#LPUSH flag_overlay_jack_width 0.2
+#LPUSH flag_overlay_jack_width 0.15
+#LPUSH flag_overlay_jack_width 0.1
+#LPUSH flag_overlay_jack_width 0.05
+#LPUSH flag_overlay_jack_outline true
+#LPUSH flag_overlay_jack_outline false
+#LPUSH flag_overlay_jack_horlength 1
+#LPUSH flag_overlay_jack_vertlength 1
+#LPUSH flag_overlay_jack_horwidth 0.2
+#LPUSH flag_overlay_jack_horwidth 0.15
+#LPUSH flag_overlay_jack_horwidth 0.10
+#LPUSH flag_overlay_jack_vertwidth 0.2
+#LPUSH flag_overlay_jack_vertwidth 0.15
+#LPUSH flag_overlay_jack_vertwidth 0.1
+#LPUSH flag_overlay_jack_vertwidth 0.075
+#LPUSH flag_overlay_jack_vertwidth 0.05
+#LPUSH flag_overlay_jack_horpos 0.5
 LPUSH flag_overlay_cross_vertlength 1
 LPUSH flag_overlay_cross_vertlength 0.8
 LPUSH flag_overlay_cross_vertwidth 0.2

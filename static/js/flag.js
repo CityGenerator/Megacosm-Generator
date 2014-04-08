@@ -11,7 +11,7 @@ function create_flag(params,canvas) {
     set_shape( params );
  
     select_division( params );
-    //select_overlay( params );
+    select_overlay( params );
     //select_symbol( params );
     //select_border( params );#TODO not implemented
 }
@@ -21,189 +21,51 @@ function set_ratio(params){
     params.canvas.width=params.canvas.height*params.ratio['name'];
 }
 
-function set_shape(params){
-    var width=params.canvas.width;
-    var height=params.canvas.height;
-    params.flag.save();
-    params.flag.fillStyle = "rgba(0,0,0,0.0)"
-    params.flag.lineWidth = 1
-    console.log("shape: "+params.shape['name'])
-    switch(params.shape['name']){
-        case 'para':
-            params.flag.moveTo(    0,        0);
-            params.flag.lineTo(    width,    height/6);
-            params.flag.lineTo(    width,    height-height/6);
-            params.flag.lineTo(    0,        height);
-            break;
-        case 'pennant':
-            params.flag.moveTo(    0,        0);
-            params.flag.lineTo(    width,    height/5*2);
-            params.flag.lineTo(    width,    height/5*3);
-            params.flag.lineTo(    0,        height);
-            break;
-        case 'tri':
-            params.flag.moveTo(    0,        0);
-            params.flag.lineTo(    width,    height/2);
-            params.flag.lineTo(    0,        height);
-            break;
-        case 'swallow':
-            params.flag.moveTo(    0,                0);
-            params.flag.lineTo(    width,            height/3*1);
-            params.flag.lineTo(    width-width/5,    height/2);
-            params.flag.lineTo(    width,            height/3*2);
-            params.flag.lineTo(    0,                height);
-            //FIXME swallow depth is not calculated
-            //FIXME swallow depth cannot be passed via cli
-            break;
-        case 'tongued':
-            params.flag.moveTo(    0,                0);
-            params.flag.lineTo(    width,            0);
-            var tonguecount=params.tongued_count;
-            var depth=params.tongued_depth;
-            for (var i = 0 ; i < tonguecount ; i++){ 
-                params = draw_tongue_slot(params,tonguecount,i,depth,params.tongued_shape); 
-            }
 
-            params.flag.lineTo(    width,            height);
-            params.flag.lineTo(    0,                height);
-            break;
-        default:
-            params.flag.rect(0,0,width,height);
-    }
-    params.flag.fill();
-    params.flag.save();
-    params.flag.clip();
-    return params.flag;
-}
-function draw_tongue_slot(params,count,id,depth,type){
-
-    var x = params.canvas.width;
-    var height=params.canvas.height/(count*2-1);
-    var y = height*(id*2-1);
-    depth=params.canvas.width*depth;
-    params.flag.lineTo(x,y);
-    console.log("Tongueshape: "+type)
-    if (type == "square"){
-        params.flag.lineTo(x-depth,y);
-        params.flag.lineTo(x-depth,y+height);
-    }else if (type=="triangle"){
-        params.flag.lineTo(x-depth,y+height/2);
-    }else if (type=="scallop"){
-        params.flag.arc(x, y+height/2 ,height/2 ,1.5 * Math.PI, 0.5*Math.PI,true);
-    }else if (type=="sine"){
-        params.flag.arc(x-height/2, y-height/2,          height/2,   0*Math.PI, 0.5*Math.PI,false);
-        params.flag.arc(x-height/2, y+height/2,   height/2, 1.5*Math.PI, 0.5*Math.PI,true);
-        params.flag.arc(x-height/2, y+height*1.5,          height/2,  1.5*Math.PI, 0*Math.PI,false);
-    }
-    params.flag.lineTo(x      ,y+height);
-    return params;
-}
-
-function select_division( params){
-
-    switch(params.division.name){
-        case 'quads':
-            draw_quads( params );
-            break;
-        case 'diagquad':
-            draw_quaddiagonals( params );
-            break;
-        case 'diagonal':
-            draw_diagonals( params );
-            break;
-        case 'stripes':
-            draw_stripes( params );
-            break;
-        default:
-            draw_solid( params );
-    }
-}
-function draw_solid( params){
-        params.flag.fillStyle=params.colors[0].hex;
-        params.flag.fillRect(0,0, params.canvas.width,params.canvas.height); 
-        return params.flag;
-
-}
-
-////    // overlay should use colors 3 
-//function select_overlay( params ){
-//    var color=params.colors[3].hex;
-//    console.log("overlay: "+params.overlay['name'])
-//    switch(params.overlay['name']){
-//            case 'quaddiag':
-//                draw_quaddiagonal(params, params['overlay_quaddiag_side'], color);
-//                break;
-//            case 'quad':
-//                draw_quad(params, params['overlay_quad_side'], color);
-//                break;
-//            case 'stripe':
-//                draw_stripe(params, params['overlay_stripe_side'], params['overlay_stripe_count'],params['overlay_stripe_countselected'], color);
-//                break;
-//            case 'diamond':
-//                draw_diamond(params); //TODO pass in 2 colors so it can be used as a symbol
-//                break;
-//            case 'circle':
-//                draw_circle(params );
-//                break;
-//            case  'rays':
-//                draw_rays( params );
-//                break;
-//            case 'cross':
-//                draw_cross(params);
-//                break;
-//            case 'slash':
-//                draw_slash(params,'left-to-right');
-//                break;
+    // overlay should use colors 3 
+function select_overlay( params ){
+    var color=params.colors[3].hex;
+    console.log("overlay: "+params.overlay['name'])
+    switch(params.overlay['name']){
+            case 'stripe':
+                draw_stripe(params, params['overlay_stripe_side'], params['overlay_stripe_count'],params['overlay_stripe_countselected'], color);
+                break;
+            case 'quaddiag':
+                draw_quaddiagonal(params, params['overlay_quaddiag_side'], color);
+                break;
+            case 'quad':
+                draw_quad(params, params['overlay_quad_side'], color);
+                break;
+            case 'diamond':
+                draw_overlay_diamond(params); //TODO pass in 2 colors so it can be used as a symbol
+                break;
+            case 'circle':
+                draw_overlay_circle(params );
+                break;
+            case  'rays':
+                draw_overlay_rays( params );
+                break;
+            case 'cross':
+                draw_overlay_cross(params);
+                break;
+            case 'slash':
+                draw_slash(params);
+                break;
+            case 'x':
+                draw_slash(params,'left-to-right');
+                draw_slash(params,'right-to-left');
+                break;
+// FIXME both jack and asterisk need to be rewritten
 //            case 'jack':
 //                draw_slash(params,'left-to-right');
 //                draw_slash(params,'right-to-left');
-//                draw_cross(params);
+//                draw_overlay_cross(params);
 //                break;
-//            case 'x':
-//                draw_slash(params,'left-to-right');
-//                draw_slash(params,'right-to-left');
-//                break;
-//    }
-//    return params.flag;
-//}
-//
-//
-//function draw_cross(params){
-//
-//    draw_vertical_crossbar(params);
-//    draw_horizontal_crossbar(params);
-//    return params.flag;
-//}
-//
-//function draw_vertical_crossbar(params){
-//    var width=params.canvas.width*params.overlay.vertwidth;
-//    var length=params.canvas.width*params.overlay.vertlength;
-//
-//    var startx=params.canvas.width/2 - width/2;
-//    var starty= (params.canvas.height-length)/2
-//    params.flag.fillStyle=params.colors[3].hex;
-//    
-//    params.flag.fillRect( startx, starty, width,  length );
-//    return params.flag;
-//
-//}
-//function draw_horizontal_crossbar(params){
-//
-//    var width=params.canvas.height*params.overlay.horwidth;
-//    var length=params.canvas.width*params.overlay.horlength;
-//
-//    var startx=(params.canvas.width-length)/2 ;
-//    var starty=params.canvas.height*params.overlay.horpos - width/2
-//
-//    params.flag.fillStyle=params.colors[3].hex;
-//    params.flag.fillRect( startx, starty,length,width);
-//    
-//    
-//    
-//    
-//    return params.flag;
-//
-//}
+    }
+}
+
+
+
 //
 //
 //
@@ -258,38 +120,6 @@ function draw_solid( params){
 //
 
 //
-//function draw_slash(params, direction){
-//
-//    params.flag.beginPath();
-//
-//    if (! direction){
-//        direction = params.overlay.direction 
-//    }
-//
-//
-//    var linewidth=params.canvas.width * params.overlay.width;
-//    var lineheight=params.canvas.height * params.overlay.width;
-//    if (direction =='left-to-right'){
-//        params.flag.moveTo(    0,                               0);
-//        params.flag.lineTo(    linewidth,                       0);
-//        params.flag.lineTo(    params.canvas.width,             params.canvas.height-lineheight);
-//        params.flag.lineTo(    params.canvas.width,             params.canvas.height);
-//        params.flag.lineTo(    params.canvas.width-linewidth,   params.canvas.height);
-//        params.flag.lineTo(    0,                               lineheight);
-//    }else{
-//        params.flag.moveTo(    params.canvas.width-linewidth,   0);
-//        params.flag.lineTo(    params.canvas.width,             0);
-//        params.flag.lineTo(    params.canvas.width,             lineheight);
-//        params.flag.lineTo(    linewidth,                       params.canvas.height);
-//        params.flag.lineTo(    0,                               params.canvas.height);
-//        params.flag.lineTo(    0,                               params.canvas.height-lineheight);
-//    }
-//    params.flag.fillStyle=params.colors[3].hex;
-//    params.flag.fill();
-//    return params.flag;
-//}
-//
-//
 //    
 //    function draw_x(flag, width, height, thickness, color){
 //        var linewidths=Array( 1/6, 1/8, 1/9, 1/10, 1/12, 1/15, 1/20);
@@ -318,34 +148,6 @@ function draw_solid( params){
 //    }
 //    
 //    
-//function draw_rays(  params){
-//
-//    var count=params.overlay.count;
-//    var angle=360/count;
-//    var x=params.canvas.width *params.overlay.xlocation
-//    var y=params.canvas.height*params.overlay.ylocation
-//    x=params.canvas.width/2;
-//    y=params.canvas.height/2;
-//    var offset=params.overlay.offset;
-//    params.flag.save();
-//    params.flag.fillStyle=params.colors[3].hex;
-//    params.flag.translate(x,y);
-//    while (count-- >0){
-//        params.flag.beginPath();
-//        params.flag.moveTo(0,-offset*params.canvas.width/2);
-//        params.flag.lineTo(0,-params.canvas.width*2.5);
-//        params.flag.rotate(angle/2 * Math.PI/180);
-//        params.flag.lineTo(0,-params.canvas.width*2.5);
-//        params.flag.lineTo(0,-offset*params.canvaswidth/2);
-//
-//        params.flag.closePath();
-//        params.flag.fill();
-//        params.flag.rotate(angle/2 * Math.PI/180);
-//    }
-//    params.flag.translate(-x,-y);
-//    params.flag.restore();
-//    return params.flag;
-//}
 //
 //
 //function draw_star(params) {
@@ -374,213 +176,11 @@ function draw_solid( params){
 //}
 //
 //
-//function draw_diamond(params){
-//    params.flag.save();
-//    params.flag.beginPath();
-//    params.flag.moveTo(    params.canvas.width/2,  0  );
-//    params.flag.lineTo(    params.canvas.width,    params.canvas.height/2 );
-//    params.flag.lineTo(    params.canvas.width/2,  params.canvas.height );
-//    params.flag.lineTo(    0,                      params.canvas.height/2 );
-//    params.flag.fillStyle=params.colors[3].hex;
-//    params.flag.fill();
-//    params.flag.restore();
-//    if (params.overlay.outline=="false"){
-//        params.flag.save();
-//        params.flag.beginPath();
-//        params.flag.lineWidth=10;
-//        params.flag.moveTo(    params.canvas.width/2,  0  );
-//        params.flag.lineTo(    params.canvas.width,    params.canvas.height/2 );
-//        params.flag.lineTo(    params.canvas.width/2,  params.canvas.height );
-//        params.flag.lineTo(    0,                      params.canvas.height/2 );
-//        params.flag.lineTo(    params.canvas.width/2,  0  );
-//        params.flag.strokeStyle=params.colors[4].hex;
-//        params.flag.stroke();
-//        params.flag.restore();
-//    }
-//
-//    return params.flag;
-//
-//}
-//
-//function draw_circle(params){
-//
-//    var radius;
-//    if (params.overlay.radius_direction =="horizontal"){
-//        radius=params.overlay.radius*params.canvas.width
-//    }else{
-//        radius=params.overlay.radius*params.canvas.height
-//    }
-//    var width=params.canvas.width*params.overlay.xlocation
-//    var height=params.canvas.height*params.overlay.ylocation
-//    params.flag.save()
-//    params.flag.beginPath(); // Start the path
-//    params.flag.arc(width,height, radius, 0, Math.PI*2, false ); // Draw a circle
-//    params.flag.closePath(); // Close the path
-//    params.flag.fillStyle=params.colors[3].hex;
-//    params.flag.fill(); // Fill the path
-//    params.flag.restore();
-//
-//    if (params.overlay.outline =="true"){
-//        params.flag.save()
-//        params.flag.beginPath(); // Start the path
-//        params.flag.lineWidth=params.overlay.outline_width;
-//        params.flag.arc(width,height, radius, 0, Math.PI*2, false ); // Draw a circle
-//        params.flag.closePath(); // Close the path
-//        params.flag.strokeStyle=params.colors[4].hex;
-//        params.flag.stroke(); // Fill the path
-//        params.flag.restore();
-//    }
-//
-//    return params.flag;
-//
-//}
-//
-//function draw_stripes(params){
-//    for (var i=0; i<=params.division.count; i++){
-//        draw_stripe(params, params.division.side, params.division.count, i);
-//    }
-//    return params.flag;
-//}
-//
-//
-//function draw_stripe(params, side, count, id,color){
-//
-//    if (! color){
-//        var colorid=id % params.division.color_count;
-//        color=params.colors[colorid].hex;
-//    }
-//    params.flag.fillStyle=color;
-//
-//    if (side=="horizontal"){
-//        var thickness=Math.floor(params.canvas.height/count);
-//        params.flag.fillRect(0, (thickness*id)   ,params.canvas.width,thickness);
-//        
-//    }else {
-//        var thickness=Math.floor(params.canvas.width/count);
-//        params.flag.fillRect( (thickness*id),0 ,thickness  ,params.canvas.height);
-//    }
-//    return params.flag;
-//}
-//    
-//    
-//function draw_quad(params, quadrant, color){
-//    var a=0,b=0,c=params.canvas.width/2, d=params.canvas.height/2;
-//    if (quadrant == "ne" || quadrant == "se" ){
-//        a=params.canvas.width/2;
-//    }
-//    if (quadrant == "se" || quadrant == "sw" ){
-//        b=params.canvas.height/2;
-//    }
-//
-//
-//    if ( color == undefined) {
-//        if (quadrant == "nw" || quadrant == "se" ){
-//            color=params.colors[0].hex;
-//        }else{
-//            color=params.colors[1].hex;
-//        }
-//    }
-//
-//    
-//    params.flag.fillStyle=color;
-//
-//    params.flag.fillRect( a, b, c, d );
-//}
-//
-//
-//function draw_quads(params){
-//
-//    draw_quad( params, "nw" );
-//    draw_quad( params, "ne" );
-//    draw_quad( params, "sw" );
-//    draw_quad( params, "se" );
-//}
-//
-//
-//function draw_quaddiagonals(params){
-//     draw_quaddiagonal( params, "north" );
-//     draw_quaddiagonal( params, "south" );
-//     draw_quaddiagonal( params, "east"  );
-//     draw_quaddiagonal( params, "west"  );
-//}
-//
-//
-//function draw_quaddiagonal(params, side, color){
-//    var a=0, b=0, c=0,d=0;
-//    if (side=="east" ){a=params.canvas.width}
-//    if (side=="south" ){b=params.canvas.height}
-//    if (side=="north" || side=="east"  ||side=="south"){c=params.canvas.width}
-//    if (side=="east"  || side=="south" ||side=="west" ){d=params.canvas.height}
-//    console.log('quaddiag'+side) 
-//    if (!color ){
-//        if (side == "north" || side == "south"){
-//            color=params.colors[0].hex;
-//        }else{
-//            color=params.colors[1].hex;
-//        }
-//    }
-//    params.flag.save();
-//    params.flag.beginPath();
-//    params.flag.moveTo(a,b);
-//    params.flag.lineTo(c,d);
-//    params.flag.lineTo(params.canvas.width/2,params.canvas.height/2);
-//    params.flag.fillStyle=color;
-//    params.flag.fill();
-//    params.flag.restore();
-//
-//    return params.flag;
-// }
-// 
-// 
-//function draw_diagonal(params, side, color ){
-//    var start,mid,end;
-//
-//    if (side == "north" && params.division.direction == "left-to-right"){
-//        start=[0,0];
-//        mid=[params.canvas.width,0];
-//        end=[params.canvas.width,params.canvas.height];
-//
-//    }else if (side == "south" && params.division.direction == "left-to-right"){
-//        start=[0,0];
-//        mid=[0,params.canvas.height];
-//        end=[params.canvas.width,params.canvas.height];
-//
-//    }else if (side == "north" && params.division.direction == "right-to-left"){
-//        start=[params.canvas.width,0];
-//        mid=[0,0];
-//        end=[0,params.canvas.height];
-//
-//    }else if (side == "south" && params.division.direction == "right-to-left"){
-//        start=[params.canvas.width,0];
-//        mid=[params.canvas.width,params.canvas.height];
-//        end=[0,params.canvas.height];
-//    }
-//    if (! color){
-//        if (side == "north"){
-//            color=params.colors[0].hex;
-//        }else{
-//            color=params.colors[1].hex;
-//        }
-//    }
-//
-//    params.flag.save(); 
-//    params.flag.beginPath();
-//    params.flag.moveTo(start[0],start[1]);
-//    params.flag.lineTo(mid[0],mid[1]);
-//    params.flag.lineTo(end[0],end[1]);
-//    params.flag.fillStyle=color;
-//    params.flag.fill();
-//    params.flag.restore(); 
-//    return params.flag;
-//}
-//
-//
-//function draw_diagonals(params ){
-//
-//    draw_diagonal(params, "north") ;
-//    draw_diagonal(params, "south") ;
-//}
-//    
+
+    
+
+ 
+
 ////    function getQueryString() {
 ////        var result = {}, queryString = location.search.substring(1),
 ////            re = /([^&=]+)=([^&]*)/g, m;

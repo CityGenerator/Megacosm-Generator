@@ -10,6 +10,10 @@ class Flag(Generator):
 
         self.select_colors()
 
+        self.overlay_stripe_countselected=random.randint(0,int(self.overlay_stripe_count))
+
+
+
 
     def select_colors(self):
         colornames=self.redis.lrange('flagcolor',0,-1)
