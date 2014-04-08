@@ -815,7 +815,7 @@ def isvalidscore(value):
 def page_not_found(error):
     """Return a custom 404 error."""
     print " ======================="
-    print "Exception:", error.args[0]
+    print "Exception:", error
     time = str(datetime.datetime.now())
     return render_template("400.html", request=request, time=time), 404
 
