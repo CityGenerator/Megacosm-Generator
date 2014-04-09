@@ -63,31 +63,31 @@ LPUSH artwork_cloth_material silk
 LPUSH artwork_cloth_material wool
 LPUSH artwork_cloth_material leather
 
-LPUSH artwork_template a necklace of {{params.gem.size}} {{params.gem.kind|plural(2)}}
-LPUSH artwork_template {{params.color}} {{params.item_material}} mask with several {{params.gem.kind|plural(2)}} 
-LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind}} inlays
+LPUSH artwork_template a necklace of {{params.gem.size}} {{params.gem.kind_description['name']|pluralize(2)}}
+LPUSH artwork_template {{params.color}} {{params.item_material}} mask with several {{params.gem.kind_description['name']|pluralize(2)}}
+LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind_description['name']}} inlays
 LPUSH artwork_template {{params.item_material}} {{params.item}}
-LPUSH artwork_template Carved harp of {{params.item_material}} with {{params.gem.kind}} gems
-LPUSH artwork_template ceremonial {{params.metal}} {{params.weapon}} with a {{params.gem.kind}} in the pommel
-LPUSH artwork_template {{params.metal}}-embroidered {{params.cloth_item}
-LPUSH artwork_template embroidered and bejeweled {{params.cloth_item}
-LPUSH artwork_template embroidered {{params.clothmaterial}} {{params.cloth_item} with numerous {{params.gem.kind|plural(2)}}
-LPUSH artwork_template eyepatch with mock eye of {{params.gem.kind}} and {{params.gem.kind}}
+LPUSH artwork_template Carved harp of {{params.item_material}} with {{params.gem.kind_description['name']}} gems
+LPUSH artwork_template ceremonial {{params.metal}} {{params.weapon}} with a {{params.gem.kind_description['name']}} in the pommel
+LPUSH artwork_template {{params.metal}}-embroidered {{params.cloth_item}}
+LPUSH artwork_template embroidered and bejeweled {{params.cloth_item}}
+LPUSH artwork_template embroidered {{params.clothmaterial}} {{params.cloth_item}} with numerous {{params.gem.kind_description['name']|pluralize(2)}}
+LPUSH artwork_template eyepatch with mock eye of {{params.gem.kind_description['name']}} and {{params.gem.kind_description['name']}}
 LPUSH artwork_template finely wrought small {{params.metal}} bracelet
-LPUSH artwork_template {{params.gem.kind}} {{params.jewlery}} on a fine {{params.metal}} chain
-LPUSH artwork_template {{params.metal}} and {{params.gem.kind}} {{params.jewelry}}
-LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind}}
-LPUSH artwork_template {{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind}} eye
-LPUSH artwork_template {{params.metal}} {{params.jewelry}} with four {{params.gem.kind|plural(2)}}
+LPUSH artwork_template {{params.gem.kind_description['name']}} {{params.jewlery}} on a fine {{params.metal}} chain
+LPUSH artwork_template {{params.metal}} and {{params.gem.kind_description['name']}} {{params.jewelry}}
+LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind_description['name']}}
+LPUSH artwork_template {{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind_description['name']}} eye
+LPUSH artwork_template {{params.metal}} {{params.jewelry}} with four {{params.gem.kind_description['name']|pluralize(2)}}
 LPUSH artwork_template {{params.metal}} {{params.item}}
 LPUSH artwork_template jeweled {{params.jewelry}}
 LPUSH artwork_template jeweled {{params.metal}} {{params.jewelry}}
 
 #large well-done wool tapestry
 #old masterpiece painting
-#{{params.gem.kind}} pendant on {{params.metal}} chain
-#{{params.metal}} chalice with {{params.gem.kind}} gems
-#{{params.metal}} comb with {{params.gem.kind}}
+#{{params.gem.kind_description['name']}} pendant on {{params.metal}} chain
+#{{params.metal}} chalice with {{params.gem.kind_description['name']}} gems
+#{{params.metal}} comb with {{params.gem.kind_description['name']}}
 #{{params.metal}} {{item}}
 #{{params.metal}}-plated steel longsword with jet jewel in hilt
 #solid {{params.metal}} idol (10 lb.)
