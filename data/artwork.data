@@ -3,22 +3,64 @@
 # How do we lay out artwork?
 
 
+LPUSH artwork_metal copper
+LPUSH artwork_metal silver
+LPUSH artwork_metal electrum
+LPUSH artwork_metal gold
+LPUSH artwork_metal brass
+LPUSH artwork_metal steel
+LPUSH artwork_metal aluminium
 
-#metals gold, silver, electrum
 #gems pulled from Gem.py
 
 #color pulled from elsewhere
-#weapon dagger sword axe, pulled from elsewhere
+
+LPUSH artwork_weapon dagger
+LPUSH artwork_weapon sword
+LPUSH artwork_weapon axe
+LPUSH artwork_weapon spear
+#do we really want more ceremonial weapons?
 
 
-#item mug, statuette, cup, harp, music box, comb, bottle, chalice, ewer
-#item_material ivory, onyx, gold, bone, exotic wood,?
-#item_decoration phoenix, dragon, tiger, bear. 
+LPUSH artwork_item mug
+LPUSH artwork_item statuette
+LPUSH artwork_item cup
+LPUSH artwork_item harp
+LPUSH artwork_item music box
+LPUSH artwork_item comb
+LPUSH artwork_item bottle
+LPUSH artwork_item chalice
+LPUSH artwork_item ewer
 
-#jewelry ring, circlet, crown, tiara, pendant, bracelet, anklet, chain
+LPUSH artwork_item_material ivory
+LPUSH artwork_item_material onyx
+LPUSH artwork_item_material gold
+LPUSH artwork_item_material bone
+LPUSH artwork_item_material exotic wood
 
-#clothitem glove vestments, tapestry,
-#clothmaterial velvet silk wool
+LPUSH artwork_item_decoration phoenix
+LPUSH artwork_item_decoration dragon
+LPUSH artwork_item_decoration tiger
+LPUSH artwork_item_decoration bear
+
+LPUSH artwork_jewelry ring
+LPUSH artwork_jewelry circlet
+LPUSH artwork_jewelry crown
+LPUSH artwork_jewelry tiara
+LPUSH artwork_jewelry pendant
+LPUSH artwork_jewelry bracelet
+LPUSH artwork_jewelry anklet
+LPUSH artwork_jewelry chain
+
+LPUSH artwork_cloth_item glove
+LPUSH artwork_cloth_item vestments
+LPUSH artwork_cloth_item tapestry
+LPUSH artwork_cloth_item rug
+
+LPUSH artwork_cloth_material velvet
+LPUSH artwork_cloth_material silk
+LPUSH artwork_cloth_material wool
+LPUSH artwork_cloth_material leather
 
 #a necklace of {{params.gem.size}} {{params.gem.kind|plural(2)}}
 #{{params.color}} {{params.item_material}} mask with several {{params.gem.kind|plural(2)}} 
