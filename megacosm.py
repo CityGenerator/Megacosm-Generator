@@ -2,6 +2,7 @@
 
 # Import the stuffs!
 from flask import Flask, render_template, request
+from generators import Artwork
 from generators import Planet
 from generators import NPC
 from generators import MagicItem
@@ -175,6 +176,33 @@ def generateresource():
 def resource_builder():
     """Build a resource"""
     classname = 'resource'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+#########################################################################
+
+@app.route('/artwork')
+def generateartwork():
+    """Generate a artwork"""
+    features = feature_filter('artwork')
+    titletext = 'A Work of Art...'
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
+        artworks = []
+        for _ in xrange(int(request.args['count'])):
+            artworks.append(Artwork.Artwork(server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=artworks, oneliner=artworks[0], titletext=titletext, generator='artwork')
+    else:
+        artwork = Artwork.Artwork(server, features)
+        return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
+
+
+
+@app.route('/artwork_builder')
+def artwork_builder():
+    """Build a a artwork"""
+    classname = 'artwork'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
