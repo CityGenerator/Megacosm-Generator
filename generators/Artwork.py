@@ -15,7 +15,6 @@ class Artwork(Generator):
         if not hasattr(self,'gem'):
             setattr(self,'gem',Gem(self.redis))
 
-        print self.template 
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)
             self.text=self.render_template(self.text)
