@@ -55,6 +55,7 @@ LPUSH artwork_jewelry chain
 LPUSH artwork_cloth_item glove
 LPUSH artwork_cloth_item vestments
 LPUSH artwork_cloth_item tapestry
+LPUSH artwork_cloth_item mantle
 LPUSH artwork_cloth_item rug
 
 LPUSH artwork_cloth_material velvet
@@ -62,27 +63,26 @@ LPUSH artwork_cloth_material silk
 LPUSH artwork_cloth_material wool
 LPUSH artwork_cloth_material leather
 
-#a necklace of {{params.gem.size}} {{params.gem.kind|plural(2)}}
-#{{params.color}} {{params.item_material}} mask with several {{params.gem.kind|plural(2)}} 
-#
-#{{params.metal}} {{params.item}} with {{params.gem.kind}} inlays
-#{{params.item_material}} {{params.item}}
-#Carved harp of {{params.item_material}} with {{params.gem.kind}} gems
-#
-#ceremonial {{params.metal}} {{params.weapon}} with a {{params.gem.kind}} in the pommel
-#cloth of {{params.metal}}-embroidered vestments
-#embroidered and bejeweled glove
-#embroidered {{params.clothmaterial}} mantle with numerous {{params.gem.kind|plural(2)}}
-#eyepatch with mock eye of {{params.gem.kind}} and {{params.gem.kind}}
-#finely wrought small {{params.metal}} bracelet
-#{{params.gem.kind}} {{params.jewlery}} on a fine {{params.metal}} chain
-#{{params.metal}} and {{params.gem.kind}} {{params.jewelry}}
-#{{params.metal}} {{params.item}} with {{params.gem.kind}}
-#{{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind}} eye
-#{{params.metal}}en circlet with four {{params.gem.kind}}
-#{{params.metal}} {{params.item}}
-#jeweled {{params.jewelry}}
-#jeweled {{params.metal}} {{params.jewelry}}
+LPUSH artwork_template a necklace of {{params.gem.size}} {{params.gem.kind|plural(2)}}
+LPUSH artwork_template {{params.color}} {{params.item_material}} mask with several {{params.gem.kind|plural(2)}} 
+LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind}} inlays
+LPUSH artwork_template {{params.item_material}} {{params.item}}
+LPUSH artwork_template Carved harp of {{params.item_material}} with {{params.gem.kind}} gems
+LPUSH artwork_template ceremonial {{params.metal}} {{params.weapon}} with a {{params.gem.kind}} in the pommel
+LPUSH artwork_template {{params.metal}}-embroidered {{params.cloth_item}
+LPUSH artwork_template embroidered and bejeweled {{params.cloth_item}
+LPUSH artwork_template embroidered {{params.clothmaterial}} {{params.cloth_item} with numerous {{params.gem.kind|plural(2)}}
+LPUSH artwork_template eyepatch with mock eye of {{params.gem.kind}} and {{params.gem.kind}}
+LPUSH artwork_template finely wrought small {{params.metal}} bracelet
+LPUSH artwork_template {{params.gem.kind}} {{params.jewlery}} on a fine {{params.metal}} chain
+LPUSH artwork_template {{params.metal}} and {{params.gem.kind}} {{params.jewelry}}
+LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind}}
+LPUSH artwork_template {{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind}} eye
+LPUSH artwork_template {{params.metal}} {{params.jewelry}} with four {{params.gem.kind|plural(2)}}
+LPUSH artwork_template {{params.metal}} {{params.item}}
+LPUSH artwork_template jeweled {{params.jewelry}}
+LPUSH artwork_template jeweled {{params.metal}} {{params.jewelry}}
+
 #large well-done wool tapestry
 #old masterpiece painting
 #{{params.gem.kind}} pendant on {{params.metal}} chain
