@@ -5,6 +5,7 @@ from generators.Generator import Generator
 from generators.MagicItem import MagicItem
 from generators.MundaneItem import MundaneItem
 from generators.Gem import Gem
+from generators.Artwork import Artwork
 from generators.Currency import Currency
 from util import Filters, Seeds
 
@@ -34,7 +35,7 @@ class Loot(Generator):
 
         self.generate_feature('loot','loot_kind')
         print self.__dict__
-        for chance in [ "gem", "currency", "mundane", "potion", "scroll", "armor", "weapon"]:
+        for chance in [ "gem", "currency", "mundane", "potion", "scroll", "armor", "weapon", 'art']:
             if not hasattr(self, 'loot_'+chance+'_chance'):
                 setattr(self,'loot_'+chance+'_chance', self.kind_description[chance])
         # This is the guts of the Generator...
@@ -46,6 +47,8 @@ class Loot(Generator):
             self.generate_currencies()
         if hasattr(self,'mundane'):
             self.generate_mundaneitems()
+        if hasattr(self,'art'):
+            self.generate_art()
 
     def generate_mundaneitems(self):
             if not hasattr(self, 'mundane_count'):
@@ -53,6 +56,13 @@ class Loot(Generator):
                 self.mundaneitems=[]
                 for i in range(self.mundane_count):
                     self.mundaneitems.append(MundaneItem(self.redis))
+
+    def generate_art(self):
+            if not hasattr(self, 'art_count'):
+                self.art_count=random.randint(self.art['min'], self.art['max'])
+                self.art=[]
+                for i in range(self.art_count):
+                    self.art.append(Artwork(self.redis))
 
     def generate_gems(self):
             if not hasattr(self, 'gem_count'):
