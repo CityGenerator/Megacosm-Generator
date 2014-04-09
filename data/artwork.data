@@ -1,0 +1,189 @@
+
+
+# How do we lay out artwork?
+
+
+
+#metals gold, silver, electrum
+#gems pulled from Gem.py
+
+#color pulled from elsewhere
+#weapon dagger sword axe, pulled from elsewhere
+
+
+#item mug, statuette, cup, harp, music box, comb, bottle, chalice, ewer
+#item_material ivory, onyx, gold, bone, exotic wood,?
+#item_decoration phoenix, dragon, tiger, bear. 
+
+#jewelry ring, circlet, crown, tiara, pendant, bracelet, anklet, chain
+
+#clothitem glove vestments, tapestry,
+#clothmaterial velvet silk wool
+
+#a necklace of {{params.gem.size}} {{params.gem.kind|plural(2)}}
+#{{params.color}} {{params.item_material}} mask with several {{params.gem.kind|plural(2)}} 
+#
+#{{params.metal}} {{params.item}} with {{params.gem.kind}} inlays
+#{{params.item_material}} {{params.item}}
+#Carved harp of {{params.item_material}} with {{params.gem.kind}} gems
+#
+#ceremonial {{params.metal}} {{params.weapon}} with a {{params.gem.kind}} in the pommel
+#cloth of {{params.metal}}-embroidered vestments
+#embroidered and bejeweled glove
+#embroidered {{params.clothmaterial}} mantle with numerous {{params.gem.kind|plural(2)}}
+#eyepatch with mock eye of {{params.gem.kind}} and {{params.gem.kind}}
+#finely wrought small {{params.metal}} bracelet
+#{{params.gem.kind}} {{params.jewlery}} on a fine {{params.metal}} chain
+#{{params.metal}} and {{params.gem.kind}} {{params.jewelry}}
+#{{params.metal}} {{params.item}} with {{params.gem.kind}}
+#{{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind}} eye
+#{{params.metal}}en circlet with four {{params.gem.kind}}
+#{{params.metal}} {{params.item}}
+#jeweled {{params.jewelry}}
+#jeweled {{params.metal}} {{params.jewelry}}
+#large well-done wool tapestry
+#old masterpiece painting
+#{{params.gem.kind}} pendant on {{params.metal}} chain
+#{{params.metal}} chalice with {{params.gem.kind}} gems
+#{{params.metal}} comb with {{params.gem.kind}}
+#{{params.metal}} {{item}}
+#{{params.metal}}-plated steel longsword with jet jewel in hilt
+#solid {{params.metal}} idol (10 lb.)
+#
+#
+#Amber Amphora
+#Bolt of Electrum Cloth
+#Bolt of Electrum Cloth
+#Bolt of Electrum Cloth set with Golden Pearl
+#Bolt of Electrum Cloth set with Pink Pearl
+#Bolt of Fine Steel Cloth
+#Bolt of Gold Cloth
+#Bolt of Platinum Cloth set with Alexandrite
+#Bolt of Platinum Cloth set with Deep Green Spinel
+#Bolt of Silver Cloth
+#Bolt of Silver Cloth
+#Bolt of Silver Cloth set with Golden Yellow Topaz
+#Brass Medallion set with Chalcedony
+#Brass Shield wreathed in Continual Flame
+#Brass Totem (of a Totem Charge)
+#Bronze Decanter inlaid with Copper
+#Bronze Statue (of a Boar) inlaid with Electrum
+#Bronze Totem (of a Totem Charge)
+#Carved Ivory Drinking Horn wreathed in Continual Flame
+#Carved Wooden Dice (pair)
+#Carved Wooden Staff studded with Copper
+#Carved Wooden Staff studded with Platinum
+#Carved Wooden Staff studded with Silver
+#Ceramic Vase
+#Copper Rapier set with Bloodstone
+#Copper Sundial
+#Crystal Medallion
+#Deck of Ivory Tarot Cards inlaid with Electrum
+#Dragonscale Shortsword Scabbard
+#Ebony Ewer inlaid with Orichalcum
+#Ebony Miniature (of a Fox)
+#Electrum Brazier inlaid with Silver
+#Electrum Circlet
+#Electrum Cloth Tabard
+#Electrum Dice (pair) set with Bloodstone
+#Electrum Pendant
+#Electrum Pin
+#Electrum Shuriken set with Onyx
+#Electrum Staff
+#Ermine Belt wreathed in Continual Flame
+#Ermine Choker inlaid with Gold
+#Ermine Ribbon
+#Ermine Ribbon inlaid with Silver
+#Ermine Vest
+#Ermine Vest
+#Feathered Ribbon
+#Fine Cloth Gown threaded with Bronze
+#Fine Cloth Sash trimmed with Ermine
+#Fine Cloth Vest threaded with Gold
+#Fine Leather Bracers
+#Fine Leather Coinpurse
+#Fine Leather Gloves
+#Fine Leather Ribbon set with Turquoise
+#Fine Leather Talisman set with Lapis Lazuli
+#Fine Steel Choker
+#Fine Steel Font
+#Fox Fur Talisman set with Banded Agate
+#Fox Fur bound Book (blank)
+#Gold Candlesticks
+#Gold Cloth Cloak
+#Gold Cloth Gown
+#Gold Cloth Sash
+#Gold Cloth Tabard
+#Gold Framed Masterpiece Painting
+#Gold Pendant inlaid with Fine Steel
+#Iolite Orb
+#Iron Coffer
+#Iron Dice (pair)
+#Iron Pendant
+#Iron Skull
+#Iron Tiara
+#Ivory Stele set with Black Pearl
+#Large Tapestry threaded with Gold
+#Leather Belt set with Eye Agate
+#Leather Belt set with Lapis Lazuli
+#Leather Belt with Bronze Buckle
+#Leather Bracers
+#Leather Mask
+#Leather Ribbon
+#Leather Ribbon
+#Leopard Fur Coinpurse set with Peridot
+#Leopard Fur Hunter's Cap
+#Malachite Miniature (of a Charger) set with Hematite
+#Moss Agate Figurine (of a Male Elf)
+#Onyx Mask set with Pink Pearl
+#Ornate Silver Mirror
+#Ornate Silver Mirror
+#Painted Glass Miniature (of a Tower)
+#Painted Glass Ring
+#Pewter Box
+#Pewter Buckle
+#Platinum Chalice inlaid with Electrum
+#Platinum Stele inlaid with Orichalcum
+#Polished Stone Holy Symbol (of a Goddess of Trickery)
+#Polished Stone Miniature (of a Temple)
+#Polished Stone Miniature (of an Air God)
+#Porcelain Amphora carved with Knotwork
+#Porcelain Figurine (of a Badger) inlaid with Copper
+#Rabbit Fur Bracers
+#Rabbit Fur Coinpurse
+#Rabbit Fur Hunter's Cap
+#Rabbit Fur Ribbon
+#Red-brown Spinel Miniature (of an Aberrant God) set with Sardonyx
+#Rock Crystal Puzzle Box
+#Rock Crystal Stele wreathed in Violet Continual Flame
+#Rosewood Orb
+#Rosewood Pedestal wreathed in Continual Flame
+#Sable Cloak wreathed in Green Continual Flame
+#Sable bound Book (blank) inlaid with Silver
+#Sardonyx Scroll Case
+#Silk Choker threaded with Gold
+#Silver Cloth Coat
+#Silver Cloth Gloves
+#Silver Dagger
+#Silver Dice (pair) set with Obsidian
+#Small Bag of Exotic Spices
+#Small Bag of Exotic Spices
+#Small Bag of Incense
+#Small Tapestry
+#Small Tapestry threaded with Silver
+#Small Vial of Exotic Perfume
+#Small Vial of Perfume
+#Tooled Leather Choker
+#Tooled Leather Longsword Scabbard
+#Tooled Leather Ribbon set with Freshwater Pearl
+#Tooled Leather Shoes inlaid with Brass
+#Turquoise Rod
+#
+#
+#
+#
+#
+#
+#
+#
+#
