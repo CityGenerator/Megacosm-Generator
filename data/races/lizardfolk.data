@@ -1,11 +1,11 @@
+#
 
-LPUSH race lizardfolk
+LPUSH npc_race lizardfolk
 
 SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": "reptilian features and taste for fresh meat"}
 
-
-ZADD lizardfolk_name_order 1 first
-ZADD lizardfolk_name_order 2 last
+ZADD lizardfolk_name_order 50 { "name":"first" }
+ZADD lizardfolk_name_order 100 { "name":"last"}
 
 HSET lizardfolk_name_first  pre 100 
 HSET lizardfolk_name_first  post 100
