@@ -1,11 +1,11 @@
 #
 
-LPUSH race gnome
+LPUSH npc_race gnome
 
 SET gnome_details      {"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }
 
-ZADD gnome_name_order 1 first
-ZADD gnome_name_order 2 last
+ZADD gnome_name_order 50 { "name":"first" }
+ZADD gnome_name_order 100 { "name":"last"}
 
 HSET gnome_name_first  pre 100 
 HSET gnome_name_first  post 70

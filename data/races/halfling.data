@@ -1,11 +1,11 @@
 #
 
-LPUSH race halfling
+LPUSH npc_race halfling
 
 SET halfling_details   {"name": "Halfling",   "size": "small",   "description": "being inquisitive and occasionally compulsive" }
 
-ZADD halfling_name_order 1 first
-ZADD halfling_name_order 2 last
+ZADD halfling_name_order 50 { "name":"first" }
+ZADD halfling_name_order 100 { "name":"last"}
 
 HSET halfling_name_first  pre  100
 HSET halfling_name_first  root 50

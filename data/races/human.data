@@ -1,12 +1,11 @@
 #
 
-LPUSH race human
+LPUSH npc_race human
 
 set human_details {"name": "Human",  "size": "medium",  "description": "quick growth and adaptability"}
 
-
-ZADD human_name_order 1 first
-ZADD human_name_order 2 last
+ZADD human_name_order 50 { "name":"first" }
+ZADD human_name_order 100 { "name":"last"}
 
 HSET human_name_first  pre 1 
 HSET human_name_first  root 100
@@ -82,7 +81,6 @@ LPUSH human_name_first_post sie
 LPUSH human_name_first_post son
 LPUSH human_name_first_post tin
 LPUSH human_name_first_post ton
-       
 
 # lastname!
  
