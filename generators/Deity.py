@@ -5,29 +5,17 @@ from generators.Generator import Generator
 from generators.NPC import  NPC
 from generators.Sect import  Sect
 
-class Deity(Generator):
+
+
+
+class Deity(NPC):
     """ Generate a god for your world"""
     def __init__(self, redis, features={}):
-        Generator.__init__(self,redis,features)
-        self.generate_avatar()
-        self.generate_favored_stat()
+        NPC.__init__(self,redis,features, 'npc')
+
+        self.generate_features('deity')
+
         self.select_portfolio()
-
-
-    def generate_favored_stat(self):
-        """ Select a single stat and make that favored by the deity. """
-        # TODO change removal of sex to favoring men or women
-
-
-    def generate_avatar(self):
-        """ Many features of a god are determined by their avatar."""
-
-        # Theoretically Deity could be a child class of NPC, but I couldn't make it mesh.
-        self.avatar=NPC(self.redis)
-
-        # Steal the name for simplicity, leave the rest as avatar traits
-        self.name=self.avatar.name
-
 
     def add_sects(self): #TODO make this more like countries for continents
         """ each portfolio item except the largest domain can have a sect"""
@@ -50,7 +38,6 @@ class Deity(Generator):
                 sect= Sect(self.redis, {'deity':self,'domain':domain})
                 self.sects.append(sect)
                 sectchance=sectchance/2
-
     
     def select_portfolio(self):
         """  use the deity's importance to determine how many portfolios it has. """
