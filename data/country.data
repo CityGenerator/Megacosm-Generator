@@ -1,18 +1,4 @@
-
-LPUSH stat_country size
-LPUSH stat_country reputation
-LPUSH stat_country aggression
-LPUSH stat_country corruption
-LPUSH stat_country approval
-LPUSH stat_country efficiency
-LPUSH stat_country influence
-LPUSH stat_country unity
-LPUSH stat_country theology
-LPUSH stat_country age
-LPUSH stat_country military
-LPUSH stat_country social
-LPUSH stat_country economic
-
+#
 
 ZADD  country_size    5   {"name":"micro",    "mincities":1,   "maxcities":2,       "score":5    }
 ZADD  country_size    10   {"name":"small",    "mincities":3,   "maxcities":5,       "score":10    }

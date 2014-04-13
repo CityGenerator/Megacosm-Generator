@@ -12,9 +12,6 @@ class NPC(Generator):
         self.select_race()
         self.select_names()
 
-        # This list tells us which of the attributes are actually stats
-        self.stats=self.redis.lrange('stat_npc',0,-1)
-
         if not hasattr(self,'motivation'):
             self.motivation=generators.Motivation.Motivation(self.redis, {'npc':self})
 

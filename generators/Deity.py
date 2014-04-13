@@ -17,13 +17,7 @@ class Deity(Generator):
     def generate_favored_stat(self):
         """ Select a single stat and make that favored by the deity. """
         # TODO change removal of sex to favoring men or women
-        avatarstats=self.avatar.stats
 
-        # removing sex because "Gobo favors sex" just doesn't sound right
-        avatarstats.remove('sex')
-
-        random.shuffle(avatarstats)
-        self.favored_stat=avatarstats.pop()
 
     def generate_avatar(self):
         """ Many features of a god are determined by their avatar."""

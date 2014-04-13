@@ -1,20 +1,5 @@
 #
 
-LPUSH stat_npc sex
-LPUSH stat_npc age
-LPUSH stat_npc attractiveness
-LPUSH stat_npc intelligence
-LPUSH stat_npc charisma
-LPUSH stat_npc wisdom
-LPUSH stat_npc endurance
-LPUSH stat_npc agility
-LPUSH stat_npc strength
-LPUSH stat_npc experience
-LPUSH stat_npc skill
-LPUSH stat_npc bravery
-LPUSH stat_npc honor
-LPUSH stat_npc piety
-
 ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
 ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
 
