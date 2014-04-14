@@ -35,6 +35,7 @@ from generators import GeomorphDungeon
 from generators import Street
 from generators import Flag
 from util.Seeds import set_seed
+from generators import Organization
 from util import Filters
 import redis
 import ConfigParser
@@ -456,6 +457,24 @@ def legend_builder():
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
+#########################################################################
+
+@app.route('/organization')
+def GenerateOrganization():
+    """Generate a simple organization"""
+    features=feature_filter('organization')
+    organization=Organization.Organization(server,features)
+    return render_template('organization.html', organization=organization )
+
+
+@app.route('/organization_builder')
+def Organization_Builder():
+    """Generate the basic data about a organization"""
+
+    paramlist,paramstring,paramset=builder_form_data('organization')
+    return render_template('generic_builder.html',paramlist=paramlist,paramstring=paramstring, paramset=paramset, name='organization') 
+    
+    
 #########################################################################
 
 @app.route('/business')

@@ -1,0 +1,53 @@
+
+# The Joban gang is an ancient ________ organization
+ZADD organization_legal  10 {"name":"criminal",     "score":10   }
+ZADD organization_legal  30 {"name":"dubious",      "score":30   }
+ZADD organization_legal  40 {"name":"shady",        "score":40   }
+ZADD organization_legal  50 {"name":"honorable",    "score":50   }
+ZADD organization_legal 100 {"name":"legitimate",   "score":100   }
+
+# The Joban gang is an ancient, honorable organization with a reputation for
+ZADD organization_reputation  10 {"name":"brutality",     "score":10   }
+ZADD organization_reputation  20 {"name":"violence",       "score":20   }
+ZADD organization_reputation  30 {"name":"",      "score":30   }
+ZADD organization_reputation  40 {"name":"",        "score":40   }
+ZADD organization_reputation  50 {"name":"fairness",    "score":50   }
+ZADD organization_reputation 100 {"name":"justice",   "score":100   }
+
+#where does judge dredd and friends fit?
+# Size? Public knowledge? Difficulty of entry?
+# new members
+# fairness
+# justice
+# TODO how do we deal with Sects? merge?
+
+LPUSH organization_kind gang
+LPUSH organization_kind union
+LPUSH organization_kind guild
+LPUSH organization_kind order
+LPUSH organization_kind milita
+LPUSH organization_kind network
+LPUSH organization_kind fraternity
+LPUSH organization_kind circle
+LPUSH organization_kind council
+LPUSH organization_kind society
+LPUSH organization_kind association
+LPUSH organization_kind club
+LPUSH organization_kind organization
+
+# Memebers of Joban's gang can be identified ________
+LPUSH organization_identification only by another member
+LPUSH organization_identification by a specific insignia
+LPUSH organization_identification by a specific article of clothing
+LPUSH organization_identification by a tattoo
+LPUSH organization_identification by a shared accent
+
+# Joban's gang is a[n] ________ criminal organization
+ZADD organization_age 25   {"name":"young",         "score":25   }
+ZADD organization_age 50   {"name":"juvenile",      "score":50   }
+ZADD organization_age 75   {"name":"mature",        "score":75   }
+ZADD organization_age 100  {"name":"ancient",       "score":100  }
+
+
+
+
