@@ -1,5 +1,4 @@
 
-
 function create_flag(params,canvas) {
 
     var flag=canvas.getContext('2d');

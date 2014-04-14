@@ -1,5 +1,4 @@
-
-    // overlay should use colors 3
+// overlay should use colors 3
 function select_overlay( params ){
     var color=params.colors[3].hex;
     console.log("overlay: "+params.overlay['name'])

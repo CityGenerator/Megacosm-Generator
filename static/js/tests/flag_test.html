@@ -1,0 +1,161 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Refactored date examples</title>
+ 
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+  <script src="http://code.jquery.com/qunit/qunit-1.14.0.js"></script>
+  <script src="/static/js/flag.js"></script>
+ 
+  <script>
+
+var basicflag={
+    "symbol_circle_radiusdirection": "horizontal", 
+    "overlay_x_outline": "false", 
+    "symbol_circle_outline": "false", 
+    "flag_ratio_roll": 34, 
+    "overlay_cross_vertwidth": "0.075", 
+    "border_solid_size": ".08", 
+    "symbol_letter_y": ".25", 
+    "symbol_letter_x": ".25", 
+    "shape": {
+        "score": 60, 
+        "name": "para"
+    }, 
+    "seed": 9724547, 
+    "overlay_diamond_outline": "false", 
+    "overlay_circle_outline": "false", 
+    "overlay_cross_horpos": "0.33", 
+    "division_diagonal_direction": "left-to-right", 
+    "division_stripes_side": "horizontal", 
+    "overlay_stripe_countselected": 5, 
+    "overlay_circle_x": "-.5", 
+    "overlay_circle_y": "0", 
+    "ratio": {
+        "score": 40, 
+        "name": "1.33"
+    }, 
+    "overlay_slash_direction": "left-to-right", 
+    "overlay_cross_horwidth": "0.2", 
+    "border": {
+        "score": 50, 
+        "name": "none"
+    }, 
+    "shape_swallow_depth": "20", 
+    "overlay_x_width": "0.1", 
+    "overlay_rays_y": "0", 
+    "overlay_cross_vertlength": "1", 
+    "symbol_circle_radius": ".25", 
+    "symbol_star_points": "5", 
+    "symbol_letter_size": ".40", 
+    "shape_tongued_count": "11", 
+    "symbol_letter_fontfamily": "Verdana", 
+    "flag_division_roll": 72, 
+    "symbol_circle_x": ".25", 
+    "overlay_circle_radius": ".666", 
+    "overlay_quaddiag_side": "north", 
+    "division": {
+        "score": 80, 
+        "name": "diagonal"
+    }, 
+    "overlay_rays_count": "10", 
+    "symbol_circle_y": ".25", 
+    "shape_tongued_depth": "0.1", 
+    "flag_symbol_roll": 40, 
+    "symbol": {
+        "score": 50, 
+        "name": "circle"
+    }, 
+    "flag_overlay_roll": 36, 
+    "overlay_quad_side": "sw", 
+    "division_stripes_colorcount": "3", 
+    "overlay_circle_outlinewidth": "1", 
+    "letter": "B", 
+    "shape_tongued_shape": "scallop", 
+    "overlay_rays_x": ".5", 
+    "overlay_slash_width": "0.1", 
+    "overlay_rays_offset": ".33", 
+    "colors": [
+        {
+            "verb": "relish", 
+            "hex": "#ffcc00", 
+            "name": "dark yellow", 
+            "adverb": "gracefully"
+        }, 
+        {
+            "verb": "balance", 
+            "hex": "#330000", 
+            "name": "dark brown", 
+            "adverb": "naturally"
+        }, 
+        {
+            "verb": "devote", 
+            "hex": "#0000cc", 
+            "name": "dark blue", 
+            "adverb": "fully"
+        }, 
+        {
+            "verb": "cherish", 
+            "hex": "#ff3333", 
+            "name": "light red", 
+            "adverb": "peacefully"
+        }, 
+        {
+            "verb": "hope", 
+            "hex": "#006600", 
+            "name": "dark green", 
+            "adverb": "appropriately"
+        }, 
+        {
+            "verb": "expand", 
+            "hex": "#ff0000", 
+            "name": "red", 
+            "adverb": "gracefully"
+        }, 
+        {
+            "verb": "surpass", 
+            "hex": "#ffff99", 
+            "name": "light yellow", 
+            "adverb": "happily"
+        }
+    ], 
+    "division_stripes_count": "3", 
+    "overlay_stripe_count": "5", 
+    "overlay": {
+        "score": 40, 
+        "name": "slash"
+    }, 
+    "symbol_star_inset": ".25", 
+    "overlay_stripe_side": "vertical", 
+    "flag_shape_roll": 59, 
+    "flag_border_roll": 34, 
+    "symbol_star_y": ".25", 
+    "symbol_star_x": ".25", 
+    "overlay_cross_horlength": "0.5", 
+    "overlay_circle_radiusdirection": "vertical"
+};
+
+
+
+
+  test("Flag ratio", function() {
+    params=basicflag;
+    params.canvas=document.getElementById('flag');
+    set_ratio(params);
+    equal(params.canvas.width, 266, 'canvas with is not set to the expected size'   );
+    equal(params.ratio['name'], 1.33, 'Ratio is at expected size'   );
+    equal(params.canvas.height, 200, 'canvas height is at expected size'   );
+  });
+
+
+
+  </script>
+</head>
+<body>
+ 
+<div id="qunit"></div>
+        <canvas id='flag' height='200' >
+        </canvas>
+ 
+</body>
+</html>

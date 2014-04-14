@@ -1,0 +1,100 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Refactored date examples</title>
+ 
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.14.0.css">
+  <script src="http://code.jquery.com/qunit/qunit-1.14.0.js"></script>
+  <script src="/static/js/flag.js"></script>
+  <script src="/static/js/flagshape.js"></script>
+ 
+  <script>
+
+var basicflag={
+    "flag_ratio_roll": 34, 
+    "shape": {
+        "score": 60, 
+        "name": "para"
+    }, 
+    "seed": 9724547, 
+    "ratio": {
+        "score": 40, 
+        "name": "1.33"
+    }, 
+    "shape_swallow_depth": "20", 
+    "shape_tongued_count": "11", 
+    "shape_tongued_depth": "0.1", 
+    "shape_tongued_shape": "scallop", 
+    "colors": [
+        {
+            "verb": "relish", 
+            "hex": "#ffcc00", 
+            "name": "dark yellow", 
+            "adverb": "gracefully"
+        }, 
+        {
+            "verb": "balance", 
+            "hex": "#330000", 
+            "name": "dark brown", 
+            "adverb": "naturally"
+        }, 
+        {
+            "verb": "devote", 
+            "hex": "#0000cc", 
+            "name": "dark blue", 
+            "adverb": "fully"
+        }, 
+        {
+            "verb": "cherish", 
+            "hex": "#ff3333", 
+            "name": "light red", 
+            "adverb": "peacefully"
+        }, 
+        {
+            "verb": "hope", 
+            "hex": "#006600", 
+            "name": "dark green", 
+            "adverb": "appropriately"
+        }, 
+        {
+            "verb": "expand", 
+            "hex": "#ff0000", 
+            "name": "red", 
+            "adverb": "gracefully"
+        }, 
+        {
+            "verb": "surpass", 
+            "hex": "#ffff99", 
+            "name": "light yellow", 
+            "adverb": "happily"
+        }
+    ], 
+    "flag_shape_roll": 59, 
+};
+
+
+
+
+  test("Flag ratio", function() {
+    params=basicflag;
+    params.canvas=document.getElementById('flag');
+    params.flag=params.canvas.getContext('2d');
+    set_ratio( params );
+    set_shape( params );
+
+
+    equal("do something useful", "do something useful", "what can I test?"    );
+  });
+
+
+
+  </script>
+</head>
+<body>
+ 
+<div id="qunit"></div>
+        <canvas id='flag' height='200' >
+        </canvas>
+ 
+</body>
+</html>
