@@ -6,19 +6,45 @@ ZADD organization_legal  40 {"name":"shady",        "score":40   }
 ZADD organization_legal  50 {"name":"honorable",    "score":50   }
 ZADD organization_legal 100 {"name":"legitimate",   "score":100   }
 
-# The Joban gang is an ancient, honorable organization with a reputation for
-ZADD organization_reputation  10 {"name":"brutality",     "score":10   }
-ZADD organization_reputation  20 {"name":"violence",       "score":20   }
-ZADD organization_reputation  30 {"name":"",      "score":30   }
-ZADD organization_reputation  40 {"name":"",        "score":40   }
-ZADD organization_reputation  50 {"name":"fairness",    "score":50   }
-ZADD organization_reputation 100 {"name":"justice",   "score":100   }
+# The Joban gang is an ancient, honorable organization with a ________ reputation
+ZADD organization_violence  10 {"name":"muderous",      "score":10   }
+ZADD organization_violence  20 {"name":"brutal",        "score":20   }
+ZADD organization_violence  30 {"name":"violent",       "score":30   }
+ZADD organization_violence  40 {"name":"coercive",      "score":40   }
+ZADD organization_violence  50 {"name":"rough",         "score":40   }
+ZADD organization_violence  60 {"name":"strict",        "score":60   }
+ZADD organization_violence  80 {"name":"mild",          "score":80   }
+ZADD organization_violence  90 {"name":"calm",          "score":90   }
+ZADD organization_violence 100 {"name":"passive",       "score":100   }
 
-#where does judge dredd and friends fit?
-# Size? Public knowledge? Difficulty of entry?
-# new members
-# fairness
-# justice
+# Joban's gang is a[n] ________ criminal organization
+ZADD organization_age 25   {"name":"young",         "score":25   }
+ZADD organization_age 50   {"name":"juvenile",      "score":50   }
+ZADD organization_age 75   {"name":"mature",        "score":75   }
+ZADD organization_age 100  {"name":"ancient",       "score":100  }
+
+
+# FIXME The following ALL need to be stats with blocks like above
+#size (street, district, city, region, country, continent, world)
+#power (political)
+#visibility (to the public)
+#entry (difficulty of joining)
+#morale 
+#teamwork (work alone vs got your back)
+#leadership (strong vs. weak)
+#handling failure (kill vs. correction)
+#adaptability (fear of change vs riding new wave)
+#structure (loose org vs. rigid structure)
+#rules (loose rules vs defined rules
+##regulation ( no enforcement vs strict enforcement)
+#stability (rock solid vs. falling apart
+
+
+
+
+
+
+###########################################
 # TODO how do we deal with Sects? merge?
 
 LPUSH organization_kind gang
@@ -42,11 +68,6 @@ LPUSH organization_identification by a specific article of clothing
 LPUSH organization_identification by a tattoo
 LPUSH organization_identification by a shared accent
 
-# Joban's gang is a[n] ________ criminal organization
-ZADD organization_age 25   {"name":"young",         "score":25   }
-ZADD organization_age 50   {"name":"juvenile",      "score":50   }
-ZADD organization_age 75   {"name":"mature",        "score":75   }
-ZADD organization_age 100  {"name":"ancient",       "score":100  }
 
 
 
