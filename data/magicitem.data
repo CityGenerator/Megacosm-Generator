@@ -35,10 +35,19 @@ LPUSH magicitem_location buried in a pile of refuse
 LPUSH magicitem_location secreted away in a tomb
 LPUSH magicitem_location buried in a nest
 LPUSH magicitem_location hidden on a sage
+
+# The Good hammer _______ when ________ the hammer.
+SET   magicitem_vibe_chance 40
+LPUSH magicitem_vibe makes you feel uncomfortable
+LPUSH magicitem_vibe gives you feelings of power
+LPUSH magicitem_vibe gives you feelings of might
+
+LPUSH magicitem_vibe_when holding
+LPUSH magicitem_vibe_when looking at
+LPUSH magicitem_vibe_when approaching
+LPUSH magicitem_vibe_when you look at
+
         
-#LPUSH magicitem_kind armor
-#LPUSH magicitem_kind weapon
-#LPUSH magicitem_kind scroll
 #LPUSH magicitem_kind rings
 #LPUSH magicitem_kind rods
 #LPUSH magicitem_kind staves
