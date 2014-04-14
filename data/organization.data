@@ -1,10 +1,38 @@
 
-# The Joban gang is an ancient ________ organization
+# Joban's gang is a[n] ________, criminal organization
+ZADD organization_age 25   {"name":"young",         "score":25   }
+ZADD organization_age 50   {"name":"juvenile",      "score":50   }
+ZADD organization_age 75   {"name":"mature",        "score":75   }
+ZADD organization_age 100  {"name":"ancient",       "score":100  }
+
+# The Joban gang is an ancient, ________ organization
 ZADD organization_legal  10 {"name":"criminal",     "score":10   }
 ZADD organization_legal  30 {"name":"dubious",      "score":30   }
 ZADD organization_legal  40 {"name":"shady",        "score":40   }
 ZADD organization_legal  50 {"name":"honorable",    "score":50   }
 ZADD organization_legal 100 {"name":"legitimate",   "score":100   }
+
+
+# The Joban gang is an ancient, honorable ________________
+LPUSH organization_kind association
+LPUSH organization_kind cartel
+LPUSH organization_kind circle
+LPUSH organization_kind club
+LPUSH organization_kind council
+LPUSH organization_kind family
+LPUSH organization_kind firm
+LPUSH organization_kind fraternity
+LPUSH organization_kind gang
+LPUSH organization_kind guild
+LPUSH organization_kind mafia
+LPUSH organization_kind milita
+LPUSH organization_kind network
+LPUSH organization_kind order
+LPUSH organization_kind organization
+LPUSH organization_kind society
+LPUSH organization_kind tribe
+LPUSH organization_kind union
+LPUSH organization_kind crime ring
 
 # The Joban gang is an ancient, honorable organization with a ________ reputation
 ZADD organization_violence  10 {"name":"muderous",      "score":10   }
@@ -15,21 +43,71 @@ ZADD organization_violence  50 {"name":"rough",         "score":40   }
 ZADD organization_violence  60 {"name":"strict",        "score":60   }
 ZADD organization_violence  80 {"name":"mild",          "score":80   }
 ZADD organization_violence  90 {"name":"calm",          "score":90   }
-ZADD organization_violence 100 {"name":"passive",       "score":100   }
-
-# Joban's gang is a[n] ________ criminal organization
-ZADD organization_age 25   {"name":"young",         "score":25   }
-ZADD organization_age 50   {"name":"juvenile",      "score":50   }
-ZADD organization_age 75   {"name":"mature",        "score":75   }
-ZADD organization_age 100  {"name":"ancient",       "score":100  }
+ZADD organization_violence 100 {"name":"passive",       "score":100  }
 
 
-# FIXME The following ALL need to be stats with blocks like above
-#power (political)
-#entry (difficulty of joining)
-#morale 
-#adaptability (fear of change vs riding new wave)
-#rules (loose rules vs defined rules
+
+
+# Members of Joban's gang are _________ by recent events
+ZADD organization_morale 25   {"name":"demoralized",         "score":25   }
+ZADD organization_morale 50   {"name":"unnerved",            "score":50   }
+ZADD organization_morale 75   {"name":"comforted",           "score":75   }
+ZADD organization_morale 100  {"name":"encouraged",          "score":100  }
+
+# The Yakuza's is a[n] _________ power in their district.
+LPUSH organization_powertype charismatic
+LPUSH organization_powertype political
+LPUSH organization_powertype religious
+LPUSH organization_powertype criminal
+LPUSH organization_powertype cooperative
+LPUSH organization_powertype academic
+LPUSH organization_powertype military
+LPUSH organization_powertype cultural
+LPUSH organization_powertype economic
+LPUSH organization_powertype philosophical
+LPUSH organization_powertype physical
+LPUSH organization_powertype mercenary
+LPUSH organization_powertype aristocratic 
+LPUSH organization_powertype athletic
+LPUSH organization_powertype investment
+LPUSH organization_powertype gambling
+
+
+# Leadership within the  Yakuza is  ______________.
+ZADD organization_leadership  30 { "name":"weak",       "score":30  }
+ZADD organization_leadership  60 { "name":"middling",   "score":60  }
+ZADD organization_leadership 100 { "name":"strong",     "score":100 }
+
+# The Yakuza are _______________ structured.
+ZADD organization_structure  30 { "name":"loosely",    "score":30  }
+ZADD organization_structure  60 { "name":"barely",     "score":60  }
+ZADD organization_structure 100 { "name":"rigidly",    "score":100 }
+
+# Insiders say the Yakuza  ________ internally.
+ZADD organization_stability  20 { "name":"are falling apart",  "score":20  }
+ZADD organization_stability  40 { "name":"are having issues",  "score":40  }
+ZADD organization_stability  60 { "name":"has it's squabbles", "score":60  }
+ZADD organization_stability  80 { "name":"have few issues",    "score":80  }
+ZADD organization_stability 100 { "name":"are rock solid",     "score":100 }
+
+# The leaders of Joban's gang _________ 
+ZADD organization_adaptability 25   {"name":"fear change",                      "score":25   }
+ZADD organization_adaptability 50   {"name":"like to avoid change",             "score":50   }
+ZADD organization_adaptability 75   {"name":"keep an eye on trends",            "score":75   }
+ZADD organization_adaptability 100  {"name":"stay ahead of new development",    "score":100  }
+
+# When rules are broken, the Yakuza _________ punishment.
+ZADD organization_regulation  20 { "name":"never enforced",     "score":20  }
+ZADD organization_regulation  40 { "name":"rarely enforced",    "score":40  }
+ZADD organization_regulation  60 { "name":"usually enforced",   "score":60  }
+ZADD organization_regulation  80 { "name":"often enforced",     "score":80  }
+ZADD organization_regulation 100 { "name":"strictly enforced",  "score":100 }
+
+# The rules for members of the Bloodhound Firm are __________- defined
+ZADD organization_rules  25 { "name":"loosely",    "score":25  }
+ZADD organization_rules  50 { "name":"barely",     "score":50  }
+ZADD organization_rules  75 { "name":"strictly",   "score":75  }
+ZADD organization_rules 100 { "name":"rigidly",    "score":100 }
 
 
 
@@ -41,34 +119,12 @@ ZADD organization_failure  60 { "name":"a painful lesson",              "score":
 ZADD organization_failure  80 { "name":"strict punishment",             "score":80  }
 ZADD organization_failure 100 { "name":"better guidance and training",  "score":100 }
 
-# The Yakuza work ______________.
-ZADD organization_teamwork  30 { "name":"as individuals acting alone.",    "score":30  }
+
+# Members are expected to work  ______________.
+ZADD organization_teamwork  30 { "name":"as individuals acting alone",     "score":30  }
 ZADD organization_teamwork  60 { "name":"together to accomplish goals",    "score":60  }
 ZADD organization_teamwork 100 { "name":"as a well oiled machine",         "score":100 }
 
-# Leadership within the  Yakuza is  ______________.
-ZADD organization_leadership  30 { "name":"weak",       "score":30  }
-ZADD organization_leadership  60 { "name":"moderate",   "score":60  }
-ZADD organization_leadership 100 { "name":"strong",     "score":100 }
-
-# The Yakuza are _______________ structured.
-ZADD organization_structure  30 { "name":"loosely",    "score":30  }
-ZADD organization_structure  60 { "name":"barely",     "score":60  }
-ZADD organization_structure 100 { "name":"rigidly",    "score":100 }
-
-# When rules are broken, the Yakuza _________ punishment.
-ZADD organization_regulation  20 { "name":"never enforce",     "score":20  }
-ZADD organization_regulation  40 { "name":"rarely enforce",    "score":40  }
-ZADD organization_regulation  60 { "name":"usually enforce",   "score":60  }
-ZADD organization_regulation  80 { "name":"often enforce",     "score":80  }
-ZADD organization_regulation 100 { "name":"strictly enforce",  "score":100 }
-
-# Insiders say the Yakuza  ________ internally.
-ZADD organization_stability  20 { "name":"are falling apart",  "score":20  }
-ZADD organization_stability  40 { "name":"are having issues",  "score":40  }
-ZADD organization_stability  60 { "name":"has it's squabbles", "score":60  }
-ZADD organization_stability  80 { "name":"have few issues",    "score":80  }
-ZADD organization_stability 100 { "name":"are rock solid",     "score":100 }
 
 # The Yakuza are _______ to the average citizen
 ZADD organization_visibility  10 { "name":"unknown",               "score":10  }
@@ -88,26 +144,16 @@ ZADD organization_size  90 { "name":"country",     "score":90  }
 ZADD organization_size  95 { "name":"continent",   "score":95  }
 ZADD organization_size 100 { "name":"world",       "score":100 }
 
-
-
+# Anyone wishing to join Joban's gang will find it a[n] task.
+ZADD organization_entry 25   {"name":"trivial",         "score":25   }
+ZADD organization_entry 50   {"name":"easy",            "score":50   }
+ZADD organization_entry 75   {"name":"tough",           "score":75   }
+ZADD organization_entry 100  {"name":"impossible",      "score":100  }
 
 
 ###########################################
 # TODO how do we deal with Sects? merge?
 
-LPUSH organization_kind gang
-LPUSH organization_kind union
-LPUSH organization_kind guild
-LPUSH organization_kind order
-LPUSH organization_kind milita
-LPUSH organization_kind network
-LPUSH organization_kind fraternity
-LPUSH organization_kind circle
-LPUSH organization_kind council
-LPUSH organization_kind society
-LPUSH organization_kind association
-LPUSH organization_kind club
-LPUSH organization_kind organization
 
 # Memebers of Joban's gang can be identified ________
 LPUSH organization_identification only by another member
@@ -115,4 +161,5 @@ LPUSH organization_identification by a specific insignia
 LPUSH organization_identification by a specific article of clothing
 LPUSH organization_identification by a tattoo
 LPUSH organization_identification by a shared accent
+LPUSH organization_identification with difficulty
 
