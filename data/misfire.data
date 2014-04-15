@@ -228,7 +228,7 @@ LPUSH misfire_template A loud Gong sounds.
 LPUSH misfire_template Create food and water.
 LPUSH misfire_template {{params.target}} turns to stone.
 LPUSH misfire_template {{params.target}} age 1d20 years.
-LPUSH misfire_template {{params.target}}r {{params.target}} is Deluded.
+LPUSH misfire_template {{params.target}} are deluded.
 LPUSH misfire_template {{params.target}} drops his weapon.
 LPUSH misfire_template {{params.target}} suffers blindness
 LPUSH misfire_template {{params.target}} grow an extra thumb.
@@ -282,7 +282,7 @@ LPUSH misfire_template {{params.target}} get a random disease.
 #LPUSH misfire_template Metamorphosis into a moose for 1d6 days
 #LPUSH misfire_template {{params.target}} forgets who he is for 1d6 hours.
 #LPUSH misfire_template The caster needs no sleep for 1d4 days.
-#LPUSH misfire_template {{params.target}}r skin becomes golden.  No AR bonus.
+#LPUSH misfire_template {{params.target}} skin becomes golden.  No AR bonus.
 #LPUSH misfire_template All metal on the {{params.target}} turns into wood.
 #LPUSH misfire_template A raven considers itself to be your pet.
 #LPUSH misfire_template Cone of Cold directed at {{params.target}}. Brrrrr.
