@@ -39,6 +39,14 @@ LPUSH misfire_growth foot
 LPUSH misfire_growth toe
         
 
+LPUSH misfire_metal gold
+LPUSH misfire_metal steel
+LPUSH misfire_metal lead
+LPUSH misfire_metal iron
+LPUSH misfire_metal copper
+LPUSH misfire_metal tin
+LPUSH misfire_metal brass
+LPUSH misfire_metal aluminum
 
 LPUSH misfire_smallanimal piglet
 LPUSH misfire_smallanimal mouse
@@ -309,15 +317,15 @@ LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) 
 
 LPUSH misfire_template A strong {{params.taste}} taste affects {{params.target}}.
 LPUSH misfire_template A faeries dance affects {{params.target}}.
-LPUSH misfire_template {{params.target}} emits the scent of a dangerous predator for the next hour.  Domestic animals become hostile.
+LPUSH misfire_template {{params.target}} emit the scent of a dangerous predator for the next hour.  Domestic animals become hostile.
 LPUSH misfire_template Absolutely nothing happens (time is stopped {{params.duration}}).
 LPUSH misfire_template A swarm of viscious rats surround {{params.target}} and attack after a few moments of confusion.
 LPUSH misfire_template {{params.target}} thirst is quenched for {{params.duration}}.  No ill effects from dehydration.
 LPUSH misfire_template Spell is delayed for {{params.duration}} and has half the effect.
 LPUSH misfire_template Spell simply fails
-LPUSH misfire_template {{params.target}} grows via an enlarged spell.
-LPUSH misfire_template {{params.target}} becomes hastened {{params.duration}}.
-LPUSH misfire_template {{params.target}} turns to stone for {{params.duration}}
+LPUSH misfire_template {{params.target}} grow via an enlarged spell.
+LPUSH misfire_template {{params.target}} become hastened {{params.duration}}.
+LPUSH misfire_template {{params.target}} turn to stone for {{params.duration}}
 LPUSH misfire_template {{params.target}} age 1d20 years.
 LPUSH misfire_template {{params.target}} uncontrollably strip.
 LPUSH misfire_template {{params.target}} suffer {{params.suffers}} for {{params.duration}}
@@ -334,13 +342,13 @@ LPUSH misfire_template All gold on {{params.target}} turns to lead.
 LPUSH misfire_template Death himself comes to claim {{params.target}}.
 LPUSH misfire_template {{params.target}} forget the last 24 hours.
 LPUSH misfire_template {{params.target}} glow as per a light spell for {{params.duration}}.
-LPUSH misfire_template {{params.target}} changes sex for {{params.duration}}.
+LPUSH misfire_template {{params.target}} change sex for {{params.duration}}.
 LPUSH misfire_template {{params.target}} find a {{params.smalanimal}} among your gear.
 LPUSH misfire_template {{params.target}} set the nearest forest ablaze.
 LPUSH misfire_template 2d20 {{params.plants}} grow up around {{params.target}}.
 LPUSH misfire_template Skin turns pale {{params.color}} for 2d6 months
 LPUSH misfire_template Spell effectiveness {{params.multiplier}}
-LPUSH misfire_template {{params.target}} takes 5d10 hit points damage
+LPUSH misfire_template {{params.target}} take 5d10 hit points of {{params.damagetype}} damage
 LPUSH misfire_template {{params.target}} turn ethereal for 2d4 rounds
 LPUSH misfire_template Overwhelming fear strikes {{params.target}}. It lasts {{params.duration}}.
 LPUSH misfire_template {{params.target}} forget how to read for 3d4 days.
@@ -362,6 +370,7 @@ LPUSH misfire_template Burst of fireworks explode from {{params.target}} (harmle
 LPUSH misfire_template {{params.target}} are in great pain for 1d3 rounds.
 LPUSH misfire_template {{params.target}} need no sleep for 1d4 days.
 LPUSH misfire_template All metal on {{params.target}} turns into wood.
+LPUSH misfire_template All wood on {{params.target}} turns into {{params.metal}}.
 LPUSH misfire_template {{params.largeanimal|article|capitalize}} considers itself to be your pet.
 LPUSH misfire_template {{params.largeanimal|article|capitalize}} appears in front of {{params.target}}.
 LPUSH misfire_template A skunk is conjured before {{params.target}}, who are promptly sprayed.
@@ -427,7 +436,7 @@ LPUSH misfire_template The surrounding area (2d100 yard radius) is turned into {
 #LPUSH misfire_template Reverse Spell protects {{params.target}} for the next turn.
 #LPUSH misfire_template {{params.target}}'s clothing and armour fall to the ground.
 #LPUSH misfire_template Coloured streamers pour from caster's fingertips.
-#LPUSH misfire_template {{params.target}} changes colour (cancelled by dispel magic)
+#LPUSH misfire_template {{params.target}}'s skin turns {{params.color}} (cancelled by dispel magic)
 #LPUSH misfire_template {{params.target}} permanently gains Bodybuilding at level 1.
 #LPUSH misfire_template The first spell caster ever learned takes effect.
 #LPUSH misfire_template {{params.target}}r eyes permanently turn wine red. (Iris only.)
@@ -475,16 +484,16 @@ LPUSH misfire_template The surrounding area (2d100 yard radius) is turned into {
 #LPUSH misfire_template A black felt hat (value 15 sp) appears on caster's head.
 #LPUSH misfire_template All fluid in containers on {{params.target}} turn to deadly poison.
 #LPUSH misfire_template A major earth elemental decides to rid the world of you.
-#LPUSH misfire_template {{params.target}} becomes invulnerable to edged weapons for 1 hour.
+#LPUSH misfire_template {{params.target}} become invulnerable to edged weapons for 1 hour.
 #LPUSH misfire_template {{params.target}}'s clothes itch (-2 to initiative for 1d10 rounds)
 #LPUSH misfire_template The ground opens up and swallows the caster to the neck.
-#LPUSH misfire_template The {{params.target}} gains Regeneration at the rate of 1 HP/round.
+#LPUSH misfire_template {{params.target}} gain Regeneration at the rate of 1 HP/round.
 #LPUSH misfire_template 1d4 rotten tomatoes hit {{params.target}} (effect at DM discretion).
 #LPUSH misfire_template All creatures within 30 ft of the caster begin to hiccup.
 #LPUSH misfire_template For the next 5 minutes, the caster says everything twice.
 #LPUSH misfire_template Gradually you see your left hand wither into nothingness.
 #LPUSH misfire_template Spell effectiveness (range, duration, etc,) decreases 50%
-#LPUSH misfire_template {{params.target}} gains a 1d100 % resistance to magic for 1d6 turns.
+#LPUSH misfire_template {{params.target}} gain a 1d100 % resistance to magic for 1d6 turns.
 #LPUSH misfire_template The ground beneath the caster becomes slippery as if icy.
 #LPUSH misfire_template {{params.target}}r hair grows an inch per turn for the next 2d10 hours.
 #LPUSH misfire_template A random person within 100 yards of you becomes invisible.
@@ -492,8 +501,8 @@ LPUSH misfire_template The surrounding area (2d100 yard radius) is turned into {
 #LPUSH misfire_template Gravity beneath the caster's feet is reversed for 1 round.
 #LPUSH misfire_template One of the {{params.target}}'s allies turns ethereal for 1d10 rounds.
 #LPUSH misfire_template {{params.target}} is cured of 5d10 hit points (up to normal maximum).
-#LPUSH misfire_template {{params.target}} levitates 20 feet above the ground for 3d10 rounds.
-#LPUSH misfire_template The {{params.target}} speaks with a lisp until the effects wear off. 
+#LPUSH misfire_template {{params.target}} levitate 20 feet above the ground for 3d10 rounds.
+#LPUSH misfire_template {{params.target}} speak with a lisp until the effects wear off. 
 #LPUSH misfire_template 1d1000 yard radius centered on the nearest person, not you!
 #LPUSH misfire_template All magical items within 60 ft of caster glow for 2d8 days.
 #LPUSH misfire_template All normal fires within 60' of the caster are extinguished.
