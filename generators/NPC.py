@@ -12,6 +12,9 @@ class NPC(Generator):
         if self.race not in self.redis.lrange('npc_race',0,-1):
             raise Exception, " %s is not a valid race and has no associated data" % (self.race)
         self.generate_features(self.race)
+        self.generate_features(self.covering)
+        self.coveringtext=self.render_template(self.covertemplate)
+
         self.details=json.loads(self.details)
 
         self.select_names()
