@@ -86,7 +86,7 @@ ZADD organization_structure 100 { "name":"rigidly",    "score":100 }
 # Insiders say the Yakuza  ________ internally.
 ZADD organization_stability  20 { "name":"are falling apart",  "score":20  }
 ZADD organization_stability  40 { "name":"are having issues",  "score":40  }
-ZADD organization_stability  60 { "name":"has it's squabbles", "score":60  }
+ZADD organization_stability  60 { "name":"have their squabbles", "score":60  }
 ZADD organization_stability  80 { "name":"have few issues",    "score":80  }
 ZADD organization_stability 100 { "name":"are rock solid",     "score":100 }
 
