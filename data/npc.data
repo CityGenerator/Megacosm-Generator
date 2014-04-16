@@ -1,23 +1,20 @@
 #
 
-LPUSH stat_npc sex
-LPUSH stat_npc age
-LPUSH stat_npc attractiveness
-LPUSH stat_npc intelligence
-LPUSH stat_npc charisma
-LPUSH stat_npc wisdom
-LPUSH stat_npc endurance
-LPUSH stat_npc agility
-LPUSH stat_npc strength
-LPUSH stat_npc experience
-LPUSH stat_npc skill
-LPUSH stat_npc bravery
-LPUSH stat_npc honor
-
 ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
 ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
 
-#TODO add npc_piety
+# Bob is a[n] ________ follower of Grabesh.
+ZADD npc_piety   5 {"name":"noncommittal",  "score":5     }
+ZADD npc_piety  10 {"name":"dispassionate", "score":10    }
+ZADD npc_piety  20 {"name":"insincere",     "score":20    }
+ZADD npc_piety  30 {"name":"inattentive",   "score":30    }
+ZADD npc_piety  40 {"name":"dutiful",       "score":40    }
+ZADD npc_piety  50 {"name":"pious",         "score":50    }
+ZADD npc_piety  60 {"name":"devoted",       "score":60    }
+ZADD npc_piety  70 {"name":"reverent",      "score":70    }
+ZADD npc_piety  80 {"name":"devout",        "score":80    }
+ZADD npc_piety  90 {"name":"passionate",    "score":90    }
+ZADD npc_piety 100 {"name":"overzealous",   "score":100   }
 
 #Bob is a human 
 ZADD npc_age 5    {"name":"juvenile",       "score":5   }
@@ -468,5 +465,5 @@ LPUSH npc_medical_condition an arrow to the knee
 #	    <option min="92" max="95" >Aristocrat
 #	    <option min="96" max="97" >Paladin
 #	    <option min="99"          >Ranger
-	
+
         
