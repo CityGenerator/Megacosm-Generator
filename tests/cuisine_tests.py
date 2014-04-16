@@ -30,8 +30,6 @@ class TestCuisine(unittest.TestCase):
         self.assertNotEqual(cuisine.text,'')
 
 
-if __name__ == '__main__':
-    unittest.main()
 
 
 

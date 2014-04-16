@@ -948,6 +948,102 @@ LPUSH potion_smell mint
 LPUSH potion_smell harsh chemicals
 LPUSH potion_smell stinkbugs
             
+# , tastes _______,
+LPUSH potion_taste acidic
+LPUSH potion_taste amazing
+LPUSH potion_taste bitter
+LPUSH potion_taste bland
+LPUSH potion_taste burned
+LPUSH potion_taste buttery
+LPUSH potion_taste cheesy
+LPUSH potion_taste chocolaty
+LPUSH potion_taste delicious
+LPUSH potion_taste delightful
+LPUSH potion_taste divine
+LPUSH potion_taste earthy
+LPUSH potion_taste excellent
+LPUSH potion_taste extraordinary
+LPUSH potion_taste fantastic
+LPUSH potion_taste fatty
+LPUSH potion_taste fiery
+LPUSH potion_taste fishy
+LPUSH potion_taste flavorful
+LPUSH potion_taste fresh
+LPUSH potion_taste fried
+LPUSH potion_taste fruity
+LPUSH potion_taste gamey
+LPUSH potion_taste garlicky
+LPUSH potion_taste gingery
+LPUSH potion_taste greasy
+LPUSH potion_taste heavenly
+LPUSH potion_taste lemony
+LPUSH potion_taste marvelous
+LPUSH potion_taste meaty
+LPUSH potion_taste mellow
+LPUSH potion_taste mild
+LPUSH potion_taste minty
+LPUSH potion_taste nutty
+LPUSH potion_taste oniony
+LPUSH potion_taste peppery
+LPUSH potion_taste pickled
+LPUSH potion_taste plain
+LPUSH potion_taste pleasant
+LPUSH potion_taste powdery
+LPUSH potion_taste rich
+LPUSH potion_taste robust
+LPUSH potion_taste salty
+LPUSH potion_taste satisfying
+LPUSH potion_taste savory
+LPUSH potion_taste scrumptious
+LPUSH potion_taste seasoned
+LPUSH potion_taste sharp
+LPUSH potion_taste smokey
+LPUSH potion_taste soupy
+LPUSH potion_taste sour
+LPUSH potion_taste spicy
+LPUSH potion_taste strong
+LPUSH potion_taste sugary
+LPUSH potion_taste superb
+LPUSH potion_taste sweet
+LPUSH potion_taste tangy
+LPUSH potion_taste tart
+LPUSH potion_taste terrific
+LPUSH potion_taste unflavored
+LPUSH potion_taste unseasoned
+LPUSH potion_taste vinegary
+LPUSH potion_taste wonderful
+LPUSH potion_taste woody
+LPUSH potion_taste yeasty
+LPUSH potion_taste zesty
+LPUSH potion_taste zingy
+
+#and has a[n] _________ texture
+LPUSH potion_texture chalky
+LPUSH potion_texture chewy
+LPUSH potion_texture creamy
+LPUSH potion_texture crunchy
+LPUSH potion_texture crusty
+LPUSH potion_texture fizzy
+LPUSH potion_texture gelatinous
+LPUSH potion_texture gooey
+LPUSH potion_texture gritty
+LPUSH potion_texture hearty
+LPUSH potion_texture light
+LPUSH potion_texture malty
+LPUSH potion_texture mushy
+LPUSH potion_texture oily
+LPUSH potion_texture pasty
+LPUSH potion_texture rubbery
+LPUSH potion_texture runny
+LPUSH potion_texture silky
+LPUSH potion_texture slimy
+LPUSH potion_texture smooth
+LPUSH potion_texture sticky
+LPUSH potion_texture stringy
+LPUSH potion_texture syrupy
+LPUSH potion_texture velvety
+LPUSH potion_texture watery
+LPUSH potion_texture whipped
 LPUSH potion_container_material glass
 LPUSH potion_container_material copper
 LPUSH potion_container_material tin
@@ -990,5 +1086,3 @@ LPUSH potion_container_shape vial
 # rarity controls how likely they will know of it.
 
 
-# taste
-#texture

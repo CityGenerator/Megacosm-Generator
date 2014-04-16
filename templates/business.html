@@ -17,16 +17,16 @@ Inside, {{ tempobj.senses | conjunction    }}.
 
 
 <h2>Owner</h2>
-<p>It is located in {{tempobj.neighborhood|article}} neighborhood of the {{tempobj.district}} district, and is run by {{tempobj.owner.attitude|article}} {{tempobj.owner.race}} named {{tempobj.owner.name['full']}}.
+<p>It is located in {{tempobj.neighborhood['name']|article}} neighborhood of the {{tempobj.district}} district, and is run by {{tempobj.owner.attitude|article}} {{tempobj.owner.race}} named {{tempobj.owner.name['full']}}.
 
 
 <h2>Service</h2>
+
 The {{tempobj.kindname}} is known for {{tempobj.price['name']}} prices for the {{tempobj.service}}, and {{tempobj.popularity['name']}}. You will find {{tempobj.patroncount}} {{ 'customer'|pluralize(tempobj.patroncount  )}} in the {{tempobj.kindname}}. 
+Business has been {{tempobj.status['name']}} lately. The {{tempobj.kindname}} has a reputation for {{tempobj.reputation['name']}}.
 {% if tempobj.trouble %}
-The {{tempobj.name['full']}} has recently had {{tempobj.trouble}}.
-
+    The {{tempobj.name['full']}} has recently had {{tempobj.trouble}}.
 {%endif%}
-
 
 <h2>Description When Found...</h2>
 <blockquote style="font-style:italic">

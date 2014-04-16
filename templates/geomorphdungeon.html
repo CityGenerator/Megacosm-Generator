@@ -4,7 +4,7 @@
 {% block title %} {{tempobj.text}} {% endblock %}
 {% block head %}
   {{ super() }}
-        <script src='/static/js/dungeon.js' ></script>
+        <script src='/static/js/geomorphdungeon.js' ></script>
 
 {% endblock %}
 {% block content %}
@@ -12,11 +12,13 @@
     <h1> {{tempobj.text}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
     
+    <input type="button" onclick="save_as_png('geomorphmap')" value="Convert to Image">
+    <br>
     <canvas id='geomorphmap'></canvas>
 
     <script type="text/javascript">
         var jsondata={{jsondata|safe }};
 
-        create_geomorphdungeon(jsondata,document.getElementById('geomorphmap'),"{{tempobj.background}}");
+        create_geomorphdungeon(jsondata,document.getElementById('geomorphmap'), "{{tempobj.background}}", "{{tempobj.decoration}}", {{tempobj.decorationoffset['offset']}});
     </script>
 {% endblock %}

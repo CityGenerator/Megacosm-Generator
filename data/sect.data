@@ -1,7 +1,5 @@
 #
 
-LPUSH stat_sect acceptance
-
 #    <acceptance><!--Sect members are see as _____ by the faithful -->
 ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
 ZADD sect_acceptance  10 {"name":"blasphemous",  "score":10   } 
@@ -41,64 +39,64 @@ LPUSH sect_kind society
 
 # The ___________ _________ _______ are a beloved sect that focuses on stray cats.
 
-SET   namesecttitle_chance 30
-LPUSH namesecttitle Order of the 
-LPUSH namesecttitle Message of the
-LPUSH namesecttitle Pilgrims of 
-LPUSH namesecttitle Bretheren of
-LPUSH namesecttitle Church of the 
-LPUSH namesecttitle Reformed
-LPUSH namesecttitle Sacred
-LPUSH namesecttitle Ancient Order of
+SET   name_secttitle_chance 30
+LPUSH name_secttitle Order of the 
+LPUSH name_secttitle Message of the
+LPUSH name_secttitle Pilgrims of 
+LPUSH name_secttitle Bretheren of
+LPUSH name_secttitle Church of the 
+LPUSH name_secttitle Reformed
+LPUSH name_secttitle Sacred
+LPUSH name_secttitle Ancient Order of
 
-LPUSH namesectpre Prima
-LPUSH namesectpre Kanno
-LPUSH namesectpre Eani
-LPUSH namesectpre Shaki
-LPUSH namesectpre Orei
-LPUSH namesectpre Ordi
-LPUSH namesectpre Kabba
-LPUSH namesectpre Delphi
-LPUSH namesectpre Sera
-LPUSH namesectpre Anna
-LPUSH namesectpre Brudo
-LPUSH namesectpre Diani
-LPUSH namesectpre Free
-LPUSH namesectpre Fera
-LPUSH namesectpre Gonko
-LPUSH namesectpre Lecto
+LPUSH name_sectpre Prima
+LPUSH name_sectpre Kanno
+LPUSH name_sectpre Eani
+LPUSH name_sectpre Shaki
+LPUSH name_sectpre Orei
+LPUSH name_sectpre Ordi
+LPUSH name_sectpre Kabba
+LPUSH name_sectpre Delphi
+LPUSH name_sectpre Sera
+LPUSH name_sectpre Anna
+LPUSH name_sectpre Brudo
+LPUSH name_sectpre Diani
+LPUSH name_sectpre Free
+LPUSH name_sectpre Fera
+LPUSH name_sectpre Gonko
+LPUSH name_sectpre Lecto
 
-SET   namesectpost_chance 80
-LPUSH namesectroot tav
-LPUSH namesectroot dar
-LPUSH namesectroot bor
-LPUSH namesectroot c
-LPUSH namesectroot bal
-LPUSH namesectroot damp
-LPUSH namesectroot moto
-LPUSH namesectroot costal
-LPUSH namesectroot far
-LPUSH namesectroot rik
-LPUSH namesectroot versal
-LPUSH namesectroot dun
+SET   name_sectpost_chance 80
+LPUSH name_sectroot tav
+LPUSH name_sectroot dar
+LPUSH name_sectroot bor
+LPUSH name_sectroot c
+LPUSH name_sectroot bal
+LPUSH name_sectroot damp
+LPUSH name_sectroot moto
+LPUSH name_sectroot costal
+LPUSH name_sectroot far
+LPUSH name_sectroot rik
+LPUSH name_sectroot versal
+LPUSH name_sectroot dun
 
-SET   namesectpost_chance 30
-LPUSH namesectpost ism
-LPUSH namesectpost um
-LPUSH namesectpost aj
-LPUSH namesectpost ic
-LPUSH namesectpost ites
-LPUSH namesectpost oxy
-LPUSH namesectpost ogy
-LPUSH namesectpost ons
-LPUSH namesectpost ists
+SET   name_sectpost_chance 30
+LPUSH name_sectpost ism
+LPUSH name_sectpost um
+LPUSH name_sectpost aj
+LPUSH name_sectpost ic
+LPUSH name_sectpost ites
+LPUSH name_sectpost oxy
+LPUSH name_sectpost ogy
+LPUSH name_sectpost ons
+LPUSH name_sectpost ists
 
 
-SET   namesecttrailer_chance 30
-LPUSH namesecttrailer Movement
-LPUSH namesecttrailer Temple
-LPUSH namesecttrailer Society
-LPUSH namesecttrailer Fellowship
-LPUSH namesecttrailer Witnesses
-LPUSH namesecttrailer Followers
-LPUSH namesecttrailer Radiance
+SET   name_secttrailer_chance 30
+LPUSH name_secttrailer Movement
+LPUSH name_secttrailer Temple
+LPUSH name_secttrailer Society
+LPUSH name_secttrailer Fellowship
+LPUSH name_secttrailer Witnesses
+LPUSH name_secttrailer Followers
+LPUSH name_secttrailer Radiance

@@ -25,7 +25,3 @@ class TestPlanet(unittest.TestCase):
         planet = Planet(self.redis)
    
 
-if __name__ == '__main__':
-    unittest.main()
-
-

@@ -36,9 +36,3 @@ class TestDeity(unittest.TestCase):
         self.assertGreaterEqual(len(deity.sects),1)
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-
