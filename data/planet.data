@@ -1,14 +1,4 @@
 # Planet details
-LPUSH stat_planet size
-LPUSH stat_planet temp
-LPUSH stat_planet atmosphere
-LPUSH stat_planet wind
-LPUSH stat_planet day
-LPUSH stat_planet civilization
-LPUSH stat_planet year
-LPUSH stat_planet precipitation
-LPUSH stat_planet mooncount
-LPUSH stat_planet technology
 
 ZADD planet_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   } 
 ZADD planet_size 10 {"name":"small",     "multiplier":0.7,  "score":10   } 

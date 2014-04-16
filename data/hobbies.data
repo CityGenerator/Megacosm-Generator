@@ -1,0 +1,233 @@
+#
+
+ 
+# Bob's hobby is ___________
+
+LPUSH npc_hobby amateur astronomy
+LPUSH npc_hobby amateur geology
+LPUSH npc_hobby amateur theatre
+LPUSH npc_hobby animal breeding
+LPUSH npc_hobby animal showing
+LPUSH npc_hobby antiques
+LPUSH npc_hobby antiquing
+LPUSH npc_hobby antiquities
+LPUSH npc_hobby aquarium
+LPUSH npc_hobby archery
+LPUSH npc_hobby arrow head collecting
+LPUSH npc_hobby art collecting
+LPUSH npc_hobby arts & crafts
+LPUSH npc_hobby artwork
+LPUSH npc_hobby astrology
+LPUSH npc_hobby astronomy
+LPUSH npc_hobby axe throwing
+LPUSH npc_hobby backpacking
+LPUSH npc_hobby baking
+LPUSH npc_hobby ballet dancing
+LPUSH npc_hobby barbecue and grilling
+LPUSH npc_hobby baton twirling
+LPUSH npc_hobby beadwork and beading
+LPUSH npc_hobby beekeeping
+LPUSH npc_hobby belly dancing
+LPUSH npc_hobby bird watching
+LPUSH npc_hobby blacksmithing
+LPUSH npc_hobby body art/tattoos/piercings
+LPUSH npc_hobby body building
+LPUSH npc_hobby bonsai
+LPUSH npc_hobby book collecting
+LPUSH npc_hobby book making
+LPUSH npc_hobby bottling
+LPUSH npc_hobby bouldering
+LPUSH npc_hobby boxing
+LPUSH npc_hobby building dioramas
+LPUSH npc_hobby building shadow boxes
+LPUSH npc_hobby butterfly collecting and watching
+LPUSH npc_hobby cake making and decorating
+LPUSH npc_hobby candle collecting
+LPUSH npc_hobby candlemaking
+LPUSH npc_hobby canoeing
+LPUSH npc_hobby card collecting
+LPUSH npc_hobby chess
+LPUSH npc_hobby cleaning
+LPUSH npc_hobby climbing
+LPUSH npc_hobby clock cleaning
+LPUSH npc_hobby clock collecting
+LPUSH npc_hobby clock making
+LPUSH npc_hobby cock fighting
+LPUSH npc_hobby coin collecting
+LPUSH npc_hobby collecting crystals and rocks
+LPUSH npc_hobby collecting memorabilia
+LPUSH npc_hobby collecting miniature figures
+LPUSH npc_hobby collecting posters
+LPUSH npc_hobby collecting teeth
+LPUSH npc_hobby composing music
+LPUSH npc_hobby cooking
+LPUSH npc_hobby cosplaying
+LPUSH npc_hobby cow tipping
+LPUSH npc_hobby crocheting
+LPUSH npc_hobby cubing
+LPUSH npc_hobby dancing
+LPUSH npc_hobby darts
+LPUSH npc_hobby debate
+LPUSH npc_hobby deltiology (postcard collecting)
+LPUSH npc_hobby dog breeding
+LPUSH npc_hobby dog sports
+LPUSH npc_hobby dog training
+LPUSH npc_hobby doll making
+LPUSH npc_hobby dramatic plays
+LPUSH npc_hobby drawing
+LPUSH npc_hobby eating
+LPUSH npc_hobby element collecting
+LPUSH npc_hobby embroidery
+LPUSH npc_hobby engraving
+LPUSH npc_hobby equestrianism
+LPUSH npc_hobby falconry
+LPUSH npc_hobby fencing
+LPUSH npc_hobby film making
+LPUSH npc_hobby fishing
+LPUSH npc_hobby fishkeeping
+LPUSH npc_hobby floral arranging
+LPUSH npc_hobby flower collecting and pressing
+LPUSH npc_hobby flower gardening
+LPUSH npc_hobby fly fishing
+LPUSH npc_hobby food gardening
+LPUSH npc_hobby food related
+LPUSH npc_hobby footbag
+LPUSH npc_hobby foraging
+LPUSH npc_hobby fossil hunting
+LPUSH npc_hobby fountain pens collecting
+LPUSH npc_hobby gambling
+LPUSH npc_hobby gaming
+LPUSH npc_hobby gardening
+LPUSH npc_hobby genealogy
+LPUSH npc_hobby ghost hunting
+LPUSH npc_hobby glass blowing
+LPUSH npc_hobby gold panning
+LPUSH npc_hobby graffiti
+LPUSH npc_hobby gymnastics
+LPUSH npc_hobby hairstyling
+LPUSH npc_hobby handball
+LPUSH npc_hobby herping and derping
+LPUSH npc_hobby hiking
+LPUSH npc_hobby homebrewing
+LPUSH npc_hobby hooping
+LPUSH npc_hobby horse riding
+LPUSH npc_hobby hothouse gardening
+LPUSH npc_hobby hunting
+LPUSH npc_hobby hydroponics
+LPUSH npc_hobby insect collecting
+LPUSH npc_hobby jewelry making
+LPUSH npc_hobby jigsaw puzzles
+LPUSH npc_hobby jogging
+LPUSH npc_hobby journaling
+LPUSH npc_hobby juggling
+LPUSH npc_hobby karaoke
+LPUSH npc_hobby kayaking
+LPUSH npc_hobby kiteflying
+LPUSH npc_hobby knife collecting
+LPUSH npc_hobby knifemaking
+LPUSH npc_hobby knitting
+LPUSH npc_hobby lacemaking
+LPUSH npc_hobby lapidary
+LPUSH npc_hobby larping
+LPUSH npc_hobby leaf collecting and pressing
+LPUSH npc_hobby learning foreign languages
+LPUSH npc_hobby leather crafting
+LPUSH npc_hobby magic
+LPUSH npc_hobby magic and sleight of hand
+LPUSH npc_hobby magic tricks
+LPUSH npc_hobby making dioramas
+LPUSH npc_hobby making dollhouses
+LPUSH npc_hobby making military dioramas
+LPUSH npc_hobby making models
+LPUSH npc_hobby making musical instruments
+LPUSH npc_hobby making things
+LPUSH npc_hobby making walking sticks
+LPUSH npc_hobby makping ships-in-a-bottle
+LPUSH npc_hobby map making
+LPUSH npc_hobby marble collecting
+LPUSH npc_hobby marionette crafting
+LPUSH npc_hobby martial arts
+LPUSH npc_hobby meteorology
+LPUSH npc_hobby mineral collecting
+LPUSH npc_hobby modeling
+LPUSH npc_hobby mountain climbing
+LPUSH npc_hobby mushroom hunting
+LPUSH npc_hobby mycology
+LPUSH npc_hobby nature walking
+LPUSH npc_hobby netball
+LPUSH npc_hobby orchid raising
+LPUSH npc_hobby organic gardening
+LPUSH npc_hobby origami
+LPUSH npc_hobby paintballing
+LPUSH npc_hobby painting
+LPUSH npc_hobby painting and drawing
+LPUSH npc_hobby paper crafts
+LPUSH npc_hobby paper dioramas
+LPUSH npc_hobby paper making
+LPUSH npc_hobby paper models
+LPUSH npc_hobby parkour
+LPUSH npc_hobby people watching
+LPUSH npc_hobby pigeon racing
+LPUSH npc_hobby ping pong
+LPUSH npc_hobby playing a musical instrument
+LPUSH npc_hobby playing sports
+LPUSH npc_hobby poetry reading
+LPUSH npc_hobby pole dancing
+LPUSH npc_hobby postcards
+LPUSH npc_hobby pottery
+LPUSH npc_hobby puppeteering
+LPUSH npc_hobby puppet theatre
+LPUSH npc_hobby quilling
+LPUSH npc_hobby quilting
+LPUSH npc_hobby reading
+LPUSH npc_hobby restoring antiques
+LPUSH npc_hobby rock climbing
+LPUSH npc_hobby rock collecting
+LPUSH npc_hobby rock stacking
+LPUSH npc_hobby running
+LPUSH npc_hobby sailing
+LPUSH npc_hobby sand castle building
+LPUSH npc_hobby scale model building
+LPUSH npc_hobby scrapbooking
+LPUSH npc_hobby sculpting
+LPUSH npc_hobby sculpting miniatures
+LPUSH npc_hobby seaglass collecting
+LPUSH npc_hobby seashell collecting
+LPUSH npc_hobby sewing
+LPUSH npc_hobby singing
+LPUSH npc_hobby skiing
+LPUSH npc_hobby smiling
+LPUSH npc_hobby snorkeling
+LPUSH npc_hobby snow globes making
+LPUSH npc_hobby soapmaking
+LPUSH npc_hobby speed skating
+LPUSH npc_hobby spelunking
+LPUSH npc_hobby stamp collecting
+LPUSH npc_hobby stand-up comedy
+LPUSH npc_hobby stone collecting
+LPUSH npc_hobby storytelling
+LPUSH npc_hobby surfing
+LPUSH npc_hobby swimming
+LPUSH npc_hobby sword fighting
+LPUSH npc_hobby table tennis
+LPUSH npc_hobby tarot and card reading
+LPUSH npc_hobby taxidermy
+LPUSH npc_hobby terrariums
+LPUSH npc_hobby the performing arts
+LPUSH npc_hobby tie dyeing
+LPUSH npc_hobby traveling
+LPUSH npc_hobby treasure hunting
+LPUSH npc_hobby urban exploration
+LPUSH npc_hobby vintage books
+LPUSH npc_hobby wargame terrain making
+LPUSH npc_hobby war reenactments
+LPUSH npc_hobby weaving
+LPUSH npc_hobby weightlifting
+LPUSH npc_hobby wine making
+LPUSH npc_hobby wine tasting
+LPUSH npc_hobby wire jewelry making
+LPUSH npc_hobby wood carving
+LPUSH npc_hobby woodworking
+LPUSH npc_hobby writing
+LPUSH npc_hobby yoga
+LPUSH npc_hobby yo-yoing

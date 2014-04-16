@@ -12,6 +12,9 @@ class Gem(Generator):
         Generator.__init__(self,redis,features)
 
 
+        if not hasattr(self, 'count'):
+            self.count=random.randint(self.amount['min'],self.amount['max'])
+
         if not hasattr(self, 'color'):
             self.color=random.choice(self.kind_description['color'])
         print "color:",self

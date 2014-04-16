@@ -7,8 +7,21 @@ LPUSH business_trouble problems with local law enforcement
 LPUSH business_trouble problems with petty theft
 LPUSH business_trouble supply caravans never show up
 LPUSH business_trouble problems with pests
+LPUSH business_trouble issues with thieves
 LPUSH business_trouble a fire
 LPUSH business_trouble slumping sales
+
+# Business is  _____________.
+ZADD business_status  10 {  "name":"horrible",           "score":10  }
+ZADD business_status  20 {  "name":"bad",                "score":20  }
+ZADD business_status  30 {  "name":"not good",           "score":30  }
+ZADD business_status  40 {  "name":"stagnant",           "score":40  }
+ZADD business_status  50 {  "name":"middling",           "score":50  }
+ZADD business_status  60 {  "name":"ok",                 "score":60  }
+ZADD business_status  70 {  "name":"not bad",            "score":70  }
+ZADD business_status  80 {  "name":"doing great",        "score":80  }
+ZADD business_status  90 {  "name":"going excellent",    "score":90  }
+ZADD business_status 100 {  "name":"booming",            "score":100 }
 
 
 #        The Perfumed Twins Vinters is a[n] _______, disgusting-looking vinyard.
@@ -87,6 +100,20 @@ ZADD business_price 94 {  "name":"high"               , "score":94  }
 ZADD business_price 100 {  "name":"very high"          , "score":100  }
 
 
+#TODO chance this to a stat
+ZADD business_age  50 {  "name":"new"          , "score":50  }
+ZADD business_age 100 {  "name":"old"          , "score":100  }
+
+#TODO turn this into a stat
+ZADD business_neighborhood  10 { "name":"seedy",        "score":10  }
+ZADD business_neighborhood  20 { "name":"trashy",       "score":20  }
+ZADD business_neighborhood  30 { "name":"empty",        "score":30  }
+ZADD business_neighborhood  40 { "name":"rundown",      "score":40  }
+ZADD business_neighborhood  70 { "name":"new",          "score":70  }
+ZADD business_neighborhood  80 { "name":"old",          "score":80  }
+ZADD business_neighborhood  90 { "name":"nice",         "score":90  }
+ZADD business_neighborhood 100 { "name":"expensive",    "score":100  }
+
 
 LPUSH business_condition neat
 LPUSH business_condition tidy
@@ -110,20 +137,6 @@ LPUSH business_condition filthy
 
 
 
-
-#TODO chance this to a stat
-LPUSH business_age old
-LPUSH business_age new
-
-#TODO turn this into a stat
-LPUSH business_neighborhood seedy
-LPUSH business_neighborhood trashy
-LPUSH business_neighborhood empty
-LPUSH business_neighborhood rundown
-LPUSH business_neighborhood new
-LPUSH business_neighborhood old
-LPUSH business_neighborhood nice
-LPUSH business_neighborhood expensive
 
 
 LPUSH business_rooftype tile

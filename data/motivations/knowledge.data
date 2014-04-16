@@ -1,7 +1,7 @@
 
 # Bob is motivated
 
-LPUSH motivationknowledge_text to find ask "why?"
+LPUSH motivationknowledge_text to ask "why?"
 LPUSH motivationknowledge_text to find out answers
 LPUSH motivationknowledge_text by a thirst for knowledge
 LPUSH motivationknowledge_text to remember who {{params.npc.sex['pronoun']}} is

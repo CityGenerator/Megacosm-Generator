@@ -1,4 +1,4 @@
-
+.coveralls.yml
 data/config.ini
 data/*.xml
 

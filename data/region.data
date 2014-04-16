@@ -122,3 +122,25 @@ ZADD  region_economic    80   {"name":"limited",          "score":80    }
 ZADD  region_economic    90   {"name":"intolerant",       "score":90    }
 ZADD  region_economic   100   {"name":"conservative",     "score":100   }
 
+#  Religion in Willis ________.
+ZADD  region_theology    5   { "name":"is strictly forbidden on pain of death",                                 "score":5    }
+ZADD  region_theology    10  { "name":"is forbidden",                                                          "score":10    }
+ZADD  region_theology    15  { "name":"will get you in trouble",                                               "score":15    }
+ZADD  region_theology    20  { "name":"is unwelcome",                                                          "score":20    }
+ZADD  region_theology    25  { "name":"is unregulated",                                                        "score":25    }
+ZADD  region_theology    30  { "name":"is taxed heavily",                                                      "score":30    }
+ZADD  region_theology    35  { "name":"is tightly regulated by the government",                                "score":35    }
+ZADD  region_theology    40  { "name":"is viewed as a nusiance",                                               "score":40    }
+ZADD  region_theology    45  { "name":"is practiced behind closed doors",                                      "score":45    }
+ZADD  region_theology    50  { "name":"is left to the people",                                                 "score":50    }
+ZADD  region_theology    55  { "name":"is common place",                                                       "score":55    }
+ZADD  region_theology    60  { "name":"is unregulated and diverse, making it a melting pot of many faiths",    "score":60    }
+ZADD  region_theology    65  { "name":"enjoys many legal benefits",                                            "score":65    }
+ZADD  region_theology    70  { "name":"is widespread",                                                         "score":70    }
+ZADD  region_theology    75  { "name":"is sanctioned by the government",                                       "score":75    }
+ZADD  region_theology    80  { "name":"is limited to a single deity",                                          "score":80    }
+ZADD  region_theology    85  { "name":"plays a central role in the lawmaking process",                         "score":85    }
+ZADD  region_theology    90  { "name":"controlled by the government",                                          "score":90    }
+ZADD  region_theology    95  { "name":"is sacred, and the words of the gods are law",                          "score":95    }
+ZADD  region_theology   100  { "name":"is used to control the populace",                                      "score":100    }
+ 

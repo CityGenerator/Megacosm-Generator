@@ -5,7 +5,7 @@ def set_seed(seed=None):
     #Make sure it's an Integer
 
     # What if the seed is empty? Lets make a new one!
-    MAXSEED=100000
+    MAXSEED=10000000
     MINSEED=1
 
 

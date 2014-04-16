@@ -19,6 +19,20 @@
         {%endfor%}
         </ul>
     {%endif%}
+
+<p>
+<form action="/{{generator}}" id="genform">
+
+    Like it? generate 
+    <select name="count">
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select> 
+    <input type="submit" value="More"></input>
+</form>
+</p>
 <!--
     <ul>
 %for field in oneliner.__dict__|sort %}

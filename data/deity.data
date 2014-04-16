@@ -1,111 +1,139 @@
 #
 
-LPUSH stat_deity importance
-LPUSH stat_deity jealousy
-LPUSH stat_deity age
-LPUSH stat_deity followerzeal
-LPUSH stat_deity devotion
-LPUSH stat_deity secrecy
-LPUSH stat_deity power
-LPUSH stat_deity unity
-
+LPUSH deity_favored_stat age
+LPUSH deity_favored_stat attractiveness
+LPUSH deity_favored_stat intelligence
+LPUSH deity_favored_stat charisma
+LPUSH deity_favored_stat wisdom
+LPUSH deity_favored_stat endurance
+LPUSH deity_favored_stat agility
+LPUSH deity_favored_stat strength
+LPUSH deity_favored_stat experience
+LPUSH deity_favored_stat skill
+LPUSH deity_favored_stat bravery
+LPUSH deity_favored_stat honor
+LPUSH deity_favored_stat piety
 
 # Members of the church are ____________ in their beliefs._
-ZADD deity_unity  10 {"name":"splintered",  "score":10  } 
-ZADD deity_unity  20 {"name":"fractured",   "score":20  } 
-ZADD deity_unity  30 {"name":"divided",     "score":30  } 
-ZADD deity_unity  70 {"name":"fragmented",  "score":70  } 
-ZADD deity_unity  80 {"name":"diverse",     "score":80  } 
-ZADD deity_unity  90 {"name":"faceted",     "score":90  } 
-ZADD deity_unity 100 {"name":"unified",     "score":100 } 
+ZADD deity_unity  10 {"name":"splintered",  "score":10  }
+ZADD deity_unity  20 {"name":"fractured",   "score":20  }
+ZADD deity_unity  30 {"name":"divided",     "score":30  }
+ZADD deity_unity  70 {"name":"fragmented",  "score":70  }
+ZADD deity_unity  80 {"name":"diverse",     "score":80  }
+ZADD deity_unity  90 {"name":"faceted",     "score":90  }
+ZADD deity_unity 100 {"name":"unified",     "score":100 }
 
-ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 } 
-ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 } 
-ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 } 
-ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":7 } 
-ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":11 } 
-ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":13 } 
-ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":21 } 
+# Followers of Gobesh are ________ organized
+ZADD deity_organized  10 {"name":"formlessly",      "score":10  }
+ZADD deity_organized  10 {"name":"loosely",         "score":20  }
+ZADD deity_organized  20 {"name":"lightly",         "score":30  }
+ZADD deity_organized  20 {"name":"flexibly",        "score":40  }
+ZADD deity_organized  30 {"name":"generally",       "score":50  }
+ZADD deity_organized  60 {"name":"stiffly",         "score":60  }
+ZADD deity_organized  70 {"name":"firmly",          "score":70  }
+ZADD deity_organized  80 {"name":"tightly",         "score":80  }
+ZADD deity_organized  90 {"name":"strictly",        "score":90  }
+ZADD deity_organized 100 {"name":"rigidly",         "score":100 }
+
+# Gobesh is _____________ in today's world
+ZADD deity_health  10 {"name":"nearly forgotten",           "score":10  }
+ZADD deity_health  20 {"name":"mostly unknown",             "score":20  }
+ZADD deity_health  30 {"name":"dying out",                  "score":30  }
+ZADD deity_health  40 {"name":"fading",                     "score":40  }
+ZADD deity_health  50 {"name":"well known",                 "score":50  }
+ZADD deity_health  60 {"name":"on the rise",                "score":60  }
+ZADD deity_health  70 {"name":"maintaining popularity",     "score":70  }
+ZADD deity_health  80 {"name":"gaining followers",          "score":80  }
+ZADD deity_health  90 {"name":"gaining in popularity",      "score":90  }
+ZADD deity_health 100 {"name":"more popular than ever",     "score":100 }
+
+ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 }
+ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 }
+ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 }
+ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":7 }
+ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":11 }
+ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":13 }
+ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":21 }
 
 
-ZADD deity_jealousy  10 {"name":"trusting",  "score":10   } 
-ZADD deity_jealousy  20 {"name":"unresentful",  "score":20   } 
-ZADD deity_jealousy  30 {"name":"unquestioning",  "score":30   } 
-ZADD deity_jealousy  40 {"name":"unsuspecting",  "score":40   } 
-ZADD deity_jealousy  50 {"name":"content",  "score":50   } 
-ZADD deity_jealousy  60 {"name":"covetous",  "score":60   } 
-ZADD deity_jealousy  70 {"name":"demanding",  "score":70   } 
-ZADD deity_jealousy  80 {"name":"suspicious",  "score":80   } 
-ZADD deity_jealousy  90 {"name":"selfish",  "score":90   } 
-ZADD deity_jealousy 100 {"name":"jealous",  "score":100   } 
-        
+ZADD deity_jealousy  10 {"name":"trusting",  "score":10   }
+ZADD deity_jealousy  20 {"name":"unresentful",  "score":20   }
+ZADD deity_jealousy  30 {"name":"unquestioning",  "score":30   }
+ZADD deity_jealousy  40 {"name":"unsuspecting",  "score":40   }
+ZADD deity_jealousy  50 {"name":"content",  "score":50   }
+ZADD deity_jealousy  60 {"name":"covetous",  "score":60   }
+ZADD deity_jealousy  70 {"name":"demanding",  "score":70   }
+ZADD deity_jealousy  80 {"name":"suspicious",  "score":80   }
+ZADD deity_jealousy  90 {"name":"selfish",  "score":90   }
+ZADD deity_jealousy 100 {"name":"jealous",  "score":100   }
+
 #        <age> <!-- bob is a _____ god-->
-ZADD deity_age   5 {"name":"new",  "score":5   } 
-ZADD deity_age  10 {"name":"young",  "score":10   } 
-ZADD deity_age  15 {"name":"recent",  "score":15   } 
-ZADD deity_age  20 {"name":"latter",  "score":20   } 
-ZADD deity_age  25 {"name":"modern",  "score":25   } 
-ZADD deity_age  30 {"name":"contemporary",  "score":30   } 
-ZADD deity_age  35 {"name":"fledgling",  "score":35   } 
-ZADD deity_age  40 {"name":"primitive",  "score":40   } 
-ZADD deity_age  45 {"name":"old",  "score":45   } 
-ZADD deity_age  55 {"name":"antiquated",  "score":55   } 
-ZADD deity_age  60 {"name":"aboriginal",  "score":60   } 
-ZADD deity_age  65 {"name":"primeval",  "score":65   } 
-ZADD deity_age  70 {"name":"primal",  "score":70   } 
-ZADD deity_age  75 {"name":"primordial",  "score":75   } 
-ZADD deity_age  80 {"name":"archaic",  "score":80   } 
-ZADD deity_age  85 {"name":"eternal",  "score":85   } 
-ZADD deity_age  99 {"name":"ancient",  "score":99   } 
-ZADD deity_age 100 {"name":"original",  "score":100   } 
-        
+ZADD deity_age   5 {"name":"new",  "score":5   }
+ZADD deity_age  10 {"name":"young",  "score":10   }
+ZADD deity_age  15 {"name":"recent",  "score":15   }
+ZADD deity_age  20 {"name":"latter",  "score":20   }
+ZADD deity_age  25 {"name":"modern",  "score":25   }
+ZADD deity_age  30 {"name":"contemporary",  "score":30   }
+ZADD deity_age  35 {"name":"fledgling",  "score":35   }
+ZADD deity_age  40 {"name":"primitive",  "score":40   }
+ZADD deity_age  45 {"name":"old",  "score":45   }
+ZADD deity_age  55 {"name":"antiquated",  "score":55   }
+ZADD deity_age  60 {"name":"aboriginal",  "score":60   }
+ZADD deity_age  65 {"name":"primeval",  "score":65   }
+ZADD deity_age  70 {"name":"primal",  "score":70   }
+ZADD deity_age  75 {"name":"primordial",  "score":75   }
+ZADD deity_age  80 {"name":"archaic",  "score":80   }
+ZADD deity_age  85 {"name":"eternal",  "score":85   }
+ZADD deity_age  99 {"name":"ancient",  "score":99   }
+ZADD deity_age 100 {"name":"original",  "score":100   }
+
 #        <followerzeal> <!--Bobs followers are -->
-ZADD deity_followerzeal   5 {"name":"noncommittal", "score":5   } 
-ZADD deity_followerzeal  10 {"name":"dispassionate","score":10   } 
-ZADD deity_followerzeal  20 {"name":"insincere",    "score":20   } 
-ZADD deity_followerzeal  30 {"name":"inattentive",  "score":30   } 
-ZADD deity_followerzeal  40 {"name":"dutiful",      "score":40   } 
-ZADD deity_followerzeal  50 {"name":"pious",        "score":50   } 
-ZADD deity_followerzeal  60 {"name":"devoted",      "score":60   } 
-ZADD deity_followerzeal  70 {"name":"reverent",     "score":70   } 
-ZADD deity_followerzeal  80 {"name":"devout",       "score":80   } 
-ZADD deity_followerzeal  90 {"name":"passionate",   "score":90   } 
-ZADD deity_followerzeal 100 {"name":"overzealous",  "score":100   } 
+ZADD deity_followerzeal   5 {"name":"noncommittal", "score":5   }
+ZADD deity_followerzeal  10 {"name":"dispassionate","score":10   }
+ZADD deity_followerzeal  20 {"name":"insincere",    "score":20   }
+ZADD deity_followerzeal  30 {"name":"inattentive",  "score":30   }
+ZADD deity_followerzeal  40 {"name":"dutiful",      "score":40   }
+ZADD deity_followerzeal  50 {"name":"pious",        "score":50   }
+ZADD deity_followerzeal  60 {"name":"devoted",      "score":60   }
+ZADD deity_followerzeal  70 {"name":"reverent",     "score":70   }
+ZADD deity_followerzeal  80 {"name":"devout",       "score":80   }
+ZADD deity_followerzeal  90 {"name":"passionate",   "score":90   }
+ZADD deity_followerzeal 100 {"name":"overzealous",  "score":100   }
 
 #TODO ZADD popularity growing/dying out
 
 #        <devotion {"name":"<!-- Bob is thought to have _______ current followers in the world-->
-ZADD deity_followercount   5 {"name":"no",  "score":5   } 
-ZADD deity_followercount  10 {"name":"only a few",  "score":10   } 
-ZADD deity_followercount  15 {"name":"several",  "score":15   } 
-ZADD deity_followercount  20 {"name":"a dozen",  "score":20   } 
-ZADD deity_followercount  25 {"name":"several dozen",  "score":25   } 
-ZADD deity_followercount  30 {"name":"over a hundred",  "score":30   } 
-ZADD deity_followercount  60 {"name":"an unknown number of",  "score":60   } 
-ZADD deity_followercount  65 {"name":"hundreds of",  "score":65   } 
-ZADD deity_followercount  70 {"name":"near a thousand",  "score":70   } 
-ZADD deity_followercount  75 {"name":"several thousand",  "score":75   } 
-ZADD deity_followercount  80 {"name":"tens of thouands of",  "score":80   } 
-ZADD deity_followercount  85 {"name":"hundreds of thousands of",  "score":85   } 
-ZADD deity_followercount 100 {"name":"countless",  "score":100   } 
-        
+ZADD deity_followercount   5 {"name":"no",  "score":5   }
+ZADD deity_followercount  10 {"name":"only a few",  "score":10   }
+ZADD deity_followercount  15 {"name":"several",  "score":15   }
+ZADD deity_followercount  20 {"name":"a dozen",  "score":20   }
+ZADD deity_followercount  25 {"name":"several dozen",  "score":25   }
+ZADD deity_followercount  30 {"name":"over a hundred",  "score":30   }
+ZADD deity_followercount  60 {"name":"an unknown number of",  "score":60   }
+ZADD deity_followercount  65 {"name":"hundreds of",  "score":65   }
+ZADD deity_followercount  70 {"name":"near a thousand",  "score":70   }
+ZADD deity_followercount  75 {"name":"several thousand",  "score":75   }
+ZADD deity_followercount  80 {"name":"tens of thouands of",  "score":80   }
+ZADD deity_followercount  85 {"name":"hundreds of thousands of",  "score":85   }
+ZADD deity_followercount 100 {"name":"countless",  "score":100   }
+
 # and are often {{deity.secrecy['name']}} about their affiliation.
-ZADD deity_secrecy   5 {"name":"secretive",     "score":5   } 
-ZADD deity_secrecy  10 {"name":"silent",        "score":10   } 
-ZADD deity_secrecy  20 {"name":"tight lipped",  "score":20   } 
-ZADD deity_secrecy  30 {"name":"cryptic",       "score":30   } 
-ZADD deity_secrecy  40 {"name":"hidden",        "score":40   } 
-ZADD deity_secrecy  45 {"name":"careful",       "score":45   } 
-ZADD deity_secrecy  50 {"name":"reserved",      "score":50   } 
-ZADD deity_secrecy  55 {"name":"honest",        "score":55   } 
-ZADD deity_secrecy  60 {"name":"open",          "score":60   } 
-ZADD deity_secrecy  70 {"name":"indiscreet",    "score":70   } 
-ZADD deity_secrecy  80 {"name":"proud",         "score":80   } 
-ZADD deity_secrecy  90 {"name":"pretentious",   "score":90   } 
-ZADD deity_secrecy 100 {"name":"pompous",       "score":100   } 
+ZADD deity_secrecy   5 {"name":"secretive",     "score":5   }
+ZADD deity_secrecy  10 {"name":"silent",        "score":10   }
+ZADD deity_secrecy  20 {"name":"tight lipped",  "score":20   }
+ZADD deity_secrecy  30 {"name":"cryptic",       "score":30   }
+ZADD deity_secrecy  40 {"name":"hidden",        "score":40   }
+ZADD deity_secrecy  45 {"name":"careful",       "score":45   }
+ZADD deity_secrecy  50 {"name":"reserved",      "score":50   }
+ZADD deity_secrecy  55 {"name":"honest",        "score":55   }
+ZADD deity_secrecy  60 {"name":"open",          "score":60   }
+ZADD deity_secrecy  70 {"name":"indiscreet",    "score":70   }
+ZADD deity_secrecy  80 {"name":"proud",         "score":80   }
+ZADD deity_secrecy  90 {"name":"pretentious",   "score":90   }
+ZADD deity_secrecy 100 {"name":"pompous",       "score":100   }
 #TODO secrecy should include loud and proud
 
-# 
+#
 LPUSH deity_clergytype priests
 LPUSH deity_clergytype clergy
 LPUSH deity_clergytype clerics
@@ -129,7 +157,7 @@ LPUSH deity_clergytype enlightened ones
 LPUSH deity_clergytype vicars
 LPUSH deity_clergytype priests
 LPUSH deity_clergytype imams
- 
+
 #   ___________ are the preferred form of worship.
 LPUSH deity_worship sacrifices
 LPUSH deity_worship offerings
@@ -138,7 +166,7 @@ LPUSH deity_worship prayers
 LPUSH deity_worship supplication
 LPUSH deity_worship dances
 
-        
+
 LPUSH deity_primarycolor aquamarine
 HSET deity_primarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
 LPUSH deity_primarycolor azure
@@ -189,9 +217,9 @@ LPUSH deity_primarycolor coral
 HSET deity_primarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
 LPUSH deity_primarycolor cornflowerblue
 HSET deity_primarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
-        
 
-        
+
+
 LPUSH deity_secondarycolor aquamarine
 HSET deity_secondarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
 LPUSH deity_secondarycolor azure
@@ -242,7 +270,7 @@ LPUSH deity_secondarycolor coral
 HSET deity_secondarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
 LPUSH deity_secondarycolor cornflowerblue
 HSET deity_secondarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
-        
+
 # in battle, Gokl prefers
 LPUSH deity_favored_weapon axes
 LPUSH deity_favored_weapon bastard swords
@@ -309,7 +337,7 @@ LPUSH deity_holysymbol_type double
 LPUSH deity_holysymbol_type upside-down
 LPUSH deity_holysymbol_type sideways
 LPUSH deity_holysymbol_type triple
-LPUSH deity_holysymbol_type divided 
+LPUSH deity_holysymbol_type divided
 LPUSH deity_holysymbol_type tilted
 LPUSH deity_holysymbol_type burning
 LPUSH deity_holysymbol_type fragmented
@@ -446,7 +474,7 @@ LPUSH deity_holysymbol bell
 #LPUSH deity_holysymbol earth
 #LPUSH deity_holysymbol gate
 
-    
+
 #Ganthidon sometimes chooses to appear as a _________ before his followers.
 LPUSH deity_form talking jackal
 LPUSH deity_form burning bush
@@ -463,7 +491,7 @@ LPUSH deity_form thundering voice
 LPUSH deity_form heavily armored soldier
 LPUSH deity_form beautiful maiden
 LPUSH deity_form beggar
-LPUSH deity_form small bird 
+LPUSH deity_form small bird
 LPUSH deity_form insect
 LPUSH deity_form telepathic plant
 LPUSH deity_form beautiful vision
@@ -495,8 +523,8 @@ LPUSH deity_form walking corpse
 
 
 #While in public, clergy of bhaal wear
-LPUSH deity_clergy_dress colored robes 
-LPUSH deity_clergy_dress nondescript robes 
+LPUSH deity_clergy_dress colored robes
+LPUSH deity_clergy_dress nondescript robes
 LPUSH deity_clergy_dress their holy symbol around their neck
 LPUSH deity_clergy_dress their holy symbol emblazoned on their clothing
 LPUSH deity_clergy_dress formal dress
@@ -510,7 +538,7 @@ LPUSH deity_clergy_dress trophies from fallen foes
 LPUSH deity_clergy_dress informal attire
 LPUSH deity_clergy_dress formal attire
 LPUSH deity_clergy_dress decorative attire
-LPUSH deity_clergy_dress single fabrics 
+LPUSH deity_clergy_dress single fabrics
 LPUSH deity_clergy_dress common garb
 LPUSH deity_clergy_dress decorative frocks
 LPUSH deity_clergy_dress decorative cassocks

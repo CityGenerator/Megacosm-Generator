@@ -1,5 +1,6 @@
 
 from generators.Currency import Currency
+from generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -24,10 +25,6 @@ class TestCurrency(unittest.TestCase):
         """  """
         currency = Currency(self.redis )
         print currency.text
-
-if __name__ == '__main__':
-    unittest.main()
-
 
 
 

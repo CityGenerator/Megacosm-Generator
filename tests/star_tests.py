@@ -23,7 +23,3 @@ class TestStar(unittest.TestCase):
         star = Star(self.redis);
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-

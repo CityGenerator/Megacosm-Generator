@@ -1,5 +1,6 @@
 
 from generators.Bond import Bond
+from generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -31,8 +32,6 @@ class TestBond(unittest.TestCase):
         
         self.assertEqual(bond.text,'Bob, Jesse Will Tony Shaun Rich')
 
-if __name__ == '__main__':
-    unittest.main()
 
 
 

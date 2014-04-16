@@ -33,13 +33,13 @@ class TestSeeds(unittest.TestCase):
         """  """
         seeds = set_seed( 10000000000000)
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
+        self.assertGreaterEqual(10000000,seeds)
 
     def test_int_invalid_low(self):
         """  """
         seeds = set_seed( -2)
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
+        self.assertGreaterEqual(10000000,seeds)
 
 
 
@@ -47,33 +47,26 @@ class TestSeeds(unittest.TestCase):
         """  """
         seeds = set_seed( '100000000000000000')
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
+        self.assertGreaterEqual(10000000,seeds)
 
     def test_string_invalid_low(self):
         """  """
         seeds = set_seed( '-2')
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
+        self.assertGreaterEqual(10000000,seeds)
 
 
     def test_string_invalid_value(self):
         """  """
         seeds = set_seed( 'herpderp')
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
+        self.assertGreaterEqual(10000000,seeds)
 
     def test_none(self):
         """  """
         seeds = set_seed( None)
         self.assertLessEqual(1,seeds)
-        self.assertGreaterEqual(100000,seeds)
-
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-
+        self.assertGreaterEqual(10000000,seeds)
 
 
 

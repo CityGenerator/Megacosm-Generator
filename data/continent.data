@@ -1,9 +1,4 @@
 
-LPUSH stat_continent size
-LPUSH stat_continent civilization
-LPUSH stat_continent technology
-LPush stat_continent countrycount
-
 # East Amoro is a _______ continent
 ZADD continent_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   }
 ZADD continent_size 10 {"name":"small",     "multiplier":0.7,  "score":10   }
