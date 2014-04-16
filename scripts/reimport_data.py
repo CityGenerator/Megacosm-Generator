@@ -36,6 +36,7 @@ def parse_file(pipe, filename):
                         pipe.lpush(key,value)
                     elif command == "ZADD":
                         key,score,value=args.split(None,2)
+                        validate_json(value, filename, linenumber)
                         pipe.zadd(key,value,score)
                     elif command == "HSET":
                         name,key,value=args.split(None,2)
@@ -51,9 +52,12 @@ def parse_file(pipe, filename):
     raw_data.close()
 
 
+JSONVALIDATE=0
 def validate_json(value, filename, linenumber):
+    global JSONVALIDATE
     try:
         json.loads(value)
+        JSONVALIDATE+=1
     except Exception:
         print "ERROR: The following value is not proper JSON:"
         print filename,"near line",linenumber,":"
@@ -138,5 +142,6 @@ pipe.execute()
 
 print COMMANDCOUNT, "Commands were run."
 print IMAGECOUNT, "geomorphs documented."
+print JSONVALIDATE, "JSON strings validated."
 
 

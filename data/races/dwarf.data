@@ -1,11 +1,13 @@
 #
 
-LPUSH race dwarf
+LPUSH npc_race dwarf
 
 SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": "their stubby limbs and strict work ethic"}
 
-ZADD dwarf_name_order 1 first
-ZADD dwarf_name_order 2 last
+LPUSH dwarf_covering skin
+
+ZADD dwarf_name_order 50 { "name":"first" }
+ZADD dwarf_name_order 100 { "name":"last"}
 
 HSET dwarf_name_first  pre 100
 HSET dwarf_name_first  root 100

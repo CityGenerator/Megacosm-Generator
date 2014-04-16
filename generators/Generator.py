@@ -97,8 +97,6 @@ class Generator(object):
                         setattr( self, featurename+"_description", featurevalue )
                 except ValueError as e:
                     raise ValueError(  "JSON parsing error: Couldn't read json",rollvalue[0])
-        else:
-            print "INFO: no idea ",key,"what ",self.redis.type(key),"is."
 
 
 ####################################################

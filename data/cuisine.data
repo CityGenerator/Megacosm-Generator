@@ -1,8 +1,5 @@
 #
 
-LPUSH stat_cuisine rarity
-
-# TODO Stats: 
 # This dish is ______ to the region
 ZADD cuisine_rarity   5 {"name":"rare",        "score":5    }
 ZADD cuisine_rarity  10 {"name":"strange",     "score":10   }
@@ -172,7 +169,7 @@ SET   cuisine_served_chance 20
 
 LPUSH cuisine_template {%if params.method%}{{params.method}} {%endif%}{%if params.flavor%}{{params.flavor}} {%endif%}{{params.dish}}{%if params.mealtype%} {{params.mealtype}}{%endif%}{%if params.sauce%} in {{params.sauce}} {{params.saucetype}}{%endif%}{%if params.served%}, served {{params.served}}{%endif%} This dish is {{params.rarity['name']}} to the {{params.region.name['full']}}. Travelers consider the dish {{params.spice['name']}} and {{params.presentation['name']}} to the eye. Portions are usually {{params.size['name']}}.
 
-# The above tempalte is a mess, but here's what it makes....
+# The above template is a mess, but here's what it makes....
 #{%if params.method%}{{params.method}} {%endif%}
 #{%if params.flavor%}{{params.flavor}} {%endif%}
 #{{params.dish}}
