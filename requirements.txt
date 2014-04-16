@@ -10,7 +10,7 @@ nose==1.3.0
 PyPng==0.0.16
 python-termstyle==0.1.10
 Rednose==0.4.1
-twill==0.9
+twill>=0.9
 unittest2==0.5.1
 Werkzeug==0.9.4
 wsgiref==0.1.2
