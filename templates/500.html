@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block title %}Oops!{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Oops...</h1>
+
+<p>Well this is embarassing- something unexpectedly broke, and I have no idea what.</p>
+
+<p>I suspect gremlins.</p>
+<ul>
+<li> URL: {{request.url }}</li>
+<li> Seed: {{seed }}</li>
+<li> error: {{e.args[0] }}</li>
+<li> time: {{time}}</li>
+</ul>
+
+<p>If you have a Github acount, click  <a href="https://github.com/CityGenerator/Megacosm-Generator/issues/new?labels=Bug&title={{e.args[0]|urlencode}}&body=URL%3A%20{{request.url|urlencode}}%0Aseed%3A%20{{seed|urlencode}}%0Atime%3A%20{{time|urlencode}}">here</a> to create a bug report so we can fix the issue.</p>
+
+{% endblock %}

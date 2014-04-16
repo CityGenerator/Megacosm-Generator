@@ -1,12 +1,13 @@
 #
 
-LPUSH race ogre
+LPUSH npc_race ogre
 
 SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
 
+LPUSH ogre_covering skin
 
-ZADD ogre_name_order 1 first
-ZADD ogre_name_order 2 last
+ZADD ogre_name_order 50 { "name":"first" }
+ZADD ogre_name_order 100 { "name":"last"}
 
 HSET ogre_name_first  root 100
 HSET ogre_name_first  post 100

@@ -26,9 +26,5 @@ class TestCurrency(unittest.TestCase):
         currency = Currency(self.redis )
         print currency.text
 
-if __name__ == '__main__':
-    unittest.main()
-
-
 
 

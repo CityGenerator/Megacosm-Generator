@@ -170,6 +170,7 @@ LPUSH street_material dirt
 LPUSH street_material gravel
 LPUSH street_material cobblestone
 LPUSH street_material pavingstone
+LPUSH street_material flagstone
 
 
 

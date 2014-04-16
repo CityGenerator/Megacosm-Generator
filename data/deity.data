@@ -1,16 +1,18 @@
 #
 
-LPUSH stat_deity importance
-LPUSH stat_deity jealousy
-LPUSH stat_deity age
-LPUSH stat_deity followerzeal
-LPUSH stat_deity followercount
-LPUSH stat_deity secrecy
-LPUSH stat_deity power
-LPUSH stat_deity unity
-LPUSH stat_deity organized
-LPUSH stat_deity health
-
+LPUSH deity_favored_stat age
+LPUSH deity_favored_stat attractiveness
+LPUSH deity_favored_stat intelligence
+LPUSH deity_favored_stat charisma
+LPUSH deity_favored_stat wisdom
+LPUSH deity_favored_stat endurance
+LPUSH deity_favored_stat agility
+LPUSH deity_favored_stat strength
+LPUSH deity_favored_stat experience
+LPUSH deity_favored_stat skill
+LPUSH deity_favored_stat bravery
+LPUSH deity_favored_stat honor
+LPUSH deity_favored_stat piety
 
 # Members of the church are ____________ in their beliefs._
 ZADD deity_unity  10 {"name":"splintered",  "score":10  }

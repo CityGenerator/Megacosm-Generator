@@ -1,0 +1,37 @@
+#
+
+LPUSH organization_template {{params.leader.name['firstname']}}'s {{params.kind|title}}
+LPUSH organization_template {{params.leader.name['lastname'] or params.name['pre']+params.name['root'] }}'s {{params.kind|title}}
+LPUSH organization_template The {{params.name['full']}} {{params.kind|title}}
+LPUSH organization_template The {{params.name['full']}}
+
+LPUSH name_organizationpre Af
+LPUSH name_organizationpre Ban
+LPUSH name_organizationpre Blood
+LPUSH name_organizationpre Blud
+LPUSH name_organizationpre Gwan
+LPUSH name_organizationpre Tef
+LPUSH name_organizationpre Yak
+
+LPUSH name_organizationroot for
+LPUSH name_organizationroot mal
+LPUSH name_organizationroot u
+
+SET   name_organizationpost_chance 40
+LPUSH name_organizationpost ket
+LPUSH name_organizationpost za
+LPUSH name_organizationpost gua
+
+
+SET   name_organizationtrailer_chance 50
+LPUSH name_organizationtrailer Angels
+LPUSH name_organizationtrailer Boys
+LPUSH name_organizationtrailer Crew
+LPUSH name_organizationtrailer Dragons
+LPUSH name_organizationtrailer Hand
+LPUSH name_organizationtrailer Horsemen
+LPUSH name_organizationtrailer Hustlers
+LPUSH name_organizationtrailer Rats
+LPUSH name_organizationtrailer Saints
+
+

@@ -1,10 +1,12 @@
 #
 
-LPUSH race troglodyte
+LPUSH npc_race troglodyte
 
 SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": "crude behavior and foul smell"}
 
-ZADD troglodyte_name_order 1 first
+LPUSH troglodyte_covering scales
+
+ZADD troglodyte_name_order 100 { "name":"first" }
 
 HSET troglodyte_name_first  pre 100
 HSET troglodyte_name_first  post 100

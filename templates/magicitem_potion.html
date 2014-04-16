@@ -12,10 +12,10 @@
 
     <h1>You found <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
-    <img src="/static/images/potion.png" style="float:left;background-color:#{{tempobj.color_description['hex']}}" >
+    <img src="/static/images/potion.png" style="float:left;background-color:#{{tempobj.color_description['hex']}};border:1px solid black; margin-right:10px;" >
     The {{tempobj.name|title}} is {{tempobj.color_description['name'] | article}} {{tempobj.kind}} in {{tempobj.container_material | article}} {{tempobj.container_shape}}.
     The {{tempobj.effect_description['name']}} {{tempobj.kind}} {{tempobj.effect_description['description']}}.
-    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and smells of {{tempobj.smell}}. 
+    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and smells of {{tempobj.smell}}, tastes {{tempobj.taste}}, and has {{tempobj.texture|article}} texture.
     The {{tempobj.strength['name']}} {{tempobj.variety}} is considered {{tempobj.value['name']|article}}. 
     This {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}.
     {% if tempobj.sideeffect %}
@@ -25,7 +25,7 @@
 
     <h2>Description If Found...</h2>
     <blockquote style="font-style:italic">"{{tempobj.location|capitalize}} is {{tempobj.kind|article }} in {{tempobj.container_material | article}} {{tempobj.container_shape}}.
-    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and contains {{tempobj.consistency['name']|article}}, {{tempobj.color_description['name']}} {{tempobj.variety}} that smells of {{tempobj.smell}}."</blockquote> 
+    The {{tempobj.container_shape}} is {{tempobj.repair['name']}} and contains {{tempobj.consistency['name']|article}}, {{tempobj.color_description['name']}} {{tempobj.variety}} that smells of {{tempobj.smell}}, tastes {{tempobj.taste}}, and has {{tempobj.texture|article}} texture."</blockquote> 
 
  
 

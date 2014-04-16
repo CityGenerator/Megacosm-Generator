@@ -1,35 +1,35 @@
 #
 
-LPUSH namestarpre To
-LPUSH namestarpre Na
-LPUSH namestarpre Wo
-LPUSH namestarpre Me
-LPUSH namestarpre Si
-LPUSH namestarpre Lu
-LPUSH namestarpre Uu
-LPUSH namestarpre Aba
-LPUSH namestarpre Be
-LPUSH namestarpre Ce
-LPUSH namestarpre Kro
+LPUSH name_starpre To
+LPUSH name_starpre Na
+LPUSH name_starpre Wo
+LPUSH name_starpre Me
+LPUSH name_starpre Si
+LPUSH name_starpre Lu
+LPUSH name_starpre Uu
+LPUSH name_starpre Aba
+LPUSH name_starpre Be
+LPUSH name_starpre Ce
+LPUSH name_starpre Kro
 
-LPUSH namestarroot r
-LPUSH namestarroot k
-LPUSH namestarroot l
-LPUSH namestarroot j
-LPUSH namestarroot c
-LPUSH namestarroot x
-LPUSH namestarroot n
+LPUSH name_starroot r
+LPUSH name_starroot k
+LPUSH name_starroot l
+LPUSH name_starroot j
+LPUSH name_starroot c
+LPUSH name_starroot x
+LPUSH name_starroot n
 
-SET   namestarpost_chance 30
+SET   name_starpost_chance 30
 
-LPUSH namestarpost ay
-LPUSH namestarpost us
-LPUSH namestarpost or
-LPUSH namestarpost an
-LPUSH namestarpost el
-LPUSH namestarpost ub
-LPUSH namestarpost uri
-LPUSH namestarpost un
-LPUSH namestarpost ol
-LPUSH namestarpost on
+LPUSH name_starpost ay
+LPUSH name_starpost us
+LPUSH name_starpost or
+LPUSH name_starpost an
+LPUSH name_starpost el
+LPUSH name_starpost ub
+LPUSH name_starpost uri
+LPUSH name_starpost un
+LPUSH name_starpost ol
+LPUSH name_starpost on
 

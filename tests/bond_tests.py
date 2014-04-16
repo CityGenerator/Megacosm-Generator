@@ -32,8 +32,6 @@ class TestBond(unittest.TestCase):
         
         self.assertEqual(bond.text,'Bob, Jesse Will Tony Shaun Rich')
 
-if __name__ == '__main__':
-    unittest.main()
 
 
 

@@ -28,11 +28,6 @@ class TestBusiness(unittest.TestCase):
     def test_senses(self):
         """  """
         business = Business(self.redis, {'smell': 'stank', 'sight':'ugly blinds', 'sound': 'cries for help'} )
-        print business.__dict__
-
-if __name__ == '__main__':
-    unittest.main()
-
-
+        self.assertNotEqual("%s"% (business), "" )
 
 

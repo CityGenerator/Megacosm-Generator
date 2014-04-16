@@ -1,6 +1,16 @@
 #
 
-LPUSH gem_template You find a {{params.quality['name']}} {{params.cut}} {{params.kind_description['name']}}. The color is {{params.saturation['name']}} {{params.color}}. This gem is {{params.value['name']}}.
+LPUSH gem_template You find {{params.amount['name']}} {{params.quality['name']}} {{params.cut}} {{params.kind_description['name']|pluralize(params.count)}}. The color is {{params.saturation['name']}} {{params.color}}. {{"This"| plural_adj(params.count)}} {{"gem"| pluralize(params.count)}} {{"is"| plural_verb(params.count)}} {{params.value['name']}}.
+
+ZADD gem_amount  10 { "name":"a single",           "min":1,    "max":1,    "score":10  }
+ZADD gem_amount  20 { "name":"a pair of",          "min":2,    "max":2,    "score":20  }
+ZADD gem_amount  30 { "name":"a few",              "min":3,    "max":4,    "score":30  }
+ZADD gem_amount  40 { "name":"several",            "min":3,    "max":8,    "score":40  }
+ZADD gem_amount  60 { "name":"a handful",          "min":4,    "max":10,   "score":60  }
+ZADD gem_amount  80 { "name":"about a dozen",      "min":8,    "max":15,   "score":80  }
+ZADD gem_amount  90 { "name":"about two dozen",    "min":20,   "max":30,   "score":90  }
+ZADD gem_amount  95 { "name":"a few dozen",        "min":30,   "max":60,   "score":95  }
+ZADD gem_amount 100 { "name":"a large pile of",    "min":30,   "max":120,  "score":100 }
 
 ZADD gem_value  10 { "name":"near worthless",           "score":10  }
 ZADD gem_value  20 { "name":"of little value",          "score":20  }
@@ -47,7 +57,6 @@ LPUSH gem_cut slice
 LPUSH gem_cut sphere
 LPUSH gem_cut square
 LPUSH gem_cut trillion
-
 
 
 HSET gem_kind_description agate              { "name":"agate", "color":["black","blue","brown","green","white","yellow"]   }
