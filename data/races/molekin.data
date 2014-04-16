@@ -4,6 +4,8 @@ LPUSH npc_race molekin
 
 SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
 
+LPUSH molekin_covering fur
+
 ZADD molekin_name_order 30 { "name":"first" }
 ZADD molekin_name_order 60 { "name":"middle" }
 ZADD molekin_name_order 100 { "name":"last"}

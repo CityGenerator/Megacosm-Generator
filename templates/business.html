@@ -21,12 +21,12 @@ Inside, {{ tempobj.senses | conjunction    }}.
 
 
 <h2>Service</h2>
+
 The {{tempobj.kindname}} is known for {{tempobj.price['name']}} prices for the {{tempobj.service}}, and {{tempobj.popularity['name']}}. You will find {{tempobj.patroncount}} {{ 'customer'|pluralize(tempobj.patroncount  )}} in the {{tempobj.kindname}}. 
+Business has been {{tempobj.status['name']}} lately. The {{tempobj.kindname}} has a reputation for {{tempobj.reputation['name']}}.
 {% if tempobj.trouble %}
-The {{tempobj.name['full']}} has recently had {{tempobj.trouble}}.
-
+    The {{tempobj.name['full']}} has recently had {{tempobj.trouble}}.
 {%endif%}
-
 
 <h2>Description When Found...</h2>
 <blockquote style="font-style:italic">

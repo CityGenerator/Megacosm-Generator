@@ -4,6 +4,8 @@ LPUSH npc_race ogre
 
 SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
 
+LPUSH ogre_covering skin
+
 ZADD ogre_name_order 50 { "name":"first" }
 ZADD ogre_name_order 100 { "name":"last"}
 

@@ -4,6 +4,8 @@ LPUSH npc_race goblin
 
 SET goblin_details     {"name": "Goblin",     "size": "small",   "description": "their small stature and conniving"}
 
+LPUSH goblin_covering skin
+
 ZADD goblin_name_order 50 { "name":"first" }
 ZADD goblin_name_order 100 { "name":"last"}
 

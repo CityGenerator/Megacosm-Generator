@@ -7,8 +7,21 @@ LPUSH business_trouble problems with local law enforcement
 LPUSH business_trouble problems with petty theft
 LPUSH business_trouble supply caravans never show up
 LPUSH business_trouble problems with pests
+LPUSH business_trouble issues with thieves
 LPUSH business_trouble a fire
 LPUSH business_trouble slumping sales
+
+# Business is  _____________.
+ZADD business_status  10 {  "name":"horrible",           "score":10  }
+ZADD business_status  20 {  "name":"bad",                "score":20  }
+ZADD business_status  30 {  "name":"not good",           "score":30  }
+ZADD business_status  40 {  "name":"stagnant",           "score":40  }
+ZADD business_status  50 {  "name":"middling",           "score":50  }
+ZADD business_status  60 {  "name":"ok",                 "score":60  }
+ZADD business_status  70 {  "name":"not bad",            "score":70  }
+ZADD business_status  80 {  "name":"doing great",        "score":80  }
+ZADD business_status  90 {  "name":"going excellent",    "score":90  }
+ZADD business_status 100 {  "name":"booming",            "score":100 }
 
 
 #        The Perfumed Twins Vinters is a[n] _______, disgusting-looking vinyard.

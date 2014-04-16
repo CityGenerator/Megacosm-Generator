@@ -4,6 +4,9 @@ LPUSH npc_race catfolk
 
 SET catfolk_details    {"name": "Catfolk",    "size": "medium",  "description": "very agile and excellent sense of sight"}
 
+LPUSH catfolk_covering fur
+
+
 ZADD catfolk_name_order  30 { "name":"first" }
 ZADD catfolk_name_order  60 { "name":"middle"}
 ZADD catfolk_name_order 100 { "name":"last"}
