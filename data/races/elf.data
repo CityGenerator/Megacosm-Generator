@@ -1,13 +1,15 @@
 #
 
-LPUSH race elf
+LPUSH npc_race elf
 
 SET elf_details        {"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}
 
-ZADD elf_name_order 1 first
-ZADD elf_name_order 2 last
+LPUSH elf_covering skin
 
-HSET elf_name_first  pre 100 
+ZADD elf_name_order 50 { "name":"first" }
+ZADD elf_name_order 100 { "name":"last"}
+
+HSET elf_name_first  pre 100
 HSET elf_name_first  root 100
 HSET elf_name_first  post 100
 HSET elf_name_last   root 100

@@ -48,7 +48,9 @@
         {%if tempobj.decoration_description %}
             The {{tempobj.category_description['materialpart']}} is decorated with {{tempobj.decoration_description['description']}}.
         {%endif %}
-            
-
+        {%if tempobj.vibe%}
+            It {{tempobj.vibe}} when {{tempobj.vibe_when}} the {{tempobj.category_description['name']}}.
+        {%endif%}
+        "
     </blockquote> 
 {% endblock %}

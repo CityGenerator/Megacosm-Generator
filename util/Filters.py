@@ -1,3 +1,4 @@
+#
 
 import inflect
 
@@ -16,4 +17,5 @@ def select_plural_adj(adj,subject ):
     return p.plural_adj(adj,subject)
 
 def select_conjunction(wordlist):
+    """Join a list with commas and such."""
     return p.join(wordlist)

@@ -1,0 +1,27 @@
+
+
+{% extends "base.html" %}
+{% block title %}A Wild Flag Appears...{% endblock %}
+{% block head %}
+  {{ super() }}
+    <script type="text/javascript" src="/static/js/flagshape.js"></script>
+    <script type="text/javascript" src="/static/js/flagdivision.js"></script>
+    <script type="text/javascript" src="/static/js/flagoverlay.js"></script>
+    <script type="text/javascript" src="/static/js/flagsymbol.js"></script>
+    <script type="text/javascript" src="/static/js/flagborder.js"></script>
+    <script type="text/javascript" src="/static/js/flag.js"></script>
+
+{% endblock %}
+{% block content %}
+    <h1> A Wild Flag Appears...</h1>
+    <div>
+        <canvas id='flag' height='200' >
+        </canvas>
+    </div>
+
+    <script type="text/javascript">
+        create_flag( {{flagjson|safe}},  document.getElementById("flag") );
+    </script>
+
+
+{% endblock %}

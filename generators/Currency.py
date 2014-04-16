@@ -14,6 +14,8 @@ class Currency(Generator):
 
         Generator.__init__(self,redis,features)
 
+        if not hasattr(self, 'count'):
+            self.count=random.randint(self.amount['min'],self.amount['max'])
         # Perhaps your currency has a person on it- a king, queen, etc.
         if not hasattr(self,'npc'):
             setattr(self,'npc',NPC(self.redis))

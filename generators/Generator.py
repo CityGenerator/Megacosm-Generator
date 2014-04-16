@@ -99,14 +99,6 @@ class Generator(object):
                     raise ValueError(  "JSON parsing error: Couldn't read json",rollvalue[0])
 
 
-
-
-
-
-        else:
-            print "INFO: no idea ",key,"what ",self.redis.type(key),"is."
-
-
 ####################################################
 # needs refactoring below here.
 

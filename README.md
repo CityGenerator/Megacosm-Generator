@@ -1,4 +1,5 @@
-[![Coverage Status](https://coveralls.io/repos/CityGenerator/Megacosm-Generator/badge.png)](https://coveralls.io/r/CityGenerator/Megacosm-Generator)
+[![Coverage Status](https://coveralls.io/repos/CityGenerator/Megacosm-Generator/badge.png?branch=develop)](https://coveralls.io/r/CityGenerator/Megacosm-Generator?branch=develop) 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/CityGenerator/megacosm-generator/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Megacosm-Generator
 ==================
