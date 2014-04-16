@@ -1,0 +1,26 @@
+#
+
+LPUSH npc_race harpy
+
+SET harpy_details {"name": "Harpy", "size": "medium",  "description": "winged and feathered feral humanoid with a greedy reputation"}
+
+LPUSH harpy_covering feathers
+
+ZADD harpy_name_order 100 { "name":"first" }
+
+HSET harpy_name_first  pre 100
+HSET harpy_name_first  post 100
+
+LPUSH harpy_name_first_pre Ae
+LPUSH harpy_name_first_pre Ocy
+LPUSH harpy_name_first_pre Cela
+LPUSH harpy_name_first_pre Pod
+LPUSH harpy_name_first_pre Nico
+
+LPUSH harpy_name_first_post llo
+LPUSH harpy_name_first_post pete
+LPUSH harpy_name_first_post eno
+LPUSH harpy_name_first_post arge
+LPUSH harpy_name_first_post thoe
+
+

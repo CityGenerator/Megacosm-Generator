@@ -122,3 +122,21 @@ LPUSH scales_scalecolor blue
 LPUSH scales_scalecolor red
 
 
+SET   feathers_covertemplate {{params.featherkind}} {{params.feathercolor}} feathers
+LPUSH feathers_featherkind thick
+LPUSH feathers_featherkind thin
+LPUSH feathers_featherkind translucent
+LPUSH feathers_featherkind tiny
+LPUSH feathers_featherkind delicate
+LPUSH feathers_featherkind rough
+LPUSH feathers_featherkind durable
+
+LPUSH feathers_feathercolor black
+LPUSH feathers_feathercolor silver
+LPUSH feathers_feathercolor gold
+LPUSH feathers_feathercolor green
+LPUSH feathers_feathercolor gray
+LPUSH feathers_feathercolor brown
+LPUSH feathers_feathercolor olive
+LPUSH feathers_feathercolor blue
+LPUSH feathers_feathercolor red
