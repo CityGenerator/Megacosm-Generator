@@ -35,13 +35,13 @@
 
         <table>
 
-            {% for param in paramlist|sort %}
+            {% for param in plist|sort %}
             <tr>
                 <td>{{param|capitalize}} </td>
                 <td>
                     <select name="{{name}}_{{param}}">
                         <option value=""></option>
-                        {% for fieldname in paramlist[param] %}
+                        {% for fieldname in plist[param] %}
                         <option value="{{ loop.index0 }}">{{fieldname }} </option>
                         {% endfor %}
                     <select>
@@ -49,23 +49,23 @@
             </tr>
             {% endfor %}
 
-            {% for param in paramstring|sort %}
+            {% for param in pstring|sort %}
             <tr>
                 <td>{{param|capitalize}} </td>
                 <td>
-                    <input type=text name="{{name}}_{{param}}" value='{{paramstring[param]}}'/>
+                    <input type=text name="{{name}}_{{param}}" value='{{pstring[param]}}'/>
 
                 </td>
             </tr>
             {% endfor %}
 
-            {% for param in paramset|sort %}
+            {% for param in pset|sort %}
             <tr>
                 <td>{{param|capitalize}} </td>
                 <td>
                     <select name="{{name}}_{{param}}_roll">
                         <option value=""></option>
-                        {% for fieldname in paramset[param] %}
+                        {% for fieldname in pset[param] %}
                         <option value="{{ fieldname['score']}}">{{fieldname['name'] }} </option>
                         {% endfor %}
                     <select>

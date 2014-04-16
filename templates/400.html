@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+{% block title %}Generator Not Found{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Oops...</h1>
+
+<p>I'm not sure what you were looking for, but it's not here.</p>
+
+<ul>
+<li> URL: {{request.url }}</li>
+<li> time: {{time}}</li>
+</ul>
+
+<p>If you think there should be something here and have a Github acount, click  <a href="https://github.com/CityGenerator/Megacosm-Generator/issues/new?labels=Bug&title=Missing%20Generator&body=URL%3A%20{{request.url|urlencode}}%0Atime%3A%20{{time|urlencode}}">here</a> to create a bug report so we can fix the issue.</p>
+
+{% endblock %}

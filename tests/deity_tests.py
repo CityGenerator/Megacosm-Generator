@@ -1,5 +1,6 @@
 
 from generators.Deity import Deity
+from generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -33,11 +34,5 @@ class TestDeity(unittest.TestCase):
         deity = Deity(self.redis, {'deity_unity_roll': 0, 'deity_importance_roll':100} )
         deity.add_sects()
         self.assertGreaterEqual(len(deity.sects),1)
-
-
-if __name__ == '__main__':
-    unittest.main()
-
-
 
 

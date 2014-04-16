@@ -24,7 +24,7 @@ LPUSH bond_template {{params.partyA}} alerted {{params.partyB}} to impending dan
 LPUSH bond_template {{params.partyA}} amused {{params.partyB}} in an unusual way.
 LPUSH bond_template {{params.partyA}} annoyed {{params.partyB}} in an unusual way.
 LPUSH bond_template {{params.partyA}} argued with {{params.partyB}} at the worst possible moment.
-LPUSH bond_template {{params.partyA}} accidentally lead to the arrest of {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} accidentally led to the arrest of {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} attacked {{params.partyB}} over an unpaid bill long ago. Some think {{params.either}} still harbors a grudge.
 LPUSH bond_template {{params.you}} and {{params.other}} battled on opposite sides of a conflict.
 LPUSH bond_template {{params.you}} and {{params.other}} belonged to the same group.
@@ -39,8 +39,8 @@ LPUSH bond_template {{params.partyA}} charged a bear with a chicken wing to defe
 LPUSH bond_template {{params.partyA}} chased a wild boar for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} cheated {{params.partyB}} at poker.
 LPUSH bond_template {{params.partyA}} choked {{params.partyB}} in a brawl.
-LPUSH bond_template {{params.partyA}} claim to have given {{params.partyB}} something of value.
-LPUSH bond_template {{params.partyA}} cleaned {{params.partyB}} armor acter losing a bet.
+LPUSH bond_template {{params.partyA}} claimed to have given {{params.partyB}} something of value.
+LPUSH bond_template {{params.partyA}} cleaned soiled armor for {{params.partyB}} losing a bet.
 LPUSH bond_template {{params.partyA}} collected a bounty on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} commanded {{params.partyB}} in battle.
 LPUSH bond_template {{params.partyA}} competed for a prize with {{params.partyB}}.
@@ -55,7 +55,7 @@ LPUSH bond_template {{params.partyA}} crossed a raging river to help {{params.pa
 LPUSH bond_template {{params.partyA}} cried openly in front of {{params.partyB}} about a dark secret.
 LPUSH bond_template {{params.partyA}} found a cure for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} danced with the devil to save {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} dared {{params.partyB}} to do something stupid- ending in arrest, fines and community service.
+LPUSH bond_template {{params.partyA}} dared {{params.partyB}} to do something stupid - ending in arrest, fines and community service.
 LPUSH bond_template {{params.partyA}} deceived {{params.partyB}} in an appalling way.
 LPUSH bond_template {{params.partyA}} delayed {{params.partyB}}, resulting in the death of a loved one.
 LPUSH bond_template {{params.partyA}} delivered crushing news to {{params.partyB}}.
@@ -70,8 +70,8 @@ LPUSH bond_template {{params.partyA}} divided the loot improperly with {{params.
 LPUSH bond_template {{params.partyA}} dragged {{params.partyB}} somewhere dangerous.
 LPUSH bond_template {{params.partyA}} had a prophetic dream about {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} dressed up in drag to save {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} dropped {{params.partyB}} down a well on accident.
-LPUSH bond_template {{params.partyA}} nearly drown trying to save {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} dropped {{params.partyB}} down a well by accident.
+LPUSH bond_template {{params.partyA}} nearly drowned trying to save {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} earned {{params.partyB}} an undeserved reputation.
 LPUSH bond_template {{params.partyA}} educated {{params.partyB}} on the birds and the bees.
 LPUSH bond_template {{params.partyA}} embarrassed {{params.partyB}} in front of royalty.
@@ -83,7 +83,7 @@ LPUSH bond_template {{params.partyA}} entered into an agreement with {{params.pa
 LPUSH bond_template {{params.partyA}} entertained {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} escaped with {{params.partyB}} from certain death.
 LPUSH bond_template {{params.partyA}} examined an injury {{params.partyB}} would rather forget.
-LPUSH bond_template {{params.partyA}} thinks of excuses for {{params.partyB}} when they're needed.
+LPUSH bond_template {{params.partyA}} thought of excuses for {{params.partyB}} when they were needed.
 LPUSH bond_template {{params.partyA}} expected better of {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} explained things in small words for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} faced {{params.partyB}} in single combat.  {{params.either |capitalize}} lost.
@@ -112,16 +112,16 @@ LPUSH bond_template {{params.partyA}} hated {{params.partyB}} at first sight.
 LPUSH bond_template {{params.partyA}} swore to haunt {{params.partyB}} if {{params.partyA}} died.
 LPUSH bond_template {{params.partyA}} healed {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} helped {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} hooked {{params.partyB}} with a fish hook on accident.
+LPUSH bond_template {{params.partyA}} hooked {{params.partyB}} with a fish hook by accident.
 LPUSH bond_template {{params.partyA}} hoped to never see {{params.partyB}} again.
 LPUSH bond_template {{params.partyA}} hovered over every decision {{params.partyB}} made.
 LPUSH bond_template {{params.partyA}} hugged {{params.partyB}} inappropriately.
-LPUSH bond_template {{params.partyA}} hums to drive {{params.partyB}} crazy.
-LPUSH bond_template {{params.partyA}} likes to hunt with {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} hummed to drive {{params.partyB}} crazy.
+LPUSH bond_template {{params.partyA}} liked to hunt with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} often felt hurried by {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} identified {{params.partyB}} as the person responsible for an unsolved crime.
 LPUSH bond_template {{params.partyA}} ignored {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} imagined {{params.partyB}} without clothing on accident.
+LPUSH bond_template {{params.partyA}} imagined {{params.partyB}} without clothing by accident.
 LPUSH bond_template {{params.partyA}} impressed {{params.partyB}} with a quick wit.
 LPUSH bond_template {{params.partyA}} included {{params.partyB}} so {{params.partyB}} wouldn't feel bad.
 LPUSH bond_template {{params.partyA}} influenced {{params.partyB}} in a good way.
@@ -139,12 +139,12 @@ LPUSH bond_template {{params.partyA}} invited {{params.partyB}} to the wrong par
 LPUSH bond_template {{params.partyA}} irritated {{params.partyB}} less than {{params.partyB}} would like to admit.
 LPUSH bond_template {{params.partyA}} judged {{params.partyB}} too quickly.
 LPUSH bond_template {{params.partyA}} kicked {{params.partyB}} in the groin.
-LPUSH bond_template {{params.partyA}} nearly killed {{params.partyB}}, and {{params.partyB}} knows it.
+LPUSH bond_template {{params.partyA}} nearly killed {{params.partyB}}, and {{params.partyB}} knew it.
 LPUSH bond_template {{params.partyA}} knocked {{params.partyB}} out.
 LPUSH bond_template {{params.partyA}} learned not to trust {{params.partyB}} so easily.
 LPUSH bond_template {{params.partyA}} lied to {{params.partyB}} about something and got caught.
 LPUSH bond_template {{params.partyA}} liked {{params.partyB}} a lot more before "the incident".
-LPUSH bond_template {{params.partyA}} lock {{params.partyB}} in the bottom of a privvy.
+LPUSH bond_template {{params.partyA}} locked {{params.partyB}} in the bottom of a privy.
 LPUSH bond_template {{params.partyA}} managed to irritate {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} murdered someone to protect {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} murdered someone to frame {{params.partyB}}.
@@ -162,7 +162,7 @@ LPUSH bond_template {{params.partyA}} parked carriages for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} parted ways with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} paused to chat with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pecked {{params.partyB}} on the cheek.
-LPUSH bond_template {{params.partyA}} peeped when {{params.partyB}} is changing.
+LPUSH bond_template {{params.partyA}} peeped when {{params.partyB}} changed.
 LPUSH bond_template {{params.partyA}} performed heroic deeds for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} picked on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pined for the fjords with {{params.partyB}}.
@@ -174,9 +174,9 @@ LPUSH bond_template {{params.partyA}} polished the knobs for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} popped pills with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} poured wine for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} practiced the magic arts with {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the basement.
-LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the attic.
-LPUSH bond_template {{params.partyA}} permited {{params.partyB}} to live in the shed.
+LPUSH bond_template {{params.partyA}} permitted {{params.partyB}} to live in the basement.
+LPUSH bond_template {{params.partyA}} permitted {{params.partyB}} to live in the attic.
+LPUSH bond_template {{params.partyA}} permitted {{params.partyB}} to live in the shed.
 LPUSH bond_template {{params.partyA}} preached to {{params.partyB}} about religion. 
 LPUSH bond_template {{params.partyA}} gave {{params.partyB}} a gift.
 LPUSH bond_template {{params.partyA}} read poetry to {{params.partyB}}.

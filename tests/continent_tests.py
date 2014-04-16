@@ -35,9 +35,3 @@ class TestContinent(unittest.TestCase):
         print continent.__dict__
 
 
-if __name__ == '__main__':
-    unittest.main()
-
-
-
-

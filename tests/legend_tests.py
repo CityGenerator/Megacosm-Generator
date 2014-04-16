@@ -1,5 +1,6 @@
 
 from generators.Legend import Legend
+from generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
@@ -27,8 +28,6 @@ class TestLegend(unittest.TestCase):
         self.assertNotEqual(legend.text,'')
 
 
-if __name__ == '__main__':
-    unittest.main()
 
 
 

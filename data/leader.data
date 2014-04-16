@@ -1,0 +1,599 @@
+#
+
+
+
+
+LPUSH leader_kind absolutemonarchy
+HSET  leader_kind_description absolutemonarchy { "scope":"country"   }
+LPUSH leader_kind authoritarian
+HSET  leader_kind_description authoritarian { "scope":"country"   }
+LPUSH leader_kind commonwealth
+HSET  leader_kind_description commonwealth { "scope":"country"   }
+LPUSH leader_kind communist
+HSET  leader_kind_description communist { "scope":"country"   }
+LPUSH leader_kind constitutional
+HSET  leader_kind_description constitutional { "scope":"country"   }
+LPUSH leader_kind democracy
+HSET  leader_kind_description democracy { "scope":"country"   }
+LPUSH leader_kind dictatorship
+HSET  leader_kind_description dictatorship { "scope":"country"   }
+LPUSH leader_kind ecclesiastical
+HSET  leader_kind_description ecclesiastical { "scope":"country"   }
+LPUSH leader_kind emirate
+HSET  leader_kind_description emirate { "scope":"country"   }
+LPUSH leader_kind federation
+HSET  leader_kind_description federation { "scope":"country"   }
+LPUSH leader_kind monarchy
+HSET  leader_kind_description monarchy { "scope":"country"   }
+LPUSH leader_kind oligarchy
+HSET  leader_kind_description oligarchy { "scope":"country"   }
+LPUSH leader_kind parliamentary
+HSET  leader_kind_description parliamentary { "scope":"country"   }
+LPUSH leader_kind republic
+HSET  leader_kind_description republic { "scope":"country"   }
+LPUSH leader_kind theocracy
+HSET  leader_kind_description theocracy { "scope":"country"   }
+LPUSH leader_kind totalitarian
+HSET  leader_kind_description totalitarian { "scope":"country"   }
+
+LPUSH leader_kind councilmanager
+HSET  leader_kind_description councilmanager { "scope":"city"   }
+LPUSH leader_kind mayorcouncil
+HSET  leader_kind_description mayorcouncil { "scope":"city"   }
+LPUSH leader_kind commission
+HSET  leader_kind_description commission { "scope":"city"   }
+LPUSH leader_kind townmeeting
+HSET  leader_kind_description townmeeting { "scope":"city"   }
+LPUSH leader_kind magistrate
+HSET  leader_kind_description magistrate { "scope":"city"   }
+
+LPUSH leader_kind guild
+HSET  leader_kind_description guild { "scope":"organization"   }
+LPUSH leader_kind gang
+HSET  leader_kind_description gang { "scope":"organization"   }
+LPUSH leader_kind union
+HSET  leader_kind_description union { "scope":"organization"   }
+
+LPUSH leaderguild_leader guildmaster
+HSET  leaderguild_leader_description guildmaster { "male":"Guildmaster",    "female":"Guildmaster"     }
+LPUSH leadergang_leader gangleader
+HSET  leadergang_leader_description gangleader { "male":"GangLeader",    "female":"Gang Leader"     }
+LPUSH leadergang_leader kingpin
+HSET  leadergang_leader_description kingpin { "male":"Kingpin",    "female":"Kingpin"     }
+LPUSH leaderunion_leader president
+HSET  leaderunion_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leaderabsolutemonarchy_leader king
+HSET  leaderabsolutemonarchy_leader_description king { "male":"King",    "female":"Queen"     }
+LPUSH leaderabsolutemonarchy_leader emperor
+HSET  leaderabsolutemonarchy_leader_description emperor { "male":"Emperor", "female":"Empress"   }
+LPUSH leaderabsolutemonarchy_leader raja
+HSET  leaderabsolutemonarchy_leader_description raja { "male":"Raja",    "female":"Rani"      }
+LPUSH leaderabsolutemonarchy_leader sultan
+HSET  leaderabsolutemonarchy_leader_description sultan { "male":"Sultan",  "female":"Sultana"   }
+LPUSH leaderabsolutemonarchy_leader shah
+HSET  leaderabsolutemonarchy_leader_description shah { "male":"Shah",    "female":"Shahbanu"  }
+LPUSH leaderabsolutemonarchy_leader prince
+HSET  leaderabsolutemonarchy_leader_description prince { "male":"Prince",  "female":"Princess"  }
+
+
+LPUSH leaderauthoritarian_leader boss
+HSET  leaderauthoritarian_leader_description boss { "male":"Boss",         "female":"Boss"         }
+LPUSH leaderauthoritarian_leader captain
+HSET  leaderauthoritarian_leader_description captain { "male":"Captain",      "female":"Captain"      }
+LPUSH leaderauthoritarian_leader chairman
+HSET  leaderauthoritarian_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+LPUSH leaderauthoritarian_leader chief
+HSET  leaderauthoritarian_leader_description chief { "male":"Chief",        "female":"Chief"        }
+LPUSH leaderauthoritarian_leader commander
+HSET  leaderauthoritarian_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderauthoritarian_leader czar
+HSET  leaderauthoritarian_leader_description czar { "male":"Czar",         "female":"Czar"         }
+LPUSH leaderauthoritarian_leader despot
+HSET  leaderauthoritarian_leader_description despot { "male":"Despot",       "female":"Despot"       }
+LPUSH leaderauthoritarian_leader general
+HSET  leaderauthoritarian_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderauthoritarian_leader governor
+HSET  leaderauthoritarian_leader_description governor { "male":"Governor",     "female":"Governor"     }
+LPUSH leaderauthoritarian_leader inquisitor
+HSET  leaderauthoritarian_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+LPUSH leaderauthoritarian_leader leader
+HSET  leaderauthoritarian_leader_description leader { "male":"Leader",       "female":"Leader"       }
+LPUSH leaderauthoritarian_leader lord
+HSET  leaderauthoritarian_leader_description lord { "male":"Lord",         "female":"Lord"         }
+LPUSH leaderauthoritarian_leader master
+HSET  leaderauthoritarian_leader_description master { "male":"Master",       "female":"Master"       }
+LPUSH leaderauthoritarian_leader overlord
+HSET  leaderauthoritarian_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+LPUSH leaderauthoritarian_leader overseer
+HSET  leaderauthoritarian_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+LPUSH leaderauthoritarian_leader premier
+HSET  leaderauthoritarian_leader_description premier { "male":"Premier",      "female":"Premier"      }
+LPUSH leaderauthoritarian_leader sovereign
+HSET  leaderauthoritarian_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+LPUSH leaderauthoritarian_leader steward
+HSET  leaderauthoritarian_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leaderauthoritarian_leader supervisor
+HSET  leaderauthoritarian_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+LPUSH leaderauthoritarian_leader tyrant
+HSET  leaderauthoritarian_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+LPUSH leaderauthoritarian_leader vizier
+HSET  leaderauthoritarian_leader_description vizier { "male":"Vizier",       "female":"Vizier"       }
+LPUSH leaderauthoritarian_leader warlord
+HSET  leaderauthoritarian_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+
+
+LPUSH leadercommonwealth_leader primeminister
+HSET  leadercommonwealth_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leadercommonwealth_leader chancellor
+HSET  leadercommonwealth_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+LPUSH leadercommonwealth_leader steward
+HSET  leadercommonwealth_leader_description steward { "male":"Steward",      "female":"Steward"      }
+
+
+LPUSH leadercommunist_leader primeminister
+HSET  leadercommunist_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leadercommunist_leader president
+HSET  leadercommunist_leader_description president { "male":"President",   "female":"President"   }
+LPUSH leadercommunist_leader chancellor
+HSET  leadercommunist_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+
+
+LPUSH leaderconstitutional_leader primeminister
+HSET  leaderconstitutional_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderconstitutional_leader governor
+HSET  leaderconstitutional_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderconstitutional_leader president
+HSET  leaderconstitutional_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leaderdemocracy_leader primeminister
+HSET  leaderdemocracy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderdemocracy_leader governor
+HSET  leaderdemocracy_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderdemocracy_leader president
+HSET  leaderdemocracy_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leaderdictatorship_leader boss
+HSET  leaderdictatorship_leader_description boss { "male":"Boss",         "female":"Boss"         }
+LPUSH leaderdictatorship_leader captain
+HSET  leaderdictatorship_leader_description captain { "male":"Captain",      "female":"Captain"      }
+LPUSH leaderdictatorship_leader chairman
+HSET  leaderdictatorship_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+LPUSH leaderdictatorship_leader chief
+HSET  leaderdictatorship_leader_description chief { "male":"Chief",        "female":"Chief"        }
+LPUSH leaderdictatorship_leader commander
+HSET  leaderdictatorship_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderdictatorship_leader czar
+HSET  leaderdictatorship_leader_description czar { "male":"Czar",         "female":"Czar"         }
+LPUSH leaderdictatorship_leader despot
+HSET  leaderdictatorship_leader_description despot { "male":"Despot",       "female":"Despot"       }
+LPUSH leaderdictatorship_leader general
+HSET  leaderdictatorship_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderdictatorship_leader governor
+HSET  leaderdictatorship_leader_description governor { "male":"Governor",     "female":"Governor"     }
+LPUSH leaderdictatorship_leader inquisitor
+HSET  leaderdictatorship_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+LPUSH leaderdictatorship_leader leader
+HSET  leaderdictatorship_leader_description leader { "male":"Leader",       "female":"Leader"       }
+LPUSH leaderdictatorship_leader lord
+HSET  leaderdictatorship_leader_description lord { "male":"Lord",         "female":"Lord"         }
+LPUSH leaderdictatorship_leader master
+HSET  leaderdictatorship_leader_description master { "male":"Master",       "female":"Master"       }
+LPUSH leaderdictatorship_leader overlord
+HSET  leaderdictatorship_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+LPUSH leaderdictatorship_leader overseer
+HSET  leaderdictatorship_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+LPUSH leaderdictatorship_leader premier
+HSET  leaderdictatorship_leader_description premier { "male":"Premier",      "female":"Premier"      }
+LPUSH leaderdictatorship_leader sovereign
+HSET  leaderdictatorship_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+LPUSH leaderdictatorship_leader steward
+HSET  leaderdictatorship_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leaderdictatorship_leader supervisor
+HSET  leaderdictatorship_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+LPUSH leaderdictatorship_leader tyrant
+HSET  leaderdictatorship_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+LPUSH leaderdictatorship_leader warlord
+HSET  leaderdictatorship_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+
+
+LPUSH leaderecclesiastical_leader primeminister
+HSET  leaderecclesiastical_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderecclesiastical_leader pontifex
+HSET  leaderecclesiastical_leader_description pontifex { "male":"Pontifex",   "female":"Pontifex"   }
+LPUSH leaderecclesiastical_leader saint
+HSET  leaderecclesiastical_leader_description saint { "male":"Saint",   "female":"Saint"   }
+LPUSH leaderecclesiastical_leader chief
+HSET  leaderecclesiastical_leader_description chief { "male":"Chief",   "female":"Chief"   }
+LPUSH leaderecclesiastical_leader father
+HSET  leaderecclesiastical_leader_description father { "male":"Father", "female":"Mother"   }
+LPUSH leaderecclesiastical_leader bishop
+HSET  leaderecclesiastical_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+LPUSH leaderecclesiastical_leader archbishop
+HSET  leaderecclesiastical_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+LPUSH leaderecclesiastical_leader elder
+HSET  leaderecclesiastical_leader_description elder { "male":"Elder",   "female":"Elder"   }
+LPUSH leaderecclesiastical_leader president
+HSET  leaderecclesiastical_leader_description president { "male":"President",   "female":"President"   }
+LPUSH leaderecclesiastical_leader brother
+HSET  leaderecclesiastical_leader_description brother { "male":"Brother",  "female":"Sister"   }
+LPUSH leaderecclesiastical_leader guru
+HSET  leaderecclesiastical_leader_description guru { "male":"Guru",   "female":"Guru"   }
+LPUSH leaderecclesiastical_leader lordchancellor
+HSET  leaderecclesiastical_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+LPUSH leaderecclesiastical_leader lord
+HSET  leaderecclesiastical_leader_description lord { "male":"Lord", "female":"Lady"  }
+LPUSH leaderecclesiastical_leader chancellor
+HSET  leaderecclesiastical_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+LPUSH leaderecclesiastical_leader steward
+HSET  leaderecclesiastical_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leaderecclesiastical_leader cardinal
+HSET  leaderecclesiastical_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+LPUSH leaderecclesiastical_leader caliph
+HSET  leaderecclesiastical_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+
+
+LPUSH leaderemirate_leader primeminister
+HSET  leaderemirate_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderemirate_leader saint
+HSET  leaderemirate_leader_description saint { "male":"Saint",   "female":"Saint"   }
+LPUSH leaderemirate_leader chief
+HSET  leaderemirate_leader_description chief { "male":"Chief",   "female":"Chief"   }
+LPUSH leaderemirate_leader father
+HSET  leaderemirate_leader_description father { "male":"Father", "female":"Mother"   }
+LPUSH leaderemirate_leader bishop
+HSET  leaderemirate_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+LPUSH leaderemirate_leader archbishop
+HSET  leaderemirate_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+LPUSH leaderemirate_leader elder
+HSET  leaderemirate_leader_description elder { "male":"Elder",   "female":"Elder"   }
+LPUSH leaderemirate_leader president
+HSET  leaderemirate_leader_description president { "male":"President",   "female":"President"   }
+LPUSH leaderemirate_leader brother
+HSET  leaderemirate_leader_description brother { "male":"Brother",  "female":"Sister"   }
+LPUSH leaderemirate_leader guru
+HSET  leaderemirate_leader_description guru { "male":"Guru",   "female":"Guru"   }
+LPUSH leaderemirate_leader steward
+HSET  leaderemirate_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leaderemirate_leader lordchancellor
+HSET  leaderemirate_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+LPUSH leaderemirate_leader lord
+HSET  leaderemirate_leader_description lord { "male":"Lord", "female":"Lady"  }
+LPUSH leaderemirate_leader chancellor
+HSET  leaderemirate_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+LPUSH leaderemirate_leader cardinal
+HSET  leaderemirate_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+LPUSH leaderemirate_leader caliph
+HSET  leaderemirate_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+
+
+LPUSH leaderfederation_leader commander
+HSET  leaderfederation_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderfederation_leader general
+HSET  leaderfederation_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderfederation_leader governor
+HSET  leaderfederation_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderfederation_leader primeminister
+HSET  leaderfederation_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderfederation_leader president
+HSET  leaderfederation_leader_description president { "male":"President",   "female":"President"   }
+LPUSH leaderfederation_leader steward
+HSET  leaderfederation_leader_description steward { "male":"Steward",      "female":"Steward"      }
+
+
+LPUSH leadermonarchy_leader king
+HSET  leadermonarchy_leader_description king { "male":"King",    "female":"Queen"     }
+LPUSH leadermonarchy_leader emperor
+HSET  leadermonarchy_leader_description emperor { "male":"Emperor", "female":"Empress"   }
+LPUSH leadermonarchy_leader raja
+HSET  leadermonarchy_leader_description raja { "male":"Raja",    "female":"Rani"      }
+LPUSH leadermonarchy_leader sultan
+HSET  leadermonarchy_leader_description sultan { "male":"Sultan",  "female":"Sultana"   }
+LPUSH leadermonarchy_leader shah
+HSET  leadermonarchy_leader_description shah { "male":"Shah",    "female":"Shahbanu"  }
+LPUSH leadermonarchy_leader prince
+HSET  leadermonarchy_leader_description prince { "male":"Prince",  "female":"Princess"  }
+
+LPUSH leaderoligarchy_leader commander
+HSET  leaderoligarchy_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderoligarchy_leader general
+HSET  leaderoligarchy_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderoligarchy_leader governor
+HSET  leaderoligarchy_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderoligarchy_leader primeminister
+HSET  leaderoligarchy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderoligarchy_leader president
+HSET  leaderoligarchy_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leaderparliamentary_leader commander
+HSET  leaderparliamentary_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderparliamentary_leader general
+HSET  leaderparliamentary_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderparliamentary_leader governor
+HSET  leaderparliamentary_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderparliamentary_leader primeminister
+HSET  leaderparliamentary_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderparliamentary_leader steward
+HSET  leaderparliamentary_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leaderparliamentary_leader president
+HSET  leaderparliamentary_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leaderrepublic_leader commander
+HSET  leaderrepublic_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leaderrepublic_leader general
+HSET  leaderrepublic_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leaderrepublic_leader governor
+HSET  leaderrepublic_leader_description governor { "male":"Governor",      "female":"Governor"      }
+LPUSH leaderrepublic_leader primeminister
+HSET  leaderrepublic_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leaderrepublic_leader president
+HSET  leaderrepublic_leader_description president { "male":"President",   "female":"President"   }
+
+
+LPUSH leadertheocracy_leader primeminister
+HSET  leadertheocracy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+LPUSH leadertheocracy_leader saint
+HSET  leadertheocracy_leader_description saint { "male":"Saint",   "female":"Saint"   }
+LPUSH leadertheocracy_leader chief
+HSET  leadertheocracy_leader_description chief { "male":"Chief",   "female":"Chief"   }
+LPUSH leadertheocracy_leader father
+HSET  leadertheocracy_leader_description father { "male":"Father", "female":"Mother"   }
+LPUSH leadertheocracy_leader bishop
+HSET  leadertheocracy_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+LPUSH leadertheocracy_leader archbishop
+HSET  leadertheocracy_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+LPUSH leadertheocracy_leader elder
+HSET  leadertheocracy_leader_description elder { "male":"Elder",   "female":"Elder"   }
+LPUSH leadertheocracy_leader president
+HSET  leadertheocracy_leader_description president { "male":"President",   "female":"President"   }
+LPUSH leadertheocracy_leader brother
+HSET  leadertheocracy_leader_description brother { "male":"Brother",  "female":"Sister"   }
+LPUSH leadertheocracy_leader guru
+HSET  leadertheocracy_leader_description guru { "male":"Guru",   "female":"Guru"   }
+LPUSH leadertheocracy_leader lordchancellor
+HSET  leadertheocracy_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+LPUSH leadertheocracy_leader steward
+HSET  leadertheocracy_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leadertheocracy_leader lord
+HSET  leadertheocracy_leader_description lord { "male":"Lord", "female":"Lady"  }
+LPUSH leadertheocracy_leader chancellor
+HSET  leadertheocracy_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+LPUSH leadertheocracy_leader cardinal
+HSET  leadertheocracy_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+LPUSH leadertheocracy_leader caliph
+HSET  leadertheocracy_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+
+
+LPUSH leadertotalitarian_leader boss
+HSET  leadertotalitarian_leader_description boss { "male":"Boss",         "female":"Boss"         }
+LPUSH leadertotalitarian_leader captain
+HSET  leadertotalitarian_leader_description captain { "male":"Captain",      "female":"Captain"      }
+LPUSH leadertotalitarian_leader chairman
+HSET  leadertotalitarian_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+LPUSH leadertotalitarian_leader chief
+HSET  leadertotalitarian_leader_description chief { "male":"Chief",        "female":"Chief"        }
+LPUSH leadertotalitarian_leader commander
+HSET  leadertotalitarian_leader_description commander { "male":"Commander",    "female":"Commander"    }
+LPUSH leadertotalitarian_leader czar
+HSET  leadertotalitarian_leader_description czar { "male":"Czar",         "female":"Czar"         }
+LPUSH leadertotalitarian_leader despot
+HSET  leadertotalitarian_leader_description despot { "male":"Despot",       "female":"Despot"       }
+LPUSH leadertotalitarian_leader general
+HSET  leadertotalitarian_leader_description general { "male":"General",      "female":"General"      }
+LPUSH leadertotalitarian_leader governor
+HSET  leadertotalitarian_leader_description governor { "male":"Governor",     "female":"Governor"     }
+LPUSH leadertotalitarian_leader inquisitor
+HSET  leadertotalitarian_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+LPUSH leadertotalitarian_leader leader
+HSET  leadertotalitarian_leader_description leader { "male":"Leader",       "female":"Leader"       }
+LPUSH leadertotalitarian_leader lord
+HSET  leadertotalitarian_leader_description lord { "male":"Lord",         "female":"Lord"         }
+LPUSH leadertotalitarian_leader master
+HSET  leadertotalitarian_leader_description master { "male":"Master",       "female":"Master"       }
+LPUSH leadertotalitarian_leader overlord
+HSET  leadertotalitarian_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+LPUSH leadertotalitarian_leader overseer
+HSET  leadertotalitarian_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+LPUSH leadertotalitarian_leader premier
+HSET  leadertotalitarian_leader_description premier { "male":"Premier",      "female":"Premier"      }
+LPUSH leadertotalitarian_leader sovereign
+HSET  leadertotalitarian_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+LPUSH leadertotalitarian_leader steward
+HSET  leadertotalitarian_leader_description steward { "male":"Steward",      "female":"Steward"      }
+LPUSH leadertotalitarian_leader supervisor
+HSET  leadertotalitarian_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+LPUSH leadertotalitarian_leader tyrant
+HSET  leadertotalitarian_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+LPUSH leadertotalitarian_leader warlord
+HSET  leadertotalitarian_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+
+LPUSH leadercouncilmanager_leader councilman
+HSET  leadercouncilmanager_leader_description councilman { "male":"Councilman",      "female":"Councilwoman"      }
+LPUSH leadercouncilmanager_leader manager
+HSET  leadercouncilmanager_leader_description manager { "male":"Manager",      "female":"Manager"      }
+
+LPUSH leadermayorcouncil_leader councilman
+HSET  leadermayorcouncil_leader_description councilman { "male":"Councilman",      "female":"Councilwoman"      }
+LPUSH leadermayorcouncil_leader mayor
+HSET  leadermayorcouncil_leader_description mayor { "male":"Mayor",      "female":"Mayor"      }
+
+LPUSH leadercommission_leader commissioner
+HSET  leadercommission_leader_description commissioner { "male":"Commissioner",      "female":"Commissioner"      }
+
+LPUSH leadertownmeeting_leader elder
+HSET  leadertownmeeting_leader_description elder { "male":"Elder",      "female":"Elder"      }
+
+LPUSH leadermagistrate_leader magistrate
+HSET  leadermagistrate_leader_description magistrate { "male":"Magistrate",      "female":"Magistrate"      }
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#leader_kind city
+#
+#
+#    </govtypes>
+#<secondarypower>
+#    <plot>openly assists</plot>
+#    <plot>openly denounces</plot>
+#    <plot>quietly denounces</plot>
+#    <plot>quietly assists</plot>
+#
+#    <power type:"a dragon" subplot_chance:"50">
+#        <subplot>wishing to enslave the city</subplot>
+#        <subplot>watching out for the common man</subplot>
+#        <subplot>despising the current leader</subplot>
+#        <subplot>agreeing with the current leader</subplot>
+#    </power>
+#    <power type:"a wizard" subplot_chance:"50">
+#        <subplot>attempting to attain immortality</subplot>
+#        <subplot>watching out for the common man</subplot>
+#        <subplot>despising the current leader</subplot>
+#        <subplot>agreeing with the current leader</subplot>
+#    </power>
+#    <power type:"a merchant guild" subplot_chance:"50">
+#        <subplot>attempting to buy influence</subplot>
+#        <subplot>attempting to sell influence</subplot>
+#        <subplot>pushing for war with trade adversary</subplot>
+#        <subplot>pushing to open trade with adversary</subplot>
+#    </power>
+#    <power type:"an elected representative" subplot_chance:"50">
+#        <subplot>using position for personal gain</subplot>
+#        <subplot>amassing power</subplot>
+#    </power>
+#    <power type:"an advisor" subplot_chance:"50">
+#        <subplot>pulling strings for personal gain</subplot>
+#        <subplot>blackmailing the government</subplot>
+#        <subplot>working for enemies</subplot>
+#    </power>
+#    <power type:"a prophet" subplot_chance:"50">
+#        <subplot>attempting to lead religious revolution</subplot>
+#        <subplot>denying legitimacy of leading power</subplot>
+#        <subplot>calling for genocide of a minority</subplot>
+#    </power>
+#    <power type:"a thieves guild" subplot_chance:"50">
+#        <subplot>moving to assert black market dominance</subplot>
+#        <subplot>backing leading power for leniency</subplot>
+#    </power>
+#    <power type:"traveler" subplot_chance:"50">
+#        <subplot>looking to bring justice</subplot>
+#        <subplot>looking to overthrow the government</subplot>
+#    </power>
+#    <power type:"an ex-blacksmith" subplot_chance:"50">
+#        <subplot>plotting to overthrow the corrupt leadership for personal gain</subplot>
+#        <subplot>being blackmailed by a guild</subplot>
+#        <subplot>pulling strings with a trade adversary</subplot>
+#    </power>
+#    <power type:"a barbarian" subplot_chance:"50">
+#        <subplot>plotting to start war with another nation</subplot>
+#        <subplot>being manipulated by the denizens of the city whore house</subplot>
+#        <subplot>wishing to rule with a violent, iron fist</subplot>
+#    </power>
+#    <power type:"a recluse" subplot_chance:"50">
+#        <subplot>pulling strings for personal gain</subplot>
+#        <subplot>a fiend in disguise</subplot>
+#        <subplot>an angel in disguise</subplot>
+#        <subplot>a dragon in disguise</subplot>
+#        <subplot>a god in disguise</subplot>
+#        <subplot>a fiend that secretly looks out for the good of the common man</subplot>
+#        <subplot>an angel that seeks to enslave the common man</subplot>
+#    </power>
+#</secondarypower>
+#</data>
+#        <right>
+#            <option>by forgery</option>
+#            <option>by divine will</option>
+#            <option>by consensus</option>
+#            <option>by constitution</option>
+#            <option>by hereditary succession</option>
+#            <option>by election</option>
+#            <option>by appointment</option>
+#            <option>by force</option>
+#            <option>by revolution</option>
+#            <option>by foreign imposition</option>
+#        </right>
+#
+#
+#        <length> <!-- The King has been in power-->
+#            <option>for mere hours</option>
+#            <option>for mere days</option>
+#            <option>for a few months</option>
+#            <option>for years</option>
+#            <option>for several years</option>
+#            <option>for many years</option>
+#            <option>for decades</option>
+#            <option>for several decades</option>
+#            <option>far longer than should be allowed</option>
+#        </length>
+#        <maintained><!-- and that power is maintained __________ -->
+#            <option >through the tip of a sword</option>
+#            <option >through random violence</option>
+#            <option >through the ignorance of the plebeian society</option>
+#            <option >through vague threats and a constant state of fear</option>
+#            <option >through financial oppression</option>
+#            <option >by secret police raiding homes in the dead of night</option>
+#            <option >by strict laws and corrupt guards</option>
+#            <option >by strict laws and incorruptible guards</option>
+#            <option >by draconian laws and underpaid guards</option>
+#            <option >through spying and assassination</option>
+#            <option >through a fair and just legal system</option>
+#            <option >through the writ of law</option>
+#            <option >through a knowledgeable and just populace</option>
+#            <option >through vague promises and a constant state of hope</option>
+#            <option >through sheer willpower</option>
+#            <option >through the acclaim of the nobles</option>
+#            <option >by unwavering supporters</option>
+#            <option >through the support of merchant groups</option>
+#        </maintained>
+#
+#        <influencereason>
+#            <option >riots in the region</option>
+#            <option >food shortages in the region</option>
+#            <option >racial tensions</option>
+#            <option >a thwarted assassination attempt</option>
+#        </influencereason>
+#    </feature>
+#

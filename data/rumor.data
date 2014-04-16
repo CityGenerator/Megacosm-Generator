@@ -91,4 +91,5 @@ LPUSH rumor_template there's a hidden treasure at the {{params.location}} for an
 LPUSH rumor_template {{params.victim}} went missing{{params.past}} and was last seen {{params.dangeroushobby}}, never to be seen again.
 
 
-
+# FIXME change stupid enough to a variable
+# for anyone brave enough, stupid enough, etc.
