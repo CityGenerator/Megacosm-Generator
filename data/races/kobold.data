@@ -1,11 +1,12 @@
 #
 
-LPUSH race kobold
+LPUSH npc_race kobold
 
 SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
 
+LPUSH kobold_covering scales
 
-ZADD kobold_name_order 1 first
+ZADD kobold_name_order 100 { "name":"first" }
 
 HSET kobold_name_first  root 100
 

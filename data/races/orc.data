@@ -1,12 +1,13 @@
 #
 
-LPUSH race orc
+LPUSH npc_race orc
 
 SET orc_details        {"name": "Orc",        "size": "medium",  "description": "underbite and ferocious demeanor"}
 
+LPUSH orc_covering skin
 
-ZADD orc_name_order 1 first
-ZADD orc_name_order 2 last
+ZADD orc_name_order 50 { "name":"first" }
+ZADD orc_name_order 100 { "name":"last"}
 
 HSET orc_name_first  pre 100
 HSET orc_name_first  root 100

@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+{% block title %}No One Crosses {{tempobj.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>No One Crosses {{tempobj.name['full']}} <a href="/organization?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+<h2>Summary</h2>
+<p>{{tempobj.name['full']}} is {{tempobj.age['name']|article}}, {{tempobj.legal['name']}} {{tempobj.kind}} with a {{tempobj.violence['name']}} reputation.</p>
+
+<h2>Leadership</h2>
+{{tempobj.name['full']}} is lead by {{tempobj.leader.name['full']}}, {{tempobj.leader.honor['name']|article}} {{tempobj.leader.race}} with {{tempobj.leader.attitude|article}} attitude.
+Leadership within {{tempobj.name['full']}} is {{tempobj.leadership['name']}}, and is {{tempobj.structure['name']}} structured. Failure is handled with {{tempobj.failure['name']}}.
+
+Insiders say they {{tempobj.stability['name']}} internally.
+
+Leaders of {{tempobj.name['full']}}  {{tempobj.adaptability['name']}}. Rules are {{tempobj.rules['name']}} defined, and when they are broken, punishment is {{tempobj.regulation['name']}}.
+
+<h2>Membership</h2>
+
+<p>Members of {{tempobj.name['full']}} are expected to work {{tempobj.teamwork['name']}}.
+
+They are {{tempobj.visibility['name']}} to the average citizen and can be identified {{tempobj.identification}}.
+Anyone wishing to join {{tempobj.name['full']}} will find it {{tempobj.entry['name']|article}} task.
+
+</p>
+
+
+{% endblock %}

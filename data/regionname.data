@@ -1,31 +1,31 @@
 
 
-SET   nameregiontitle_chance 22
-LPUSH nameregiontitle East
-LPUSH nameregiontitle West
-LPUSH nameregiontitle North
-LPUSH nameregiontitle South
-LPUSH nameregiontitle Lower
-LPUSH nameregiontitle Upper
-LPUSH nameregiontitle New
+SET   name_regiontitle_chance 22
+LPUSH name_regiontitle East
+LPUSH name_regiontitle West
+LPUSH name_regiontitle North
+LPUSH name_regiontitle South
+LPUSH name_regiontitle Lower
+LPUSH name_regiontitle Upper
+LPUSH name_regiontitle New
 
-LPUSH nameregionpre Af
-LPUSH nameregionpre Alb
+LPUSH name_regionpre Af
+LPUSH name_regionpre Alb
 
-LPUSH nameregionroot ad
-LPUSH nameregionroot am
+LPUSH name_regionroot ad
+LPUSH name_regionroot am
 
-SET   nameregionpost_chance 40
-LPUSH nameregionpost a
-LPUSH nameregionpost ad
-LPUSH nameregionpost ain
+SET   name_regionpost_chance 40
+LPUSH name_regionpost a
+LPUSH name_regionpost ad
+LPUSH name_regionpost ain
 
 
-SET   nameregiontrailer_chance 50
-LPUSH nameregiontrailer District
-LPUSH nameregiontrailer Province
-LPUSH nameregiontrailer Region
-LPUSH nameregiontrailer Territory
+SET   name_regiontrailer_chance 50
+LPUSH name_regiontrailer District
+LPUSH name_regiontrailer Province
+LPUSH name_regiontrailer Region
+LPUSH name_regiontrailer Territory
 
 
 

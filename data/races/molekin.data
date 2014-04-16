@@ -1,12 +1,14 @@
 #
 
-LPUSH race molekin
+LPUSH npc_race molekin
 
 SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": "poor eyesight and excellent sense of smell"}
 
-ZADD molekin_name_order 1 first
-ZADD molekin_name_order 2 middle
-ZADD molekin_name_order 3 last
+LPUSH molekin_covering fur
+
+ZADD molekin_name_order 30 { "name":"first" }
+ZADD molekin_name_order 60 { "name":"middle" }
+ZADD molekin_name_order 100 { "name":"last"}
 
 HSET molekin_name_first  pre 100
 HSET molekin_name_first  root 100

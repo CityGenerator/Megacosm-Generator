@@ -21,3 +21,12 @@ ZADD geomorphdungeon_segmentation  80 {"name":"a little",   "solidchance":4,    
 ZADD geomorphdungeon_segmentation  90 {"name":"a lot",      "solidchance":3,        "score": 90   }
 ZADD geomorphdungeon_segmentation  95 {"name":"most",       "solidchance":1,        "score": 95   }
 ZADD geomorphdungeon_segmentation 100 {"name":"all",        "solidchance":0,        "score": 100  }
+
+
+
+ZADD geomorphdungeon_decorationoffset   20 {"name":"0%",    "offset":0.0,  "score":20  }
+ZADD geomorphdungeon_decorationoffset   40 {"name":"20%",   "offset":0.2,  "score":40  }
+ZADD geomorphdungeon_decorationoffset   50 {"name":"40%",   "offset":0.4,  "score":50  }
+ZADD geomorphdungeon_decorationoffset   60 {"name":"50%",   "offset":0.5,  "score":60  }
+ZADD geomorphdungeon_decorationoffset   80 {"name":"60%",   "offset":0.6,  "score":80  }
+ZADD geomorphdungeon_decorationoffset  100 {"name":"80%",   "offset":0.8,  "score":100 }

@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} {{roguedungeon.text}} {% endblock %}
+{% block title %} {{tempobj.text}} {% endblock %}
 {% block head %}
   {{ super() }}
         <script src='/static/js/dungeon.js' ></script>
@@ -9,11 +9,11 @@
 {% endblock %}
 {% block content %}
 
-    <h1> {{roguedungeon.text}} <a href="/roguedungeon?seed={{roguedungeon.seed}}">({{roguedungeon.seed}})</a></h1>
-    <canvas id='roguedungeonmap' style="float:left; padding-right:30px; ">
+    <h1> {{tempobj.text}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <canvas id='tempobjmap' style="float:left; padding-right:30px; ">
     </canvas>
         <ol>
-        {%for room in roguedungeon.rooms%}
+        {%for room in tempobj.rooms%}
             <li> <strong>{{room.kind_description['name']|title}}</strong>
                 {%if room.kind_description['description']%}
                    - {{room.kind_description['description']|capitalize}}
@@ -21,9 +21,9 @@
         {%endfor%}
         </ol>
     <script type="text/javascript">
-        create_dungeon({{jsondata|safe }},document.getElementById('roguedungeonmap'));
-        {%for room in roguedungeon.rooms%}
-            label_room({{loop.index}}, [{{room.center['x']}},  {{room.center['y']}}],document.getElementById('roguedungeonmap') );
+        create_dungeon({{jsondata|safe }},document.getElementById('tempobjmap'));
+        {%for room in tempobj.rooms%}
+            label_room({{loop.index}}, [{{room.center['x']}},  {{room.center['y']}}],document.getElementById('tempobjmap') );
         {%endfor%}
     </script>
 {% endblock %}

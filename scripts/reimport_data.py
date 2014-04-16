@@ -4,6 +4,7 @@ import redis
 import ConfigParser, os
 import glob
 import sys
+import json
 from pprint import pprint
 import re
 
@@ -35,9 +36,11 @@ def parse_file(pipe, filename):
                         pipe.lpush(key,value)
                     elif command == "ZADD":
                         key,score,value=args.split(None,2)
+                        validate_json(value, filename, linenumber)
                         pipe.zadd(key,value,score)
                     elif command == "HSET":
                         name,key,value=args.split(None,2)
+                        validate_json(value, filename, linenumber)
                         pipe.hset(name,key,value)
                     elif command == "DEL":
                         pipe.delete(args)
@@ -48,6 +51,18 @@ def parse_file(pipe, filename):
                     print "There was a problem reading",filename,"near line",linenumber,""
     raw_data.close()
 
+
+JSONVALIDATE=0
+def validate_json(value, filename, linenumber):
+    global JSONVALIDATE
+    try:
+        json.loads(value)
+        JSONVALIDATE+=1
+    except Exception:
+        print "ERROR: The following value is not proper JSON:"
+        print filename,"near line",linenumber,":"
+        print value
+        sys.exit(1)
 
 
 config = ConfigParser.RawConfigParser()
@@ -60,10 +75,10 @@ pipe=server.pipeline()
 
 pipe.flushall()
 
-for filename in glob.glob("data/*.data") :
+for filename in sorted(glob.glob("data/*.data")) :
     parse_file(pipe, filename)
 
-for filename in glob.glob("data/*/*.data") :
+for filename in sorted(glob.glob("data/*/*.data")) :
     parse_file(pipe, filename)
 
 
@@ -99,8 +114,25 @@ def create_dungeonbackground_record(pipe, image):
     else:
         print "WARNING,",image,"is not in the right format."
 
-for image in glob.glob("static/images/backgrounds/*.png") :
+for image in sorted(glob.glob("static/images/backgrounds/*.png")) :
     create_dungeonbackground_record(pipe, image);
+
+
+
+pipe.set("geomorphdungeon_decoration_chance",30);
+def create_dungeondecoration_record(pipe, image):
+    m = re.search('decorations/(.*)\.png', image)
+    global IMAGECOUNT
+    if m:
+        tilename = m.group(1)
+        pipe.lpush('geomorphdungeon_decoration' ,tilename  )
+        IMAGECOUNT+=1
+    else:
+        print "WARNING,",image,"is not in the right format."
+
+for image in sorted(glob.glob("static/images/decorations/*.png")) :
+    create_dungeondecoration_record(pipe, image);
+
 
 
 
@@ -110,5 +142,6 @@ pipe.execute()
 
 print COMMANDCOUNT, "Commands were run."
 print IMAGECOUNT, "geomorphs documented."
+print JSONVALIDATE, "JSON strings validated."
 
 

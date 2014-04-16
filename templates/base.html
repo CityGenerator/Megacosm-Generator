@@ -15,10 +15,21 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/static/css/sticky-footer.css">
+<style>
+    @import url('http://openhatch.org/static/css/tipsy.css?1268950194.0');
+</style>
+
+<style type="text/css">
+#openhatch-wannahelp-button:hover, #openhatch-wannahelp-button:focus {  text-decoration:none; }
+#openhatch-wannahelp-button { background: #C8E29D url('http://openhatch.org/static/images/wannahelp-button-bg.png') repeat-x scroll center top; border:3px solid #fff;  cursor:pointer; cursor: hand; font-family: Helvetica, sans-serif; font-size:13pt; font-weight:normal; text-align:center; text-shadow:0 1px 0 #fff; white-space:normal; }
+#openhatch-wannahelp-button { color: #444; float:right;  }
+#openhatch-wannahelp-button:focus { outline-color:-moz-use-text-color; outline-style:none; outline-width:medium; }
+</style>
+
 
     {% endblock %}
   </head>
-  <body>
+  <body style="background:url(/static/images/clouds.png)">
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -39,7 +50,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megacosm<b class="caret"></b></a>
                       <ul class="dropdown-menu">
-                        {% for generator in ['Planet', 'Continent', 'Country', 'Region']%}
+                        {% for generator in ['Planet', 'Continent', 'Country', 'Region','Street']%}
                         <li class="divider" ></li>
                         <li ><a href="/{{generator|lower|replace(' ','_')}}" >{{generator}}</a></li>
                         <li ><a href="/{{generator|lower|replace(' ','_')}}_builder">{{generator}} Builder</a></li>
@@ -57,7 +68,7 @@
                 {% set onelinerlist= [ 
                                          'Cuisine', 'Currency', 'Event', 'Gem', 'Job Posting',
                                         'Legend', 'Misfire', 'Motivation', 'Mundane Item',
-                                        'Resource', 'Rumor'
+                                        'Resource', 'Rumor', 'Artwork'
                                         ]%}
 
                 <li class="dropdown">
@@ -79,10 +90,10 @@
                 </li>
 
 
-                {% set classlist= [ 'NPC','Business', 'Bond', 'Magic Item', 
+                {% set classlist= [ 'NPC','Leader','Business', 'Bond', 'Magic Item', 
                                      'Sect', 'Deity','Star','Moon',
                                      'Wanted','Resource', 'Event', 
-                                     'Weather', 'Govt','Rogue Dungeon','Geomorph Dungeon' ]%}
+                                     'Weather', 'Govt','Rogue Dungeon','Geomorph Dungeon','Flag', 'Organization' ]%}
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Misc. Generator<b class="caret"></b></a>
@@ -132,7 +143,12 @@
       {% block footer %}
       <div class="container">
         <p class="text-muted">
-            <span style="float:right">
+            <form method="POST" action="http://openhatch.org/+do/project.views.wanna_help_do">
+                <input type="hidden" name="from_offsite" value="True" />
+                <input type="hidden" value="10312" name="project"/>
+                <input type="submit" value="Want to Help?" rel="tipsy-south" id="openhatch-wannahelp-button" original-title="Click to add yourself to the list of people who want to contribute. People of all levels are welcome!"/>
+            </form>
+            <span style="float:right; margin-top:5px;margin-right:10px;">
             &copy; Copyright 2014 by <a href="http://morgajel.net/">morgajel</a>.
             </span>
             <!-- Place this tag after the last +1 button tag. -->
@@ -152,7 +168,9 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-49584433-1', 'morgajel.net');
       ga('require', 'linkid', 'linkid.js');
+      ga('require', 'displayfeatures');
       ga('send', 'pageview');
     </script>
+<script type="text/javascript" src="http://openhatch.org/static/packed/selections_for_widget.js?1295813773"></script>
   </body>
 </html>
