@@ -1,11 +1,6 @@
 
-import random
-import json
 from generators.Generator import Generator
-from util import Filters
 import logging
-
-
 
 class Street(Generator):
     def __init__(self, redis, features={}):

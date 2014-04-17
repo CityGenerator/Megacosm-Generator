@@ -1,12 +1,9 @@
 
-import math
-import random
-import json
+from generators.Continent import Continent
 from generators.Generator import Generator
 from generators.Moon import Moon
-from generators.Continent import Continent
 import logging
-import pprint
+import random
 
 class Planet(Generator):
 

@@ -1,12 +1,8 @@
 
-import random
-import json
 from generators.Generator import Generator
 from generators.NPC import  NPC
-from jinja2 import Template
-from jinja2.environment import Environment
-from util import Filters
 import logging
+import random
 
 class Bond(Generator):
     """Generate a bond between two people 'you' and 'other'."""

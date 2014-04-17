@@ -1,11 +1,8 @@
 
-import math
-import random
-import json
 from generators.Generator import Generator
-from Region import Region
+from generators.Region import Region
 import logging
-import pprint
+import random
 
 class Country(Generator):
     def __init__(self, redis, features={}):

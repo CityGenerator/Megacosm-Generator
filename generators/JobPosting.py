@@ -1,14 +1,8 @@
 
-import math
-import random
-import json
+from generators.Business import Business
 from generators.Generator import Generator
 from generators.NPC import NPC
-from generators.Business import Business
 import logging
-#from City import City
-
-import pprint
 
 class JobPosting(Generator):
     def __init__(self, redis, features={}):

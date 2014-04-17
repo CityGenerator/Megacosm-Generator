@@ -1,9 +1,9 @@
 
-import random
-import json
-import string
 from generators.Generator import Generator
+import json
 import logging
+import random
+import string
 
 class Flag(Generator):
     def __init__(self, redis, features={}):
@@ -16,8 +16,6 @@ class Flag(Generator):
         self.overlay_stripe_countselected=random.randint(0,int(self.overlay_stripe_count))
         if not hasattr(self, 'letter'):
             self.letter=random.choice(string.ascii_uppercase)
-
-
 
     def select_colors(self):
         colornames=self.redis.lrange('flagcolor',0,-1)

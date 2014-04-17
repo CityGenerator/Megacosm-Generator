@@ -1,10 +1,7 @@
 
-import random
-import json
 from generators.Generator import Generator
-from util import Filters
 import logging
-
+import random
 
 class Gem(Generator):
     def __init__(self, redis, features={}):
@@ -12,13 +9,11 @@ class Gem(Generator):
         Generator.__init__(self,redis,features)
         self.logger=logging.getLogger(__name__)
 
-
         if not hasattr(self, 'count'):
             self.count=random.randint(self.amount['min'],self.amount['max'])
 
         if not hasattr(self, 'color'):
             self.color=random.choice(self.kind_description['color'])
-        print "color:",self
 
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)
