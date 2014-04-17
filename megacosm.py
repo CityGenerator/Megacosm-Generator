@@ -55,6 +55,10 @@ server = redis.from_url(URL)
 # This thing here.. does stuff.
 app = Flask(__name__)
 
+logfile= open(CONFIG.get('logging', 'path'))
+logging.config.dictConfig(json.load(logfile))
+
+
 #########################################################################
 
 @app.route('/')
@@ -909,9 +913,6 @@ def select_plural_adj(adj, subject):
     return Filters.select_plural_adj(adj, subject)
 
 if __name__ == '__main__':
-
-    logfile= open(CONFIG.get('logging', 'path'))
-    logging.config.dictConfig(json.load(logfile))
 
     app.debug = True
     app.run()
