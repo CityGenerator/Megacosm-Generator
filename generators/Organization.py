@@ -10,7 +10,7 @@ class Organization(Generator):
         self.logger=logging.getLogger(__name__)
 
         if not hasattr(self,'leader'):
-            self.leader=Leader(self.redis)
+            self.leader=Leader(self.redis, {'kind':self.kind,'location':self })
 
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)

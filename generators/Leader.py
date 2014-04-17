@@ -1,8 +1,9 @@
 
 from generators.Country import Country
 from generators.Generator import Generator
-from generators.NPC import  NPC
-from generators.Sect import  Sect
+from generators.NPC import NPC
+from generators.Sect import Sect
+import generators
 import logging
 
 class Leader(NPC):
@@ -14,13 +15,15 @@ class Leader(NPC):
         self.generate_features('leader')
         self.generate_features('leader'+self.kind)
 
-        if self.kind_description['scope'] == 'country':
-            self.location=Country(self.redis, {'leader':self})
-#        elif self.kind_description['scope'] == 'city':
-#            self.location=City(self.redis, {'leader':self})
-        else:
-#           TODO This should default to organization...
-            self.location=Country(self.redis, {'leader':self})
+        if not hasattr(self, 'location'):
+            if self.kind_description['scope'] == 'country':
+                self.location=Country(self.redis, {'leader':self})
+#           elif self.kind_description['scope'] == 'city':
+#               self.location=City(self.redis, {'leader':self})
+            else:
+#               TODO This should default to organization...
+                self.location=generators.Organization.Organization(self.redis, {'leader':self})
+        
 
         self.set_title()
 
