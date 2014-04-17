@@ -3,11 +3,13 @@ import random
 import json
 from generators.Generator import Generator
 import generators
+import logging
 
 class NPC(Generator):
     def __init__(self, redis, features={}, namekey=None ):
 
         Generator.__init__(self,redis,features,namekey)
+        self.logger=logging.getLogger(__name__)
 
         if self.race not in self.redis.lrange('npc_race',0,-1):
             raise Exception, " %s is not a valid race and has no associated data" % (self.race)

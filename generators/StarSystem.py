@@ -4,10 +4,12 @@ import json
 from generators.Star import Star
 from generators.Planet import Planet
 from generators.Generator import Generator
+import logging
 
 class StarSystem(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis, features)
+        self.logger=logging.getLogger(__name__)
         self.generate_stars()
         self.generate_planet()
 

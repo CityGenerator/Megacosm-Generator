@@ -3,6 +3,7 @@
 import random
 from generators.Generator import Generator
 from util import Seeds
+import logging
 import json
 class GeomorphDungeon(Generator):
 
@@ -34,6 +35,7 @@ class GeomorphDungeon(Generator):
     def __init__(self, redis, features={}):
         """ Generate a Geomorph-like dungeon """
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         self.generate_features('dungeon')
 
         self.apply_text_template() #FIXME refactor with RogueDungeon on dungeon names...

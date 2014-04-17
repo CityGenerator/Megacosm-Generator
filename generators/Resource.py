@@ -7,6 +7,7 @@ from generators.Region import  Region
 from jinja2 import Template
 from jinja2.environment import Environment
 from util import Filters
+import logging
 
 
 
@@ -14,6 +15,7 @@ class Resource(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         del self.name
 

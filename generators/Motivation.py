@@ -3,6 +3,7 @@ import random
 import json
 from generators.Generator import Generator
 import  generators
+import logging
 
 from util import Filters
 
@@ -10,6 +11,7 @@ class Motivation(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         self.generate_features('motivation'+self.kind)
 

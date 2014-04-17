@@ -2,6 +2,7 @@
 import random
 import json
 from generators.Generator import Generator
+import logging
 
 import Deity
 
@@ -10,6 +11,7 @@ class Sect(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         if not hasattr(self, 'deity'):
             self.deity=Deity.Deity(redis)

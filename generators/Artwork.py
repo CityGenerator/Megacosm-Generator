@@ -4,13 +4,13 @@ import json
 from generators.Generator import Generator
 from generators.Gem import Gem
 from util import Filters
-
+import logging
 
 
 class Artwork(Generator):
     def __init__(self, redis, features={}):
-
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         if not hasattr(self,'gem'):
             setattr(self,'gem',Gem(self.redis))

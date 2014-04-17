@@ -4,6 +4,7 @@ import json
 from generators.Generator import Generator
 from generators.Leader import Leader
 from util import Filters
+import logging
 
 
 
@@ -11,6 +12,7 @@ class Organization(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
 
         if not hasattr(self,'leader'):

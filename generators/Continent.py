@@ -5,12 +5,13 @@ import random
 import json
 from generators.Generator import Generator
 from Country import Country
-
+import logging
 import pprint
 
 class Continent(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         # set a random count 
         if not hasattr(self, 'countrycount'):
             self.countrycount=random.randint(self.countrydetails['mincount'], self.countrydetails['maxcount'])

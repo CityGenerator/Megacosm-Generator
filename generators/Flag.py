@@ -3,11 +3,13 @@ import random
 import json
 import string
 from generators.Generator import Generator
+import logging
 
 class Flag(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         self.select_colors()
 

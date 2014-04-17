@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "[%(asctime)s] {%(name)s:%(lineno)d} %(levelname)s - %(message)s"
+        },
+        "access_log": {
+            "format": "%(message)s"
+        }
+    },
+
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "CRITICAL",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "info_file_handler": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "filename": "log/info.log",
+            "when": "midnight",
+            "backupCount": "10",
+            "encoding": "utf8"
+        },
+        "access_file_handler": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "level": "INFO",
+            "formatter": "access_log",
+            "filename": "log/access.log",
+            "when": "midnight",
+            "backupCount": "10",
+            "encoding": "utf8"
+        },
+
+        "error_file_handler": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "level": "ERROR",
+            "formatter": "simple",
+            "filename": "log/errors.log",
+            "when": "midnight",
+            "backupCount": "10",
+            "encoding": "utf8"
+        }
+    },
+    "loggers": {
+        "werkzeug": {
+            "handlers": ["access_file_handler"],
+            "propagate": false
+
+        }
+    },
+    "root": {
+        "level": "DEBUG",
+        "handlers": ["console", "info_file_handler", "error_file_handler"]
+    }
+}
