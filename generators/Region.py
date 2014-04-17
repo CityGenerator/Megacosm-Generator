@@ -1,11 +1,6 @@
 
-from noise import snoise2
-import math
-import random
-import json
 from generators.Generator import Generator
 import logging
-#from City import City
 
 class Region(Generator):
     def __init__(self, redis, features={}):

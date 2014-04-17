@@ -1,13 +1,9 @@
 
-import random
-import json
+from generators.Country import Country
 from generators.Generator import Generator
 from generators.NPC import  NPC
 from generators.Sect import  Sect
-from generators.Country import Country
 import logging
-#from generators.City import City
-
 
 class Leader(NPC):
     """ Generate a god for your world"""
@@ -25,8 +21,6 @@ class Leader(NPC):
         else:
 #           TODO This should default to organization...
             self.location=Country(self.redis, {'leader':self})
-        
-
 
         self.set_title()
 

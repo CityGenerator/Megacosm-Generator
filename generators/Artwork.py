@@ -1,11 +1,7 @@
 
-import random
-import json
-from generators.Generator import Generator
 from generators.Gem import Gem
-from util import Filters
+from generators.Generator import Generator
 import logging
-
 
 class Artwork(Generator):
     def __init__(self, redis, features={}):

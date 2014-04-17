@@ -1,10 +1,7 @@
 
-import math
-import random
-import json
+from generators.Business import Business
 from generators.Generator import Generator
 from generators.NPC import NPC
-from generators.Business import Business
 import logging
 
 class JobPosting(Generator):

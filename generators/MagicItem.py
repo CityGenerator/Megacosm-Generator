@@ -1,14 +1,10 @@
 
-import random
-import json
 from generators.Generator import Generator
-from generators.NPC import  NPC
-from jinja2 import Template
+from generators.NPC import NPC
 from jinja2.environment import Environment
+from jinja2 import Template
 from util import Filters
 import logging
-
-
 
 class MagicItem(Generator):
     def __init__(self, redis, features={}):
@@ -31,7 +27,6 @@ class MagicItem(Generator):
         template= environment.from_string(self.creator_template)
 
         self.creator=template.render(npc=self.npc)
-
 
 # TODO needs real testing!
 

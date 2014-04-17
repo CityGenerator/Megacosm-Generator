@@ -1,11 +1,7 @@
 
-import random
-import json
-from generators.Generator import Generator
 from generators.Country import Country
+from generators.Generator import Generator
 import logging
-#from generators.City import 
-from util import Filters
 
 class Govt(Generator):
     def __init__(self, redis, features={}):

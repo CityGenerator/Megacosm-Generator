@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import random
 from generators.Generator import Generator
-from util import Seeds
-import logging
 import json
+import logging
+import random
+
 class GeomorphDungeon(Generator):
-
-
 
     # This is a simple translation table 
     # bits are sorted [ left bottom right top ]
@@ -29,8 +27,6 @@ class GeomorphDungeon(Generator):
                 '0b1110': {'type':'0100', 'rotation':1  },       # three sides
                 '0b1111': {'type':'0101', 'rotation':0  }          # Four connections
                 }
-
-
 
     def __init__(self, redis, features={}):
         """ Generate a Geomorph-like dungeon """

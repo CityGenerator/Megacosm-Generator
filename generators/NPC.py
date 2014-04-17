@@ -1,9 +1,9 @@
 
-import random
-import json
 from generators.Generator import Generator
 import generators
+import json
 import logging
+import random
 
 class NPC(Generator):
     def __init__(self, redis, features={}, namekey=None ):

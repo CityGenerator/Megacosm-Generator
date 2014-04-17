@@ -1,12 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import math
-import random
-import json
-import sys
 from generators.Generator import Generator
-from util import Seeds
+import json
 import logging
+import random
 
 class RogueDungeon(Generator):
     def __init__(self, redis, features={}):

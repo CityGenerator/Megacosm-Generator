@@ -1,11 +1,12 @@
-import redis
-import json
-import random
-from jinja2 import Template
+
 from jinja2.environment import Environment
+from jinja2 import Template
 from util import Filters
 from util import Seeds
+import json
 import logging
+import random
+import redis
 
 class Generator(object):
     """ An abstracted Generator that all generators are based from """

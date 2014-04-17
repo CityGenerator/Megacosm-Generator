@@ -1,11 +1,7 @@
 
-import random
-import json
 from generators.Generator import Generator
-import  generators
+import generators
 import logging
-
-from util import Filters
 
 class Motivation(Generator):
     def __init__(self, redis, features={}):
