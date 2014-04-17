@@ -38,7 +38,7 @@ function draw_quaddiagonal(params, side, color){
     if (side=="south" ){b=params.canvas.height}
     if (side=="north" || side=="east"  ||side=="south"){c=params.canvas.width}
     if (side=="east"  || side=="south" ||side=="west" ){d=params.canvas.height}
-    console.log('quaddiag'+side)
+    //console.log('quaddiag'+side)
     if (!color ){
         if (side == "north" || side == "south"){
             color=params.colors[0].hex;

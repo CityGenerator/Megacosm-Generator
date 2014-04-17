@@ -1,37 +1,56 @@
 
 
 function create_flag(params,canvas) {
+    
+    var flag=canvas.getContext('2d'),
+        canvas_width=canvas.width,
+        canvas_height=canvas.height;
 
-    var flag=canvas.getContext('2d');
+    params.canvas=canvas;//TODO: remove
+    params.flag=flag;//TODO: remove
+    do_params_nesting(params);
+    console.log(params);
 
-    params.canvas=canvas;
-    params.flag=flag;
-
-    set_ratio( params );
+    set_ratio( params.ratio['name'],  params.canvas);
     set_shape( params );
 
-    select_division( params );
+    select_division( params);
     select_overlay( params );
-    select_symbol( params );
+    select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
     //select_border( params );#TODO not implemented, needs to trace shape.
 }
 
-function set_ratio(params){
-    console.log("ratio: "+params.ratio['name'])
-    params.canvas.width=params.canvas.height*params.ratio['name'];
+function do_params_nesting(params){
+    
+    params.symbol=params.symbol||{};
+    params.symbol.circle={
+        radius: params.symbol_circle_radius || null,
+        x:      params.symbol_circle_x || null,
+        y:      params.symbol_circle_y || null
+    };
+    params.symbol.star={
+        x:      params.symbol_star_x||null,
+        y:      params.symbol_star_y||null,
+        points: params.symbol_star_points || null,
+        inset:  params.symbol_star_inset || null
+    };
+    params.symbol.letter={
+        x:          params.symbol_letter_x||null,
+        y:          params.symbol_letter_y||null,
+        size:       params.symbol_letter_size||null,
+        fontfamily: params.symbol_letter_fontfamily||null,
+        letter:     params.letter||null,
+    };
+    
+    params.division=params.division||{};
+    
+    params.overlay=params.overlay||{};
+    
+    params.shape=params.shape||{};
 }
 
-function select_symbol(params){
-
-    if (params.symbol.name == 'circle'){
-        draw_circle_symbol( params );
-
-    } else if (params.symbol.name == 'star'){
-        draw_star(params);
-
-    } else if (params.symbol.name=='letter'){
-        draw_letter(params);
-    }
+function set_ratio(ratio_name, canvas){
+    canvas.width=canvas.height*ratio_name;
 }
 
 

@@ -1,50 +1,63 @@
-function draw_circle_symbol(params){
+function select_symbol(flag, symbol, color, canvas_width, canvas_height){
+    
+    if (symbol.name == 'circle'){
+        draw_circle_symbol(flag, symbol.circle, color, canvas_width, canvas_height);
+
+    } else if (symbol.name == 'star'){
+        draw_star(flag, symbol.star, color, canvas_width, canvas_height);
+
+    } else if (symbol.name=='letter'){
+        draw_letter(flag, symbol.letter, color, canvas_width, canvas_height);
+    }
+}
+
+function draw_circle_symbol(flag, circle_params, color, canvas_width, canvas_height){
 
     var radius;
-    radius=params.symbol_circle_radius*params.canvas.height
-    var width=params.canvas.width*params.symbol_circle_x
-    var height=params.canvas.height*params.symbol_circle_y
-    params.flag.save()
-    params.flag.beginPath(); // Start the path
-    params.flag.arc(width,height, radius, 0, Math.PI*2, false ); // Draw a circle
-    params.flag.closePath(); // Close the path
-    params.flag.fillStyle=params.colors[5].hex;
-    params.flag.fill(); // Fill the path
-    params.flag.restore();
+    radius=circle_params.radius*canvas_height
+    var width=canvas_width*circle_params.x
+    var height=canvas_height*circle_params.y
+    flag.save();
+    flag.beginPath(); // Start the path
+    flag.arc(width,height, radius, 0, Math.PI*2, false ); // Draw a circle
+    flag.closePath(); // Close the path
+    flag.fillStyle=color;
+    flag.fill(); // Fill the path
+    flag.restore();
 
 }
 
 
 
-function draw_letter(params){
-    params.flag.fillStyle=params.colors[5].hex;
-    var fontsize=Math.min( params.canvas.height*params.symbol_letter_size  );
-    var font= fontsize + "px "+params.symbol_letter_fontfamily;
+function draw_letter(flag, letter_params, color, canvas_width, canvas_height){
+    flag.fillStyle=color;
+    var fontsize=Math.min( canvas_height*letter_params.size  );
+    var font= fontsize + "px "+letter_params.fontfamily;
 
-    params.flag.textBaseline = 'middle';
-    params.flag.font=font;
-    params.flag.fillText(params.letter, (params.canvas.width*params.symbol_letter_x)-fontsize/2   ,(params.canvas.height*params.symbol_letter_y) );
+    flag.textBaseline = 'middle';
+    flag.font=font;
+    flag.fillText(letter_params.letter, (canvas_width*letter_params.x)-fontsize/2   ,(canvas_height*letter_params.y) );
 
 }
 
 
-function draw_star(params) {
+function draw_star(flag, star_params, color, canvas_width, canvas_height) {
 
-    var xaxis=params.symbol_star_x;
-    var yaxis=params.symbol_star_y;
+    var xaxis=star_params.x;
+    var yaxis=star_params.y;
 
-    var radius=Math.min( params.canvas.width*xaxis, params.canvas.width*(1-xaxis),params.canvas.height*yaxis, params.canvas.height*(1-yaxis) );
-    params.flag.fillStyle=params.colors[5].hex;
-    params.flag.beginPath();
-    params.flag.translate(params.canvas.width*xaxis, params.canvas.height*yaxis);
-    params.flag.moveTo(0,0-radius);
-    for (var i = 0; i < params.symbol_star_points; i++) {
-        params.flag.rotate(Math.PI / params.symbol_star_points);
-        params.flag.lineTo(0, 0 - (radius*params.symbol_star_inset));
-        params.flag.rotate(Math.PI / params.symbol_star_points);
-        params.flag.lineTo(0, 0 - radius);
+    var radius=Math.min( canvas_width*xaxis, canvas_width*(1-xaxis),canvas_height*yaxis, canvas_height*(1-yaxis) );
+    flag.fillStyle=color;
+    flag.beginPath();
+    flag.translate(canvas_width*xaxis, canvas_height*yaxis);
+    flag.moveTo(0,0-radius);
+    for (var i = 0; i < star_params.points; i++) {
+        flag.rotate(Math.PI / star_params.points);
+        flag.lineTo(0, 0 - (radius*star_params.inset));
+        flag.rotate(Math.PI / star_params.points);
+        flag.lineTo(0, 0 - radius);
     }
-    params.flag.fill();
-    params.flag.translate(-params.canvas.width*xaxis,- params.canvas.height*yaxis);
+    flag.fill();
+    flag.translate(-canvas_width*xaxis,- canvas_height*yaxis);
 
 }

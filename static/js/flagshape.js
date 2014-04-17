@@ -6,7 +6,6 @@ function set_shape(params){
     params.flag.save();
     params.flag.fillStyle = "rgba(0,0,0,0.0)"
     params.flag.lineWidth = 1
-    console.log("shape: "+params.shape['name'])
 
     switch(params.shape['name']){
         case 'para':
