@@ -96,7 +96,6 @@ class GeomorphDungeon(Generator):
         random.shuffle(alltiles)
 
         for cell in alltiles:
-            print cell.x, cell.y
             self.calculate_top(cell)
             self.calculate_right(cell)
             self.calculate_bottom(cell)

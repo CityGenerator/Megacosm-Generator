@@ -6,7 +6,6 @@ from generators.Generator import Generator
 from generators.Moon import Moon
 from generators.Continent import Continent
 import logging
-import pprint
 
 class Planet(Generator):
 

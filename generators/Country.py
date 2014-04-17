@@ -5,7 +5,6 @@ import json
 from generators.Generator import Generator
 from Region import Region
 import logging
-import pprint
 
 class Country(Generator):
     def __init__(self, redis, features={}):

@@ -7,8 +7,6 @@ from generators.Generator import Generator
 import logging
 #from City import City
 
-import pprint
-
 class Region(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)

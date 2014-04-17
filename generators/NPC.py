@@ -27,7 +27,6 @@ class NPC(Generator):
 
     def select_names(self):
         nameorder= self.redis.zrange(self.race+'_name_order',0,-1)
-        #print nameorder
         for namejson in nameorder :
             name=json.loads(namejson)['name']
             self.name[name]={}

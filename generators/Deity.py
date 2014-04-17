@@ -6,8 +6,6 @@ from generators.NPC import  NPC
 from generators.Sect import  Sect
 import logging
 
-
-
 class Deity(NPC):
     """ Generate a god for your world"""
     def __init__(self, redis, features={}):

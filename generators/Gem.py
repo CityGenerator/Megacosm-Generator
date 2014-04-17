@@ -18,7 +18,6 @@ class Gem(Generator):
 
         if not hasattr(self, 'color'):
             self.color=random.choice(self.kind_description['color'])
-        print "color:",self
 
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)

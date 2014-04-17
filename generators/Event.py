@@ -5,9 +5,6 @@ import random
 import json
 from generators.Generator import Generator
 import logging
-#from City import City
-
-import pprint
 
 class Event(Generator):
     def __init__(self, redis, features={}):
