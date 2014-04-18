@@ -1,4 +1,5 @@
 
+var flag_gen = flag_gen||{};
 
 function create_flag(params,canvas) {
     
@@ -8,19 +9,19 @@ function create_flag(params,canvas) {
 
     params.canvas=canvas;//TODO: remove
     params.flag=flag;//TODO: remove
-    do_params_nesting(params);
+    flag_gen.nest_params(params);
     console.log(params);
 
-    set_ratio( params.ratio['name'],  params.canvas);
+    flag_gen.set_ratio( params.ratio['name'],  params.canvas);
     set_shape( params );
 
     select_division( params);
     select_overlay( params );
-    select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
+    flag_gen.select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
     //select_border( params );#TODO not implemented, needs to trace shape.
 }
 
-function do_params_nesting(params){
+flag_gen.nest_params = function(params){
     
     params.symbol=params.symbol||{};
     params.symbol.circle={
@@ -49,7 +50,7 @@ function do_params_nesting(params){
     params.shape=params.shape||{};
 }
 
-function set_ratio(ratio_name, canvas){
+flag_gen.set_ratio = function(ratio_name, canvas){
     canvas.width=canvas.height*ratio_name;
 }
 
