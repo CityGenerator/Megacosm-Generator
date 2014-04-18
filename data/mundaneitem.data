@@ -563,7 +563,7 @@ LPUSH mundaneitem_kind paint brush
 LPUSH mundaneitem_kind paint/dye/pigment
 LPUSH mundaneitem_kind paper sheets
 LPUSH mundaneitem_kind parchment rolled
-LPUSH mundaneitem_kind pari of bone dice
+LPUSH mundaneitem_kind pair of bone dice
 LPUSH mundaneitem_kind parry blade
 LPUSH mundaneitem_kind pavilion
 LPUSH mundaneitem_kind pearl
