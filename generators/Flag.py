@@ -34,6 +34,7 @@ class Flag(Generator):
         data=self.__dict__
         del data['redis']
         del data['pipeline']
+        del data['logger']
         return json.dumps(data, skipkeys=True, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=4, separators=(', ', ': '), encoding="utf-8", default=None, sort_keys=False, )
 
         return jsonobj
