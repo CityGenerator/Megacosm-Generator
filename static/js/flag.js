@@ -4,22 +4,25 @@ var flag_gen = flag_gen||{};
 function create_flag(params,canvas) {
     
     var flag=canvas.getContext('2d'),
-        canvas_width=canvas.width,
-        canvas_height=canvas.height;
+        canvas_width=0,
+        canvas_height=0;
 
     params.canvas=canvas;//TODO: remove
     params.flag=flag;//TODO: remove
     flag_gen.nest_params(params);
     console.log(params);
 
-    flag_gen.set_ratio( params.ratio['name'],  params.canvas);
-    set_shape( params );
+    flag_gen.set_ratio( params.ratio['name'],  canvas);
+    canvas_width=canvas.width,
+    canvas_height=canvas.height;
+    
+    flag_gen.set_shape( params.flag, params.shape, canvas_width, canvas_height );
 
     select_division( params);
     select_overlay( params );
     flag_gen.select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
     //select_border( params );#TODO not implemented, needs to trace shape.
-}
+};
 
 flag_gen.nest_params = function(params){
     
@@ -48,11 +51,17 @@ flag_gen.nest_params = function(params){
     params.overlay=params.overlay||{};
     
     params.shape=params.shape||{};
-}
+    params.shape.tounge={
+        depth:  params.tongued_depth,
+        width:  params.tongued_width,
+        shape:  params.tongued_shape,
+        count:  params.tongued_count
+    };
+};
 
 flag_gen.set_ratio = function(ratio_name, canvas){
     canvas.width=canvas.height*ratio_name;
-}
+};
 
 
 

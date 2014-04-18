@@ -12,7 +12,7 @@ flag_gen.select_symbol = function(flag, symbol, color, canvas_width, canvas_heig
     } else if (symbol.name === 'letter'){
         flag_gen.draw_letter_symbol(flag, flag_gen.get_letter_symbol(symbol.letter, color, canvas_width, canvas_height));
     }
-}
+};
 
 flag_gen.get_circle_symbol = function(circle_params, color, canvas_width, canvas_height){
     var circle_symbol = {
@@ -22,7 +22,7 @@ flag_gen.get_circle_symbol = function(circle_params, color, canvas_width, canvas
         color:  color
     };
     return circle_symbol;
-}
+};
 flag_gen.draw_circle_symbol = function(flag, circle_symbol){
     flag.save();
     flag.beginPath(); // Start the path
@@ -31,7 +31,7 @@ flag_gen.draw_circle_symbol = function(flag, circle_symbol){
     flag.fillStyle=circle_symbol.color;
     flag.fill(); // Fill the path
     flag.restore();
-}
+};
 
 
 flag_gen.get_letter_symbol = function(letter_params, color, canvas_width, canvas_height){
@@ -45,14 +45,14 @@ flag_gen.get_letter_symbol = function(letter_params, color, canvas_width, canvas
             y:          canvas_height*letter_params.y
         };
     return letter_symbol;
-}
+};
 flag_gen.draw_letter_symbol = function(flag, letter_symbol){
     flag.fillStyle = letter_symbol.color;
     flag.textBaseline = 'middle';
     flag.font = letter_symbol.font;
     flag.fillText(letter_symbol.letter, letter_symbol.x, letter_symbol.y);
 
-}
+};
 
 
 flag_gen.get_star_symbol = function(star_params, color, canvas_width, canvas_height) {
@@ -69,7 +69,7 @@ flag_gen.get_star_symbol = function(star_params, color, canvas_width, canvas_hei
             y_translation:  canvas_height*yaxis
         };
     return star_symbol;
-}
+};
 flag_gen.draw_star_symbol = function(flag, star_symbol) {
     flag.fillStyle=star_symbol.color;
     flag.beginPath();
@@ -83,6 +83,6 @@ flag_gen.draw_star_symbol = function(flag, star_symbol) {
     }
     flag.fill();
     flag.translate(-star_symbol.x_translation, -star_symbol.y_translation);
-}
+};
 
 
