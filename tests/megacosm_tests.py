@@ -261,13 +261,13 @@ class MegacosmFlaskTestCast(flask.ext.testing.TestCase):
         response = self.app.get("/motivation_builder")
         self.assert200(response)
 ################################################################
-    def test_mundaneitem_route(self):
-        response = self.app.get("/mundaneitem")
-        self.assert200(response)
-
-    def test_mundaneitem_builder_route(self):
-        response = self.app.get("/mundaneitem_builder")
-        self.assert200(response)
+#    def test_mundaneitem_route(self):
+#        response = self.app.get("/mundaneitem")
+#        self.assert200(response)
+#
+#    def test_mundaneitem_builder_route(self):
+#        response = self.app.get("/mundaneitem_builder")
+#        self.assert200(response)
 ################################################################
     def test_npc_route(self):
         response = self.app.get("/npc")

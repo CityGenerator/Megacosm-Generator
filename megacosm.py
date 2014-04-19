@@ -52,8 +52,8 @@ CONFIG.read('data/config.ini')
 URL = CONFIG.get('redis', 'url')
 server = redis.from_url(URL)
 
-logfile= open(CONFIG.get('logging', 'path'))
-logging.config.dictConfig(json.load(logfile))
+#logfile= open(CONFIG.get('logging', 'path'))
+#logging.config.dictConfig(json.load(logfile))
 
 # This thing here.. does stuff.
 app = Flask(__name__)
