@@ -32,7 +32,7 @@ LPUSH organization_kind organization
 LPUSH organization_kind society
 LPUSH organization_kind tribe
 LPUSH organization_kind union
-LPUSH organization_kind crime ring
+LPUSH organization_kind crimering
 
 # The Joban gang is an ancient, honorable organization with a ________ reputation
 ZADD organization_violence  10 {"name":"muderous",      "score":10   }

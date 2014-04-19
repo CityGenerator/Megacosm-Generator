@@ -54,6 +54,90 @@ HSET  leader_kind_description gang { "scope":"organization"   }
 LPUSH leader_kind union
 HSET  leader_kind_description union { "scope":"organization"   }
 
+HSET leader_kind_description association { "scope":"organization"   }
+LPUSH leader_kind association
+HSET  leader_kind_description cartel { "scope":"organization"   }
+LPUSH leader_kind cartel
+HSET  leader_kind_description circle { "scope":"organization"   }
+LPUSH leader_kind circle
+HSET  leader_kind_description club { "scope":"organization"   }
+LPUSH leader_kind club
+HSET  leader_kind_description council { "scope":"organization"   }
+LPUSH leader_kind council
+HSET  leader_kind_description crimering { "scope":"organization"   }
+LPUSH leader_kind crimering
+HSET  leader_kind_description family { "scope":"organization"   }
+LPUSH leader_kind family
+HSET  leader_kind_description firm { "scope":"organization"   }
+LPUSH leader_kind firm
+HSET  leader_kind_description fraternity { "scope":"organization"   }
+LPUSH leader_kind fraternity
+HSET  leader_kind_description mafia { "scope":"organization"   }
+LPUSH leader_kind mafia
+HSET  leader_kind_description milita { "scope":"organization"   }
+LPUSH leader_kind milita
+HSET  leader_kind_description network { "scope":"organization"   }
+LPUSH leader_kind network
+HSET  leader_kind_description order { "scope":"organization"   }
+LPUSH leader_kind order
+HSET  leader_kind_description organization { "scope":"organization"   }
+LPUSH leader_kind organization
+HSET  leader_kind_description society { "scope":"organization"   }
+LPUSH leader_kind society
+HSET  leader_kind_description tribe { "scope":"organization"   }
+LPUSH leader_kind tribe
+
+
+LPUSH leaderassociation_kind director
+HSET  leaderassociation_kind_description director   { "male":"Director", "female":"Director" }
+LPUSH leaderassociation_kind chairman
+HSET  leaderassociation_kind_description chairman   { "male":"Chairman", "female":"Chairperson" }
+
+#LPUSH leadercartel_kind
+#HSET  leadercartel_kind_description    { "male":"", "female":"" }
+
+LPUSH leadercircle_kind elder
+HSET  leadercircle_kind_description elder { "male":"Elder", "female":"Elder" }
+LPUSH leaderclub_kind master
+HSET  leaderclub_kind_description master { "male":"Master", "female":"Mistress" }
+#LPUSH leadercouncil_kind
+#HSET  leadercouncil_kind_description    { "male":"", "female":"" }
+#LPUSH leadercrimering_kind
+#HSET  leadercrimering_kind_description    { "male":"", "female":"" }
+LPUSH leaderfamily_kind head
+HSET  leaderfamily_kind_description head   { "male":"Mister", "female":"Missus" }
+#LPUSH leaderfirm_kind
+#HSET  leaderfirm_kind_description    { "male":"", "female":"" }
+#LPUSH leaderfraternity_kind
+#HSET  leaderfraternity_kind_description    { "male":"", "female":"" }
+LPUSH leadermafia_kind don
+HSET  leadermafia_kind_description don   { "male":"Don", "female":"Dona" }
+LPUSH leadermilita_kind general
+HSET  leadermilita_kind_description general { "male":"General", "female":"General" }
+LPUSH leadermilita_kind commander
+HSET  leadermilita_kind_description commander { "male":"Commander", "female":"Commander" }
+#LPUSH leadernetwork_kind
+#HSET  leadernetwork_kind_description    { "male":"", "female":"" }
+#LPUSH leaderorder_kind
+#HSET  leaderorder_kind_description    { "male":"", "female":"" }
+#LPUSH leaderorganization_kind
+#HSET  leaderorganization_kind_description    { "male":"", "female":"" }
+#LPUSH leadersociety_kind
+#HSET  leadersociety_kind_description    { "male":"", "female":"" }
+LPUSH leadertribe_kind chief
+HSET  leadertribe_kind_description chief { "male":"Chief", "female":"Chief"
+
+
+
+
+
+
+
+
+
+
+
+
 LPUSH leaderguild_leader guildmaster
 HSET  leaderguild_leader_description guildmaster { "male":"Guildmaster",    "female":"Guildmaster"     }
 LPUSH leadergang_leader gangleader
