@@ -172,6 +172,14 @@ class MegacosmFlaskTestCast(flask.ext.testing.TestCase):
         response = self.app.get("/event_builder")
         self.assert200(response)
 ################################################################
+    def test_flag_route(self):
+        response = self.app.get("/flag")
+        self.assert200(response)
+
+    def test_flag_builder_route(self):
+        response = self.app.get("/flag_builder")
+        self.assert200(response)
+################################################################
     def test_gem_route(self):
         response = self.app.get("/gem")
         self.assert200(response)

@@ -30,7 +30,7 @@ LPUSH mundaneitem_kind animal call
 LPUSH mundaneitem_kind ankh staff
 LPUSH mundaneitem_kind anvil
 LPUSH mundaneitem_kind apple
-LPUSH mundaneitem_kind archer’s bracer
+LPUSH mundaneitem_kind archer's bracer
 LPUSH mundaneitem_kind arctic camouflage
 LPUSH mundaneitem_kind armor care kit
 LPUSH mundaneitem_kind arrow quiver
@@ -79,7 +79,7 @@ LPUSH mundaneitem_kind black egg
 LPUSH mundaneitem_kind black leather collar
 LPUSH mundaneitem_kind black linen robe
 LPUSH mundaneitem_kind blackbark wine
-LPUSH mundaneitem_kind blacksmith’s puzzle
+LPUSH mundaneitem_kind blacksmith's puzzle
 LPUSH mundaneitem_kind blackwater ale
 LPUSH mundaneitem_kind blank book/journal
 LPUSH mundaneitem_kind blanket
@@ -157,7 +157,7 @@ LPUSH mundaneitem_kind cheese
 LPUSH mundaneitem_kind chef's tools
 LPUSH mundaneitem_kind chest
 LPUSH mundaneitem_kind chicken egg
-LPUSH mundaneitem_kind child’s cloth doll
+LPUSH mundaneitem_kind child's cloth doll
 LPUSH mundaneitem_kind chisel
 LPUSH mundaneitem_kind chunk of coal
 LPUSH mundaneitem_kind chunk of raw silver ore
@@ -543,7 +543,7 @@ LPUSH mundaneitem_kind oil based colored paint
 LPUSH mundaneitem_kind oil based white wash paint
 LPUSH mundaneitem_kind one piece camouflage utility jumpsuit
 LPUSH mundaneitem_kind one piece utility jumpsuit
-LPUSH mundaneitem_kind one-gallon cask of Demon’s Vale Wine
+LPUSH mundaneitem_kind one-gallon cask of Demon's Vale Wine
 LPUSH mundaneitem_kind oranges
 LPUSH mundaneitem_kind orc battle-blade
 LPUSH mundaneitem_kind orc dreadaxe
