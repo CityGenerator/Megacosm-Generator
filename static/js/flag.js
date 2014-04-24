@@ -51,11 +51,12 @@ flag_gen.nest_params = function(params){
     params.overlay=params.overlay||{};
     
     params.shape=params.shape||{};
-    params.shape.tounge={
-        depth:  params.tongued_depth,
-        width:  params.tongued_width,
-        shape:  params.tongued_shape,
-        count:  params.tongued_count
+    params.shape.tongue={
+        depth:  params.shape_tongued_depth,
+        width:  params.shape_tongued_width,
+        shape:  params.shape_tongued_shape,
+        count:  params.shape_tongued_count,
+        type:   params.shape_tongued_shape
     };
 };
 
