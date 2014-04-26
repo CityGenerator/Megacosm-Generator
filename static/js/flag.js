@@ -49,7 +49,6 @@ flag_gen.nest_params = function(params){
     params.division=params.division||{};
     
     params.overlay=params.overlay||{};
-    params.overlay.name='quaddiag';//TODO: remove
     params.overlay.circle={
         outline:            params.overlay_circle_outline,
         outlinewidth:       params.overlay_circle_outlinewidth,
