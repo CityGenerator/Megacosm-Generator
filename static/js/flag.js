@@ -19,7 +19,7 @@ function create_flag(params,canvas) {
     flag_gen.set_shape( params.flag, params.shape, canvas_width, canvas_height );
 
     select_division( params);
-    select_overlay( params );
+    flag_gen.select_overlay( params.flag, params.overlay, params.colors, canvas_width, canvas_height );
     flag_gen.select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
     //select_border( params );#TODO not implemented, needs to trace shape.
 };
@@ -49,6 +49,51 @@ flag_gen.nest_params = function(params){
     params.division=params.division||{};
     
     params.overlay=params.overlay||{};
+    params.overlay.name='quaddiag';//TODO: remove
+    params.overlay.circle={
+        outline:            params.overlay_circle_outline,
+        outlinewidth:       params.overlay_circle_outlinewidth,
+        radius:             params.overlay_circle_radius,
+        radiusdirection:    params.overlay_circle_radiusdirection,
+        x:                  params.overlay_circle_x,
+        y:                  params.overlay_circle_y
+    };
+    params.overlay.cross={
+        horlength:          params.overlay_cross_horlength,
+        horpos:             params.overlay_cross_horpos,
+        horwidth:           params.overlay_cross_horwidth,
+        vertlength:         params.overlay_cross_vertlength,
+        vertwidth:          params.overlay_cross_vertwidth
+    };
+    params.overlay.diamond={
+        outline:            params.overlay_diamond_outline
+    };
+    params.overlay.quad={
+        side:               params.overlay_quad_side
+    };
+    params.overlay.quaddiag={
+        side:               params.overlay_quaddiag_side
+    };
+    params.overlay.rays={
+        count:              params.overlay_rays_count,
+        offset:             params.overlay_rays_offset,
+        x:                  params.overlay_rays_x,
+        y:                  params.overlay_rays_y
+    };
+    params.overlay.slash={
+        direction:          params.overlay_slash_direction,
+        width:              params.overlay_slash_width
+        
+    };
+    params.overlay.stripe={
+        count:              params.overlay_stripe_count,
+        countselected:      params.overlay_stripe_countselected,
+        side:               params.overlay_stripe_side
+    };
+    params.overlay.x={
+        outline:            params.overlay_x_outline,
+        width:              params.overlay_x_width
+    };
     
     params.shape=params.shape||{};
     params.shape.tongue={
