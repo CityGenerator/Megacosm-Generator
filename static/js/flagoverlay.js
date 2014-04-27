@@ -39,14 +39,10 @@ flag_gen.draw_overlay.quad = function(flag, quad_params, colors, canvas_width, c
 // Quaddiagonal
 flag_gen.draw_overlay.quaddiag = function(flag, quaddiagonal_params, colors, canvas_width, canvas_height) {
     
-    var points = flag_gen.utils.get_quaddiag_points(quaddiagonal_params.side, canvas_width, canvas_height);
+    var utils = flag_gen.utils,
+        points = utils.get_quaddiag_points(quaddiagonal_params.side, canvas_width, canvas_height);
     
-    flag.save();
-    flag.beginPath();
-    flag.moveTo(points[0][0], points[0][1]);
-    flag.lineTo(points[1][0], points[1][1]);
-    flag.lineTo(points[2][0], points[2][1]);
-    flag_gen.overlay_utils.finish_shape(flag, colors[3].hex);
+    utils.draw_quaddiag(flag, points, colors[3].hex);
     
 };
 
@@ -54,18 +50,15 @@ flag_gen.draw_overlay.quaddiag = function(flag, quaddiagonal_params, colors, can
 // Stripe
 flag_gen.draw_overlay.stripe = function(flag, stripe_params, colors, canvas_width, canvas_height) {
     var thickness = 0,
-        start = 0;
+        color = colors[3].hex;
     
-    flag.fillStyle=colors[3].hex;
     if (stripe_params.side==='horizontal') {
         thickness = Math.floor(canvas_height/stripe_params.count);
-        start = thickness * stripe_params.countselected;
-        flag.fillRect(0, start, canvas_width, thickness);
+        flag_gen.utils.draw_stripe_horizontal(flag, thickness, stripe_params.countselected, color, canvas_width);
     }
     else {
         thickness = Math.floor(canvas_width/stripe_params.count);
-        start = thickness * stripe_params.countselected;
-        flag.fillRect(start, 0, thickness, canvas_height);
+        flag_gen.utils.draw_stripe_vertical(flag, thickness, stripe_params.countselected, color, canvas_height);
     }
 };
 

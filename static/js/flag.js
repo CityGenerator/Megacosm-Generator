@@ -18,7 +18,7 @@ function create_flag(params,canvas) {
     
     flag_gen.set_shape( params.flag, params.shape, canvas_width, canvas_height );
 
-    select_division( params);
+    flag_gen.select_division( params.flag, params.division, params.colors, canvas_width, canvas_height);
     flag_gen.select_overlay( params.flag, params.overlay, params.colors, canvas_width, canvas_height );
     flag_gen.select_symbol( params.flag, params.symbol, params.colors[5].hex, canvas_width, canvas_height );
     //select_border( params );#TODO not implemented, needs to trace shape.
@@ -26,6 +26,7 @@ function create_flag(params,canvas) {
 
 flag_gen.nest_params = function(params){
     
+    // symbol
     params.symbol=params.symbol||{};
     params.symbol.circle={
         radius: params.symbol_circle_radius || null,
@@ -46,8 +47,19 @@ flag_gen.nest_params = function(params){
         letter:     params.letter||null,
     };
     
+    params.division.name='diagonal';//TODO: remove
+    // division
     params.division=params.division||{};
+    params.division.diagonal = {
+        direction:      params.division_diagonal_direction
+    };
+    params.division.stripes = {
+        colorcount:     params.division_stripes_colorcount,
+        count:          params.division_stripes_count,
+        side:           params.division_stripes_side
+    };
     
+    // overlay
     params.overlay=params.overlay||{};
     params.overlay.circle={
         outline:            params.overlay_circle_outline,
@@ -94,6 +106,7 @@ flag_gen.nest_params = function(params){
         width:              params.overlay_x_width
     };
     
+    // shape
     params.shape=params.shape||{};
     params.shape.tongue={
         depth:  params.shape_tongued_depth,
