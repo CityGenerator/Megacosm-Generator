@@ -1,15 +1,13 @@
 
-import random
-import json
-from generators.Generator import Generator
 from generators.Country import Country
-#from generators.City import 
-from util import Filters
+from generators.Generator import Generator
+import logging
 
 class Govt(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         self.generate_features('govt'+self.kind)
 

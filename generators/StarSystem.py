@@ -1,13 +1,15 @@
 
-import random
-import json
-from generators.Star import Star
-from generators.Planet import Planet
 from generators.Generator import Generator
+from generators.Planet import Planet
+from generators.Star import Star
+import json
+import logging
+import random
 
 class StarSystem(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis, features)
+        self.logger=logging.getLogger(__name__)
         self.generate_stars()
         self.generate_planet()
 

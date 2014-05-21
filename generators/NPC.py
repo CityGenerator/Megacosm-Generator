@@ -1,13 +1,15 @@
 
-import random
-import json
 from generators.Generator import Generator
 import generators
+import json
+import logging
+import random
 
 class NPC(Generator):
     def __init__(self, redis, features={}, namekey=None ):
 
         Generator.__init__(self,redis,features,namekey)
+        self.logger=logging.getLogger(__name__)
 
         if self.race not in self.redis.lrange('npc_race',0,-1):
             raise Exception, " %s is not a valid race and has no associated data" % (self.race)
@@ -25,7 +27,6 @@ class NPC(Generator):
 
     def select_names(self):
         nameorder= self.redis.zrange(self.race+'_name_order',0,-1)
-        #print nameorder
         for namejson in nameorder :
             name=json.loads(namejson)['name']
             self.name[name]={}

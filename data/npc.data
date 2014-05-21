@@ -172,7 +172,7 @@ ZADD npc_money 100  {"name":"rich",             "score":100 }
 
 # and is ________ with what he owns.
 ZADD npc_generous  50  {"name":"stingy",        "score":50  }
-ZADD npc_generous 100  {"name":"generaous",     "score":100 }
+ZADD npc_generous 100  {"name":"generous",     "score":100 }
 
 
 #Many people would consider bob ___________

@@ -1,17 +1,17 @@
-import redis
-import json
-import random
-from jinja2 import Template
+
 from jinja2.environment import Environment
+from jinja2 import Template
 from util import Filters
 from util import Seeds
-
-
+import json
+import logging
+import random
+import redis
 
 class Generator(object):
     """ An abstracted Generator that all generators are based from """
     def __init__(self,redis, features={},namekey=None):
-        
+        self.logger=logging.getLogger(__name__)
         # Redis is the source of all data.
         self.redis=redis
         self.pipeline=self.redis.pipeline
@@ -24,8 +24,7 @@ class Generator(object):
             self.seed=Seeds.set_seed(features['seed'])
         else:
             self.seed=Seeds.set_seed()
-
-
+        self.logger.info('new generator %s with seed %i', namekey, self.seed)
 
         # For naming conventions, we use "name"+classname+"stuff"
         self.name=self.generate_name('name_'+namekey)
@@ -45,6 +44,7 @@ class Generator(object):
     def generate_features(self,namekey):
         """ Given a namekey, add those features to this object."""
         # find all keys matching our namekey
+        self.logger.info('Generating features for %s with seed %i', namekey, self.seed)
         for key in self.redis.keys(namekey+'_*'):
             self.generate_feature(namekey, key)
 
@@ -96,6 +96,7 @@ class Generator(object):
                         featurevalue=json.loads(desc_text)
                         setattr( self, featurename+"_description", featurevalue )
                 except ValueError as e:
+                    self.logger.critical("JSON parsing error: Couldn't read json %s",rollvalue[0] )
                     raise ValueError(  "JSON parsing error: Couldn't read json",rollvalue[0])
 
 
