@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import random
 from generators.Generator import Generator
-from util import Seeds
 import json
+import logging
+import random
+
 class GeomorphDungeon(Generator):
-
-
 
     # This is a simple translation table 
     # bits are sorted [ left bottom right top ]
@@ -29,11 +28,10 @@ class GeomorphDungeon(Generator):
                 '0b1111': {'type':'0101', 'rotation':0  }          # Four connections
                 }
 
-
-
     def __init__(self, redis, features={}):
         """ Generate a Geomorph-like dungeon """
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         self.generate_features('dungeon')
 
         self.apply_text_template() #FIXME refactor with RogueDungeon on dungeon names...
@@ -94,7 +92,6 @@ class GeomorphDungeon(Generator):
         random.shuffle(alltiles)
 
         for cell in alltiles:
-            print cell.x, cell.y
             self.calculate_top(cell)
             self.calculate_right(cell)
             self.calculate_bottom(cell)

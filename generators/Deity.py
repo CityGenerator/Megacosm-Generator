@@ -1,17 +1,16 @@
 
-import random
-import json
 from generators.Generator import Generator
-from generators.NPC import  NPC
-from generators.Sect import  Sect
-
-
-
+from generators.NPC import NPC
+from generators.Sect import Sect
+import json
+import logging
+import random
 
 class Deity(NPC):
     """ Generate a god for your world"""
     def __init__(self, redis, features={}):
         NPC.__init__(self,redis,features, 'npc')
+        self.logger=logging.getLogger(__name__)
 
         self.generate_features('deity')
 

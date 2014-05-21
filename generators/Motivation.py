@@ -1,15 +1,13 @@
 
-import random
-import json
 from generators.Generator import Generator
-import  generators
-
-from util import Filters
+import generators
+import logging
 
 class Motivation(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         self.generate_features('motivation'+self.kind)
 

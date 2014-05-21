@@ -1,18 +1,17 @@
 
-import random
-import json
 from generators.Generator import Generator
-
-import Deity
-
+import generators
+import logging
+import random
 
 class Sect(Generator):
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         if not hasattr(self, 'deity'):
-            self.deity=Deity.Deity(redis)
+            self.deity=generators.Deity.Deity(redis)
 
 
         if not hasattr(self, 'domain'):
