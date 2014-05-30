@@ -58,7 +58,7 @@ HSET scroll_effect_description blindnessremoval    {"name":"blindness removal", 
 LPUSH scroll_effect blindnessremoval
 HSET scroll_effect_description bliss    {"name":"bliss",    "description":"causes the user immediately to become blissful and happy" }
 LPUSH scroll_effect bliss
-HSET scroll_effect_description blood    {"name":"blood",    "description":"provides sustinence for creatures that drink blood" }
+HSET scroll_effect_description blood    {"name":"blood",    "description":"provides sustenance for creatures that drink blood" }
 LPUSH scroll_effect blood
 HSET scroll_effect_description blood-replenishing    {"name":"blood-replenishing",    "description":"restores lost blood from a severely injured person" }
 LPUSH scroll_effect blood-replenishing
@@ -82,7 +82,7 @@ HSET scroll_effect_description burn-healing    {"name":"burn-healing",    "descr
 LPUSH scroll_effect burn-healing
 HSET scroll_effect_description cacophony    {"name":"cacophony",    "description":"causes the user to hear incredibly loud, continual noise" }
 LPUSH scroll_effect cacophony
-HSET scroll_effect_description cagedimp    {"name":"caged imp",    "description":"makes the user subconsciously mischievious" }
+HSET scroll_effect_description cagedimp    {"name":"caged imp",    "description":"makes the user subconsciously mischievous" }
 LPUSH scroll_effect cagedimp
 HSET scroll_effect_description calming    {"name":"calming",    "description":"calms the user of shock, trauma, etc" }
 LPUSH scroll_effect calming
@@ -208,7 +208,7 @@ HSET scroll_effect_description flinch    {"name":"flinch",    "description":"cau
 LPUSH scroll_effect flinch
 HSET scroll_effect_description forgetfulness    {"name":"forgetfulness",    "description":"makes the user forgetful" }
 LPUSH scroll_effect forgetfulness
-HSET scroll_effect_description foxcunning     {"name":"fox cunning ",    "description":"makes the user mpre clever than normal" }
+HSET scroll_effect_description foxcunning     {"name":"fox cunning ",    "description":"makes the user more clever than normal" }
 LPUSH scroll_effect foxcunning 
 HSET scroll_effect_description freezing    {"name":"freezing",    "description":"lowers the body temperature of the drinker" }
 LPUSH scroll_effect freezing
@@ -250,8 +250,8 @@ HSET scroll_effect_description herbicide    {"name":"herbicide",    "description
 LPUSH scroll_effect herbicide
 HSET scroll_effect_description heroism    {"name":"heroism",    "description":"causes unusual recklessness and remission of fear" }
 LPUSH scroll_effect heroism
-HSET scroll_effect_description hiccupping    {"name":"hiccupping",    "description":"causes uncontrollable hiccupping" }
-LPUSH scroll_effect hiccupping
+HSET scroll_effect_description hiccuping    {"name":"hiccuping",    "description":"causes uncontrollable hiccuping" }
+LPUSH scroll_effect hiccuping
 HSET scroll_effect_description hidefromanimals    {"name":"hide from animals",    "description":"prevents animals from detecting the user" }
 LPUSH scroll_effect hidefromanimals
 HSET scroll_effect_description hidefromundead    {"name":"hide from undead",    "description":"prevents undead from detecting the user" }
@@ -336,7 +336,7 @@ HSET scroll_effect_description monster    {"name":"monster",    "description":"c
 LPUSH scroll_effect monster
 HSET scroll_effect_description mouthitching    {"name":"mouth itching",    "description":"causes insufferable itching of the inside of the mouth" }
 LPUSH scroll_effect mouthitching
-HSET scroll_effect_description muffling    {"name":"muffling",    "description":"wraps the user in a coccoon of silence" }
+HSET scroll_effect_description muffling    {"name":"muffling",    "description":"wraps the user in a cocoon of silence" }
 LPUSH scroll_effect muffling
 HSET scroll_effect_description mummycurse    {"name":"mummy curse",    "description":"causes illness and a slow death unless curse is broken" }
 LPUSH scroll_effect mummycurse
@@ -362,8 +362,8 @@ HSET scroll_effect_description paralysis    {"name":"paralysis",    "description
 LPUSH scroll_effect paralysis
 HSET scroll_effect_description paralysisremoval    {"name":"paralysis removal",    "description":"removes paralysis from user" }
 LPUSH scroll_effect paralysisremoval
-HSET scroll_effect_description passification    {"name":"passification",    "description":"causes immediate aversion to confrontation" }
-LPUSH scroll_effect passification
+HSET scroll_effect_description pacifism    {"name":"pacifism",    "description":"causes immediate aversion to confrontation" }
+LPUSH scroll_effect pacifism
 HSET scroll_effect_description passwithouttrace    {"name":"pass without trace",    "description":"grants the user the ability to move without leaving a trail" }
 LPUSH scroll_effect passwithouttrace
 HSET scroll_effect_description peace    {"name":"peace",    "description":"relieves anxiety" }
@@ -394,7 +394,7 @@ HSET scroll_effect_description rage    {"name":"rage",    "description":"causes 
 LPUSH scroll_effect rage
 HSET scroll_effect_description rano    {"name":"rano",    "description":"causes user to develop large horns on their forehead" }
 LPUSH scroll_effect rano
-HSET scroll_effect_description rawchaos    {"name":"raw chaos",    "description":"innudates the user with raw chaos" }
+HSET scroll_effect_description rawchaos    {"name":"raw chaos",    "description":"inundates the user with raw chaos" }
 LPUSH scroll_effect rawchaos
 HSET scroll_effect_description reason    {"name":"reason",    "description":"protects the user from the effects of insanity" }
 LPUSH scroll_effect reason
@@ -462,7 +462,7 @@ HSET scroll_effect_description skelegro    {"name":"skelegro",    "description":
 LPUSH scroll_effect skelegro
 HSET scroll_effect_description slashingfury    {"name":"slashing fury",    "description":"causes the user to fly into a frenzy when holding a blade" }
 LPUSH scroll_effect slashingfury
-HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants the user unnatural vigor when combatting a specific enemy" }
+HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants the user unnatural vigor when combating a specific enemy" }
 LPUSH scroll_effect slaying
 HSET scroll_effect_description sleep    {"name":"sleep",    "description":"causes the user to fall asleep for up to 24 hours" }
 LPUSH scroll_effect sleep
@@ -640,6 +640,6 @@ LPUSH scroll_container_label signed by the creator
 LPUSH scroll_container_type scroll case
 LPUSH scroll_container_type folder
 LPUSH scroll_container_type book
-LPUSH scroll_container_type clay cannister
+LPUSH scroll_container_type clay canister
 LPUSH scroll_container_type glass tube
 
