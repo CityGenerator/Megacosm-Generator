@@ -40,7 +40,7 @@ ZADD cuisine_size 100 {"name":"gigantic",       "score":100  }
 
 
 LPUSH cuisine_method baked 
-LPUSH cuisine_method barbequed 
+LPUSH cuisine_method barbecued 
 LPUSH cuisine_method blanched 
 LPUSH cuisine_method boiled 
 LPUSH cuisine_method braised 
@@ -190,7 +190,7 @@ LPUSH cuisine_served luke warm
 LPUSH cuisine_served at room temperature
 
 #<!-- regional, ethnic, racial or religious roots, historical -->
-# Baked cachew squid pie  in red gravy, served hot
+# Baked cashew squid pie  in red gravy, served hot
 SET   cuisine_method_chance 70 
 SET   cuisine_flavor_chance 30 
 

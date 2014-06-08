@@ -41,7 +41,7 @@ LPUSH street_kind passage
 LPUSH street_kind road
 LPUSH street_kind street
 LPUSH street_kind route
-LPUSH street_kind throughway
+LPUSH street_kind through-way
 
 #        <pollution>
 ZADD street_pollution 10  {"name":"pristine",       "score":10  }
@@ -72,19 +72,19 @@ ZADD street_moral 4  {"name":"untrustworthy",                                   
 ZADD street_moral 8  {"name":"mean",                                    "score":8  }
 ZADD street_moral 12  {"name":"venomous",                                    "score":12  }
 ZADD street_moral 16  {"name":"corrupt",                                    "score":16  }
-ZADD street_moral 20  {"name":"repungent",                                    "score":20  }
+ZADD street_moral 20  {"name":"repugnant",                                    "score":20  }
 ZADD street_moral 24  {"name":"unpleasant",                                    "score":24  }
 ZADD street_moral 28  {"name":"opportunistic",                                    "score":28  }
-ZADD street_moral 32  {"name":"villianous",                                    "score":32  }
+ZADD street_moral 32  {"name":"villainous",                                    "score":32  }
 ZADD street_moral 36  {"name":"nefarious",                                    "score":36  }
 ZADD street_moral 40  {"name":"cold",                                    "score":40  }
 ZADD street_moral 45  {"name":"unconcerned",                                    "score":45  }
 ZADD street_moral 50  {"name":"undecided",                                    "score":50  }
-ZADD street_moral 55  {"name":"uncomitted",                                    "score":55  }
+ZADD street_moral 55  {"name":"uncommitted",                                    "score":55  }
 ZADD street_moral 60  {"name":"indifferent",                                    "score":60  }
 ZADD street_moral 65  {"name":"indifferent",                                    "score":65  }
 ZADD street_moral 70  {"name":"well meaning",                                    "score":70  }
-ZADD street_moral 75  {"name":"trustworty",                                    "score":75  }
+ZADD street_moral 75  {"name":"trustworthy",                                    "score":75  }
 ZADD street_moral 80  {"name":"nice",                                    "score":80  }
 ZADD street_moral 85  {"name":"ethical",                                    "score":85  }
 ZADD street_moral 90  {"name":"honest",                                    "score":90  }
