@@ -21,6 +21,9 @@ class NPC(Generator):
 
         self.select_names()
 
+        if hasattr(self, 'subrace'):
+            self.race= self.subrace_description['subrace'].lower()
+
         if not hasattr(self,'motivation'):
             self.motivation=generators.Motivation.Motivation(self.redis, {'npc':self})
 
