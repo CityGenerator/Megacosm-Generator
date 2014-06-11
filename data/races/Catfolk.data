@@ -12,7 +12,7 @@ LPUSH catfolk_subrace leosapien
 LPUSH catfolk_subrace pardii
 LPUSH catfolk_subrace lynxin
 
-HSET catfolk_subrace_description leosapien      {"subrace": "Leosapiens (Lionfolk)",    "description": "Largest and most powerful of the catfolk" }
+HSET catfolk_subrace_description leosapien      {"subrace": "Leosapien (Lionfolk)",     "description": "Largest and most powerful of the catfolk" }
 HSET catfolk_subrace_description pardii         {"subrace": "Pardii (Leopardfolk)",     "description": "a sly and cunning felinid" }
 HSET catfolk_subrace_description lynxin         {"subrace": "Lynxin (catfolk)",         "description": "a solitary and gruff felinid" }
 
