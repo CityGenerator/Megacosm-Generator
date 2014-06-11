@@ -6,6 +6,14 @@ SET molekin_details    {"name": "Molekin",    "size": "medium",  "description": 
 
 LPUSH molekin_covering fur
 
+
+SET molekin_subrace_chance 10
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH molekin_subrace starnose
+
+HSET molekin_subrace_description starnose   {"subrace": "Star-nosed Molekin",      "description": "an unsettling hunter" }
+
+
 ZADD molekin_name_order 30 { "name":"first" }
 ZADD molekin_name_order 60 { "name":"middle" }
 ZADD molekin_name_order 100 { "name":"last"}

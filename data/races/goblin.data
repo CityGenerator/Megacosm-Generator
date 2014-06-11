@@ -6,6 +6,19 @@ SET goblin_details     {"name": "Goblin",     "size": "small",   "description": 
 
 LPUSH goblin_covering skin
 
+SET goblin_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH goblin_subrace night
+LPUSH goblin_subrace fire
+LPUSH goblin_subrace dust
+LPUSH goblin_subrace hill
+
+HSET goblin_subrace_description night {"subrace": "Night Goblin",      "description": "" }
+HSET goblin_subrace_description fire  {"subrace": "Fire Goblin",       "description": "" }
+HSET goblin_subrace_description dust  {"subrace": "Dust Goblin",       "description": "" }
+HSET goblin_subrace_description hill  {"subrace": "Hill Goblin",       "description": "" }
+
+
 ZADD goblin_name_order 50 { "name":"first" }
 ZADD goblin_name_order 100 { "name":"last"}
 

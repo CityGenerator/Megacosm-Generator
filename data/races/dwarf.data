@@ -6,6 +6,27 @@ SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": 
 
 LPUSH dwarf_covering skin
 
+SET dwarf_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH dwarf_subrace mountain
+LPUSH dwarf_subrace hill
+LPUSH dwarf_subrace deep
+LPUSH dwarf_subrace gray
+LPUSH dwarf_subrace desert
+LPUSH dwarf_subrace arctic
+LPUSH dwarf_subrace wild
+LPUSH dwarf_subrace degenerate
+
+HSET dwarf_subrace_description mountain   {"subrace": "Mountain Dwarf",   "description": "" }
+HSET dwarf_subrace_description hill       {"subrace": "Hill Dwarf",       "description": "" }
+HSET dwarf_subrace_description deep       {"subrace": "Deep Dwarf",       "description": "" }
+HSET dwarf_subrace_description gray       {"subrace": "Gray Dwarf",       "description": "" }
+HSET dwarf_subrace_description desert     {"subrace": "Desert Dwarf",     "description": "" }
+HSET dwarf_subrace_description arctic     {"subrace": "Arctic Dwarf",     "description": "" }
+HSET dwarf_subrace_description wild       {"subrace": "Wild Dwarf",       "description": "" }
+HSET dwarf_subrace_description degenerate {"subrace": "Degenerate Dwarf", "description": "" }
+
+
 ZADD dwarf_name_order 50 { "name":"first" }
 ZADD dwarf_name_order 100 { "name":"last"}
 
