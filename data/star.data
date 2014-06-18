@@ -16,7 +16,7 @@ ZADD star_color 100 { "name":"red",    "color":"0xff0000", "luminosity":0.2, "sc
 
 
 
-# The lack of underscore prevents it from gettnig sucked in as a feature
+# The lack of underscore prevents it from getting sucked in as a feature
 LPUSH starposition {"name": "companion",    "x":-150,    "y":4,  "z":4  }
 LPUSH starposition {"name": "companion",    "x":-150,    "y":4,  "z":-4 }
 LPUSH starposition {"name": "companion",    "x":-150,    "y":-4, "z":4  }

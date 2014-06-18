@@ -23,7 +23,7 @@ LPUSH mundaneitem_kind adjustable height stool
 LPUSH mundaneitem_kind adjustable wrench
 LPUSH mundaneitem_kind adventurers clothing
 LPUSH mundaneitem_kind air bladder
-LPUSH mundaneitem_kind alchemist's alchohol
+LPUSH mundaneitem_kind alchemist's alcohol
 LPUSH mundaneitem_kind all purpose leather gloves
 LPUSH mundaneitem_kind aluminum tube
 LPUSH mundaneitem_kind animal call
@@ -47,7 +47,7 @@ LPUSH mundaneitem_kind backpack
 LPUSH mundaneitem_kind ball and chain
 LPUSH mundaneitem_kind bamboo
 LPUSH mundaneitem_kind bandages
-LPUSH mundaneitem_kind bandolier
+LPUSH mundaneitem_kind bandoleer
 LPUSH mundaneitem_kind banner
 LPUSH mundaneitem_kind bar of copper
 LPUSH mundaneitem_kind barbed wire
@@ -125,7 +125,7 @@ LPUSH mundaneitem_kind brush machete
 LPUSH mundaneitem_kind bubbleweed
 LPUSH mundaneitem_kind bucket
 LPUSH mundaneitem_kind buckler
-LPUSH mundaneitem_kind bullseye lantern
+LPUSH mundaneitem_kind bulls-eye lantern
 LPUSH mundaneitem_kind buster sword
 LPUSH mundaneitem_kind butcher axe
 LPUSH mundaneitem_kind caltrops
@@ -174,7 +174,7 @@ LPUSH mundaneitem_kind climbing pick
 LPUSH mundaneitem_kind climbing pitton
 LPUSH mundaneitem_kind clip
 LPUSH mundaneitem_kind cloak
-LPUSH mundaneitem_kind cloth component bandolier
+LPUSH mundaneitem_kind cloth component bandoleer
 LPUSH mundaneitem_kind clown's kit
 LPUSH mundaneitem_kind collapsible bamboo cage
 LPUSH mundaneitem_kind collapsible brass cage
@@ -262,7 +262,7 @@ LPUSH mundaneitem_kind elven battle blade
 LPUSH mundaneitem_kind empty maple-wood case
 LPUSH mundaneitem_kind ettin-hide cape
 LPUSH mundaneitem_kind expensive dress
-LPUSH mundaneitem_kind extendible metal ladder
+LPUSH mundaneitem_kind extendable metal ladder
 LPUSH mundaneitem_kind eye patch
 LPUSH mundaneitem_kind ezurian saber
 LPUSH mundaneitem_kind fauchard
@@ -291,7 +291,7 @@ LPUSH mundaneitem_kind flint and steel
 LPUSH mundaneitem_kind folding 3-prong grapnel
 LPUSH mundaneitem_kind folding cot
 LPUSH mundaneitem_kind folding lounge chair
-LPUSH mundaneitem_kind folding wheelbarrel
+LPUSH mundaneitem_kind folding wheelbarrow
 LPUSH mundaneitem_kind foliage camouflage
 LPUSH mundaneitem_kind footman's lance
 LPUSH mundaneitem_kind forgery kit
@@ -330,7 +330,7 @@ LPUSH mundaneitem_kind greater prosthetic limb
 LPUSH mundaneitem_kind greatspear
 LPUSH mundaneitem_kind greatstaff
 LPUSH mundaneitem_kind green cap
-LPUSH mundaneitem_kind greives
+LPUSH mundaneitem_kind grieves
 LPUSH mundaneitem_kind grek oil
 LPUSH mundaneitem_kind griffon feather
 LPUSH mundaneitem_kind groomers kit
@@ -339,7 +339,7 @@ LPUSH mundaneitem_kind hacksaw
 LPUSH mundaneitem_kind hair comb
 LPUSH mundaneitem_kind half-moon katar
 LPUSH mundaneitem_kind hammer
-LPUSH mundaneitem_kind hammmer
+LPUSH mundaneitem_kind hammer
 LPUSH mundaneitem_kind hammock
 LPUSH mundaneitem_kind hand compass
 LPUSH mundaneitem_kind hand crossbow
@@ -412,7 +412,7 @@ LPUSH mundaneitem_kind jar containing six eyeballs
 LPUSH mundaneitem_kind jar of paper glue
 LPUSH mundaneitem_kind jar of wood glue
 LPUSH mundaneitem_kind javelin quiver
-LPUSH mundaneitem_kind jerkey
+LPUSH mundaneitem_kind jerky
 LPUSH mundaneitem_kind jesters hat
 LPUSH mundaneitem_kind jesters mantle
 LPUSH mundaneitem_kind jewelers/appraisers eyepiece
@@ -454,8 +454,8 @@ LPUSH mundaneitem_kind leather backpack
 LPUSH mundaneitem_kind leather bag
 LPUSH mundaneitem_kind leather ball
 LPUSH mundaneitem_kind leather case
-LPUSH mundaneitem_kind leather component bandolier
-LPUSH mundaneitem_kind leather dagger bandolier
+LPUSH mundaneitem_kind leather component bandoleer
+LPUSH mundaneitem_kind leather dagger bandoleer
 LPUSH mundaneitem_kind leather harness
 LPUSH mundaneitem_kind leather mantle
 LPUSH mundaneitem_kind leather piece
@@ -651,7 +651,7 @@ LPUSH mundaneitem_kind short spear
 LPUSH mundaneitem_kind short straps
 LPUSH mundaneitem_kind shovel
 LPUSH mundaneitem_kind signal whistle
-LPUSH mundaneitem_kind signalling horn
+LPUSH mundaneitem_kind signaling horn
 LPUSH mundaneitem_kind signet ring
 LPUSH mundaneitem_kind signet/seal ring
 LPUSH mundaneitem_kind silent shoes
@@ -822,7 +822,7 @@ LPUSH mundaneitem_kind warwhip
 LPUSH mundaneitem_kind water clock
 LPUSH mundaneitem_kind water purification tablet
 LPUSH mundaneitem_kind water/wine skin
-LPUSH mundaneitem_kind waterproof bullseye lantern
+LPUSH mundaneitem_kind waterproof bulls-eye lantern
 LPUSH mundaneitem_kind waterproofing oil
 LPUSH mundaneitem_kind waterskin
 LPUSH mundaneitem_kind wax candle

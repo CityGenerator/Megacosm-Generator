@@ -1,4 +1,4 @@
-
+/* comment because kim is testing pull requests */
 var flag_gen = flag_gen||{};
 
 function create_flag(params,canvas) {

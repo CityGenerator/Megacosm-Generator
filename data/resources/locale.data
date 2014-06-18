@@ -15,7 +15,7 @@ SET naturalresource_locale_method include
  
 # which provides
 LPUSH naturalresource_locale_product majestic glaciers
-LPUSH naturalresource_locale_product deepwater harbors
+LPUSH naturalresource_locale_product deep-water harbors
 LPUSH naturalresource_locale_product freshwater lakes
 LPUSH naturalresource_locale_product saltwater lakes
 LPUSH naturalresource_locale_product bays

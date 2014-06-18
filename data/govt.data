@@ -76,7 +76,7 @@ ZADD govt_efficiency  25   { "name":"sloppy and disorganized",                  
 ZADD govt_efficiency  30   { "name":"inept and inadequate",                     "score":30       }
 ZADD govt_efficiency  35   { "name":"slipshod",                                 "score":35       }
 ZADD govt_efficiency  40   { "name":"minimally competent",                      "score":40       }
-ZADD govt_efficiency  45   { "name":"somwhat capable",                          "score":45       }
+ZADD govt_efficiency  45   { "name":"somewhat capable",                          "score":45       }
 ZADD govt_efficiency  50   { "name":"adequate",                                 "score":50       }
 ZADD govt_efficiency  55   { "name":"satisfactory",                             "score":55       }
 ZADD govt_efficiency  60   { "name":"mostly sufficient",                        "score":60       }
@@ -129,7 +129,7 @@ ZADD govt_theology  20   { "name":"is unwelcome",                               
 ZADD govt_theology  25   { "name":"is unregulated",                                                     "score":25       }
 ZADD govt_theology  30   { "name":"is taxed heavily",                                                   "score":30       }
 ZADD govt_theology  35   { "name":"is tightly regulated by the government",                             "score":35       }
-ZADD govt_theology  40   { "name":"is viewed as a nusiance",                                            "score":40       }
+ZADD govt_theology  40   { "name":"is viewed as a nuisance",                                            "score":40       }
 ZADD govt_theology  45   { "name":"is practiced behind closed doors",                                   "score":45       }
 ZADD govt_theology  50   { "name":"is left to the people",                                              "score":50       }
 ZADD govt_theology  55   { "name":"is common place",                                                    "score":55       }

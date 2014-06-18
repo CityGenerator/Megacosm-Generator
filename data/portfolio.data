@@ -94,7 +94,7 @@ ZADD portfolio_domain 1 {"name":"frog folk",                   "score":1 }
 ZADD portfolio_domain 1 {"name":"frost giants",                "score":1 }
 ZADD portfolio_domain 1 {"name":"frost sprites",               "score":1 }
 ZADD portfolio_domain 1 {"name":"gambling",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"gemcutting",                  "score":1 }
+ZADD portfolio_domain 1 {"name":"gem-cutting",                  "score":1 }
 ZADD portfolio_domain 1 {"name":"gemstones",                   "score":1 }
 ZADD portfolio_domain 1 {"name":"ghosts",                      "score":1 }
 ZADD portfolio_domain 1 {"name":"ghouls",                      "score":1 }
@@ -139,7 +139,7 @@ ZADD portfolio_domain 1 {"name":"long rivers",                 "score":1 }
 ZADD portfolio_domain 1 {"name":"lost causes",                 "score":1 }
 ZADD portfolio_domain 1 {"name":"lycanthropes",                "score":1 }
 ZADD portfolio_domain 1 {"name":"magic users",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"magisrates",                  "score":1 }
+ZADD portfolio_domain 1 {"name":"magistrates",                  "score":1 }
 ZADD portfolio_domain 1 {"name":"marauding beasts",            "score":1 }
 ZADD portfolio_domain 1 {"name":"martial arts",                "score":1 }
 ZADD portfolio_domain 1 {"name":"martial defense",             "score":1 }
@@ -201,8 +201,8 @@ ZADD portfolio_domain 1 {"name":"poetry",                      "score":1 }
 ZADD portfolio_domain 1 {"name":"poets",                       "score":1 }
 ZADD portfolio_domain 1 {"name":"poisoners",                   "score":1 }
 ZADD portfolio_domain 1 {"name":"polar environments",          "score":1 }
-ZADD portfolio_domain 1 {"name":"powerbrokers",                "score":1 }
-ZADD portfolio_domain 1 {"name":"powermongers",                "score":1 }
+ZADD portfolio_domain 1 {"name":"power-brokers",                "score":1 }
+ZADD portfolio_domain 1 {"name":"power-mongers",                "score":1 }
 ZADD portfolio_domain 1 {"name":"premeditated killing",        "score":1 }
 ZADD portfolio_domain 1 {"name":"pretty things",               "score":1 }
 ZADD portfolio_domain 1 {"name":"propriety",                   "score":1 }
@@ -319,14 +319,14 @@ ZADD portfolio_domain 1 {"name":"vortices",                    "score":1 }
 ZADD portfolio_domain 1 {"name":"wakefulness",                 "score":1 }
 ZADD portfolio_domain 1 {"name":"wandering",                   "score":1 }
 ZADD portfolio_domain 1 {"name":"wards",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"warpriests",                  "score":1 }
+ZADD portfolio_domain 1 {"name":"war priests",                  "score":1 }
 ZADD portfolio_domain 1 {"name":"watchfulness",                "score":1 }
 ZADD portfolio_domain 1 {"name":"waterfalls",                  "score":1 }
 ZADD portfolio_domain 1 {"name":"water spirits",               "score":1 }
 ZADD portfolio_domain 1 {"name":"water travel",                "score":1 }
 ZADD portfolio_domain 1 {"name":"wave motions",                "score":1 }
 ZADD portfolio_domain 1 {"name":"weapon making",               "score":1 }
-ZADD portfolio_domain 1 {"name":"weaponsmithing",              "score":1 }
+ZADD portfolio_domain 1 {"name":"weapon smithing",              "score":1 }
 ZADD portfolio_domain 1 {"name":"weaving",                     "score":1 }
 ZADD portfolio_domain 1 {"name":"wells",                       "score":1 }
 ZADD portfolio_domain 1 {"name":"whales",                      "score":1 }
@@ -376,7 +376,7 @@ ZADD portfolio_domain 2 {"name":"enchantments",                "score":2 }
 ZADD portfolio_domain 2 {"name":"energy",                      "score":2 }
 ZADD portfolio_domain 2 {"name":"enfeeblement",                "score":2 }
 ZADD portfolio_domain 2 {"name":"epidemics",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"esthetics",                   "score":2 }
+ZADD portfolio_domain 2 {"name":"aesthetics",                   "score":2 }
 ZADD portfolio_domain 2 {"name":"evening",                     "score":2 }
 ZADD portfolio_domain 2 {"name":"evil dreams",                 "score":2 }
 ZADD portfolio_domain 2 {"name":"evil fate",                   "score":2 }
@@ -751,7 +751,7 @@ ZADD portfolio_domain 4 {"name":"fire-using dragons",          "score":4 }
 ZADD portfolio_domain 4 {"name":"fitness",                     "score":4 }
 ZADD portfolio_domain 4 {"name":"flying",                      "score":4 }
 ZADD portfolio_domain 4 {"name":"fools",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"forbidden knowlege",          "score":4 }
+ZADD portfolio_domain 4 {"name":"forbidden knowledge",          "score":4 }
 ZADD portfolio_domain 4 {"name":"foresight",                   "score":4 }
 ZADD portfolio_domain 4 {"name":"formality",                   "score":4 }
 ZADD portfolio_domain 4 {"name":"full moons",                  "score":4 }
@@ -997,7 +997,7 @@ ZADD portfolio_domain 8 {"name":"greed",                       "score":8 }
 ZADD portfolio_domain 8 {"name":"growing things",              "score":8 }
 ZADD portfolio_domain 8 {"name":"guardians",                   "score":8 }
 ZADD portfolio_domain 8 {"name":"harvest",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"judgement",                   "score":8 }
+ZADD portfolio_domain 8 {"name":"judgment",                   "score":8 }
 ZADD portfolio_domain 8 {"name":"justice",                     "score":8 }
 ZADD portfolio_domain 8 {"name":"knowledge",                   "score":8 }
 ZADD portfolio_domain 8 {"name":"life",                        "score":8 }

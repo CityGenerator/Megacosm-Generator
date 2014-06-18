@@ -75,7 +75,7 @@ LPUSH npc_emotion jealous
 LPUSH npc_emotion jolly
 LPUSH npc_emotion jovial
 LPUSH npc_emotion joyful
-LPUSH npc_emotion jubiliant
+LPUSH npc_emotion jubilant
 LPUSH npc_emotion loathful
 LPUSH npc_emotion lonely
 LPUSH npc_emotion longing
@@ -99,7 +99,7 @@ LPUSH npc_emotion relieved
 LPUSH npc_emotion remorseful
 LPUSH npc_emotion resenting
 LPUSH npc_emotion revolted
-LPUSH npc_emotion sadened
+LPUSH npc_emotion saddened
 LPUSH npc_emotion satisfied
 LPUSH npc_emotion scornful
 LPUSH npc_emotion sentimental
@@ -109,7 +109,7 @@ LPUSH npc_emotion sorrowful
 LPUSH npc_emotion spiteful
 LPUSH npc_emotion suffering
 LPUSH npc_emotion surprised
-LPUSH npc_emotion suspensful
+LPUSH npc_emotion suspenseful
 LPUSH npc_emotion sympathetic
 LPUSH npc_emotion tender
 LPUSH npc_emotion terrorized
