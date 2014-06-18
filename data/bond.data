@@ -63,7 +63,7 @@ LPUSH bond_template {{params.partyA}} depended on {{params.partyB}} to come thro
 LPUSH bond_template {{params.partyA}} depended on {{params.partyB}} to come through. {{params.partyB|capitalize}} didn't.
 LPUSH bond_template {{params.partyA}} deserted {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} destroyed a cursed item to save {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} disarmed {{params.partyB}} in an embarassing sparring session.
+LPUSH bond_template {{params.partyA}} disarmed {{params.partyB}} in an embarrassing sparring session.
 LPUSH bond_template {{params.partyA}} discovered the deep, dark secret that {{params.partyB}} hid.
 LPUSH bond_template {{params.partyA}} discovered that {{params.partyB}} lied about something critical.
 LPUSH bond_template {{params.partyA}} divided the loot improperly with {{params.partyB}}.
@@ -77,7 +77,7 @@ LPUSH bond_template {{params.partyA}} educated {{params.partyB}} on the birds an
 LPUSH bond_template {{params.partyA}} embarrassed {{params.partyB}} in front of royalty.
 LPUSH bond_template {{params.partyA}} employed {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} emptied a bottle that belonged to {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} encouraged {{params.partyB}} to do something brave, despite the paralysing fear.
+LPUSH bond_template {{params.partyA}} encouraged {{params.partyB}} to do something brave, despite the paralyzing fear.
 LPUSH bond_template {{params.partyA}} enjoyed traveling with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} entered into an agreement with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} entertained {{params.partyB}}.
@@ -102,7 +102,7 @@ LPUSH bond_template {{params.partyA}} accidentally framed {{params.partyB}} for 
 LPUSH bond_template {{params.partyA}} accidentally framed {{params.partyB}} for theft.
 LPUSH bond_template {{params.partyA}} frightened small children and blamed {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} glued a fork to {{params.partyB}} in a prank gone horribly wrong.
-LPUSH bond_template {{params.partyA}} guaranteed good behavior from {{params.partyB}} in return for lienency.
+LPUSH bond_template {{params.partyA}} guaranteed good behavior from {{params.partyB}} in return for leniency.
 LPUSH bond_template {{params.partyA}} guarded treasure that {{params.partyB}} unsuccessfully tried to steal.
 LPUSH bond_template {{params.partyA}} guarded treasure that {{params.partyB}} successfully to stole.
 LPUSH bond_template {{params.partyA}} guided {{params.partyB}} into danger.
@@ -134,7 +134,7 @@ LPUSH bond_template {{params.partyA}} instructed {{params.partyB}} on how to pla
 LPUSH bond_template {{params.partyA}} intended to turn {{params.partyB}} into the authorities.
 LPUSH bond_template {{params.partyA}} interrupted {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} introduced {{params.partyB}} to a bad influence.
-LPUSH bond_template {{params.partyA}} invented a wonderous item which {{params.partyB}} destroyed.
+LPUSH bond_template {{params.partyA}} invented a wondrous item which {{params.partyB}} destroyed.
 LPUSH bond_template {{params.partyA}} invited {{params.partyB}} to the wrong party.
 LPUSH bond_template {{params.partyA}} irritated {{params.partyB}} less than {{params.partyB}} would like to admit.
 LPUSH bond_template {{params.partyA}} judged {{params.partyB}} too quickly.
@@ -168,7 +168,7 @@ LPUSH bond_template {{params.partyA}} picked on {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} pined for the fjords with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} placed {{params.partyB}} on a pedestal.
 LPUSH bond_template {{params.partyA}} planted evidence to frame {{params.partyB}}.
-LPUSH bond_template {{params.partyA}} played mindgames with {{params.partyB}}.
+LPUSH bond_template {{params.partyA}} played mind-games with {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} poked fun at {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} polished the knobs for {{params.partyB}}.
 LPUSH bond_template {{params.partyA}} popped pills with {{params.partyB}}.

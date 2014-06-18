@@ -6,7 +6,7 @@ LPUSH motivationunrights_text to keep {{params.npc.sex['possessive']}} freedom a
 LPUSH motivationunrights_text to maintain {{params.npc.sex['possessive']}} dignity
 LPUSH motivationunrights_text to be dignified at all times
 LPUSH motivationunrights_text to be reasonable
-LPUSH motivationunrights_text to be contiencious of others
+LPUSH motivationunrights_text to be contentious of others
 LPUSH motivationunrights_text to treat everyone like a brother
 LPUSH motivationunrights_text to treat everyone equally
 LPUSH motivationunrights_text to protect others
@@ -45,7 +45,7 @@ LPUSH motivationunrights_text to find a lost item
 LPUSH motivationunrights_text to enforce the will of the people
 LPUSH motivationunrights_text to speak for the people
 LPUSH motivationunrights_text to join a union
-LPUSH motivationunrights_text to prove {{params.npc.sex['possessive']}} innoscence
+LPUSH motivationunrights_text to prove {{params.npc.sex['possessive']}} innocence
 LPUSH motivationunrights_text to express {{params.npc.sex['possessive']}} frustration
 LPUSH motivationunrights_text to find justice, one way or another
 LPUSH motivationunrights_text to find retribution, one way or another

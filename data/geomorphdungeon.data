@@ -14,7 +14,7 @@ ZADD geomorphdungeon_gridheight  35 {"name":"2",    "tiles":2,    "score": 35   
 ZADD geomorphdungeon_gridheight  90 {"name":"3",    "tiles":3,    "score": 90   }
 ZADD geomorphdungeon_gridheight 100 {"name":"4",    "tiles":4,    "score": 100  }
 
-# solid chance means 1 in ____ chance that a side is solid. lower the solidchance nubmer, 
+# solid chance means 1 in ____ chance that a side is solid. lower the solid chance number, 
 # higher the chance of a solid, the more segmentation
 ZADD geomorphdungeon_segmentation  20 {"name":"none",       "solidchance":1000,     "score": 20   }
 ZADD geomorphdungeon_segmentation  80 {"name":"a little",   "solidchance":4,        "score": 80   }
