@@ -60,7 +60,7 @@ LPUSH bus_alchemyshop_managerclass sorcerer
 LPUSH bus_alchemyshop_managerclass wizard
 LPUSH bus_alchemyshop_managerclass aristocrat
 
-LPUSH bus_alchemyshop_service concotions
+LPUSH bus_alchemyshop_service concoctions
 LPUSH bus_alchemyshop_service service
 
 LPUSH bus_alchemyshop_trailer shop
@@ -72,7 +72,7 @@ LPUSH bus_alchemyshop_smell damp earth
 LPUSH bus_alchemyshop_smell a foul smell
 
 LPUSH bus_alchemyshop_sound a dog barking
-LPUSH bus_alchemyshop_sound a rythimic scraping
+LPUSH bus_alchemyshop_sound a rhythmic scraping
 LPUSH bus_alchemyshop_sound silence
 
 LPUSH bus_alchemyshop_sight a two headed chicken wandering around
@@ -112,7 +112,7 @@ LPUSH bus_apothecary_smell fresh herbs
 LPUSH bus_apothecary_smell damp earth
 
 LPUSH bus_apothecary_sound a cat mewing
-LPUSH bus_apothecary_sound a rythimic scraping
+LPUSH bus_apothecary_sound a rhythmic scraping
 LPUSH bus_apothecary_sound silence
 LPUSH bus_apothecary_sound yelling from the back of the shop
 
@@ -137,13 +137,13 @@ LPUSH bus_armorsmithy_managerclass fighter
 LPUSH bus_armorsmithy_service service
 
 LPUSH bus_armorsmithy_trailer group
-LPUSH bus_armorsmithy_trailer amory
+LPUSH bus_armorsmithy_trailer armory
 
 LPUSH bus_armorsmithy_smell a burning fire
 
 LPUSH bus_armorsmithy_sound the sound of a forge
 
-LPUSH bus_armorsmithy_sight bit of armor in various states of repiar
+LPUSH bus_armorsmithy_sight bit of armor in various states of repair
 
 ########################################################
 LPUSH business_kind bus_astrologer
@@ -165,7 +165,7 @@ LPUSH bus_astrologer_service birth charts
 LPUSH bus_astrologer_trailer star gazers
 LPUSH bus_astrologer_trailer magic eye piece
 
-LPUSH bus_astrologer_sight lots of charts with arcaine writing on them
+LPUSH bus_astrologer_sight lots of charts with arcane writing on them
 LPUSH bus_astrologer_sight scrolls leaning against the walls
 
 ########################################################
@@ -242,15 +242,15 @@ LPUSH bus_barbershop_service a steady hand
 LPUSH bus_barbershop_trailer shoppe
 LPUSH bus_barbershop_trailer shop
 
-LPUSH bus_barbershop_smell disenfectant
+LPUSH bus_barbershop_smell disinfectant
 LPUSH bus_barbershop_smell fear
 
-LPUSH bus_barbershop_sound snipping sissors
-LPUSH bus_barbershop_sound a good laught
+LPUSH bus_barbershop_sound snipping scissors
+LPUSH bus_barbershop_sound a good laugh
 LPUSH bus_barbershop_sound someone telling a story
 
 LPUSH bus_barbershop_sight hair clippings on the floor
-LPUSH bus_barbershop_sight somone in a chair covered by towels and a sheet
+LPUSH bus_barbershop_sight someone in a chair covered by towels and a sheet
 
 ########################################################
 LPUSH business_kind bus_barrack
@@ -385,7 +385,7 @@ LPUSH bus_bookbinder_managerclass expert
 
 LPUSH bus_bookbinder_service service
 
-LPUSH bus_bookbinder_trailer bindary
+LPUSH bus_bookbinder_trailer bindery
 LPUSH bus_bookbinder_trailer shoppe
 LPUSH bus_bookbinder_trailer book smith
 
@@ -597,7 +597,7 @@ LPUSH bus_cheeseshop_smell a slightly sweet smell of cheese
 
 LPUSH bus_cheeseshop_sound yelling in the back
 
-LPUSH bus_cheeseshop_sight many wheels of chese
+LPUSH bus_cheeseshop_sight many wheels of cheese
 LPUSH bus_cheeseshop_sight jugs of milk and other tools
 
 ########################################################
@@ -632,7 +632,7 @@ LPUSH bus_church_sound a low moaning
 LPUSH bus_church_sound silence
 
 LPUSH bus_church_sight people walking around in a daze
-LPUSH bus_church_sight elegent golden decorations all around
+LPUSH bus_church_sight elegant golden decorations all around
 
 ########################################################
 LPUSH business_kind bus_civiccenter
@@ -717,7 +717,7 @@ LPUSH bus_cobbler_trailer shoppe
 LPUSH bus_cobbler_trailer shop
 
 LPUSH bus_cobbler_smell scent of leather
-LPUSH bus_cobbler_smell rthymic grinding
+LPUSH bus_cobbler_smell rhythmic grinding
 
 LPUSH bus_cobbler_sound silence
 LPUSH bus_cobbler_sound the work of shoes
@@ -1106,13 +1106,13 @@ LPUSH bus_jailhouse_service service
 
 LPUSH bus_jailhouse_trailer public jail
 LPUSH bus_jailhouse_trailer prison
-LPUSH bus_jailhouse_trailer correctional centre
+LPUSH bus_jailhouse_trailer correctional center
 LPUSH bus_jailhouse_trailer work camp
 LPUSH bus_jailhouse_trailer gaol
 
 ########################################################
 LPUSH business_kind bus_jeweler
-SET   bus_jeweler_kindname jewelery store
+SET   bus_jeweler_kindname jewelry store
 SET   bus_jeweler_perbuilding 10
 
 SET   bus_jeweler_maxfloors 2
@@ -1262,7 +1262,7 @@ SET   bus_hostel_perbuilding 10
 SET   bus_hostel_maxfloors 4
 SET   bus_hostel_district mercy
 
-LPUSH bus_hostel_manager good samaritan
+LPUSH bus_hostel_manager good Samaritan
 
 LPUSH bus_hostel_managerclass adept
 LPUSH bus_hostel_managerclass cleric
@@ -1441,7 +1441,7 @@ LPUSH bus_magicshop_managerclass wizard
 LPUSH bus_magicshop_service service
 LPUSH bus_magicshop_service scrolls
 
-LPUSH bus_magicshop_trailer Botique
+LPUSH bus_magicshop_trailer Boutique
 LPUSH bus_magicshop_trailer Shoppe
 LPUSH bus_magicshop_trailer Magic Shop
 
@@ -1733,7 +1733,7 @@ LPUSH bus_shoeshop_trailer Shoes
 LPUSH bus_shoeshop_trailer Shoes Inc.
 
 LPUSH bus_shoeshop_smell scent of leather
-LPUSH bus_shoeshop_smell rthymic grinding
+LPUSH bus_shoeshop_smell rhythmic grinding
 
 LPUSH bus_shoeshop_sound silence
 LPUSH bus_shoeshop_sound the work of shoes
@@ -2068,25 +2068,25 @@ LPUSH bus_university_service tuition
 LPUSH bus_university_trailer inc.
 
 ########################################################
-LPUSH business_kind bus_vinyard
-SET   bus_vinyard_kindname vinyard
-SET   bus_vinyard_perbuilding 10
+LPUSH business_kind bus_vineyard
+SET   bus_vineyard_kindname vineyard
+SET   bus_vineyard_perbuilding 10
 
-SET   bus_vinyard_maxfloors 1
-SET   bus_vinyard_district professional
+SET   bus_vineyard_maxfloors 1
+SET   bus_vineyard_district professional
 
-LPUSH bus_vinyard_manager vintner
+LPUSH bus_vineyard_manager vintner
 
-LPUSH bus_vinyard_managerclass commoner
-LPUSH bus_vinyard_managerclass expert
+LPUSH bus_vineyard_managerclass commoner
+LPUSH bus_vineyard_managerclass expert
 
-LPUSH bus_vinyard_service service
-LPUSH bus_vinyard_service grapes
-LPUSH bus_vinyard_service wine
+LPUSH bus_vineyard_service service
+LPUSH bus_vineyard_service grapes
+LPUSH bus_vineyard_service wine
 
-LPUSH bus_vinyard_trailer vinters
-LPUSH bus_vinyard_trailer wine shoppe
-LPUSH bus_vinyard_trailer vineyards
+LPUSH bus_vineyard_trailer vinters
+LPUSH bus_vineyard_trailer wine shoppe
+LPUSH bus_vineyard_trailer vineyards
 
 ########################################################
 LPUSH business_kind bus_wagonyard

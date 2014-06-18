@@ -66,7 +66,7 @@ ZADD  country_approval    40 { "name":"ridicule",       "score":40    }
 ZADD  country_approval    50 { "name":"mock",           "score":50    }
 ZADD  country_approval    60 { "name":"praise",         "score":60    }
 ZADD  country_approval    70 { "name":"love",           "score":70    }
-ZADD  country_approval    80 { "name":"respecte",       "score":80    }
+ZADD  country_approval    80 { "name":"respect",       "score":80    }
 ZADD  country_approval    90 { "name":"honor",          "score":90    }
 ZADD  country_approval    100 { "name":"revere",         "score":100    }
 
@@ -80,7 +80,7 @@ ZADD  country_efficiency    25  { "name":"sloppy and disorganized",            "
 ZADD  country_efficiency    30  { "name":"inept and inadequate",               "score":30    }
 ZADD  country_efficiency    35  { "name":"slipshod",                           "score":35    }
 ZADD  country_efficiency    40  { "name":"minimally competent",                "score":40    }
-ZADD  country_efficiency    45  { "name":"somwhat capable",                    "score":45    }
+ZADD  country_efficiency    45  { "name":"somewhat capable",                    "score":45    }
 ZADD  country_efficiency    50  { "name":"adequate",                           "score":50    }
 ZADD  country_efficiency    55  { "name":"satisfactory",                       "score":55    }
 ZADD  country_efficiency    60  { "name":"mostly sufficient",                  "score":60    }
@@ -136,7 +136,7 @@ ZADD  country_theology    20  { "name":"is unwelcome",                          
 ZADD  country_theology    25  { "name":"is unregulated",                                                        "score":25    }
 ZADD  country_theology    30  { "name":"is taxed heavily",                                                      "score":30    }
 ZADD  country_theology    35  { "name":"is tightly regulated by the government",                                "score":35    }
-ZADD  country_theology    40  { "name":"is viewed as a nusiance",                                               "score":40    }
+ZADD  country_theology    40  { "name":"is viewed as a nuisance",                                               "score":40    }
 ZADD  country_theology    45  { "name":"is practiced behind closed doors",                                      "score":45    }
 ZADD  country_theology    50  { "name":"is left to the people",                                                 "score":50    }
 ZADD  country_theology    55  { "name":"is common place",                                                       "score":55    }
@@ -177,7 +177,7 @@ ZADD  country_military    10   {"name":"harmonious",           "score":10    }
 ZADD  country_military    15   {"name":"gentle",               "score":15    }
 ZADD  country_military    20   {"name":"sociable",             "score":20    }
 ZADD  country_military    25   {"name":"nonviolent",           "score":25    }
-ZADD  country_military    30   {"name":"tranqil",              "score":30    }
+ZADD  country_military    30   {"name":"tranquil",              "score":30    }
 ZADD  country_military    35   {"name":"mellow",               "score":35    }
 ZADD  country_military    40   {"name":"cordial",              "score":40    }
 ZADD  country_military    45   {"name":"neutral",              "score":45    }

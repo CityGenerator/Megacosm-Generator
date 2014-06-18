@@ -47,7 +47,7 @@ ZADD deity_health  80 {"name":"gaining followers",          "score":80  }
 ZADD deity_health  90 {"name":"gaining in popularity",      "score":90  }
 ZADD deity_health 100 {"name":"more popular than ever",     "score":100 }
 
-ZADD deity_importance  10 {"name":"quazi-diety",         "score":10, "points":1 }
+ZADD deity_importance  10 {"name":"quasi-deity",         "score":10, "points":1 }
 ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 }
 ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 }
 ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":7 }
@@ -113,7 +113,7 @@ ZADD deity_followercount  60 {"name":"an unknown number of",  "score":60   }
 ZADD deity_followercount  65 {"name":"hundreds of",  "score":65   }
 ZADD deity_followercount  70 {"name":"near a thousand",  "score":70   }
 ZADD deity_followercount  75 {"name":"several thousand",  "score":75   }
-ZADD deity_followercount  80 {"name":"tens of thouands of",  "score":80   }
+ZADD deity_followercount  80 {"name":"tens of thousands of",  "score":80   }
 ZADD deity_followercount  85 {"name":"hundreds of thousands of",  "score":85   }
 ZADD deity_followercount 100 {"name":"countless",  "score":100   }
 
@@ -284,7 +284,7 @@ LPUSH deity_favored_weapon composite bows
 LPUSH deity_favored_weapon crossbows
 LPUSH deity_favored_weapon curved swords
 LPUSH deity_favored_weapon daggers
-LPUSH deity_favored_weapon falchionn
+LPUSH deity_favored_weapon falchion
 LPUSH deity_favored_weapon flails, maces and clubs
 LPUSH deity_favored_weapon glaives
 LPUSH deity_favored_weapon greataxes
@@ -532,7 +532,7 @@ LPUSH deity_clergy_dress vestments of their faith
 LPUSH deity_clergy_dress nondescript clothing
 LPUSH deity_clergy_dress colorful saris
 LPUSH deity_clergy_dress decorated mantles
-LPUSH deity_clergy_dress headresses unique to their faith
+LPUSH deity_clergy_dress headdresses unique to their faith
 LPUSH deity_clergy_dress formal uniforms
 LPUSH deity_clergy_dress trophies from fallen foes
 LPUSH deity_clergy_dress informal attire
@@ -563,7 +563,7 @@ LPUSH deity_vow propriety
 LPUSH deity_vow purity
 LPUSH deity_vow reconstruction
 LPUSH deity_vow silence
-LPUSH deity_vow stocism
+LPUSH deity_vow Stoicism
 LPUSH deity_vow submission
 LPUSH deity_vow surety
 
@@ -571,7 +571,7 @@ HSET deity_vow_description abstinence     {"name":"Abstinence",       "descripti
 HSET deity_vow_description celibacy       {"name":"Celibacy",         "description":"refrain from marriage and sex"                                                               }
 HSET deity_vow_description charity        {"name":"Charity",          "description":"refrain from accepting compensation for any services rendered"                               }
 HSET deity_vow_description chastity       {"name":"Chastity",         "description":"refrain from marriage and sex"                                                               }
-HSET deity_vow_description humility       {"name":"Humility",         "description":"abstain from extholing your own virtues"                                                     }
+HSET deity_vow_description humility       {"name":"Humility",         "description":"abstain from extolling your own virtues"                                                     }
 HSET deity_vow_description independence   {"name":"Independence",     "description":"never affiliate with or take orders from any organization, including the church"             }
 HSET deity_vow_description itinerancy     {"name":"Itinerancy",       "description":"constantly move from place to place, never settling"                                         }
 HSET deity_vow_description nonviolence    {"name":"Nonviolence",      "description":"avoid violence against other sentient creatures"                                             }
@@ -582,6 +582,6 @@ HSET deity_vow_description propriety      {"name":"Propriety",        "descripti
 HSET deity_vow_description purity         {"name":"Purity",           "description":"avoid contact with dead flesh"                                                               }
 HSET deity_vow_description reconstruction {"name":"Reconstruction",   "description":"reunite factions after a long and bitter feud"                                               }
 HSET deity_vow_description silence        {"name":"Silence",          "description":"not speak under any circumstances"                                                           }
-HSET deity_vow_description stocism        {"name":"Stocism",          "description":"speak as few words as possible, often a given word to represent their faith"                 }
+HSET deity_vow_description stoicism        {"name":"Stoicism",          "description":"speak as few words as possible, often a given word to represent their faith"                 }
 HSET deity_vow_description submission     {"name":"Submission",       "description":"submit to those who ask of it"                                                               }
 HSET deity_vow_description surety         {"name":"Surety",           "description":"defend a group or groups with your very life"                                                }

@@ -1,190 +1,127 @@
-//==================================================
 
-function select_division( params){
+flag_gen = flag_gen||{};
+flag_gen.draw_division = flag_gen.draw_division||{};
 
-    switch(params.division.name){
+
+flag_gen.select_division = function(flag, division_params, colors, canvas_width, canvas_height){
+    
+    var type = division_params.name;
+    console.log('division: '+type);
+    
+    if (type==='diagonal' || type==='stripes') {
+        flag_gen.draw_division[type](flag, division_params[type], colors, canvas_width, canvas_height);
+    }else if (flag_gen.draw_division[type]) {
+        flag_gen.draw_division[type](flag, colors, canvas_width, canvas_height);
+    }else {
+        flag_gen.draw_division['solid'](flag, colors, canvas_width, canvas_height);
+        console.log("ERROR: unknown division: "+type+" (flagdivision.js function flag_gen.select_division)");
+    }
+
+    /*switch(params.division.name){
         case 'quads':
-            draw_quads( params );
+            draw_quads( params );// colors, canvas
             break;
         case 'diagquads':
-            draw_quaddiagonals( params );
+            draw_quaddiagonals( params );// colors, canvas
             break;
         case 'diagonal':
-            draw_diagonals( params );
+            draw_diagonals( params );// diagonal, colors, canvas
             break;
         case 'stripes':
-            draw_division_stripes( params );
+            draw_division_stripes( params );// stripes, colors, canvas
             break;
         case 'none':
-            draw_solid( params );
+            draw_solid( params );// colors, canvas
             break;
         default:
             console.log("ERROR: unknown division:"+params.division.name)
             draw_solid( params );
+    }*/
+};
+
+
+flag_gen.draw_division.solid = function(flag, colors, canvas_width, canvas_height) {
+    flag.fillStyle = colors[0].hex;
+    flag.fillRect(0,0, canvas_width, canvas_height);
+};
+
+
+flag_gen.draw_division.diagquads = function(flag, colors, canvas_width, canvas_height) {
+    var directions = ['north', 'south', 'east', 'west'],
+        color_nums = [0,0,1,1],
+        i=0,
+        num_directions = directions.length,
+        utils = flag_gen.utils,
+        points=[];
+    
+    for (i=0; i<num_directions; i++) {
+        points = utils.get_quaddiag_points(directions[i], canvas_width, canvas_height);
+        utils.draw_quaddiag(flag, points, colors[color_nums[i]].hex);
     }
-}
+    
+};
 
-//==================================================
-function draw_quaddiagonals(params){
-     draw_quaddiagonal( params, "north" );
-     draw_quaddiagonal( params, "south" );
-     draw_quaddiagonal( params, "east"  );
-     draw_quaddiagonal( params, "west"  );
-}
-
-function draw_quaddiagonal(params, side, color){
-    var a=0, b=0, c=0,d=0;
-    if (side=="east" ){a=params.canvas.width}
-    if (side=="south" ){b=params.canvas.height}
-    if (side=="north" || side=="east"  ||side=="south"){c=params.canvas.width}
-    if (side=="east"  || side=="south" ||side=="west" ){d=params.canvas.height}
-    console.log('quaddiag'+side)
-    if (!color ){
-        if (side == "north" || side == "south"){
-            color=params.colors[0].hex;
-        }else{
-            color=params.colors[1].hex;
-        }
-    }
-    params.flag.save();
-    params.flag.beginPath();
-    params.flag.moveTo(a,b);
-    params.flag.lineTo(c,d);
-    params.flag.lineTo(params.canvas.width/2,params.canvas.height/2);
-    params.flag.fillStyle=color;
-    params.flag.fill();
-    params.flag.restore();
-
- }
-//==================================================
-
-
-
-
-
-
-
-
-
-
-//==================================================
-
-function draw_solid( params){
-        params.flag.fillStyle=params.colors[0].hex;
-        params.flag.fillRect(0,0, params.canvas.width,params.canvas.height);
-        return params.flag;
-
-}
-function draw_quads(params){
-
-    draw_quad( params, "nw" );
-    draw_quad( params, "ne" );
-    draw_quad( params, "sw" );
-    draw_quad( params, "se" );
-}
-function draw_quad(params, quadrant, color){
-    var a=0,b=0,c=params.canvas.width/2, d=params.canvas.height/2;
-    if (quadrant == "ne" || quadrant == "se" ){
-        a=params.canvas.width/2;
-    }
-    if (quadrant == "se" || quadrant == "sw" ){
-        b=params.canvas.height/2;
-    }
-
-    if ( color == undefined) {
-        if (quadrant == "nw" || quadrant == "se" ){
-            color=params.colors[0].hex;
-        }else{
-            color=params.colors[1].hex;
-        }
-    }
-
-
-    params.flag.fillStyle=color;
-
-    params.flag.fillRect( a, b, c, d );
-}
-//==================================================
-
-
-function draw_division_stripes(params){
-    for (var i=0; i<=params.division_stripes_count; i++){
-        draw_stripe(params, params.division_stripes_side, params.division_stripes_count, i);
-    }
-}
-
-
-function draw_stripe(params, side, count, id,color){
-
-    if (! color){
-        var colorid=id % params.division_stripes_colorcount;
-        color=params.colors[colorid].hex;
-    }
-    params.flag.fillStyle=color;
-
-    if (side=="horizontal"){
-        var thickness=Math.floor(params.canvas.height/count);
-        params.flag.fillRect(0, (thickness*id)   ,params.canvas.width,thickness);
-
-    }else {
-        var thickness=Math.floor(params.canvas.width/count);
-        params.flag.fillRect( (thickness*id),0 ,thickness  ,params.canvas.height);
+flag_gen.draw_division.quads = function(flag, colors, canvas_width, canvas_height) {
+    var directions = ['nw', 'ne', 'se', 'sw'],
+        color_nums = [0,1,0,1],
+        i=0,
+        num_directions = directions.length,
+        points=[];
+    
+    for (i=0; i<num_directions; i++) {
+        points = flag_gen.utils.get_quad_points(directions[i], canvas_width, canvas_height);
+        flag.fillStyle = colors[color_nums[i]].hex;
+        flag.fillRect(points[0][0], points[0][1], points[1][0], points[1][1]);
     }
 }
 
 
 
+flag_gen.draw_division.stripes = function(flag, stripe_params, colors, canvas_width, canvas_height) {
+    var thickness = 0,
+        i=0,
+        count = stripe_params.count,
+        color_count = stripe_params.colorcount,
+        dimension=0,
+        draw_stripe,
+        color = '';
+    
+    if (stripe_params.side==='horizontal') {
+        thickness = Math.floor(canvas_height/count);
+        dimension = canvas_width;
+        draw_stripe = flag_gen.utils.draw_stripe_horizontal;
+    } else {
+        thickness = Math.floor(canvas_width/count);
+        dimension = canvas_height;
+        draw_stripe = flag_gen.utils.draw_stripe_vertical;
+    }
+    
+    for (i=0; i<count; i++) {
+        color = colors[i%color_count].hex;
+        draw_stripe(flag, thickness, i, color, dimension);
+    }
+};
 
 
-
-
-
-//==================================================
-function draw_diagonal(params, side, color ){
-    var start,mid,end;
-    console.log(params.division_diagonal_direction)
-    if (side == "north" && params.division_diagonal_direction == "left-to-right"){
+flag_gen.draw_division.diagonal = function(flag, diagonal_params, colors, canvas_width, canvas_height) {
+    var start=[],
+        mid_north=[],
+        mid_south=[],
+        end=[],
+        draw_diagonal = flag_gen.utils.draw_diagonal;
+    
+    if (diagonal_params.direction==='left-to-right') {
         start=[0,0];
-        mid=[params.canvas.width,0];
-        end=[params.canvas.width,params.canvas.height];
-
-    }else if (side == "south" && params.division_diagonal_direction == "left-to-right"){
-        start=[0,0];
-        mid=[0,params.canvas.height];
-        end=[params.canvas.width,params.canvas.height];
-
-    }else if (side == "north" && params.division_diagonal_direction == "right-to-left"){
-        start=[params.canvas.width,0];
-        mid=[0,0];
-        end=[0,params.canvas.height];
-
-    }else if (side == "south" && params.division_diagonal_direction == "right-to-left"){
-        start=[params.canvas.width,0];
-        mid=[params.canvas.width,params.canvas.height];
-        end=[0,params.canvas.height];
+        mid_north=[canvas_width,0];
+        mid_south=[0,canvas_height];
+        end=[canvas_width,canvas_height];
+    } else {
+        start=[canvas_width, 0];
+        mid_north=[0,0];
+        mid_south=[canvas_width, canvas_height];
+        end=[0, canvas_height];
     }
-    if (! color){
-        if (side == "north"){
-            color=params.colors[0].hex;
-        }else{
-            color=params.colors[1].hex;
-        }
-    }
-
-    params.flag.save();
-    params.flag.beginPath();
-    params.flag.moveTo(start[0],start[1]);
-    params.flag.lineTo(mid[0],mid[1]);
-    params.flag.lineTo(end[0],end[1]);
-    params.flag.fillStyle=color;
-    params.flag.fill();
-    params.flag.restore();
-}
-
-
-function draw_diagonals(params ){
-
-    draw_diagonal(params, "north") ;
-    draw_diagonal(params, "south") ;
-}
-
+    
+    draw_diagonal(flag, start, mid_north, end, colors[0].hex);
+    draw_diagonal(flag, start, mid_south, end, colors[1].hex);
+};

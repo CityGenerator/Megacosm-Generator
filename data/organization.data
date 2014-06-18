@@ -25,7 +25,7 @@ LPUSH organization_kind fraternity
 LPUSH organization_kind gang
 LPUSH organization_kind guild
 LPUSH organization_kind mafia
-LPUSH organization_kind milita
+LPUSH organization_kind militia
 LPUSH organization_kind network
 LPUSH organization_kind order
 LPUSH organization_kind organization
@@ -35,7 +35,7 @@ LPUSH organization_kind union
 LPUSH organization_kind crime ring
 
 # The Joban gang is an ancient, honorable organization with a ________ reputation
-ZADD organization_violence  10 {"name":"muderous",      "score":10   }
+ZADD organization_violence  10 {"name":"murderous",      "score":10   }
 ZADD organization_violence  20 {"name":"brutal",        "score":20   }
 ZADD organization_violence  30 {"name":"violent",       "score":30   }
 ZADD organization_violence  40 {"name":"coercive",      "score":40   }
@@ -155,7 +155,7 @@ ZADD organization_entry 100  {"name":"impossible",      "score":100  }
 # TODO how do we deal with Sects? merge?
 
 
-# Memebers of Joban's gang can be identified ________
+# Members of Joban's gang can be identified ________
 LPUSH organization_identification only by another member
 LPUSH organization_identification by a specific insignia
 LPUSH organization_identification by a specific article of clothing
