@@ -1,0 +1,13 @@
+#
+LPUSH adventure_category challenge
+
+HSET adventure_category_description challenge {"name":"challenge", "Description":"either challenge, or be challenged"}
+
+#Your adventure begins with a challenge of 
+LPUSH adventure_challenge_category strength
+LPUSH adventure_challenge_category wits
+LPUSH adventure_challenge_category speed
+LPUSH adventure_challenge_category endurance
+LPUSH adventure_challenge_category knowledge
+LPUSH adventure_challenge_category riddles
+
