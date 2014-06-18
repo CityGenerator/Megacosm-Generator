@@ -3,53 +3,72 @@
 
 
 # Theme
+#Horror, Fantasy, Scifi, action, romance, espionage
 
+# story
 
-Goal
+#Goal
+#
+#Hook
+#Plot
+#climax
+#
+#general setting
+#
+#specific location
+#specific location
 
-Hook
-Plot
-climax
+#Major Dangers
 
-general setting
+#goal
+#obsticle
+#details
+#assistance
+#rewards
 
-specific location
-specific location
-
-
-
-
-
-
-
-# investigate a rumor, some ruins, or an event
-LPUSH adventure_category investigate 
-# negotiate between several parties, some of which are lying
-LPUSH adventure_category negotiate 
-# attack for retribution, greed, etc
-LPUSH adventure_category attack 
-# kill for a contract, assassination, etc
-LPUSH adventure_category kill 
-# Defeat someone to claim something
-LPUSH adventure_category defeat 
-# find a missing artifact, person, clue, etc
-LPUSH adventure_category find 
-# defend a place, an item, a person, etc
-LPUSH adventure_category defend 
-# create an artifact, town, event, etc
-LPUSH adventure_category create 
-# decide the fate of someone or something based on gathered information
-LPUSH adventure_category decide 
-# change the way something is currently done
-LPUSH adventure_category change 
-# challenge someone to change their ways, possibly with violence.
-LPUSH adventure_category challenge 
-# Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
-LPUSH adventure_category perform 
-    
-LPUSH adventure_category liberate
-
+#TODO: split these into separate configs    
+#LPUSH adventure_category assault
+LPUSH adventure_category challenge # challenge someone to change their ways, possibly with violence.
+LPUSH adventure_category change # change the way something is currently done
+LPUSH adventure_category chase
+LPUSH adventure_category comedy
+LPUSH adventure_category contest
+LPUSH adventure_category create # create an artifact, town, event, etc
+LPUSH adventure_category decide # decide the fate of someone or something based on gathered information
+LPUSH adventure_category defeat # Defeat someone to claim something
+LPUSH adventure_category defend # defend a place, an item, a person, etc
+LPUSH adventure_category delivery
+LPUSH adventure_category diplomacy
+LPUSH adventure_category disaster
+LPUSH adventure_category escape
 LPUSH adventure_category escort
+LPUSH adventure_category espionage
+LPUSH adventure_category exploration
+LPUSH adventure_category find # find a missing artifact, person, clue, etc
+LPUSH adventure_category heist
+LPUSH adventure_category investigate # investigate a rumor, some ruins, or an event
+LPUSH adventure_category journey
+LPUSH adventure_category kill # kill for a contract, assassination, etc
+LPUSH adventure_category liberate
+LPUSH adventure_category morality
+LPUSH adventure_category negotiate # negotiate between several parties, some of which are lying
+LPUSH adventure_category perform  # Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
+LPUSH adventure_category piracy
+LPUSH adventure_category quest
+LPUSH adventure_category religion
+LPUSH adventure_category rescue
+LPUSH adventure_category resistance
+LPUSH adventure_category shepherd
+LPUSH adventure_category survival
+LPUSH adventure_category trade
+LPUSH adventure_category war
+
+
+
+
+
+
+
 
 LPUSH adventure_reason For a reward
 
@@ -97,102 +116,102 @@ LPUSH adventure_item deed
 
 
 
-        <option base="alchemy"      type="thing"   />
-        <option base="anger"        type="thing"   />
-        <option base="armor"        type="thing"   />
-        <option base="adventure"    type="thing"   />
-        <option base="blessing"     type="thing"   />
-        <option base="blood"        type="thing"   />
-        <option base="book"         type="thing"   />
-        <option base="calamity"     type="thing"   />
-        <option base="choice"       type="thing"   />
-        <option base="claw"         type="thing"   />
-        <option base="club"         type="thing"   />
-        <option base="courage"      type="thing"   />
-        <option base="crystal"      type="thing"   />
-        <option base="cup"          type="thing"   />
-        <option base="curse"        type="thing"   />
-        <option base="dagger"       type="thing"   />
-        <option base="danger"       type="thing"   />
-        <option base="death"        type="thing"   />
-        <option base="desire"       type="thing"   />
-        <option base="disaster"     type="thing"   />
-        <option base="doom"         type="thing"   />
-        <option base="door"         type="thing"   />
-        <option base="dread"        type="thing"   />
-        <option base="echo"         type="thing"   />
-        <option base="effigy"       type="thing"   />
-        <option base="emperor"      type="person"  />
-        <option base="eye"          type="thing"   />
-        <option base="face"         type="thing"   />
-        <option base="fang"         type="thing"   />
-        <option base="fate"         type="thing"   />
-        <option base="freedom"      type="thing"   />
-        <option base="fungus"       type="thing"   />
-        <option base="ghost"        type="thing"   />
-        <option base="god"          type="thing"   />
-        <option base="gold"         type="thing"   />
-        <option base="hand"         type="thing"   />
-        <option base="hieroglyph"   type="thing"   />
-        <option base="holiness"     type="thing"   />
-        <option base="horror"       type="thing"   />
-        <option base="ice/fire"     type="thing"   />
-        <option base="illusion"     type="thing"   />
-        <option base="judgment"     type="thing"   />
-        <option base="karma"        type="thing"   />
-        <option base="king"         type="person"  />
-        <option base="knife"        type="thing"   />
-        <option base="knowledge"    type="thing"   />
-        <option base="legend"       type="thing"   />
-        <option base="lie"          type="thing"   />
-        <option base="life"         type="thing"   />
-        <option base="light"        type="thing"   />
-        <option base="luck"         type="thing"   />
-        <option base="machine"      type="thing"   />
-        <option base="magic"        type="thing"   />
-        <option base="mechanism"    type="thing"   />
-        <option base="melancholy"   type="thing"   />
-        <option base="mirror"       type="thing"   />
-        <option base="monarch"      type="person"  />
-        <option base="mouth"        type="thing"   />
-        <option base="night"        type="thing"   />
-        <option base="obscenity"    type="thing"   />
-        <option base="ordeal"       type="thing"   />
-        <option base="passion"      type="thing"   />
-        <option base="path"         type="thing"   />
-        <option base="princess"     type="person"  />
-        <option base="prince"       type="person"  />
-        <option base="queen"        type="person"  />
-        <option base="reason"       type="thing"   />
-        <option base="remorse"      type="thing"   />
-        <option base="rich"         type="thing"   />
-        <option base="rune"         type="thing"   />
-        <option base="sadness"      type="thing"   />
-        <option base="sleep"        type="thing"   />
-        <option base="slime"        type="thing"   />
-        <option base="slime"        type="thing"   />
-        <option base="sorcery"      type="thing"   />
-        <option base="sorrow"       type="thing"   />
-        <option base="soul"         type="thing"   />
-        <option base="sovereign"    type="thing"   />
-        <option base="statue"       type="thing"   />
-        <option base="stone"        type="thing"   />
-        <option base="sword"        type="thing"   />
-        <option base="symbol"       type="thing"   />
-        <option base="tale"         type="thing"   />
-        <option base="talon"        type="thing"   />
-        <option base="tome"         type="thing"   />
-        <option base="tragedy"      type="thing"   />
-        <option base="tree"         type="thing"   />
-        <option base="tyrant"       type="person"  />
-        <option base="vision"       type="thing"   />
-        <option base="wand"         type="thing"   />
-        <option base="wealth"       type="thing"   />
-        <option base="well"         type="thing"   />
-        <option base="wisdom"       type="thing"   />
-        <option base="women"        type="thing"   />
-        <option base="zeal"         type="thing"   />
-        <option base="zombie"       type="thing"   />
+#        <option base="alchemy"      type="thing"   />
+#        <option base="anger"        type="thing"   />
+#        <option base="armor"        type="thing"   />
+#        <option base="adventure"    type="thing"   />
+#        <option base="blessing"     type="thing"   />
+#        <option base="blood"        type="thing"   />
+#        <option base="book"         type="thing"   />
+#        <option base="calamity"     type="thing"   />
+#        <option base="choice"       type="thing"   />
+#        <option base="claw"         type="thing"   />
+#        <option base="club"         type="thing"   />
+#        <option base="courage"      type="thing"   />
+#        <option base="crystal"      type="thing"   />
+#        <option base="cup"          type="thing"   />
+#        <option base="curse"        type="thing"   />
+#        <option base="dagger"       type="thing"   />
+#        <option base="danger"       type="thing"   />
+#        <option base="death"        type="thing"   />
+#        <option base="desire"       type="thing"   />
+#        <option base="disaster"     type="thing"   />
+#        <option base="doom"         type="thing"   />
+#        <option base="door"         type="thing"   />
+#        <option base="dread"        type="thing"   />
+#        <option base="echo"         type="thing"   />
+#        <option base="effigy"       type="thing"   />
+#        <option base="emperor"      type="person"  />
+#        <option base="eye"          type="thing"   />
+#        <option base="face"         type="thing"   />
+#        <option base="fang"         type="thing"   />
+#        <option base="fate"         type="thing"   />
+#        <option base="freedom"      type="thing"   />
+#        <option base="fungus"       type="thing"   />
+#        <option base="ghost"        type="thing"   />
+#        <option base="god"          type="thing"   />
+#        <option base="gold"         type="thing"   />
+#        <option base="hand"         type="thing"   />
+#        <option base="hieroglyph"   type="thing"   />
+#        <option base="holiness"     type="thing"   />
+#        <option base="horror"       type="thing"   />
+#        <option base="ice/fire"     type="thing"   />
+#        <option base="illusion"     type="thing"   />
+#        <option base="judgment"     type="thing"   />
+#        <option base="karma"        type="thing"   />
+#        <option base="king"         type="person"  />
+#        <option base="knife"        type="thing"   />
+#        <option base="knowledge"    type="thing"   />
+#        <option base="legend"       type="thing"   />
+#        <option base="lie"          type="thing"   />
+#        <option base="life"         type="thing"   />
+#        <option base="light"        type="thing"   />
+#        <option base="luck"         type="thing"   />
+#        <option base="machine"      type="thing"   />
+#        <option base="magic"        type="thing"   />
+#        <option base="mechanism"    type="thing"   />
+#        <option base="melancholy"   type="thing"   />
+#        <option base="mirror"       type="thing"   />
+#        <option base="monarch"      type="person"  />
+#        <option base="mouth"        type="thing"   />
+#        <option base="night"        type="thing"   />
+#        <option base="obscenity"    type="thing"   />
+#        <option base="ordeal"       type="thing"   />
+#        <option base="passion"      type="thing"   />
+#        <option base="path"         type="thing"   />
+#        <option base="princess"     type="person"  />
+#        <option base="prince"       type="person"  />
+#        <option base="queen"        type="person"  />
+#        <option base="reason"       type="thing"   />
+#        <option base="remorse"      type="thing"   />
+#        <option base="rich"         type="thing"   />
+#        <option base="rune"         type="thing"   />
+#        <option base="sadness"      type="thing"   />
+#        <option base="sleep"        type="thing"   />
+#        <option base="slime"        type="thing"   />
+#        <option base="slime"        type="thing"   />
+#        <option base="sorcery"      type="thing"   />
+#        <option base="sorrow"       type="thing"   />
+#        <option base="soul"         type="thing"   />
+#        <option base="sovereign"    type="thing"   />
+#        <option base="statue"       type="thing"   />
+#        <option base="stone"        type="thing"   />
+#        <option base="sword"        type="thing"   />
+#        <option base="symbol"       type="thing"   />
+#        <option base="tale"         type="thing"   />
+#        <option base="talon"        type="thing"   />
+#        <option base="tome"         type="thing"   />
+#        <option base="tragedy"      type="thing"   />
+#        <option base="tree"         type="thing"   />
+#        <option base="tyrant"       type="person"  />
+#        <option base="vision"       type="thing"   />
+#        <option base="wand"         type="thing"   />
+#        <option base="wealth"       type="thing"   />
+#        <option base="well"         type="thing"   />
+#        <option base="wisdom"       type="thing"   />
+#        <option base="women"        type="thing"   />
+#        <option base="zeal"         type="thing"   />
+#        <option base="zombie"       type="thing"   />
 
 
 
@@ -206,3 +225,30 @@ LPUSH adventure_name_template SUBJECT
 LPUSH adventure_name_template SUBJECT's SUBJECT
 LPUSH adventure_name_template SUBJECT VERB.thirdperson SUBJECT
 LPUSH adventure_name_template VERB.gerund SUBJECT
+
+
+
+#Assault: This adventure type features storming castles, wiping out or running off hostile groups, tracking down space pirates, and any other scenario where the focus is on the PCs taking the fight to someone else hard.
+#Chase: Someone (or something in their possession) needs to be found or caught, and the PCs are in pursuit; alternately, the PCs can be the pursued, not the pursuers. Narrow escapes, thrilling car chases, redlined starship engines, false trails, and ambushes are the hallmarks of chase adventures.
+#Comedy: Comedy adventures can be a refreshing break from more serious fare, and feature elements like botched capers, slapstick, embarrassing situations, “fish out of water” scenarios, and the like.
+#Contest: Competitions, gladiatorial combat, jousting, and danger rooms from superhero comics all fit the bill as examples of adventure themes revolving around a contest.
+#Delivery: A delivery adventure involves getting an inanimate “package” from point A to point B, and features complications en route, ambushes, hazards, inclement weather, and other obstacles that make the journey a challenging one. (Escorting someone? That’s Escort, below.)
+#Diplomacy: In a diplomatic adventure, the PCs might be envoys, mediators, or emissaries of peace. These scenarios involve delicate negotiations, circumventing or negotiating treaties, forging alliances, driving a wedge between allies, convincing others to come to your aid, averting war, and similar social elements.
+#Disaster: From giant asteroids headed for the Earth, planet-wide earthquakes, and the wrath of the gods to hurricanes, killer viruses, and rampaging monsters, the shit really hits the fan in these adventures (and the PCs are usually in the middle of it).
+#Escape: The PCs are captives, prisoners, slaves, or otherwise locked up, and they have to escape. Escape adventures feature prison breaks, elaborate plans, sneaking up on guards, high tension, stealth, diversion, and often a thrilling chase scene.
+#Escort: This type has fewer variations than most, but it’s a classic: guarding a caravan and escorting someone from point A to point B are the main variants. These adventures feature ambushes, situations that endanger the escorted character(s), bonding between escorts and escorted, narrow escapes, and thrilling set-piece chases. (Delivering a thing, instead? That’s Delivery, above.)
+#Espionage: Espionage-themed adventures feature spying, subterfuge, learning or exposing secrets, clandestine activities, conspiracies, skullduggery, and conflict in the shadows. The PCs can be spies (professionals or thrust into the role), spymasters, or unwitting participants.
+#Exploration: A new planet, continent, jumpgate destination, dimension, or sealed tomb awaits! Someplace new needs discovering, or has just been discovered, or someplace lost has been found again, and the PCs must explore this new land, planet, plane, or dungeon.
+#Heist: Heist scenarios revolve around stealing something important or preventing it from being stolen, depending on which side you’re on. They often involve elaborate plans, disguises, breaking and entering, shady characters, and people getting double-crossed.
+#Investigation: Investigation-themed adventures revolve around being presented with a mystery and getting to the bottom of it through detective work, science, research, poking around crime scenes, questioning witnesses and suspects, cracking codes, and similar activities.
+#Journey: The real focus of these adventures is getting there, not what happens when you get there: arduous desert treks, perilous ocean voyages, interdimensional travel, traversing monster-haunted swamps, running silent while cruising through enemy space, and the like all fit the bill.
+#Morality: Adventures about morality have a message, or they communicate a broader truth like “All people are created equal” or “Revenge is a never-ending cycle of violence.” It’s easy to be too heavy handed with the scenarios, and they don’t fit in many games — but when they work, they can pack an emotional punch.
+#Piracy: The PCs are pirates, thugs, or vagabonds, and they ply the seven seas/space lanes/planar rivers seeking treasure. Alternately, the PCs are privateers or naval officers tasked with stamping out piracy.
+#Quest: If a MacGuffin is involved, the PCs are probably on a quest. While lots of adventures can be quests, in this context it’s like a Grail quest: Object X will solve Problem Y, and you need to go get it. Along the way, many hardships will be overcome (and sometimes someone else is after it as well).
+#Religion: Adventures themed around religion can involve holy quests, schisms, brainwashed cultists, religious discrimination, exorcism, oracles, spiritual awakenings, church machinations, and more.
+#Rescue: In a rescue adventure, one or more people are in terrible danger, in prison, enslaved, or otherwise need to be saved, broken out, or freed from their captors by the PCs. (If the PCs are the captives, that’s Escape.)
+#Resistance: Resistance adventures involve the underdogs fighting against those in power through subterfuge, raids, guerrilla tactics, underground operations, and asymmetrical warfare — think Robin Hood.
+#Shepherd: In this type of adventure, the PCs are leaders, guides, or protectors of a community. They could be the rulers of a village, a city, or a kingdom; tasking with protecting a spaceport; or in charge of establishing a new colony — the key element is that the community is theirs to safeguard.
+#Survival: The PCs are in a strange place (or a familiar place, but lacking resources), and they need to survive or help others survive. These adventures feature scavenging, resource management, threats to food stores, hostile people or creatures who want what little you have, living off the land, and struggling just to live another day.
+#Trade: Trade adventures revolve around things like brokering deals, securing trade agreements, wheeling and dealing, smuggling, scams, scuttling deals, mediating trade disputes, and stealing cargo.
+#War: Adventures themed around war can involve sieges (besieged or besieging), conquest, defending territory, leading armies, crashing the city gates, playing generals, acting as scouts, guerrilla warfare, and a host of similar activities.
