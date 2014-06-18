@@ -9,7 +9,7 @@ LPUSH artwork_metal electrum
 LPUSH artwork_metal gold
 LPUSH artwork_metal brass
 LPUSH artwork_metal steel
-LPUSH artwork_metal aluminium
+LPUSH artwork_metal aluminum
 
 #gems pulled from Gem.py
 
@@ -72,9 +72,9 @@ LPUSH artwork_template ceremonial {{params.metal}} {{params.weapon}} with a {{pa
 LPUSH artwork_template {{params.metal}}-embroidered {{params.cloth_item}}
 LPUSH artwork_template embroidered and bejeweled {{params.cloth_item}}
 LPUSH artwork_template embroidered {{params.clothmaterial}} {{params.cloth_item}} with numerous {{params.gem.kind_description['name']|pluralize(2)}}
-LPUSH artwork_template eyepatch with mock eye of {{params.gem.kind_description['name']}} and {{params.gem.kind_description['name']}}
+LPUSH artwork_template eye patch with mock eye of {{params.gem.kind_description['name']}} and {{params.gem.kind_description['name']}}
 LPUSH artwork_template finely wrought small {{params.metal}} bracelet
-LPUSH artwork_template {{params.gem.kind_description['name']}} {{params.jewlery}} on a fine {{params.metal}} chain
+LPUSH artwork_template {{params.gem.kind_description['name']}} {{params.jewelry}} on a fine {{params.metal}} chain
 LPUSH artwork_template {{params.metal}} and {{params.gem.kind_description['name']}} {{params.jewelry}}
 LPUSH artwork_template {{params.metal}} {{params.item}} with {{params.gem.kind_description['name']}}
 LPUSH artwork_template {{params.metal}} {{params.item_decoration}} {{params.item}} with {{params.gem.kind_description['name']}} eye
@@ -290,7 +290,7 @@ LPUSH artwork_template jeweled {{params.metal}} {{params.jewelry}}
 #bronze skull
 #bronze statue (of a boar) inlaid with electrum
 #bronze statue (of a god of good) inlaid with silver
-#bronze statue (of a halfling sorceror) wreathed in continual flame
+#bronze statue (of a halfling sorcerer) wreathed in continual flame
 #bronze stele
 #bronze stele set with aquamarine
 #bronze sundial

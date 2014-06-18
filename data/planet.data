@@ -23,7 +23,7 @@ ZADD planet_atmosphere 10  {"name":"meager",   "opacity":0.10,  "score":10   }
 ZADD planet_atmosphere 25  {"name":"slight",   "opacity":0.30,  "score":25   } 
 ZADD planet_atmosphere 75  {"name":"average",  "opacity":0.50,  "score":75   } 
 ZADD planet_atmosphere 85  {"name":"thick",    "opacity":0.70,  "score":85   } 
-ZADD planet_atmosphere 95  {"name":"heavt",    "opacity":0.90,  "score":95   } 
+ZADD planet_atmosphere 95  {"name":"heavy",    "opacity":0.90,  "score":95   } 
 ZADD planet_atmosphere 100 {"name":"dense",    "opacity":0.99,  "score":100   } 
 
 

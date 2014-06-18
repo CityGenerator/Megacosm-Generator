@@ -31,7 +31,7 @@ LPUSH naturalresource_crop_product peas
 LPUSH naturalresource_crop_product rye
 LPUSH naturalresource_crop_product squash
 LPUSH naturalresource_crop_product zucchini
-LPUSH naturalresource_crop_product brussels sprouts
+LPUSH naturalresource_crop_product brussel sprouts
 LPUSH naturalresource_crop_product cotton
 LPUSH naturalresource_crop_product coconuts
 LPUSH naturalresource_crop_product grains

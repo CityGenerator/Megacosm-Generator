@@ -61,7 +61,7 @@ HSET flagcolor_description grey               {"name":"grey",              "hex"
 HSET flagcolor_description darkgrey           {"name":"dark grey",         "hex":"#666666",  "verb":"conform",    "adverb":"impartially"      }
 HSET flagcolor_description verydarkgrey       {"name":"very dark grey",    "hex":"#333333",  "verb":"control",    "adverb":"reliably"         }
 HSET flagcolor_description lightbrown         {"name":"light brown",       "hex":"#996600",  "verb":"endure",     "adverb":"safely"           }
-HSET flagcolor_description brown              {"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"soldily"          }
+HSET flagcolor_description brown              {"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"solidly"          }
 HSET flagcolor_description darkbrown          {"name":"dark brown",        "hex":"#330000",  "verb":"balance",    "adverb":"naturally"        }
 HSET flagcolor_description purple             {"name":"purple",            "hex":"#660099",  "verb":"rule",       "adverb":"majestically"     }
 HSET flagcolor_description black              {"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }

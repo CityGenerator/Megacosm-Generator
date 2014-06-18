@@ -52,6 +52,9 @@ CONFIG.read('data/config.ini')
 URL = CONFIG.get('redis', 'url')
 server = redis.from_url(URL)
 
+#logfile= open(CONFIG.get('logging', 'path'))
+#logging.config.dictConfig(json.load(logfile))
+
 # This thing here.. does stuff.
 app = Flask(__name__)
 
@@ -803,10 +806,6 @@ def flag_builder():
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
-
-
-
-
 #########################################################################
 #########################################################################
 #########################################################################
@@ -895,7 +894,6 @@ def select_conjunction(wordlist):
     """Join a list with commas and such."""
     return Filters.select_conjunction(wordlist)
 
-
 @app.template_filter('plural_verb')
 def select_plural_verb(verb, subject):
     """select the proper plural verb."""
@@ -909,11 +907,9 @@ def select_plural_adj(adj, subject):
     return Filters.select_plural_adj(adj, subject)
 
 if __name__ == '__main__':
-
-    logfile= open(CONFIG.get('logging', 'path'))
-    logging.config.dictConfig(json.load(logfile))
-
     app.debug = True
     app.run()
 
+if CONFIG.has_option('main', 'debug'):
+    app.debug = CONFIG.getboolean('main', 'debug')
 
