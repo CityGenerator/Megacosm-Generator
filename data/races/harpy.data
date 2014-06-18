@@ -1,0 +1,55 @@
+#
+
+LPUSH npc_race harpy
+
+SET harpy_details {"name": "Harpy", "size": "medium",  "description": "winged and feathered feral humanoid with a greedy reputation"}
+
+LPUSH harpy_covering feathers
+
+ZADD harpy_name_order 100 { "name":"first" }
+
+HSET harpy_name_first  pre 100
+HSET harpy_name_first  post 100
+
+LPUSH harpy_name_first_pre Ae
+LPUSH harpy_name_first_pre Ocy
+LPUSH harpy_name_first_pre Cela
+LPUSH harpy_name_first_pre Pod
+LPUSH harpy_name_first_pre Nico
+LPUSH harpy_name_first_pre Achi
+LPUSH harpy_name_first_pre Aga
+LPUSH harpy_name_first_pre Aphro
+LPUSH harpy_name_first_pre Daph
+LPUSH harpy_name_first_pre Dor
+LPUSH harpy_name_first_pre Elek
+LPUSH harpy_name_first_pre Eva
+LPUSH harpy_name_first_pre Fron
+LPUSH harpy_name_first_pre Gia
+LPUSH harpy_name_first_pre Hath
+LPUSH harpy_name_first_pre Hy
+LPUSH harpy_name_first_pre Io
+LPUSH harpy_name_first_pre Kassa
+LPUSH harpy_name_first_pre Mel
+LPUSH harpy_name_first_pre My
+LPUSH harpy_name_first_pre Nata
+LPUSH harpy_name_first_pre Oly
+LPUSH harpy_name_first_pre Pan
+
+LPUSH harpy_name_first_post llo
+LPUSH harpy_name_first_post pete
+LPUSH harpy_name_first_post eno
+LPUSH harpy_name_first_post arge
+LPUSH harpy_name_first_post thoe
+LPUSH harpy_name_first_post dora
+LPUSH harpy_name_first_post thys
+LPUSH harpy_name_first_post rine
+LPUSH harpy_name_first_post pias
+LPUSH harpy_name_first_post tine
+LPUSH harpy_name_first_post ibe
+LPUSH harpy_name_first_post andra
+LPUSH harpy_name_first_post thea
+LPUSH harpy_name_first_post rinna
+LPUSH harpy_name_first_post isto
+LPUSH harpy_name_first_post bel
+
+
