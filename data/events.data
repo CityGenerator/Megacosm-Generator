@@ -41,7 +41,7 @@ LPUSH event_kind trial
 LPUSH eventtrial_variety a murder
 LPUSH eventtrial_variety a witch
 LPUSH eventtrial_variety a spy
-LPUSH eventtrial_variety a briggand
+LPUSH eventtrial_variety a brigand
 LPUSH eventtrial_variety a thief
    
 LPUSH event_kind war

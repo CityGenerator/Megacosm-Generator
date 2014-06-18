@@ -1,16 +1,15 @@
 
-import math
-import random
-import json
+from generators.Continent import Continent
 from generators.Generator import Generator
 from generators.Moon import Moon
-from generators.Continent import Continent
-import pprint
+import logging
+import random
 
 class Planet(Generator):
 
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         self.add_moons()
 
     def add_continents(self):

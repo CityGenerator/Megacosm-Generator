@@ -1,0 +1,5 @@
+# Ignore everything in this directory
+# This is needed to make the log directory show up.
+*
+# Except this file
+!.gitignore

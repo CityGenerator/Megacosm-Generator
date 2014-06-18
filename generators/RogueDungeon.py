@@ -1,18 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import math
-import random
-import json
 from generators.Generator import Generator
-from util import Seeds
-
-import sys
-import pprint
+import json
+import logging
+import random
 
 class RogueDungeon(Generator):
     def __init__(self, redis, features={}):
         """ Generate a Rogue-like dungeon """
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         self.generate_features('dungeon')
 
         self.apply_text_template()
@@ -72,7 +69,6 @@ class RogueDungeon(Generator):
                     self.connect_rooms( room, previous_room )
                     room.kind=self.rand_value('roguedungeonroom_kind')
                     kinddesc=self.redis.hmget("roguedungeonroom_kind_description",room.kind )
-                    print kinddesc
                     room.kind_description=json.loads(kinddesc[0] )
                 previous_room=room
 
@@ -114,7 +110,6 @@ class RogueDungeon(Generator):
             self.paint_v_tunnel(new_room.center['y'], old_room.center['y'], old_room.center['x'])
         else:
             #startroom old_room
-            print "mapping from ",new_room.center['y'], "to",old_room.center['y'],"along",new_room.center['x']
             self.paint_v_tunnel(new_room.center['y'], old_room.center['y'], new_room.center['x'])
             self.paint_h_tunnel(new_room.center['x'], old_room.center['x'], old_room.center['y'])
 
@@ -161,7 +156,6 @@ class RogueDungeon(Generator):
             for cell in row:
                 output+=str(cell)+" "
             output+="\n"
-        print output
         return output
 
 

@@ -69,7 +69,7 @@ LPUSH jobposting_detail for further details
 LPUSH jobposting_critter squirrels
 LPUSH jobposting_critter rats
 LPUSH jobposting_critter stirge
-LPUSH jobposting_critter carniverous butterflies
+LPUSH jobposting_critter carnivorous butterflies
 LPUSH jobposting_critter rabbits
 LPUSH jobposting_critter gremlins
 LPUSH jobposting_critter giant spiders
@@ -152,7 +152,7 @@ LPUSH jobposting_testitem grog
 LPUSH jobposting_testitem artifact
 LPUSH jobposting_testitem non-lethal poison
 LPUSH jobposting_testitem armor
-LPUSH jobposting_testitem tincure
+LPUSH jobposting_testitem tincture
 LPUSH jobposting_testitem taste
     
 LPUSH jobposting_supplies certain supplies
@@ -239,7 +239,7 @@ LPUSH jobposting_hazardlocation my business
 LPUSH jobposting_hazardlocation my shop
 LPUSH jobposting_hazardlocation a cave outside town
 LPUSH jobposting_hazardlocation an abandoned building
-LPUSH jobposting_hazardlocation the abanoned temple outside of town
+LPUSH jobposting_hazardlocation the abandoned temple outside of town
 
 LPUSH jobposting_rarelanguage abyssal
 LPUSH jobposting_rarelanguage aquan

@@ -37,6 +37,8 @@ from generators import Flag
 from util.Seeds import set_seed
 from generators import Organization
 from util import Filters
+import logging
+import logging.config
 import redis
 import ConfigParser
 import datetime
@@ -49,6 +51,9 @@ CONFIG.read('data/config.ini')
 
 URL = CONFIG.get('redis', 'url')
 server = redis.from_url(URL)
+
+#logfile= open(CONFIG.get('logging', 'path'))
+#logging.config.dictConfig(json.load(logfile))
 
 # This thing here.. does stuff.
 app = Flask(__name__)
@@ -271,7 +276,7 @@ def misfire_builder():
 def generatecurrency():
     """Generate a currency"""
     features = feature_filter('currency')
-    titletext = 'Space Some Change?'
+    titletext = 'Spare Some Change?'
     features['npc'] = NPC.NPC(server)
     if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
         currencys = []
@@ -801,10 +806,6 @@ def flag_builder():
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
-
-
-
-
 #########################################################################
 #########################################################################
 #########################################################################
@@ -820,7 +821,7 @@ def feature_filter(generator):
     genregex = re.compile('^'+generator+'_[a-z_]+$')
     genrollregex = re.compile('^'+generator+'_[a-z_]+_(roll|chance)$')
 
-    print "MAH SEED:", app.seed, request.args.get('seed')
+    app.logger.info('Request Seed: %i', app.seed)
     features = {'seed':app.seed, }
     for param in request.args:
         if genrollregex.match(param) and isvalidscore(request.args[param]):
@@ -893,7 +894,6 @@ def select_conjunction(wordlist):
     """Join a list with commas and such."""
     return Filters.select_conjunction(wordlist)
 
-
 @app.template_filter('plural_verb')
 def select_plural_verb(verb, subject):
     """select the proper plural verb."""
@@ -906,11 +906,10 @@ def select_plural_adj(adj, subject):
     #FIXME is this correct? or is it count-based?
     return Filters.select_plural_adj(adj, subject)
 
-
 if __name__ == '__main__':
     app.debug = True
     app.run()
 
-
-
+if CONFIG.has_option('main', 'debug'):
+    app.debug = CONFIG.getboolean('main', 'debug')
 

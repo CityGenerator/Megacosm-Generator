@@ -20,7 +20,7 @@ SET naturalresource_forests_method harvests
 LPUSH naturalresource_forests_product lumber
 
 LPUSH naturalresource_forests_product ash 
-LPUSH naturalresource_forests_product banyon wood
+LPUSH naturalresource_forests_product banyan wood
 LPUSH naturalresource_forests_product black locust wood
 LPUSH naturalresource_forests_product buckeye wood
 LPUSH naturalresource_forests_product cedar wood

@@ -8,7 +8,7 @@ ZADD resource_ubiquity 100 {  "name":"not specific",       "score":100       }
 ZADD resource_utility   50 {  "name":"useless",         "score":50       }
 ZADD resource_utility  100 {  "name":"useful",          "score":100      }
 
-#Value- what do people consider this? (can be recalulated rather than randomly selected)
+#Value- what do people consider this? (can be recalculated rather than randomly selected)
 # slippers are often seen as a _______ resource.
 ZADD resource_value   50 {  "name":"inexpensive",         "score":50       }
 ZADD resource_value  100 {  "name":"valuable",          "score":100      }

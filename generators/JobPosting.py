@@ -1,17 +1,13 @@
 
-import math
-import random
-import json
+from generators.Business import Business
 from generators.Generator import Generator
 from generators.NPC import NPC
-from generators.Business import Business
-#from City import City
-
-import pprint
+import logging
 
 class JobPosting(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
         
         for field in [ 'contact','npc']:
             if not hasattr(self,field):

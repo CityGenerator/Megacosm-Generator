@@ -14,7 +14,6 @@ apt-get install git python-dev python-virtualenv redis
 * make sure you have python's virtualenv installed
 * set up Redis or (have access to one, like redistogo).
 
-
 On the first run, do the following:
 
 ```bash
@@ -35,19 +34,20 @@ On the first run, do the following:
     python scripts/reimport_data.py
 
     # start the server
-    python megacosm.py
+    ./Start
+    # View the app in your browser at http://127.0.0.1:8000/
 ```
 
 After that, you just need to use this:
 
 ```bash
     source env/bin/activate
-    python megacosm.py
+    ./Start
 ```
 
 To try your unit tests, run 
 
 ```bash
-    nosetests tests/
+    nosetests
 ```
 
