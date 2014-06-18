@@ -43,7 +43,7 @@ LPUSH npc_profession forester
 LPUSH npc_profession furrier
 LPUSH npc_profession glassmaker
 LPUSH npc_profession glovemaker
-LPUSH npc_profession good samaritan
+LPUSH npc_profession good Samaritan
 LPUSH npc_profession grocer
 LPUSH npc_profession handyman
 LPUSH npc_profession harness maker

@@ -2,7 +2,7 @@
 
 LPUSH npc_race orc
 
-SET orc_details        {"name": "Orc",        "size": "medium",  "description": "underbite and ferocious demeanor"}
+SET orc_details        {"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}
 
 LPUSH orc_covering skin
 

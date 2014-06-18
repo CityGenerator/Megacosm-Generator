@@ -4,7 +4,7 @@
 ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
 ZADD sect_acceptance  10 {"name":"blasphemous",  "score":10   } 
 ZADD sect_acceptance  15 {"name":"sectarian",  "score":15   } 
-ZADD sect_acceptance  20 {"name":"rebelious",  "score":20   } 
+ZADD sect_acceptance  20 {"name":"rebellious",  "score":20   } 
 ZADD sect_acceptance  25 {"name":"defecting",  "score":25   } 
 ZADD sect_acceptance  30 {"name":"dissenting",  "score":30   } 
 ZADD sect_acceptance  35 {"name":"agitating",  "score":35   } 
@@ -16,7 +16,7 @@ ZADD sect_acceptance  60 {"name":"honorable",  "score":60   }
 ZADD sect_acceptance  65 {"name":"noble",  "score":65   } 
 ZADD sect_acceptance  70 {"name":"loyal",  "score":70   } 
 ZADD sect_acceptance  75 {"name":"dutiful",  "score":75   } 
-ZADD sect_acceptance  80 {"name":"reverant",  "score":80   } 
+ZADD sect_acceptance  80 {"name":"reverent",  "score":80   } 
 ZADD sect_acceptance  85 {"name":"devout",  "score":85   } 
 ZADD sect_acceptance  90 {"name":"virtuous",  "score":90   } 
 ZADD sect_acceptance  95 {"name":"righteous",  "score":95   } 
@@ -43,7 +43,7 @@ SET   name_secttitle_chance 30
 LPUSH name_secttitle Order of the 
 LPUSH name_secttitle Message of the
 LPUSH name_secttitle Pilgrims of 
-LPUSH name_secttitle Bretheren of
+LPUSH name_secttitle Brethren of
 LPUSH name_secttitle Church of the 
 LPUSH name_secttitle Reformed
 LPUSH name_secttitle Sacred

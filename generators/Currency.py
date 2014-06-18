@@ -1,25 +1,22 @@
 
-import random
-import json
 from generators.Generator import Generator
-from generators.NPC import  NPC
-from jinja2 import Template
-from jinja2.environment import Environment
-from util import Filters
-
+from generators.NPC import NPC
+import logging
+import random
 
 class Currency(Generator):
     """ Define a currency to be used in your game """
     def __init__(self, redis, features={}):
 
         Generator.__init__(self,redis,features)
+        self.logger=logging.getLogger(__name__)
 
         if not hasattr(self, 'count'):
             self.count=random.randint(self.amount['min'],self.amount['max'])
         # Perhaps your currency has a person on it- a king, queen, etc.
         if not hasattr(self,'npc'):
             setattr(self,'npc',NPC(self.redis))
-
+        self.logger.error('test')
         # Double parse the template to fill in templated template values.
         if not hasattr(self,'text'):
             self.text=self.render_template(self.template)

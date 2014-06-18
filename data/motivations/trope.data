@@ -1,13 +1,13 @@
 #bob is motivated
 
 LPUSH motivationtrope_text to repay the loyalty of someone
-LPUSH motivationtrope_text to recover from a disasterous mistake
+LPUSH motivationtrope_text to recover from a disastrous mistake
 LPUSH motivationtrope_text to help everyone
 LPUSH motivationtrope_text to find the meaning behind a certain word.
 LPUSH motivationtrope_text to find the best person to be {{params.npc.sex['possessive']}} {{params.npc.sex['spouse']}}
 LPUSH motivationtrope_text to repay a debt before something bad happens
 LPUSH motivationtrope_text to protect an important person
-LPUSH motivationtrope_text to protect a vulnberable person
+LPUSH motivationtrope_text to protect a vulnerable person
 LPUSH motivationtrope_text to find a purpose in life
 LPUSH motivationtrope_text to find a meaningful place in the world
 LPUSH motivationtrope_text to do anything to get what {{params.npc.sex['he']}} wants
