@@ -1,6 +1,6 @@
 
 # Bob is motivated
 
-LPUSH motivationlimits_text to set boundries that keep people safe
-LPUSH motivationlimits_text to find the boundries of safety
+LPUSH motivationlimits_text to set boundaries that keep people safe
+LPUSH motivationlimits_text to find the boundaries of safety
 LPUSH motivationlimits_text to enforce safe limitations

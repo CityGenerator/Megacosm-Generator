@@ -1,18 +1,11 @@
 
-from noise import snoise2
-import math
-import random
-import json
 from generators.Generator import Generator
-#from City import City
-
-import pprint
+import logging
 
 class Event(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self,redis,features)
-        
-
+        self.logger=logging.getLogger(__name__)
 
         self.generate_features('event'+self.kind )
 

@@ -30,7 +30,7 @@ LPUSH skin_skincolor bronze
 LPUSH skin_skincolor brown
 LPUSH skin_skincolor burnt sienna
 LPUSH skin_skincolor butterscotch
-LPUSH skin_skincolor chesnut
+LPUSH skin_skincolor chestnut
 LPUSH skin_skincolor chocolate
 LPUSH skin_skincolor cinnamon
 LPUSH skin_skincolor cocoa

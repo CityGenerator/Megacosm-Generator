@@ -212,13 +212,13 @@ LPUSH misfire_template {{params.target}} suddenly suffer from acute, powerful an
 LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.distance}} {{params.direction}} of you.
 LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
 LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
-LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin colour.  A remove curse may remove them.
+LPUSH misfire_template {{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin color.  A remove curse may remove them.
 
 LPUSH misfire_template A strong {{params.taste}} taste affects {{params.target}}.
 LPUSH misfire_template A faeries dance affects {{params.target}}.
 LPUSH misfire_template {{params.target}} emits the scent of a predator for the next hour.  Domestic animals become hostile.
 LPUSH misfire_template Absolutely nothing happens (time is stopped for {{params.duration}}).
-LPUSH misfire_template A swarm of viscious rats surround {{params.target}} and attack after a few moments of confusion.
+LPUSH misfire_template A swarm of vicious rats surround {{params.target}} and attack after a few moments of confusion.
 LPUSH misfire_template {{params.target}} thirst is quenched for 1d4 days.  No ill effects from dehydration.
 LPUSH misfire_template Spell is delayed for several seconds and has half the effect.
 LPUSH misfire_template Spell fails
@@ -274,7 +274,7 @@ LPUSH misfire_template {{params.target}} get a random disease.
 #LPUSH misfire_template {{params.target}} glows bright blue, permanently.
 #LPUSH misfire_template {{params.target}} is charmed as per charm monster
 #LPUSH misfire_template {{params.target}} is imprisoned on another plane.
-#LPUSH misfire_template {{params.target}} become colour blind for 1d3 weeks.
+#LPUSH misfire_template {{params.target}} become color blind for 1d3 weeks.
 #LPUSH misfire_template A desert oasis grows around the {{params.target}}.
 #LPUSH misfire_template A stinking cloud centers on the {{params.target}}.
 #LPUSH misfire_template Burst of fireworks (harmless but neat).
@@ -300,8 +300,8 @@ LPUSH misfire_template {{params.target}} get a random disease.
 #LPUSH misfire_template A minor air elemental offers you its help.
 #LPUSH misfire_template Caster is affected by a Hold Person spell.
 #LPUSH misfire_template Caster is temporarily blinded for 2d4 days
-#LPUSH misfire_template Colour sprays from the caster's fingertips
-#LPUSH misfire_template Silence, 15 ft kkradius centers on caster.
+#LPUSH misfire_template Color sprays from the caster's fingertips
+#LPUSH misfire_template Silence, 15 ft radius centers on caster.
 #LPUSH misfire_template Spell goes off normally, no extra effects.
 #LPUSH misfire_template {{params.target}} shot with 1d10 darts (1d4 dam each)
 #LPUSH misfire_template A giant sock appears in the {{params.target}}'s mouth.

@@ -23,12 +23,14 @@ LPUSH mundaneitem_kind adjustable height stool
 LPUSH mundaneitem_kind adjustable wrench
 LPUSH mundaneitem_kind adventurers clothing
 LPUSH mundaneitem_kind air bladder
-LPUSH mundaneitem_kind alchemist's alchohol
+LPUSH mundaneitem_kind alchemist's alcohol
 LPUSH mundaneitem_kind all purpose leather gloves
 LPUSH mundaneitem_kind aluminum tube
 LPUSH mundaneitem_kind animal call
 LPUSH mundaneitem_kind ankh staff
 LPUSH mundaneitem_kind anvil
+LPUSH mundaneitem_kind apple
+LPUSH mundaneitem_kind archer's bracer
 LPUSH mundaneitem_kind arctic camouflage
 LPUSH mundaneitem_kind armor care kit
 LPUSH mundaneitem_kind arrow quiver
@@ -40,23 +42,31 @@ LPUSH mundaneitem_kind assorted wooden colored/decorative bead
 LPUSH mundaneitem_kind assorted wooden plain bead
 LPUSH mundaneitem_kind auger
 LPUSH mundaneitem_kind axle
+LPUSH mundaneitem_kind baby rattle
 LPUSH mundaneitem_kind backpack
 LPUSH mundaneitem_kind ball and chain
 LPUSH mundaneitem_kind bamboo
 LPUSH mundaneitem_kind bandages
+LPUSH mundaneitem_kind bandoleer
 LPUSH mundaneitem_kind banner
+LPUSH mundaneitem_kind bar of copper
 LPUSH mundaneitem_kind barbed wire
 LPUSH mundaneitem_kind bardiche
 LPUSH mundaneitem_kind barrel
+LPUSH mundaneitem_kind barrel filled with iron nails
+LPUSH mundaneitem_kind basalt statue of a raven
 LPUSH mundaneitem_kind basic lock
 LPUSH mundaneitem_kind basket
 LPUSH mundaneitem_kind basket-hilt broadsword
 LPUSH mundaneitem_kind bat'leth
 LPUSH mundaneitem_kind battle book
-LPUSH mundaneitem_kind battlehammer
+LPUSH mundaneitem_kind battle pennant
 LPUSH mundaneitem_kind battle scythe
+LPUSH mundaneitem_kind battleaxe
+LPUSH mundaneitem_kind battlehammer
 LPUSH mundaneitem_kind beacon lantern
 LPUSH mundaneitem_kind bear trap
+LPUSH mundaneitem_kind beaver pelt
 LPUSH mundaneitem_kind bedroll
 LPUSH mundaneitem_kind bell
 LPUSH mundaneitem_kind bellows
@@ -64,41 +74,58 @@ LPUSH mundaneitem_kind belly bow
 LPUSH mundaneitem_kind belt
 LPUSH mundaneitem_kind belt pouch
 LPUSH mundaneitem_kind bird cage
-LPUSH mundaneitem_kind blackbark wine
+LPUSH mundaneitem_kind bit and bridle
 LPUSH mundaneitem_kind black egg
+LPUSH mundaneitem_kind black leather collar
+LPUSH mundaneitem_kind black linen robe
+LPUSH mundaneitem_kind blackbark wine
+LPUSH mundaneitem_kind blacksmith's puzzle
 LPUSH mundaneitem_kind blackwater ale
 LPUSH mundaneitem_kind blank book/journal
 LPUSH mundaneitem_kind blanket
 LPUSH mundaneitem_kind block & tackle
 LPUSH mundaneitem_kind blood berry
 LPUSH mundaneitem_kind blood moss
+LPUSH mundaneitem_kind blood-soaked book
 LPUSH mundaneitem_kind blowgun
 LPUSH mundaneitem_kind body sleigh
 LPUSH mundaneitem_kind bolt cutters
+LPUSH mundaneitem_kind bolt of green-dyed linen
 LPUSH mundaneitem_kind bolts
 LPUSH mundaneitem_kind bone dice
 LPUSH mundaneitem_kind bone joint straps
 LPUSH mundaneitem_kind bone needle
 LPUSH mundaneitem_kind bone scroll tube
 LPUSH mundaneitem_kind book of animal handling
+LPUSH mundaneitem_kind book of bad poetry
 LPUSH mundaneitem_kind book of skill
+LPUSH mundaneitem_kind book of wood-bound paper
 LPUSH mundaneitem_kind bowstring
 LPUSH mundaneitem_kind bracelet
 LPUSH mundaneitem_kind braces
 LPUSH mundaneitem_kind branding iron
+LPUSH mundaneitem_kind branding-iron
 LPUSH mundaneitem_kind brandistock
+LPUSH mundaneitem_kind brass candlestick
+LPUSH mundaneitem_kind broad dagger
 LPUSH mundaneitem_kind broad girdle
 LPUSH mundaneitem_kind broad shield
+LPUSH mundaneitem_kind broken crockery
+LPUSH mundaneitem_kind broken dagger
+LPUSH mundaneitem_kind broken lance
 LPUSH mundaneitem_kind bronze
+LPUSH mundaneitem_kind bronze bell
+LPUSH mundaneitem_kind bronze caltrop
 LPUSH mundaneitem_kind bronze piece
+LPUSH mundaneitem_kind bronze statuette
+LPUSH mundaneitem_kind bronze wall sconce
 LPUSH mundaneitem_kind brooch
 LPUSH mundaneitem_kind broom
 LPUSH mundaneitem_kind brush machete
 LPUSH mundaneitem_kind bubbleweed
 LPUSH mundaneitem_kind bucket
-LPUSH mundaneitem_kind bucket
 LPUSH mundaneitem_kind buckler
-LPUSH mundaneitem_kind bullseye lantern
+LPUSH mundaneitem_kind bulls-eye lantern
 LPUSH mundaneitem_kind buster sword
 LPUSH mundaneitem_kind butcher axe
 LPUSH mundaneitem_kind caltrops
@@ -113,23 +140,33 @@ LPUSH mundaneitem_kind cape
 LPUSH mundaneitem_kind carabiner
 LPUSH mundaneitem_kind carnival-type face mask
 LPUSH mundaneitem_kind cask
+LPUSH mundaneitem_kind cat skeleton
 LPUSH mundaneitem_kind cauldron
 LPUSH mundaneitem_kind cavalry saber
+LPUSH mundaneitem_kind cedar cask
+LPUSH mundaneitem_kind ceramic canopic jars
 LPUSH mundaneitem_kind ceremonial robes
 LPUSH mundaneitem_kind chain link
 LPUSH mundaneitem_kind chain shirt
 LPUSH mundaneitem_kind chalk
 LPUSH mundaneitem_kind chalk powder
+LPUSH mundaneitem_kind chamber pot
 LPUSH mundaneitem_kind chaps
 LPUSH mundaneitem_kind charcoal
 LPUSH mundaneitem_kind cheese
 LPUSH mundaneitem_kind chef's tools
 LPUSH mundaneitem_kind chest
+LPUSH mundaneitem_kind chicken egg
+LPUSH mundaneitem_kind child's cloth doll
 LPUSH mundaneitem_kind chisel
-LPUSH mundaneitem_kind clay/beeswax block
+LPUSH mundaneitem_kind chunk of coal
+LPUSH mundaneitem_kind chunk of raw silver ore
 LPUSH mundaneitem_kind clay jug
+LPUSH mundaneitem_kind clay marble
 LPUSH mundaneitem_kind clay mug/tankard
 LPUSH mundaneitem_kind clay pitcher
+LPUSH mundaneitem_kind clay vial of oil
+LPUSH mundaneitem_kind clay/beeswax block
 LPUSH mundaneitem_kind climbing boots
 LPUSH mundaneitem_kind climbing harness
 LPUSH mundaneitem_kind climbing irons
@@ -137,7 +174,7 @@ LPUSH mundaneitem_kind climbing pick
 LPUSH mundaneitem_kind climbing pitton
 LPUSH mundaneitem_kind clip
 LPUSH mundaneitem_kind cloak
-LPUSH mundaneitem_kind cloth component bandolier
+LPUSH mundaneitem_kind cloth component bandoleer
 LPUSH mundaneitem_kind clown's kit
 LPUSH mundaneitem_kind collapsible bamboo cage
 LPUSH mundaneitem_kind collapsible brass cage
@@ -158,6 +195,15 @@ LPUSH mundaneitem_kind common whistle
 LPUSH mundaneitem_kind complete set of carpenters tools
 LPUSH mundaneitem_kind conch poison
 LPUSH mundaneitem_kind cook book
+LPUSH mundaneitem_kind copper coin
+LPUSH mundaneitem_kind copper hand bell
+LPUSH mundaneitem_kind copper mortar and pestle
+LPUSH mundaneitem_kind copper necklace
+LPUSH mundaneitem_kind copper pipe
+LPUSH mundaneitem_kind copper pot
+LPUSH mundaneitem_kind copper scroll tube
+LPUSH mundaneitem_kind copper shield
+LPUSH mundaneitem_kind copper vial
 LPUSH mundaneitem_kind cording mallet
 LPUSH mundaneitem_kind cork
 LPUSH mundaneitem_kind corkscrew
@@ -172,13 +218,19 @@ LPUSH mundaneitem_kind cotton towel
 LPUSH mundaneitem_kind cotton tunic
 LPUSH mundaneitem_kind cotton underwear
 LPUSH mundaneitem_kind cotton vest
+LPUSH mundaneitem_kind cracked mask
 LPUSH mundaneitem_kind crampons
 LPUSH mundaneitem_kind crook
 LPUSH mundaneitem_kind crossbow
 LPUSH mundaneitem_kind crowbar
 LPUSH mundaneitem_kind crucible
+LPUSH mundaneitem_kind crude bone rod
+LPUSH mundaneitem_kind crude painting
 LPUSH mundaneitem_kind crystal ball
 LPUSH mundaneitem_kind crystal ball w/stand
+LPUSH mundaneitem_kind crystal vase
+LPUSH mundaneitem_kind crystal vial
+LPUSH mundaneitem_kind dagger sheath
 LPUSH mundaneitem_kind dark iron
 LPUSH mundaneitem_kind dark mithral
 LPUSH mundaneitem_kind dead iron
@@ -201,11 +253,16 @@ LPUSH mundaneitem_kind ear muffs
 LPUSH mundaneitem_kind ear rings
 LPUSH mundaneitem_kind earthly camouflage
 LPUSH mundaneitem_kind eku
+LPUSH mundaneitem_kind electrum pendant
+LPUSH mundaneitem_kind electrum ring
+LPUSH mundaneitem_kind elephant tusks
 LPUSH mundaneitem_kind elf bean coffee
 LPUSH mundaneitem_kind elf whistle
 LPUSH mundaneitem_kind elven battle blade
+LPUSH mundaneitem_kind empty maple-wood case
+LPUSH mundaneitem_kind ettin-hide cape
 LPUSH mundaneitem_kind expensive dress
-LPUSH mundaneitem_kind extendible metal ladder
+LPUSH mundaneitem_kind extendable metal ladder
 LPUSH mundaneitem_kind eye patch
 LPUSH mundaneitem_kind ezurian saber
 LPUSH mundaneitem_kind fauchard
@@ -213,12 +270,13 @@ LPUSH mundaneitem_kind feign death poison
 LPUSH mundaneitem_kind fermented godsblood
 LPUSH mundaneitem_kind fertilizer
 LPUSH mundaneitem_kind festive lantern
+LPUSH mundaneitem_kind figurine
 LPUSH mundaneitem_kind fine cloth
 LPUSH mundaneitem_kind finely tailored suit
 LPUSH mundaneitem_kind finger/ear/nose ring
 LPUSH mundaneitem_kind firewood
-LPUSH mundaneitem_kind fishhook
 LPUSH mundaneitem_kind fish hook
+LPUSH mundaneitem_kind fishhook
 LPUSH mundaneitem_kind fishing gear
 LPUSH mundaneitem_kind fishing net
 LPUSH mundaneitem_kind fixed 3-prong grapnel
@@ -233,11 +291,12 @@ LPUSH mundaneitem_kind flint and steel
 LPUSH mundaneitem_kind folding 3-prong grapnel
 LPUSH mundaneitem_kind folding cot
 LPUSH mundaneitem_kind folding lounge chair
-LPUSH mundaneitem_kind folding wheelbarrel
+LPUSH mundaneitem_kind folding wheelbarrow
 LPUSH mundaneitem_kind foliage camouflage
 LPUSH mundaneitem_kind footman's lance
 LPUSH mundaneitem_kind forgery kit
 LPUSH mundaneitem_kind fork, spoon and knife
+LPUSH mundaneitem_kind four pieces of charcoal
 LPUSH mundaneitem_kind frostshard ore
 LPUSH mundaneitem_kind full-length fur coat
 LPUSH mundaneitem_kind full-length leather coat
@@ -250,38 +309,43 @@ LPUSH mundaneitem_kind giant viper's poison
 LPUSH mundaneitem_kind glass
 LPUSH mundaneitem_kind glass arrows
 LPUSH mundaneitem_kind glass cutters kit
-LPUSH mundaneitem_kind glasses
 LPUSH mundaneitem_kind glass flask
 LPUSH mundaneitem_kind glass scored bead
 LPUSH mundaneitem_kind glass vial
+LPUSH mundaneitem_kind glasses
 LPUSH mundaneitem_kind glowcap mushrooms
+LPUSH mundaneitem_kind goblin skull
 LPUSH mundaneitem_kind goblin spear
 LPUSH mundaneitem_kind goggles
 LPUSH mundaneitem_kind gold holy symbol
+LPUSH mundaneitem_kind gold tooth
 LPUSH mundaneitem_kind good quality rations
 LPUSH mundaneitem_kind gossamer
 LPUSH mundaneitem_kind grapnel
 LPUSH mundaneitem_kind grappling hook
 LPUSH mundaneitem_kind great annulat
-LPUSH mundaneitem_kind greatbow
 LPUSH mundaneitem_kind great cleaver
+LPUSH mundaneitem_kind greatbow
 LPUSH mundaneitem_kind greater prosthetic limb
 LPUSH mundaneitem_kind greatspear
 LPUSH mundaneitem_kind greatstaff
-LPUSH mundaneitem_kind greives
+LPUSH mundaneitem_kind green cap
+LPUSH mundaneitem_kind grieves
 LPUSH mundaneitem_kind grek oil
+LPUSH mundaneitem_kind griffon feather
 LPUSH mundaneitem_kind groomers kit
 LPUSH mundaneitem_kind guitar
 LPUSH mundaneitem_kind hacksaw
 LPUSH mundaneitem_kind hair comb
 LPUSH mundaneitem_kind half-moon katar
 LPUSH mundaneitem_kind hammer
-LPUSH mundaneitem_kind hammmer
+LPUSH mundaneitem_kind hammer
 LPUSH mundaneitem_kind hammock
 LPUSH mundaneitem_kind hand compass
 LPUSH mundaneitem_kind hand crossbow
-LPUSH mundaneitem_kind handcuffs
+LPUSH mundaneitem_kind hand mirror
 LPUSH mundaneitem_kind hand net
+LPUSH mundaneitem_kind handcuffs
 LPUSH mundaneitem_kind hard hat
 LPUSH mundaneitem_kind hard high boots
 LPUSH mundaneitem_kind hard low boots
@@ -290,6 +354,7 @@ LPUSH mundaneitem_kind hardwood brush and comb set
 LPUSH mundaneitem_kind hardwood plank
 LPUSH mundaneitem_kind harp
 LPUSH mundaneitem_kind harpoon
+LPUSH mundaneitem_kind harpy feathers
 LPUSH mundaneitem_kind head band
 LPUSH mundaneitem_kind healers kit
 LPUSH mundaneitem_kind healing kit
@@ -300,9 +365,11 @@ LPUSH mundaneitem_kind heavy chisel
 LPUSH mundaneitem_kind heavy duty leather gloves
 LPUSH mundaneitem_kind heavy full length parka
 LPUSH mundaneitem_kind heavy fur cape
+LPUSH mundaneitem_kind heavy mace
 LPUSH mundaneitem_kind heavy waist length parka
 LPUSH mundaneitem_kind heavy war staff
 LPUSH mundaneitem_kind hemp rope
+LPUSH mundaneitem_kind hemp rope,
 LPUSH mundaneitem_kind hiding cloak
 LPUSH mundaneitem_kind high tension longbow
 LPUSH mundaneitem_kind hinge removing kit
@@ -314,8 +381,9 @@ LPUSH mundaneitem_kind honey
 LPUSH mundaneitem_kind hooded lantern
 LPUSH mundaneitem_kind hook sword
 LPUSH mundaneitem_kind horsebow
-LPUSH mundaneitem_kind hourglass
 LPUSH mundaneitem_kind hour glass
+LPUSH mundaneitem_kind hourglass
+LPUSH mundaneitem_kind human skeleton
 LPUSH mundaneitem_kind hunting horn
 LPUSH mundaneitem_kind hydrogen peroxide
 LPUSH mundaneitem_kind hypo canister
@@ -328,17 +396,23 @@ LPUSH mundaneitem_kind insect repellent
 LPUSH mundaneitem_kind investigator's kit
 LPUSH mundaneitem_kind iridium ore
 LPUSH mundaneitem_kind iron bar
+LPUSH mundaneitem_kind iron disks
 LPUSH mundaneitem_kind iron holy symbol
+LPUSH mundaneitem_kind iron pitons
 LPUSH mundaneitem_kind iron pot
-LPUSH mundaneitem_kind iron-shod staff
+LPUSH mundaneitem_kind iron tomb plaque
+LPUSH mundaneitem_kind iron torc
 LPUSH mundaneitem_kind iron wedge
+LPUSH mundaneitem_kind iron-shod staff
 LPUSH mundaneitem_kind ivory dice
+LPUSH mundaneitem_kind ivory-colored dress
 LPUSH mundaneitem_kind jack
 LPUSH mundaneitem_kind jagged hammer
+LPUSH mundaneitem_kind jar containing six eyeballs
 LPUSH mundaneitem_kind jar of paper glue
 LPUSH mundaneitem_kind jar of wood glue
 LPUSH mundaneitem_kind javelin quiver
-LPUSH mundaneitem_kind jerkey
+LPUSH mundaneitem_kind jerky
 LPUSH mundaneitem_kind jesters hat
 LPUSH mundaneitem_kind jesters mantle
 LPUSH mundaneitem_kind jewelers/appraisers eyepiece
@@ -360,45 +434,56 @@ LPUSH mundaneitem_kind large belt pouch
 LPUSH mundaneitem_kind large cloak/cape
 LPUSH mundaneitem_kind large crowbar
 LPUSH mundaneitem_kind large iron box
+LPUSH mundaneitem_kind large iron ingots
 LPUSH mundaneitem_kind large iron spike
 LPUSH mundaneitem_kind large metal bead dispenser tube
 LPUSH mundaneitem_kind large mirror
-LPUSH mundaneitem_kind large paintbrush
 LPUSH mundaneitem_kind large paint brush
+LPUSH mundaneitem_kind large paintbrush
 LPUSH mundaneitem_kind large sack
+LPUSH mundaneitem_kind large sheet of paper
 LPUSH mundaneitem_kind large shoulder pouch
 LPUSH mundaneitem_kind large silk parachute
 LPUSH mundaneitem_kind large tarp
 LPUSH mundaneitem_kind large tent
+LPUSH mundaneitem_kind large tome
 LPUSH mundaneitem_kind large weapon sheath
 LPUSH mundaneitem_kind large wooden chest
 LPUSH mundaneitem_kind laughing shroom
 LPUSH mundaneitem_kind leather backpack
-LPUSH mundaneitem_kind leather component bandolier
-LPUSH mundaneitem_kind leather dagger bandolier
+LPUSH mundaneitem_kind leather bag
+LPUSH mundaneitem_kind leather ball
+LPUSH mundaneitem_kind leather case
+LPUSH mundaneitem_kind leather component bandoleer
+LPUSH mundaneitem_kind leather dagger bandoleer
+LPUSH mundaneitem_kind leather harness
 LPUSH mundaneitem_kind leather mantle
 LPUSH mundaneitem_kind leather piece
+LPUSH mundaneitem_kind leather satchel
 LPUSH mundaneitem_kind leather scroll tube
+LPUSH mundaneitem_kind leather string
 LPUSH mundaneitem_kind leather tunic
 LPUSH mundaneitem_kind leather vest
-LPUSH mundaneitem_kind leatherweave
 LPUSH mundaneitem_kind leather work apron
+LPUSH mundaneitem_kind leatherweave
 LPUSH mundaneitem_kind lesser prosthetic limb
 LPUSH mundaneitem_kind level
 LPUSH mundaneitem_kind life vest
 LPUSH mundaneitem_kind light chain
-LPUSH mundaneitem_kind lightning rod
 LPUSH mundaneitem_kind light steel shield
 LPUSH mundaneitem_kind light wooden shield
+LPUSH mundaneitem_kind lightning rod
 LPUSH mundaneitem_kind loaded bone dice
 LPUSH mundaneitem_kind locket
+LPUSH mundaneitem_kind logging saw
 LPUSH mundaneitem_kind loin cloth
 LPUSH mundaneitem_kind long cotton pants
 LPUSH mundaneitem_kind long leather pants
 LPUSH mundaneitem_kind long silk pants
-LPUSH mundaneitem_kind longstaff
 LPUSH mundaneitem_kind long straps
 LPUSH mundaneitem_kind long wool pants
+LPUSH mundaneitem_kind longstaff
+LPUSH mundaneitem_kind low, three-legged stool
 LPUSH mundaneitem_kind lycanthropic saliva
 LPUSH mundaneitem_kind lyre
 LPUSH mundaneitem_kind madiera wine
@@ -409,6 +494,7 @@ LPUSH mundaneitem_kind map case
 LPUSH mundaneitem_kind mapping kit
 LPUSH mundaneitem_kind marbles
 LPUSH mundaneitem_kind mask
+LPUSH mundaneitem_kind masquerade mask
 LPUSH mundaneitem_kind medium animal leash
 LPUSH mundaneitem_kind medium iron box
 LPUSH mundaneitem_kind medium silk parachute
@@ -437,14 +523,19 @@ LPUSH mundaneitem_kind mining helmet
 LPUSH mundaneitem_kind mining pick
 LPUSH mundaneitem_kind mittens
 LPUSH mundaneitem_kind money belt
+LPUSH mundaneitem_kind monkey skull
 LPUSH mundaneitem_kind monstrous spider egg
-LPUSH mundaneitem_kind moonflower extract
 LPUSH mundaneitem_kind moon staff
+LPUSH mundaneitem_kind moonflower extract
 LPUSH mundaneitem_kind mortar & pestle set
+LPUSH mundaneitem_kind mounted boar head
 LPUSH mundaneitem_kind musical instrument
 LPUSH mundaneitem_kind nail
+LPUSH mundaneitem_kind necklace of human teeth
 LPUSH mundaneitem_kind normal girdle
+LPUSH mundaneitem_kind nose ring
 LPUSH mundaneitem_kind nut & bolt
+LPUSH mundaneitem_kind oak cane
 LPUSH mundaneitem_kind oars
 LPUSH mundaneitem_kind obsidian
 LPUSH mundaneitem_kind oil (1-pint flask)
@@ -452,11 +543,14 @@ LPUSH mundaneitem_kind oil based colored paint
 LPUSH mundaneitem_kind oil based white wash paint
 LPUSH mundaneitem_kind one piece camouflage utility jumpsuit
 LPUSH mundaneitem_kind one piece utility jumpsuit
+LPUSH mundaneitem_kind one-gallon cask of Demon's Vale Wine
 LPUSH mundaneitem_kind oranges
 LPUSH mundaneitem_kind orc battle-blade
 LPUSH mundaneitem_kind orc dreadaxe
 LPUSH mundaneitem_kind orc foodstuffs
 LPUSH mundaneitem_kind orc tribal mace
+LPUSH mundaneitem_kind orcish skull
+LPUSH mundaneitem_kind oval serving tray
 LPUSH mundaneitem_kind padded metal airtight box
 LPUSH mundaneitem_kind paddle oar
 LPUSH mundaneitem_kind page of extra fine paper
@@ -465,14 +559,22 @@ LPUSH mundaneitem_kind page of treated parchment
 LPUSH mundaneitem_kind page of untreated papyrus
 LPUSH mundaneitem_kind page of untreated parchment
 LPUSH mundaneitem_kind paint
+LPUSH mundaneitem_kind paint brush
 LPUSH mundaneitem_kind paint/dye/pigment
 LPUSH mundaneitem_kind paper sheets
 LPUSH mundaneitem_kind parchment rolled
+LPUSH mundaneitem_kind pair of bone dice
 LPUSH mundaneitem_kind parry blade
 LPUSH mundaneitem_kind pavilion
 LPUSH mundaneitem_kind pearl
+LPUSH mundaneitem_kind petrified bone
+LPUSH mundaneitem_kind pewter mug
 LPUSH mundaneitem_kind phoenix fire wine
 LPUSH mundaneitem_kind pig iron
+LPUSH mundaneitem_kind pile of coal
+LPUSH mundaneitem_kind pinewood totem
+LPUSH mundaneitem_kind pink satin pillow
+LPUSH mundaneitem_kind pipe tobacco
 LPUSH mundaneitem_kind piton
 LPUSH mundaneitem_kind pitton hammer
 LPUSH mundaneitem_kind plant fiber
@@ -485,6 +587,7 @@ LPUSH mundaneitem_kind pocket knife
 LPUSH mundaneitem_kind polearms
 LPUSH mundaneitem_kind poncho
 LPUSH mundaneitem_kind portable painting easel
+LPUSH mundaneitem_kind pouch
 LPUSH mundaneitem_kind powdered pearl
 LPUSH mundaneitem_kind prayer beads
 LPUSH mundaneitem_kind prescription eyeglasses
@@ -492,12 +595,19 @@ LPUSH mundaneitem_kind protractor
 LPUSH mundaneitem_kind prunes
 LPUSH mundaneitem_kind pulley
 LPUSH mundaneitem_kind puppet
+LPUSH mundaneitem_kind quarterstaff
 LPUSH mundaneitem_kind quill
 LPUSH mundaneitem_kind quilted studded doublet
+LPUSH mundaneitem_kind quiver
 LPUSH mundaneitem_kind rain coat
 LPUSH mundaneitem_kind ranseur
-LPUSH mundaneitem_kind rat's meat
+LPUSH mundaneitem_kind rapier
 LPUSH mundaneitem_kind rat trap
+LPUSH mundaneitem_kind rat's meat
+LPUSH mundaneitem_kind rectangular electrum sheet
+LPUSH mundaneitem_kind red chalk
+LPUSH mundaneitem_kind red flecked egg
+LPUSH mundaneitem_kind red hooded cape
 LPUSH mundaneitem_kind reel of thread
 LPUSH mundaneitem_kind refined oil
 LPUSH mundaneitem_kind repair kit
@@ -505,21 +615,28 @@ LPUSH mundaneitem_kind restraining pole
 LPUSH mundaneitem_kind retractable metal pole
 LPUSH mundaneitem_kind rich cloth
 LPUSH mundaneitem_kind ring blade
+LPUSH mundaneitem_kind rolled painting
 LPUSH mundaneitem_kind rope axe
 LPUSH mundaneitem_kind rope ladder
+LPUSH mundaneitem_kind rotted saddlebag
+LPUSH mundaneitem_kind rotting leather cap
 LPUSH mundaneitem_kind rubber ball
 LPUSH mundaneitem_kind rubber wetsuit
+LPUSH mundaneitem_kind rusted double-bladed sword
 LPUSH mundaneitem_kind sack
+LPUSH mundaneitem_kind saddle bags
 LPUSH mundaneitem_kind sandals
+LPUSH mundaneitem_kind satchel
 LPUSH mundaneitem_kind saw
 LPUSH mundaneitem_kind scarf
+LPUSH mundaneitem_kind scimitar
 LPUSH mundaneitem_kind scissors
 LPUSH mundaneitem_kind scored glass flask
 LPUSH mundaneitem_kind screw driver
 LPUSH mundaneitem_kind scroll case
 LPUSH mundaneitem_kind scroll composing ink
-LPUSH mundaneitem_kind sealing wax
 LPUSH mundaneitem_kind seal's blubber
+LPUSH mundaneitem_kind sealing wax
 LPUSH mundaneitem_kind sectioned fishing pole
 LPUSH mundaneitem_kind self dousing candle
 LPUSH mundaneitem_kind senali mask
@@ -529,10 +646,12 @@ LPUSH mundaneitem_kind sextant
 LPUSH mundaneitem_kind shaving razor
 LPUSH mundaneitem_kind sheet of untreated papyrus
 LPUSH mundaneitem_kind ships compass
+LPUSH mundaneitem_kind short bow
+LPUSH mundaneitem_kind short spear
 LPUSH mundaneitem_kind short straps
 LPUSH mundaneitem_kind shovel
-LPUSH mundaneitem_kind signalling horn
 LPUSH mundaneitem_kind signal whistle
+LPUSH mundaneitem_kind signaling horn
 LPUSH mundaneitem_kind signet ring
 LPUSH mundaneitem_kind signet/seal ring
 LPUSH mundaneitem_kind silent shoes
@@ -541,31 +660,43 @@ LPUSH mundaneitem_kind silk body suit
 LPUSH mundaneitem_kind silk rope
 LPUSH mundaneitem_kind silk sash
 LPUSH mundaneitem_kind silk shirt
+LPUSH mundaneitem_kind silk slipper
 LPUSH mundaneitem_kind silk tights
 LPUSH mundaneitem_kind silk underwear
+LPUSH mundaneitem_kind silver brooch
 LPUSH mundaneitem_kind silver brush and comb set
+LPUSH mundaneitem_kind silver chain
+LPUSH mundaneitem_kind silver coin
 LPUSH mundaneitem_kind silver holy symbol
+LPUSH mundaneitem_kind silver ring
+LPUSH mundaneitem_kind silver spoons
+LPUSH mundaneitem_kind silver whistle
 LPUSH mundaneitem_kind simple fire gloves
+LPUSH mundaneitem_kind skeleton-key
 LPUSH mundaneitem_kind ski boots
 LPUSH mundaneitem_kind ski mask
 LPUSH mundaneitem_kind skis
 LPUSH mundaneitem_kind skullcap
-LPUSH mundaneitem_kind sledgehammer
 LPUSH mundaneitem_kind sledge hammer
-LPUSH mundaneitem_kind sleeping sack
+LPUSH mundaneitem_kind sledgehammer
 LPUSH mundaneitem_kind sleep poison
+LPUSH mundaneitem_kind sleeping sack
 LPUSH mundaneitem_kind slide ruler
+LPUSH mundaneitem_kind sling bullet
 LPUSH mundaneitem_kind small animal leash
+LPUSH mundaneitem_kind small bag of saffron
 LPUSH mundaneitem_kind small barrel
 LPUSH mundaneitem_kind small basket
 LPUSH mundaneitem_kind small bell
 LPUSH mundaneitem_kind small belt pouch
 LPUSH mundaneitem_kind small bottle ink
 LPUSH mundaneitem_kind small candle
+LPUSH mundaneitem_kind small cask
 LPUSH mundaneitem_kind small chalk board
 LPUSH mundaneitem_kind small chime
 LPUSH mundaneitem_kind small crowbar
 LPUSH mundaneitem_kind small dish/plate or bowel
+LPUSH mundaneitem_kind small fish
 LPUSH mundaneitem_kind small folding shovel
 LPUSH mundaneitem_kind small folding table
 LPUSH mundaneitem_kind small glass mirror
@@ -577,20 +708,27 @@ LPUSH mundaneitem_kind small lead box
 LPUSH mundaneitem_kind small lead-linedbelt  pouch
 LPUSH mundaneitem_kind small metal bead dispenser tube
 LPUSH mundaneitem_kind small mirror
-LPUSH mundaneitem_kind small paintbrush
 LPUSH mundaneitem_kind small paint brush
+LPUSH mundaneitem_kind small paintbrush
 LPUSH mundaneitem_kind small pillow
 LPUSH mundaneitem_kind small prayer rug
+LPUSH mundaneitem_kind small rug
 LPUSH mundaneitem_kind small sack
 LPUSH mundaneitem_kind small sail
 LPUSH mundaneitem_kind small shoulder pouch
 LPUSH mundaneitem_kind small silk parachute
+LPUSH mundaneitem_kind small silver statuette
 LPUSH mundaneitem_kind small steel mirror
+LPUSH mundaneitem_kind small steel shield
 LPUSH mundaneitem_kind small tarp
 LPUSH mundaneitem_kind small tent
 LPUSH mundaneitem_kind small weapon sheath
 LPUSH mundaneitem_kind small wisk broom
+LPUSH mundaneitem_kind small wooden case
 LPUSH mundaneitem_kind small wooden chest
+LPUSH mundaneitem_kind small wooden shield
+LPUSH mundaneitem_kind small, brown glass jar
+LPUSH mundaneitem_kind small, white pendant
 LPUSH mundaneitem_kind smelling salts
 LPUSH mundaneitem_kind smokestick
 LPUSH mundaneitem_kind smoking pipe
@@ -602,10 +740,12 @@ LPUSH mundaneitem_kind soft low boots
 LPUSH mundaneitem_kind soft walking shoes
 LPUSH mundaneitem_kind softwood plank
 LPUSH mundaneitem_kind soulrender acid
+LPUSH mundaneitem_kind spell component pouch
 LPUSH mundaneitem_kind spice kit
 LPUSH mundaneitem_kind spicy peppers
 LPUSH mundaneitem_kind spider silk rope
 LPUSH mundaneitem_kind spiked collar
+LPUSH mundaneitem_kind spiked gauntlets
 LPUSH mundaneitem_kind spiked hammer
 LPUSH mundaneitem_kind sponge
 LPUSH mundaneitem_kind spring loaded wrist sheath
@@ -614,11 +754,17 @@ LPUSH mundaneitem_kind spyglass
 LPUSH mundaneitem_kind stainless steel locket w/silver chain
 LPUSH mundaneitem_kind standard adventurer's kit
 LPUSH mundaneitem_kind standardized spell components
+LPUSH mundaneitem_kind steel flask
+LPUSH mundaneitem_kind steel trident
 LPUSH mundaneitem_kind stone flask
 LPUSH mundaneitem_kind straight jacket
 LPUSH mundaneitem_kind straw mat
 LPUSH mundaneitem_kind string
+LPUSH mundaneitem_kind string of goblin teeth
 LPUSH mundaneitem_kind studded belt
+LPUSH mundaneitem_kind stuffed ermine
+LPUSH mundaneitem_kind stuffed falcon
+LPUSH mundaneitem_kind stuffed wolfhound
 LPUSH mundaneitem_kind sundial
 LPUSH mundaneitem_kind sunrod
 LPUSH mundaneitem_kind superior lock
@@ -627,6 +773,7 @@ LPUSH mundaneitem_kind suspenders
 LPUSH mundaneitem_kind svonelium ore
 LPUSH mundaneitem_kind swim fins
 LPUSH mundaneitem_kind tabard
+LPUSH mundaneitem_kind tarnished silver horseshoes
 LPUSH mundaneitem_kind tarot cards
 LPUSH mundaneitem_kind tattoo kit
 LPUSH mundaneitem_kind telescopic retractable spyglass
@@ -634,15 +781,19 @@ LPUSH mundaneitem_kind tent
 LPUSH mundaneitem_kind thick wire
 LPUSH mundaneitem_kind thieves cloak
 LPUSH mundaneitem_kind thieves picks & tools
+LPUSH mundaneitem_kind thimble
 LPUSH mundaneitem_kind thorn sword
 LPUSH mundaneitem_kind three-section staff
 LPUSH mundaneitem_kind timing candle
+LPUSH mundaneitem_kind tinderbox
 LPUSH mundaneitem_kind tinderbox w/flint & steel
 LPUSH mundaneitem_kind tinkerers pocket tools
 LPUSH mundaneitem_kind toga
 LPUSH mundaneitem_kind toilet seat
 LPUSH mundaneitem_kind torch
 LPUSH mundaneitem_kind torturer's lab
+LPUSH mundaneitem_kind tower shield
+LPUSH mundaneitem_kind toy soldiers
 LPUSH mundaneitem_kind trail rations
 LPUSH mundaneitem_kind traveling duster
 LPUSH mundaneitem_kind treated parchment
@@ -665,19 +816,24 @@ LPUSH mundaneitem_kind violet mold paste
 LPUSH mundaneitem_kind waist length fur coat
 LPUSH mundaneitem_kind waist length leather coat
 LPUSH mundaneitem_kind waist length wool coat
-LPUSH mundaneitem_kind warmaul
 LPUSH mundaneitem_kind war sickle
+LPUSH mundaneitem_kind warmaul
 LPUSH mundaneitem_kind warwhip
 LPUSH mundaneitem_kind water clock
-LPUSH mundaneitem_kind waterproof bullseye lantern
-LPUSH mundaneitem_kind waterproofing oil
 LPUSH mundaneitem_kind water purification tablet
-LPUSH mundaneitem_kind waterskin
 LPUSH mundaneitem_kind water/wine skin
+LPUSH mundaneitem_kind waterproof bulls-eye lantern
+LPUSH mundaneitem_kind waterproofing oil
+LPUSH mundaneitem_kind waterskin
+LPUSH mundaneitem_kind wax candle
 LPUSH mundaneitem_kind weaponblack
 LPUSH mundaneitem_kind weighted chain
+LPUSH mundaneitem_kind whalebone scrimshaw carving
 LPUSH mundaneitem_kind whetstone
 LPUSH mundaneitem_kind whistle
+LPUSH mundaneitem_kind white chalk
+LPUSH mundaneitem_kind wicker basket
+LPUSH mundaneitem_kind wig
 LPUSH mundaneitem_kind wine bottle
 LPUSH mundaneitem_kind winter wolf pelt
 LPUSH mundaneitem_kind wire
@@ -685,27 +841,31 @@ LPUSH mundaneitem_kind wire cutters
 LPUSH mundaneitem_kind wizards large spell book
 LPUSH mundaneitem_kind wizards standard spell book
 LPUSH mundaneitem_kind wizards traveling spell book
+LPUSH mundaneitem_kind wood hand boar
+LPUSH mundaneitem_kind wood saw
 LPUSH mundaneitem_kind wooden bolt case
 LPUSH mundaneitem_kind wooden dart case
 LPUSH mundaneitem_kind wooden flask
 LPUSH mundaneitem_kind wooden holy symbol
+LPUSH mundaneitem_kind wooden leg
 LPUSH mundaneitem_kind wooden mallet
 LPUSH mundaneitem_kind wooden pole
 LPUSH mundaneitem_kind wooden ruler
 LPUSH mundaneitem_kind wooden stake
 LPUSH mundaneitem_kind wooden tool/tackle box
 LPUSH mundaneitem_kind wooden two man saw
-LPUSH mundaneitem_kind wood hand boar
-LPUSH mundaneitem_kind wood saw
 LPUSH mundaneitem_kind woodscrew
 LPUSH mundaneitem_kind wool hood
 LPUSH mundaneitem_kind wool leggings
+LPUSH mundaneitem_kind wool scarf
 LPUSH mundaneitem_kind wool shirt
 LPUSH mundaneitem_kind wool short pants
 LPUSH mundaneitem_kind wool socks
 LPUSH mundaneitem_kind wool tunic
 LPUSH mundaneitem_kind wool underwear
 LPUSH mundaneitem_kind wool vest
+LPUSH mundaneitem_kind woolen tapestry
+LPUSH mundaneitem_kind worn leather belt 
 LPUSH mundaneitem_kind zephyrium ore
 
 # And More!
