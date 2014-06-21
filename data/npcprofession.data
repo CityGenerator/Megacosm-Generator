@@ -104,7 +104,7 @@ LPUSH npc_profession spicemerchant
 LPUSH npc_profession stablehand
 LPUSH npc_profession tailor
 LPUSH npc_profession tanner
-LPUSH npc_profession tavern
+LPUSH npc_profession tavern keeper
 LPUSH npc_profession teacher
 LPUSH npc_profession teamster
 LPUSH npc_profession tilemaker

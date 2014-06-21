@@ -1929,7 +1929,7 @@ SET   bus_tavern_perbuilding 5
 SET   bus_tavern_maxfloors 3
 SET   bus_tavern_district market
 
-LPUSH bus_tavern_manager tavern
+LPUSH bus_tavern_manager tavern keeper
 
 LPUSH bus_tavern_managerclass commoner
 
