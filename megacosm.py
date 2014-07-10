@@ -34,6 +34,7 @@ from generators import RogueDungeon
 from generators import GeomorphDungeon
 from generators import Street
 from generators import Flag
+from generators import Flaw
 from util.Seeds import set_seed
 from generators import Organization
 from util import Filters
@@ -265,6 +266,35 @@ def generatemisfire():
 def misfire_builder():
     """Build a a misfire"""
     classname = 'misfire'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+#########################################################################
+
+
+@app.route('/flaw')
+def generateflaw():
+    """Generate a flaw"""
+    features = feature_filter('flaw')
+    titletext = 'My Greatest Flaw...'
+
+    if 'count' in request.args and request.args['count'].isdigit() and int(request.args['count']) > 1 and int(request.args['count']) <= 100:
+        flaws = []
+        for _ in xrange(int(request.args['count'])):
+            flaws.append(Flaw.Flaw(server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=flaws, oneliner=flaws[0], titletext=titletext, generator='flaw')
+    else:
+        flaw = Flaw.Flaw(server, features)
+        return render_template('oneliner.html', oneliner=flaw, titletext=titletext, generator='flaw')
+
+
+
+@app.route('/flaw_builder')
+def flaw_builder():
+    """Build a a flaw"""
+    classname = 'flaw'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)

@@ -1,0 +1,355 @@
+
+ZADD flaw_scope  30 { "name":"minor"    , "score":30  }
+ZADD flaw_scope  70 { "name":"moderate" , "score":70  }
+ZADD flaw_scope 100 { "name":"major"    , "score":100  }
+
+ZADD flaw_quality  30 { "name":"horrible"    , "score":30  }
+ZADD flaw_quality  70 { "name":"bad" , "score":70  }
+ZADD flaw_quality 100 { "name":"poor"    , "score":100  }
+
+# and is made out of
+LPUSH flaw_enemytrait devious
+LPUSH flaw_enemytrait unforgiving
+LPUSH flaw_enemytrait vicious
+
+LPUSH flaw_fleeing the law
+LPUSH flaw_flefleeing a jilted lover
+LPUSH flaw_flefleeing a gang
+
+# and is made out of
+LPUSH flaw_extremity finger
+LPUSH flaw_extremity toe
+LPUSH flaw_extremity hand
+LPUSH flaw_extremity foot
+LPUSH flaw_extremity leg
+LPUSH flaw_extremity arm
+LPUSH flaw_extremity ear
+
+LPUSH flaw_allergy certain foods
+LPUSH flaw_allergy peanuts
+LPUSH flaw_allergy dogs
+LPUSH flaw_allergy cats
+LPUSH flaw_allergy horses
+LPUSH flaw_allergy grass
+LPUSH flaw_allergy pollen
+
+LPUSH flaw_addiction food
+LPUSH flaw_addiction drug
+LPUSH flaw_addiction magic
+LPUSH flaw_addiction gambling
+
+LPUSH flaw_abuse physically
+LPUSH flaw_abuse mentally
+LPUSH flaw_abuse psychologically
+LPUSH flaw_abuse magically
+
+LPUSH flaw_anxiety nervous
+LPUSH flaw_anxiety anxious
+LPUSH flaw_anxiety neurotic
+LPUSH flaw_anxiety fidgety
+
+LPUSH flaw_defiant defiant
+LPUSH flaw_defiant disobedient 
+LPUSH flaw_defiant insolent
+LPUSH flaw_defiant brazen
+LPUSH flaw_defiant bold
+
+LPUSH flaw_bigot certain races
+LPUSH flaw_bigot the opposite sex
+LPUSH flaw_bigot anyone odd-looking
+LPUSH flaw_bigot anyone progressive
+LPUSH flaw_bigot anyone conservative
+LPUSH flaw_bigot certain religions
+
+# your flaw: 
+LPUSH flaw_template You are hard of hearing
+LPUSH flaw_template You are illiterate
+LPUSH flaw_template You have {{params.quality['name']}} breath
+LPUSH flaw_template You have {{params.quality['name']}} eyesight
+LPUSH flaw_template You have {{params.quality['name']|article}} attitude
+LPUSH flaw_template You have {{params.scope['name']|article}} limp
+LPUSH flaw_template You are missing {{params.extremity|article}}
+LPUSH flaw_template You have a visible, {{params.scope['name']}} scar
+LPUSH flaw_template You have {{params.enemytrait|article}} foe
+LPUSH flaw_template You are on the run from {{params.fleeing}} 
+LPUSH flaw_template You have {{params.scope['name']|article}} addiction
+LPUSH flaw_template You have {{params.scope['name']}|article}} an allergy to {{params.allergy}}
+LPUSH flaw_template You are absentminded
+LPUSH flaw_template You are {{params.abuse}} abusive
+LPUSH flaw_template You are aimless
+LPUSH flaw_template You are {{params.anxiety}}
+LPUSH flaw_template You are arrogant
+LPUSH flaw_template You are {{params.defiant}} 
+
+LPUSH flaw_template You are a bigmouth
+LPUSH flaw_template You are a bigot towards {{params.bigot}}
+LPUSH flaw_template You intolerant towards {{params.bigot}}
+LPUSH flaw_template You judgmental towards {{params.bigot}}
+
+LPUSH flaw_blunt blunt
+LPUSH flaw_blunt frank
+LPUSH flaw_blunt callous
+LPUSH flaw_blunt insensitive
+LPUSH flaw_template You are too {{params.blunt}}
+
+LPUSH flaw_template You suffer from a curse
+
+
+LPUSH flaw_template You suffer from mental illness
+
+LPUSH flaw_reputation childishness
+LPUSH flaw_reputation immature
+LPUSH flaw_reputation hostility
+LPUSH flaw_reputation treachery
+LPUSH flaw_reputation treason
+LPUSH flaw_reputation disloyalty
+LPUSH flaw_reputation deranged
+LPUSH flaw_reputation mad
+LPUSH flaw_reputation psychotic
+LPUSH flaw_reputation verbally abusive
+LPUSH flaw_reputation prudish
+LPUSH flaw_reputation annoying
+LPUSH flaw_reputation obnoxious
+LPUSH flaw_reputation picking fights
+LPUSH flaw_reputation being a jerk
+LPUSH flaw_reputation neurotic
+LPUSH flaw_reputation loud
+
+LPUSH flaw_deserved unwarrented
+LPUSH flaw_deserved overblown
+LPUSH flaw_deserved well deserved
+LPUSH flaw_deserved warrented
+
+LPUSH flaw_template Your reputation for {{params.reputation}} is {{params.deserved}}
+
+LPUSH flaw_template Your are gullible
+LPUSH flaw_template Your are easily manipulated
+LPUSH flaw_template Your are too trusting
+LPUSH flaw_template Your are overly dependent on others
+LPUSH flaw_template Your are color blind
+LPUSH flaw_template Your have no sense of smell
+
+LPUSH flaw_template Your are uncommittal
+LPUSH flaw_template Your are fickle
+LPUSH flaw_template Your are finicky
+LPUSH flaw_template You commit without thinking it through
+LPUSH flaw_template Your are dyslexic
+
+
+LPUSH flaw_template Your are egotistical
+LPUSH flaw_template Your are boastful
+LPUSH flaw_template Your are pompus
+
+LPUSH flaw_template Your are envious of those around you
+LPUSH flaw_template Your are covetous of other's posessions
+LPUSH flaw_template Your are jealous of others
+LPUSH flaw_template Your behavior is erattic
+LPUSH flaw_template Your behavior is eccentric
+LPUSH flaw_template Your behavior is bizarre
+LPUSH flaw_template Your behavior is outlandish
+LPUSH flaw_template Your behavior is strange
+
+
+LPUSH flaw_zeal your religion
+LPUSH flaw_zeal your race
+LPUSH flaw_zeal your hobby
+LPUSH flaw_zeal your weaponry
+LPUSH flaw_zeal your class
+LPUSH flaw_zeal your favorite food
+LPUSH flaw_zeal your guild
+
+LPUSH flaw_template Your are a fanatic about {{params.zeal}}
+LPUSH flaw_template Your are a zealot regarding {{params.zeal}}
+LPUSH flaw_template Your are fixated on {{params.zeal}} in most conversations
+
+
+LPUSH flaw_template Your are meticulous
+LPUSH flaw_template Your are obsessive compulsive
+LPUSH flaw_template Your are choosy
+LPUSH flaw_template Your are critical
+LPUSH flaw_template Your are picky
+LPUSH flaw_template Your are prissy
+LPUSH flaw_template Your have an obvious but unacknowledged fetish
+
+
+LPUSH flaw_template You flirt regardless of the consequences
+LPUSH flaw_template You are in love with someone taking advantage of you
+
+
+LPUSH flaw_template You are a fraud 
+LPUSH flaw_template You are a glutton
+LPUSH flaw_template You are a habitual liar
+LPUSH flaw_template You are easily duped
+LPUSH flaw_template You are gruff to a fault
+LPUSH flaw_template You are surly to a fault
+
+
+LPUSH flaw_badhabit pick your nose
+LPUSH flaw_badhabit spit tobacco everywhere
+LPUSH flaw_badhabit drool profusely
+LPUSH flaw_badhabit have severe body odor
+LPUSH flaw_badhabit are too serious
+LPUSH flaw_badhabit belch loudly
+LPUSH flaw_badhabit continuously bite your fingernails
+LPUSH flaw_badhabit chew on things
+LPUSH flaw_badhabit click or tap your teeth
+LPUSH flaw_badhabit crack your knuckles
+LPUSH flaw_badhabit excessively blink your eyes
+LPUSH flaw_badhabit roll your eyes when others are speaking
+LPUSH flaw_badhabit gesture wildly
+LPUSH flaw_badhabit unconsciously hum at inappropriate times
+LPUSH flaw_badhabit unconsciously whistle at inappropriate times
+LPUSH flaw_badhabit lick your lips inappropriately
+LPUSH flaw_badhabit pick at your teeth
+LPUSH flaw_badhabit pinch others
+LPUSH flaw_badhabit are vulgar
+LPUSH flaw_badhabit slap people on the back way too much
+LPUSH flaw_badhabit slurp everything
+LPUSH flaw_badhabit talk with a full mouth
+LPUSH flaw_badhabit tap your foot
+LPUSH flaw_badhabit wink inappropritately
+
+LPUSH flaw_template You {{params.badhabit}}, which other people find off-putting
+LPUSH flaw_template You constantly misuse words
+LPUSH flaw_template You use too much profanity
+LPUSH flaw_template You squint when people speak to you
+LPUSH flaw_template You have a {{params.scope['name']}} stutter
+
+LPUSH flaw_template You are headonistic
+LPUSH flaw_template You are interested in frivilous details
+LPUSH flaw_template You have no sense of humor
+LPUSH flaw_template You have a {{params.scope['name']}} hypotical belief
+LPUSH flaw_template You are too idealistic and impractical
+
+
+LPUSH flaw_template You act foolishly
+LPUSH flaw_template You act carelessly
+LPUSH flaw_template You are ignorant on an important topic
+LPUSH flaw_template You are excitable
+LPUSH flaw_template You mumble
+LPUSH flaw_template You speak with a thick accent
+LPUSH flaw_template You think you are funny... but you're not
+LPUSH flaw_template You are insecure
+LPUSH flaw_template You obsess over topics that no one cares about
+LPUSH flaw_template You focus on unimportant details
+LPUSH flaw_template You constantly distract people
+LPUSH flaw_template You are barely literate
+LPUSH flaw_template You are impatient
+LPUSH flaw_template You are indifferent
+LPUSH flaw_template You were framed for a crime you didn't commit
+LPUSH flaw_template You are wanted for a crime you didn't commit
+LPUSH flaw_template You are wanted for a crime you did commit
+
+
+LPUSH flaw_template You are a klutz
+LPUSH flaw_template You are clumsy
+LPUSH flaw_template You are lazy
+LPUSH flaw_template You are lewd 
+LPUSH flaw_template You are lustful
+LPUSH flaw_template You are obscene
+LPUSH flaw_template You are indecent
+LPUSH flaw_template You are lecherous 
+LPUSH flaw_template You are salacious
+
+LPUSH flaw_template You are a masochist
+LPUSH flaw_template You are meddlesome
+LPUSH flaw_template You interfere in the affairs of others
+LPUSH flaw_template You offer your unsolicited opinion to everyone
+LPUSH flaw_template You are meek
+LPUSH flaw_template You are cowardly
+LPUSH flaw_template You are compliant 
+LPUSH flaw_template You are submissive
+
+
+LPUSH flaw_delusion wealth
+LPUSH flaw_delusion power
+LPUSH flaw_delusion knowledeg
+LPUSH flaw_delusion attractiveness
+LPUSH flaw_delusion skills
+
+LPUSH flaw_template You are delusional regarding your {{params.delusion}}
+LPUSH flaw_template You are naive
+LPUSH flaw_template You avoid violence
+LPUSH flaw_template You are nosey
+LPUSH flaw_template You are oppressive
+LPUSH flaw_template You are overbearing
+LPUSH flaw_template You are oberambitious
+LPUSH flaw_template You are overemotional
+LPUSH flaw_template You are overprotective of certain things, person or people
+LPUSH flaw_template You overvalue your skills 
+LPUSH flaw_template You are a pacifist
+LPUSH flaw_template You are paranoid 
+LPUSH flaw_template You are ill-tempered 
+LPUSH flaw_template You are crotchety
+LPUSH flaw_template You are cranky
+LPUSH flaw_template You are a pest 
+LPUSH flaw_template You are a nusiance
+LPUSH flaw_template You are a nag
+LPUSH flaw_template You are a pessimist
+LPUSH flaw_template You are a perfectionist
+LPUSH flaw_template You are prideful
+LPUSH flaw_template You are rebellious
+LPUSH flaw_template You are reckless
+LPUSH flaw_template You are remorseless
+LPUSH flaw_template You are overly rigorous
+LPUSH flaw_template You are a sadist
+LPUSH flaw_template You are cruel
+LPUSH flaw_template You are obnoxiously sarcastic
+LPUSH flaw_template You are skeptical of everything
+LPUSH flaw_template You are skeptical things that don't warrant it
+
+LPUSH flaw_seduce married men
+LPUSH flaw_seduce married women
+LPUSH flaw_seduce strangers
+LPUSH flaw_seduce the elderly
+LPUSH flaw_seduce the rich
+LPUSH flaw_seduce the poor
+LPUSH flaw_seduce the wrong people
+LPUSH flaw_seduce the clergy
+
+LPUSH flaw_template You seduce {{params.seduce}} for kicks
+
+LPUSH flaw_template You are showing signs of senility
+
+LPUSH flaw_template You are a scoundrel
+LPUSH flaw_template You are selfish
+LPUSH flaw_template You are a self-martyr
+LPUSH flaw_template You are self-righteous
+LPUSH flaw_template You are shallow
+LPUSH flaw_template You are a smartass
+LPUSH flaw_template You are weak-willed
+LPUSH flaw_template You are soft-hearted
+LPUSH flaw_template You are nihilistic
+LPUSH flaw_template You are spineless
+LPUSH flaw_template You are cowardly 
+LPUSH flaw_template You are wimpy
+LPUSH flaw_template You are gutless
+LPUSH flaw_template You are spiteful
+LPUSH flaw_template You are malicious
+LPUSH flaw_template You are vindictive
+LPUSH flaw_template You are vengeful
+LPUSH flaw_template You are spoiled
+LPUSH flaw_template You are pampered
+LPUSH flaw_template You are coddled
+LPUSH flaw_template You have no notion of hard work
+LPUSH flaw_template You are stubborn
+LPUSH flaw_template You are squeamish
+LPUSH flaw_template You are superstitious
+LPUSH flaw_template You are tactless
+LPUSH flaw_template You are tempermental
+LPUSH flaw_template You are moody 
+LPUSH flaw_template You are irritable
+LPUSH flaw_template You are sensitive
+LPUSH flaw_template You are volatile
+LPUSH flaw_template You tempt others into misbehaving
+LPUSH flaw_template You are shy
+LPUSH flaw_template You are a troublemaker
+LPUSH flaw_template You are ugly
+LPUSH flaw_template You are unattractive
+LPUSH flaw_template You are unlucky
+LPUSH flaw_template You are a backstabber
+LPUSH flaw_template You are unpredictable
+LPUSH flaw_template You are vain
+LPUSH flaw_template You are conceited
+LPUSH flaw_template You are narcissistic
+
