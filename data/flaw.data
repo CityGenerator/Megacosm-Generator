@@ -13,8 +13,8 @@ LPUSH flaw_enemytrait unforgiving
 LPUSH flaw_enemytrait vicious
 
 LPUSH flaw_fleeing the law
-LPUSH flaw_flefleeing a jilted lover
-LPUSH flaw_flefleeing a gang
+LPUSH flaw_fleeing a jilted lover
+LPUSH flaw_fleeing a gang
 
 # and is made out of
 LPUSH flaw_extremity finger
@@ -115,10 +115,10 @@ LPUSH flaw_reputation being a jerk
 LPUSH flaw_reputation neurotic
 LPUSH flaw_reputation loud
 
-LPUSH flaw_deserved unwarrented
+LPUSH flaw_deserved unwarranted
 LPUSH flaw_deserved overblown
 LPUSH flaw_deserved well deserved
-LPUSH flaw_deserved warrented
+LPUSH flaw_deserved warranted
 
 LPUSH flaw_template Your reputation for {{params.reputation}} is {{params.deserved}}
 
@@ -129,7 +129,7 @@ LPUSH flaw_template Your are overly dependent on others
 LPUSH flaw_template Your are color blind
 LPUSH flaw_template Your have no sense of smell
 
-LPUSH flaw_template Your are uncommittal
+LPUSH flaw_template Your are non-committal
 LPUSH flaw_template Your are fickle
 LPUSH flaw_template Your are finicky
 LPUSH flaw_template You commit without thinking it through
@@ -138,12 +138,12 @@ LPUSH flaw_template Your are dyslexic
 
 LPUSH flaw_template Your are egotistical
 LPUSH flaw_template Your are boastful
-LPUSH flaw_template Your are pompus
+LPUSH flaw_template Your are pompous
 
 LPUSH flaw_template Your are envious of those around you
-LPUSH flaw_template Your are covetous of other's posessions
+LPUSH flaw_template Your are covetous of other's possessions
 LPUSH flaw_template Your are jealous of others
-LPUSH flaw_template Your behavior is erattic
+LPUSH flaw_template Your behavior is erratic
 LPUSH flaw_template Your behavior is eccentric
 LPUSH flaw_template Your behavior is bizarre
 LPUSH flaw_template Your behavior is outlandish
@@ -207,7 +207,7 @@ LPUSH flaw_badhabit slap people on the back way too much
 LPUSH flaw_badhabit slurp everything
 LPUSH flaw_badhabit talk with a full mouth
 LPUSH flaw_badhabit tap your foot
-LPUSH flaw_badhabit wink inappropritately
+LPUSH flaw_badhabit wink inappropriately
 
 LPUSH flaw_template You {{params.badhabit}}, which other people find off-putting
 LPUSH flaw_template You constantly misuse words
@@ -215,10 +215,10 @@ LPUSH flaw_template You use too much profanity
 LPUSH flaw_template You squint when people speak to you
 LPUSH flaw_template You have a {{params.scope['name']}} stutter
 
-LPUSH flaw_template You are headonistic
-LPUSH flaw_template You are interested in frivilous details
+LPUSH flaw_template You are hedonistic
+LPUSH flaw_template You are interested in frivolous details
 LPUSH flaw_template You have no sense of humor
-LPUSH flaw_template You have a {{params.scope['name']}} hypotical belief
+LPUSH flaw_template You have a {{params.scope['name']}} hypocritical belief
 LPUSH flaw_template You are too idealistic and impractical
 
 
@@ -263,7 +263,7 @@ LPUSH flaw_template You are submissive
 
 LPUSH flaw_delusion wealth
 LPUSH flaw_delusion power
-LPUSH flaw_delusion knowledeg
+LPUSH flaw_delusion knowledge
 LPUSH flaw_delusion attractiveness
 LPUSH flaw_delusion skills
 
@@ -273,7 +273,7 @@ LPUSH flaw_template You avoid violence
 LPUSH flaw_template You are nosey
 LPUSH flaw_template You are oppressive
 LPUSH flaw_template You are overbearing
-LPUSH flaw_template You are oberambitious
+LPUSH flaw_template You are overambitious
 LPUSH flaw_template You are overemotional
 LPUSH flaw_template You are overprotective of certain things, person or people
 LPUSH flaw_template You overvalue your skills 
@@ -283,7 +283,7 @@ LPUSH flaw_template You are ill-tempered
 LPUSH flaw_template You are crotchety
 LPUSH flaw_template You are cranky
 LPUSH flaw_template You are a pest 
-LPUSH flaw_template You are a nusiance
+LPUSH flaw_template You are a nuisance
 LPUSH flaw_template You are a nag
 LPUSH flaw_template You are a pessimist
 LPUSH flaw_template You are a perfectionist
@@ -316,7 +316,7 @@ LPUSH flaw_template You are selfish
 LPUSH flaw_template You are a self-martyr
 LPUSH flaw_template You are self-righteous
 LPUSH flaw_template You are shallow
-LPUSH flaw_template You are a smartass
+LPUSH flaw_template You are a smart ass
 LPUSH flaw_template You are weak-willed
 LPUSH flaw_template You are soft-hearted
 LPUSH flaw_template You are nihilistic
@@ -336,7 +336,7 @@ LPUSH flaw_template You are stubborn
 LPUSH flaw_template You are squeamish
 LPUSH flaw_template You are superstitious
 LPUSH flaw_template You are tactless
-LPUSH flaw_template You are tempermental
+LPUSH flaw_template You are temperamental
 LPUSH flaw_template You are moody 
 LPUSH flaw_template You are irritable
 LPUSH flaw_template You are sensitive
