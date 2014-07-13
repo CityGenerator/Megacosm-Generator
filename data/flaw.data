@@ -73,7 +73,7 @@ LPUSH flaw_template You have a visible, {{params.scope['name']}} scar
 LPUSH flaw_template You have {{params.enemytrait|article}} foe
 LPUSH flaw_template You are on the run from {{params.fleeing}} 
 LPUSH flaw_template You have {{params.scope['name']|article}} addiction
-LPUSH flaw_template You have {{params.scope['name']}|article}} an allergy to {{params.allergy}}
+LPUSH flaw_template You have {{params.scope['name']|article}} an allergy to {{params.allergy}}
 LPUSH flaw_template You are absentminded
 LPUSH flaw_template You are {{params.abuse}} abusive
 LPUSH flaw_template You are aimless
