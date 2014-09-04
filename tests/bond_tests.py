@@ -1,24 +1,21 @@
 
-from generators.Bond import Bond
-from generators.Motivation import Motivation
+from megacosm.generators.Bond import Bond
+from megacosm.generators.Motivation import Motivation
 import unittest2 as unittest
 from mock import MagicMock
 
 import redis
 import ConfigParser, os
-from util.Seeds import *
+from megacosm.util.Seeds import *
 
-
-config = ConfigParser.RawConfigParser()
-config.read('data/config.ini')
-url = config.get('redis', 'url')
+from config import TestConfiguration
 
 class TestBond(unittest.TestCase):
 
     def setUp(self):
         """  """
         
-        self.redis=redis.from_url(url)
+        self.redis=redis.from_url(TestConfiguration.REDIS_URL)
         self.seed=set_seed( "3" )
 
     def test_random_bond(self):

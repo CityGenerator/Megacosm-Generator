@@ -4,32 +4,33 @@ import unittest2 as unittest
 import flask.ext.testing
 from flask import Flask
 
+
 class MegacosmFlaskTestCast(flask.ext.testing.TestCase):
 #
     def create_app(self):
-        app = Flask(__name__)
-        app.config['TESTING'] = True
-        return app
+        megacosm.create_app('config.TestConfiguration')
+
+        return megacosm.app
 
     def setUp(self):
         self.app = megacosm.app.test_client()
     def tearDown(self):
         self.app = None
-        megacosm.server.delete('unittestgenerator_list')
-        megacosm.server.delete('unittestgenerator_list_chance')
-        megacosm.server.delete('unittestgenerator_range')
-        megacosm.server.delete('unittestgenerator_list_description')
+        megacosm.app.server.delete('unittestgenerator_list')
+        megacosm.app.server.delete('unittestgenerator_list_chance')
+        megacosm.app.server.delete('unittestgenerator_range')
+        megacosm.app.server.delete('unittestgenerator_list_description')
 ################################################################
     def test_builder_form_data(self):
-        megacosm.server.lpush('unittestgenerator_list', 'a','b','c')
-        megacosm.server.set('unittestgenerator_list_chance', 30)
-        megacosm.server.zadd('unittestgenerator_range', '{"name":"test1"}',  50)
-        megacosm.server.zadd('unittestgenerator_range', '{"name":"test2"}', 100)
-        megacosm.server.hset('unittestgenerator_list_description','foo', '{"name":"test1"}')
-        megacosm.server.hset('unittestgenerator_list-description','bar', '{"name":"test2"}')
+        megacosm.app.server.lpush('unittestgenerator_list', 'a','b','c')
+        megacosm.app.server.set('unittestgenerator_list_chance', 30)
+        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test1"}',  50)
+        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test2"}', 100)
+        megacosm.app.server.hset('unittestgenerator_list_description','foo', '{"name":"test1"}')
+        megacosm.app.server.hset('unittestgenerator_list-description','bar', '{"name":"test2"}')
         self.assertEquals(  megacosm.builder_form_data('unittestgenerator'),({'list': ['c', 'b', 'a']}, {'list_chance': '30'}, {'range': [{u'name': u'test1'}, {u'name': u'test2'}]}) );
 
-        megacosm.server.zadd('unittestgenerator_range', '{"name":"test2"', 100)
+        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test2"', 100)
 
         with self.assertRaisesRegexp(ValueError, 'failed to parse unittestgenerator_range field {"name":"test2"') as context:
             megacosm.builder_form_data('unittestgenerator')

@@ -1,25 +1,22 @@
 
-from generators.Cuisine import Cuisine
-from generators.Motivation import Motivation
-from generators.Region import Region
+from megacosm.generators.Cuisine import Cuisine
+from megacosm.generators.Motivation import Motivation
+from megacosm.generators.Region import Region
 import unittest2 as unittest
 from mock import MagicMock
 
 import redis
 import ConfigParser, os
-from util.Seeds import *
+from megacosm.util.Seeds import *
 
 
-config = ConfigParser.RawConfigParser()
-config.read('data/config.ini')
-url = config.get('redis', 'url')
+from config import TestConfiguration
 
 class TestCuisine(unittest.TestCase):
 
     def setUp(self):
         """  """
-        
-        self.redis=redis.from_url(url)
+        self.redis=redis.from_url(TestConfiguration.REDIS_URL)
         self.region=Region(self.redis)
 #        self.seed=set_seed( "3" )
 

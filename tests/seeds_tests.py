@@ -1,11 +1,11 @@
 
-from util.Seeds import *
+from megacosm.util.Seeds import *
 import unittest2 as unittest
 from mock import MagicMock
 
 import redis
 import ConfigParser, os
-from util.Seeds import *
+from megacosm.util.Seeds import *
 
 
 class TestSeeds(unittest.TestCase):

@@ -1,6 +1,6 @@
 #
 import unittest2 as unittest
-from util.Filters import *
+from megacosm.util.Filters import *
 
 class TestFilter(unittest.TestCase):
 
