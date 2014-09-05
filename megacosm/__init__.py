@@ -41,21 +41,20 @@ from megacosm.util import Filters
 import logging
 import logging.config
 import redis
-import ConfigParser
 import datetime
 import json
 import re
 import traceback
 from config import BaseConfiguration
 
+
 def create_app(config_location='config.BaseConfiguration'):
     app = Flask(__name__)
-    app.config.from_object('config.BaseConfiguration')
-
+    app.config.from_object(config_location)
     app.server = redis.from_url(app.config['REDIS_URL'])
     return app
 
-app = create_app()
+app=create_app()
 
 #########################################################################
 

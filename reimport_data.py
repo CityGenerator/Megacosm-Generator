@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import redis
-import ConfigParser, os
 import glob
 import sys
 import json
 from pprint import pprint
+from config import BaseConfiguration
 import re
 
 
@@ -65,12 +65,9 @@ def validate_json(value, filename, linenumber):
         sys.exit(1)
 
 
-config = ConfigParser.RawConfigParser()
-config.read('data/config.ini')
 
-url = config.get('redis', 'url')
 
-server=redis.from_url(url)
+server=redis.from_url(BaseConfiguration.REDIS_URL)
 pipe=server.pipeline()
 
 pipe.flushall()
@@ -96,7 +93,8 @@ def create_geomorphimage_record(pipe, image):
         print "WARNING,",image,"is not in the right format."
 #static/images/geomorphs/1/basic2.png
 
-for image in glob.glob("static/images/geomorphs/*/*/*/*.png") :
+for image in glob.glob("megacosm/static/images/geomorphs/*/*/*/*.png") :
+    image=image[9:]
     create_geomorphimage_record(pipe, image);
 
 
@@ -114,13 +112,15 @@ def create_dungeonbackground_record(pipe, image):
     else:
         print "WARNING,",image,"is not in the right format."
 
-for image in sorted(glob.glob("static/images/backgrounds/*.png")) :
+for image in sorted(glob.glob("megacosm/static/images/backgrounds/*.png")) :
+    image=image[9:]
     create_dungeonbackground_record(pipe, image);
 
 
 
 pipe.set("geomorphdungeon_decoration_chance",30);
 def create_dungeondecoration_record(pipe, image):
+    image=image[9:]
     m = re.search('decorations/(.*)\.png', image)
     global IMAGECOUNT
     if m:
@@ -130,7 +130,8 @@ def create_dungeondecoration_record(pipe, image):
     else:
         print "WARNING,",image,"is not in the right format."
 
-for image in sorted(glob.glob("static/images/decorations/*.png")) :
+for image in sorted(glob.glob("megacosm/static/images/decorations/*.png")) :
+    image=image[9:]
     create_dungeondecoration_record(pipe, image);
 
 

@@ -1,16 +1,16 @@
 #
 import megacosm
 import unittest2 as unittest
-import flask.ext.testing
+from  flask.ext.testing import TestCase
 from flask import Flask
 
 
-class MegacosmFlaskTestCast(flask.ext.testing.TestCase):
+class MegacosmFlaskTestCast(TestCase):
 #
     def create_app(self):
-        megacosm.create_app('config.TestConfiguration')
-
-        return megacosm.app
+        """ """
+        app=megacosm.create_app('config.TestConfiguration')
+        return app
 
     def setUp(self):
         self.app = megacosm.app.test_client()
