@@ -5,7 +5,7 @@ python:
 install:
   - pip install -r requirements.txt
 before_script:
-  - cp config.py.test config.py
+  - cp config.py.example config.py
 script: nosetests
 after_success:
     coveralls
