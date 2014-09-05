@@ -20,5 +20,3 @@ class Govt(Generator):
             # TODO this should have an if statement on kind and also do cities
 
             self.body = Country(self.redis)
-
-

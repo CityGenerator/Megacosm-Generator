@@ -16,5 +16,3 @@ class Street(Generator):
             self.name['full'] += ' ' + self.kind
 
         self.name['full'] = self.name['full'].title()
-
-

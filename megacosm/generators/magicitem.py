@@ -4,7 +4,6 @@
 from generator import Generator
 from npc import NPC
 from jinja2.environment import Environment
-from jinja2 import Template
 from megacosm.util import Filters
 import logging
 

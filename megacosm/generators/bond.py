@@ -58,5 +58,3 @@ class Bond(Generator):
 
     def __str__(self):
         return self.text
-
-

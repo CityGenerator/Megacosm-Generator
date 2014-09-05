@@ -63,7 +63,7 @@ class RogueDungeon(Generator):
         rooms = self.rooms
         random.shuffle(rooms)
         for room in rooms:
-            if previous_room == None:
+            if previous_room is None:
                 room.kind = 'entrance'
                 room.kind_description = {'name': 'entrance', 'description': 'the way in'}
                 room.egress = True
@@ -129,12 +129,7 @@ class RogueDungeon(Generator):
             for y in range(room.y1 + 1, room.y2):
                 self.spaces[y][x] = RogueDungeon.RoomTile(room.roomid)
 
-    def paint_h_tunnel(
-        self,
-        x1,
-        x2,
-        y,
-        ):
+    def paint_h_tunnel(self, x1, x2, y):
         lasttile = None
         for x in range(min(x1, x2), max(x1, x2) + 1):
             if type(self.spaces[y][x]) is RogueDungeon.RoomTile and type(lasttile) is RogueDungeon.HallTile:
@@ -148,12 +143,7 @@ class RogueDungeon(Generator):
                     self.spaces[y][x].isdoorway = True
             lasttile = self.spaces[y][x]
 
-    def paint_v_tunnel(
-        self,
-        y1,
-        y2,
-        x,
-        ):
+    def paint_v_tunnel(self, y1, y2, x):
         lasttile = None
         for y in range(min(y1, y2), max(y1, y2) + 1):
             if type(self.spaces[y][x]) is RogueDungeon.RoomTile and type(lasttile) is RogueDungeon.HallTile:
@@ -212,13 +202,7 @@ class RogueDungeon(Generator):
 
         roomid = 0
 
-        def __init__(
-            self,
-            x,
-            y,
-            w,
-            h,
-            ):
+        def __init__(self, x, y, w, h):
             """ test """
 
             RogueDungeon.Room.roomid += 1
@@ -270,7 +254,7 @@ class RogueDungeon(Generator):
 #
 # class LavaTile(DungeonTile):
 #    def __init__(self, char=u'Ж'):
-##    def __init__(self, char=u'ж'):
+#    #def __init__(self, char=u'ж'):
 #        """ test """
 #        self.char=char
 #        self.passable=False

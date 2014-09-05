@@ -54,7 +54,3 @@ class Flag(Generator):
             default=None,
             sort_keys=False,
             )
-
-        return jsonobj
-
-

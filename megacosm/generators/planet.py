@@ -43,5 +43,3 @@ class Planet(Generator):
 
         for moonId in xrange(self.mooncount['count']):
             self.moons.append(Moon(self.redis))
-
-

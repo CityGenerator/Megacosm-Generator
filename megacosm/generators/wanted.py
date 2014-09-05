@@ -19,5 +19,3 @@ class Wanted(Generator):
 
         self.headline = self.render_template(self.headline)
         self.lastseen = self.render_template(self.lastseen)
-
-

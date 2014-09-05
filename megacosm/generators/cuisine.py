@@ -4,7 +4,6 @@
 from generator import Generator
 from npc import NPC
 import logging
-import random
 
 
 class Cuisine(Generator):
@@ -32,5 +31,3 @@ class Cuisine(Generator):
 
     def __str__(self):
         return self.text
-
-

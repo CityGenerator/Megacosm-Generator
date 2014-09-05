@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
-from npc import NPC
 import logging
-import random
 
 
 class Flaw(Generator):
@@ -25,5 +23,3 @@ class Flaw(Generator):
 
     def __str__(self):
         return self.text
-
-

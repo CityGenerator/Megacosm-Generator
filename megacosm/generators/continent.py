@@ -28,5 +28,3 @@ class Continent(Generator):
 
     def __str__(self):
         return '%s with %s countries' % (self.name['full'], self.countrycount)
-
-

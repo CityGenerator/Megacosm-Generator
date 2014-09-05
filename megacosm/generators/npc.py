@@ -10,18 +10,13 @@ import random
 
 class NPC(Generator):
 
-    def __init__(
-        self,
-        redis,
-        features={},
-        namekey=None,
-        ):
+    def __init__(self, redis, features={}, namekey=None):
 
         Generator.__init__(self, redis, features, namekey)
         self.logger = logging.getLogger(__name__)
 
         if self.race not in self.redis.lrange('npc_race', 0, -1):
-            raise Exception, ' %s is not a valid race and has no associated data' % self.race
+            raise Exception(' %s is not a valid race and has no associated data' % self.race)
         self.generate_features(self.race)
         self.generate_features(self.covering)
         self.coveringtext = self.render_template(self.covertemplate)
@@ -61,5 +56,3 @@ class NPC(Generator):
 
             self.name['full'] += self.name[name + 'name'] + ' '
         self.name['full'] = self.name['full'].strip()
-
-

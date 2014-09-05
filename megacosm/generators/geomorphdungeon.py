@@ -120,7 +120,7 @@ class GeomorphDungeon(Generator):
     def calculate_top(self, cell):
         if cell.y == 0:
             cell.top = False
-        elif self.spaces[cell.y - 1][cell.x].bottom != None:
+        elif self.spaces[cell.y - 1][cell.x].bottom is not None:
             cell.top = self.spaces[cell.y - 1][cell.x].bottom
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
@@ -131,7 +131,7 @@ class GeomorphDungeon(Generator):
     def calculate_right(self, cell):
         if cell.x == len(self.spaces[0]) - 1:
             cell.right = False
-        elif self.spaces[cell.y][cell.x + 1].left != None:
+        elif self.spaces[cell.y][cell.x + 1].left is not None:
             cell.right = self.spaces[cell.y][cell.x + 1].left
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
@@ -142,7 +142,7 @@ class GeomorphDungeon(Generator):
     def calculate_bottom(self, cell):
         if cell.y == len(self.spaces) - 1:
             cell.bottom = False
-        elif self.spaces[cell.y + 1][cell.x].top != None:
+        elif self.spaces[cell.y + 1][cell.x].top is not None:
             cell.bottom = self.spaces[cell.y + 1][cell.x].top
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
@@ -153,7 +153,7 @@ class GeomorphDungeon(Generator):
     def calculate_left(self, cell):
         if cell.x == 0:
             cell.left = False
-        elif self.spaces[cell.y][cell.x - 1].right != None:
+        elif self.spaces[cell.y][cell.x - 1].right is not None:
             cell.left = self.spaces[cell.y][cell.x - 1].right
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
@@ -175,5 +175,3 @@ class GeomorphDungeon(Generator):
             self.char = '#'
             self.x = x
             self.y = y
-
-

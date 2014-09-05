@@ -59,5 +59,3 @@ class Business(Generator):
 
     def __str__(self):
         return '%s %s' % (self.name['full'], self.kind)
-
-

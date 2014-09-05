@@ -26,5 +26,3 @@ class Gem(Generator):
 
     def __str__(self):
         return '%s %s %s, %s' % (self.quality['name'], self.color, self.kind_description['name'], self.value['name'])
-
-

@@ -11,5 +11,3 @@ class Weather(Generator):
 
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
-
-

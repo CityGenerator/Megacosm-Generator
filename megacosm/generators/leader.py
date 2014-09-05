@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 from country import Country
-from generator import Generator
 from npc import NPC
-from sect import Sect
 import logging
 
 
@@ -22,10 +19,9 @@ class Leader(NPC):
         if self.kind_description['scope'] == 'country':
             self.location = Country(self.redis, {'leader': self})
         else:
-
-#        elif self.kind_description['scope'] == 'city':
-#            self.location=City(self.redis, {'leader':self})
-#           TODO This should default to organization...
+            # elif self.kind_description['scope'] == 'city':
+            #   self.location=City(self.redis, {'leader':self})
+            #   TODO This should default to organization...
 
             self.location = Country(self.redis, {'leader': self})
 
@@ -34,5 +30,3 @@ class Leader(NPC):
     def set_title(self):
         self.name['title'] = self.leader_description[self.sex['name']]
         self.name['fulltitled'] = self.name['title'] + ' ' + self.name['full']
-
-

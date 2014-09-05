@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
 from npc import NPC
 from sect import Sect
 import json
@@ -108,8 +107,5 @@ class Deity(NPC):
                     # subtract our new domain's power level from our available points
 
                     points = points - powerlevel
-
-
             # else:
                 # print "can't support powerlevel",powerlevel,"with",points,"points"
-

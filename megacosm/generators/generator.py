@@ -6,25 +6,18 @@
 """
 
 from jinja2.environment import Environment
-from jinja2 import Template
 from megacosm.util import Filters
 from megacosm.util import Seeds
 import json
 import logging
 import random
-import redis
 
 
 class Generator(object):
 
     """ An abstracted Generator that all generators are based from """
 
-    def __init__(
-        self,
-        redis,
-        features={},
-        namekey=None,
-        ):
+    def __init__(self, redis, features={}, namekey=None):
         self.logger = logging.getLogger(__name__)
 
         # Redis is the source of all data.
@@ -108,13 +101,11 @@ class Generator(object):
             setattr(self, featurename, Generator.select_by_roll(self, key))
         elif self.redis.type(key) == 'string':
 
-        # string means it's a simple value that plugs right in
-
+            # string means it's a simple value that plugs right in
             setattr(self, featurename, self.redis.get(key))
         elif self.redis.type(key) == 'list':
 
-        # List gets a bit tricky; select a value, then see if it has an associated description
-
+            # List gets a bit tricky; select a value, then see if it has an associated description
             # If feature isn't set, grab a rand value from the list.
 
             if not hasattr(self, featurename):
@@ -129,9 +120,9 @@ class Generator(object):
                     if desc_text is not None:
                         featurevalue = json.loads(desc_text)
                         setattr(self, featurename + '_description', featurevalue)
-                except ValueError, e:
-                    self.logger.critical("JSON parsing error: Couldn't read json %s", rollvalue[0])
-                    raise ValueError("JSON parsing error: Couldn't read json", rollvalue[0])
+                except ValueError:
+                    self.logger.critical("JSON parsing error: Couldn't read json %s", desc_text)
+                    raise ValueError("JSON parsing error: Couldn't read json", desc_text)
 
 ####################################################
 # needs refactoring below here.
@@ -154,8 +145,8 @@ class Generator(object):
 
         for part in ['pre', 'root', 'post']:
             if self.redis.exists(key + part):
-                if not self.redis.exists(key + part + '_chance') or random.randint(1, 100) < int(self.redis.get(key
-                        + part + '_chance')):
+                if (not self.redis.exists(key + part + '_chance') or
+                        random.randint(1, 100) < int(self.redis.get(key + part + '_chance'))):
                     name[part] = self.rand_value(key + part)
                     name['full'] += name[part]
 
@@ -173,7 +164,7 @@ class Generator(object):
             total = self.redis.llen(key)
             value = self.redis.lindex(key, random.randint(0, total - 1))
             return value
-        except Exception, e:
+        except Exception:
             raise Exception("the key (%s) doesn't appear to exist or isn't a list (%s)." % (key, self.redis.type(key)))
 
     def select_by_roll(self, key):
@@ -186,17 +177,17 @@ class Generator(object):
 
         try:
             rollvalue = self.redis.zrangebyscore(key, roll, 100, 0, 1)
-            if rollvalue == None:
+            if rollvalue is None:
                 raise LookupError
             return json.loads(rollvalue[0])
-        except IndexError, e:
+        except IndexError:
             raise IndexError('Is %s a valid key?' % key)
-        except LookupError, e:
+        except LookupError:
             raise Exception('the key (%s) appears to be empty for a roll of %s- This should never happen.' % (key,
                             roll))
-        except ValueError, e:
+        except ValueError:
             raise Exception("JSON parsing error: Couldn't read json", rollvalue[0])
-        except Exception, e:
+        except Exception:
             raise Exception("the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
 
     def render_template(self, template):
@@ -212,5 +203,3 @@ class Generator(object):
         template = environment.from_string(template)
 
         return template.render(params=self)
-
-

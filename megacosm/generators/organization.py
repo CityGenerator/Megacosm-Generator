@@ -20,5 +20,3 @@ class Organization(Generator):
             self.text = self.render_template(self.template)
         self.oldname = self.name['full']
         self.name['full'] = self.text
-
-
