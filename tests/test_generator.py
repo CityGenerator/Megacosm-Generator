@@ -3,11 +3,8 @@
 
 from megacosm.generators import Generator
 import unittest2 as unittest
-from mock import MagicMock
 
 import redis
-import ConfigParser
-import os
 from config import TestConfiguration
 
 
@@ -21,7 +18,7 @@ class TestGenerator(unittest.TestCase):
 
         generator = Generator(self.redis, {'seed': 1007})
         self.assertEqual(generator.seed, 1007)
-        with self.assertRaises(AttributeError) as context:
+        with self.assertRaises(AttributeError):
             generator.missingfeature
 
     def test_randomseed(self):
@@ -30,11 +27,12 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll(self):
         generator = Generator(self.redis, {'seed': 1007, 'star_size_roll': 37})
-        self.assertEquals({'name': 'average', 'multiplier': 1.0, u'score': 65}, generator.select_by_roll('star_size'))
+        self.assertEquals({'name': 'average', 'multiplier': 1.0, u'score': 65},
+                          generator.select_by_roll('star_size'))
 
     def test_select_by_roll_key_doesnt_exist(self):
         generator = Generator(self.redis, {'seed': 1007})
-        with self.assertRaisesRegexp(IndexError, 'Is funion a valid key?') as context:
+        with self.assertRaisesRegexp(IndexError, 'Is funion a valid key?'):
             generator.select_by_roll('funion')
 
     def test_select_by_roll_highmin(self):
@@ -48,8 +46,7 @@ class TestGenerator(unittest.TestCase):
     def test_select_by_roll_key_wrong_type(self):
         generator = Generator(self.redis, {'seed': 1007, 'star_size_roll': 37})
         with self.assertRaisesRegexp(Exception,
-                                     "the key \(name_starpre\) doesn't appear to exist or isn't a zset \(list\).") as \
-            context:
+                                     "the key \(name_starpre\) doesn't appear to exist or isn't a zset \(list\)."):
             generator.select_by_roll('name_starpre')
 
     def test_rand_value(self):
@@ -59,14 +56,10 @@ class TestGenerator(unittest.TestCase):
     def test_rand_value_key_wrong_type(self):
         generator = Generator(self.redis, {'seed': 1007})
         with self.assertRaisesRegexp(Exception,
-                                     "the key \(star_size\) doesn't appear to exist or isn't a list \(zset\).") as \
-            context:
+                                     "the key \(star_size\) doesn't appear to exist or isn't a list \(zset\)."):
             generator.rand_value('star_size')
 
     def test_rand_value_key_doesnt_exist(self):
         generator = Generator(self.redis, {'seed': 1007})
-        with self.assertRaisesRegexp(Exception, "the key \(somekey\) doesn't appear to exist or isn't a list") as \
-            context:
+        with self.assertRaisesRegexp(Exception, "the key \(somekey\) doesn't appear to exist or isn't a list"):
             generator.rand_value('somekey')
-
-

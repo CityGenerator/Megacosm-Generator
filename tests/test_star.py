@@ -3,11 +3,9 @@
 
 from megacosm.generators import Star
 import unittest2 as unittest
-from mock import MagicMock
 
 import redis
-import ConfigParser
-import os
+
 from config import TestConfiguration
 
 
@@ -20,5 +18,4 @@ class TestStar(unittest.TestCase):
         """  """
 
         star = Star(self.redis)
-
-
+        self.assertNotEquals('', star.name)

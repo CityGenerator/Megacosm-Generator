@@ -1,14 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from megacosm.util.Seeds import *
 import unittest2 as unittest
-from mock import MagicMock
 
-import redis
-import ConfigParser
-import os
-from megacosm.util.Seeds import *
+from megacosm.util.Seeds import set_seed
 
 
 class TestSeeds(unittest.TestCase):
@@ -75,5 +70,3 @@ class TestSeeds(unittest.TestCase):
         seeds = set_seed(None)
         self.assertLessEqual(1, seeds)
         self.assertGreaterEqual(10000000, seeds)
-
-

@@ -2,15 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from megacosm.generators import Deity
-from megacosm.generators import Motivation
 import unittest2 as unittest
-from mock import MagicMock
 
 import redis
-import ConfigParser
-import os
-from megacosm.util.Seeds import *
-
 from config import TestConfiguration
 
 
@@ -18,14 +12,12 @@ class TestDeity(unittest.TestCase):
 
     def setUp(self):
         """  """
-
         self.redis = redis.from_url(TestConfiguration.REDIS_URL)
-        self.seed = set_seed('3')
 
     def test_deity(self):
         """  """
-
         deity = Deity(self.redis)
+        self.assertNotEqual('', deity.name)
 
     def test_deity_sects(self):
         """  """
@@ -37,5 +29,3 @@ class TestDeity(unittest.TestCase):
         deity = Deity(self.redis, {'deity_unity_roll': 0, 'deity_importance_roll': 100})
         deity.add_sects()
         self.assertGreaterEqual(len(deity.sects), 1)
-
-

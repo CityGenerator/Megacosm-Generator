@@ -3,18 +3,13 @@
 #
 
 import megacosm
-import unittest2 as unittest
 from flask.ext.testing import TestCase
-from flask import Flask
 
 
 class MegacosmFlaskTestCast(TestCase):
 
-#
-
     def create_app(self):
         """ """
-
         app = megacosm.create_app('config.TestConfiguration')
         return app
 
@@ -42,8 +37,7 @@ class MegacosmFlaskTestCast(TestCase):
 
         megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test2"', 100)
 
-        with self.assertRaisesRegexp(ValueError, 'failed to parse unittestgenerator_range field {"name":"test2"') as \
-            context:
+        with self.assertRaisesRegexp(ValueError, 'failed to parse unittestgenerator_range field {"name":"test2"'):
             megacosm.builder_form_data('unittestgenerator')
 
 #    paramlist={}
@@ -109,7 +103,7 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
-    def test_select_plural_verb(self):
+    def test_select_plural_adj(self):
         self.assertEquals('some', megacosm.select_plural_adj('a', 0))
         self.assertEquals('a', megacosm.select_plural_adj('a', 1))
         self.assertEquals('some', megacosm.select_plural_adj('a', 2))
@@ -442,5 +436,3 @@ class MegacosmFlaskTestCast(TestCase):
     def test_weather_builder_route(self):
         response = self.app.get('/weather_builder')
         self.assert200(response)
-
-

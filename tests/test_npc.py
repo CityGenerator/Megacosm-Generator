@@ -2,15 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from megacosm.generators import NPC
-from megacosm.generators import Motivation
 import unittest2 as unittest
-from mock import MagicMock
 
 import redis
-import ConfigParser
-import os
-from megacosm.util.Seeds import *
-import re
+from megacosm.util.Seeds import set_seed
 from config import TestConfiguration
 
 
@@ -30,7 +25,7 @@ class TestNPC(unittest.TestCase):
         # FIXME: subraces broke this assertion
         # self.assertIn(npc.race, self.redis.lrange('npc_race',0,-1))
 
-        with self.assertRaisesRegexp(Exception, 'turkeys is not a valid race and has no associated data') as context:
+        with self.assertRaisesRegexp(Exception, 'turkeys is not a valid race and has no associated data'):
             npc = NPC(self.redis, {'race': 'turkeys'})
 
         npc = NPC(self.redis, {'race': 'human'})
@@ -52,5 +47,3 @@ class TestNPC(unittest.TestCase):
         npc = NPC(self.redis, {'race': 'human'})
         self.assertEqual(npc.race, 'human')
         self.assertRegexpMatches(npc.name['full'], '.+ .+')
-
-

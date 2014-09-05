@@ -3,11 +3,8 @@
 
 from megacosm.generators import StarSystem
 import unittest2 as unittest
-from mock import MagicMock
 
 import redis
-import ConfigParser
-import os
 from config import TestConfiguration
 
 
@@ -19,7 +16,8 @@ class TestStarSystem(unittest.TestCase):
     def test_creation(self):
         """  """
 
-        star = StarSystem(self.redis, {'seed': 1007})
+        starsystem = StarSystem(self.redis, {'seed': 1007})
+        self.assertTrue(starsystem.planet)
 
     def test_starcount(self):
         """ """
@@ -27,5 +25,3 @@ class TestStarSystem(unittest.TestCase):
         stars = StarSystem(self.redis, {'seed': 1, 'starsystem_starcount_roll': 100})
         self.assertEqual(stars.seed, 1)
         self.assertEqual(len(stars.stars), 3)
-
-

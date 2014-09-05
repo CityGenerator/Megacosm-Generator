@@ -30,5 +30,4 @@ class StarSystem(Generator):
 
     def generate_planet(self):
         """ Do stuff"""
-
         self.planet = Planet(self.redis)
