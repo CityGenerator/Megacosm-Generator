@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import render_template, request
 from megacosm.generators import Artwork
 from megacosm.generators import Bond
 from megacosm.generators import Resource
@@ -18,12 +18,6 @@ from megacosm.generators import Region
 
 
 from megacosm.util.Seeds import set_seed
-from megacosm.util import Filters
-import redis
-import datetime
-import json
-import re
-import traceback
 
 from megacosm import app, feature_filter, builder_form_data
 
@@ -480,5 +474,3 @@ def cuisine_builder():
     classname = 'cuisine'
     plist, pstring, pset = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
-
-
