@@ -1,6 +1,0 @@
-[main]
-debug=false
-[redis]
-url = redis://127.0.0.1:6379/
-[logging]
-path=data/logging.json

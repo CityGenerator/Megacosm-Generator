@@ -1,8 +1,24 @@
 language: python
+services:
+  - redis-server
 python:
   - "2.7"
   - "pypy"
 install:
   - pip install -r requirements.txt
-# command to run tests
-script: nosetests 
+before_script:
+  - cp config.py.example config.py
+  - python reimport_data.py
+script: nosetests
+after_success:
+    coveralls
+notifications:
+  irc:
+    channels: "chat.freenode.net#kakow"
+    on_success: change # default: always
+    on_failure: change # default: always
+    use_notice: true
+    skip_join: true
+    template:
+      - "%{repository} (%{commit}) : %{message} "
+      - "Build details: %{build_url}"

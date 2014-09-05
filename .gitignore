@@ -1,43 +1,17 @@
-.coveralls.yml
-data/config.ini
+# Deprecated Data files
 data/*.xml
 
+# compiled python files
 *.py[cod]
 env/
-# C extensions
-*.so
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-!lib/README.md
-lib64
-__pycache__
+# Secret Config files:
+config.py
 
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
+# generated files
 .coverage
 .tox
 nosetests.xml
 
-# Translations
-*.mo
-
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+#vim temp files
 *.swp
-static/coverage/
