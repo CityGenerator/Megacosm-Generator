@@ -1,6 +1,10 @@
-"""`main` is the top level module for this application."""
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 # Import the stuffs!
+
+"""`main` is the top level module for this application."""
+
 from flask import Flask, render_template, request
 from megacosm.generators import Business
 from megacosm.generators import Continent
@@ -37,18 +41,20 @@ def create_app(config_location='config.BaseConfiguration'):
     app.server = redis.from_url(app.config['REDIS_URL'])
     return app
 
+
 app = create_app()
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/')
 def indexpage():
     """This is the first page anyone sees."""
+
     return render_template('index.html')
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/magicitem')
 def generatemagicitem():
@@ -58,7 +64,7 @@ def generatemagicitem():
     magicitem = MagicItem(app.server, features)
 
     kind = magicitem.kind
-    return render_template('magicitem_'+kind+'.html', tempobj=magicitem)
+    return render_template('magicitem_' + kind + '.html', tempobj=magicitem)
 
 
 @app.route('/magicitem_builder')
@@ -66,12 +72,12 @@ def magicitem_builder():
     """Build a Magic Item"""
 
     classname = 'magicitem'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/npc')
 def generatenpc():
@@ -86,20 +92,21 @@ def generatenpc():
 @app.route('/npc_builder')
 def npc_builder():
     """Build an NPC"""
+
     classname = 'npc'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################
 
-
 @app.route('/planet_builder')
 def planet_builder():
     """Build a planet"""
+
     classname = 'planet'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
@@ -107,6 +114,7 @@ def planet_builder():
 @app.route('/planet')
 def generateplanet():
     """Generate a planet"""
+
     features = feature_filter('planet')
     planet = Planet(app.server, features)
     planet.add_continents()
@@ -115,10 +123,10 @@ def generateplanet():
 
 #########################################################################
 
-
 @app.route('/organization')
 def GenerateOrganization():
     """Generate a simple organization"""
+
     features = feature_filter('organization')
     tempobj = Organization(app.server, features)
     return render_template('organization.html', tempobj=tempobj)
@@ -127,15 +135,18 @@ def GenerateOrganization():
 @app.route('/organization_builder')
 def Organization_Builder():
     """Generate the basic data about a organization"""
-    classname = 'organization'
-    plist, pstring, pset = builder_form_data(classname)
-    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
-#########################################################################
 
+    classname = 'organization'
+    (plist, pstring, pset) = builder_form_data(classname)
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+
+#########################################################################
 
 @app.route('/business')
 def generatebusiness():
     """Generate a business"""
+
     features = feature_filter('business')
     business = Business(app.server, features)
     return render_template('business.html', tempobj=business)
@@ -146,15 +157,16 @@ def business_builder():
     """Build a a business"""
 
     classname = 'business'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/street')
 def generatestreet():
     """Generate a street"""
+
     features = feature_filter('street')
     tempobj = Street(app.server, features)
     return render_template('street.html', tempobj=tempobj)
@@ -165,15 +177,16 @@ def street_builder():
     """Build a a street"""
 
     classname = 'street'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/moon')
 def generatemoon():
     """Generate a moon"""
+
     features = feature_filter('moon')
     moon = Moon(app.server, features)
     return render_template('moon.html', tempobj=moon)
@@ -182,17 +195,18 @@ def generatemoon():
 @app.route('/moon_builder')
 def moon_builder():
     """Build a a moon"""
+
     classname = 'moon'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################
 
-
 @app.route('/star')
 def generatestar():
     """Generate a star"""
+
     features = feature_filter('star')
     star = Star(app.server, features)
     return render_template('star.html', tempobj=star)
@@ -201,16 +215,18 @@ def generatestar():
 @app.route('/star_builder')
 def star_builder():
     """Build a a star"""
+
     classname = 'star'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/continent')
 def generatecontinent():
     """Generate a continent"""
+
     features = feature_filter('continent')
     continent = Continent(app.server, features)
     continent.add_countries()
@@ -220,32 +236,37 @@ def generatecontinent():
 @app.route('/continent_builder')
 def continent_builder():
     """Build a a continent"""
+
     classname = 'continent'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/region')
 def generateregion():
     """Generate a region"""
+
     features = feature_filter('region')
     region = Region(app.server, features)
+
 #    region.add_cities()
 #    region.add_locations()()
+
     return render_template('region.html', tempobj=region)
 
 
 @app.route('/region_builder')
 def region_builder():
     """Build a a region"""
+
     classname = 'region'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/sect')
 def generatesect():
@@ -259,18 +280,19 @@ def generatesect():
 @app.route('/sect_builder')
 def sect_builder():
     """Build a a sect"""
+
     classname = 'sect'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################
 
-
 @app.route('/govt')
 def generategovt():
     """Generate a govt"""
+
     features = feature_filter('govt')
     govt = Govt(app.server, features)
     return render_template('govt.html', tempobj=govt)
@@ -279,17 +301,18 @@ def generategovt():
 @app.route('/govt_builder')
 def govt_builder():
     """Build a a govt"""
+
     classname = 'govt'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################
 
-
 @app.route('/weather')
 def generateweather():
     """Generate a weather"""
+
     features = feature_filter('weather')
     weather = Weather(app.server, features)
     return render_template('weather.html', tempobj=weather)
@@ -298,16 +321,18 @@ def generateweather():
 @app.route('/weather_builder')
 def weather_builder():
     """Build a a weather"""
+
     classname = 'weather'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/wanted')
 def generatewanted():
     """Generate a wanted"""
+
     features = feature_filter('wanted')
     wanted = Wanted(app.server, features)
     return render_template('wanted.html', tempobj=wanted)
@@ -316,17 +341,18 @@ def generatewanted():
 @app.route('/wanted_builder')
 def wanted_builder():
     """Build a a wanted"""
+
     classname = 'wanted'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################
 
-
 @app.route('/geomorphdungeon')
 def generategeomorphdungeon():
     """Generate a geomorphdungeon"""
+
     features = feature_filter('geomorphdungeon')
     geomorphdungeon = GeomorphDungeon(app.server, features)
     return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.convert_to_json())
@@ -335,17 +361,19 @@ def generategeomorphdungeon():
 @app.route('/geomorphdungeon_builder')
 def geomorphdungeon_builder():
     """Build a a geomorphdungeon"""
+
     classname = 'geomorphdungeon'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/roguedungeon')
 def generateroguedungeon():
     """Generate a dungeon"""
+
     features = feature_filter('roguedungeon')
     roguedungeon = RogueDungeon(app.server, features)
     return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.convert_to_json())
@@ -354,16 +382,18 @@ def generateroguedungeon():
 @app.route('/roguedungeon_builder')
 def roguedungeon_builder():
     """Build a a dungeon"""
+
     classname = 'roguedungeon'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/country')
 def generatecountry():
     """Generate a country"""
+
     features = feature_filter('country')
     country = Country(app.server, features)
     country.add_regions()
@@ -373,12 +403,13 @@ def generatecountry():
 @app.route('/country_builder')
 def country_builder():
     """Build a a country"""
+
     classname = 'country'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/deity')
 def generatedeity():
@@ -392,13 +423,14 @@ def generatedeity():
 @app.route('/deity_builder')
 def deity_builder():
     """Build a a deity"""
+
     classname = 'deity'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/leader')
 def generateleader():
@@ -412,13 +444,14 @@ def generateleader():
 @app.route('/leader_builder')
 def leader_builder():
     """Build a a leader"""
+
     classname = 'leader'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-#########################################################################
 
+#########################################################################
 
 @app.route('/flag')
 def generateflag():
@@ -432,8 +465,9 @@ def generateflag():
 @app.route('/flag_builder')
 def flag_builder():
     """Build a a flag"""
+
     classname = 'flag'
-    plist, pstring, pset = builder_form_data(classname)
+    (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
@@ -444,10 +478,11 @@ def flag_builder():
 
 def feature_filter(generator):
     """Turn the request string into a feature set."""
+
     app.seed = set_seed(request.args.get('seed'))
 
-    genregex = re.compile('^'+generator+'_[a-z_]+$')
-    genrollregex = re.compile('^'+generator+'_[a-z_]+_(roll|chance)$')
+    genregex = re.compile('^' + generator + '_[a-z_]+$')
+    genrollregex = re.compile('^' + generator + '_[a-z_]+_(roll|chance)$')
 
     app.logger.info('Request Seed: %i', app.seed)
     features = {'seed': app.seed}
@@ -455,18 +490,19 @@ def feature_filter(generator):
         if genrollregex.match(param) and isvalidscore(request.args[param]):
             features[param] = int(request.args[param])
         elif genregex.match(param) and str(request.args[param]).isdigit():
-            fieldname = re.sub(generator+'_', '', param)
+            fieldname = re.sub(generator + '_', '', param)
             features[fieldname] = app.server.lrange(param, int(request.args[param]), int(request.args[param]))[0]
     return features
 
 
 def builder_form_data(generator):
     """Turn the fields of a generator into fodder for the generic_builder"""
+
     plist = {}
     pstring = {}
     pset = {}
-    for key in app.server.keys(generator+'_*'):
-        fieldname = key.replace(generator+'_', '')
+    for key in app.server.keys(generator + '_*'):
+        fieldname = key.replace(generator + '_', '')
         if app.server.type(key) == 'list':
             plist[fieldname] = app.server.lrange(key, 0, -1)
         elif app.server.type(key) == 'string':
@@ -478,12 +514,13 @@ def builder_form_data(generator):
                 try:
                     pset[fieldname].append(json.loads(field))
                 except ValueError:
-                    raise ValueError("failed to parse %s field %s" % (key, field))
-    return plist, pstring, pset
+                    raise ValueError('failed to parse %s field %s' % (key, field))
+    return (plist, pstring, pset)
 
 
 def isvalidscore(value):
     """Verify if a string is a valid score."""
+
     if value.isdigit() and int(value) >= 0 and int(value) <= 100:
         return True
     else:
@@ -493,54 +530,63 @@ def isvalidscore(value):
 @app.errorhandler(404)
 def page_not_found(error):
     """Return a custom 404 error."""
-    print " ======================="
-    print "Exception:", error
+
+    print ' ======================='
+    print 'Exception:', error
     time = str(datetime.datetime.now())
-    return render_template("400.html", request=request, time=time), 404
+    return (render_template('400.html', request=request, time=time), 404)
 
 
 @app.errorhandler(500)
 def page_borked(error):
     """Return a custom 500 error. Only hit when debugging is off."""
-    print " ======================="
-    print "problem with ", request.url
+
+    print ' ======================='
+    print 'problem with ', request.url
     time = str(datetime.datetime.now())
-    print "on seed", app.seed, "at", time
-    print "Exception:", error.args[0]
+    print 'on seed', app.seed, 'at', time
+    print 'Exception:', error.args[0]
     traceback.print_exc()
 
-    return render_template("500.html", seed=app.seed, request=request, e=error, time=time), 500
+    return (render_template('500.html', seed=app.seed, request=request, e=error, time=time), 500)
 
 
 @app.template_filter('article')
 def select_article(noun):
     """Select the proper article for a noun."""
+
     return Filters.select_article(noun)
 
 
 @app.template_filter('pluralize')
 def select_pluralize(verb, count):
     """Select the proper verb for a count."""
+
     return Filters.select_pluralize(verb, count)
 
 
 @app.template_filter('conjunction')
 def select_conjunction(wordlist):
     """Join a list with commas and such."""
+
     return Filters.select_conjunction(wordlist)
 
 
 @app.template_filter('plural_verb')
 def select_plural_verb(verb, subject):
     """select the proper plural verb."""
+
     # FIXME is this a duplicate of select_pluralize???
+
     return Filters.select_plural_verb(verb, subject)
 
 
 @app.template_filter('plural_adj')
 def select_plural_adj(adj, subject):
     """Select the proper version of an adjective."""
+
     # FIXME is this correct? or is it count-based?
+
     return Filters.select_plural_adj(adj, subject)
 
 import oneliners
