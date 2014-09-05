@@ -1,5 +1,5 @@
 
-from megacosm.generators.Sect import Sect
+from megacosm.generators import Sect
 import unittest2 as unittest
 from mock import MagicMock
 

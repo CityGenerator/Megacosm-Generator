@@ -1,5 +1,5 @@
 
-from megacosm.generators.Misfire import Misfire
+from megacosm.generators import Misfire
 import unittest2 as unittest
 from mock import MagicMock
 

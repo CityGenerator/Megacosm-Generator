@@ -1,6 +1,6 @@
 
-from megacosm.generators.Motivation import Motivation
-from megacosm.generators.NPC import NPC
+from megacosm.generators import Motivation
+from megacosm.generators import NPC
 import unittest2 as unittest
 from mock import MagicMock
 

@@ -68,7 +68,7 @@ def generatemagicitem():
     """Generate a MagicItem"""
 
     features = feature_filter('magicitem')
-    magicitem = MagicItem.MagicItem(app.server, features)
+    magicitem = MagicItem(app.server, features)
 
     kind = magicitem.kind
     return render_template('magicitem_'+kind+'.html', tempobj=magicitem)
@@ -91,8 +91,8 @@ def generatenpc():
     """Generate an NPC"""
 
     features = feature_filter('npc')
-    features['deity'] = Deity.Deity(app.server)
-    tempobj = NPC.NPC(app.server, features)
+    features['deity'] = Deity(app.server)
+    tempobj = NPC(app.server, features)
     return render_template('npc.html', tempobj=tempobj)
 
 
@@ -114,19 +114,19 @@ def generatebond():
 
     features = feature_filter('bond')
     titletext = 'The Ties that Bind Us..'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         bonds = []
         for _ in xrange(int(request.args['count'])):
-            bonds.append(Bond.Bond(app.server, features))
+            bonds.append(Bond(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=bonds,
                                oneliner=bonds[0], titletext=titletext, generator='bond')
     else:
-        bond = Bond.Bond(app.server, features)
+        bond = Bond(app.server, features)
         return render_template('oneliner.html', oneliner=bond, titletext=titletext, generator='bond')
 
 
@@ -158,7 +158,7 @@ def planet_builder():
 def generateplanet():
     """Generate a planet"""
     features = feature_filter('planet')
-    planet = Planet.Planet(app.server, features)
+    planet = Planet(app.server, features)
     planet.add_continents()
     return render_template('planet.html', tempobj=planet)
 
@@ -172,19 +172,19 @@ def generateresource():
 
     features = feature_filter('resource')
     titletext = 'At Your Disposal...'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         resources = []
         for _ in xrange(int(request.args['count'])):
-            resources.append(Resource.Resource(app.server, features))
+            resources.append(Resource(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=resources,
                                oneliner=resources[0], titletext=titletext, generator='resource')
     else:
-        resource = Resource.Resource(app.server, features)
+        resource = Resource(app.server, features)
         return render_template('oneliner.html', oneliner=resource, titletext=titletext, generator='resource')
 
 
@@ -210,12 +210,12 @@ def generateartwork():
             int(request.args['count']) <= 100):
         artworks = []
         for _ in xrange(int(request.args['count'])):
-            artworks.append(Artwork.Artwork(app.server, features))
+            artworks.append(Artwork(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=artworks,
                                oneliner=artworks[0], titletext=titletext, generator='artwork')
     else:
-        artwork = Artwork.Artwork(app.server, features)
+        artwork = Artwork(app.server, features)
         return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
 
 
@@ -235,19 +235,19 @@ def generaterumor():
     """Generate a rumor"""
     features = feature_filter('rumor')
     titletext = 'Did You Hear?'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         rumors = []
         for _ in xrange(int(request.args['count'])):
-            rumors.append(Rumor.Rumor(app.server, features))
+            rumors.append(Rumor(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=rumors,
                                oneliner=rumors[0], titletext=titletext, generator='rumor')
     else:
-        rumor = Rumor.Rumor(app.server, features)
+        rumor = Rumor(app.server, features)
         return render_template('oneliner.html', oneliner=rumor, titletext=titletext, generator='rumor')
 
 
@@ -268,19 +268,19 @@ def generatemisfire():
 
     features = feature_filter('misfire')
     titletext = 'My Spell Misfired!'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         misfires = []
         for _ in xrange(int(request.args['count'])):
-            misfires.append(Misfire.Misfire(app.server, features))
+            misfires.append(Misfire(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=misfires,
                                oneliner=misfires[0], titletext=titletext, generator='misfire')
     else:
-        misfire = Misfire.Misfire(app.server, features)
+        misfire = Misfire(app.server, features)
         return render_template('oneliner.html', oneliner=misfire, titletext=titletext, generator='misfire')
 
 
@@ -307,12 +307,12 @@ def generateflaw():
             int(request.args['count']) <= 100):
         flaws = []
         for _ in xrange(int(request.args['count'])):
-            flaws.append(Flaw.Flaw(app.server, features))
+            flaws.append(Flaw(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=flaws,
                                oneliner=flaws[0], titletext=titletext, generator='flaw')
     else:
-        flaw = Flaw.Flaw(app.server, features)
+        flaw = Flaw(app.server, features)
         return render_template('oneliner.html', oneliner=flaw, titletext=titletext, generator='flaw')
 
 
@@ -332,19 +332,19 @@ def generatecurrency():
     """Generate a currency"""
     features = feature_filter('currency')
     titletext = 'Spare Some Change?'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         currencys = []
         for _ in xrange(int(request.args['count'])):
-            currencys.append(Currency.Currency(app.server, features))
+            currencys.append(Currency(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=currencys,
                                oneliner=currencys[0], titletext=titletext, generator='currency')
     else:
-        currency = Currency.Currency(app.server, features)
+        currency = Currency(app.server, features)
         return render_template('oneliner.html', oneliner=currency, titletext=titletext, generator='currency')
 
 
@@ -365,19 +365,19 @@ def generatejobposting():
 
     features = feature_filter('jobposting')
     titletext = 'Help Wanted!'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         jobpostings = []
         for _ in xrange(int(request.args['count'])):
-            jobpostings.append(JobPosting.JobPosting(app.server, features))
+            jobpostings.append(JobPosting(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=jobpostings,
                                oneliner=jobpostings[0], titletext=titletext, generator='jobposting')
     else:
-        jobposting = JobPosting.JobPosting(app.server, features)
+        jobposting = JobPosting(app.server, features)
         return render_template('oneliner.html', oneliner=jobposting, titletext=titletext, generator='jobposting')
 
 
@@ -399,19 +399,19 @@ def generateevent():
 
     features = feature_filter('event')
     titletext = 'Look over there...'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         events = []
         for _ in xrange(int(request.args['count'])):
-            events.append(Event.Event(app.server, features))
+            events.append(Event(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=events,
                                oneliner=events[0], titletext=titletext, generator='event')
     else:
-        event = Event.Event(app.server, features)
+        event = Event(app.server, features)
         return render_template('oneliner.html', oneliner=event, titletext=titletext, generator='event')
 
 
@@ -431,19 +431,19 @@ def generatemotivation():
     """Generate a motivation"""
     features = feature_filter('motivation')
     titletext = 'I\'m Motivated...'
-    features['npc'] = NPC.NPC(app.server)
+    features['npc'] = NPC(app.server)
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
         motivations = []
         for _ in xrange(int(request.args['count'])):
-            motivations.append(Motivation.Motivation(app.server, features))
+            motivations.append(Motivation(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=motivations,
                                oneliner=motivations[0], titletext=titletext, generator='motivation')
     else:
-        motivation = Motivation.Motivation(app.server, features)
+        motivation = Motivation(app.server, features)
         return render_template('oneliner.html', oneliner=motivation, titletext=titletext, generator='motivation')
 
 
@@ -469,11 +469,11 @@ def generategem():
             int(request.args['count']) <= 100):
         gems = []
         for _ in xrange(int(request.args['count'])):
-            gems.append(Gem.Gem(app.server, features))
+            gems.append(Gem(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=gems, oneliner=gems[0], titletext=titletext, generator='gem')
     else:
-        gem = Gem.Gem(app.server, features)
+        gem = Gem(app.server, features)
         return render_template('oneliner.html', oneliner=gem, titletext=titletext, generator='gem')
 
 
@@ -500,12 +500,12 @@ def generatemundaneitem():
             int(request.args['count']) <= 100):
         mundaneitems = []
         for _ in xrange(int(request.args['count'])):
-            mundaneitems.append(MundaneItem.MundaneItem(app.server, features))
+            mundaneitems.append(MundaneItem(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=mundaneitems,
                                oneliner=mundaneitems[0], titletext=titletext, generator='mundaneitem')
     else:
-        mundaneitem = MundaneItem.MundaneItem(app.server, features)
+        mundaneitem = MundaneItem(app.server, features)
         return render_template('oneliner.html', oneliner=mundaneitem, titletext=titletext, generator='mundaneitem')
 
 
@@ -531,12 +531,12 @@ def generatelegend():
             int(request.args['count']) <= 100):
         legends = []
         for _ in xrange(int(request.args['count'])):
-            legends.append(Legend.Legend(app.server, features))
+            legends.append(Legend(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=legends,
                                oneliner=legends[0], titletext=titletext, generator='legend')
     else:
-        legend = Legend.Legend(app.server, features)
+        legend = Legend(app.server, features)
         return render_template('oneliner.html', oneliner=legend, titletext=titletext, generator='legend')
 
 
@@ -555,7 +555,7 @@ def legend_builder():
 def GenerateOrganization():
     """Generate a simple organization"""
     features = feature_filter('organization')
-    tempobj = Organization.Organization(app.server, features)
+    tempobj = Organization(app.server, features)
     return render_template('organization.html', tempobj=tempobj)
 
 
@@ -572,7 +572,7 @@ def Organization_Builder():
 def generatebusiness():
     """Generate a business"""
     features = feature_filter('business')
-    business = Business.Business(app.server, features)
+    business = Business(app.server, features)
     return render_template('business.html', tempobj=business)
 
 
@@ -591,7 +591,7 @@ def business_builder():
 def generatestreet():
     """Generate a street"""
     features = feature_filter('street')
-    tempobj = Street.Street(app.server, features)
+    tempobj = Street(app.server, features)
     return render_template('street.html', tempobj=tempobj)
 
 
@@ -610,7 +610,7 @@ def street_builder():
 def generatemoon():
     """Generate a moon"""
     features = feature_filter('moon')
-    moon = Moon.Moon(app.server, features)
+    moon = Moon(app.server, features)
     return render_template('moon.html', tempobj=moon)
 
 
@@ -629,7 +629,7 @@ def moon_builder():
 def generatestar():
     """Generate a star"""
     features = feature_filter('star')
-    star = Star.Star(app.server, features)
+    star = Star(app.server, features)
     return render_template('star.html', tempobj=star)
 
 
@@ -647,7 +647,7 @@ def star_builder():
 def generatecontinent():
     """Generate a continent"""
     features = feature_filter('continent')
-    continent = Continent.Continent(app.server, features)
+    continent = Continent(app.server, features)
     continent.add_countries()
     return render_template('continent.html', tempobj=continent)
 
@@ -666,7 +666,7 @@ def continent_builder():
 def generateregion():
     """Generate a region"""
     features = feature_filter('region')
-    region = Region.Region(app.server, features)
+    region = Region(app.server, features)
 #    region.add_cities()
 #    region.add_locations()()
     return render_template('region.html', tempobj=region)
@@ -687,7 +687,7 @@ def generatesect():
     """Generate a sect"""
 
     features = feature_filter('sect')
-    sect = Sect.Sect(app.server, features)
+    sect = Sect(app.server, features)
     return render_template('sect.html', tempobj=sect)
 
 
@@ -707,7 +707,7 @@ def sect_builder():
 def generategovt():
     """Generate a govt"""
     features = feature_filter('govt')
-    govt = Govt.Govt(app.server, features)
+    govt = Govt(app.server, features)
     return render_template('govt.html', tempobj=govt)
 
 
@@ -726,7 +726,7 @@ def govt_builder():
 def generateweather():
     """Generate a weather"""
     features = feature_filter('weather')
-    weather = Weather.Weather(app.server, features)
+    weather = Weather(app.server, features)
     return render_template('weather.html', tempobj=weather)
 
 
@@ -744,7 +744,7 @@ def weather_builder():
 def generatewanted():
     """Generate a wanted"""
     features = feature_filter('wanted')
-    wanted = Wanted.Wanted(app.server, features)
+    wanted = Wanted(app.server, features)
     return render_template('wanted.html', tempobj=wanted)
 
 
@@ -763,7 +763,7 @@ def wanted_builder():
 def generategeomorphdungeon():
     """Generate a geomorphdungeon"""
     features = feature_filter('geomorphdungeon')
-    geomorphdungeon = GeomorphDungeon.GeomorphDungeon(app.server, features)
+    geomorphdungeon = GeomorphDungeon(app.server, features)
     return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.convert_to_json())
 
 
@@ -782,7 +782,7 @@ def geomorphdungeon_builder():
 def generateroguedungeon():
     """Generate a dungeon"""
     features = feature_filter('roguedungeon')
-    roguedungeon = RogueDungeon.RogueDungeon(app.server, features)
+    roguedungeon = RogueDungeon(app.server, features)
     return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.convert_to_json())
 
 
@@ -800,7 +800,7 @@ def roguedungeon_builder():
 def generatecountry():
     """Generate a country"""
     features = feature_filter('country')
-    country = Country.Country(app.server, features)
+    country = Country(app.server, features)
     country.add_regions()
     return render_template('country.html', tempobj=country)
 
@@ -819,7 +819,7 @@ def country_builder():
 def generatecuisine():
     """Generate a cuisine"""
     features = feature_filter('cuisine')
-    features['region'] = Region.Region(app.server)
+    features['region'] = Region(app.server)
     titletext = 'What\'s for Dinner?'
     if ('count' in request.args and
             request.args['count'].isdigit() and
@@ -827,12 +827,12 @@ def generatecuisine():
             int(request.args['count']) <= 100):
         cuisines = []
         for _ in xrange(int(request.args['count'])):
-            cuisines.append(Cuisine.Cuisine(app.server, features))
+            cuisines.append(Cuisine(app.server, features))
             features['seed'] = set_seed()
         return render_template('oneliner.html', oneliners=cuisines,
                                oneliner=cuisines[0], titletext=titletext, generator='cuisine')
     else:
-        cuisine = Cuisine.Cuisine(app.server, features)
+        cuisine = Cuisine(app.server, features)
         return render_template('oneliner.html', oneliner=cuisine, titletext=titletext, generator='cuisine')
 
 
@@ -851,7 +851,7 @@ def generatedeity():
     """Generate a deity"""
 
     features = feature_filter('deity')
-    deity = Deity.Deity(app.server, features)
+    deity = Deity(app.server, features)
     return render_template('deity.html', tempobj=deity)
 
 
@@ -871,7 +871,7 @@ def generateleader():
     """Generate a leader"""
 
     features = feature_filter('leader')
-    leader = Leader.Leader(app.server, features)
+    leader = Leader(app.server, features)
     return render_template('leader.html', tempobj=leader)
 
 
@@ -891,7 +891,7 @@ def generateflag():
     """Generate a flag"""
 
     features = feature_filter('flag')
-    app.flag = Flag.Flag(app.server, features)
+    app.flag = Flag(app.server, features)
     return render_template('flag.html', tempobj=app.flag, flagjson=app.flag.tojson())
 
 

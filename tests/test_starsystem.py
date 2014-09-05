@@ -1,5 +1,5 @@
 
-from megacosm.generators.StarSystem import StarSystem
+from megacosm.generators import StarSystem
 import unittest2 as unittest
 from mock import MagicMock
 

@@ -1,5 +1,5 @@
 
-from megacosm.generators.Moon import Moon
+from megacosm.generators import Moon
 import unittest2 as unittest
 from mock import MagicMock
 

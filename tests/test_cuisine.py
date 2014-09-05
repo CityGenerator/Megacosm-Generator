@@ -1,7 +1,7 @@
 
-from megacosm.generators.Cuisine import Cuisine
-from megacosm.generators.Motivation import Motivation
-from megacosm.generators.Region import Region
+from megacosm.generators import Cuisine
+from megacosm.generators import Motivation
+from megacosm.generators import Region
 import unittest2 as unittest
 from mock import MagicMock
 

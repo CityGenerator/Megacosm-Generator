@@ -1,5 +1,5 @@
 
-from megacosm.generators.Country import Country
+from megacosm.generators import Country
 import unittest2 as unittest
 from mock import MagicMock
 
