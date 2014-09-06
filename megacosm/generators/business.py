@@ -8,7 +8,6 @@ import random
 
 
 class Business(Generator):
-
     """ Create a business."""
 
     def __init__(self, redis, features={}):
