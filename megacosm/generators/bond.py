@@ -8,7 +8,6 @@ import random
 
 
 class Bond(Generator):
-
     """Generate a bond between two people 'you' and 'other'."""
 
     def __init__(self, redis, features={}):
@@ -16,12 +15,10 @@ class Bond(Generator):
         self.logger = logging.getLogger(__name__)
 
         # if self.you and self.other are not set, set them to defaults.
-
         if not hasattr(self, 'you'):
             self.you = 'you'
 
         # a random NPC
-
         if not hasattr(self, 'other'):
             self.other = npc.NPC(self.redis).name['full']
 

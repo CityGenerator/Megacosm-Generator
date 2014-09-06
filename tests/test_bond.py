@@ -31,4 +31,15 @@ class TestBond(unittest.TestCase):
             'bond_when_roll': 5,
             'when': 'Bob',
             })
-        self.assertEqual(bond.text, 'Bob, Jesse Will Tony Shaun Rich')
+        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', bond.text)
+        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', "%s" % bond)
+
+    def test_bond_non_features(self):
+        """  """
+        bond = Bond(self.redis, {
+            'bond_when_roll': 100,
+            'template': 'Bob, Jesse Will Tony Shaun Rich',
+            })
+
+        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', bond.text)
+        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', "%s" % bond)
