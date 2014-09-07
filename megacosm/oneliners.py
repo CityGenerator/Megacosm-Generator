@@ -16,7 +16,6 @@ from megacosm.generators import Cuisine
 from megacosm.generators import NPC
 from megacosm.generators import Region
 
-
 from megacosm.util.Seeds import set_seed
 
 from megacosm import app, feature_filter, builder_form_data
