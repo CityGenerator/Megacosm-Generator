@@ -9,6 +9,7 @@ env/
 config.py
 
 # generated files
+coverage/
 .coverage
 .tox
 nosetests.xml

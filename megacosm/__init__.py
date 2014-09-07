@@ -504,7 +504,7 @@ def feature_filter(generator):
     genregex = re.compile('^' + generator + '_[a-z_]+$')
     genrollregex = re.compile('^' + generator + '_[a-z_]+_(roll|chance)$')
 
-    app.logger.info('Request Seed: %i', app.seed)
+    app.logger.debug('Request Seed: %i', app.seed)
     features = {'seed': app.seed}
     for param in request.args:
         if genrollregex.match(param) and isvalidscore(request.args[param]):
