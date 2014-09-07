@@ -6,6 +6,20 @@ SET kobold_details     {"name": "Kobold",     "size": "small",   "description": 
 
 LPUSH kobold_covering scales
 
+SET kobold_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH kobold_subrace aquatic
+LPUSH kobold_subrace sand
+LPUSH kobold_subrace mud
+LPUSH kobold_subrace jungle
+
+HSET kobold_subrace_description aquatic {"subrace": "Aquatic Kobold",   "description": "" }
+HSET kobold_subrace_description sand    {"subrace": "Sand Kobold",      "description": "" }
+HSET kobold_subrace_description mud     {"subrace": "Mud Kobold",       "description": "" }
+HSET kobold_subrace_description jungle  {"subrace": "Jungle Kobold",    "description": "" }
+
+
+
 ZADD kobold_name_order 100 { "name":"first" }
 
 HSET kobold_name_first  root 100

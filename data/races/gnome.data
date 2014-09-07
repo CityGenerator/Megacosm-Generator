@@ -6,6 +6,24 @@ SET gnome_details      {"name": "Gnome",      "size": "small",   "description": 
 
 LPUSH gnome_covering skin
 
+
+SET gnome_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH gnome_subrace deep
+LPUSH gnome_subrace forest
+LPUSH gnome_subrace rock
+LPUSH gnome_subrace tinker
+LPUSH gnome_subrace garden
+
+HSET gnome_subrace_description deep     {"subrace": "Deep Gnome",       "description": "" }
+HSET gnome_subrace_description forest   {"subrace": "Forest Gnome",     "description": "" }
+HSET gnome_subrace_description rock     {"subrace": "Rock Gnome",       "description": "" }
+HSET gnome_subrace_description tinker   {"subrace": "Tinker Gnome",     "description": "" }
+HSET gnome_subrace_description garden   {"subrace": "Garden Gnome",     "description": "" }
+
+
+
+
 ZADD gnome_name_order 50 { "name":"first" }
 ZADD gnome_name_order 100 { "name":"last"}
 

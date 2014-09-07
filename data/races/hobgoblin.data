@@ -1,0 +1,164 @@
+
+LPUSH npc_race hobgoblin
+
+SET hobgoblin_details     {"name": "Hobgoblin",     "size": "hobgoblin",   "description": "the more civilized of the goblinoids"}
+
+LPUSH hobgoblin_covering skin
+
+SET hobgoblin_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH hobgoblin_subrace shadow
+LPUSH hobgoblin_subrace koalinth
+
+HSET hobgoblin_subrace_description shadow   {"subrace": "Shadow Hobgoblin",      "description": "" }
+HSET hobgoblin_subrace_description koalinth {"subrace": "Koalinth Hobgoblin",      "description": "" }
+
+ZADD hobgoblin_name_order 50 { "name":"first" }
+ZADD hobgoblin_name_order 100 { "name":"last"}
+
+HSET hobgoblin_name_first  pre 100
+HSET hobgoblin_name_first  root 100
+HSET hobgoblin_name_last   pre 100
+HSET hobgoblin_name_last   root 100
+
+LPUSH hobgoblin_name_first_pre Ba
+LPUSH hobgoblin_name_first_pre Be
+LPUSH hobgoblin_name_first_pre Bo
+LPUSH hobgoblin_name_first_pre Da
+LPUSH hobgoblin_name_first_pre De
+LPUSH hobgoblin_name_first_pre Do
+LPUSH hobgoblin_name_first_pre Fa
+LPUSH hobgoblin_name_first_pre Fe
+LPUSH hobgoblin_name_first_pre Fo
+LPUSH hobgoblin_name_first_pre Fu
+LPUSH hobgoblin_name_first_pre Ga
+LPUSH hobgoblin_name_first_pre Ge
+LPUSH hobgoblin_name_first_pre Go
+LPUSH hobgoblin_name_first_pre In
+LPUSH hobgoblin_name_first_pre Ka
+LPUSH hobgoblin_name_first_pre Ke
+LPUSH hobgoblin_name_first_pre Ko
+LPUSH hobgoblin_name_first_pre La
+LPUSH hobgoblin_name_first_pre Lo
+LPUSH hobgoblin_name_first_pre Ma
+LPUSH hobgoblin_name_first_pre Me
+LPUSH hobgoblin_name_first_pre Mo
+LPUSH hobgoblin_name_first_pre Na
+LPUSH hobgoblin_name_first_pre Ne
+LPUSH hobgoblin_name_first_pre No
+LPUSH hobgoblin_name_first_pre Ol
+LPUSH hobgoblin_name_first_pre Or
+LPUSH hobgoblin_name_first_pre Ox
+LPUSH hobgoblin_name_first_pre Pa
+LPUSH hobgoblin_name_first_pre Pe
+LPUSH hobgoblin_name_first_pre Po
+LPUSH hobgoblin_name_first_pre Ra
+LPUSH hobgoblin_name_first_pre Re
+LPUSH hobgoblin_name_first_pre Ro
+LPUSH hobgoblin_name_first_pre Sa
+LPUSH hobgoblin_name_first_pre Se
+LPUSH hobgoblin_name_first_pre So
+LPUSH hobgoblin_name_first_pre Ta
+LPUSH hobgoblin_name_first_pre Te
+LPUSH hobgoblin_name_first_pre To
+LPUSH hobgoblin_name_first_pre Ul
+LPUSH hobgoblin_name_first_pre Ux
+LPUSH hobgoblin_name_first_pre Va
+LPUSH hobgoblin_name_first_pre Ve
+LPUSH hobgoblin_name_first_pre Vo
+LPUSH hobgoblin_name_first_pre Wo
+LPUSH hobgoblin_name_first_pre Xa
+LPUSH hobgoblin_name_first_pre Xo
+LPUSH hobgoblin_name_first_pre Za
+LPUSH hobgoblin_name_first_pre Ze
+LPUSH hobgoblin_name_first_pre Zo
+
+LPUSH hobgoblin_name_first_root arg
+LPUSH hobgoblin_name_first_root ck
+LPUSH hobgoblin_name_first_root erg
+LPUSH hobgoblin_name_first_root f
+LPUSH hobgoblin_name_first_root g
+LPUSH hobgoblin_name_first_root gg
+LPUSH hobgoblin_name_first_root k
+LPUSH hobgoblin_name_first_root kk
+LPUSH hobgoblin_name_first_root lenf
+LPUSH hobgoblin_name_first_root lf
+LPUSH hobgoblin_name_first_root lg
+LPUSH hobgoblin_name_first_root lk
+LPUSH hobgoblin_name_first_root lnf
+LPUSH hobgoblin_name_first_root m
+LPUSH hobgoblin_name_first_root nf
+LPUSH hobgoblin_name_first_root nn
+LPUSH hobgoblin_name_first_root og
+LPUSH hobgoblin_name_first_root r
+LPUSH hobgoblin_name_first_root rd
+LPUSH hobgoblin_name_first_root rez
+LPUSH hobgoblin_name_first_root rg
+LPUSH hobgoblin_name_first_root rof
+LPUSH hobgoblin_name_first_root rog
+LPUSH hobgoblin_name_first_root rr
+LPUSH hobgoblin_name_first_root t
+LPUSH hobgoblin_name_first_root tt
+LPUSH hobgoblin_name_first_root x
+LPUSH hobgoblin_name_first_root z
+LPUSH hobgoblin_name_first_root zar
+
+
+
+
+
+
+
+
+
+
+LPUSH hobgoblin_name_last_pre Bihg
+LPUSH hobgoblin_name_last_pre Blaad
+LPUSH hobgoblin_name_last_pre Braun
+LPUSH hobgoblin_name_last_pre Cleevr
+LPUSH hobgoblin_name_last_pre Damm
+LPUSH hobgoblin_name_last_pre Dakk
+LPUSH hobgoblin_name_last_pre Dred
+LPUSH hobgoblin_name_last_pre Evel
+LPUSH hobgoblin_name_last_pre Fuel
+LPUSH hobgoblin_name_last_pre Ghasht
+LPUSH hobgoblin_name_last_pre Gint
+LPUSH hobgoblin_name_last_pre Gret
+LPUSH hobgoblin_name_last_pre Grat
+LPUSH hobgoblin_name_last_pre Irn
+LPUSH hobgoblin_name_last_pre Laf
+LPUSH hobgoblin_name_last_pre Metl
+LPUSH hobgoblin_name_last_pre Mital
+LPUSH hobgoblin_name_last_pre Nit
+LPUSH hobgoblin_name_last_pre Ahgr
+LPUSH hobgoblin_name_last_pre Uze
+LPUSH hobgoblin_name_last_pre Rent
+LPUSH hobgoblin_name_last_pre Rahk
+LPUSH hobgoblin_name_last_pre Wurm
+
+LPUSH hobgoblin_name_last_root bashr
+LPUSH hobgoblin_name_last_root beast
+LPUSH hobgoblin_name_last_root boone
+LPUSH hobgoblin_name_last_root cuttr
+LPUSH hobgoblin_name_last_root mat
+LPUSH hobgoblin_name_last_root deth
+LPUSH hobgoblin_name_last_root duum
+LPUSH hobgoblin_name_last_root fery
+LPUSH hobgoblin_name_last_root glume
+LPUSH hobgoblin_name_last_root hend
+LPUSH hobgoblin_name_last_root hast
+LPUSH hobgoblin_name_last_root hule
+LPUSH hobgoblin_name_last_root kell
+LPUSH hobgoblin_name_last_root maw
+LPUSH hobgoblin_name_last_root mauth
+LPUSH hobgoblin_name_last_root murdr
+LPUSH hobgoblin_name_last_root rendir
+LPUSH hobgoblin_name_last_root rawt
+LPUSH hobgoblin_name_last_root shadwr
+LPUSH hobgoblin_name_last_root shreddir
+LPUSH hobgoblin_name_last_root sley
+LPUSH hobgoblin_name_last_root stomch
+LPUSH hobgoblin_name_last_root wizer
+
+
+

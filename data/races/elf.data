@@ -6,6 +6,34 @@ SET elf_details        {"name": "Elf",        "size": "medium",  "description": 
 
 LPUSH elf_covering skin
 
+SET elf_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH elf_subrace darkelf
+LPUSH elf_subrace woodelf
+LPUSH elf_subrace wildelf
+LPUSH elf_subrace halfelf
+LPUSH elf_subrace sunelf
+LPUSH elf_subrace wingedelf
+LPUSH elf_subrace moonelf
+LPUSH elf_subrace bloodelf
+LPUSH elf_subrace duneelf
+LPUSH elf_subrace shadowelf
+LPUSH elf_subrace waterelf
+LPUSH elf_subrace snowelf
+
+HSET elf_subrace_description darkelf   {"subrace": "Dark Elf",      "description": "a more sinister and maligned version of their above-ground cousins" }
+HSET elf_subrace_description woodelf   {"subrace": "Wood Elf",      "description": "a stronger and less thoughtful elf with deep ties to the forest" }
+HSET elf_subrace_description wildelf   {"subrace": "Wild Elf",      "description": "an elusive and slightly feral elf" }
+HSET elf_subrace_description halfelf   {"subrace": "Half Elf",      "description": "having a mixed bloodline with humans" }
+HSET elf_subrace_description sunelf    {"subrace": "Sun Elf",       "description": "elves with strong ties to magic"  }
+HSET elf_subrace_description wingedelf {"subrace": "Winged Elf",    "description": "elves that are often mistaken for angels"  }
+HSET elf_subrace_description moonelf   {"subrace": "Moon Elf",      "description": "one of the more common species of elves" }
+HSET elf_subrace_description bloodelf  {"subrace": "Blood Elf",     "description": "a bulkier elf built for nomadic life" }
+HSET elf_subrace_description duneelf   {"subrace": "Dune Elf",      "description": "adapted to the hot sands of the desert"  }
+HSET elf_subrace_description shadowelf {"subrace": "Shadow Elf",    "description": "an elf that slinks though the moonlight"  }
+HSET elf_subrace_description waterelf  {"subrace": "Water Elf",     "description": "an elf that has bonded with the waterways"  }
+HSET elf_subrace_description snowelf   {"subrace": "Snow Elf",      "description": "an elf that has adapted to cold mountain life"  }
+
 ZADD elf_name_order 50 { "name":"first" }
 ZADD elf_name_order 100 { "name":"last"}
 

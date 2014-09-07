@@ -6,6 +6,25 @@ SET orc_details        {"name": "Orc",        "size": "medium",  "description": 
 
 LPUSH orc_covering skin
 
+
+
+SET orc_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH orc_subrace deep
+LPUSH orc_subrace mountain 
+LPUSH orc_subrace lowland
+LPUSH orc_subrace babirusa
+LPUSH orc_subrace stone
+LPUSH orc_subrace swamp
+
+HSET orc_subrace_description deep      {"subrace": "Orog (Deep Orc)",     "description": "" }
+HSET orc_subrace_description mountain  {"subrace": "Mountain Orc",         "description": "" }
+HSET orc_subrace_description lowland   {"subrace": "Lowland Orc",     "description": "" }
+HSET orc_subrace_description babirusa  {"subrace": "Babirusa Orc",     "description": "" }
+HSET orc_subrace_description stone     {"subrace": "Stone Orc",         "description": "" }
+HSET orc_subrace_description swamp     {"subrace": "Swamp Orc",         "description": "" }
+
+
 ZADD orc_name_order 50 { "name":"first" }
 ZADD orc_name_order 100 { "name":"last"}
 

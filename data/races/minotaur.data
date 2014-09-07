@@ -5,6 +5,31 @@ SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": 
 
 LPUSH minotaur_covering fur
 
+
+SET minotaur_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH minotaur_subrace taurine
+LPUSH minotaur_subrace bovan
+LPUSH minotaur_subrace nandi
+LPUSH minotaur_subrace auroch
+LPUSH minotaur_subrace oxine
+LPUSH minotaur_subrace brahman
+LPUSH minotaur_subrace turin
+LPUSH minotaur_subrace kaunas
+
+
+HSET minotaur_subrace_description taurine    {"subrace": "Taurine Minotaur",   "description": "" }
+HSET minotaur_subrace_description bovan      {"subrace": "Bovan Minotaur",     "description": "thugs" }
+HSET minotaur_subrace_description nandi      {"subrace": "Nandi Minotaur",     "description": "guardians and lawkeepers" }
+HSET minotaur_subrace_description auroch     {"subrace": "Auroch Minotaur",    "description": "ancient" }
+HSET minotaur_subrace_description oxine      {"subrace": "Oxine Minotaur",     "description": "large and stupid" }
+HSET minotaur_subrace_description brahman    {"subrace": "Brahman Minotaur",   "description": "long eared and patient" }
+HSET minotaur_subrace_description turin      {"subrace": "Turin Minotaur",     "description": "merchants and traders" }
+HSET minotaur_subrace_description kaunas     {"subrace": "Kaunas Minotaur",    "description": "long horned and wise" }
+
+
+
+
 ZADD minotaur_name_order 50 { "name":"first" }
 ZADD minotaur_name_order 100 { "name":"last"}
 

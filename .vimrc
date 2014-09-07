@@ -1,5 +1,6 @@
 " Indent Python in the Google way.
 
+execute pathogen#infect()
 setlocal indentexpr=GetGooglePythonIndent(v:lnum)
 
 let s:maxoff = 50 " maximum number of lines to look backwards.

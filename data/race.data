@@ -30,12 +30,5 @@ HSET race_size large    {"modifier":"+1"}
 #
 #
 #
-## a _subrace___, known for __racedesc________ of the __race__, but __subracedesc__
-## Bob is a Wood elf, know for their care-free spirit and lengthy lifespan of the elves, but being stronger and less thoughtful than other elves.
-##LPUSH subrace_elf {"name": "Dark Elf", "description": "being a more sinister and maligned version of their above-ground cousins" }
-##LPUSH subrace_elf {"name": "Wood Elf", "description": "being stronger and less thoughtful than other elves" }
-##LPUSH subrace_elf {"name": "Wild Elf", "description": "being reclusive and slightly feral" }
-##LPUSH subrace_elf {"name": "Half Elf", "description": "having a mixed bloodline with humans." }
-#
 ##LPUSH subrace_dwarf {"name": "Deep Dwarf", "description": "are pale-skinned, standoffish variant of their more sociable cousins." }
 #

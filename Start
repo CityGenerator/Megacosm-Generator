@@ -1,3 +1,0 @@
-#!/bin/bash
-python scripts/reimport_data.py
-gunicorn megacosm:app

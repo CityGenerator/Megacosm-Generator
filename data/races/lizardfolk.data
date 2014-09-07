@@ -6,6 +6,28 @@ SET lizardfolk_details {"name": "Lizardfolk", "size": "medium",  "description": 
 
 LPUSH lizardfolk_covering scales
 
+
+
+SET lizardfolk_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH lizardfolk_subrace horned
+LPUSH lizardfolk_subrace bluetongue
+LPUSH lizardfolk_subrace chameleon
+LPUSH lizardfolk_subrace frilled
+LPUSH lizardfolk_subrace spiny
+LPUSH lizardfolk_subrace crested
+LPUSH lizardfolk_subrace bearded
+LPUSH lizardfolk_subrace girdled
+
+HSET lizardfolk_subrace_description horned      {"subrace": "Horned Lizardfolk",     "description": "" }
+HSET lizardfolk_subrace_description chameleon   {"subrace": "Chameleonfolk",         "description": "" }
+HSET lizardfolk_subrace_description frilled     {"subrace": "Frilled Lizardfolk",    "description": "" }
+HSET lizardfolk_subrace_description bluetongue  {"subrace": "Bluetongue Lizardfolk", "description": "" }
+HSET lizardfolk_subrace_description spiny       {"subrace": "Spiny Lizardfolk",      "description": "" }
+HSET lizardfolk_subrace_description crested     {"subrace": "Crested Lizardfolk",    "description": "" }
+HSET lizardfolk_subrace_description bearded     {"subrace": "Bearded Lizardfolk",    "description": "" }
+HSET lizardfolk_subrace_description girdled     {"subrace": "Girdled Lizardfolk",    "description": "" }
+
 ZADD lizardfolk_name_order 30 { "name":"first" }
 ZADD lizardfolk_name_order 60 { "name":"middle" }
 ZADD lizardfolk_name_order 100 { "name":"last"}

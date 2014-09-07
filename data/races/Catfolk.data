@@ -6,6 +6,17 @@ SET catfolk_details    {"name": "Catfolk",    "size": "medium",  "description": 
 
 LPUSH catfolk_covering fur
 
+SET catfolk_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH catfolk_subrace leosapien
+LPUSH catfolk_subrace pardii
+LPUSH catfolk_subrace lynxin
+
+HSET catfolk_subrace_description leosapien      {"subrace": "Leosapien (Lionfolk)",     "description": "Largest and most powerful of the catfolk" }
+HSET catfolk_subrace_description pardii         {"subrace": "Pardii (Leopardfolk)",     "description": "a sly and cunning felinid" }
+HSET catfolk_subrace_description lynxin         {"subrace": "Lynxin (catfolk)",         "description": "a solitary and gruff felinid" }
+
+
 
 ZADD catfolk_name_order  30 { "name":"first" }
 ZADD catfolk_name_order  60 { "name":"middle"}
