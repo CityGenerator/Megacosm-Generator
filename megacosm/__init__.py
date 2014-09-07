@@ -314,7 +314,7 @@ def govt_builder():
 def GenerateCity():
     """Generate a simple city"""
     features = feature_filter('city')
-    tempobj = City.City(app.server, features)
+    tempobj = City(app.server, features)
     return render_template('city.html', tempobj=tempobj)
 
 
@@ -565,7 +565,7 @@ def page_borked(error):
     print 'problem with ', request.url
     time = str(datetime.datetime.now())
     print 'on seed', app.seed, 'at', time
-    print 'Exception:', error.args[0]
+    print 'Exception:', error
     traceback.print_exc()
 
     return (render_template('500.html', seed=app.seed, request=request, e=error, time=time), 500)
