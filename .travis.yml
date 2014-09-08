@@ -17,7 +17,7 @@ notifications:
     channels: "chat.freenode.net#kakow"
     on_success: change # default: always
     on_failure: change # default: always
-    use_notice: true
+    use_notice: false
     skip_join: true
     template:
       - "%{repository} (%{commit}) : %{message} "
