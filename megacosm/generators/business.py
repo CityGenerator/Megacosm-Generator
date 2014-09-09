@@ -13,7 +13,6 @@ class Business(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
-
         self.generate_features(self.kind)
         self.senses = []
 
@@ -57,4 +56,4 @@ class Business(Generator):
             self.floor = random.randint(1, int(self.maxfloors))
 
     def __str__(self):
-        return '%s %s' % (self.name['full'], self.kind)
+        return '%s (%s)' % (self.name['full'].title(), self.kindname)

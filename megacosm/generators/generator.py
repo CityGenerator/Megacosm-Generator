@@ -134,7 +134,6 @@ class Generator(object):
             This creates the structure "Title PreRootPost Trailer"
             Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
             Pre, Root and Post have no spaces."""
-
         name = {'full': ''}
 
         if self.redis.exists(key + 'title'):

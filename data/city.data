@@ -199,3 +199,19 @@ LPUSH city_shape hexagonal
 LPUSH city_shape octagonal
 
 
+LPUSH city_gatheringplace adventurersguild
+LPUSH city_gatheringplace bathhouse
+LPUSH city_gatheringplace brewery
+LPUSH city_gatheringplace brothel
+LPUSH city_gatheringplace church
+LPUSH city_gatheringplace civiccenter
+LPUSH city_gatheringplace generalstore
+LPUSH city_gatheringplace inn
+LPUSH city_gatheringplace shrine
+LPUSH city_gatheringplace temple
+LPUSH city_gatheringplace almhouse
+LPUSH city_gatheringplace hostel
+LPUSH city_gatheringplace tavern
+LPUSH city_gatheringplace tradingpost
+LPUSH city_gatheringplace dock
+

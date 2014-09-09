@@ -171,4 +171,3 @@ LPUSH business_direction southeast
 LPUSH business_direction south
 LPUSH business_direction southwest
 
-

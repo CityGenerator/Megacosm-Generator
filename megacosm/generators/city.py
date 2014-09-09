@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
+from business import Business
 import region
 import random
 import logging
@@ -13,6 +14,9 @@ class City(Generator):
         self.logger = logging.getLogger(__name__)
         if not hasattr(self, 'region'):
             self.region = region.Region(self.redis)
+
+        self.gatheringplace=Business(self.redis, {'kind': 'bus_'+self.gatheringplace})
+
         self.calculate_population()
 
     def calculate_population(self):

@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to {{tempobj.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}.</p>
+
+<p>Favored hangout: {{tempobj.gatheringplace}}</p>
+<!--
+<pre>
+{%for field in tempobj.__dict__%}
+    {{field}}  {{tempobj[field]}}
+ {%endfor%}
+</pre>
+-->
+{% endblock %}
