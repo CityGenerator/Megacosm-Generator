@@ -6,7 +6,7 @@ import unittest2 as unittest
 import redis
 from mock import Mock
 from config import TestConfiguration
-
+import json
 
 class TestBusiness(unittest.TestCase):
 
@@ -31,3 +31,12 @@ class TestBusiness(unittest.TestCase):
         business = Business(self.redis,
                             {'owner': dummyuser, 'patroncount': 3, 'trailer': 'a place', 'maxfloors': 2, 'floor': 1})
         self.assertNotEqual('', "%s" % business)
+
+    def test_business_data(self):
+
+        stats=['status', 'size', 'popularity', 'reputation', 'price', 'age', 'neighborhood']
+        for stat in stats:
+            results = self.redis.zrangebyscore('business_'+stat, 0,100, withscores=True)
+            for (result, score) in results:
+                resultobj=json.loads(result)
+                self.assertEquals(score,resultobj['score'])
