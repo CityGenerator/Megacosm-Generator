@@ -501,17 +501,31 @@ def feature_filter(generator):
 
     app.seed = set_seed(request.args.get('seed'))
 
+    saveparamregex = re.compile('^[0-9A-Za-z_]+$')
     genregex = re.compile('^' + generator + '_[a-z_]+$')
     genrollregex = re.compile('^' + generator + '_[a-z_]+_(roll|chance)$')
 
     app.logger.debug('Request Seed: %i', app.seed)
     features = {'seed': app.seed}
     for param in request.args:
+        # if npc_ethics has a valid score
         if genrollregex.match(param) and isvalidscore(request.args[param]):
             features[param] = int(request.args[param])
+        # if npc_hair_roll is a digit
         elif genregex.match(param) and str(request.args[param]).isdigit():
             fieldname = re.sub(generator + '_', '', param)
             features[fieldname] = app.server.lrange(param, int(request.args[param]), int(request.args[param]))[0]
+        # if business_kind='temple'
+        elif genregex.match(param) and  saveparamregex.match(request.args[param]) :
+            # check to see if business_kind "temple" exists
+            if app.server.keys(param):
+                app.logger.debug("%s is a key", param)
+                if request.args[param] in app.server.lrange(param, 0,-1):
+                    app.logger.debug("%s was in %s",request.args[param], param)
+                    # If it does, add it to features.
+                    newparam = param[len(generator)+1:]
+                    features[newparam]=request.args[param]
+                    app.logger.debug( "%s %s", newparam, request.args[param])
     return features
 
 

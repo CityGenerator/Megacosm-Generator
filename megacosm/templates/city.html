@@ -5,9 +5,9 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
-<p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}.</p>
+<p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}, population {{tempobj.population_estimate}}</p>
 
-<p>Favored hangout: {{tempobj.gatheringplace}}</p>
+<p>Favored hangout: <a href="/business?seed={{tempobj.gatheringplace.seed}}&business_kind={{tempobj.gatheringplace.kind}}">{{tempobj.gatheringplace}}</a></p>
 <!--
 <pre>
 {%for field in tempobj.__dict__%}
