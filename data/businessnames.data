@@ -272,6 +272,7 @@ LPUSH name_businessroot Pipe
 LPUSH name_businessroot Pony
 LPUSH name_businessroot Pot
 LPUSH name_businessroot Priest
+LPUSH name_businessroot Privy
 LPUSH name_businessroot Princess
 LPUSH name_businessroot Riverside
 LPUSH name_businessroot Road
@@ -289,6 +290,7 @@ LPUSH name_businessroot Three
 LPUSH name_businessroot Thug
 LPUSH name_businessroot Thunderbird
 LPUSH name_businessroot Toad
+LPUSH name_businessroot Toilet
 LPUSH name_businessroot Tower
 LPUSH name_businessroot Tree
 LPUSH name_businessroot Troll
