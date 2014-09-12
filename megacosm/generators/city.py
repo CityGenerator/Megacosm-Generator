@@ -3,6 +3,7 @@
 
 from generator import Generator
 from business import Business
+from npc import NPC
 import region
 import random
 import logging
@@ -16,6 +17,8 @@ class City(Generator):
             self.region = region.Region(self.redis)
 
         self.gatheringplace=Business(self.redis, {'kind': 'bus_'+self.gatheringplace})
+
+        self.citizen=NPC(self.redis)
 
         self.calculate_population()
 
