@@ -59,6 +59,6 @@ class TestArtwork(unittest.TestCase):
         total = self.redis.llen('artwork_template')
         for i in range(0, total):
             artwork.template = self.redis.lindex('artwork_template', i)
-            results=artwork.render_template(artwork.template)
+            results = artwork.render_template(artwork.template)
             self.assertNotEquals("", results)
             self.assertNotIn("{{", results)

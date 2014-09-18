@@ -58,7 +58,6 @@ class TestBond(unittest.TestCase):
         total = self.redis.llen('bond_template')
         for i in range(0, total):
             bond.template = self.redis.lindex('bond_template', i)
-            results=bond.render_template(bond.template)
-            self.assertNotEquals("",results)
-            self.assertNotIn("{{",results)
-
+            results = bond.render_template(bond.template)
+            self.assertNotEquals("", results)
+            self.assertNotIn("{{", results)

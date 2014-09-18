@@ -11,7 +11,7 @@ class MegacosmFlaskTestCast(TestCase):
     def create_app(self):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
-        megacosm.app.debug=False
+        megacosm.app.debug = False
         return app
 
     def setUp(self):

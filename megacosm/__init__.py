@@ -516,16 +516,16 @@ def feature_filter(generator):
             fieldname = re.sub(generator + '_', '', param)
             features[fieldname] = app.server.lrange(param, int(request.args[param]), int(request.args[param]))[0]
         # if business_kind='temple'
-        elif genregex.match(param) and  saveparamregex.match(request.args[param]) :
+        elif genregex.match(param) and saveparamregex.match(request.args[param]):
             # check to see if business_kind "temple" exists
             if app.server.keys(param):
                 app.logger.debug("%s is a key", param)
-                if request.args[param] in app.server.lrange(param, 0,-1):
-                    app.logger.debug("%s was in %s",request.args[param], param)
+                if request.args[param] in app.server.lrange(param, 0, -1):
+                    app.logger.debug("%s was in %s", request.args[param], param)
                     # If it does, add it to features.
-                    newparam = param[len(generator)+1:]
-                    features[newparam]=request.args[param]
-                    app.logger.debug( "%s %s", newparam, request.args[param])
+                    newparam = param[len(generator) + 1:]
+                    features[newparam] = request.args[param]
+                    app.logger.debug("%s %s", newparam, request.args[param])
     return features
 
 

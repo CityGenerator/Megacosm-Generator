@@ -8,6 +8,7 @@ from mock import Mock
 from config import TestConfiguration
 import json
 
+
 class TestBusiness(unittest.TestCase):
 
     def setUp(self):
@@ -34,9 +35,9 @@ class TestBusiness(unittest.TestCase):
 
     def test_business_data(self):
 
-        stats=['status', 'size', 'popularity', 'reputation', 'price', 'age', 'neighborhood']
+        stats = ['status', 'size', 'popularity', 'reputation', 'price', 'age', 'neighborhood']
         for stat in stats:
-            results = self.redis.zrangebyscore('business_'+stat, 0,100, withscores=True)
+            results = self.redis.zrangebyscore('business_'+stat, 0, 100, withscores=True)
             for (result, score) in results:
-                resultobj=json.loads(result)
-                self.assertEquals(score,resultobj['score'])
+                resultobj = json.loads(result)
+                self.assertEquals(score, resultobj['score'])
