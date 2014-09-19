@@ -11,14 +11,17 @@ LPUSH name_regiontitle New
 
 LPUSH name_regionpre Af
 LPUSH name_regionpre Alb
+LPUSH name_regionpre Lom
 
 LPUSH name_regionroot ad
 LPUSH name_regionroot am
+LPUSH name_regionroot bar
 
 SET   name_regionpost_chance 40
 LPUSH name_regionpost a
 LPUSH name_regionpost ad
 LPUSH name_regionpost ain
+LPUSH name_regionpost dy
 
 
 SET   name_regiontrailer_chance 50
@@ -182,7 +185,6 @@ LPUSH name_regiontrailer Territory
 #Lesser Poland
 #Liguria
 #Limousin
-#Lombardy
 #Lorraine
 #Los
 #Louisiana
