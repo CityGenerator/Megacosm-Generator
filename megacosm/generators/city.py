@@ -122,5 +122,17 @@ class City(Generator):
                 results[racejson['name']] = self.races[race]
         return results
 
+    def get_scale(self):
+        scales = []
+        for scale in self.redis.zrange('city_size', 0, -1):
+            print scale
+            scalejson = json.loads(scale)
+            del scalejson['maxpop']
+            del scalejson['minpop']
+            del scalejson['min_density']
+            del scalejson['max_density']
+            scales.append(scalejson)
+        return scales
+
     def __str__(self):
         return '%s' % (self.name['full'])

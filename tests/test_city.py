@@ -119,3 +119,16 @@ class TestCity(unittest.TestCase):
                               'Human': 23, 'Molekin': 3, 'Ogre': 3, 'Orc': 3, 'Shadow Elf': 18, 'Snow Elf': 11,
                               'Water Elf': 11, 'Other': 10},
                              breakdown)
+
+    def test_get_scale(self):
+        mockredis = Mock(redis)
+        citydata = [
+            '{"maxpop": "100", "max_density": "400", "name": "settlement", "min_density": "10", "minpop": "25"}',
+            '{"maxpop": "500", "max_density": "2000", "name": "hamlet", "min_density": "20", "minpop": "101"}',
+            '{"maxpop": "600", "max_density": "2400", "name": "small village", "min_density": "30", "minpop": "501"}'
+            ]
+
+        mockredis.zrange = MagicMock(return_value=citydata)
+        self.city.redis = mockredis
+        scale = self.city.get_scale()
+        self.assertEqual([{u'name': u'settlement'}, {u'name': u'hamlet'}, {u'name': u'small village'}], scale)
