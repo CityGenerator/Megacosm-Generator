@@ -16,3 +16,6 @@ nosetests.xml
 
 #vim temp files
 *.swp
+
+# prod deploy files
+.bash_history
