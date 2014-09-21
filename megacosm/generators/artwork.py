@@ -7,8 +7,7 @@ import logging
 
 
 class Artwork(Generator):
-
-    """ """
+    """Generate an exquisite piece of artwork."""
 
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)

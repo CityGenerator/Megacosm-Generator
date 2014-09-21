@@ -563,7 +563,7 @@ LPUSH deity_vow propriety
 LPUSH deity_vow purity
 LPUSH deity_vow reconstruction
 LPUSH deity_vow silence
-LPUSH deity_vow Stoicism
+LPUSH deity_vow stoicism
 LPUSH deity_vow submission
 LPUSH deity_vow surety
 
@@ -582,6 +582,6 @@ HSET deity_vow_description propriety      {"name":"Propriety",        "descripti
 HSET deity_vow_description purity         {"name":"Purity",           "description":"avoid contact with dead flesh"                                                               }
 HSET deity_vow_description reconstruction {"name":"Reconstruction",   "description":"reunite factions after a long and bitter feud"                                               }
 HSET deity_vow_description silence        {"name":"Silence",          "description":"not speak under any circumstances"                                                           }
-HSET deity_vow_description stoicism        {"name":"Stoicism",          "description":"speak as few words as possible, often a given word to represent their faith"                 }
+HSET deity_vow_description stoicism       {"name":"Stoicism",         "description":"speak as few words as possible, often a given word to represent their faith"                 }
 HSET deity_vow_description submission     {"name":"Submission",       "description":"submit to those who ask of it"                                                               }
 HSET deity_vow_description surety         {"name":"Surety",           "description":"defend a group or groups with your very life"                                                }

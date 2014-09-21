@@ -56,3 +56,6 @@ class NPC(Generator):
 
             self.name['full'] += self.name[name + 'name'] + ' '
         self.name['full'] = self.name['full'].strip()
+
+    def __str__(self):
+        return self.name['full']

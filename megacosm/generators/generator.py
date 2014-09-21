@@ -36,7 +36,7 @@ class Generator(object):
             self.seed = Seeds.set_seed(features['seed'])
         else:
             self.seed = Seeds.set_seed()
-        self.logger.info('new generator %s with seed %i', namekey, self.seed)
+        self.logger.debug('new generator %s with seed %i', namekey, self.seed)
 
         # For naming conventions, we use "name"+classname+"stuff"
 
@@ -60,7 +60,7 @@ class Generator(object):
 
         # find all keys matching our namekey
 
-        self.logger.info('Generating features for %s with seed %i', namekey, self.seed)
+        self.logger.debug('Generating features for %s with seed %i', namekey, self.seed)
         for key in self.redis.keys(namekey + '_*'):
             self.generate_feature(namekey, key)
 
@@ -134,7 +134,6 @@ class Generator(object):
             This creates the structure "Title PreRootPost Trailer"
             Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
             Pre, Root and Post have no spaces."""
-
         name = {'full': ''}
 
         if self.redis.exists(key + 'title'):

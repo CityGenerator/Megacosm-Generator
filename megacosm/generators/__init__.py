@@ -11,6 +11,8 @@ from bond import Bond
 assert Bond
 from business import Business
 assert Business
+from city import City
+assert City
 from continent import Continent
 assert Continent
 from country import Country

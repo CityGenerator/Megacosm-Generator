@@ -505,7 +505,7 @@ LPUSH bus_bucklery_managerclass expert
 LPUSH bus_bucklery_service service
 LPUSH bus_bucklery_service buckles
 
-LPUSH bus_bucklery_trailer our motto is the buckle stops here
+LPUSH bus_bucklery_trailer buckler
 
 ########################################################
 LPUSH business_kind bus_butchershop
@@ -641,7 +641,7 @@ SET   bus_civiccenter_perbuilding 30
 
 SET   bus_civiccenter_maxfloors 3
 SET   bus_civiccenter_district civic
-LPUSH bus_workshop_civiccenter_manager official
+LPUSH bus_civiccenter_manager official
 
 LPUSH bus_civiccenter_managerclass commoner
 LPUSH bus_civiccenter_managerclass expert
@@ -2140,7 +2140,7 @@ LPUSH bus_dock_managerclass commoner
 
 LPUSH bus_dock_service service
 
-LPUSH bus_dock_trailer inc.
+LPUSH bus_dock_trailer Dock
 
 ########################################################
 LPUSH business_kind bus_weaponshop

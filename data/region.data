@@ -144,3 +144,8 @@ ZADD  region_theology    90  { "name":"controlled by the government",           
 ZADD  region_theology    95  { "name":"is sacred, and the words of the gods are law",                          "score":95    }
 ZADD  region_theology   100  { "name":"is used to control the populace",                                      "score":100    }
  
+#    <arable>
+#        <option type:"poor"     min:'1' max:'33'>desolate
+#        <option type:"neutral"  min:'34' max:'66'>modest
+#        <option type:"rich"     min:'67' >fertile
+

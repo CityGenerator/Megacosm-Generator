@@ -7,6 +7,7 @@
 
 from flask import Flask, render_template, request
 from megacosm.generators import Business
+from megacosm.generators import City
 from megacosm.generators import Continent
 from megacosm.generators import Country
 from megacosm.generators import Deity
@@ -306,8 +307,27 @@ def govt_builder():
     (plist, pstring, pset) = builder_form_data(classname)
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
+#########################################################################
+
+
+@app.route('/city')
+def GenerateCity():
+    """Generate a simple city"""
+    features = feature_filter('city')
+    tempobj = City(app.server, features)
+    return render_template('city.html', tempobj=tempobj)
+
+
+@app.route('/city_builder')
+def City_Builder():
+    """Generate the basic data about a city"""
+    classname = 'city'
+    (paramlist, paramstring, paramset) = builder_form_data(classname)
+    return render_template('generic_builder.html', paramlist=paramlist,
+                           paramstring=paramstring, paramset=paramset, name=classname)
 
 #########################################################################
+
 
 @app.route('/weather')
 def generateweather():
@@ -481,17 +501,31 @@ def feature_filter(generator):
 
     app.seed = set_seed(request.args.get('seed'))
 
+    saveparamregex = re.compile('^[0-9A-Za-z_]+$')
     genregex = re.compile('^' + generator + '_[a-z_]+$')
     genrollregex = re.compile('^' + generator + '_[a-z_]+_(roll|chance)$')
 
-    app.logger.info('Request Seed: %i', app.seed)
+    app.logger.debug('Request Seed: %i', app.seed)
     features = {'seed': app.seed}
     for param in request.args:
+        # if npc_ethics has a valid score
         if genrollregex.match(param) and isvalidscore(request.args[param]):
             features[param] = int(request.args[param])
+        # if npc_hair_roll is a digit
         elif genregex.match(param) and str(request.args[param]).isdigit():
             fieldname = re.sub(generator + '_', '', param)
             features[fieldname] = app.server.lrange(param, int(request.args[param]), int(request.args[param]))[0]
+        # if business_kind='temple'
+        elif genregex.match(param) and saveparamregex.match(request.args[param]):
+            # check to see if business_kind "temple" exists
+            if app.server.keys(param):
+                app.logger.debug("%s is a key", param)
+                if request.args[param] in app.server.lrange(param, 0, -1):
+                    app.logger.debug("%s was in %s", request.args[param], param)
+                    # If it does, add it to features.
+                    newparam = param[len(generator) + 1:]
+                    features[newparam] = request.args[param]
+                    app.logger.debug("%s %s", newparam, request.args[param])
     return features
 
 
@@ -545,7 +579,7 @@ def page_borked(error):
     print 'problem with ', request.url
     time = str(datetime.datetime.now())
     print 'on seed', app.seed, 'at', time
-    print 'Exception:', error.args[0]
+    print 'Exception:', error
     traceback.print_exc()
 
     return (render_template('500.html', seed=app.seed, request=request, e=error, time=time), 500)

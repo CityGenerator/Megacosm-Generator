@@ -43,3 +43,21 @@ class TestBond(unittest.TestCase):
 
         self.assertEqual('Bob, Jesse Will Tony Shaun Rich', bond.text)
         self.assertEqual('Bob, Jesse Will Tony Shaun Rich', "%s" % bond)
+
+    def test_bond_data(self):
+        bond = Bond(self.redis, {
+            'you': 'Jesse',
+            'other': 'Will',
+            'either': 'Tony',
+            'partyA': 'Shaun',
+            'partyB': 'Rich',
+            'template': '{{params.you}} {{params.other}} {{params.either}} {{params.partyA}} {{params.partyB}}',
+            'bond_when_roll': 100,
+            'when': 'Bob',
+            })
+        total = self.redis.llen('bond_template')
+        for i in range(0, total):
+            bond.template = self.redis.lindex('bond_template', i)
+            results = bond.render_template(bond.template)
+            self.assertNotEquals("", results)
+            self.assertNotIn("{{", results)
