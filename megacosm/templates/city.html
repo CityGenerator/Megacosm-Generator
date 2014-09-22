@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to {{tempobj.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}, population {{tempobj.population_estimate}}</p>
+
+<p>Favored hangout: <a href="/business?seed={{tempobj.gatheringplace.seed}}&business_kind={{tempobj.gatheringplace.kind}}">{{tempobj.gatheringplace}}</a></p>
+
+<p>Random Citizen: <a href="/npc?seed={{tempobj.citizen.seed}}">{{tempobj.citizen}}</a></p>
+
+
+<p>Race breakdown:
+<ul>
+{% for race,value in tempobj.get_race_breakdown()|dictsort(false, 'value')|reverse%}
+    <li>{{race}} ({{value}}%)</li>
+{%endfor%}
+</ul>
+
+</p>
+<!--
+<pre>
+{%for field in tempobj.__dict__%}
+    {{field}}  {{tempobj[field]}}
+ {%endfor%}
+</pre>
+-->
+{% endblock %}

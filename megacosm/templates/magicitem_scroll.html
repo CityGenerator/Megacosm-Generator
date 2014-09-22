@@ -1,0 +1,48 @@
+
+
+{% extends "base.html" %}
+{% block title %} You found {{tempobj.kind|article }} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>You found <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.kind|article}}  ({{tempobj.seed}})</a></h1>
+    <h2>Summary</h2>
+
+
+    The {{tempobj.name|title}} is {{tempobj.material | article}} scroll that {{tempobj.effect_description['description']}}.
+    It is stored in {{tempobj.repair['name'] | article}} {{tempobj.container_type}}.
+    
+    {%if tempobj.container_label %}
+    The label on the {{tempobj.container_type}} is {{tempobj.container_label}}.
+    {%endif%}
+    The scroll itself is covered with {{tempobj.writingtype}} {{tempobj.writingform}}.
+    The {{tempobj.material }} is {{tempobj.quality['name']}} quality, and the container is {{tempobj.repair['name']}}.
+    It is considered {{tempobj.value['name']|article}}.
+
+    This {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}.
+    {% if tempobj.sideeffect %}
+    <br><br>
+    <b>Warning:</b> Side effects may include {{tempobj.sideeffect}}, which are temporary.
+    {% endif%}
+    {% if tempobj.curse %}
+    <br><br>
+    <b>Danger:</b> 
+    This scroll carries a curse of {{tempobj.curse_description['name']|title}}, which {{tempobj.curse_description['description']}}.
+    The effects of the curse {{tempobj.curse_duration['name']}}.
+    {% endif%}
+
+    <h2>Description If Found...</h2>
+    <blockquote style="font-style:italic">
+        "{{tempobj.location|capitalize}} you find {{tempobj.container_type | article}} containing {{tempobj.material | article}} scroll covered with {{tempobj.writingtype}} {{tempobj.writingform}}. 
+        {%if tempobj.container_label %}
+        The label on the {{tempobj.container_type}} is {{tempobj.container_label}}.
+        {%endif%}"
+
+
+    </blockquote> 
+{% endblock %}

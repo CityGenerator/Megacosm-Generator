@@ -1,0 +1,253 @@
+#
+
+LPUSH npc_race elf
+
+SET elf_details        {"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}
+
+LPUSH elf_covering skin
+
+SET elf_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH elf_subrace darkelf
+LPUSH elf_subrace woodelf
+LPUSH elf_subrace wildelf
+LPUSH elf_subrace halfelf
+LPUSH elf_subrace sunelf
+LPUSH elf_subrace wingedelf
+LPUSH elf_subrace moonelf
+LPUSH elf_subrace bloodelf
+LPUSH elf_subrace duneelf
+LPUSH elf_subrace shadowelf
+LPUSH elf_subrace waterelf
+LPUSH elf_subrace snowelf
+
+HSET elf_subrace_description darkelf   {"subrace": "Dark Elf",      "description": "a more sinister and maligned version of their above-ground cousins" }
+HSET elf_subrace_description woodelf   {"subrace": "Wood Elf",      "description": "a stronger and less thoughtful elf with deep ties to the forest" }
+HSET elf_subrace_description wildelf   {"subrace": "Wild Elf",      "description": "an elusive and slightly feral elf" }
+HSET elf_subrace_description halfelf   {"subrace": "Half Elf",      "description": "having a mixed bloodline with humans" }
+HSET elf_subrace_description sunelf    {"subrace": "Sun Elf",       "description": "elves with strong ties to magic"  }
+HSET elf_subrace_description wingedelf {"subrace": "Winged Elf",    "description": "elves that are often mistaken for angels"  }
+HSET elf_subrace_description moonelf   {"subrace": "Moon Elf",      "description": "one of the more common species of elves" }
+HSET elf_subrace_description bloodelf  {"subrace": "Blood Elf",     "description": "a bulkier elf built for nomadic life" }
+HSET elf_subrace_description duneelf   {"subrace": "Dune Elf",      "description": "adapted to the hot sands of the desert"  }
+HSET elf_subrace_description shadowelf {"subrace": "Shadow Elf",    "description": "an elf that slinks though the moonlight"  }
+HSET elf_subrace_description waterelf  {"subrace": "Water Elf",     "description": "an elf that has bonded with the waterways"  }
+HSET elf_subrace_description snowelf   {"subrace": "Snow Elf",      "description": "an elf that has adapted to cold mountain life"  }
+
+ZADD elf_name_order 50 { "name":"first" }
+ZADD elf_name_order 100 { "name":"last"}
+
+HSET elf_name_first  pre 100
+HSET elf_name_first  root 100
+HSET elf_name_first  post 100
+HSET elf_name_last   root 100
+HSET elf_name_last   post 100
+
+
+LPUSH elf_name_first_pre Aba
+LPUSH elf_name_first_pre Ada
+LPUSH elf_name_first_pre Ala
+LPUSH elf_name_first_pre Aes
+LPUSH elf_name_first_pre Ale
+LPUSH elf_name_first_pre Bel
+LPUSH elf_name_first_pre Cha
+LPUSH elf_name_first_pre Dar
+LPUSH elf_name_first_pre Del
+LPUSH elf_name_first_pre El
+LPUSH elf_name_first_pre Ela
+LPUSH elf_name_first_pre Er
+LPUSH elf_name_first_pre Fae
+LPUSH elf_name_first_pre Fil
+LPUSH elf_name_first_pre Gae
+LPUSH elf_name_first_pre Gwa
+LPUSH elf_name_first_pre Haa
+LPUSH elf_name_first_pre Hal
+LPUSH elf_name_first_pre Il
+LPUSH elf_name_first_pre Ill
+LPUSH elf_name_first_pre Ily
+LPUSH elf_name_first_pre Lar
+
+LPUSH elf_name_first_root rig
+LPUSH elf_name_first_root art
+LPUSH elf_name_first_root t
+LPUSH elf_name_first_root ell
+LPUSH elf_name_first_root var
+LPUSH elf_name_first_root nal
+LPUSH elf_name_first_root hia
+LPUSH elf_name_first_root lan
+LPUSH elf_name_first_root len
+
+LPUSH elf_name_first_post tars
+LPUSH elf_name_first_post thil
+LPUSH elf_name_first_post aen
+LPUSH elf_name_first_post ai
+LPUSH elf_name_first_post ava
+LPUSH elf_name_first_post ssa
+LPUSH elf_name_first_post iyn
+LPUSH elf_name_first_post inne
+LPUSH elf_name_first_post anae
+LPUSH elf_name_first_post las
+LPUSH elf_name_first_post lleu
+LPUSH elf_name_first_post tel
+        
+
+LPUSH elf_name_last_root Alean
+LPUSH elf_name_last_root Alea
+LPUSH elf_name_last_root Arkenea
+LPUSH elf_name_last_root Auvrea
+LPUSH elf_name_last_root Baequi
+LPUSH elf_name_last_root Banni
+LPUSH elf_name_last_root Black
+LPUSH elf_name_last_root Blade
+LPUSH elf_name_last_root Blue
+LPUSH elf_name_last_root Bright
+LPUSH elf_name_last_root Broad
+LPUSH elf_name_last_root Cyred
+LPUSH elf_name_last_root Dark
+LPUSH elf_name_last_root Dawn
+LPUSH elf_name_last_root Dew
+LPUSH elf_name_last_root Dirth
+LPUSH elf_name_last_root Dryear
+LPUSH elf_name_last_root Dusking
+LPUSH elf_name_last_root Dusk
+LPUSH elf_name_last_root Earth
+LPUSH elf_name_last_root Even
+LPUSH elf_name_last_root Ever
+LPUSH elf_name_last_root Eyllis
+LPUSH elf_name_last_root Eyther
+LPUSH elf_name_last_root Fair
+LPUSH elf_name_last_root Far
+LPUSH elf_name_last_root Feather
+LPUSH elf_name_last_root Fire
+LPUSH elf_name_last_root Floral
+LPUSH elf_name_last_root Freani
+LPUSH elf_name_last_root Frost
+LPUSH elf_name_last_root Golden
+LPUSH elf_name_last_root Gold
+LPUSH elf_name_last_root Gysse
+LPUSH elf_name_last_root Hawk
+LPUSH elf_name_last_root Heart
+LPUSH elf_name_last_root Hlae
+LPUSH elf_name_last_root Hunith
+LPUSH elf_name_last_root Jade
+LPUSH elf_name_last_root Keen
+LPUSH elf_name_last_root Kennyr
+LPUSH elf_name_last_root Kille
+LPUSH elf_name_last_root Kind
+LPUSH elf_name_last_root Leaf
+LPUSH elf_name_last_root Light
+LPUSH elf_name_last_root Long
+LPUSH elf_name_last_root Maern
+LPUSH elf_name_last_root Meadow
+LPUSH elf_name_last_root Melith
+LPUSH elf_name_last_root Mist
+LPUSH elf_name_last_root Moon
+LPUSH elf_name_last_root Morning
+LPUSH elf_name_last_root Myrth
+LPUSH elf_name_last_root Night
+LPUSH elf_name_last_root Norre
+LPUSH elf_name_last_root Oak
+LPUSH elf_name_last_root Orle
+LPUSH elf_name_last_root Oussea
+LPUSH elf_name_last_root Raven
+LPUSH elf_name_last_root Rift
+LPUSH elf_name_last_root Rilynn
+LPUSH elf_name_last_root River
+LPUSH elf_name_last_root Root
+LPUSH elf_name_last_root Shade
+LPUSH elf_name_last_root Shadow
+LPUSH elf_name_last_root Silent
+LPUSH elf_name_last_root Silver
+LPUSH elf_name_last_root Sky
+LPUSH elf_name_last_root Soft
+LPUSH elf_name_last_root Spirit
+LPUSH elf_name_last_root Star
+LPUSH elf_name_last_root Still
+LPUSH elf_name_last_root Summer
+LPUSH elf_name_last_root Sun
+LPUSH elf_name_last_root Swift
+LPUSH elf_name_last_root Teasen'
+LPUSH elf_name_last_root Tyrnea
+LPUSH elf_name_last_root Tyr
+LPUSH elf_name_last_root Wave
+LPUSH elf_name_last_root White
+LPUSH elf_name_last_root Wind
+LPUSH elf_name_last_root Winter
+LPUSH elf_name_last_root Wish
+LPUSH elf_name_last_root Wolf
+
+LPUSH elf_name_last_post arrow
+LPUSH elf_name_last_post blade
+LPUSH elf_name_last_post blaze
+LPUSH elf_name_last_post borne
+LPUSH elf_name_last_post bough
+LPUSH elf_name_last_post bow
+LPUSH elf_name_last_post breeze
+LPUSH elf_name_last_post caller
+LPUSH elf_name_last_post chaser
+LPUSH elf_name_last_post cloak
+LPUSH elf_name_last_post dawn
+LPUSH elf_name_last_post dew
+LPUSH elf_name_last_post drake
+LPUSH elf_name_last_post ears
+LPUSH elf_name_last_post eye
+LPUSH elf_name_last_post feather
+LPUSH elf_name_last_post fire
+LPUSH elf_name_last_post form
+LPUSH elf_name_last_post gale
+LPUSH elf_name_last_post gazer
+LPUSH elf_name_last_post gleam
+LPUSH elf_name_last_post glider
+LPUSH elf_name_last_post glow
+LPUSH elf_name_last_post grove
+LPUSH elf_name_last_post hand
+LPUSH elf_name_last_post heart
+LPUSH elf_name_last_post helm
+LPUSH elf_name_last_post hunter
+LPUSH elf_name_last_post leaf
+LPUSH elf_name_last_post light
+LPUSH elf_name_last_post mane
+LPUSH elf_name_last_post might
+LPUSH elf_name_last_post mist
+LPUSH elf_name_last_post moon
+LPUSH elf_name_last_post night
+LPUSH elf_name_last_post oak
+LPUSH elf_name_last_post risen
+LPUSH elf_name_last_post river
+LPUSH elf_name_last_post rose
+LPUSH elf_name_last_post runner
+LPUSH elf_name_last_post run
+LPUSH elf_name_last_post seeker
+LPUSH elf_name_last_post shade
+LPUSH elf_name_last_post shadow
+LPUSH elf_name_last_post shield
+LPUSH elf_name_last_post shine
+LPUSH elf_name_last_post sight
+LPUSH elf_name_last_post singer
+LPUSH elf_name_last_post sing
+LPUSH elf_name_last_post sky
+LPUSH elf_name_last_post song
+LPUSH elf_name_last_post sorrow
+LPUSH elf_name_last_post spear
+LPUSH elf_name_last_post stalker
+LPUSH elf_name_last_post star
+LPUSH elf_name_last_post stride
+LPUSH elf_name_last_post strike
+LPUSH elf_name_last_post stryke
+LPUSH elf_name_last_post sun
+LPUSH elf_name_last_post sworn
+LPUSH elf_name_last_post wake
+LPUSH elf_name_last_post waker
+LPUSH elf_name_last_post walker
+LPUSH elf_name_last_post watch
+LPUSH elf_name_last_post water
+LPUSH elf_name_last_post weave
+LPUSH elf_name_last_post weaver
+LPUSH elf_name_last_post whisper
+LPUSH elf_name_last_post wind
+LPUSH elf_name_last_post wing
+
+
+
+        
+    

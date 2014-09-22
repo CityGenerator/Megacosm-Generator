@@ -1,0 +1,27 @@
+
+LPUSH naturalresource_kind gemmines
+# Lala Land is know for it's _________
+LPUSH naturalresource_gemmines_name_type deep
+LPUSH naturalresource_gemmines_name_type shallow
+
+LPUSH naturalresource_gemmines_name gem mines
+LPUSH naturalresource_gemmines_name gem deposits
+ 
+
+#which ________ diamonds
+SET naturalresource_gemmines_method provides
+ 
+# which provides
+LPUSH naturalresource_gemmines_product diamonds
+LPUSH naturalresource_gemmines_product emeralds
+LPUSH naturalresource_gemmines_product rubies
+LPUSH naturalresource_gemmines_product sapphires
+LPUSH naturalresource_gemmines_product feldspars
+LPUSH naturalresource_gemmines_product fluorspars
+LPUSH naturalresource_gemmines_product various gems
+LPUSH naturalresource_gemmines_product various gemstones
+LPUSH naturalresource_gemmines_product semiprecious stones
+LPUSH naturalresource_gemmines_product precious stones
+LPUSH naturalresource_gemmines_product pyrite
+LPUSH naturalresource_gemmines_product quartz
+

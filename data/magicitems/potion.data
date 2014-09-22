@@ -1,0 +1,1088 @@
+#
+
+LPUSH magicitem_kind potion
+
+
+LPUSH potion_name_template {{ params.strength['name'] }} {{ params.effect_description['name'] }} {{ params.kind }}
+LPUSH potion_name_template {{ params.strength['name'] }} {{ params.variety }} of {{ params.effect_description['name'] }}
+LPUSH potion_name_template {{ params.npc.name['firstname'] }}'s {{ params.effect_description['name'] }} {{ params.variety }}
+
+
+
+
+            
+HSET potion_effect_description accuracyboost    {"name":"accuracy boost",    "description":"increases accuracy with projectiles" }
+LPUSH potion_effect accuracyboost
+HSET potion_effect_description acid    {"name":"acid",    "description":"can burn through most organic substances" }
+LPUSH potion_effect acid
+HSET potion_effect_description adnauseum    {"name":"ad nauseum",    "description":"causes sudden and severe nausea" }
+LPUSH potion_effect adnauseum
+HSET potion_effect_description agility    {"name":"agility",    "description":"grants improved agility" }
+LPUSH potion_effect agility
+HSET potion_effect_description aging    {"name":"aging",    "description":"causes instant aging" }
+LPUSH potion_effect aging
+HSET potion_effect_description animalmagnetism    {"name":"animal magnetism",    "description":"you become irresistible" }
+LPUSH potion_effect animalmagnetism
+HSET potion_effect_description antidote    {"name":"antidote",    "description":"removes the effect of any poision" }
+LPUSH potion_effect antidote
+HSET potion_effect_description anti-paralysis    {"name":"anti-paralysis",    "description":"cures paralysis" }
+LPUSH potion_effect anti-paralysis
+HSET potion_effect_description assassinsevasion    {"name":"assassin's evasion",    "description":"increases your natural stealth ability" }
+LPUSH potion_effect assassinsevasion
+HSET potion_effect_description auraofprotection    {"name":"aura of protection",    "description":"provides arcane protection" }
+LPUSH potion_effect auraofprotection
+HSET potion_effect_description awaken    {"name":"awaken",    "description":"wakes a sleeping person" }
+LPUSH potion_effect awaken
+HSET potion_effect_description babbling    {"name":"babbling",    "description":"causes uncontrollable speaking of nonsense" }
+LPUSH potion_effect babbling
+HSET potion_effect_description barkskin    {"name":"barkskin",    "description":"causes hardening of skin granting natural armor" }
+LPUSH potion_effect barkskin
+HSET potion_effect_description bearendurance    {"name":"bear endurance",    "description":"increases the endurance of the user" }
+LPUSH potion_effect bearendurance
+HSET potion_effect_description beautification    {"name":"beautification",    "description":"makes the user appear more attractive" }
+LPUSH potion_effect beautification
+HSET potion_effect_description befuddlement    {"name":"befuddlement",    "description":"user becomes confused and reckless" }
+LPUSH potion_effect befuddlement
+HSET potion_effect_description beguiling    {"name":"beguiling",    "description":"makes the user appear more trustworthy" }
+LPUSH potion_effect beguiling
+HSET potion_effect_description beneficialmutation    {"name":"beneficial mutation",    "description":"provides some sort of beneficial mutation" }
+LPUSH potion_effect beneficialmutation
+HSET potion_effect_description berserkrage     {"name":"berserk rage ",    "description":"throws user into uncontrollable rage" }
+LPUSH potion_effect berserkrage 
+HSET potion_effect_description bless    {"name":"bless",    "description":"grants the blessing of an unknown deity" }
+LPUSH potion_effect bless
+HSET potion_effect_description blessingofthefae    {"name":"blessing of the fae",    "description":"causes user to turn into a fairy" }
+LPUSH potion_effect blessingofthefae
+HSET potion_effect_description blindness    {"name":"blindness",    "description":"causes immediate blindness" }
+LPUSH potion_effect blindness
+HSET potion_effect_description blindnessremoval    {"name":"blindness removal",    "description":"restores sight to the blind" }
+LPUSH potion_effect blindnessremoval
+HSET potion_effect_description bliss    {"name":"bliss",    "description":"user becomes immediately blissful and happy" }
+LPUSH potion_effect bliss
+HSET potion_effect_description blood    {"name":"blood",    "description":"provides sustinence for creatures that drink blood" }
+LPUSH potion_effect blood
+HSET potion_effect_description blood-replenishing    {"name":"blood-replenishing",    "description":"restores lost blood from a severely injured person" }
+LPUSH potion_effect blood-replenishing
+HSET potion_effect_description bloodroot    {"name":"bloodroot",    "description":"causes the blood to become unappealing to blooddrinkers" }
+LPUSH potion_effect bloodroot
+HSET potion_effect_description bloodthirst    {"name":"bloodthirst",    "description":"causes an unnatural, literal thirst for blood" }
+LPUSH potion_effect bloodthirst
+HSET potion_effect_description blur    {"name":"blur",    "description":"causes user to become blurry and difficult to hit" }
+LPUSH potion_effect blur
+HSET potion_effect_description bottledgenie    {"name":"bottled genie",    "description":"turns the drinker into a genie, binds them to the bottle" }
+LPUSH potion_effect bottledgenie
+HSET potion_effect_description brilliance    {"name":"brilliance",    "description":"grants amazing insight" }
+LPUSH potion_effect brilliance
+HSET potion_effect_description bruiseremoval    {"name":"bruise removal",    "description":"removes minor injuries" }
+LPUSH potion_effect bruiseremoval
+HSET potion_effect_description bulge-eye    {"name":"bulge-eye",    "description":"causes user's eyes to bulge unnaturally" }
+LPUSH potion_effect bulge-eye
+HSET potion_effect_description bullstrength    {"name":"bull strength",    "description":"grants user powerful physical strength" }
+LPUSH potion_effect bullstrength
+HSET potion_effect_description burn-healing    {"name":"burn-healing",    "description":"soothes and heals minor to severe burns" }
+LPUSH potion_effect burn-healing
+HSET potion_effect_description cacophony    {"name":"cacophony",    "description":"causes user to hear incredibly loud, continual noise" }
+LPUSH potion_effect cacophony
+HSET potion_effect_description cagedimp    {"name":"caged imp",    "description":"user becomes subconsciously mischievious" }
+LPUSH potion_effect cagedimp
+HSET potion_effect_description calming    {"name":"calming",    "description":"calms the user of shock, trauma, etc" }
+LPUSH potion_effect calming
+HSET potion_effect_description catalyst    {"name":"catalyst",    "description":"another potion to double in potency" }
+LPUSH potion_effect catalyst
+HSET potion_effect_description catseye    {"name":"cats eye",    "description":"improves vision and enhances night vision" }
+LPUSH potion_effect catseye
+HSET potion_effect_description catsgrace    {"name":"cat's grace",    "description":"grants user uncanny grace" }
+LPUSH potion_effect catsgrace
+HSET potion_effect_description cheese    {"name":"cheese",    "description":"makes anything taste edible (although possibly still dangerous)" }
+LPUSH potion_effect cheese
+HSET potion_effect_description clone    {"name":"clone",    "description":"causes a painful splitting into two beings, one of which immediately dies" }
+LPUSH potion_effect clone
+HSET potion_effect_description coagulatedblood     {"name":"coagulated blood ",    "description":"provides slight satiation for vampires and carnivores" }
+LPUSH potion_effect coagulatedblood 
+HSET potion_effect_description confusion    {"name":"confusion",    "description":"confuses the taker" }
+LPUSH potion_effect confusion
+HSET potion_effect_description coughing    {"name":"coughing",    "description":"provokes a powerful coughing fit" }
+LPUSH potion_effect coughing
+HSET potion_effect_description cunning    {"name":"cunning",    "description":"grants user unsurpassed cleverness" }
+LPUSH potion_effect cunning
+HSET potion_effect_description cupid    {"name":"cupid",    "description":"causes drinker to have an immediate romantic infatuation with whoever they see next" }
+LPUSH potion_effect cupid
+HSET potion_effect_description cureboils    {"name":"cure boils",    "description":"will heal painful or unsightly boils" }
+LPUSH potion_effect cureboils
+HSET potion_effect_description curecorruption    {"name":"cure corruption",    "description":"heals diseased or corrupted flesh" }
+LPUSH potion_effect curecorruption
+HSET potion_effect_description curedisease    {"name":"cure disease",    "description":"cures most diseases" }
+LPUSH potion_effect curedisease
+HSET potion_effect_description cureinsanity    {"name":"cure insanity",    "description":"calms the most unsound mind" }
+LPUSH potion_effect cureinsanity
+HSET potion_effect_description curemutation    {"name":"cure mutation",    "description":"will remove any unnatural mutations" }
+LPUSH potion_effect curemutation
+HSET potion_effect_description cureparalysis    {"name":"cure paralysis",    "description":"cures paralysis" }
+LPUSH potion_effect cureparalysis
+HSET potion_effect_description cureweakness    {"name":"cure weakness",    "description":"removes any unnatural weakness" }
+LPUSH potion_effect cureweakness
+HSET potion_effect_description currentstopper    {"name":"current stopper",    "description":"prevents electrocution" }
+LPUSH potion_effect currentstopper
+HSET potion_effect_description curseofthelycan    {"name":"curse of the lycan",    "description":"infects user with lycanthropy" }
+LPUSH potion_effect curseofthelycan
+HSET potion_effect_description curseremoval    {"name":"curse removal",    "description":"removes most magical or supernatural curses" }
+LPUSH potion_effect curseremoval
+HSET potion_effect_description darkvision    {"name":"darkvision",    "description":"allows user to see in the dark" }
+LPUSH potion_effect darkvision
+HSET potion_effect_description daylight    {"name":"daylight",    "description":"allows the user to see as if there was daylight present" }
+LPUSH potion_effect daylight
+HSET potion_effect_description deafness    {"name":"deafness",    "description":"causes complete loss of hearing" }
+LPUSH potion_effect deafness
+HSET potion_effect_description death-cap    {"name":"death-cap",    "description":"causes death if used" }
+LPUSH potion_effect death-cap
+HSET potion_effect_description deathward    {"name":"death ward",    "description":"prevents user from dying" }
+LPUSH potion_effect deathward
+HSET potion_effect_description deathwish    {"name":"deathwish",    "description":"causes subconscious desire to die through reckless behavior" }
+LPUSH potion_effect deathwish
+HSET potion_effect_description decay    {"name":"decay",    "description":"immediately causes flesh to rot" }
+LPUSH potion_effect decay
+HSET potion_effect_description deflection    {"name":"deflection",    "description":"provides some protection from attacks" }
+LPUSH potion_effect deflection
+HSET potion_effect_description degeneration    {"name":"degeneration",    "description":"causes a random ability to reduce" }
+LPUSH potion_effect degeneration
+HSET potion_effect_description delaypoison    {"name":"delay poison",    "description":"prevents the onset if toxic substances" }
+LPUSH potion_effect delaypoison
+HSET potion_effect_description desire    {"name":"desire",    "description":"causes user to desperately desire something or someone" }
+LPUSH potion_effect desire
+HSET potion_effect_description despair    {"name":"despair",    "description":"causes a deep depression over the hopelessness of the situation" }
+LPUSH potion_effect despair
+HSET potion_effect_description detectcreature    {"name":"detect creature",    "description":"gives the user insight on the location of any nearby creatures" }
+LPUSH potion_effect detectcreature
+HSET potion_effect_description detectthings    {"name":"detect things",    "description":"gives the user insight on the location of a specific object" }
+LPUSH potion_effect detectthings
+HSET potion_effect_description dexterity    {"name":"dexterity",    "description":"grants the user impressive dexterity" }
+LPUSH potion_effect dexterity
+HSET potion_effect_description discord    {"name":"discord",    "description":"drinker becomes irritable and picks fights" }
+LPUSH potion_effect discord
+HSET potion_effect_description diseaseremoval    {"name":"disease removal",    "description":"cures drinker of most diseases" }
+LPUSH potion_effect diseaseremoval
+HSET potion_effect_description divinepower    {"name":"divine power",    "description":"Grants the user strength from an unknown deity" }
+LPUSH potion_effect divinepower
+HSET potion_effect_description divinerestoration    {"name":"divine restoration",    "description":"restores the user as a favor from an unknown deity" }
+LPUSH potion_effect divinerestoration
+HSET potion_effect_description dizziness    {"name":"dizziness",    "description":"makes the drinker dizzy and lightheaded" }
+LPUSH potion_effect dizziness
+HSET potion_effect_description dogbane    {"name":"dogbane",    "description":"poisonous to anything with canine ancestry" }
+LPUSH potion_effect dogbane
+HSET potion_effect_description dragondung    {"name":"dragon dung",    "description":"causes the drinker to defecate a small number of coins" }
+LPUSH potion_effect dragondung
+HSET potion_effect_description dragonsbreath    {"name":"dragon's breath",    "description":"grants user the ability to breathe fire like a dragon" }
+LPUSH potion_effect dragonsbreath
+HSET potion_effect_description dreamless    {"name":"dreamless",    "description":"prevents the user from dreaming during sleep" }
+LPUSH potion_effect dreamless
+HSET potion_effect_description drowsiness    {"name":"drowsiness",    "description":"makes the drinker incredibly drowsy" }
+LPUSH potion_effect drowsiness
+HSET potion_effect_description education    {"name":"education",    "description":"grants knowledge on a specific subject" }
+LPUSH potion_effect education
+HSET potion_effect_description embiggenment    {"name":"embiggenment",    "description":"embiggens the user by one size" }
+LPUSH potion_effect embiggenment
+HSET potion_effect_description endureelements    {"name":"endure elements",    "description":"grants resistence to the elements" }
+LPUSH potion_effect endureelements
+HSET potion_effect_description endure_elements      {"name":"endure elements",      "description":"increases resistance to the elements"    }
+LPUSH potion_effect endure_elements
+HSET potion_effect_description enlargement    {"name":"enlargement",    "description":"enlarges the user by one size" }
+LPUSH potion_effect enlargement
+HSET potion_effect_description enlightenment    {"name":"enlightenment",    "description":"provides user with a random bonus on a given skill" }
+LPUSH potion_effect enlightenment
+HSET potion_effect_description euphoria    {"name":"euphoria",    "description":"induces an irrational happiness" }
+LPUSH potion_effect euphoria
+HSET potion_effect_description exploding    {"name":"exploding",    "description":"causes an explosive reaction when exposed to certain substances" }
+LPUSH potion_effect exploding
+HSET potion_effect_description fatiguing    {"name":"fatiguing",    "description":"causes user to feel fatigued" }
+LPUSH potion_effect fatiguing
+HSET potion_effect_description fearremoval    {"name":"fear removal",    "description":"removes fear caused by a specific source" }
+LPUSH potion_effect fearremoval
+HSET potion_effect_description fireprotection    {"name":"fire protection",    "description":"protects the user from fire and heat" }
+LPUSH potion_effect fireprotection
+HSET potion_effect_description flatulence    {"name":"flatulence",    "description":"causes uncontrollable, loud and unsavory gas" }
+LPUSH potion_effect flatulence
+HSET potion_effect_description flesheater    {"name":"flesh eater",    "description":"causes uneven and grotesque disfigurement" }
+LPUSH potion_effect flesheater
+HSET potion_effect_description flight    {"name":"flight",    "description":"grants the ability to fly" }
+LPUSH potion_effect flight
+HSET potion_effect_description flinch    {"name":"flinch",    "description":"causes user to flinch uncontrollably" }
+LPUSH potion_effect flinch
+HSET potion_effect_description forgetfulness    {"name":"forgetfulness",    "description":"makes the user forgetful" }
+LPUSH potion_effect forgetfulness
+HSET potion_effect_description foxcunning     {"name":"fox cunning ",    "description":"make the user cleverer than normal" }
+LPUSH potion_effect foxcunning 
+HSET potion_effect_description freezing    {"name":"freezing",    "description":"lower the body temperature of the drinker" }
+LPUSH potion_effect freezing
+HSET potion_effect_description friendship    {"name":"friendship",    "description":"grants drinker the ability to become fast friends with someone upon meeting them" }
+LPUSH potion_effect friendship
+HSET potion_effect_description frostbite    {"name":"frostbite",    "description":"causes frost damage to drinker" }
+LPUSH potion_effect frostbite
+HSET potion_effect_description frostguard    {"name":"frostguard",    "description":"increases ice resistance" }
+LPUSH potion_effect frostguard
+HSET potion_effect_description fungal    {"name":"fungal",    "description":"causes user to grow unsightly fungal growths" }
+LPUSH potion_effect fungal
+HSET potion_effect_description fungiface    {"name":"fungiface",    "description":"makes the user's face erupt in fungus" }
+LPUSH potion_effect fungiface
+HSET potion_effect_description fury    {"name":"fury",    "description":"induces an uncontrollable rage towards others" }
+LPUSH potion_effect fury
+HSET potion_effect_description gaseousform    {"name":"gaseous form",    "description":"user takes a gaseous form" }
+LPUSH potion_effect gaseousform
+HSET potion_effect_description girding    {"name":"girding",    "description":"gives the user extra endurance" }
+LPUSH potion_effect girding
+HSET potion_effect_description grace    {"name":"grace",    "description":"grants the user unnatural grace" }
+LPUSH potion_effect grace
+HSET potion_effect_description hair    {"name":"hair",    "description":"causes user to grow thick, beautiful hair on their head" }
+LPUSH potion_effect hair
+HSET potion_effect_description hair-raising    {"name":"hair-raising",    "description":"causes the user's hair to stand on end" }
+LPUSH potion_effect hair-raising
+HSET potion_effect_description hallucination    {"name":"hallucination",    "description":"causes drinker to hallucinate" }
+LPUSH potion_effect hallucination
+HSET potion_effect_description hare    {"name":"hare",    "description":"causes user to grow thick, beautiful hare on their head" }
+LPUSH potion_effect hare
+HSET potion_effect_description haste                {"name":"haste",                "description":"allows user to move with extreme speed"  }
+LPUSH potion_effect haste
+HSET potion_effect_description hate    {"name":"hate",    "description":"causes a growing dislike of a person or thing" }
+LPUSH potion_effect hate
+HSET potion_effect_description healing              {"name":"healing",              "description":"can heal various wounds and ailments"    }
+LPUSH potion_effect healing
+HSET potion_effect_description heartbreak    {"name":"heartbreak",    "description":"causes an irrational feeling of loss and heartbreak" }
+LPUSH potion_effect heartbreak
+HSET potion_effect_description herbicide    {"name":"herbicide",    "description":"causes damage or death to plant-based life" }
+LPUSH potion_effect herbicide
+HSET potion_effect_description heroism    {"name":"heroism",    "description":"caused unusual recklessness and remission of fear" }
+LPUSH potion_effect heroism
+HSET potion_effect_description hiccupping    {"name":"hiccupping",    "description":"causes uncontrollable hiccupping" }
+LPUSH potion_effect hiccupping
+HSET potion_effect_description hidefromanimals    {"name":"hide from animals",    "description":"prevents animals from detecting the user" }
+LPUSH potion_effect hidefromanimals
+HSET potion_effect_description hidefromundead    {"name":"hide from undead",    "description":"prevents undead from detecting the user" }
+LPUSH potion_effect hidefromundead
+HSET potion_effect_description holyflame    {"name":"holy flame",    "description":"burns the drinker with a righteous flame" }
+LPUSH potion_effect holyflame
+HSET potion_effect_description hyena    {"name":"hyena",    "description":"causes hysteria and fits of uncontrollable laughter" }
+LPUSH potion_effect hyena
+HSET potion_effect_description ignition    {"name":"ignition",    "description":"causes user to uncontrollably belch flames" }
+LPUSH potion_effect ignition
+HSET potion_effect_description indestructibility    {"name":"indestructibility",    "description":"user cannot be damage" }
+LPUSH potion_effect indestructibility
+HSET potion_effect_description influence    {"name":"influence",    "description":"grants the ability to influence others" }
+LPUSH potion_effect influence
+HSET potion_effect_description insanity    {"name":"insanity",    "description":"causes user become irrational and uncontrollable" }
+LPUSH potion_effect insanity
+HSET potion_effect_description intimidation    {"name":"intimidation",    "description":"causes the user to be far more intimidating" }
+LPUSH potion_effect intimidation
+HSET potion_effect_description invigorating    {"name":"invigorating",    "description":"removes fatigue and keeps user awake" }
+LPUSH potion_effect invigorating
+HSET potion_effect_description invisibility    {"name":"invisibility",    "description":"makes the user invisible" }
+LPUSH potion_effect invisibility
+HSET potion_effect_description jawbind    {"name":"jawbind",    "description":"induces lockjaw in the user" }
+LPUSH potion_effect jawbind
+HSET potion_effect_description jumping              {"name":"jumping",              "description":"allows user to jump to amazing heights and distances"    }
+LPUSH potion_effect jumping
+HSET potion_effect_description knowledge    {"name":"knowledge",    "description":"grants the user knowledge on a specific subject" }
+LPUSH potion_effect knowledge
+HSET potion_effect_description laughter    {"name":"laughter",    "description":"causes the user to laugh uncontrollably" }
+LPUSH potion_effect laughter
+HSET potion_effect_description laxative    {"name":"laxative",    "description":"causes uncontrollable bowel movements" }
+LPUSH potion_effect laxative
+HSET potion_effect_description lazarus    {"name":"lazarus",    "description":"can return the user from death or near-death" }
+LPUSH potion_effect lazarus
+HSET potion_effect_description lean    {"name":"lean",    "description":"causes the user to immediately decrease body fat by 75%" }
+LPUSH potion_effect lean
+HSET potion_effect_description levitation    {"name":"levitation",    "description":"allows the user to levitate" }
+LPUSH potion_effect levitation
+HSET potion_effect_description librarian    {"name":"librarian",    "description":"grants user the ability to locate any nearby book" }
+LPUSH potion_effect librarian
+HSET potion_effect_description lightfoot    {"name":"light foot",    "description":"grants the user the ability to move quietly" }
+LPUSH potion_effect lightfoot
+HSET potion_effect_description livingdeath    {"name":"living death",    "description":"puts user into a death-like sleep" }
+LPUSH potion_effect livingdeath
+HSET potion_effect_description lockjaw    {"name":"lockjaw",    "description":"induces lockjaw in the user" }
+LPUSH potion_effect lockjaw
+HSET potion_effect_description longevity    {"name":"longevity",    "description":"cuts aging rage by half" }
+LPUSH potion_effect longevity
+HSET potion_effect_description love    {"name":"love",    "description":"makes the user fall in love with whoever held the substance previously" }
+LPUSH potion_effect love
+HSET potion_effect_description luck    {"name":"luck",    "description":"grants unnatural luck to the user" }
+LPUSH potion_effect luck
+HSET potion_effect_description magearmor    {"name":"mage armor",    "description":"grants magical protection to the user" }
+LPUSH potion_effect magearmor
+HSET potion_effect_description magebane    {"name":"magebane",    "description":"causes illness in anyone who manipulates magical energies" }
+LPUSH potion_effect magebane
+HSET potion_effect_description magicfang    {"name":"magic fang",    "description":"causes user to grow magical fangs" }
+LPUSH potion_effect magicfang
+HSET potion_effect_description magicstone    {"name":"magic stone",    "description":"summons a handful of small throwing stones" }
+LPUSH potion_effect magicstone
+HSET potion_effect_description magicvestment    {"name":"magic vestment",    "description":"grants magical protection to the users clothing" }
+LPUSH potion_effect magicvestment
+HSET potion_effect_description magicweapon    {"name":"magic weapon",    "description":"summons a force weapon shaped by the user's mind" }
+LPUSH potion_effect magicweapon
+HSET potion_effect_description malevolence    {"name":"malevolence",    "description":"causes brooding anger towards a random target" }
+LPUSH potion_effect malevolence
+HSET potion_effect_description manegrow    {"name":"manegrow",    "description":"causes users head to grow thick, luxurious hair rapidly" }
+LPUSH potion_effect manegrow
+HSET potion_effect_description melancholy    {"name":"melancholy",    "description":"impairs enjoyment and fun" }
+LPUSH potion_effect melancholy
+HSET potion_effect_description memory    {"name":"memory",    "description":"enhances the drinker's memory" }
+LPUSH potion_effect memory
+HSET potion_effect_description mentalresistance    {"name":"mental resistance",    "description":"protects the user from mental attacks and damage" }
+LPUSH potion_effect mentalresistance
+HSET potion_effect_description midastouch    {"name":"midas touch",    "description":"allows user to turn any small object to gold" }
+LPUSH potion_effect midastouch
+HSET potion_effect_description might    {"name":"might",    "description":"greatly increases user's strength" }
+LPUSH potion_effect might
+HSET potion_effect_description misdirection    {"name":"misdirection",    "description":"grants user the ability to misdirect others visually or verbally" }
+LPUSH potion_effect misdirection
+HSET potion_effect_description monster    {"name":"monster",    "description":"causes user to transform into a random creature" }
+LPUSH potion_effect monster
+HSET potion_effect_description mouthitching    {"name":"mouth itching",    "description":"causes insufferable itching of the inside of the mouth" }
+LPUSH potion_effect mouthitching
+HSET potion_effect_description muffling    {"name":"muffling",    "description":"wraps the user in a coccoon of silence" }
+LPUSH potion_effect muffling
+HSET potion_effect_description mummycurse    {"name":"mummy curse",    "description":"causes illness and a slow death unless curse is broken" }
+LPUSH potion_effect mummycurse
+HSET potion_effect_description neutralizepoison    {"name":"neutralize poison",    "description":"neutralizes any poisons in the user's system" }
+LPUSH potion_effect neutralizepoison
+HSET potion_effect_description neutralize_poison    {"name":"neutralize poison",    "description":"can neutralize various poisons"          }
+LPUSH potion_effect neutralize_poison
+HSET potion_effect_description neutralmutation    {"name":"neutral mutation",    "description":"provides some sort of neutral mutation" }
+LPUSH potion_effect neutralmutation
+HSET potion_effect_description nightmare    {"name":"nightmare",    "description":"invokes nightmares the next time the user sleeps" }
+LPUSH potion_effect nightmare
+HSET potion_effect_description nondetection    {"name":"nondetection",    "description":"makes the user undetectable through magical means" }
+LPUSH potion_effect nondetection
+HSET potion_effect_description noxiousfumes    {"name":"noxious fumes",    "description":"causes the user to emit noxious, suffocating fumes" }
+LPUSH potion_effect noxiousfumes
+HSET potion_effect_description obesity    {"name":"obesity",    "description":"causes an immediate increase in body fat by 100%" }
+LPUSH potion_effect obesity
+HSET potion_effect_description oculus    {"name":"oculus",    "description":"restores the user's sight" }
+LPUSH potion_effect oculus
+HSET potion_effect_description owlwisdom    {"name":"owl wisdom",    "description":"grants the user powerful insight" }
+LPUSH potion_effect owlwisdom
+HSET potion_effect_description paralysis    {"name":"paralysis",    "description":"paralyzes the user" }
+LPUSH potion_effect paralysis
+HSET potion_effect_description paralysisremoval    {"name":"paralysis removal",    "description":"removes paralysis from user" }
+LPUSH potion_effect paralysisremoval
+HSET potion_effect_description passification    {"name":"passification",    "description":"causes immediate aversion to confrontation" }
+LPUSH potion_effect passification
+HSET potion_effect_description passwithouttrace    {"name":"pass without trace",    "description":"grants the user the ability to move without leaving a trail" }
+LPUSH potion_effect passwithouttrace
+HSET potion_effect_description peace    {"name":"peace",    "description":"relieves anxiety" }
+LPUSH potion_effect peace
+HSET potion_effect_description perception    {"name":"perception",    "description":"increases the users perception" }
+LPUSH potion_effect perception
+HSET potion_effect_description piercingwit    {"name":"piercing wit",    "description":"user becomes keenly aware of the missteps of others" }
+LPUSH potion_effect piercingwit
+HSET potion_effect_description pinkeye    {"name":"pinkeye",    "description":"causes drinker to suffer immediate conjunctivitis" }
+LPUSH potion_effect pinkeye
+HSET potion_effect_description poison    {"name":"poison",    "description":"user becomes immediately ill" }
+LPUSH potion_effect poison
+HSET potion_effect_description polymorph    {"name":"polymorph",    "description":"grants the user the ability to morph into another shpe" }
+LPUSH potion_effect polymorph
+HSET potion_effect_description porridge    {"name":"porridge",    "description":"removes any immediate hunger" }
+LPUSH potion_effect porridge
+HSET potion_effect_description precision    {"name":"precision",    "description":"grants the user precision with ranged weaponry" }
+LPUSH potion_effect precision
+HSET potion_effect_description prowess    {"name":"prowess",    "description":"grants the user unmatched agility, strength or endurance" }
+LPUSH potion_effect prowess
+HSET potion_effect_description pumpkinhead    {"name":"pumpkinhead",    "description":"turns the user's head into an unlit jack-o-lantern" }
+LPUSH potion_effect pumpkinhead
+HSET potion_effect_description pureluck    {"name":"pure luck",    "description":"grants the user unnatural luck" }
+LPUSH potion_effect pureluck
+HSET potion_effect_description purification    {"name":"purification",    "description":"cleanses the user of any non-magical diseases and filth" }
+LPUSH potion_effect purification
+HSET potion_effect_description rage    {"name":"rage",    "description":"user develops uncontrolled, undirected rage" }
+LPUSH potion_effect rage
+HSET potion_effect_description rano    {"name":"rano",    "description":"causes user to develop large horns on their forehead" }
+LPUSH potion_effect rano
+HSET potion_effect_description rawchaos    {"name":"raw chaos",    "description":"user is innundated with raw chaos" }
+LPUSH potion_effect rawchaos
+HSET potion_effect_description reason    {"name":"reason",    "description":"user is protected from the effects of insanity" }
+LPUSH potion_effect reason
+HSET potion_effect_description reduceperson    {"name":"reduce person",    "description":"user decreases in size by 50%" }
+LPUSH potion_effect reduceperson
+HSET potion_effect_description reflection    {"name":"reflection",    "description":"grants the user insight" }
+LPUSH potion_effect reflection
+HSET potion_effect_description regeneration    {"name":"regeneration",    "description":"allows user to regrow lost limbs" }
+LPUSH potion_effect regeneration
+HSET potion_effect_description removeblindness    {"name":"remove blindness",    "description":"restores sight" }
+LPUSH potion_effect removeblindness
+HSET potion_effect_description removecurse    {"name":"remove curse",    "description":"removes minor curses" }
+LPUSH potion_effect removecurse
+HSET potion_effect_description removedeafness    {"name":"remove deafness",    "description":"restores hearing" }
+LPUSH potion_effect removedeafness
+HSET potion_effect_description removedisease    {"name":"remove disease",    "description":"removes most diseases" }
+LPUSH potion_effect removedisease
+HSET potion_effect_description removefear    {"name":"remove fear",    "description":"removes unnatural fear" }
+LPUSH potion_effect removefear
+HSET potion_effect_description remove_fear          {"name":"remove fear",          "description":"fortifies the user against the most terrifying foes"     }
+LPUSH potion_effect remove_fear
+HSET potion_effect_description removeparalysis    {"name":"remove paralysis",    "description":"grants the ability to move freely" }
+LPUSH potion_effect removeparalysis
+HSET potion_effect_description replenishing    {"name":"replenishing",    "description":"heals and revitalizes the user" }
+LPUSH potion_effect replenishing
+HSET potion_effect_description resistacid    {"name":"resist acid",    "description":"toughens the user and makes them resistant to corrosive substances" }
+LPUSH potion_effect resistacid
+HSET potion_effect_description resistcold    {"name":"resist cold",    "description":"provides resistance to the cold" }
+LPUSH potion_effect resistcold
+HSET potion_effect_description resistelectricity    {"name":"resist electricity",    "description":"provides resistance to electricity" }
+LPUSH potion_effect resistelectricity
+HSET potion_effect_description resistfire     {"name":"resist fire ",    "description":"provides resistance to fire" }
+LPUSH potion_effect resistfire 
+HSET potion_effect_description resistsonic     {"name":"resist sonic ",    "description":"provides resistance to sonic damage" }
+LPUSH potion_effect resistsonic 
+HSET potion_effect_description resourcefinder    {"name":"resource finder",    "description":"allows user to sniff out needed resources" }
+LPUSH potion_effect resourcefinder
+HSET potion_effect_description respiration          {"name":"respiration",          "description":"allows user breathe in otherwise dangerous environments" }
+LPUSH potion_effect respiration
+HSET potion_effect_description restoration     {"name":"restoration ",    "description":"reverts effects of any other spells" }
+LPUSH potion_effect restoration 
+HSET potion_effect_description revive    {"name":"revive",    "description":"awakens an unconscious person" }
+LPUSH potion_effect revive
+HSET potion_effect_description rockskin    {"name":"rock skin",    "description":"hardens the skin of the user while allowing flexibility" }
+LPUSH potion_effect rockskin
+HSET potion_effect_description sanctuary    {"name":"sanctuary",    "description":"grants the user protection from combat" }
+LPUSH potion_effect sanctuary
+HSET potion_effect_description scouringsolution    {"name":"scouring solution",    "description":"is good for cleaning caked on grime" }
+LPUSH potion_effect scouringsolution
+HSET potion_effect_description seduction    {"name":"seduction",    "description":"grants the user the ability to seduce anyone" }
+LPUSH potion_effect seduction
+HSET potion_effect_description seeinvisible    {"name":"see invisible",    "description":"grants the user the ability to see invisible things" }
+LPUSH potion_effect seeinvisible
+HSET potion_effect_description serpent    {"name":"serpent",    "description":"causes user to grow poisonous fangs" }
+LPUSH potion_effect serpent
+HSET potion_effect_description shield    {"name":"shield",    "description":"grants the user a magical force shield for protection" }
+LPUSH potion_effect shield
+HSET potion_effect_description shieldoffaith     {"name":"shield of faith ",    "description":"grants the user a magical force shield from an unknown deity" }
+LPUSH potion_effect shieldoffaith 
+HSET potion_effect_description shrinking    {"name":"shrinking",    "description":"causes the drinker to shrink" }
+LPUSH potion_effect shrinking
+HSET potion_effect_description sickness    {"name":"sickness",    "description":"causes user to display symptoms of severe illness" }
+LPUSH potion_effect sickness
+HSET potion_effect_description skelegro    {"name":"skelegro",    "description":"regrows any missing bones" }
+LPUSH potion_effect skelegro
+HSET potion_effect_description slashingfury    {"name":"slashing fury",    "description":"causes user to fly into a frenzy when holding a blade" }
+LPUSH potion_effect slashingfury
+HSET potion_effect_description slaying    {"name":"slaying",    "description":"grants user unnatural vigor when combatting a specific enemy" }
+LPUSH potion_effect slaying
+HSET potion_effect_description sleep    {"name":"sleep",    "description":"user will fall asleep for up to 24 hours" }
+LPUSH potion_effect sleep
+HSET potion_effect_description sleeping    {"name":"sleeping",    "description":"forces the user into a deep sleep" }
+LPUSH potion_effect sleeping
+HSET potion_effect_description slowness    {"name":"slowness",    "description":"causes the user to move with extreme slowness" }
+LPUSH potion_effect slowness
+HSET potion_effect_description snakehair    {"name":"snakehair",    "description":"causes user to sprout snakes from their head" }
+LPUSH potion_effect snakehair
+HSET potion_effect_description snuffling    {"name":"snuffling",    "description":"causes the user to continuously sniffle" }
+LPUSH potion_effect snuffling
+HSET potion_effect_description socialgrace    {"name":"social grace",    "description":"grants unnatural skill in social situations" }
+LPUSH potion_effect socialgrace
+HSET potion_effect_description spark    {"name":"spark",    "description":"user suffers from continual, uncontrollable electrical outbursts" }
+LPUSH potion_effect spark
+HSET potion_effect_description sparklingapplecider    {"name":"sparkling apple cider",    "description":"causes the user to desire apples" }
+LPUSH potion_effect sparklingapplecider
+HSET potion_effect_description speed    {"name":"speed",    "description":"allows the user to move quickly" }
+LPUSH potion_effect speed
+HSET potion_effect_description spellbreaker    {"name":"spell breaker",    "description":"breaks any existing spell effects on the user" }
+LPUSH potion_effect spellbreaker
+HSET potion_effect_description spicyfungalgumbo    {"name":"spicy fungal gumbo",    "description":"causes severe pain and hallucinations" }
+LPUSH potion_effect spicyfungalgumbo
+HSET potion_effect_description spiderclimb    {"name":"spider climb",    "description":"grants the user the ability to climb walls" }
+LPUSH potion_effect spiderclimb
+HSET potion_effect_description staticdischarge    {"name":"static discharge",    "description":"causes unnatural buildup of static discharge" }
+LPUSH potion_effect staticdischarge
+HSET potion_effect_description steeledcurtain    {"name":"steeled curtain",    "description":"increases the protection of existing armor" }
+LPUSH potion_effect steeledcurtain
+HSET potion_effect_description stomachgrowling    {"name":"stomach growling",    "description":"provokes stomach growling" }
+LPUSH potion_effect stomachgrowling
+HSET potion_effect_description stoneskin    {"name":"stoneskin",    "description":"grants the user hardened skin" }
+LPUSH potion_effect stoneskin
+HSET potion_effect_description stonetoflesh    {"name":"stone to flesh",    "description":"can be used to cure petrification" }
+LPUSH potion_effect stonetoflesh
+HSET potion_effect_description strength    {"name":"strength",    "description":"grants unusual strength to the drinker" }
+LPUSH potion_effect strength
+HSET potion_effect_description swelling    {"name":"swelling",    "description":"causes severe swelling of a random section of the body" }
+LPUSH potion_effect swelling
+HSET potion_effect_description swiftness    {"name":"swiftness",    "description":"grants the user the ability to move quickly" }
+LPUSH potion_effect swiftness
+HSET potion_effect_description tongues    {"name":"tongues",    "description":"allows user to speak and understand any language" }
+LPUSH potion_effect tongues
+HSET potion_effect_description toughness    {"name":"toughness",    "description":"grants user increased endurance" }
+LPUSH potion_effect toughness
+HSET potion_effect_description training    {"name":"training",    "description":"allows user to increase effectiveness of a single skill" }
+LPUSH potion_effect training
+HSET potion_effect_description trollblood    {"name":"troll blood",    "description":"grants the user minor regenerative abilities" }
+LPUSH potion_effect trollblood
+HSET potion_effect_description truth    {"name":"truth",    "description":"makes the user tell the truth" }
+LPUSH potion_effect truth
+HSET potion_effect_description tumbling    {"name":"tumbling",    "description":"grants the user unnatural tumbling skills" }
+LPUSH potion_effect tumbling
+HSET potion_effect_description unfortunatemutation    {"name":"unfortunate mutation",    "description":"provides some sort of unfortunate mutation" }
+LPUSH potion_effect unfortunatemutation
+HSET potion_effect_description uselessness    {"name":"uselessness",    "description":"has no discernible effect" }
+LPUSH potion_effect uselessness
+HSET potion_effect_description vampirebite    {"name":"vampire bite",    "description":"infects user with vampirism" }
+LPUSH potion_effect vampirebite
+HSET potion_effect_description vampiricsunscreen    {"name":"vampiric sunscreen",    "description":"mitigates any penalties taken from sunlight" }
+LPUSH potion_effect vampiricsunscreen
+HSET potion_effect_description venomguard    {"name":"venomguard",    "description":"grants poison resistance" }
+LPUSH potion_effect venomguard
+HSET potion_effect_description visibility    {"name":"visibility",    "description":"grants visibility to the invisible" }
+LPUSH potion_effect visibility
+HSET potion_effect_description vision    {"name":"vision",    "description":"grants user a mysterious and unclear vision" }
+LPUSH potion_effect vision
+HSET potion_effect_description vocality    {"name":"vocality",    "description":"alters the user's voice" }
+LPUSH potion_effect vocality
+HSET potion_effect_description waterbreathing    {"name":"water breathing",    "description":"allows the user to breathe underwater" }
+LPUSH potion_effect waterbreathing
+HSET potion_effect_description waterwalk    {"name":"water walk",    "description":"allows the user to walk on water" }
+LPUSH potion_effect waterwalk
+HSET potion_effect_description weakness    {"name":"weakness",    "description":"causes the user to feel weak" }
+LPUSH potion_effect weakness
+HSET potion_effect_description wide-eye    {"name":"wide-eye",    "description":"prevents the user from falling asleep" }
+LPUSH potion_effect wide-eye
+HSET potion_effect_description wolfsbane    {"name":"wolfsbane",    "description":"poisonous to a lycanthrope, protects user from infection" }
+LPUSH potion_effect wolfsbane
+HSET potion_effect_description wound-cleaning    {"name":"wound-cleaning",    "description":"antiseptic prevents infection frmo sinking in" }
+LPUSH potion_effect wound-cleaning
+HSET potion_effect_description zombification    {"name":"zombification",    "description":"causes user to show immediate signs of zombification" }
+LPUSH potion_effect zombification
+
+
+
+
+
+            
+#<!-- may cause blindness, which -->
+
+ZADD potion_duration  10  {"name":"is temporary",           "score":10  }
+ZADD potion_duration  20  {"name":"lasts a few seconds",    "score":20  }
+ZADD potion_duration  30  {"name":"lasts a minute",         "score":30  }
+ZADD potion_duration  40  {"name":"lasts a few minutes",    "score":40  }
+ZADD potion_duration  50  {"name":"lasts several minutes",  "score":50  }
+ZADD potion_duration  60  {"name":"lasts an hour",          "score":60  }
+ZADD potion_duration  70  {"name":"lasts a few hours",      "score":70  }
+ZADD potion_duration  80  {"name":"lasts several hours",    "score":80  }
+ZADD potion_duration  85  {"name":"lasts a day",            "score":85  }
+ZADD potion_duration  90  {"name":"lasts a few days",       "score":90  }
+ZADD potion_duration  95  {"name":"lasts a week",           "score":95  }
+ZADD potion_duration  98  {"name":"lasts weeks",            "score":98  }
+ZADD potion_duration 100  {"name":"is permanent",           "score":100  }
+
+
+# In the container is a _________ potion
+ZADD potion_consistency   3  {"name":"watery",   "score":3  }
+ZADD potion_consistency   6  {"name":"thick",   "score":6  }
+ZADD potion_consistency   9  {"name":"chunky",   "score":9  }
+ZADD potion_consistency  12  {"name":"viscous",   "score":12  }
+ZADD potion_consistency  15  {"name":"goopy",   "score":15  }
+ZADD potion_consistency  18  {"name":"gooey",   "score":18  }
+ZADD potion_consistency  21  {"name":"milky",   "score":21  }
+ZADD potion_consistency  24  {"name":"soupy",   "score":24  }
+ZADD potion_consistency  27  {"name":"sappy",   "score":27  }
+ZADD potion_consistency  30  {"name":"crusty",   "score":30  }
+ZADD potion_consistency  33  {"name":"buttery",   "score":33  }
+ZADD potion_consistency  36  {"name":"bubbly",   "score":36  }
+ZADD potion_consistency  39  {"name":"runny",   "score":39  }
+ZADD potion_consistency  42  {"name":"layered",   "score":42  }
+ZADD potion_consistency  45  {"name":"syrupy",   "score":45  }
+ZADD potion_consistency  48  {"name":"coagulated",   "score":48  }
+ZADD potion_consistency  51  {"name":"congealed",   "score":51  }
+ZADD potion_consistency  54  {"name":"gloppy",   "score":54  }
+ZADD potion_consistency  57  {"name":"gunky",   "score":57  }
+ZADD potion_consistency  60  {"name":"jellied",   "score":60  }
+ZADD potion_consistency  63  {"name":"solidified",   "score":63  }
+ZADD potion_consistency  66  {"name":"pulpy",   "score":66  }
+ZADD potion_consistency  69  {"name":"slushy",   "score":69  }
+ZADD potion_consistency  72  {"name":"tacky",   "score":72  }
+ZADD potion_consistency  75  {"name":"mucousy",   "score":75  }
+ZADD potion_consistency  78  {"name":"waxy",   "score":78  }
+ZADD potion_consistency  81  {"name":"scummy",   "score":81  }
+ZADD potion_consistency  84  {"name":"aqueous",   "score":84  }
+ZADD potion_consistency  87  {"name":"brothy",   "score":87  }
+ZADD potion_consistency  90  {"name":"fizzing",   "score":90  }
+ZADD potion_consistency  93  {"name":"chalky",   "score":93  }
+ZADD potion_consistency  96  {"name":"oily",   "score":96  }
+ZADD potion_consistency 100  {"name":"gritty",   "score":99  }
+
+            
+LPUSH potion_color aquamarine
+HSET potion_color_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+LPUSH potion_color azure
+HSET potion_color_description azure     {"name":"azure", "hex":"F0FFFF" }
+LPUSH potion_color banana
+HSET potion_color_description banana     {"name":"banana", "hex":"E3CF57" }
+LPUSH potion_color beige
+HSET potion_color_description beige     {"name":"beige", "hex":"F5F5DC" }
+LPUSH potion_color bisque
+HSET potion_color_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+LPUSH potion_color black
+HSET potion_color_description black     {"name":"black", "hex":"000000" }
+LPUSH potion_color blanchedalmond
+HSET potion_color_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+LPUSH potion_color blue
+HSET potion_color_description blue     {"name":"blue", "hex":"0000FF" }
+LPUSH potion_color blueviolet
+HSET potion_color_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+LPUSH potion_color brick
+HSET potion_color_description brick     {"name":"brick", "hex":"9C661F" }
+LPUSH potion_color brown
+HSET potion_color_description brown     {"name":"brown", "hex":"A52A2A" }
+LPUSH potion_color burlywood
+HSET potion_color_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+LPUSH potion_color burntsienna
+HSET potion_color_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+LPUSH potion_color burntumber
+HSET potion_color_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+LPUSH potion_color cadetblue
+HSET potion_color_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+LPUSH potion_color cadmiumorange
+HSET potion_color_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+LPUSH potion_color cadmiumyellow
+HSET potion_color_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+LPUSH potion_color carrot
+HSET potion_color_description carrot     {"name":"carrot", "hex":"ED9121" }
+LPUSH potion_color chartreuse
+HSET potion_color_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+LPUSH potion_color chocolate
+HSET potion_color_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+LPUSH potion_color cobalt
+HSET potion_color_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+LPUSH potion_color cobaltgreen
+HSET potion_color_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+LPUSH potion_color coldgrey
+HSET potion_color_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+LPUSH potion_color coral
+HSET potion_color_description coral     {"name":"coral", "hex":"FF7F50" }
+LPUSH potion_color cornflowerblue
+HSET potion_color_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
+LPUSH potion_color cornsilk
+HSET potion_color_description cornsilk     {"name":"cornsilk-colored", "hex":"FFF8DC" }
+LPUSH potion_color crimson
+HSET potion_color_description crimson     {"name":"crimson", "hex":"DC143C" }
+LPUSH potion_color cyan
+HSET potion_color_description cyan     {"name":"cyan", "hex":"00FFFF" }
+LPUSH potion_color darkblue
+HSET potion_color_description darkblue     {"name":"dark blue", "hex":"00008B" }
+LPUSH potion_color darkcyan
+HSET potion_color_description darkcyan     {"name":"dark cyan", "hex":"008B8B" }
+LPUSH potion_color darkgoldenrod
+HSET potion_color_description darkgoldenrod     {"name":"dark goldenrod", "hex":"B8860B" }
+LPUSH potion_color darkgray
+HSET potion_color_description darkgray     {"name":"dark gray", "hex":"A9A9A9" }
+LPUSH potion_color darkgreen
+HSET potion_color_description darkgreen     {"name":"dark green", "hex":"006400" }
+LPUSH potion_color darkkhaki
+HSET potion_color_description darkkhaki     {"name":"dark khaki", "hex":"BDB76B" }
+LPUSH potion_color darkolivegreen
+HSET potion_color_description darkolivegreen     {"name":"dark olive green", "hex":"556B2F" }
+LPUSH potion_color darkorange
+HSET potion_color_description darkorange     {"name":"dark orange", "hex":"FF8C00" }
+LPUSH potion_color darkorchid
+HSET potion_color_description darkorchid     {"name":"dark orchid", "hex":"9932CC" }
+LPUSH potion_color darkred
+HSET potion_color_description darkred     {"name":"dark red", "hex":"8B0000" }
+LPUSH potion_color darksalmon
+HSET potion_color_description darksalmon     {"name":"dark salmon", "hex":"E9967A" }
+LPUSH potion_color darkseagreen
+HSET potion_color_description darkseagreen     {"name":"dark sea green", "hex":"8FBC8F" }
+LPUSH potion_color darkslateblue
+HSET potion_color_description darkslateblue     {"name":"dark slate blue", "hex":"483D8B" }
+LPUSH potion_color darkslategray
+HSET potion_color_description darkslategray     {"name":"dark slate gray", "hex":"2F4F4F" }
+LPUSH potion_color darkturquoise
+HSET potion_color_description darkturquoise     {"name":"dark turquoise", "hex":"00CED1" }
+LPUSH potion_color darkviolet
+HSET potion_color_description darkviolet     {"name":"dark violet", "hex":"9400D3" }
+LPUSH potion_color deeppink
+HSET potion_color_description deeppink     {"name":"deep pink", "hex":"FF1493" }
+LPUSH potion_color deepskyblue
+HSET potion_color_description deepskyblue     {"name":"deep sky blue", "hex":"00BFFF" }
+LPUSH potion_color dimgray
+HSET potion_color_description dimgray     {"name":"dim gray", "hex":"696969" }
+LPUSH potion_color dodgerblue
+HSET potion_color_description dodgerblue     {"name":"dodger blue", "hex":"1E90FF" }
+LPUSH potion_color eggshell
+HSET potion_color_description eggshell     {"name":"eggshell", "hex":"FCE6C9" }
+LPUSH potion_color emeraldgreen
+HSET potion_color_description emeraldgreen     {"name":"emerald green", "hex":"00C957" }
+LPUSH potion_color firebrick
+HSET potion_color_description firebrick     {"name":"firebrick", "hex":"B22222" }
+LPUSH potion_color flesh
+HSET potion_color_description flesh     {"name":"flesh", "hex":"FF7D40" }
+LPUSH potion_color floralwhite
+HSET potion_color_description floralwhite     {"name":"floral white", "hex":"FFFAF0" }
+LPUSH potion_color forestgreen
+HSET potion_color_description forestgreen     {"name":"forest green", "hex":"228B22" }
+LPUSH potion_color fuchsia
+HSET potion_color_description fuchsia     {"name":"fuchsia", "hex":"FF00FF" }
+LPUSH potion_color ghostwhite
+HSET potion_color_description ghostwhite     {"name":"ghost white", "hex":"F8F8FF" }
+LPUSH potion_color goldenrod
+HSET potion_color_description goldenrod     {"name":"goldenrod", "hex":"DAA520" }
+LPUSH potion_color gold
+HSET potion_color_description gold     {"name":"gold", "hex":"FFD700" }
+LPUSH potion_color gray
+HSET potion_color_description gray     {"name":"gray", "hex":"808080" }
+LPUSH potion_color green
+HSET potion_color_description green     {"name":"green", "hex":"008000" }
+LPUSH potion_color greenyellow
+HSET potion_color_description greenyellow     {"name":"green-yellow", "hex":"ADFF2F" }
+LPUSH potion_color honeydew
+HSET potion_color_description honeydew     {"name":"honeydew", "hex":"F0FFF0" }
+LPUSH potion_color hotpink
+HSET potion_color_description hotpink     {"name":"hot pink", "hex":"FF69B4" }
+LPUSH potion_color indian
+HSET potion_color_description indian     {"name":"indian red", "hex":"B0171F" }
+LPUSH potion_color indigo
+HSET potion_color_description indigo     {"name":"indigo", "hex":"4B0082" }
+LPUSH potion_color ivoryblack
+HSET potion_color_description ivoryblack     {"name":"ivoryblack", "hex":"292421" }
+LPUSH potion_color ivory
+HSET potion_color_description ivory     {"name":"ivory", "hex":"FFFFF0" }
+LPUSH potion_color khaki
+HSET potion_color_description khaki     {"name":"khaki-colored", "hex":"F0E68C" }
+LPUSH potion_color lavender
+HSET potion_color_description lavender     {"name":"lavender", "hex":"E6E6FA" }
+LPUSH potion_color lawngreen
+HSET potion_color_description lawngreen     {"name":"lawn green", "hex":"7CFC00" }
+LPUSH potion_color lightblue
+HSET potion_color_description lightblue     {"name":"light blue", "hex":"ADD8E6" }
+LPUSH potion_color lightcoral
+HSET potion_color_description lightcoral     {"name":"light coral", "hex":"F08080" }
+LPUSH potion_color lightcyan
+HSET potion_color_description lightcyan     {"name":"light cyan", "hex":"E0FFFF" }
+LPUSH potion_color lightgoldenrod
+HSET potion_color_description lightgoldenrod     {"name":"light goldenrod", "hex":"FFEC8B" }
+LPUSH potion_color lightgoldenrodyellow
+HSET potion_color_description lightgoldenrodyellow     {"name":"light goldenrod yellow", "hex":"FAFAD2" }
+LPUSH potion_color lightgreen
+HSET potion_color_description lightgreen     {"name":"light green", "hex":"90EE90" }
+LPUSH potion_color lightgrey
+HSET potion_color_description lightgrey     {"name":"light grey", "hex":"D3D3D3" }
+LPUSH potion_color lightpink
+HSET potion_color_description lightpink     {"name":"light pink", "hex":"FFB6C1" }
+LPUSH potion_color lightsalmon
+HSET potion_color_description lightsalmon     {"name":"light salmon", "hex":"FFA07A" }
+LPUSH potion_color lightseagreen
+HSET potion_color_description lightseagreen     {"name":"light sea green", "hex":"20B2AA" }
+LPUSH potion_color lightskyblue
+HSET potion_color_description lightskyblue     {"name":"light sky blue", "hex":"87CEFA" }
+LPUSH potion_color lightslateblue
+HSET potion_color_description lightslateblue     {"name":"light slate blue", "hex":"8470FF" }
+LPUSH potion_color lightslategray
+HSET potion_color_description lightslategray     {"name":"light slate gray", "hex":"778899" }
+LPUSH potion_color lightsteelblue
+HSET potion_color_description lightsteelblue     {"name":"light steel blue", "hex":"B0C4DE" }
+LPUSH potion_color lightyellow
+HSET potion_color_description lightyellow     {"name":"light yellow", "hex":"FFFFE0" }
+LPUSH potion_color lime
+HSET potion_color_description lime     {"name":"lime", "hex":"00FF00" }
+LPUSH potion_color limegreen
+HSET potion_color_description limegreen     {"name":"lime green", "hex":"32CD32" }
+LPUSH potion_color linen
+HSET potion_color_description linen     {"name":"linen white", "hex":"FAF0E6" }
+LPUSH potion_color manganeseblue
+HSET potion_color_description manganeseblue     {"name":"manganese blue", "hex":"03A89E" }
+LPUSH potion_color maroon
+HSET potion_color_description maroon     {"name":"maroon", "hex":"FF34B3" }
+LPUSH potion_color midnightblue
+HSET potion_color_description midnightblue     {"name":"midnight blue", "hex":"191970" }
+LPUSH potion_color mint
+HSET potion_color_description mint     {"name":"mint", "hex":"BDFCC9" }
+LPUSH potion_color navy
+HSET potion_color_description navy     {"name":"navy", "hex":"000080" }
+LPUSH potion_color olive
+HSET potion_color_description olive     {"name":"olive", "hex":"808000" }
+LPUSH potion_color olivedrab
+HSET potion_color_description olivedrab     {"name":"olive drab", "hex":"6B8E23" }
+LPUSH potion_color orange
+HSET potion_color_description orange     {"name":"orange", "hex":"FFA500" }
+LPUSH potion_color orangered
+HSET potion_color_description orangered     {"name":"orange-red", "hex":"FF4500" }
+LPUSH potion_color orchid
+HSET potion_color_description orchid     {"name":"orchid", "hex":"DA70D6" }
+LPUSH potion_color palegoldenrod
+HSET potion_color_description palegoldenrod     {"name":"pale goldenrod", "hex":"EEE8AA" }
+LPUSH potion_color palegreen
+HSET potion_color_description palegreen     {"name":"pale green", "hex":"98FB98" }
+LPUSH potion_color paleturquoise
+HSET potion_color_description paleturquoise     {"name":"pale turquoise", "hex":"AEEEEE" }
+LPUSH potion_color palevioletred
+HSET potion_color_description palevioletred     {"name":"pale violet-red", "hex":"DB7093" }
+LPUSH potion_color pink
+HSET potion_color_description pink     {"name":"pink", "hex":"FFC0CB" }
+LPUSH potion_color plum
+HSET potion_color_description plum     {"name":"plum", "hex":"DDA0DD" }
+LPUSH potion_color powderblue
+HSET potion_color_description powderblue     {"name":"powder-blue", "hex":"B0E0E6" }
+LPUSH potion_color purple
+HSET potion_color_description purple     {"name":"purple", "hex":"800080" }
+LPUSH potion_color raspberry
+HSET potion_color_description raspberry     {"name":"raspberry", "hex":"872657" }
+LPUSH potion_color rawsienna
+HSET potion_color_description rawsienna     {"name":"raw sienna", "hex":"C76114" }
+LPUSH potion_color red
+HSET potion_color_description red     {"name":"red", "hex":"FF0000" }
+LPUSH potion_color rosybrown
+HSET potion_color_description rosybrown     {"name":"rosy brown", "hex":"BC8F8F" }
+LPUSH potion_color royalblue
+HSET potion_color_description royalblue     {"name":"royal blue", "hex":"4169E1" }
+LPUSH potion_color saddlebrown
+HSET potion_color_description saddlebrown     {"name":"saddle brown", "hex":"8B4513" }
+LPUSH potion_color salmon
+HSET potion_color_description salmon     {"name":"salmon-colored", "hex":"FA8072" }
+LPUSH potion_color sandybrown
+HSET potion_color_description sandybrown     {"name":"sandy brown", "hex":"F4A460" }
+LPUSH potion_color sapgreen
+HSET potion_color_description sapgreen     {"name":"sap green", "hex":"308014" }
+LPUSH potion_color seagreen
+HSET potion_color_description seagreen     {"name":"sea green", "hex":"2E8B57" }
+LPUSH potion_color seashell
+HSET potion_color_description seashell     {"name":"seashell", "hex":"FFF5EE" }
+LPUSH potion_color sepia
+HSET potion_color_description sepia     {"name":"sepia", "hex":"5E2612" }
+LPUSH potion_color sienna
+HSET potion_color_description sienna     {"name":"sienna", "hex":"A0522D" }
+LPUSH potion_color silver
+HSET potion_color_description silver     {"name":"silver", "hex":"C0C0C0" }
+LPUSH potion_color skyblue
+HSET potion_color_description skyblue     {"name":"sky blue", "hex":"87CEEB" }
+LPUSH potion_color slateblue
+HSET potion_color_description slateblue     {"name":"slate blue", "hex":"6A5ACD" }
+LPUSH potion_color slategray
+HSET potion_color_description slategray     {"name":"slate gray", "hex":"708090" }
+LPUSH potion_color snow
+HSET potion_color_description snow     {"name":"snow-white", "hex":"FFFAFA" }
+LPUSH potion_color springgreen
+HSET potion_color_description springgreen     {"name":"spring green", "hex":"00FF7F" }
+LPUSH potion_color steelblue
+HSET potion_color_description steelblue     {"name":"steel blue", "hex":"4682B4" }
+LPUSH potion_color tan
+HSET potion_color_description tan     {"name":"tan", "hex":"D2B48C" }
+LPUSH potion_color teal
+HSET potion_color_description teal     {"name":"teal", "hex":"008080" }
+LPUSH potion_color thistle
+HSET potion_color_description thistle     {"name":"thistle", "hex":"D8BFD8" }
+LPUSH potion_color tomato
+HSET potion_color_description tomato     {"name":"tomato", "hex":"FF6347" }
+LPUSH potion_color turquoise
+HSET potion_color_description turquoise     {"name":"turquoise", "hex":"00F5FF" }
+LPUSH potion_color turquoiseblue
+HSET potion_color_description turquoiseblue     {"name":"turquoise blue", "hex":"00C78C" }
+LPUSH potion_color violet
+HSET potion_color_description violet     {"name":"violet", "hex":"EE82EE" }
+LPUSH potion_color violetred
+HSET potion_color_description violetred     {"name":"violet-red", "hex":"D02090" }
+LPUSH potion_color warmgrey
+HSET potion_color_description warmgrey     {"name":"warm grey", "hex":"808069" }
+LPUSH potion_color wheat
+HSET potion_color_description wheat     {"name":"wheat", "hex":"F5DEB3" }
+LPUSH potion_color white
+HSET potion_color_description white     {"name":"white", "hex":"FFFFFF" }
+LPUSH potion_color yellow
+HSET potion_color_description yellow     {"name":"yellow", "hex":"FFFF00" }
+LPUSH potion_color yellowgreen
+HSET potion_color_description yellowgreen     {"name":"yellow green", "hex":"9ACD32" }
+
+
+
+SET   potion_sideeffect_chance 20
+LPUSH potion_sideeffect seizures
+LPUSH potion_sideeffect blindness
+LPUSH potion_sideeffect death
+LPUSH potion_sideeffect melting flesh
+LPUSH potion_sideeffect spontaneous combustion
+LPUSH potion_sideeffect muteness
+LPUSH potion_sideeffect mouth glued shut
+LPUSH potion_sideeffect skin to turn an unnatural color
+LPUSH potion_sideeffect vomiting
+LPUSH potion_sideeffect nausea 
+LPUSH potion_sideeffect irritability
+LPUSH potion_sideeffect dizziness
+LPUSH potion_sideeffect fatigue
+LPUSH potion_sideeffect allergic reactions
+LPUSH potion_sideeffect fever
+LPUSH potion_sideeffect apathy
+LPUSH potion_sideeffect lethargy
+LPUSH potion_sideeffect paranoia
+LPUSH potion_sideeffect irrational behavior
+LPUSH potion_sideeffect hallucinations
+LPUSH potion_sideeffect levitation
+LPUSH potion_sideeffect colour blindness
+LPUSH potion_sideeffect sprouting feathers
+LPUSH potion_sideeffect sprouting hairs
+LPUSH potion_sideeffect vertigo
+LPUSH potion_sideeffect uncontrolled bowel movements
+LPUSH potion_sideeffect uncontrolled urination
+LPUSH potion_sideeffect severe muscle cramps
+            
+LPUSH potion_variety potion
+LPUSH potion_variety brew
+LPUSH potion_variety elixir
+LPUSH potion_variety philer
+LPUSH potion_variety tonic
+LPUSH potion_variety balm
+LPUSH potion_variety dram
+LPUSH potion_variety formula
+LPUSH potion_variety lotion
+LPUSH potion_variety gel
+LPUSH potion_variety pomade
+LPUSH potion_variety slurry
+LPUSH potion_variety draught
+LPUSH potion_variety essence
+LPUSH potion_variety serum
+            
+            
+LPUSH potion_smell bubblegum
+LPUSH potion_smell sewage
+LPUSH potion_smell cornflour
+LPUSH potion_smell vinegar
+LPUSH potion_smell alcohol
+LPUSH potion_smell strawberries
+LPUSH potion_smell sweat
+LPUSH potion_smell lilac
+LPUSH potion_smell fruit
+LPUSH potion_smell fresh-cut grass
+LPUSH potion_smell mint
+LPUSH potion_smell harsh chemicals
+LPUSH potion_smell stinkbugs
+            
+# , tastes _______,
+LPUSH potion_taste acidic
+LPUSH potion_taste amazing
+LPUSH potion_taste bitter
+LPUSH potion_taste bland
+LPUSH potion_taste burned
+LPUSH potion_taste buttery
+LPUSH potion_taste cheesy
+LPUSH potion_taste chocolaty
+LPUSH potion_taste delicious
+LPUSH potion_taste delightful
+LPUSH potion_taste divine
+LPUSH potion_taste earthy
+LPUSH potion_taste excellent
+LPUSH potion_taste extraordinary
+LPUSH potion_taste fantastic
+LPUSH potion_taste fatty
+LPUSH potion_taste fiery
+LPUSH potion_taste fishy
+LPUSH potion_taste flavorful
+LPUSH potion_taste fresh
+LPUSH potion_taste fried
+LPUSH potion_taste fruity
+LPUSH potion_taste gamey
+LPUSH potion_taste garlicky
+LPUSH potion_taste gingery
+LPUSH potion_taste greasy
+LPUSH potion_taste heavenly
+LPUSH potion_taste lemony
+LPUSH potion_taste marvelous
+LPUSH potion_taste meaty
+LPUSH potion_taste mellow
+LPUSH potion_taste mild
+LPUSH potion_taste minty
+LPUSH potion_taste nutty
+LPUSH potion_taste oniony
+LPUSH potion_taste peppery
+LPUSH potion_taste pickled
+LPUSH potion_taste plain
+LPUSH potion_taste pleasant
+LPUSH potion_taste powdery
+LPUSH potion_taste rich
+LPUSH potion_taste robust
+LPUSH potion_taste salty
+LPUSH potion_taste satisfying
+LPUSH potion_taste savory
+LPUSH potion_taste scrumptious
+LPUSH potion_taste seasoned
+LPUSH potion_taste sharp
+LPUSH potion_taste smokey
+LPUSH potion_taste soupy
+LPUSH potion_taste sour
+LPUSH potion_taste spicy
+LPUSH potion_taste strong
+LPUSH potion_taste sugary
+LPUSH potion_taste superb
+LPUSH potion_taste sweet
+LPUSH potion_taste tangy
+LPUSH potion_taste tart
+LPUSH potion_taste terrific
+LPUSH potion_taste unflavored
+LPUSH potion_taste unseasoned
+LPUSH potion_taste vinegary
+LPUSH potion_taste wonderful
+LPUSH potion_taste woody
+LPUSH potion_taste yeasty
+LPUSH potion_taste zesty
+LPUSH potion_taste zingy
+
+#and has a[n] _________ texture
+LPUSH potion_texture chalky
+LPUSH potion_texture chewy
+LPUSH potion_texture creamy
+LPUSH potion_texture crunchy
+LPUSH potion_texture crusty
+LPUSH potion_texture fizzy
+LPUSH potion_texture gelatinous
+LPUSH potion_texture gooey
+LPUSH potion_texture gritty
+LPUSH potion_texture hearty
+LPUSH potion_texture light
+LPUSH potion_texture malty
+LPUSH potion_texture mushy
+LPUSH potion_texture oily
+LPUSH potion_texture pasty
+LPUSH potion_texture rubbery
+LPUSH potion_texture runny
+LPUSH potion_texture silky
+LPUSH potion_texture slimy
+LPUSH potion_texture smooth
+LPUSH potion_texture sticky
+LPUSH potion_texture stringy
+LPUSH potion_texture syrupy
+LPUSH potion_texture velvety
+LPUSH potion_texture watery
+LPUSH potion_texture whipped
+LPUSH potion_container_material glass
+LPUSH potion_container_material copper
+LPUSH potion_container_material tin
+LPUSH potion_container_material iron
+LPUSH potion_container_material ceramic
+LPUSH potion_container_material leather
+            
+SET   potion_container_decoration_chance 30
+LPUSH potion_container_decoration cryptic writing
+LPUSH potion_container_decoration worthless jewels
+LPUSH potion_container_decoration feathers
+LPUSH potion_container_decoration beaded strings
+            
+SET   potion_container_label_chance 30
+LPUSH potion_container_label illegible
+LPUSH potion_container_label clearly labeled
+LPUSH potion_container_label written in an uncommon language
+LPUSH potion_container_label ideogram
+
+#The Weak Blur Potion is a lime green potion in an iron ____________.
+LPUSH potion_container_shape ampoule
+LPUSH potion_container_shape bottle
+LPUSH potion_container_shape cannister
+LPUSH potion_container_shape canteen
+LPUSH potion_container_shape carafe
+LPUSH potion_container_shape decanter
+LPUSH potion_container_shape demijohn
+LPUSH potion_container_shape dropper
+LPUSH potion_container_shape ewer
+LPUSH potion_container_shape figurine
+LPUSH potion_container_shape flagon
+LPUSH potion_container_shape flask
+LPUSH potion_container_shape jar
+LPUSH potion_container_shape jug
+LPUSH potion_container_shape phial
+LPUSH potion_container_shape vial
+
+
+# rarity- how rare is this potion in this region
+# rarity controls how likely they will know of it.
+
+

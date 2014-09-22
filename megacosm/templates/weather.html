@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+{% block title %}Look Outside... {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Look Outside... <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+<p>Right now it is {{tempobj.temp['name']}} outside, with {{tempobj.wind['name']}} winds.</p>
+
+{%if tempobj.precipitation%}
+<p>It is {{tempobj.precipitation['none'] }} {{tempobj.precipitation_type}} at the moment.</p>
+{%endif%}
+
+{%if tempobj.cloud%}
+<p>There are {{ tempobj.cloud }} clouds in the sky above.</p>
+{%endif%}
+
+{%if tempobj.storm%}
+<p>{{ tempobj.storm |article |capitalize}} is approaching, and will hit {{tempobj.time}}.</p>
+{%endif%}
+
+{% endblock %}

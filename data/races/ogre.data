@@ -1,0 +1,68 @@
+#
+
+LPUSH npc_race ogre
+
+SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
+
+LPUSH ogre_covering skin
+
+
+SET ogre_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH ogre_subrace merrow
+LPUSH ogre_subrace mage
+
+HSET ogre_subrace_description merrow      {"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }
+HSET ogre_subrace_description mage        {"subrace": "Ogre Mage",         "description": "" }
+
+
+
+
+
+
+
+
+ZADD ogre_name_order 50 { "name":"first" }
+ZADD ogre_name_order 100 { "name":"last"}
+
+HSET ogre_name_first  root 100
+HSET ogre_name_first  post 100
+HSET ogre_name_last   root 100
+HSET ogre_name_last   post 100
+
+LPUSH ogre_name_first_root Po
+LPUSH ogre_name_first_root Do
+LPUSH ogre_name_first_root Du
+LPUSH ogre_name_first_root Da
+LPUSH ogre_name_first_root Gu
+LPUSH ogre_name_first_root U
+LPUSH ogre_name_first_root Gha
+LPUSH ogre_name_first_root Go
+LPUSH ogre_name_first_root Gu
+LPUSH ogre_name_first_root Ki
+
+LPUSH ogre_name_first_post sh
+LPUSH ogre_name_first_post k
+LPUSH ogre_name_first_post ap
+LPUSH ogre_name_first_post gan
+LPUSH ogre_name_first_post duk
+LPUSH ogre_name_first_post bel
+LPUSH ogre_name_first_post bal
+        
+LPUSH ogre_name_last_root Bear
+LPUSH ogre_name_last_root Boar
+LPUSH ogre_name_last_root Eagle
+LPUSH ogre_name_last_root Rock
+LPUSH ogre_name_last_root Oak
+LPUSH ogre_name_last_root Ox
+
+LPUSH ogre_name_last_post mane
+LPUSH ogre_name_last_post snout
+LPUSH ogre_name_last_post fang
+LPUSH ogre_name_last_post claw
+LPUSH ogre_name_last_post tooth
+LPUSH ogre_name_last_post root
+LPUSH ogre_name_last_post branch
+LPUSH ogre_name_last_post nut
+        
+    

@@ -1,0 +1,233 @@
+#
+
+LPUSH npc_race orc
+
+SET orc_details        {"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}
+
+LPUSH orc_covering skin
+
+
+
+SET orc_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH orc_subrace deep
+LPUSH orc_subrace mountain 
+LPUSH orc_subrace lowland
+LPUSH orc_subrace babirusa
+LPUSH orc_subrace stone
+LPUSH orc_subrace swamp
+
+HSET orc_subrace_description deep      {"subrace": "Orog (Deep Orc)",     "description": "" }
+HSET orc_subrace_description mountain  {"subrace": "Mountain Orc",         "description": "" }
+HSET orc_subrace_description lowland   {"subrace": "Lowland Orc",     "description": "" }
+HSET orc_subrace_description babirusa  {"subrace": "Babirusa Orc",     "description": "" }
+HSET orc_subrace_description stone     {"subrace": "Stone Orc",         "description": "" }
+HSET orc_subrace_description swamp     {"subrace": "Swamp Orc",         "description": "" }
+
+
+ZADD orc_name_order 50 { "name":"first" }
+ZADD orc_name_order 100 { "name":"last"}
+
+HSET orc_name_first  pre 100
+HSET orc_name_first  root 100
+HSET orc_name_first  post 70
+HSET orc_name_last   root 100
+HSET orc_name_last   post 100
+HSET orc_name_last   trailer 10
+
+
+LPUSH orc_name_first_pre A
+LPUSH orc_name_first_pre Ba
+LPUSH orc_name_first_pre Bi
+LPUSH orc_name_first_pre Bla
+LPUSH orc_name_first_pre Blo
+LPUSH orc_name_first_pre Blu
+LPUSH orc_name_first_pre Bla
+LPUSH orc_name_first_pre Bli
+LPUSH orc_name_first_pre Da
+LPUSH orc_name_first_pre Di
+LPUSH orc_name_first_pre Do
+LPUSH orc_name_first_pre Du
+LPUSH orc_name_first_pre Dra
+LPUSH orc_name_first_pre Dri
+LPUSH orc_name_first_pre Dro
+LPUSH orc_name_first_pre Dru
+LPUSH orc_name_first_pre Ga
+LPUSH orc_name_first_pre Gu
+LPUSH orc_name_first_pre Go
+LPUSH orc_name_first_pre Gra
+LPUSH orc_name_first_pre Gro
+LPUSH orc_name_first_pre Ghu
+LPUSH orc_name_first_pre Gha
+LPUSH orc_name_first_pre Gho
+LPUSH orc_name_first_pre Ghu
+LPUSH orc_name_first_pre Gla
+LPUSH orc_name_first_pre Gli
+LPUSH orc_name_first_pre Glo
+LPUSH orc_name_first_pre Glu
+LPUSH orc_name_first_pre Ha
+LPUSH orc_name_first_pre Hu
+LPUSH orc_name_first_pre Ho
+LPUSH orc_name_first_pre I
+LPUSH orc_name_first_pre Ka
+LPUSH orc_name_first_pre Ku
+LPUSH orc_name_first_pre Ko
+LPUSH orc_name_first_pre Kra
+LPUSH orc_name_first_pre Kro
+LPUSH orc_name_first_pre Khu
+LPUSH orc_name_first_pre Kha
+LPUSH orc_name_first_pre Kho
+LPUSH orc_name_first_pre Khu
+LPUSH orc_name_first_pre Kla
+LPUSH orc_name_first_pre Kli
+LPUSH orc_name_first_pre Klo
+LPUSH orc_name_first_pre Klu
+LPUSH orc_name_first_pre Ma
+LPUSH orc_name_first_pre Mi
+LPUSH orc_name_first_pre Mu
+LPUSH orc_name_first_pre Mo
+LPUSH orc_name_first_pre Mho
+LPUSH orc_name_first_pre Mhu
+LPUSH orc_name_first_pre Na
+LPUSH orc_name_first_pre Nu
+LPUSH orc_name_first_pre No
+LPUSH orc_name_first_pre Ni
+LPUSH orc_name_first_pre Nho
+LPUSH orc_name_first_pre Nhu
+LPUSH orc_name_first_pre O
+LPUSH orc_name_first_pre Ob
+LPUSH orc_name_first_pre Od
+LPUSH orc_name_first_pre Og
+LPUSH orc_name_first_pre Oz
+LPUSH orc_name_first_pre U
+LPUSH orc_name_first_pre Uh
+LPUSH orc_name_first_pre Ra
+LPUSH orc_name_first_pre Ru
+LPUSH orc_name_first_pre Ro
+LPUSH orc_name_first_pre Rra
+LPUSH orc_name_first_pre Rro
+LPUSH orc_name_first_pre Rhu
+LPUSH orc_name_first_pre Rha
+LPUSH orc_name_first_pre Rho
+LPUSH orc_name_first_pre Rhu
+LPUSH orc_name_first_pre Su
+LPUSH orc_name_first_pre So
+LPUSH orc_name_first_pre Sra
+LPUSH orc_name_first_pre Sro
+LPUSH orc_name_first_pre Shu
+LPUSH orc_name_first_pre Sha
+LPUSH orc_name_first_pre Sho
+LPUSH orc_name_first_pre Shu
+LPUSH orc_name_first_pre Ta
+LPUSH orc_name_first_pre Tu
+LPUSH orc_name_first_pre To
+LPUSH orc_name_first_pre Tra
+LPUSH orc_name_first_pre Tro
+LPUSH orc_name_first_pre Thu
+LPUSH orc_name_first_pre Tha
+LPUSH orc_name_first_pre Tho
+LPUSH orc_name_first_pre Thu
+LPUSH orc_name_first_pre Thra
+LPUSH orc_name_first_pre Thro
+LPUSH orc_name_first_pre Thru
+
+LPUSH orc_name_first_pre Za
+LPUSH orc_name_first_pre Zu
+LPUSH orc_name_first_pre Zi
+LPUSH orc_name_first_pre Zo
+LPUSH orc_name_first_pre Zra
+LPUSH orc_name_first_pre Zro
+LPUSH orc_name_first_pre Zhu
+LPUSH orc_name_first_pre Zha
+LPUSH orc_name_first_pre Zho
+LPUSH orc_name_first_pre Zhu
+
+LPUSH orc_name_first_root b
+LPUSH orc_name_first_root bb
+LPUSH orc_name_first_root bd
+LPUSH orc_name_first_root bg
+LPUSH orc_name_first_root dd
+LPUSH orc_name_first_root d
+LPUSH orc_name_first_root g
+LPUSH orc_name_first_root gg
+LPUSH orc_name_first_root zg
+LPUSH orc_name_first_root gb
+LPUSH orc_name_first_root gl
+LPUSH orc_name_first_root gt
+LPUSH orc_name_first_root l
+LPUSH orc_name_first_root k
+LPUSH orc_name_first_root m
+LPUSH orc_name_first_root mm
+LPUSH orc_name_first_root n
+LPUSH orc_name_first_root r
+LPUSH orc_name_first_root s
+LPUSH orc_name_first_root sh
+LPUSH orc_name_first_root tg
+LPUSH orc_name_first_root tz
+LPUSH orc_name_first_root z
+
+LPUSH orc_name_first_post ab
+LPUSH orc_name_first_post agh
+LPUSH orc_name_first_post ag
+LPUSH orc_name_first_post ah
+LPUSH orc_name_first_post akh
+LPUSH orc_name_first_post ak
+LPUSH orc_name_first_post a
+LPUSH orc_name_first_post arg
+LPUSH orc_name_first_post arz
+LPUSH orc_name_first_post ash
+LPUSH orc_name_first_post ath
+LPUSH orc_name_first_post bub
+LPUSH orc_name_first_post ig
+LPUSH orc_name_first_post ob
+LPUSH orc_name_first_post ogh
+LPUSH orc_name_first_post og
+LPUSH orc_name_first_post ok
+LPUSH orc_name_first_post org
+LPUSH orc_name_first_post or
+LPUSH orc_name_first_post osh
+LPUSH orc_name_first_post oz
+LPUSH orc_name_first_post rog
+LPUSH orc_name_first_post sh
+LPUSH orc_name_first_post ub
+LPUSH orc_name_first_post ud
+LPUSH orc_name_first_post ugh
+LPUSH orc_name_first_post ug
+LPUSH orc_name_first_post uh
+LPUSH orc_name_first_post uk
+LPUSH orc_name_first_post um
+LPUSH orc_name_first_post unk
+LPUSH orc_name_first_post u
+LPUSH orc_name_first_post urg
+LPUSH orc_name_first_post urz
+LPUSH orc_name_first_post ush
+LPUSH orc_name_first_post ut
+LPUSH orc_name_first_post uul
+LPUSH orc_name_first_post uzg
+LPUSH orc_name_first_post zog
+
+LPUSH orc_name_last_root Mok
+LPUSH orc_name_last_root Skull
+LPUSH orc_name_last_root Bone
+LPUSH orc_name_last_root Head
+LPUSH orc_name_last_root Neck
+LPUSH orc_name_last_root Back
+LPUSH orc_name_last_root Leg
+LPUSH orc_name_last_root Arm
+
+LPUSH orc_name_last_post nor
+LPUSH orc_name_last_post cracker
+LPUSH orc_name_last_post breaker
+LPUSH orc_name_last_post snapper
+LPUSH orc_name_last_post crusher
+LPUSH orc_name_last_post killer
+LPUSH orc_name_last_post ripper
+
+LPUSH orc_name_last_trailer The Red
+LPUSH orc_name_last_trailer The Black
+LPUSH orc_name_last_trailer The Gray
+LPUSH orc_name_last_trailer The Cruel
+LPUSH orc_name_last_trailer The Brave
+LPUSH orc_name_last_trailer The Strong
+        
+    

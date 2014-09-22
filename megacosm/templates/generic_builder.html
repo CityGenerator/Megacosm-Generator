@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}Create {{name|title|article}}{% endblock %}
+{% block head %}
+  {{ super() }}
+        <script>
+            function disable_unused(){
+                var elem=document.getElementById('genform').elements
+                console.log(elem)
+                for(var i = 0; i < elem.length; i++){
+                    if (elem[i].value == "" ){
+                        elem[i].disabled=true
+                        console.log('disabled!')
+                    }
+                }
+                return 1;
+            }
+            window.onpageshow = function(){
+                // added so firefox enables things if the back button is hit. stupid firefox
+                var elem=document.getElementById('genform').elements
+                for(var i = 0; i < elem.length; i++){
+                    if (elem[i].value == "" ){
+                        elem[i].disabled=false
+                    }
+                }
+                return 1;
+            }
+        </script>
+
+{% endblock %}
+{% block content %}
+
+        <h1>Lets build {{name|title|article}}</h1>
+        <form action="/{{name}}" id="genform">
+
+
+        <table>
+
+            {% for param in plist|sort %}
+            <tr>
+                <td>{{param|capitalize}} </td>
+                <td>
+                    <select name="{{name}}_{{param}}">
+                        <option value=""></option>
+                        {% for fieldname in plist[param] %}
+                        <option value="{{ loop.index0 }}">{{fieldname }} </option>
+                        {% endfor %}
+                    <select>
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% for param in pstring|sort %}
+            <tr>
+                <td>{{param|capitalize}} </td>
+                <td>
+                    <input type=text name="{{name}}_{{param}}" value='{{pstring[param]}}'/>
+
+                </td>
+            </tr>
+            {% endfor %}
+
+            {% for param in pset|sort %}
+            <tr>
+                <td>{{param|capitalize}} </td>
+                <td>
+                    <select name="{{name}}_{{param}}_roll">
+                        <option value=""></option>
+                        {% for fieldname in pset[param] %}
+                        <option value="{{ fieldname['score']}}">{{fieldname['name'] }} </option>
+                        {% endfor %}
+                    <select>
+                </td>
+            </tr>
+            {% endfor %}
+
+
+        </table>
+            <input onclick="disable_unused();" type="submit" value="build!"></input>
+        </form>
+{% endblock %}
+
+
+
+
+
+
+
+
+

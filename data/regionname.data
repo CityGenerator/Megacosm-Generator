@@ -1,0 +1,360 @@
+
+
+SET   name_regiontitle_chance 22
+LPUSH name_regiontitle East
+LPUSH name_regiontitle West
+LPUSH name_regiontitle North
+LPUSH name_regiontitle South
+LPUSH name_regiontitle Lower
+LPUSH name_regiontitle Upper
+LPUSH name_regiontitle New
+
+LPUSH name_regionpre Af
+LPUSH name_regionpre Alb
+LPUSH name_regionpre Lom
+
+LPUSH name_regionroot ad
+LPUSH name_regionroot am
+LPUSH name_regionroot bar
+
+SET   name_regionpost_chance 40
+LPUSH name_regionpost a
+LPUSH name_regionpost ad
+LPUSH name_regionpost ain
+LPUSH name_regionpost dy
+
+
+SET   name_regiontrailer_chance 50
+LPUSH name_regiontrailer District
+LPUSH name_regiontrailer Province
+LPUSH name_regiontrailer Region
+LPUSH name_regiontrailer Territory
+
+
+
+#Abia
+#Abruzzo
+#acre
+#Adamawa
+#Aguascalientes
+#Akwa
+#Alabama
+#alagoas
+#Alaska
+#Alberta
+#Alsace
+#Amacuro
+#amapa
+#amazonas
+#Amazonas
+#Anambra
+#Andalusia
+#Andhra
+#Anzoátegui
+#Apulia
+#Apure
+#Aquitaine
+#Aragon
+#Aragua
+#Arizona
+#Arkansas
+#Arunachal
+#Assam
+#Asturias
+#Auvergne
+#Ayacucho
+#Baden-Württemberg
+#Bahia
+#Baja
+#Balearic Islands
+#Barcelona
+#Barinas
+#Barquisimeto
+#Basilicata
+#Basque Country
+#Bauchi
+#Bavaria
+#Bayelsa
+#Benue
+#Berlin
+#Bihar
+#Bolívar
+#Borno
+#Brandenburg
+#Bremen
+#British Columbia
+#Brittany
+#Burgundy
+#Calabria
+#California
+#Campania
+#Campeche
+#Canary Islands
+#Cantabria
+#Carabobo
+#Castilla-La Mancha
+#Castilla y Leon
+#Catalonia
+#Ceará
+#Centre
+#Champagne-Ardenne
+#Chhattisgarh
+#Chiapas
+#Chihuahua
+#Ciudad
+#Coahuila
+#Coat
+#Colima
+#Colorado
+#Connecticut
+#Coro
+#Corsica
+#Delaware
+#Delta
+#den-Württemberg
+#Distrito
+#Durango
+#Ebonyi
+#Edo
+#Ekiti
+#Emilia-Romagna
+#Enugu
+#Escudo
+#ESCUDO
+#Espírito
+#Extremadura
+#Falcón
+#Fernando
+#Florida
+#Franche-Comté
+#Galicia
+#Georgia
+#Giulia
+#Goa
+#Goiás
+#Gombe
+#Greater Poland
+#Guadeloupe
+#Guanajuato
+#Guárico
+#Guayana
+#Guerrero
+#Guiana
+#Gujarat
+#Hamburg
+#Haryana
+#Hawaii
+#Hesse
+#Hidalgo
+#Himachal
+#Ibom
+#Idaho
+#Ignacio
+#Île-de-France
+#Illinois
+#Imo
+#Indiana
+#Iowa
+#Italian
+#Jalisco
+#Jammu
+#jervis
+#Jharkhand
+#Jigawa
+#Johor
+#Juan
+#Kaduna
+#Kano
+#Kansas
+#Karnataka
+#Katsina
+#Kebbi
+#Kedah
+#Kelantan
+#Kentucky[C]
+#Kerala
+#Kogi
+#Kuyavia
+#Kwara
+#Lagos
+#Landessymbol
+#Languedoc-Roussillon
+#Lara
+#La Rioja
+#Lazio
+#Lesser Poland
+#Liguria
+#Limousin
+#Lorraine
+#Los
+#Louisiana
+#Lower
+#Lusatia
+#Madhya
+#Madrid
+#Maharashtra
+#Maine
+#Malacca
+#Manipur
+#Manitoba
+#Maracay
+#Maranhão
+#Marche
+#Martinique
+#Maryland
+#Masovia
+#Massachusetts[D]
+#Mato
+#Mecklenburg-Western
+#Meghalaya
+#Mérida
+#Messina
+#México
+#Michigan
+#Michoacán
+#Midi-Pyrénées
+#Minas
+#Minnesota
+#Miranda
+#Mississippi
+#Missouri
+#Mizoram
+#Molise
+#Monagas
+#Montana
+#Morelos
+#Morros
+#Murcia
+#Nagaland
+#Nasarawa
+#Navarra
+#Nayarit
+#Nebraska
+#Negeri
+#Nevada
+#New Brunswick
+#Newfoundland and Labrador
+#New Hampshire
+#New Jersey
+#New Mexico
+#New York
+#Niger
+#Nord-Pas-de-Calais
+#norfolk
+#North Carolina
+#North Dakota
+#Northwest Territories
+#Nova Scotia
+#Nueva
+#Nuevo
+#Nunavut
+#Oaxaca
+#Odisha
+#Ogun
+#Ohio
+#Oklahoma
+#Ondo
+#Ontario
+#Oregon
+#Osun
+#Oyo
+#Pahang
+#Palermo
+#Pará
+#Paraíba
+#Paraná
+#Pays-de-la-Loire
+#Penang
+#Pennsylvania[E]
+#Perak
+#Perlis
+#Pernambuco
+#Piauí
+#Picardy
+#Piedmont
+#Plateau
+#Podlaskie
+#Poitou-Charentes
+#Pomerania
+#Pomerelia
+#Portuguesa
+#Prince Edward Island
+#Provence-Alpes-Côte
+#Prussia
+#Puebla
+#Puerto
+#Punjab
+#Quebec
+#queensland
+#Querétaro
+#Quintana
+#Rajasthan
+#Red Ruthenia
+#Réunion
+#Rhineland-Palatinate
+#Rhine-Westphalia
+#Rhode Island[F]
+#Rhône-Alpes
+#Rondônia
+#Roraima
+#Sabah
+#San
+#Santa
+#São
+#Sarawak
+#Saskatchewan
+#Saxony
+#Selangor
+#Sergipe
+#Sicilian
+#Sikkim
+#Silesia
+#Sinaloa
+#Sokoto
+#Sonora
+#South Carolina
+#South Dakota
+#Southern Podlasie
+#Tabasco
+#Táchira
+#Tamaulipas
+#Tamil
+#Taraba
+#tasmania
+#Tennessee
+#Terengganu
+#Texas
+#Tlaxcala
+#Tocantins
+#Tripura
+#Trujillo
+#Tucupita
+#Tuscany
+#Tyrol
+#Umbria
+#Upper
+#Utah
+#Uttar
+#Uttarakhand
+#Valencia
+#Valencian Community
+#Veneto
+#Veracruz
+#Vermont
+#victoria
+#Virginia[G]
+#wales
+#Wappen
+#Washington
+#West
+#Westphalia
+#West Virginia
+#Wisconsin
+#Wyoming
+#Yobe
+#Yucatán
+#Yukon
+#Zacatecas
+#Zamfara
+#Zulia
+#

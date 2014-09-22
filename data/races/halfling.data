@@ -1,0 +1,273 @@
+#
+
+LPUSH npc_race halfling
+
+SET halfling_details   {"name": "Halfling",   "size": "small",   "description": "being inquisitive and occasionally compulsive" }
+
+LPUSH halfling_covering skin
+
+
+SET halfling_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH halfling_subrace hairfoot
+LPUSH halfling_subrace tallfellow
+LPUSH halfling_subrace stout
+LPUSH halfling_subrace polar
+LPUSH halfling_subrace lightfoot
+LPUSH halfling_subrace vile
+LPUSH halfling_subrace strongheart
+LPUSH halfling_subrace kender
+LPUSH halfling_subrace deep
+LPUSH halfling_subrace pygmy
+LPUSH halfling_subrace stoneborn
+LPUSH halfling_subrace waterborn
+LPUSH halfling_subrace dune
+
+HSET halfling_subrace_description hairfoot    {"subrace": "Hairfoot Halfling",      "description": "" }
+HSET halfling_subrace_description tallfellow  {"subrace": "Tallfellow Halfling",    "description": "" }
+HSET halfling_subrace_description stout       {"subrace": "Stout Halfling",         "description": "" }
+HSET halfling_subrace_description polar       {"subrace": "Polar Halfling",         "description": "" }
+HSET halfling_subrace_description lightfoot   {"subrace": "Lightfoot Halfling",     "description": "" }
+HSET halfling_subrace_description vile        {"subrace": "Vile Halfling",          "description": "" }
+HSET halfling_subrace_description strongheart {"subrace": "Strongheart Halfling",   "description": "" }
+HSET halfling_subrace_description kender      {"subrace": "Kender",                 "description": "" }
+HSET halfling_subrace_description deep        {"subrace": "Deep Halfling",          "description": "" }
+HSET halfling_subrace_description pygmy       {"subrace": "Pygmy Halfling",         "description": "" }
+HSET halfling_subrace_description stoneborn   {"subrace": "Stoneborn Halfling",     "description": "" }
+HSET halfling_subrace_description waterborn   {"subrace": "Waterborn Halfling",     "description": "" }
+HSET halfling_subrace_description dune        {"subrace": "Dune Halfling",          "description": "" }
+
+
+ZADD halfling_name_order 50 { "name":"first" }
+ZADD halfling_name_order 100 { "name":"last"}
+
+HSET halfling_name_first  pre  100
+HSET halfling_name_first  root 50
+HSET halfling_name_first  post 50
+HSET halfling_name_last   pre  100
+HSET halfling_name_last   post 100
+
+LPUSH halfling_name_first_pre Ada
+LPUSH halfling_name_first_pre Ama
+LPUSH halfling_name_first_pre Be
+LPUSH halfling_name_first_pre Co
+LPUSH halfling_name_first_pre El
+LPUSH halfling_name_first_pre Fal
+LPUSH halfling_name_first_pre Hil
+LPUSH halfling_name_first_pre Per
+LPUSH halfling_name_first_pre Po
+LPUSH halfling_name_first_pre Ser
+LPUSH halfling_name_first_pre Tol
+LPUSH halfling_name_first_pre Mal
+
+LPUSH halfling_name_first_root de
+LPUSH halfling_name_first_root di
+LPUSH halfling_name_first_root mai
+LPUSH halfling_name_first_root bard
+LPUSH halfling_name_first_root co
+LPUSH halfling_name_first_root mira
+LPUSH halfling_name_first_root el
+LPUSH halfling_name_first_root cob
+LPUSH halfling_name_first_root grim
+LPUSH halfling_name_first_root gold
+LPUSH halfling_name_first_root born
+LPUSH halfling_name_first_root grin
+LPUSH halfling_name_first_root nell
+LPUSH halfling_name_first_root ina
+LPUSH halfling_name_first_root il
+LPUSH halfling_name_first_post ly
+LPUSH halfling_name_first_post ine
+LPUSH halfling_name_first_post da
+LPUSH halfling_name_first_post do
+LPUSH halfling_name_first_post ne
+        
+LPUSH halfling_name_last_pre Amber
+LPUSH halfling_name_last_pre Ash
+LPUSH halfling_name_last_pre Banda
+LPUSH halfling_name_last_pre Boffin
+LPUSH halfling_name_last_pre Bolger
+LPUSH halfling_name_last_pre Brace
+LPUSH halfling_name_last_pre Brown
+LPUSH halfling_name_last_pre Brush
+LPUSH halfling_name_last_pre Bull
+LPUSH halfling_name_last_pre Bunce
+LPUSH halfling_name_last_pre Burrows
+LPUSH halfling_name_last_pre Chubb
+LPUSH halfling_name_last_pre Cold
+LPUSH halfling_name_last_pre Cotton
+LPUSH halfling_name_last_pre Crazy
+LPUSH halfling_name_last_pre Curly
+LPUSH halfling_name_last_pre Dale
+LPUSH halfling_name_last_pre Dud
+LPUSH halfling_name_last_pre Earth
+LPUSH halfling_name_last_pre Far
+LPUSH halfling_name_last_pre Fast
+LPUSH halfling_name_last_pre Fat
+LPUSH halfling_name_last_pre Fire
+LPUSH halfling_name_last_pre Flow
+LPUSH halfling_name_last_pre Forest
+LPUSH halfling_name_last_pre Free
+LPUSH halfling_name_last_pre Gam
+LPUSH halfling_name_last_pre Gardner
+LPUSH halfling_name_last_pre Glitter
+LPUSH halfling_name_last_pre Good
+LPUSH halfling_name_last_pre Great
+LPUSH halfling_name_last_pre Green
+LPUSH halfling_name_last_pre Grub
+LPUSH halfling_name_last_pre Hairy
+LPUSH halfling_name_last_pre Ham
+LPUSH halfling_name_last_pre Healthy
+LPUSH halfling_name_last_pre Heather
+LPUSH halfling_name_last_pre High
+LPUSH halfling_name_last_pre Hill
+LPUSH halfling_name_last_pre Home
+LPUSH halfling_name_last_pre Honor
+LPUSH halfling_name_last_pre Horn
+LPUSH halfling_name_last_pre Hot
+LPUSH halfling_name_last_pre Jalli
+LPUSH halfling_name_last_pre Kaese
+LPUSH halfling_name_last_pre Kalli
+LPUSH halfling_name_last_pre Laughing
+LPUSH halfling_name_last_pre Lea
+LPUSH halfling_name_last_pre Lightning
+LPUSH halfling_name_last_pre Lin
+LPUSH halfling_name_last_pre Little
+LPUSH halfling_name_last_pre Many
+LPUSH halfling_name_last_pre Mar
+LPUSH halfling_name_last_pre Meli
+LPUSH halfling_name_last_pre Mill
+LPUSH halfling_name_last_pre Monta
+LPUSH halfling_name_last_pre Moon
+LPUSH halfling_name_last_pre New
+LPUSH halfling_name_last_pre Nimble
+LPUSH halfling_name_last_pre Old
+LPUSH halfling_name_last_pre Or
+LPUSH halfling_name_last_pre Ost
+LPUSH halfling_name_last_pre Over
+LPUSH halfling_name_last_pre Plump
+LPUSH halfling_name_last_pre Pretty
+LPUSH halfling_name_last_pre Quet
+LPUSH halfling_name_last_pre Quick
+LPUSH halfling_name_last_pre Rain
+LPUSH halfling_name_last_pre Road
+LPUSH halfling_name_last_pre Running
+LPUSH halfling_name_last_pre Scatter
+LPUSH halfling_name_last_pre Shadow
+LPUSH halfling_name_last_pre Short
+LPUSH halfling_name_last_pre Silver
+LPUSH halfling_name_last_pre Simple
+LPUSH halfling_name_last_pre Sire
+LPUSH halfling_name_last_pre Sky
+LPUSH halfling_name_last_pre Slow
+LPUSH halfling_name_last_pre Sly
+LPUSH halfling_name_last_pre Smooth
+LPUSH halfling_name_last_pre Spring
+LPUSH halfling_name_last_pre Sprout
+LPUSH halfling_name_last_pre Stout
+LPUSH halfling_name_last_pre Sun
+LPUSH halfling_name_last_pre Swift
+LPUSH halfling_name_last_pre Tall
+LPUSH halfling_name_last_pre Tal
+LPUSH halfling_name_last_pre Tea
+LPUSH halfling_name_last_pre Thorn
+LPUSH halfling_name_last_pre Tigh
+LPUSH halfling_name_last_pre Toss
+LPUSH halfling_name_last_pre Trill
+LPUSH halfling_name_last_pre Under
+LPUSH halfling_name_last_pre Warm
+LPUSH halfling_name_last_pre Water
+LPUSH halfling_name_last_pre Weather
+LPUSH halfling_name_last_pre Wet
+LPUSH halfling_name_last_pre Wild
+            
+            
+LPUSH halfling_name_last_post ale
+LPUSH halfling_name_last_post arrow
+LPUSH halfling_name_last_post barrel
+LPUSH halfling_name_last_post bee
+LPUSH halfling_name_last_post blower
+LPUSH halfling_name_last_post body
+LPUSH halfling_name_last_post bones
+LPUSH halfling_name_last_post bot
+LPUSH halfling_name_last_post bottle
+LPUSH halfling_name_last_post bottom
+LPUSH halfling_name_last_post bough
+LPUSH halfling_name_last_post bread
+LPUSH halfling_name_last_post bridge
+LPUSH halfling_name_last_post brook
+LPUSH halfling_name_last_post brother
+LPUSH halfling_name_last_post burrow
+LPUSH halfling_name_last_post caller
+LPUSH halfling_name_last_post cloak
+LPUSH halfling_name_last_post cobble
+LPUSH halfling_name_last_post den
+LPUSH halfling_name_last_post digger
+LPUSH halfling_name_last_post drum
+LPUSH halfling_name_last_post eye
+LPUSH halfling_name_last_post fellow
+LPUSH halfling_name_last_post field
+LPUSH halfling_name_last_post fingers
+LPUSH halfling_name_last_post flower
+LPUSH halfling_name_last_post foot
+LPUSH halfling_name_last_post fox
+LPUSH halfling_name_last_post fur
+LPUSH halfling_name_last_post gage
+LPUSH halfling_name_last_post galow
+LPUSH halfling_name_last_post gather
+LPUSH halfling_name_last_post ghost
+LPUSH halfling_name_last_post girdle
+LPUSH halfling_name_last_post goat
+LPUSH halfling_name_last_post gold
+LPUSH halfling_name_last_post grass
+LPUSH halfling_name_last_post gulas
+LPUSH halfling_name_last_post hand
+LPUSH halfling_name_last_post head
+LPUSH halfling_name_last_post hearth
+LPUSH halfling_name_last_post heart
+LPUSH halfling_name_last_post hill
+LPUSH halfling_name_last_post iciny
+LPUSH halfling_name_last_post jay
+LPUSH halfling_name_last_post lady
+LPUSH halfling_name_last_post leaf
+LPUSH halfling_name_last_post letters
+LPUSH halfling_name_last_post ley
+LPUSH halfling_name_last_post lock
+LPUSH halfling_name_last_post lot
+LPUSH halfling_name_last_post maker
+LPUSH halfling_name_last_post man
+LPUSH halfling_name_last_post map
+LPUSH halfling_name_last_post midas
+LPUSH halfling_name_last_post midge
+LPUSH halfling_name_last_post mind
+LPUSH halfling_name_last_post one
+LPUSH halfling_name_last_post pipe
+LPUSH halfling_name_last_post roarer
+LPUSH halfling_name_last_post sall
+LPUSH halfling_name_last_post shadow
+LPUSH halfling_name_last_post shaker
+LPUSH halfling_name_last_post sister
+LPUSH halfling_name_last_post skin
+LPUSH halfling_name_last_post sleep
+LPUSH halfling_name_last_post son
+LPUSH halfling_name_last_post span
+LPUSH halfling_name_last_post stick
+LPUSH halfling_name_last_post stoat
+LPUSH halfling_name_last_post swan
+LPUSH halfling_name_last_post talker
+LPUSH halfling_name_last_post tan
+LPUSH halfling_name_last_post taunt
+LPUSH halfling_name_last_post tender
+LPUSH halfling_name_last_post toe
+LPUSH halfling_name_last_post topple
+LPUSH halfling_name_last_post tory
+LPUSH halfling_name_last_post wanderer
+LPUSH halfling_name_last_post ward
+LPUSH halfling_name_last_post wart
+LPUSH halfling_name_last_post wax
+LPUSH halfling_name_last_post wick
+LPUSH halfling_name_last_post will
+LPUSH halfling_name_last_post wind
+LPUSH halfling_name_last_post wit
+LPUSH halfling_name_last_post wolf
+        
+    

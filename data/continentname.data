@@ -1,0 +1,30 @@
+# what
+
+SET   name_continenttitle_chance 10
+LPUSH name_continenttitle North
+LPUSH name_continenttitle South
+LPUSH name_continenttitle East
+LPUSH name_continenttitle West
+
+LPUSH name_continentpre As
+LPUSH name_continentpre Eur
+LPUSH name_continentpre An
+LPUSH name_continentpre Del
+LPUSH name_continentpre Mon
+LPUSH name_continentpre Na
+LPUSH name_continentpre Ko
+
+LPUSH name_continentroot sar
+LPUSH name_continentroot gar
+LPUSH name_continentroot bel
+LPUSH name_continentroot por
+LPUSH name_continentroot ama
+LPUSH name_continentroot lax
+
+SET   name_continentpost_chance 30
+LPUSH name_continentpost ica
+LPUSH name_continentpost iv
+LPUSH name_continentpost ek
+LPUSH name_continentpost ar
+
+

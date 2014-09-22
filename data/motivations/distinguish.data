@@ -1,0 +1,8 @@
+# Bob is motivated
+LPUSH motivationdistinguish_text to distinguish himself as a {{params.npc.profession}}
+LPUSH motivationdistinguish_text to distinguish himself as a {{params.npc.race}}
+LPUSH motivationdistinguish_text to distinguish himself as a good person
+LPUSH motivationdistinguish_text by fame
+LPUSH motivationdistinguish_text to become famous
+LPUSH motivationdistinguish_text to become infamous
+

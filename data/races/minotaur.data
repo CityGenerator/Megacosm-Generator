@@ -1,0 +1,316 @@
+#
+LPUSH npc_race minotaur
+
+SET minotaur_details   {"name": "Minotaur",   "size": "large",   "description": "their strength and pride"}
+
+LPUSH minotaur_covering fur
+
+
+SET minotaur_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH minotaur_subrace taurine
+LPUSH minotaur_subrace bovan
+LPUSH minotaur_subrace nandi
+LPUSH minotaur_subrace auroch
+LPUSH minotaur_subrace oxine
+LPUSH minotaur_subrace brahman
+LPUSH minotaur_subrace turin
+LPUSH minotaur_subrace kaunas
+
+
+HSET minotaur_subrace_description taurine    {"subrace": "Taurine Minotaur",   "description": "" }
+HSET minotaur_subrace_description bovan      {"subrace": "Bovan Minotaur",     "description": "thugs" }
+HSET minotaur_subrace_description nandi      {"subrace": "Nandi Minotaur",     "description": "guardians and lawkeepers" }
+HSET minotaur_subrace_description auroch     {"subrace": "Auroch Minotaur",    "description": "ancient" }
+HSET minotaur_subrace_description oxine      {"subrace": "Oxine Minotaur",     "description": "large and stupid" }
+HSET minotaur_subrace_description brahman    {"subrace": "Brahman Minotaur",   "description": "long eared and patient" }
+HSET minotaur_subrace_description turin      {"subrace": "Turin Minotaur",     "description": "merchants and traders" }
+HSET minotaur_subrace_description kaunas     {"subrace": "Kaunas Minotaur",    "description": "long horned and wise" }
+
+
+
+
+ZADD minotaur_name_order 50 { "name":"first" }
+ZADD minotaur_name_order 100 { "name":"last"}
+
+HSET minotaur_name_first  pre 100 
+HSET minotaur_name_first  root 100
+HSET minotaur_name_last   pre 100
+HSET minotaur_name_last   root 100
+
+
+LPUSH minotaur_name_first_pre Ag
+LPUSH minotaur_name_first_pre Ali
+LPUSH minotaur_name_first_pre Ap
+LPUSH minotaur_name_first_pre Ar
+LPUSH minotaur_name_first_pre Ar
+LPUSH minotaur_name_first_pre Aster
+LPUSH minotaur_name_first_pre Aya
+LPUSH minotaur_name_first_pre Az
+LPUSH minotaur_name_first_pre Bai
+LPUSH minotaur_name_first_pre Bas
+LPUSH minotaur_name_first_pre Beau
+LPUSH minotaur_name_first_pre Beli
+LPUSH minotaur_name_first_pre Beru
+LPUSH minotaur_name_first_pre Bes
+LPUSH minotaur_name_first_pre Bjork
+LPUSH minotaur_name_first_pre Bob
+LPUSH minotaur_name_first_pre Boo
+LPUSH minotaur_name_first_pre Bo
+LPUSH minotaur_name_first_pre Bro
+LPUSH minotaur_name_first_pre Bru
+LPUSH minotaur_name_first_pre Burun
+LPUSH minotaur_name_first_pre Byle
+LPUSH minotaur_name_first_pre Cair
+LPUSH minotaur_name_first_pre Cali
+LPUSH minotaur_name_first_pre Cav
+LPUSH minotaur_name_first_pre Ceri
+LPUSH minotaur_name_first_pre Cin
+LPUSH minotaur_name_first_pre Ciri
+LPUSH minotaur_name_first_pre Clap
+LPUSH minotaur_name_first_pre Cod
+LPUSH minotaur_name_first_pre Cyr
+LPUSH minotaur_name_first_pre Dag
+LPUSH minotaur_name_first_pre Dast
+LPUSH minotaur_name_first_pre Del
+LPUSH minotaur_name_first_pre Delom
+LPUSH minotaur_name_first_pre Duu
+LPUSH minotaur_name_first_pre Edd
+LPUSH minotaur_name_first_pre Ela
+LPUSH minotaur_name_first_pre Erin
+LPUSH minotaur_name_first_pre Este
+LPUSH minotaur_name_first_pre Ferdi
+LPUSH minotaur_name_first_pre Flia
+LPUSH minotaur_name_first_pre Foos
+LPUSH minotaur_name_first_pre Fosh
+LPUSH minotaur_name_first_pre Gald
+LPUSH minotaur_name_first_pre Ganthi
+LPUSH minotaur_name_first_pre Gara
+LPUSH minotaur_name_first_pre Ga
+LPUSH minotaur_name_first_pre Genlon
+LPUSH minotaur_name_first_pre Gill
+LPUSH minotaur_name_first_pre Goe
+LPUSH minotaur_name_first_pre Goh
+LPUSH minotaur_name_first_pre Gor
+LPUSH minotaur_name_first_pre Grenda
+LPUSH minotaur_name_first_pre Halfa
+LPUSH minotaur_name_first_pre Ham
+LPUSH minotaur_name_first_pre Hath
+LPUSH minotaur_name_first_pre Hecari
+LPUSH minotaur_name_first_pre Hela
+LPUSH minotaur_name_first_pre Hes
+LPUSH minotaur_name_first_pre Hru
+LPUSH minotaur_name_first_pre Il
+LPUSH minotaur_name_first_pre Jak
+LPUSH minotaur_name_first_pre Jed
+LPUSH minotaur_name_first_pre Jem
+LPUSH minotaur_name_first_pre Kar
+LPUSH minotaur_name_first_pre Keel
+LPUSH minotaur_name_first_pre Klar
+LPUSH minotaur_name_first_pre Kuon
+LPUSH minotaur_name_first_pre Kyr
+LPUSH minotaur_name_first_pre Loa
+LPUSH minotaur_name_first_pre Loo
+LPUSH minotaur_name_first_pre Maga
+LPUSH minotaur_name_first_pre Mar
+LPUSH minotaur_name_first_pre Mer
+LPUSH minotaur_name_first_pre Min
+LPUSH minotaur_name_first_pre Mog
+LPUSH minotaur_name_first_pre Mor
+LPUSH minotaur_name_first_pre Mul
+LPUSH minotaur_name_first_pre Noost
+LPUSH minotaur_name_first_pre Oest
+LPUSH minotaur_name_first_pre Per
+LPUSH minotaur_name_first_pre Pod
+LPUSH minotaur_name_first_pre Raas
+LPUSH minotaur_name_first_pre Rin
+LPUSH minotaur_name_first_pre Sar
+LPUSH minotaur_name_first_pre Sees
+LPUSH minotaur_name_first_pre Sek
+LPUSH minotaur_name_first_pre Ser
+LPUSH minotaur_name_first_pre She
+LPUSH minotaur_name_first_pre Sik
+LPUSH minotaur_name_first_pre Tar
+LPUSH minotaur_name_first_pre Taur
+LPUSH minotaur_name_first_pre Tav
+LPUSH minotaur_name_first_pre Tek
+LPUSH minotaur_name_first_pre Tel
+LPUSH minotaur_name_first_pre Ter
+LPUSH minotaur_name_first_pre Thar
+LPUSH minotaur_name_first_pre The
+LPUSH minotaur_name_first_pre Toh
+LPUSH minotaur_name_first_pre Tosh
+LPUSH minotaur_name_first_pre Tur
+LPUSH minotaur_name_first_pre Uov
+LPUSH minotaur_name_first_pre Weo
+LPUSH minotaur_name_first_pre Xain
+LPUSH minotaur_name_first_pre Zurg
+
+LPUSH minotaur_name_first_root a
+LPUSH minotaur_name_first_root al
+LPUSH minotaur_name_first_root alia
+LPUSH minotaur_name_first_root an
+LPUSH minotaur_name_first_root ana
+LPUSH minotaur_name_first_root anu
+LPUSH minotaur_name_first_root ara
+LPUSH minotaur_name_first_root as
+LPUSH minotaur_name_first_root ban
+LPUSH minotaur_name_first_root dar
+LPUSH minotaur_name_first_root dek
+LPUSH minotaur_name_first_root der
+LPUSH minotaur_name_first_root dol
+LPUSH minotaur_name_first_root don
+LPUSH minotaur_name_first_root dra
+LPUSH minotaur_name_first_root du
+LPUSH minotaur_name_first_root er
+LPUSH minotaur_name_first_root eras
+LPUSH minotaur_name_first_root est
+LPUSH minotaur_name_first_root fort
+LPUSH minotaur_name_first_root ga
+LPUSH minotaur_name_first_root gani
+LPUSH minotaur_name_first_root gas
+LPUSH minotaur_name_first_root go
+LPUSH minotaur_name_first_root ia
+LPUSH minotaur_name_first_root iki
+LPUSH minotaur_name_first_root ina
+LPUSH minotaur_name_first_root inand
+LPUSH minotaur_name_first_root ion
+LPUSH minotaur_name_first_root ios
+LPUSH minotaur_name_first_root ith
+LPUSH minotaur_name_first_root ius
+LPUSH minotaur_name_first_root killian
+LPUSH minotaur_name_first_root laca
+LPUSH minotaur_name_first_root leana
+LPUSH minotaur_name_first_root li
+LPUSH minotaur_name_first_root lia
+LPUSH minotaur_name_first_root Loa
+LPUSH minotaur_name_first_root ma
+LPUSH minotaur_name_first_root main
+LPUSH minotaur_name_first_root max
+LPUSH minotaur_name_first_root more
+LPUSH minotaur_name_first_root n
+LPUSH minotaur_name_first_root nas
+LPUSH minotaur_name_first_root ne
+LPUSH minotaur_name_first_root nic
+LPUSH minotaur_name_first_root norgath
+LPUSH minotaur_name_first_root nus
+LPUSH minotaur_name_first_root o
+LPUSH minotaur_name_first_root ok
+LPUSH minotaur_name_first_root on
+LPUSH minotaur_name_first_root oren
+LPUSH minotaur_name_first_root ose
+LPUSH minotaur_name_first_root ra
+LPUSH minotaur_name_first_root rath
+LPUSH minotaur_name_first_root rell
+LPUSH minotaur_name_first_root rian
+LPUSH minotaur_name_first_root ris
+LPUSH minotaur_name_first_root ron
+LPUSH minotaur_name_first_root ros
+LPUSH minotaur_name_first_root ru
+LPUSH minotaur_name_first_root run
+LPUSH minotaur_name_first_root rus
+LPUSH minotaur_name_first_root sey
+LPUSH minotaur_name_first_root sha
+LPUSH minotaur_name_first_root sil
+LPUSH minotaur_name_first_root soe
+LPUSH minotaur_name_first_root star
+LPUSH minotaur_name_first_root ta
+LPUSH minotaur_name_first_root tek
+LPUSH minotaur_name_first_root tha
+LPUSH minotaur_name_first_root tmos
+LPUSH minotaur_name_first_root toron
+LPUSH minotaur_name_first_root tra
+LPUSH minotaur_name_first_root trah
+LPUSH minotaur_name_first_root tred
+LPUSH minotaur_name_first_root ula
+LPUSH minotaur_name_first_root ule
+LPUSH minotaur_name_first_root un
+LPUSH minotaur_name_first_root una
+LPUSH minotaur_name_first_root urg
+LPUSH minotaur_name_first_root uri
+LPUSH minotaur_name_first_root us
+LPUSH minotaur_name_first_root uul
+LPUSH minotaur_name_first_root verani
+LPUSH minotaur_name_first_root yes
+
+
+LPUSH minotaur_name_last_pre Armi
+LPUSH minotaur_name_last_pre Ath
+LPUSH minotaur_name_last_pre Blood
+LPUSH minotaur_name_last_pre Boro
+LPUSH minotaur_name_last_pre Breg
+LPUSH minotaur_name_last_pre Claw
+LPUSH minotaur_name_last_pre Cloud
+LPUSH minotaur_name_last_pre Dark
+LPUSH minotaur_name_last_pre Dawn
+LPUSH minotaur_name_last_pre Dom
+LPUSH minotaur_name_last_pre Eagle
+LPUSH minotaur_name_last_pre Earth
+LPUSH minotaur_name_last_pre Entra
+LPUSH minotaur_name_last_pre Grim
+LPUSH minotaur_name_last_pre Ice
+LPUSH minotaur_name_last_pre Kazi
+LPUSH minotaur_name_last_pre Lagran
+LPUSH minotaur_name_last_pre Long
+LPUSH minotaur_name_last_pre Mas
+LPUSH minotaur_name_last_pre Mist
+LPUSH minotaur_name_last_pre Oat
+LPUSH minotaur_name_last_pre Or
+LPUSH minotaur_name_last_pre Plain
+LPUSH minotaur_name_last_pre Quill
+LPUSH minotaur_name_last_pre Rage
+LPUSH minotaur_name_last_pre Rain
+LPUSH minotaur_name_last_pre River
+LPUSH minotaur_name_last_pre Rune
+LPUSH minotaur_name_last_pre Sky
+LPUSH minotaur_name_last_pre Spirit
+LPUSH minotaur_name_last_pre Stone
+LPUSH minotaur_name_last_pre Storm
+LPUSH minotaur_name_last_pre Strong
+LPUSH minotaur_name_last_pre Sum
+LPUSH minotaur_name_last_pre Swift
+LPUSH minotaur_name_last_pre Tes
+LPUSH minotaur_name_last_pre Thunder
+LPUSH minotaur_name_last_pre White
+LPUSH minotaur_name_last_pre Wild
+LPUSH minotaur_name_last_pre Wind
+LPUSH minotaur_name_last_pre Winter
+LPUSH minotaur_name_last_pre Young
+LPUSH minotaur_name_last_pre Zha
+
+LPUSH minotaur_name_last_root ak
+LPUSH minotaur_name_last_root bash
+LPUSH minotaur_name_last_root breaker
+LPUSH minotaur_name_last_root caller
+LPUSH minotaur_name_last_root chaser
+LPUSH minotaur_name_last_root cloud
+LPUSH minotaur_name_last_root fury
+LPUSH minotaur_name_last_root gan
+LPUSH minotaur_name_last_root ganthi
+LPUSH minotaur_name_last_root gath
+LPUSH minotaur_name_last_root hoof
+LPUSH minotaur_name_last_root ilg
+LPUSH minotaur_name_last_root is
+LPUSH minotaur_name_last_root kan
+LPUSH minotaur_name_last_root kos
+LPUSH minotaur_name_last_root mane
+LPUSH minotaur_name_last_root marr
+LPUSH minotaur_name_last_root mist
+LPUSH minotaur_name_last_root non
+LPUSH minotaur_name_last_root rangli
+LPUSH minotaur_name_last_root runner
+LPUSH minotaur_name_last_root singer
+LPUSH minotaur_name_last_root soult
+LPUSH minotaur_name_last_root spire
+LPUSH minotaur_name_last_root splitter
+LPUSH minotaur_name_last_root stalker
+LPUSH minotaur_name_last_root stride
+LPUSH minotaur_name_last_root strider
+LPUSH minotaur_name_last_root talon
+LPUSH minotaur_name_last_root thorn
+LPUSH minotaur_name_last_root vidol
+LPUSH minotaur_name_last_root walker
+LPUSH minotaur_name_last_root wind
+
+
+

@@ -1,0 +1,40 @@
+
+
+{% extends "base.html" %}
+{% block title %} {{tempobj.title}} {{tempobj.npc.name['full'] }}, Wanted for {{tempobj.crime}}. {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div style="margin:auto; text-align:center;">
+    <h1 ><a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a> </h1>
+    <h1 >{{tempobj.headline }} </h1>
+    <h2> {{tempobj.npc.name['full']}} </h2>
+
+    {% if tempobj.title %}
+        <p>A.K.A.</p>
+        <h2>{{tempobj.title}} {{tempobj.npc.name['firstname'] }}</h2>
+    {%endif%}
+
+    <h3>Wanted for {{tempobj.crime}} by the {{tempobj.by}}. </h3>
+    <p>{{tempobj.npc.name['full']}} was last seen {{tempobj.lastseen}}. May claim to be a {{tempobj.npc.skill['name']}} {{tempobj.npc.profession}}.
+
+    {% if tempobj.npc.mark   %}
+        {% if tempobj.npc.firstname%}
+            {{tempobj.npc.firstname}}
+        {%else %}
+            {{tempobj.npc.sex['pronoun'] |capitalize}}
+        {%endif %}
+         is recognizable by a {{tempobj.npc.mark}} on {{tempobj.npc.sex['possessive']}} {{tempobj.npc.mark_location}}.
+    {% endif %}
+    </p>
+    <p>Description: {{tempobj.npc.attitude}} {{tempobj.npc.sex['name']}} {{tempobj.npc.race}}, {{tempobj.npc.height}}, {{tempobj.npc.build}}, with {{tempobj.npc.eye}} eyes. </p>
+    {% if  tempobj.warning   %}
+        <h2>Warning! {{tempobj.npc.sex['pronoun'] |capitalize}} {{tempobj.warning }}.</h2>
+    {% endif %}
+    <p>A reward of {{tempobj.reward}} for {{tempobj.condition}}.</p>
+
+</div>
+
+
+{% endblock %}

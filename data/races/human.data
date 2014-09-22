@@ -1,0 +1,216 @@
+#
+
+LPUSH npc_race human
+
+set human_details {"name": "Human",  "size": "medium",  "description": "quick growth and adaptability"}
+
+LPUSH human_covering skin
+
+ZADD human_name_order 50 { "name":"first" }
+ZADD human_name_order 100 { "name":"last"}
+
+HSET human_name_first  pre 1 
+HSET human_name_first  root 100
+HSET human_name_first  post 70
+HSET human_name_last   pre 5 
+HSET human_name_last   root 100
+HSET human_name_last   post 100
+
+LPUSH human_name_first_pre Le
+LPUSH human_name_first_pre La
+LPUSH human_name_first_pre De
+LPUSH human_name_first_pre Da
+
+LPUSH human_name_first_root Ali
+LPUSH human_name_first_root Bil
+LPUSH human_name_first_root Bob
+LPUSH human_name_first_root Col
+LPUSH human_name_first_root Cris
+LPUSH human_name_first_root Dan
+LPUSH human_name_first_root Dav
+LPUSH human_name_first_root Don
+LPUSH human_name_first_root Eas
+LPUSH human_name_first_root Fran
+LPUSH human_name_first_root Georg
+LPUSH human_name_first_root Her
+LPUSH human_name_first_root Ian
+LPUSH human_name_first_root Jam
+LPUSH human_name_first_root Jo
+LPUSH human_name_first_root Kath
+LPUSH human_name_first_root Keen
+LPUSH human_name_first_root Lyn
+LPUSH human_name_first_root May
+LPUSH human_name_first_root Mick
+LPUSH human_name_first_root Mo
+LPUSH human_name_first_root Nel
+LPUSH human_name_first_root New
+LPUSH human_name_first_root Nil
+LPUSH human_name_first_root Ob
+LPUSH human_name_first_root Phil
+LPUSH human_name_first_root Ros
+LPUSH human_name_first_root Solo
+LPUSH human_name_first_root Teren
+LPUSH human_name_first_root Urs
+LPUSH human_name_first_root Val
+LPUSH human_name_first_root Will
+LPUSH human_name_first_root Yan
+LPUSH human_name_first_root Zan
+
+LPUSH human_name_first_post ana
+LPUSH human_name_first_post ann
+LPUSH human_name_first_post da
+LPUSH human_name_first_post don
+LPUSH human_name_first_post dra
+LPUSH human_name_first_post e
+LPUSH human_name_first_post es
+LPUSH human_name_first_post ette
+LPUSH human_name_first_post ey
+LPUSH human_name_first_post iam
+LPUSH human_name_first_post ic
+LPUSH human_name_first_post jo
+LPUSH human_name_first_post lie
+LPUSH human_name_first_post lin
+LPUSH human_name_first_post lis
+LPUSH human_name_first_post lyn
+LPUSH human_name_first_post me
+LPUSH human_name_first_post meta
+LPUSH human_name_first_post mon
+LPUSH human_name_first_post my
+LPUSH human_name_first_post ora
+LPUSH human_name_first_post rill
+LPUSH human_name_first_post ry
+LPUSH human_name_first_post sie
+LPUSH human_name_first_post son
+LPUSH human_name_first_post tin
+LPUSH human_name_first_post ton
+
+# lastname!
+ 
+LPUSH human_name_last_pre Mac
+LPUSH human_name_last_pre Van
+
+LPUSH human_name_last_root Andr
+LPUSH human_name_last_root Andre
+LPUSH human_name_last_root Anton
+LPUSH human_name_last_root Bar
+LPUSH human_name_last_root Barto
+LPUSH human_name_last_root Ben
+LPUSH human_name_last_root Ber
+LPUSH human_name_last_root Berna
+LPUSH human_name_last_root Black
+LPUSH human_name_last_root Bra
+LPUSH human_name_last_root Bri
+LPUSH human_name_last_root Bro
+LPUSH human_name_last_root Brown
+LPUSH human_name_last_root Bur
+LPUSH human_name_last_root Car
+LPUSH human_name_last_root Cas
+LPUSH human_name_last_root Cast
+LPUSH human_name_last_root Cha
+LPUSH human_name_last_root Chris
+LPUSH human_name_last_root Clay
+LPUSH human_name_last_root Col
+LPUSH human_name_last_root Cor
+LPUSH human_name_last_root Dan
+LPUSH human_name_last_root Dav
+LPUSH human_name_last_root David
+LPUSH human_name_last_root Dil
+LPUSH human_name_last_root Fer
+LPUSH human_name_last_root Fran
+LPUSH human_name_last_root Franc
+LPUSH human_name_last_root Giaco
+LPUSH human_name_last_root Gil
+LPUSH human_name_last_root Good
+LPUSH human_name_last_root Green
+LPUSH human_name_last_root Har
+LPUSH human_name_last_root Jack
+LPUSH human_name_last_root Jame
+LPUSH human_name_last_root Klein
+LPUSH human_name_last_root Mar
+LPUSH human_name_last_root Marti
+LPUSH human_name_last_root Mat
+LPUSH human_name_last_root Mor
+LPUSH human_name_last_root Peter
+LPUSH human_name_last_root Petr
+LPUSH human_name_last_root Robert
+LPUSH human_name_last_root Rose
+LPUSH human_name_last_root Rosen
+LPUSH human_name_last_root She
+LPUSH human_name_last_root Simon
+LPUSH human_name_last_root Smith
+LPUSH human_name_last_root South
+LPUSH human_name_last_root Sta
+LPUSH human_name_last_root Stan
+LPUSH human_name_last_root Sto
+LPUSH human_name_last_root Tram
+LPUSH human_name_last_root Whit
+LPUSH human_name_last_root White
+LPUSH human_name_last_root Wil
+
+LPUSH human_name_last_post all
+LPUSH human_name_last_post an
+LPUSH human_name_last_post and
+LPUSH human_name_last_post ard
+LPUSH human_name_last_post brook
+LPUSH human_name_last_post combe
+LPUSH human_name_last_post croft
+LPUSH human_name_last_post den
+LPUSH human_name_last_post ell
+LPUSH human_name_last_post en
+LPUSH human_name_last_post er
+LPUSH human_name_last_post erley
+LPUSH human_name_last_post erson
+LPUSH human_name_last_post erton
+LPUSH human_name_last_post es
+LPUSH human_name_last_post ett
+LPUSH human_name_last_post ewicz
+LPUSH human_name_last_post ey
+LPUSH human_name_last_post field
+LPUSH human_name_last_post ford
+LPUSH human_name_last_post gan
+LPUSH human_name_last_post gton
+LPUSH human_name_last_post ham
+LPUSH human_name_last_post hews
+LPUSH human_name_last_post house
+LPUSH human_name_last_post ick
+LPUSH human_name_last_post idge
+LPUSH human_name_last_post ield
+LPUSH human_name_last_post ill
+LPUSH human_name_last_post in
+LPUSH human_name_last_post ing
+LPUSH human_name_last_post inson
+LPUSH human_name_last_post land
+LPUSH human_name_last_post leton
+LPUSH human_name_last_post ley
+LPUSH human_name_last_post liffe
+LPUSH human_name_last_post ling
+LPUSH human_name_last_post ll
+LPUSH human_name_last_post man
+LPUSH human_name_last_post man
+LPUSH human_name_last_post mell
+LPUSH human_name_last_post ne
+LPUSH human_name_last_post ngham
+LPUSH human_name_last_post ngton
+LPUSH human_name_last_post nson
+LPUSH human_name_last_post on
+LPUSH human_name_last_post ord
+LPUSH human_name_last_post ore
+LPUSH human_name_last_post orth
+LPUSH human_name_last_post rell
+LPUSH human_name_last_post ridge
+LPUSH human_name_last_post rough
+LPUSH human_name_last_post sford
+LPUSH human_name_last_post son
+LPUSH human_name_last_post sone
+LPUSH human_name_last_post ster
+LPUSH human_name_last_post ston
+LPUSH human_name_last_post stone
+LPUSH human_name_last_post ter
+LPUSH human_name_last_post ton
+LPUSH human_name_last_post tone
+LPUSH human_name_last_post tt
+LPUSH human_name_last_post ville
+LPUSH human_name_last_post well
+LPUSH human_name_last_post wood
+LPUSH human_name_last_post worth
+        

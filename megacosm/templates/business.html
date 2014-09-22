@@ -1,0 +1,54 @@
+
+
+{% extends "base.html" %}
+{% block title %}Welcome to {{tempobj.name['full']}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Welcome to The {{tempobj.name['full']}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+<h2>Summary</h2>
+The {{tempobj.name['full']}} is {{tempobj.size['name']|article}}, {{tempobj.condition}} {{tempobj.floor}} floor {{tempobj.kindname}}. The {{tempobj.rooftype}}-roofed building faces {{tempobj.direction}}, has {{tempobj.windows}} windows, and has {{tempobj.storefront|article}} storefront. 
+{%if tempobj.senses%}
+Inside, {{ tempobj.senses | conjunction    }}.
+{%endif %}
+
+
+<h2>Owner</h2>
+<p>It is located in {{tempobj.neighborhood['name']|article}} neighborhood of the {{tempobj.district}} district, and is run by {{tempobj.owner.attitude|article}} {{tempobj.owner.race}} named {{tempobj.owner.name['full']}}.
+
+
+<h2>Service</h2>
+
+The {{tempobj.kindname}} is known for {{tempobj.price['name']}} prices for the {{tempobj.service}}, and {{tempobj.popularity['name']}}. You will find {{tempobj.patroncount}} {{ 'customer'|pluralize(tempobj.patroncount  )}} in the {{tempobj.kindname}}. 
+Business has been {{tempobj.status['name']}} lately. The {{tempobj.kindname}} has a reputation for {{tempobj.reputation['name']}}.
+{% if tempobj.trouble %}
+    The {{tempobj.name['full']}} has recently had {{tempobj.trouble}}.
+{%endif%}
+
+<h2>Description When Found...</h2>
+<blockquote style="font-style:italic">
+"You come across {{tempobj.size['name']|article}}, {{tempobj.condition}} {{tempobj.floor}} floor {{tempobj.kindname}}. It has {{tempobj.rooftype|article}} roof, faces {{tempobj.direction}}, has {{tempobj.windows}} windows, and has {{tempobj.storefront|article}} storefront. {{tempobj.owner.race|article|capitalize}} {{tempobj.manager}} appears to be in charge."
+</blockquote>
+
+<!--
+<pre>
+{%for field in tempobj.__dict__ %}
+{{field}}  {{tempobj[field]}}
+{%endfor%}
+
+managerclass  ranger
+
+age  old
+
+manager  apothecary
+
+shade  bright
+
+</pre>
+-->
+
+
+{% endblock %}

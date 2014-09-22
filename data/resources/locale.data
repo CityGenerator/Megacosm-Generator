@@ -1,0 +1,34 @@
+
+LPUSH naturalresource_kind locale
+# Lala Land is known for it's _________
+LPUSH naturalresource_locale_name_type renowned
+LPUSH naturalresource_locale_name_type nearby
+LPUSH naturalresource_locale_name_type famous
+LPUSH naturalresource_locale_name_type beautiful
+LPUSH naturalresource_locale_name_type amazing
+
+LPUSH naturalresource_locale_name locales
+LPUSH naturalresource_locale_name sights
+
+#which ________ stuff
+SET naturalresource_locale_method include
+ 
+# which provides
+LPUSH naturalresource_locale_product majestic glaciers
+LPUSH naturalresource_locale_product deep-water harbors
+LPUSH naturalresource_locale_product freshwater lakes
+LPUSH naturalresource_locale_product saltwater lakes
+LPUSH naturalresource_locale_product bays
+LPUSH naturalresource_locale_product beaches
+LPUSH naturalresource_locale_product forests
+LPUSH naturalresource_locale_product waterfalls
+LPUSH naturalresource_locale_product volcanoes
+LPUSH naturalresource_locale_product freshwater marshes
+LPUSH naturalresource_locale_product saltwater marshes
+LPUSH naturalresource_locale_product rolling hills
+LPUSH naturalresource_locale_product mineral springs
+LPUSH naturalresource_locale_product geothermal vents
+LPUSH naturalresource_locale_product tar pits
+LPUSH naturalresource_locale_product ancient bogs
+LPUSH naturalresource_locale_product coral reefs
+

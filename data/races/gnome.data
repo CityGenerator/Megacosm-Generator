@@ -1,0 +1,114 @@
+#
+
+LPUSH npc_race gnome
+
+SET gnome_details      {"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }
+
+LPUSH gnome_covering skin
+
+
+SET gnome_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH gnome_subrace deep
+LPUSH gnome_subrace forest
+LPUSH gnome_subrace rock
+LPUSH gnome_subrace tinker
+LPUSH gnome_subrace garden
+
+HSET gnome_subrace_description deep     {"subrace": "Deep Gnome",       "description": "" }
+HSET gnome_subrace_description forest   {"subrace": "Forest Gnome",     "description": "" }
+HSET gnome_subrace_description rock     {"subrace": "Rock Gnome",       "description": "" }
+HSET gnome_subrace_description tinker   {"subrace": "Tinker Gnome",     "description": "" }
+HSET gnome_subrace_description garden   {"subrace": "Garden Gnome",     "description": "" }
+
+
+
+
+ZADD gnome_name_order 50 { "name":"first" }
+ZADD gnome_name_order 100 { "name":"last"}
+
+HSET gnome_name_first  pre 100 
+HSET gnome_name_first  post 70
+HSET gnome_name_last   pre  100
+HSET gnome_name_last   post 100
+
+
+LPUSH gnome_name_first_pre Ada
+LPUSH gnome_name_first_pre Ai
+LPUSH gnome_name_first_pre Alli
+LPUSH gnome_name_first_pre Arn
+LPUSH gnome_name_first_pre Bab
+LPUSH gnome_name_first_pre Bea
+LPUSH gnome_name_first_pre Bon
+LPUSH gnome_name_first_pre Cot
+LPUSH gnome_name_first_pre Car
+LPUSH gnome_name_first_pre Gav
+LPUSH gnome_name_first_pre Gab
+LPUSH gnome_name_first_pre Gil
+LPUSH gnome_name_first_pre Ham
+LPUSH gnome_name_first_pre Hew
+LPUSH gnome_name_first_pre Jen
+LPUSH gnome_name_first_pre Jun
+LPUSH gnome_name_first_pre Kia
+LPUSH gnome_name_first_pre Mal
+LPUSH gnome_name_first_pre Nin
+LPUSH gnome_name_first_pre Tul
+LPUSH gnome_name_first_pre Tor
+LPUSH gnome_name_first_pre Wiz
+LPUSH gnome_name_first_pre Tom
+LPUSH gnome_name_first_pre Tom
+LPUSH gnome_name_first_post an
+LPUSH gnome_name_first_post va
+LPUSH gnome_name_first_post son
+LPUSH gnome_name_first_post rette
+LPUSH gnome_name_first_post mida
+LPUSH gnome_name_first_post gan
+LPUSH gnome_name_first_post lita
+LPUSH gnome_name_first_post gles
+LPUSH gnome_name_first_post nk
+LPUSH gnome_name_first_post tsy
+LPUSH gnome_name_first_post lin
+LPUSH gnome_name_first_post by
+LPUSH gnome_name_first_post ley
+LPUSH gnome_name_first_post ina
+LPUSH gnome_name_first_post xie
+LPUSH gnome_name_first_post key
+LPUSH gnome_name_first_post ita
+LPUSH gnome_name_first_post ton
+LPUSH gnome_name_first_post vin
+LPUSH gnome_name_first_post eno
+LPUSH gnome_name_first_post wan
+LPUSH gnome_name_first_post dan
+
+        
+LPUSH gnome_name_last_pre Coggle
+LPUSH gnome_name_last_pre Cobble
+LPUSH gnome_name_last_pre Electro
+LPUSH gnome_name_last_pre Fuse
+LPUSH gnome_name_last_pre Gear
+LPUSH gnome_name_last_pre Grease
+LPUSH gnome_name_last_pre Gyro
+LPUSH gnome_name_last_pre Rocket
+LPUSH gnome_name_last_pre Thermo
+LPUSH gnome_name_last_pre Tiddly
+LPUSH gnome_name_last_pre Tinker
+LPUSH gnome_name_last_pre Trigger
+LPUSH gnome_name_last_pre Wizz
+LPUSH gnome_name_last_pre Wobb
+LPUSH gnome_name_last_post fiz
+LPUSH gnome_name_last_post gauge
+LPUSH gnome_name_last_post sprocket
+LPUSH gnome_name_last_post gadget
+LPUSH gnome_name_last_post bit
+LPUSH gnome_name_last_post scope
+LPUSH gnome_name_last_post cog
+LPUSH gnome_name_last_post fuel
+LPUSH gnome_name_last_post bolt
+LPUSH gnome_name_last_post jet
+LPUSH gnome_name_last_post wink
+LPUSH gnome_name_last_post tonk
+LPUSH gnome_name_last_post blast
+LPUSH gnome_name_last_post bun
+
+        
+

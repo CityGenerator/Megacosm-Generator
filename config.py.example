@@ -1,0 +1,24 @@
+class BaseConfiguration(object):
+    # Statement for enabling the development environment
+    DEBUG = True
+
+    LOG_PATH='data/logging.json'
+
+    REDIS_URL='redis://127.0.0.1:6379/'
+
+class ProductionConfiguration(BaseConfiguration):
+    # Statement for enabling the development environment
+    DEBUG = False
+
+    LOG_PATH='data/logging.json'
+
+    REDIS_URL='redis://127.0.0.1:6379/'
+
+class TestConfiguration(BaseConfiguration):
+    # Statement for enabling the development environment
+    DEBUG = False
+
+    LOG_PATH='data/logging.json'
+
+    REDIS_URL='redis://127.0.0.1:6379/'
+

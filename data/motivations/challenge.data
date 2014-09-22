@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationchallenge_text to face any challenge
+LPUSH motivationchallenge_text to avoid any challenges
+LPUSH motivationchallenge_text by challenges

@@ -1,0 +1,128 @@
+#
+
+LPUSH npc_race goblin
+
+SET goblin_details     {"name": "Goblin",     "size": "small",   "description": "their small stature and conniving"}
+
+LPUSH goblin_covering skin
+
+SET goblin_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH goblin_subrace night
+LPUSH goblin_subrace fire
+LPUSH goblin_subrace dust
+LPUSH goblin_subrace hill
+
+HSET goblin_subrace_description night {"subrace": "Night Goblin",      "description": "" }
+HSET goblin_subrace_description fire  {"subrace": "Fire Goblin",       "description": "" }
+HSET goblin_subrace_description dust  {"subrace": "Dust Goblin",       "description": "" }
+HSET goblin_subrace_description hill  {"subrace": "Hill Goblin",       "description": "" }
+
+
+ZADD goblin_name_order 50 { "name":"first" }
+ZADD goblin_name_order 100 { "name":"last"}
+
+HSET goblin_name_first  pre 100
+HSET goblin_name_first  root 100
+HSET goblin_name_last   pre 100
+HSET goblin_name_last   root 100
+
+
+LPUSH goblin_name_first_pre Br
+LPUSH goblin_name_first_pre Dzu
+LPUSH goblin_name_first_pre Gkut
+LPUSH goblin_name_first_pre K
+LPUSH goblin_name_first_pre K
+LPUSH goblin_name_first_pre Kz
+LPUSH goblin_name_first_pre M
+LPUSH goblin_name_first_pre M
+LPUSH goblin_name_first_pre Nar
+LPUSH goblin_name_first_pre Nb
+LPUSH goblin_name_first_pre Rb
+LPUSH goblin_name_first_pre Rug
+LPUSH goblin_name_first_pre Rx
+LPUSH goblin_name_first_pre Tb
+LPUSH goblin_name_first_pre Tg
+LPUSH goblin_name_first_pre Tm
+LPUSH goblin_name_first_pre Tr
+LPUSH goblin_name_first_pre Tud
+LPUSH goblin_name_first_pre Xod
+LPUSH goblin_name_first_pre Xr
+LPUSH goblin_name_first_pre Xt
+LPUSH goblin_name_first_pre Xu
+LPUSH goblin_name_first_pre Z
+LPUSH goblin_name_first_root adr
+LPUSH goblin_name_first_root bok
+LPUSH goblin_name_first_root eb
+LPUSH goblin_name_first_root egd
+LPUSH goblin_name_first_root emt
+LPUSH goblin_name_first_root erm
+LPUSH goblin_name_first_root et
+LPUSH goblin_name_first_root exn
+LPUSH goblin_name_first_root ezn
+LPUSH goblin_name_first_root kasr
+LPUSH goblin_name_first_root ods
+LPUSH goblin_name_first_root og
+LPUSH goblin_name_first_root ok
+LPUSH goblin_name_first_root omd
+LPUSH goblin_name_first_root omn
+LPUSH goblin_name_first_root or
+LPUSH goblin_name_first_root ot
+LPUSH goblin_name_first_root oten
+LPUSH goblin_name_first_root ub
+LPUSH goblin_name_first_root uk
+LPUSH goblin_name_first_root un
+LPUSH goblin_name_first_root unk
+LPUSH goblin_name_first_root urm
+LPUSH goblin_name_first_root us
+LPUSH goblin_name_first_root zar
+
+LPUSH goblin_name_last_pre Big
+LPUSH goblin_name_last_pre Blade
+LPUSH goblin_name_last_pre Brain
+LPUSH goblin_name_last_pre Cleaver
+LPUSH goblin_name_last_pre Damn
+LPUSH goblin_name_last_pre Dark
+LPUSH goblin_name_last_pre Dread
+LPUSH goblin_name_last_pre Evil
+LPUSH goblin_name_last_pre Foul
+LPUSH goblin_name_last_pre Ghostt
+LPUSH goblin_name_last_pre Giant
+LPUSH goblin_name_last_pre Great
+LPUSH goblin_name_last_pre Great
+LPUSH goblin_name_last_pre Iron
+LPUSH goblin_name_last_pre Laugh
+LPUSH goblin_name_last_pre Metal
+LPUSH goblin_name_last_pre Metal
+LPUSH goblin_name_last_pre Night
+LPUSH goblin_name_last_pre Ogre
+LPUSH goblin_name_last_pre Ooze
+LPUSH goblin_name_last_pre Rant
+LPUSH goblin_name_last_pre Rock
+LPUSH goblin_name_last_pre Worm
+
+LPUSH goblin_name_last_root basher
+LPUSH goblin_name_last_root beast
+LPUSH goblin_name_last_root bone
+LPUSH goblin_name_last_root cutter
+LPUSH goblin_name_last_root damn
+LPUSH goblin_name_last_root death
+LPUSH goblin_name_last_root doom
+LPUSH goblin_name_last_root fury
+LPUSH goblin_name_last_root gloom
+LPUSH goblin_name_last_root hand
+LPUSH goblin_name_last_root host
+LPUSH goblin_name_last_root howl
+LPUSH goblin_name_last_root kill
+LPUSH goblin_name_last_root maw
+LPUSH goblin_name_last_root mouth
+LPUSH goblin_name_last_root murder
+LPUSH goblin_name_last_root render
+LPUSH goblin_name_last_root rot
+LPUSH goblin_name_last_root shadow
+LPUSH goblin_name_last_root shredder
+LPUSH goblin_name_last_root slay
+LPUSH goblin_name_last_root stomach
+LPUSH goblin_name_last_root wiser
+
+

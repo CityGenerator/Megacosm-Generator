@@ -1,0 +1,29 @@
+
+LPUSH naturalresource_kind herdanimals
+
+LPUSH naturalresource_herdanimals_name_type daily
+LPUSH naturalresource_herdanimals_name_type yearly
+LPUSH naturalresource_herdanimals_name_type seasonal
+
+# Lala Land is know for it's
+LPUSH naturalresource_herdanimals_name herd animals
+LPUSH naturalresource_herdanimals_name herds
+
+#which ________ cattle
+SET naturalresource_herdanimals_method include
+
+# which include
+
+LPUSH naturalresource_herdanimals_product cattle
+LPUSH naturalresource_herdanimals_product goats
+LPUSH naturalresource_herdanimals_product sheep
+LPUSH naturalresource_herdanimals_product seals
+LPUSH naturalresource_herdanimals_product llamas
+LPUSH naturalresource_herdanimals_product horses
+LPUSH naturalresource_herdanimals_product pigs
+LPUSH naturalresource_herdanimals_product alligators
+LPUSH naturalresource_herdanimals_product bison
+LPUSH naturalresource_herdanimals_product deer
+LPUSH naturalresource_herdanimals_product giraffes
+LPUSH naturalresource_herdanimals_product kangaroos
+
