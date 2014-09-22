@@ -3,7 +3,7 @@ services:
   - redis-server
 python:
   - "2.7"
-  - "pypy"
+  - "3.3"
 install:
   - pip install -r requirements.txt
 before_script:
