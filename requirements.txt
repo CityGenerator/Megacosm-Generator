@@ -1,7 +1,6 @@
 blinker
 coverage
 coveralls
-fixture
 flake8
 Flask
 Flask-Assets
