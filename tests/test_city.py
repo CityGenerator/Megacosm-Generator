@@ -99,7 +99,7 @@ class TestCity(unittest.TestCase):
     @patch('megacosm.generators.city.random')
     def test_select_subraces(self, mockrand):
         """ verify """
-        mockrand.randint.side_effect = [100, 100, 100, 100, 100, 100, 100, 1, 11, 11, 100, 100, 100, 100]
+        mockrand.randint.side_effect = [100, 100, 1, 11, 11, 100, 100, 100, 100, 100, 100, 100, 100]
         self.city.races = {'orc': 3, 'elf': 40, 'molekin': 3, 'human': 23, 'harpy': 3, 'halfling': 3,
                            'goblin': 3, 'gnome': 3, 'ogre': 3, 'dwarf': 3, 'catfolk': 3, 'other': 10}
         self.city.select_subraces()

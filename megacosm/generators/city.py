@@ -83,7 +83,7 @@ class City(Generator):
         """ Determine if each race will show subraces """
         final_racelist = {}
         self.racequalifiers = {'mostly': []}
-        for race in self.races:
+        for race in sorted(self.races) :
             if self.has_subraces(race) and self.want_subraces(race):
                 subraces = self.calculate_which_subraces(race, self.races[race])
                 final_racelist[race] = subraces
