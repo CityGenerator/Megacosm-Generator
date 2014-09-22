@@ -50,7 +50,7 @@
             <tr>
                 <td>{{stat}}: </td>
                 <td>
-                    <select name="bond_{{stat}}_id">
+                    <select name="bond_{{stat}}">
                         <option value=""></option>
                         {% for statstring in statinfo[stat] %}
                         <option value="{{ loop.index0}}">{{statstring }} </option>
