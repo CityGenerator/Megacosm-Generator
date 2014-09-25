@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+        #map { height: 300px; width:600px }
+        </style>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+        <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    </head>
+    <body>
+        <div id="map"></div>
+
+<script>
+var map = L.map('map').setView([0, 0], 13);
+
+var marker = L.marker([0.0, -0.00]).addTo(map);
+var citylimit = L.polygon([
+                            [-0.006, 0.0],
+                            [-0.01, 0.01],
+                            [0.0, 0.013],
+                            [0.01, 0.01],
+                            [0.014, 0.0],
+                            [0.01, -0.01],
+                            [0.003, -0.014],
+                            [-0.01, -0.01],
+                          ],
+                          {
+                            stroke: true, 
+                            color: '#333', 
+                            weight:1, 
+                            dashArray:'1,10', 
+                            fillColor: '#EEE5DE', 
+                            fillOpacity: 0.5,
+                          }
+).addTo(map);
+
+var regionroads = L.polyline([
+                                [1,-9],
+                                [0.01,-0.02],
+                                [0,0],
+                                [0.001,0.011],
+                                [0,9],
+                             ],
+                          {
+                            stroke: true, 
+                            color: '#603311', 
+                            weight:6, 
+                          }
+
+).addTo(map);
+
+
+marker.bindPopup("Welcome to the City of Townsville.");
+
+
+</script>
+
+    </body>
+ 
+ 
+</html>
