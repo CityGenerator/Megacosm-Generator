@@ -13,18 +13,33 @@
         <div id="map"></div>
 
 <script>
-var map = L.map('map').setView([0, 0], 13);
+var southWest = L.latLng(-2, -2),
+    northEast = L.latLng(2, 2),
+    bounds = L.latLngBounds(southWest, northEast);
+
+
+var map = L.map('map',
+
+{
+   maxBounds: bounds,
+    maxZoom: 22,
+    minZoom: 13
+}
+).setView([0, 0], 18);
+
+
+L.control.scale().addTo(map);
 
 var marker = L.marker([0.0, -0.00]).addTo(map);
 var citylimit = L.polygon([
-                            [-0.006, 0.0],
-                            [-0.01, 0.01],
-                            [0.0, 0.013],
-                            [0.01, 0.01],
-                            [0.014, 0.0],
-                            [0.01, -0.01],
-                            [0.003, -0.014],
-                            [-0.01, -0.01],
+                            [-0.0003, 0.0],
+                            [-0.0005, 0.0005],
+                            [0.0005, 0.0007],
+                            [0.0003, 0.0005],
+                            [0.0007, 0.0],
+                            [0.0006, -0.0005],
+                            [0.0005, -0.0007],
+                            [-0.0005, -0.0005],
                           ],
                           {
                             stroke: true, 
@@ -35,6 +50,45 @@ var citylimit = L.polygon([
                             fillOpacity: 0.5,
                           }
 ).addTo(map);
+
+var lat=0.0002;
+var lon=0.0002;
+var houselen=0.0001;  /*roughly 40 feet*/
+var housewid=0.00008; /*roughly 30 feet*/
+var houseA = L.polygon([
+                            [lat,lon],
+                            [lat+houselen,lon],
+                            [lat+houselen,lon+housewid],
+                            [lat,lon+housewid],
+                          ],
+                          {
+                            stroke: false, 
+                            color: '#000', 
+                            fillColor: '#ooo', 
+                            fillOpacity: 0.5,
+                          }
+).addTo(map);
+
+var lat=0.00006;
+var lon=0.0002;
+var houselen=0.0001;  /*roughly 40 feet*/
+var housewid=0.00008; /*roughly 30 feet*/
+var houseB = L.polygon([
+                            [lat,lon],
+                            [lat+houselen,lon],
+                            [lat+houselen,lon+housewid],
+                            [lat+houselen-0.00004,lon+housewid+0.00002],
+                            [lat,lon+housewid],
+                          ],
+                          {
+                            stroke: true, 
+                            weight:2,
+                            color: '#000', 
+                            fillColor: '#ooo', 
+                            fillOpacity: 0.5,
+                          }
+).addTo(map);
+
 
 var regionroads = L.polyline([
                                 [1,-9],
@@ -48,11 +102,9 @@ var regionroads = L.polyline([
                             color: '#603311', 
                             weight:6, 
                           }
-
 ).addTo(map);
 
 
-marker.bindPopup("Welcome to the City of Townsville.");
 
 
 </script>
