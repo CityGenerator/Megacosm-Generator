@@ -3,16 +3,19 @@
     <head>
         <meta charset="utf-8">
         <style>
-        #map { height: 300px; width:600px }
+        #map { height: 600px; width:600px }
         </style>
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
         <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script src="/static/js/buildings.js"></script>
+        <script src="/static/js/OSMBuildings-Leaflet.js"></script>
 
     </head>
     <body>
         <div id="map"></div>
 
 <script>
+Math.seed=5;
 var southWest = L.latLng(-2, -2),
     northEast = L.latLng(2, 2),
     bounds = L.latLngBounds(southWest, northEast);
@@ -25,12 +28,11 @@ var map = L.map('map',
     maxZoom: 22,
     minZoom: 13
 }
-).setView([0, 0], 18);
+).setView([0, 0], 19);
 
 
 L.control.scale().addTo(map);
 
-var marker = L.marker([0.0, -0.00]).addTo(map);
 var citylimit = L.polygon([
                             [-0.0003, 0.0],
                             [-0.0005, 0.0005],
@@ -49,62 +51,25 @@ var citylimit = L.polygon([
                             fillColor: '#EEE5DE', 
                             fillOpacity: 0.5,
                           }
-).addTo(map);
-
-var lat=0.0002;
-var lon=0.0002;
-var houselen=0.0001;  /*roughly 40 feet*/
-var housewid=0.00008; /*roughly 30 feet*/
-var houseA = L.polygon([
-                            [lat,lon],
-                            [lat+houselen,lon],
-                            [lat+houselen,lon+housewid],
-                            [lat,lon+housewid],
-                          ],
-                          {
-                            stroke: false, 
-                            color: '#000', 
-                            fillColor: '#ooo', 
-                            fillOpacity: 0.5,
-                          }
-).addTo(map);
-
-var lat=0.00006;
-var lon=0.0002;
-var houselen=0.0001;  /*roughly 40 feet*/
-var housewid=0.00008; /*roughly 30 feet*/
-var houseB = L.polygon([
-                            [lat,lon],
-                            [lat+houselen,lon],
-                            [lat+houselen,lon+housewid],
-                            [lat+houselen-0.00004,lon+housewid+0.00002],
-                            [lat,lon+housewid],
-                          ],
-                          {
-                            stroke: true, 
-                            weight:2,
-                            color: '#000', 
-                            fillColor: '#ooo', 
-                            fillOpacity: 0.5,
-                          }
-).addTo(map);
+                         ).addTo(map);
 
 
-var regionroads = L.polyline([
-                                [1,-9],
-                                [0.01,-0.02],
-                                [0,0],
-                                [0.001,0.011],
-                                [0,9],
-                             ],
-                          {
-                            stroke: true, 
-                            color: '#603311', 
-                            weight:6, 
-                          }
-).addTo(map);
+var regionalroadparams = { stroke: true, color: '#603311', weight:6 }
+var regionroads = L.polyline( buildRegionalRoad('East','South'), regionalroadparams).addTo(map);
+var regionroads = L.polyline( buildRegionalRoad('North','South'), regionalroadparams).addTo(map);
 
+var buildings=[];
 
+var rosco="<a href='http://google.com'>Rosco's beef emporium</a>";
+
+buildings.push(buildHouse({label:rosco+' 1',shape:'square', lat:0.00015, lon:-0.00005, width:10,  length:8,  properties:{material:'cement', height:8 }}));
+buildings.push(buildHouse({label:rosco+' 2',shape:'square', lat:0.00007, lon:0.00010, width:8,  length:10, properties:{material:'cement', height:8 }}));
+buildings.push(buildHouse({label:rosco+' 3',shape:'square', lat:0.00010, lon:0.000000, width:10, length:4,  properties:{material:'cement', height:5 }}));
+
+buildings.push(buildHouse({label:rosco+' 4',shape:'L', lat:-0.00008, lon:0.000080, width:6, length:8,  properties:{material:'cement', height:5 }}));
+buildings.push(buildHouse({label:rosco+' 5',shape:'L', lat:0.000100, lon:0.000200, width:8, length:8, properties:{material:'cement', height:5 }}));
+
+extrude(buildings);
 
 
 </script>
