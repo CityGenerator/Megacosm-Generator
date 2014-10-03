@@ -16,6 +16,8 @@ On the first run, do the following:
 
 ```bash
 
+    git clone git@github.com:CityGenerator/Megacosm-Generator.git
+
     # create a virtual env
     virtualenv env
 
@@ -26,13 +28,13 @@ On the first run, do the following:
     pip install -r requirements.txt
 
     # copy the example config into place and configure it
-    cp data/config.ini.example data/config.ini
+    cp config.py.example config.py
 
     # Load your data
-    python scripts/reimport_data.py
+    python reimport_data.py
 
     # start the server
-    ./Start
+    python run.py
     # View the app in your browser at http://127.0.0.1:8000/
 ```
 
@@ -40,7 +42,7 @@ After that, you just need to use this:
 
 ```bash
     source env/bin/activate
-    ./Start
+    python run.py
 ```
 
 To try your unit tests, run 
