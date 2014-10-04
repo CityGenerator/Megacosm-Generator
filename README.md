@@ -16,7 +16,7 @@ On the first run, do the following:
 
 ```bash
 
-    git clone git@github.com:CityGenerator/Megacosm-Generator.git
+    git clone https://github.com/CityGenerator/Megacosm-Generator.git
 
     # create a virtual env
     virtualenv env
