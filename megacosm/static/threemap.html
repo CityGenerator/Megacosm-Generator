@@ -38,6 +38,7 @@
         <div id="mapcontainer"></div>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
         <script src="/static/js/OrbitControls.js"></script>
+        <script src="/static/js/seededrandom.js"></script>
         <script src="/static/js/ImprovedNoise.js"></script>
         <script src="/static/js/Detector.js"></script>
         <script>
@@ -53,7 +54,7 @@
             worldHalfWidth = worldWidth / 2, worldHalfLength = worldLength / 2;
 
             var clock = new THREE.Clock();
-
+            Math.seedrandom();
             init();
             animate();
 
@@ -83,7 +84,6 @@
 
                 mapcontainer.appendChild( renderer.domElement );
 
-
                 window.addEventListener( 'resize', onWindowResize, false );
 
             }
@@ -100,22 +100,37 @@
             }
 
             function generateHeight( width, height ) {
-                /* */
-                var size = width * height, data = new Uint8Array( size ),
-                perlin = new ImprovedNoise(), quality = 0.1, z = Math.random() * 100;
+                /* Given a map of width x height, generate a single array
+                   that represents the height*/
+                var altitudescope = [ 0.20, 0.25, 0.27, 0.3, 0.5, 1 ];
 
-                for ( var j = 0; j < 6; j ++ ) {
+                var randval = Math.random();
+                var scope_selection = randval * altitudescope.length;
+
+                var scope = altitudescope[ Math.floor(scope_selection) ];
+
+                console.log( altitudescope.length + " * "+randval +" ="+ scope_selection+ " resulting in "+ scope);
+
+                var size = width * height, data = new Uint8Array( size ),
+                perlin = new ImprovedNoise(), quality = scope, z = Math.random() * 100;
+
+                for ( var j = 4; j > 0; j -- ) {
 
                     for ( var i = 0; i < size; i ++ ) {
 
                         var x = i % width, y = ~~ ( i / width );
-                        data[ i ] += Math.abs( perlin.noise( x / quality, y / quality, z ) * quality * 1.75 );
+                        var noise=Math.abs( perlin.noise( x / quality, y / quality, z ));
 
+                        data[ i ] += Math.abs( noise  * quality);
                     }
-
                     quality *= 5;
 
                 }
+
+                for ( var i = 0; i < size; i ++ ) {
+                    data[ i ] =data[i]* scope;
+                }
+
 
                 return data;
 
@@ -220,7 +235,7 @@
 
             function setup_controls(camera){
                 controls = new THREE.OrbitControls( camera );
-                controls.maxDistance = 5000;
+                controls.maxDistance = 8000;
                 controls.movementSpeed = 100;
                 controls.state=2;
             }
