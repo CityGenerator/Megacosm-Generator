@@ -1,18 +1,32 @@
-
 if ( ! Detector.webgl ) {
     Detector.addGetWebGLMessage();
     document.getElementById( 'mapcontainer' ).innerHTML = "Sorry, you need WebGL enabled to see this.";
 }
+
+
+
+var mapscales=[0.5, 1, 2, 5, 10, 25];
+
+var mapscale=mapscales[1];
+
 var mapcontainer;
 var camera, controls, scene, renderer;
+var terrain_lowpoint=0;
+var terrain_highpoint=0;
+var regionwidth=mapscale*1000;
+var regionheight=mapscale*1000;
 
+console.log("region size:", regionheight,",", regionwidth,"; ", mapscale*2, "")
+// each width unit * 10 is a geometry unit
 var worldWidth = 256, worldLength = 256,
 worldHalfWidth = worldWidth / 2, worldHalfLength = worldLength / 2;
 
 var clock = new THREE.Clock();
-Math.seedrandom();
+Math.seedrandom(98);
 init();
 animate();
+
+
 
 function init() {
 
@@ -27,24 +41,90 @@ function init() {
     setup_controls(camera);
 
     /* Create a terrain mesh and add it to the scene*/
-    var terrain = generate_terrain_mesh(worldWidth, worldLength);
-    scene.add( terrain );
+    var terrainmap  = generateHeight( worldWidth, worldLength );
 
-//                var plane = new THREE.Mesh(new THREE.PlaneGeometry(2500, 2500), new THREE.MeshNormalMaterial());
-//                plane.overdraw = true;
-//                plane.rotation.y=90;
-//                scene.add(plane);
- 
+    scene.add(generate_terrain_mesh(worldWidth, worldLength, terrainmap));
 
-    camera.position.y = data[ worldHalfWidth + worldHalfLength * worldWidth ] * 10 + 20500;
+    scene.add(select_city_center(worldWidth, worldLength));
 
-    renderer = new THREE.WebGLRenderer();
+        var object3d    = new THREE.AmbientLight(0x101010)
+        object3d.name   = 'Ambient light'
+        scene.add(object3d)
+
+        var object3d    = new THREE.DirectionalLight('white', 0.7);
+        object3d.name   = 'Key light'
+        object3d.position.set(3500, 3500, 3500)
+        object3d.castShadow = true;
+        object3d.shadowDarkness =0.7;
+        object3d.shadowMapWidth=1024;
+        object3d.shadowMapHeight=1024;
+        object3d.shadowCameraFar = 10000;
+        object3d.shadowCameraTop = 5000;
+        object3d.shadowCameraBottom = -5000;
+        object3d.shadowCameraLeft = -5000;
+        object3d.shadowCameraRight = 5000;
+        object3d.shadowCameraVisible = false;
+        scene.add(object3d)
+
+        var object3d    = new THREE.DirectionalLight('white', 0.3)
+        object3d.name   = 'Fill light'
+        object3d.position.set(-3500,3500,3500)
+        object3d.castShadow = true;
+        object3d.shadowDarkness =0.35;
+        object3d.shadowMapWidth=1024;
+        object3d.shadowMapHeight=1024;
+        object3d.shadowCameraFar = 10000;
+        object3d.shadowCameraTop = 5000;
+        object3d.shadowCameraBottom = -5000;
+        object3d.shadowCameraLeft = -5000;
+        object3d.shadowCameraRight = 5000;
+        object3d.shadowCameraVisible = false;
+        scene.add(object3d)
+
+        var object3d    = new THREE.DirectionalLight('white', 0.225)
+        object3d.name   = 'Back light'
+        object3d.position.set(0,2000,-4300)
+        object3d.castShadow = true;
+        object3d.shadowDarkness =0.25;
+        object3d.shadowMapWidth=1024;
+        object3d.shadowMapHeight=1024;
+        object3d.shadowCameraFar = 8000;
+        object3d.shadowCameraTop = 5000;
+        object3d.shadowCameraBottom = -5000;
+        object3d.shadowCameraLeft = -5000;
+        object3d.shadowCameraRight = 5000;
+        object3d.shadowCameraVisible = false;
+        object3d.name   = 'Back light'
+        scene.add(object3d)
+
+    camera.position.y = terrainmap[ worldHalfWidth + worldHalfLength * worldWidth ]*10 + 20500;
+
+
+    renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor( 0xbfd1e5 );
     renderer.setSize( mapcontainer.width, mapcontainer.height );
+    renderer.shadowMapEnabled = true;
+    renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
     mapcontainer.appendChild( renderer.domElement );
 
     window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function select_city_center(worldWidth, worldLength){
+    var geometry = new THREE.BoxGeometry( 30, 1000, 30 );
+    var material = new THREE.MeshBasicMaterial( {color: 0x006600} );
+    var cube = new THREE.Mesh( geometry, material );
+    cube.castShadow = true;
+    var scope=0.1 ;// 10%
+    // This will range from 40% to 60% if the scope is 10%
+    var x = Math.random()*(regionwidth*(0.5+scope)-regionwidth*(0.5-scope))+ regionwidth*(0.5-scope) - regionwidth/2;
+    var z = Math.random()*(regionheight*(0.5+scope)-regionheight*(0.5-scope))+ regionheight*(0.5-scope) - regionheight/2;
+    cube.position.x=x;
+    cube.position.z=z;
+    console.log("width range at " + regionwidth*(0.5+scope) + "," + regionwidth*(0.5-scope))
+    console.log("center at " + x + "," + z);
+    return cube;
 }
 
 function onWindowResize() {
@@ -62,6 +142,7 @@ function generateHeight( width, height ) {
        that represents the height*/
     var altitudescope = [ 0.20, 0.25, 0.27, 0.3, 0.5, 1 ];
 
+    altitudescope=[1]
     var randval = Math.random();
     var scope_selection = randval * altitudescope.length;
 
@@ -71,8 +152,9 @@ function generateHeight( width, height ) {
 
     var size = width * height, data = new Uint8Array( size ),
     perlin = new ImprovedNoise(), quality = scope, z = Math.random() * 100;
+    var octaves = 5
 
-    for ( var j = 4; j > 0; j -- ) {
+    for ( var j = octaves; j > 0; j -- ) {
 
         for ( var i = 0; i < size; i ++ ) {
 
@@ -86,13 +168,15 @@ function generateHeight( width, height ) {
     }
 
     for ( var i = 0; i < size; i ++ ) {
-        data[ i ] =data[i]* scope;
+        data[i] = data[i] * scope;
+        if (data[i] < terrain_lowpoint){terrain_lowpoint=data[i]};
+        if (data[i] > terrain_highpoint){terrain_highpoint=data[i] };
     }
+    console.log(terrain_lowpoint,terrain_highpoint)
     return data;
-
 }
 
-function generateTexture( data, width, height ) {
+function generateTexture( terraindata, width, height ) {
 
     var canvas, canvasScaled, context, image, imageData,
     level, diff, vector3, sun, shade;
@@ -113,20 +197,41 @@ function generateTexture( data, width, height ) {
     image = context.getImageData( 0, 0, canvas.width, canvas.height );
     imageData = image.data;
 
+    var frostline=Math.random()+0.5;
     for ( var i = 0, j = 0, l = imageData.length; i < l; i += 4, j ++ ) {
 
-        vector3.x = data[ j - 2 ] - data[ j + 2 ];
+        vector3.x = terraindata[ j - 2 ] - terraindata[ j + 2 ];
         vector3.y = 2;
-        vector3.z = data[ j - width * 2 ] - data[ j + width * 2 ];
+        vector3.z = terraindata[ j - width * 2 ] - terraindata[ j + width * 2 ];
         vector3.normalize();
 
         shade = vector3.dot( sun );
 
-        imageData[ i ] = ( 96 + shade * 128 ) * ( 0.5 + data[ j ] * 0.007 );
-        imageData[ i + 1 ] = ( 32 + shade * 96 ) * ( 0.5 + data[ j ] * 0.007 );
-        imageData[ i + 2 ] = ( shade * 96 ) * ( 0.5 + data[ j ] * 0.007 );
-    }
+        // image data determines color...
+        //var terrain_lowpoint=0;
+        //var terrain_highpoint=0;
+        var delta=terrain_highpoint-terrain_lowpoint
+        var datadelta= terraindata[j] - terrain_lowpoint
+        var percentage= datadelta/delta;
 
+        // data
+        // If the frostline is 70%...
+        imageData[ i ] = ( 96 + shade * 128 ) * ( 0.5 + terraindata[ j ] * 0.007 );
+        imageData[ i + 1 ] = ( 32 + shade * 96 ) * ( 0.5 + terraindata[ j ] * 0.007 );
+        imageData[ i + 2 ] = ( shade * 96 ) * ( 0.5 + terraindata[ j ] * 0.007 );
+        if (percentage < frostline ){
+            imageData[ i ] = 0 + terraindata[ j ];
+            imageData[ i + 1 ] = 80;
+            imageData[ i + 2 ] = 0 + terraindata[ j ];
+
+        }else if (percentage > frostline){
+            imageData[ i ] = 255;
+            imageData[ i + 1 ] = 255;
+            imageData[ i + 2 ] = 255;
+        }
+ 
+    }
+//XXX
     context.putImageData( image, 0, 0 );
 
     // Scaled 4x
@@ -145,20 +250,14 @@ function generateTexture( data, width, height ) {
     for ( var i = 0, l = imageData.length; i < l; i += 4 ) {
 
         var v = ~~ ( Math.random() * 5 );
-
         imageData[ i ] += v;
         imageData[ i + 1 ] += v;
         imageData[ i + 2 ] += v;
-
     }
 
     context.putImageData( image, 0, 0 );
-
     return canvasScaled;
-
 }
-
-//
 
 function animate() {
     requestAnimationFrame( animate );
@@ -170,20 +269,22 @@ function render() {
     renderer.render( scene, camera );
 }
 
-
-function generate_terrain_mesh(worldWidth, worldLength) {
-    data = generateHeight( worldWidth, worldLength );
-    var geometry = new THREE.PlaneGeometry( 7500, 7500, worldWidth - 1, worldLength - 1 );
+function generate_terrain_mesh(worldWidth, worldLength, terraindata ) {
+    var geometry = new THREE.PlaneGeometry( regionwidth, regionheight, worldWidth - 1, worldLength - 1 );
     geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
 
     for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
-        geometry.vertices[ i ].y = data[ i ] * 10;
+        geometry.vertices[ i ].y = terraindata[ i ] * 10;
     }
 
-    var texture = new THREE.Texture( generateTexture( data, worldWidth, worldLength ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
+    var texture = new THREE.Texture( generateTexture( terraindata, worldWidth, worldLength ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
     texture.needsUpdate = true;
 
-    return new THREE.Mesh( geometry, new THREE.MeshBasicMaterial( { map: texture } ) );
+    var terrainmesh = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { map: texture } ) );
+    terrainmesh.castShadow = true;
+    terrainmesh.receiveShadow = true;
+
+    return terrainmesh
 }
 
 function setup_controls(camera){
@@ -192,4 +293,5 @@ function setup_controls(camera){
     controls.movementSpeed = 100;
     controls.state=2;
 }
+
 
