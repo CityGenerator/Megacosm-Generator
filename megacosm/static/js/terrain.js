@@ -1,32 +1,24 @@
-if ( ! Detector.webgl ) {
-    Detector.addGetWebGLMessage();
-    document.getElementById( 'mapcontainer' ).innerHTML = "Sorry, you need WebGL enabled to see this.";
-}
 
+var seed = Math.round(Math.random()*100)
+//seed=51
+Math.seedrandom(seed);
+var mapscales=[0.05, 0.1, 0.2, 0.5, 1.0, 2.5];
 
+// What if 1 unit was a decameter rather than a meter?
 
-var mapscales=[0.5, 1, 2, 5, 10, 25];
+var mapscale= 1000// mapscales[Math.floor(Math.random()*mapscales.length)]*1000;
+var terrainResolution=256;
 
-var mapscale=mapscales[1];
+var mapcontainer, camera, controls, scene, renderer,stats;
+var terrain_lowpoint;
+var terrain_highpoint;
+var terrain_delta=0;
 
-var mapcontainer;
-var camera, controls, scene, renderer;
-var terrain_lowpoint=0;
-var terrain_highpoint=0;
-var regionwidth=mapscale*1000;
-var regionheight=mapscale*1000;
-
-console.log("region size:", regionheight,",", regionwidth,"; ", mapscale*2, "")
-// each width unit * 10 is a geometry unit
-var worldWidth = 256, worldLength = 256,
-worldHalfWidth = worldWidth / 2, worldHalfLength = worldLength / 2;
+console.log("region size: ", mapscale,",", mapscale,"; ", (mapscale/1000)*(mapscale/1000), "square kilometers")
 
 var clock = new THREE.Clock();
-Math.seedrandom(98);
 init();
 animate();
-
-
 
 function init() {
 
@@ -41,64 +33,21 @@ function init() {
     setup_controls(camera);
 
     /* Create a terrain mesh and add it to the scene*/
-    var terrainmap  = generateHeight( worldWidth, worldLength );
+    /*note that the x and wy need to be stretched from the resolution to the mapscale */
+    var terrainMap  = generateElevationMap(terrainResolution, mapscale);
+    var terrainMesh = generateTerrainMesh(mapscale, terrainResolution, terrainMap)
+    scene.add(terrainMesh);
 
-    scene.add(generate_terrain_mesh(worldWidth, worldLength, terrainmap));
+    var citymarker=selectCityCenter(mapscale);
+    scene.add(citymarker);
 
-    scene.add(select_city_center(worldWidth, worldLength));
+    buildCompass(scene);
 
-        var object3d    = new THREE.AmbientLight(0x101010)
-        object3d.name   = 'Ambient light'
-        scene.add(object3d)
+    addLights(scene);
 
-        var object3d    = new THREE.DirectionalLight('white', 0.7);
-        object3d.name   = 'Key light'
-        object3d.position.set(3500, 3500, 3500)
-        object3d.castShadow = true;
-        object3d.shadowDarkness =0.7;
-        object3d.shadowMapWidth=1024;
-        object3d.shadowMapHeight=1024;
-        object3d.shadowCameraFar = 10000;
-        object3d.shadowCameraTop = 5000;
-        object3d.shadowCameraBottom = -5000;
-        object3d.shadowCameraLeft = -5000;
-        object3d.shadowCameraRight = 5000;
-        object3d.shadowCameraVisible = false;
-        scene.add(object3d)
-
-        var object3d    = new THREE.DirectionalLight('white', 0.3)
-        object3d.name   = 'Fill light'
-        object3d.position.set(-3500,3500,3500)
-        object3d.castShadow = true;
-        object3d.shadowDarkness =0.35;
-        object3d.shadowMapWidth=1024;
-        object3d.shadowMapHeight=1024;
-        object3d.shadowCameraFar = 10000;
-        object3d.shadowCameraTop = 5000;
-        object3d.shadowCameraBottom = -5000;
-        object3d.shadowCameraLeft = -5000;
-        object3d.shadowCameraRight = 5000;
-        object3d.shadowCameraVisible = false;
-        scene.add(object3d)
-
-        var object3d    = new THREE.DirectionalLight('white', 0.225)
-        object3d.name   = 'Back light'
-        object3d.position.set(0,2000,-4300)
-        object3d.castShadow = true;
-        object3d.shadowDarkness =0.25;
-        object3d.shadowMapWidth=1024;
-        object3d.shadowMapHeight=1024;
-        object3d.shadowCameraFar = 8000;
-        object3d.shadowCameraTop = 5000;
-        object3d.shadowCameraBottom = -5000;
-        object3d.shadowCameraLeft = -5000;
-        object3d.shadowCameraRight = 5000;
-        object3d.shadowCameraVisible = false;
-        object3d.name   = 'Back light'
-        scene.add(object3d)
-
-    camera.position.y = terrainmap[ worldHalfWidth + worldHalfLength * worldWidth ]*10 + 20500;
-
+    camera.position.y = 3000 ;
+    camera.position.x = 2000 ;
+    camera.position.z = -2000 ;
 
     renderer = new THREE.WebGLRenderer({antialias: true});
     renderer.setClearColor( 0xbfd1e5 );
@@ -106,149 +55,197 @@ function init() {
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
+
+    stats = document.createElement( 'div' );
+    stats.innerHTML = 'seed '+seed;
+    stats.style.position = 'absolute';
+    stats.style.top = '0px';
+    mapcontainer.appendChild( stats );
+
     mapcontainer.appendChild( renderer.domElement );
 
     window.addEventListener( 'resize', onWindowResize, false );
 }
 
-function select_city_center(worldWidth, worldLength){
-    var geometry = new THREE.BoxGeometry( 30, 1000, 30 );
-    var material = new THREE.MeshBasicMaterial( {color: 0x006600} );
-    var cube = new THREE.Mesh( geometry, material );
-    cube.castShadow = true;
-    var scope=0.1 ;// 10%
-    // This will range from 40% to 60% if the scope is 10%
-    var x = Math.random()*(regionwidth*(0.5+scope)-regionwidth*(0.5-scope))+ regionwidth*(0.5-scope) - regionwidth/2;
-    var z = Math.random()*(regionheight*(0.5+scope)-regionheight*(0.5-scope))+ regionheight*(0.5-scope) - regionheight/2;
-    cube.position.x=x;
-    cube.position.z=z;
-    console.log("width range at " + regionwidth*(0.5+scope) + "," + regionwidth*(0.5-scope))
-    console.log("center at " + x + "," + z);
-    return cube;
-}
 
-function onWindowResize() {
 
-    camera.aspect = mapcontainer.width / mapcontainer.height;
-    camera.updateProjectionMatrix();
-    renderer.setSize( mapcontainer.width, mapcontainer.height );
+function generateElevationMap(resolution, mapscale) {
+    // resolution is 256x256
+    // size is 65536
+    var size = resolution*resolution;
+    var data = [];
+    perlin = new ImprovedNoise()
+    // TODO base elevation and variation both need to be skewed. look into gamma curve correction
+    var z_slice = Math.random() * 100;  // Determines region of noise to slice from
+    var octavecount=4;
 
-    controls.handleResize();
-
-}
-
-function generateHeight( width, height ) {
-    /* Given a map of width x height, generate a single array
-       that represents the height*/
-    var altitudescope = [ 0.20, 0.25, 0.27, 0.3, 0.5, 1 ];
-
-    altitudescope=[1]
-    var randval = Math.random();
-    var scope_selection = randval * altitudescope.length;
-
-    var scope = altitudescope[ Math.floor(scope_selection) ];
-
-    console.log( altitudescope.length + " * "+randval +" ="+ scope_selection+ " resulting in "+ scope);
-
-    var size = width * height, data = new Uint8Array( size ),
-    perlin = new ImprovedNoise(), quality = scope, z = Math.random() * 100;
-    var octaves = 5
-
-    for ( var j = octaves; j > 0; j -- ) {
-
+    // forget the actual terrain, just map the noise
+    // TODO amplitude should be proportional to octave
+    for ( var octave=0 ; octave < octavecount ; octave++ ){
+        var octavevalue=Math.pow(2,octave)*1.0;
         for ( var i = 0; i < size; i ++ ) {
-
-            var x = i % width, y = ~~ ( i / width );
-            var noise=Math.abs( perlin.noise( x / quality, y / quality, z ));
-
-            data[ i ] += Math.abs( noise  * quality);
+            var x = i % resolution, y = ~~ ( i / resolution );
+            var noise = perlin.noise( x/200*octavevalue, y/200*octavevalue, z_slice ); // noise should range from -1 to 1
+            if (isNaN(data[i])) {
+                data[i] = noise;
+            }else{
+                data[i] = data[i] + noise;
+            }
         }
-        quality *= 5;
-
+        console.log("last elevation for octave ",octave,":",data[size-1])
     }
 
+    // REMEMBER, these are in decameters
+
+//    var elevationrandom = Math.pow(Math.random(), 2);
+    var elevationrandom = -Math.log(Math.random())
+    var elevationrandom =1.1*Math.sin(1.5*(Math.random())-1.6)+1.1;
+    console.log('#################### ', elevationrandom)
+    var baseElevation =  Math.floor(elevationrandom * 360);    // Starting elevation, between 0 and 5000 meters (Peru has high cities)
+
+    // Altitude ranges from 0-6 for a 1000km square to 0-150 for a 25000km square
+    var elevationVariation = Math.floor(Math.random() * 150*(mapscale/2500)); // variation in altitude from 0 to 1500 meters (LA has mountains apparently)
+    // XXX 3500 above should be 1500; testing varying elevation.
+    terrain_highpoint=baseElevation - elevationVariation;
+    terrain_lowpoint=baseElevation + elevationVariation;
+    console.log("base elevation and variation :", baseElevation, elevationVariation)
+    console.log("initial low and high (these will flip) :", terrain_lowpoint, terrain_highpoint)
+
+    // Now that the noise is settled, loop through once more to convert it to an elevation;
     for ( var i = 0; i < size; i ++ ) {
-        data[i] = data[i] * scope;
+        var variance=Math.round(  data[i]*elevationVariation  ,2  );
+        data[i] = baseElevation + variance;
+//        console.log("base + variance = elevation ", baseElevation, variance, data[i] )
+
         if (data[i] < terrain_lowpoint){terrain_lowpoint=data[i]};
         if (data[i] > terrain_highpoint){terrain_highpoint=data[i] };
     }
-    console.log(terrain_lowpoint,terrain_highpoint)
+    console.log("last elevation:",data[size-1])
+    terrain_delta=terrain_highpoint-terrain_lowpoint;
+    console.log("final terrain low/high and delta: ",terrain_lowpoint,terrain_highpoint, terrain_delta)
     return data;
 }
 
-function generateTexture( terraindata, width, height ) {
+function generateTexture( terraindata, terrainResolution, mapscale ) {
 
-    var canvas, canvasScaled, context, image, imageData,
-    level, diff, vector3, sun, shade;
+    // Canvas is a representation of the skin we're about to create
+    // not an actaul canvas element that will be used
+    var canvas = document.createElement( 'canvas' );
+    //note that terrain resolution is only 256
+    canvas.width = terrainResolution;
+    canvas.height = terrainResolution;
 
-    vector3 = new THREE.Vector3( 0, 0, 0 );
-
-    sun = new THREE.Vector3( 1, 1, 1 );
-    sun.normalize();
-
-    canvas = document.createElement( 'canvas' );
-    canvas.width = width;
-    canvas.height = height;
-
-    context = canvas.getContext( '2d' );
+    // start with a 256x256 black rectangle on a canvas
+    var context = canvas.getContext('2d');
     context.fillStyle = '#000';
-    context.fillRect( 0, 0, width, height );
+    context.fillRect(0, 0, terrainResolution, terrainResolution);
 
-    image = context.getImageData( 0, 0, canvas.width, canvas.height );
-    imageData = image.data;
+    // Create a 256x256 image
+    var image = context.getImageData( 0, 0, terrainResolution,terrainResolution );
+    //imageData is a 65536 element array full of stuff (I guess)
+    var imageData = image.data;
 
-    var frostline=Math.random()+0.5;
-    for ( var i = 0, j = 0, l = imageData.length; i < l; i += 4, j ++ ) {
-
-        vector3.x = terraindata[ j - 2 ] - terraindata[ j + 2 ];
-        vector3.y = 2;
-        vector3.z = terraindata[ j - width * 2 ] - terraindata[ j + width * 2 ];
-        vector3.normalize();
-
-        shade = vector3.dot( sun );
-
-        // image data determines color...
-        //var terrain_lowpoint=0;
-        //var terrain_highpoint=0;
-        var delta=terrain_highpoint-terrain_lowpoint
-        var datadelta= terraindata[j] - terrain_lowpoint
-        var percentage= datadelta/delta;
-
-        // data
-        // If the frostline is 70%...
-        imageData[ i ] = ( 96 + shade * 128 ) * ( 0.5 + terraindata[ j ] * 0.007 );
-        imageData[ i + 1 ] = ( 32 + shade * 96 ) * ( 0.5 + terraindata[ j ] * 0.007 );
-        imageData[ i + 2 ] = ( shade * 96 ) * ( 0.5 + terraindata[ j ] * 0.007 );
-        if (percentage < frostline ){
-            imageData[ i ] = 0 + terraindata[ j ];
-            imageData[ i + 1 ] = 80;
-            imageData[ i + 2 ] = 0 + terraindata[ j ];
-
-        }else if (percentage > frostline){
+    // loop through the length of the image by 4colors a go.
+    // i = pixel color position in image (rgba, hence counting by 4)
+    // j = counter for terraindata
+    for ( var i = 0, j = 0 ; i < imageData.length ; i += 4, j ++ ) {
+        var datadelta = terraindata[j] - terrain_lowpoint;
+        var percentage_delta = datadelta / terrain_delta;
+        
+        // REMEMBER, we've switched to Decameters
+        if (terraindata[j] < terrain_lowpoint){
+            // This is just to make sure terrain data doesn't go lower than the low point- it'll be bright red
+            imageData[ i ] = 255;
+            imageData[ i + 1 ] = 0;
+            imageData[ i + 2 ] = 0;
+        } else if (terraindata[j] >500){
+            // mountain tops are white TODO add a 5% chance of brown for realism
             imageData[ i ] = 255;
             imageData[ i + 1 ] = 255;
             imageData[ i + 2 ] = 255;
+        } else if (terraindata[j] <=500 && terraindata[j] >300 ){
+            // white to red rock
+            var percentage= (terraindata[j]-300)/200
+            var transientcolor=gradient_color([255,255,255],[152,2,2],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=300 && terraindata[j] >200 ){
+            // red rock to brown
+            var percentage= (terraindata[j]-200)/100
+            var transientcolor=gradient_color([152,2,2],[161,68,1],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=200 && terraindata[j] >50 ){
+            var percentage= (terraindata[j]-50)/150
+            var transientcolor=gradient_color([161,68,1],[203, 185, 107],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=50 && terraindata[j] >1 ){
+            var percentage= (terraindata[j]-1)/49
+            var transientcolor=gradient_color([203, 185, 107],[15, 120, 48],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=1 && terraindata[j] >0 ){
+            var percentage= (terraindata[j])/1
+            var transientcolor=gradient_color([15, 120, 48],[0, 99, 70],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        //WATER!
+        } else if (terraindata[j] <=0 && terraindata[j] >-0.5 ){
+            var percentage= (0.5+terraindata[j])/0.5
+            var transientcolor=gradient_color([254, 171, 127],[203, 185, 107],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=-0.5 && terraindata[j] >-2 ){
+            var percentage= (2+terraindata[j])/1.5
+            var transientcolor=gradient_color([203, 185, 107],[76, 193, 203],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=-2 && terraindata[j] >-15 ){
+            var percentage= (15+terraindata[j])/13
+            var transientcolor=gradient_color([76, 193, 203],[54, 154, 212],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        } else if (terraindata[j] <=-15 && terraindata[j] >-100 ){
+            var percentage= (100+terraindata[j])/85
+            var transientcolor=gradient_color([54, 154, 212],[15, 120, 48],percentage);
+            imageData[ i ] = transientcolor[0];
+            imageData[ i + 1 ] = transientcolor[1];
+            imageData[ i + 2 ] = transientcolor[2];
+        }
+        else{
+            imageData[ i ] = 255;
+            imageData[ i + 1 ] = 255;
+            imageData[ i + 2 ] = 0;
         }
  
     }
-//XXX
+    console.log("image contains:", imageData.length," color bits")
     context.putImageData( image, 0, 0 );
-
-    // Scaled 4x
-
-    canvasScaled = document.createElement( 'canvas' );
-    canvasScaled.width = width * 4;
-    canvasScaled.height = height * 4;
-
+    
+    // create fullsize canvas
+    var canvasScaled = document.createElement( 'canvas' );
+    canvasScaled.width = mapscale;
+    canvasScaled.height = mapscale;
     context = canvasScaled.getContext( '2d' );
-    context.scale( 4, 4 );
+
+    // whatever image is written, scale it by 3.9
+    context.scale( mapscale/terrainResolution, mapscale/terrainResolution );
     context.drawImage( canvas, 0, 0 );
 
-    image = context.getImageData( 0, 0, canvasScaled.width, canvasScaled.height );
+    image = context.getImageData( 0, 0, terrainResolution, terrainResolution );
     imageData = image.data;
 
+    // I have no idea what this does; commenting it out out of fear.
     for ( var i = 0, l = imageData.length; i < l; i += 4 ) {
-
         var v = ~~ ( Math.random() * 5 );
         imageData[ i ] += v;
         imageData[ i + 1 ] += v;
@@ -259,25 +256,35 @@ function generateTexture( terraindata, width, height ) {
     return canvasScaled;
 }
 
-function animate() {
-    requestAnimationFrame( animate );
-    render();
+
+function gradient_color(colora, colorb, percentage ){
+    
+    var newcolor = [];
+    for (var i = 0; i<3; i++){
+        // For each color, determine the variance
+        var variance=(colora[i]-colorb[i]);
+        // multiply the variance * the percentage, round, then add back to first color
+        newcolor[i] = colorb[i] + Math.round(variance*percentage)
+
+    }
+    return newcolor
 }
 
-function render() {
-    controls.update( clock.getDelta() );
-    renderer.render( scene, camera );
-}
 
-function generate_terrain_mesh(worldWidth, worldLength, terraindata ) {
-    var geometry = new THREE.PlaneGeometry( regionwidth, regionheight, worldWidth - 1, worldLength - 1 );
+function generateTerrainMesh(mapscale, terrainResolution, terraindata ) {
+
+    var geometry = new THREE.PlaneGeometry( mapscale, mapscale, terrainResolution - 1, terrainResolution - 1  );
     geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
 
     for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
-        geometry.vertices[ i ].y = terraindata[ i ] * 10;
+        if (terraindata[ i ] > 0) {
+            geometry.vertices[ i ].y = terraindata[ i ] ;
+        }else{
+            geometry.vertices[ i ].y = 0;
+        }
     }
 
-    var texture = new THREE.Texture( generateTexture( terraindata, worldWidth, worldLength ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
+    var texture = new THREE.Texture( generateTexture( terraindata, terrainResolution, mapscale ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
     texture.needsUpdate = true;
 
     var terrainmesh = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { map: texture } ) );
@@ -285,13 +292,6 @@ function generate_terrain_mesh(worldWidth, worldLength, terraindata ) {
     terrainmesh.receiveShadow = true;
 
     return terrainmesh
-}
-
-function setup_controls(camera){
-    controls = new THREE.OrbitControls( camera );
-    controls.maxDistance = 8000;
-    controls.movementSpeed = 100;
-    controls.state=2;
 }
 
 
