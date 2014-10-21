@@ -19,23 +19,26 @@ function buildCompass(scene){
     scene.add(line);
 }
 
-function selectCityCenter(mapscale){
-    var geometry = new THREE.BoxGeometry( 10, 5000, 10 );
+function selectCityCenter(mapscale, baseElevation){
+    var geometry = new THREE.BoxGeometry( 1, 30, 1 );
     var material = new THREE.MeshBasicMaterial( {color: 0x006600} );
     var cube = new THREE.Mesh( geometry, material );
     cube.castShadow = true;
+    cube.receiveShadow = true;
+
     var scope=0.1 ;// 10%
     // This will range from 40% to 60% if the scope is 10%
     var x = Math.random()*(mapscale*(0.5+scope)-mapscale*(0.5-scope))+ mapscale*(0.5-scope) - mapscale/2;
     var z = Math.random()*(mapscale*(0.5+scope)-mapscale*(0.5-scope))+ mapscale*(0.5-scope) - mapscale/2;
     cube.position.x=x;
+    cube.position.y=baseElevation;
     cube.position.z=z;
     console.log("width range at " + mapscale*(0.5+scope) + "," + mapscale*(0.5-scope))
     console.log("center at " + x + "," + z);
     return cube;
 }
-function onWindowResize() {
 
+function onWindowResize() {
     camera.aspect = mapcontainer.width / mapcontainer.height;
     camera.updateProjectionMatrix();
     renderer.setSize( mapcontainer.width, mapcontainer.height );
@@ -59,8 +62,17 @@ function setup_controls(camera){
     controls.maxDistance = 8000;
     controls.movementSpeed = 100;
     controls.state=2;
+    controls.target.y=baseElevation; // This is to make sure it doesn't "rise" out of camera visibility.
+
 }
-function addLights(scene){
+function addCamera(scene, mapscale, baseElevation){
+    var zoom=0.3
+    camera.position.y = mapscale * zoom *1.5 + baseElevation;
+    camera.position.x = mapscale * zoom ;
+    camera.position.z = -mapscale * zoom ;
+}
+function addLights(scene, mapscale, baseElevation){
+    var cameraradius=mapscale
 
     var object3d    = new THREE.AmbientLight(0x101010)
     object3d.name   = 'Ambient light'
@@ -68,47 +80,41 @@ function addLights(scene){
 
     var object3d    = new THREE.DirectionalLight('white', 0.7);
     object3d.name   = 'Key light'
-    object3d.position.set(3500, 3500, 3500)
-    object3d.castShadow = true;
-    object3d.shadowDarkness =0.7;
-    object3d.shadowMapWidth=1024;
-    object3d.shadowMapHeight=1024;
-    object3d.shadowCameraFar = 10000;
-    object3d.shadowCameraTop = 5000;
-    object3d.shadowCameraBottom = -5000;
-    object3d.shadowCameraLeft = -5000;
-    object3d.shadowCameraRight = 5000;
+    object3d.position.set(mapscale, mapscale+baseElevation, mapscale)
+    object3d=configShadowbox(object3d, cameraradius, baseElevation);
+    object3d.shadowDarkness = 0.6;
     object3d.shadowCameraVisible = false;
     scene.add(object3d)
+    console.log( object3d)
+    console.log( "baseEle", baseElevation)
 
     var object3d    = new THREE.DirectionalLight('white', 0.3)
     object3d.name   = 'Fill light'
-    object3d.position.set(-3500,3500,3500)
-    object3d.castShadow = true;
-    object3d.shadowDarkness =0.35;
-    object3d.shadowMapWidth=1024;
-    object3d.shadowMapHeight=1024;
-    object3d.shadowCameraFar = 10000;
-    object3d.shadowCameraTop = 5000;
-    object3d.shadowCameraBottom = -5000;
-    object3d.shadowCameraLeft = -5000;
-    object3d.shadowCameraRight = 5000;
-    object3d.shadowCameraVisible = false;
-    scene.add(object3d)
-    var object3d    = new THREE.DirectionalLight('white', 0.225)
-    object3d.name   = 'Back light'
-    object3d.position.set(0,2000,-4300)
-    object3d.castShadow = true;
+    object3d.position.set(-mapscale, mapscale/4+baseElevation, mapscale)
+    object3d=configShadowbox(object3d, cameraradius, baseElevation);
     object3d.shadowDarkness =0.25;
-    object3d.shadowMapWidth=1024;
-    object3d.shadowMapHeight=1024;
-    object3d.shadowCameraFar = 8000;
-    object3d.shadowCameraTop = 5000;
-    object3d.shadowCameraBottom = -5000;
-    object3d.shadowCameraLeft = -5000;
-    object3d.shadowCameraRight = 5000;
     object3d.shadowCameraVisible = false;
-    object3d.name   = 'Back light'
     scene.add(object3d)
 
+    var object3d    = new THREE.DirectionalLight('white', 0.225)
+    object3d.name   = 'Back light'
+    object3d.position.set(0, mapscale/4+baseElevation, -mapscale)
+    object3d=configShadowbox(object3d, cameraradius, baseElevation);
+    object3d.shadowDarkness =0.15;
+    object3d.shadowCameraVisible = false;
+    object3d.name   = 'Back light'
+    scene.add(object3d)
+}
+
+function configShadowbox(object3d, cameraradius){
+    object3d.castShadow = true;
+    object3d.target.y = baseElevation;
+    object3d.shadowMapWidth=1024;
+    object3d.shadowMapHeight=1024;
+    object3d.shadowCameraFar = cameraradius*2.5;
+    object3d.shadowCameraTop = cameraradius;
+    object3d.shadowCameraBottom = -cameraradius;
+    object3d.shadowCameraLeft = -cameraradius;
+    object3d.shadowCameraRight = cameraradius;
+    return object3d
 }
