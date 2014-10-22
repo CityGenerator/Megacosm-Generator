@@ -6,12 +6,35 @@ if ( ! Detector.webgl ) {
     document.getElementById( 'mapcontainer' ).innerHTML = "Sorry, you need WebGL enabled to see this.";
 }
 
+
+// Lets set a couple of terrain transition colors and ranges
+// tcolors represent transition color points; There are doubles on the end to represent both "expected" extremes and unexpected extremes.
+// this allows us to have a proper transition between snow and lightrock, yet account for elevations beyond what we'd expect for snow.
+var tcolors=[
+
+                //  snow                snow            lightrock           rock            pine            hightree        deciduous       marsh           grass 
+                    [255,255,226],      [255,255,226],  [241, 213, 192],    [118, 87, 33],  [115, 145, 93], [71, 99, 2],    [39, 120, 15],  [0, 102, 51],   [75, 107, 70], 
+                // pink sand            brown sand      oceanspray          shallow water   mid water       deep water      deepwater
+                    [229, 207, 185],    [112, 102, 79], [136, 181, 190],    [30, 67, 81],   [0, 42, 81],    [0, 0, 81],     [0, 0, 81] 
+            ]
+// atp = Altitude Transition Points, in Decameters
+// These are the points where transition colors lay; the actual pixel color is determined by comparing elevation to its surrounding
+// transition points, then using that to find a color between the two transition color surrounding it. This gives us a nice segmented gradient.
+// Note the extreme on both ends protects us from "absurd" values falling outside of a regular transition.
+var atp=[
+                //  snow                snow            lightrock           rock            pine            hightree        deciduous       marsh           grass 
+                    100000,             550,            400,                300,            250,            100,            60,             10,             1,
+                //  pink sand           brown sand      oceanspray          shallow water   mid water       deep water      deepwater
+                    0.5,                0,              -.5,                -1,             -15,            -100,           -100000
+        ]
+
+
 // boring resize function
 function onWindowResize() {
-    camera.aspect = mapcontainer.width / mapcontainer.height;
+    var mapcontainer=document.getElementById( 'mapcontainer' )
+    camera.aspect = mapcontainer.offsetWidth / mapcontainer.offsetHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize( mapcontainer.width, mapcontainer.height );
-    controls.handleResize();
+    renderer.setSize( mapcontainer.offsetWidth, mapcontainer.offsetHeight );
 }
 
 // boring animate
@@ -20,20 +43,34 @@ function animate() {
     render();
 }
 
+// Configure the renderer for the container
+function setup_renderer(mapcontainer){
+    renderer = new THREE.WebGLRenderer({antialias: true });
+    renderer.setClearColor( 0xbfd1e5 );
+    renderer.setSize(  mapcontainer.offsetWidth, mapcontainer.offsetHeight );
+    renderer.shadowMapEnabled = true;
+    renderer.shadowMapType = THREE.PCFSoftShadowMap;
+    mapcontainer.appendChild( renderer.domElement );
+}
+
 // boring render
 function render() {
     controls.update( clock.getDelta() );
     renderer.render( scene, camera );
 }
 
+function generateBaseElevation(){
+    // FIXME this is a sloppy way to skew elevation to be low...
+    var elevationrandom =1.1*Math.sin(1.5*(Math.random())-1.6)+1.1;
+
+    // Starting elevation, between 0 and 360 decameters (Peru has high cities)
+    return  Math.floor(elevationrandom * 360);
+}   
+
 function setup_controls(camera, baseElevation, mapscale){
     controls = new THREE.OrbitControls( camera );
     // farthest camera can zoom out
     controls.maxDistance = mapscale*1.5;
-    // the speed in which it moves
-    controls.movementSpeed = 100;
-    // state flips pan and rotate buttons
-    controls.state=2;
     // This sets the target that the camera focuses on
     controls.target.y=baseElevation; 
 }
@@ -58,7 +95,7 @@ function buildCompass(scene){
 
 // selectCityCenter
 // selects a centerpoint for the city. This is where at least 2-3 of the largest roads meet.
-function selectCityCenter(mapscale, baseElevation){
+function selectCityCenter(mapscale){
     var geometry = new THREE.BoxGeometry( 1, 3000, 1 );
     var material = new THREE.MeshBasicMaterial( {color: 0x006600} );
     var cube = new THREE.Mesh( geometry, material );
@@ -124,7 +161,7 @@ function addLights(scene, mapscale, baseElevation){
 }
 
 // Each light has a shadowbox to determine when/where to cast shadows.
-function configShadowbox(light, cameraradius){
+function configShadowbox(light, cameraradius, baseElevation){
     light.castShadow = true;
     light.target.y = baseElevation;
     light.shadowMapWidth=1024;
@@ -138,12 +175,40 @@ function configShadowbox(light, cameraradius){
 }
 
 // configure stats to show some basic info on the map displayed
-function config_stats(seed, mapscale, baseElevation){
+function config_stats(seed, mapscale, baseElevation, elevationVariation){
     var stats = document.createElement( 'div' );
     stats.innerHTML = 'seed: '+seed+"<br>"+
+                      "size: "+(mapscale/100)+"km<br>"+
                       "altitude: "+(baseElevation/100)+"km<br>"+
-                      "diameter: "+(mapscale/100)+"km";
+                      "variation: "+Math.round(elevationVariation*10)+"m";
     stats.style.position = 'absolute';
     stats.style.top = '0px';
-    return stats
+    return stats;
+}
+
+// Transform a small canvas into a large canvas
+function scaleTexture(smallcanvas, mapscale){
+
+    // create fullsize canvas
+    var largerCanvas = document.createElement( 'canvas' );
+    largerCanvas.width = mapscale;
+    largerCanvas.height = mapscale;
+
+    // take what is in the small canvas and scale it to mapscale
+    var context = largerCanvas.getContext( '2d' );
+    context.scale( mapscale/smallcanvas.width, mapscale/smallcanvas.height );
+    context.drawImage( smallcanvas, 0, 0 );
+
+    return largerCanvas;
+}
+
+function mapTerrainToGeometry(geometry,terraindata){
+    for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
+        if (terraindata[ i ] > 0) {
+            geometry.vertices[ i ].y = terraindata[ i ] ;
+        }else{
+            geometry.vertices[ i ].y = 0;
+        }
+    }
+    return geometry;
 }

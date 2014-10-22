@@ -2,29 +2,21 @@
 // Seeds currently generate from 0-1000, which is an arbitrary limit;
 // will be passed in from the backend later
 var seed = Math.round(Math.random()*1000)
-
+seed=605
 // Seed random courtesy of seedrandom.min.js
 Math.seedrandom(seed);
 
 // Mapscales represent how big the square map is in kilometers
 var mapscales=[ 1, 2, 5, 10, 25];
 
-// Units are decameters
+// mapscale units are decameters
+//  1 =  100 decameters =  1 km
+// 25 = 2500 decameters = 25 km
 var mapscale= mapscales[Math.floor(Math.random()*mapscales.length)]*100;
 
-//2.5 = 2500 decameters = 25 km
-//0.1= 100 decameters = 1 km
+// These 4 variables are unavoidable globals
+var camera, controls, scene, renderer;
 
-// FIXME this is a sloppy way to skew elevation to be low...
-var elevationrandom =1.1*Math.sin(1.5*(Math.random())-1.6)+1.1;
-
-// Starting elevation, between 0 and 360 decameters (Peru has high cities)
-var baseElevation =  Math.floor(elevationrandom * 360);
-
-// how smooth it looks. increasing this adds compute time exponentially
-var terrainResolution=512;
-
-var mapcontainer, camera, controls, scene, renderer,stats;
 var terrain_lowpoint;
 var terrain_highpoint;
 var terrain_delta=0;
@@ -39,43 +31,40 @@ animate();
 function init() {
 
     /* Grab the map container and set the width */
-    mapcontainer = document.getElementById( 'mapcontainer' );
-    mapcontainer.width=800;
-    mapcontainer.height=600;
-    
+    var mapcontainer = document.getElementById( 'mapcontainer' );
+    // Set the base elevation for the map- is it seaside, or is it in the mountains?
+    var baseElevation = generateBaseElevation();
+
+    // Gives us 50-150 depending on mapscale.
+    var variationMax = mapscale/24 + 45 + (5/6);
+
+    // Gives us 0.1-0.5 depending on mapscale.
+    var variationMin = mapscale/6000 + (1/12);
+
+    // altitude varies according to the land area viewed;
+    var elevationVariation = Math.random()*(variationMax-variationMin) + variationMin
+
     /* Set up the camera, scene and controls */
-    camera = new THREE.PerspectiveCamera( 60, mapcontainer.width / mapcontainer.height, 1, 20000 );
+    camera = new THREE.PerspectiveCamera( 60, mapcontainer.offsetWidth / mapcontainer.offsetHeight, 1, 20000 );
     scene = new THREE.Scene();
     setup_controls(camera, baseElevation, mapscale);
-
-    /* Create a terrain mesh and add it to the scene*/
-    /*note that the x and wy need to be stretched from the resolution to the mapscale */
-    var elevationMap  = generateElevationMap(terrainResolution, mapscale, baseElevation);
-    var terrainMesh = generateTerrainMesh(mapscale, terrainResolution, elevationMap)
-    scene.add(terrainMesh);
-
-    var citymarker=selectCityCenter(mapscale, baseElevation);
-    scene.add(citymarker);
-
-    //buildCompass(scene);
-
     addLights(scene, mapscale, baseElevation);
     addCamera(scene, mapscale, baseElevation);
 
-    renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setClearColor( 0xbfd1e5 );
-    renderer.setSize( mapcontainer.width, mapcontainer.height );
-    renderer.shadowMapEnabled = true;
-    renderer.shadowMapType = THREE.PCFSoftShadowMap;
-    mapcontainer.appendChild( renderer.domElement );
+    /* Create a terrain mesh and add it to the scene*/
+    var land = generateLand(mapscale, baseElevation, elevationVariation)
+    //TODO generate roads on the map right here.
+    scene.add(land);
 
-    stats = config_stats(seed, mapscale, baseElevation)
+    setup_renderer(mapcontainer);
+
+    var stats = config_stats(seed, mapscale, baseElevation, elevationVariation)
     mapcontainer.appendChild( stats );
 
     window.addEventListener( 'resize', onWindowResize, false );
 }
 
-function generateElevationMap(resolution, mapscale, baseElevation) {
+function generateElevationMap(mapscale, baseElevation, elevationVariation, resolution) {
     // resolution is 256x256
     // size is 65536
     var size = resolution*resolution;
@@ -88,28 +77,19 @@ function generateElevationMap(resolution, mapscale, baseElevation) {
     // Octave 1 should be zoomed out the most, lots of variation, little amplitude
     // octave 2 should be zoomed in, less variation more amplitude
     // octave 3 should be more zoomed, even less variation, even more amplitude
-    var scale=50.0
+    var scale = 50.0
     for ( var octave=1 ; octave <= octavecount ; octave++ ){
         var octavevalue=Math.pow(2,octave-1)*scale;
         for ( var i = 0; i < size; i ++ ) {
             var x = i % resolution, y = ~~ ( i / resolution );
             var noise = perlin.noise( x/octavevalue, y/octavevalue, z_slice ); // noise should range from -1 to 1
             if (isNaN(data[i])) {
-                data[i]=0
+                data[i] = 0
             }
             var amplitude=(octave/octavecount)
             data[i] = data[i] + noise*amplitude;
         }
     }
-
-    // REMEMBER, these are in decameters
-    // altitude varies according to the land area viewed;
-    // NOTE: mapscale between 100 decameters and 2500 decameters
-    var variationMax=mapscale/24 + 45 +(5/6)  // Gives us 50-150 depending on size.
-    var variationMin=mapscale/6000 +(1/12)  // Gives us 0.1-0.5 depending on size.
-    var elevationVariation= Math.random()*(variationMax-variationMin) + variationMin
-    console.log("varmin, varmax, vartotal: ",variationMin,variationMax,elevationVariation)
-
     terrain_highpoint=baseElevation - elevationVariation;
     terrain_lowpoint=baseElevation + elevationVariation;
 
@@ -125,23 +105,33 @@ function generateElevationMap(resolution, mapscale, baseElevation) {
     return data;
 }
 
+
 function generateTexture( terraindata, terrainResolution, mapscale ) {
 
     // Canvas is a representation of the skin we're about to create
     // not an actaul canvas element that will be used
-    var canvas = document.createElement( 'canvas' );
-    //note that terrain resolution is only 256
-    canvas.width = terrainResolution;
-    canvas.height = terrainResolution;
+    var smallcanvas = document.createElement( 'canvas' );
 
-    // start with a 256x256 black rectangle on a canvas
-    var context = canvas.getContext('2d');
-    context.fillStyle = '#000';
-    context.fillRect(0, 0, terrainResolution, terrainResolution);
+    //note that terrain resolution is small
+    smallcanvas.width = terrainResolution;
+    smallcanvas.height = terrainResolution;
 
-    // Create a 256x256 image
-    var image = context.getImageData( 0, 0, terrainResolution,terrainResolution );
-    //imageData is a 65536 element array full of stuff (I guess)
+    // start with a black rectangle on a canvas
+    var smallcontext = smallcanvas.getContext('2d');
+    smallcontext.fillRect(0, 0, terrainResolution, terrainResolution);
+    smallcontext.fillStyle = '#000';
+    // Create an image to color
+    var smallimage = smallcontext.getImageData( 0, 0, terrainResolution, terrainResolution);
+    // apply our color palette to the image that will be mapped
+    smallimage = colorTerrainImage(smallimage, terraindata)
+    // apply our new colors to the context image
+    smallcontext.putImageData( smallimage, 0, 0 );
+ 
+    return scaleTexture(smallcanvas, mapscale);
+
+}
+function colorTerrainImage(image, terraindata){
+    //imageData is a 65536 element array-like object full of stuff (I guess)
     var imageData = image.data;
 
     // loop through the length of the image by 4colors a go.
@@ -152,86 +142,45 @@ function generateTexture( terraindata, terrainResolution, mapscale ) {
         var percentage_delta = datadelta / terrain_delta;
 
         // Set the base color to red, just in case
+        // If imageData was a real array, we could splice these in. alas, it's undefined.
         imageData[ i ] = 255;
         imageData[ i + 1 ] = 0;
         imageData[ i + 2 ] = 0;
-        
-        // REMEMBER, we've switched to Decameters
-        // altitude Transition Points
-        
-        var atp=[
-                1000, //snowiest, 360+150 should be way under 1000, but it's here just in case
-                550, //snow
-                400, //light rocks
-                300, // rocky
-                250, //pine
-                100, //olive
-                60,  //decid
-                10,  //marsh
-                1,   //blah grass
-                0.5, //yellow sand
-                0,   //pink sand
-                -.5, //ocean spray water
-                -1,  //shallow water
-                -15, // midwater
-                -100, //deepwater
-                -1000, //deepwater
-                ]
-        var tcolors=[ 
-                        [255,255,255], //snow
-                        [255,255,226], //snow
-                        [241, 213, 192],   //lighrock
-                        [118, 87, 33],   // rock
-                        [115, 145, 93],   //pine
-                        [71, 99, 2],   //  olive tree
-                        [39, 120, 15],   //decid
-                        [0, 102, 51],   //marsh
-                        [75, 107, 70],   // blah grass
-                        
-                        [229, 207, 185],   //pink sand
-                        [112, 102, 79],   // brown sand
 
-                        [136, 181, 190],   //ocean spray water
-                        [30, 67, 81],   // shallow water
-                        [0, 42, 81], //midwater
-                        [0, 0, 81],   // deep water
-                        [0, 0, 81],   // deep water
-                    ]
-            //Loop through each atp, note the intentional use of 1 rather than 0 to create the offset
-            for (var tran=1; tran< atp.length; tran++){
-                // if the current elevation is between these two transition points
-                if (terraindata[j] > atp[tran] && terraindata[j] <= atp[tran-1] ){
-                    var difference = atp[tran-1] - atp[tran]; // should always be a positive number
-                    var place = terraindata[j] - atp[tran]; //  atp[tran] should always be smaller, so place is positive
-                    var percentage = place/difference;      //represents the location between atp[tran-1] and atp[tran]
+        // atp and tcolor are defined in env_setup.js, where they are very nicely formatted.
+        // atp = altitude Transition Points
+        // atp is an array of numbers arranged from highest to lowest
+        // tcolor = transition color
+        // tcolor is an array of rgb triplets representing altitude transition colors (white, brown, green, blue))
+        // Note that each tcolor correlates to an atp value
 
-                    var color=gradient_color(tcolors[tran-1],tcolors[tran],percentage);
-                    imageData[ i ]     = color[0];
-                    imageData[ i + 1 ] = color[1];
-                    imageData[ i + 2 ] = color[2];
-                    break;
-                }
+        //Loop through each atp, note the intentional use of 1 rather than 0 to prevent an overrun when comparing atp points
+        for (var transitionID=1; transitionID< atp.length; transitionID++){
+            // if the current elevation is between these two transition points
+            if (terraindata[j] > atp[transitionID] && terraindata[j] <= atp[transitionID-1] ){
+
+                //  find distance between transition points
+                var distance = atp[transitionID-1] - atp[transitionID];
+
+                // find distance between terrain altitude and lowest transition point
+                var place = terraindata[j] - atp[transitionID];
+
+                // calculate how far the terrain point is from the lower transition point
+                var percentage = place/distance;
+
+                // calculate the proper color based on distance between two transition points
+                var color=gradient_color(tcolors[transitionID-1],tcolors[transitionID],percentage);
+
+                // apply RGB values to imageData
+                imageData[ i ]     = color[0];
+                imageData[ i + 1 ] = color[1];
+                imageData[ i + 2 ] = color[2];
+                // Once we've found this pixel's transition location, we can break out of the loop.
+                break;
             }
- 
+        }
     }
-    console.log("image contains:", imageData.length," color bits")
-    context.putImageData( image, 0, 0 );
-    
-    // create fullsize canvas
-    var canvasScaled = document.createElement( 'canvas' );
-    canvasScaled.width = mapscale;
-    canvasScaled.height = mapscale;
-    context = canvasScaled.getContext( '2d' );
-
-    // whatever image is written, scale it by 3.9
-    context.scale( mapscale/terrainResolution, mapscale/terrainResolution );
-    context.drawImage( canvas, 0, 0 );
-
-    image = context.getImageData( 0, 0, terrainResolution, terrainResolution );
-    imageData = image.data;
-
-    context.putImageData( image, 0, 0 );
-    return canvasScaled;
+    return image
 }
 
 
@@ -248,26 +197,32 @@ function gradient_color(colora, colorb, percentage ){
         var variance=(colora[i]-colorb[i]);
         // multiply the variance * the percentage, round, then add back to first color
         newcolor[i] = colorb[i] + Math.round(variance*percentage)
-
     }
     return newcolor
 }
 
 
-function generateTerrainMesh(mapscale, terrainResolution, terraindata ) {
+function generateLand(mapscale, baseElevation,elevationVariation ) {
 
+    // how smooth it looks. increasing this adds compute time exponentially
+    var terrainResolution=512;
+
+    /*note that the x and y need to be stretched from the resolution to the mapscale */
+    var terraindata  = generateElevationMap(mapscale, baseElevation, elevationVariation, terrainResolution);
+
+    // our terrain geometry is mapscale x mapscale, with terrainResolution-1 segments in each direction.
     var geometry = new THREE.PlaneGeometry( mapscale, mapscale, terrainResolution - 1, terrainResolution - 1  );
+
+    // initial geometry creation is vertical;
+    // We are rotating the geometry so that Y is height, z is depth and X is width.
     geometry.applyMatrix( new THREE.Matrix4().makeRotationX( - Math.PI / 2 ) );
 
-    for ( var i = 0, l = geometry.vertices.length; i < l; i ++ ) {
-        if (terraindata[ i ] > 0) {
-            geometry.vertices[ i ].y = terraindata[ i ] ;
-        }else{
-            geometry.vertices[ i ].y = 0;
-        }
-    }
+    //map the altitude changes to the geometry
+    geometry = mapTerrainToGeometry(geometry, terraindata);
 
-    var texture = new THREE.Texture( generateTexture( terraindata, terrainResolution, mapscale ), new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
+    var textureMap = generateTexture(terraindata,terrainResolution, mapscale);
+
+    var texture = new THREE.Texture(textureMap, new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
     texture.needsUpdate = true;
 
     var terrainmesh = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { map: texture } ) );
@@ -276,5 +231,4 @@ function generateTerrainMesh(mapscale, terrainResolution, terraindata ) {
 
     return terrainmesh
 }
-
 
