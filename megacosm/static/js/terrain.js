@@ -46,14 +46,13 @@ function init() {
     /* Set up the camera, scene and controls */
     camera = new THREE.PerspectiveCamera( 60, mapcontainer.width / mapcontainer.height, 1, 20000 );
     scene = new THREE.Scene();
-    setup_controls(camera, baseElevation);
+    setup_controls(camera, baseElevation, mapscale);
 
     /* Create a terrain mesh and add it to the scene*/
     /*note that the x and wy need to be stretched from the resolution to the mapscale */
-    var terrainMap  = generateElevationMap(terrainResolution, mapscale, baseElevation);
-    var terrainMesh = generateTerrainMesh(mapscale, terrainResolution, terrainMap)
+    var elevationMap  = generateElevationMap(terrainResolution, mapscale, baseElevation);
+    var terrainMesh = generateTerrainMesh(mapscale, terrainResolution, elevationMap)
     scene.add(terrainMesh);
-    
 
     var citymarker=selectCityCenter(mapscale, baseElevation);
     scene.add(citymarker);
@@ -68,17 +67,10 @@ function init() {
     renderer.setSize( mapcontainer.width, mapcontainer.height );
     renderer.shadowMapEnabled = true;
     renderer.shadowMapType = THREE.PCFSoftShadowMap;
-
-
-    stats = document.createElement( 'div' );
-    stats.innerHTML = 'seed: '+seed+"<br>"+
-                      "altitude: "+(baseElevation/100)+"km<br>"+
-                      "diameter: "+(mapscale/100)+"km";
-    stats.style.position = 'absolute';
-    stats.style.top = '0px';
-    mapcontainer.appendChild( stats );
-
     mapcontainer.appendChild( renderer.domElement );
+
+    stats = config_stats(seed, mapscale, baseElevation)
+    mapcontainer.appendChild( stats );
 
     window.addEventListener( 'resize', onWindowResize, false );
 }
