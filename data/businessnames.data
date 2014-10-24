@@ -141,6 +141,7 @@ LPUSH name_businesstitle Sloppy
 LPUSH name_businesstitle Slumbering
 LPUSH name_businesstitle Smiling
 LPUSH name_businesstitle Smithy
+LPUSH name_businesstitle Snooty
 LPUSH name_businesstitle Snoring
 LPUSH name_businesstitle Splintered
 LPUSH name_businesstitle Squalid
