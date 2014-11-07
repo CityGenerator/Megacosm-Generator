@@ -1,19 +1,3 @@
-
-// Seeds currently generate from 0-1000, which is an arbitrary limit;
-// will be passed in from the backend later
-var seed = Math.round(Math.random()*1000)
-seed=605
-// Seed random courtesy of seedrandom.min.js
-Math.seedrandom(seed);
-
-// Mapscales represent how big the square map is in kilometers
-var mapscales=[ 1, 2, 5, 10, 25];
-
-// mapscale units are decameters
-//  1 =  100 decameters =  1 km
-// 25 = 2500 decameters = 25 km
-var mapscale= mapscales[Math.floor(Math.random()*mapscales.length)]*100;
-
 // These 4 variables are unavoidable globals
 var camera, controls, scene, renderer;
 
@@ -21,14 +5,20 @@ var terrain_lowpoint;
 var terrain_highpoint;
 var terrain_delta=0;
 
-console.log("region size: ", (mapscale/100)*(mapscale/100), "square kilometers")
-
 var clock = new THREE.Clock();
-init();
-animate();
 
 
-function init() {
+
+function init( seed) {
+
+    // Mapscales represent how big the square map is in kilometers
+    var mapscales=[ 4 ];
+    
+    // mapscale units are decameters
+    //  1 =  100 decameters =  1 km
+    // 25 = 2500 decameters = 25 km
+    var mapscale= mapscales[Math.floor(Math.random()*mapscales.length)]*100;
+
 
     /* Grab the map container and set the width */
     var mapcontainer = document.getElementById( 'mapcontainer' );
@@ -44,6 +34,7 @@ function init() {
     // altitude varies according to the land area viewed;
     var elevationVariation = Math.random()*(variationMax-variationMin) + variationMin
 
+
     /* Set up the camera, scene and controls */
     camera = new THREE.PerspectiveCamera( 60, mapcontainer.offsetWidth / mapcontainer.offsetHeight, 1, 20000 );
     scene = new THREE.Scene();
@@ -53,15 +44,67 @@ function init() {
 
     /* Create a terrain mesh and add it to the scene*/
     var land = generateLand(mapscale, baseElevation, elevationVariation)
-    //TODO generate roads on the map right here.
     scene.add(land);
+    // select coordinates for the center of the city;
+    //var cityCenterVertex = selectCityCenter(land);
 
+    //generateRoads(land, scene, cityCenterVertex, 4);
+
+    //buildCompass(scene)
+    mapcontainer.innerHTML='';
     setup_renderer(mapcontainer);
 
     var stats = config_stats(seed, mapscale, baseElevation, elevationVariation)
     mapcontainer.appendChild( stats );
 
     window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function generateRoads(land, scene, cityCenterID, roadcount){
+    roadcount=1
+    var vertexWidthCount=land.geometry.parameters.widthSegments+1
+    var directions=['North','East','South','West']
+    var offset
+    var color=[0xffffff,0xffffff,0xffffff,0x0000ff]
+    for (var i  = 0; i < roadcount; i++){
+        var direction=directions[i]
+        var startID;
+        if (direction=='North'){
+            startID=vertexWidthCount*vertexWidthCount- Math.floor(Math.random()*vertexWidthCount)
+        }else if (direction=='East'){
+            var row=Math.floor(Math.random()*vertexWidthCount)
+            startID=row*vertexWidthCount
+        }else if (direction=='South'){
+            startID=Math.floor(Math.random()*vertexWidthCount)
+        }else if (direction=='West'){
+            var row=Math.floor(Math.random()*vertexWidthCount)
+            startID=row*vertexWidthCount +(vertexWidthCount-1)
+        }
+        var road=generateRoad(land, cityCenterID, startID, color[i]);
+        scene.add(road)
+    }
+
+}
+
+
+function generateRoad(land, cityCenterID, startVertexID, color){
+    var vertexWidthCount=land.geometry.parameters.widthSegments;
+
+    console.log("start vertex ",startVertexID)
+    console.log("  end vertex ",  cityCenterID)
+
+    var material = new THREE.LineBasicMaterial({ color: color, linewidth:10  });
+    var geometry = new THREE.Geometry();
+    geometry.vertices.push(
+                            land.geometry.vertices[startVertexID], 
+                            land.geometry.vertices[cityCenterID] 
+                             );
+
+    var road = new THREE.Line( geometry, material );
+
+
+    return road
+
 }
 
 function generateElevationMap(mapscale, baseElevation, elevationVariation, resolution) {
@@ -224,8 +267,8 @@ function generateLand(mapscale, baseElevation,elevationVariation ) {
 
     var texture = new THREE.Texture(textureMap, new THREE.UVMapping(), THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping );
     texture.needsUpdate = true;
-
-    var terrainmesh = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { map: texture } ) );
+    // XXX transparency
+    var terrainmesh = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { map: texture,transparent: true, opacity: 1 } ) );
     terrainmesh.castShadow = true;
     terrainmesh.receiveShadow = true;
 

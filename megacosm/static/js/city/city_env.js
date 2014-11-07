@@ -52,9 +52,17 @@ function setup_renderer(mapcontainer){
     renderer.shadowMapType = THREE.PCFSoftShadowMap;
     mapcontainer.appendChild( renderer.domElement );
 }
-
+var rotation = 0
 // boring render
 function render() {
+    rotation += 0.005;
+    // camera position of 225 is optimal, + or - 30
+    // the 4 multiplier on rotation is to make it zoom in and out father than the spinning
+    camera.position.y =camera.position.yorig + Math.sin(rotation*4)*30 ;
+
+    camera.position.z = Math.sin(rotation) * 150;
+    camera.position.x = Math.cos(rotation) * 150;
+
     controls.update( clock.getDelta() );
     renderer.render( scene, camera );
 }
@@ -79,49 +87,74 @@ function setup_controls(camera, baseElevation, mapscale){
 // creates a simple red and blue compass showing sealevel, the center of the map, and north.
 function buildCompass(scene){
     // Vertical Red Line
-    var geometry = new THREE.BoxGeometry( 1, 10, 1 );
+    var geometry = new THREE.BoxGeometry( 1, 50, 1 );
     var material = new THREE.MeshBasicMaterial( {color: 0x660000} );
     var line = new THREE.Mesh( geometry, material );
-    line.position.y=-5;
+    line.position.y=25;
     scene.add(line);
 
     // Horizontal Blue Line
-    geometry = new THREE.BoxGeometry( 1, 1, 10 );
+    geometry = new THREE.BoxGeometry( 1, 1, 50 );
     material = new THREE.MeshBasicMaterial( {color: 0x000066} );
     line = new THREE.Mesh( geometry, material );
-    line.position.z=5;
+    line.position.z=25;
     scene.add(line);
 }
 
 // selectCityCenter
 // selects a centerpoint for the city. This is where at least 2-3 of the largest roads meet.
-function selectCityCenter(mapscale){
-    var geometry = new THREE.BoxGeometry( 1, 3000, 1 );
+function selectCityCenter(land){
+    var geometry = new THREE.BoxGeometry( 1, 40, 1 );
     var material = new THREE.MeshBasicMaterial( {color: 0x006600} );
     var cube = new THREE.Mesh( geometry, material );
     // cast shadows to help visualize our lighting
-    //cube.castShadow = true;
-    //cube.receiveShadow = true;
+//    cube.castShadow = true;
+    cube.receiveShadow = true;
 
-    var range=0.1 ;// 10%
+    var range=0.2 ;// 10%
     // This will range from 40% to 60% if the range is 10%
-    var lowrange=(0.5-range)*mapscale
-    var highrange=(0.5+range)*mapscale
+    var lowWidthRange=(0.5-range)*land.geometry.parameters.widthSegments
+    var highWidthRange=(0.5+range)*land.geometry.parameters.widthSegments
 
-    var x = Math.random()*(highrange-lowrange) + lowrange - mapscale/2;
-    var z = Math.random()*(highrange-lowrange) + lowrange - mapscale/2;
-    cube.position.x=x;
-    cube.position.z=z;
-    console.log("City center located at ", x, ",", z, "which is somewhere between ", lowrange, " and ", highrange);
-    return cube;
+    var lowHeightRange=(0.5-range)*land.geometry.parameters.heightSegments
+    var highHeightRange=(0.5+range)*land.geometry.parameters.heightSegments
+
+    // these are the coordinates on the land map, not global coordinates
+    var landx = Math.ceil(Math.random()*(highWidthRange-lowWidthRange) + lowWidthRange );
+    var landz = Math.ceil(Math.random()*(highHeightRange-lowHeightRange) + lowHeightRange );
+   
+    // Why the +1? to offset stuffs.
+    var vertexID= (1+land.geometry.parameters.widthSegments)*landz +landx ;
+    var vertex=land.geometry.vertices[ vertexID ];
+
+    console.log("City center x:", landx, " between ",lowWidthRange ,' and ', highWidthRange, "out of ",land.geometry.parameters.widthSegments);
+    console.log("City center z:", landz, " between ",lowHeightRange ,' and ', highHeightRange, "out of ",land.geometry.parameters.heightSegments);
+    console.log("city vertexID: ", vertexID, ' of ',land.geometry.vertices.length, ' lands at [',vertex.x,',', vertex.z,']')
+
+    cube.position.x=vertex.x;
+    cube.position.y=vertex.y;
+    cube.position.z=vertex.z;
+
+    scene.add(cube)
+
+
+    return vertexID;
 }
 
 //place the camera
 function addCamera(scene, mapscale, baseElevation){
-    var zoom=0.3;
-    camera.position.y = mapscale * zoom * 1.5 + baseElevation;
-    camera.position.x = mapscale * zoom;
-    camera.position.z = -mapscale * zoom;
+    var zoom=0.2;
+    //offset
+    //camera.position.y = mapscale * zoom * 1.5 + baseElevation;
+//    camera.position.x = mapscale * zoom;
+//    camera.position.z = -mapscale * zoom;
+
+    //centered above
+    camera.position.yorig = baseElevation+225;
+
+//    camera.position.x = 0
+//    camera.position.z = mapscale * zoom 
+
 }
 
 // Add 3-point light theory implementation + ambient light. 
@@ -177,11 +210,11 @@ function configShadowbox(light, cameraradius, baseElevation){
 // configure stats to show some basic info on the map displayed
 function config_stats(seed, mapscale, baseElevation, elevationVariation){
     var stats = document.createElement( 'div' );
-    stats.innerHTML = 'seed: '+seed+"<br>"+
-                      "size: "+(mapscale/100)+"km<br>"+
-                      "altitude: "+(baseElevation/100)+"km<br>"+
+    stats.innerHTML = 
+                      "region: "+Math.pow(mapscale/100, 2)+"km<sup>2</sup><br>"+
+                      "altitude: "+Math.round(baseElevation*10)+"m<br>"+
                       "variation: "+Math.round(elevationVariation*10)+"m";
-    stats.style.position = 'absolute';
+    stats.style.position = 'relative';
     stats.style.top = '0px';
     return stats;
 }
@@ -212,3 +245,12 @@ function mapTerrainToGeometry(geometry,terraindata){
     }
     return geometry;
 }
+function shuffle(d) {
+  for (var c = d.length - 1; c > 0; c--) {
+    var b = Math.floor(Math.random() * (c + 1));
+    var a = d[c];
+    d[c] = d[b];
+    d[b] = a;
+  }
+  return d
+};

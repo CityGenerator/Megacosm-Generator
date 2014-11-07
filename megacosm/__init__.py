@@ -6,6 +6,8 @@
 """`main` is the top level module for this application."""
 
 from flask import Flask, render_template, request
+from flask.ext.assets import Environment, Bundle
+
 from megacosm.generators import Business
 from megacosm.generators import City
 from megacosm.generators import Continent
@@ -44,6 +46,40 @@ def create_app(config_location='config.BaseConfiguration'):
 
 
 app = create_app()
+
+
+#########################################################################
+# Using JS and CSS bundlers to minify code.
+assets = Environment(app)
+
+js = Bundle(
+#    'js/*.js',
+#    filters='jsmin',
+#    output='gen/jspacked.js'
+)
+assets.register('js_all', js)
+
+css = Bundle('css/*.css',
+#    filters='yui_css',
+#    output='gen/csspacked.css'
+)
+assets.register('css_all', css)
+
+jscity = Bundle(
+
+    'js/threejs/seedrandom-2.3.10.min.js',
+    'js/threejs/three*.js',
+    'js/threejs/stats.min.js',
+    'js/threejs/OrbitControls.js',
+    'js/threejs/ImprovedNoise.js',
+    'js/threejs/Detector.js',
+    'js/city/*.js',
+    'js/flag/*.js',
+    filters='jsmin',
+    output='gen/citypacked.js'
+)
+assets.register('js_city', jscity)
+
 
 
 #########################################################################
