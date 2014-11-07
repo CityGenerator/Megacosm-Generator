@@ -6,7 +6,7 @@
 {% endblock %}
 {% block content %}
 <div style="float:left;margin-right:30px" id="mapcontainer">Loading...</div>
-<h1> {{tempobj.name['full']}} ( {{tempobj.seed}} )</h1>
+<h1> {{tempobj.name['full']}} (<a href="/city?seed={{tempobj.seed}}">{{tempobj.seed}}</a> )</h1>
 
 <p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}, population {{tempobj.population_estimate}}</p>
 

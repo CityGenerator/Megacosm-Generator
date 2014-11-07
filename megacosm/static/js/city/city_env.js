@@ -53,18 +53,29 @@ function setup_renderer(mapcontainer){
     mapcontainer.appendChild( renderer.domElement );
 }
 var rotation = 0
+var spin_timeout=0
 // boring render
 function render() {
+    var timedelta=clock.getDelta();
     rotation += 0.005;
-    // camera position of 225 is optimal, + or - 30
-    // the 4 multiplier on rotation is to make it zoom in and out father than the spinning
-    camera.position.y =camera.position.yorig + Math.sin(rotation*4)*30 ;
+    if (spin_timeout <=0) {
+        // camera position of 225 is optimal, + or - 30
+        // the 2 multiplier on rotation is to make it zoom in and out father than the spinning
+        //camera.position.y =camera.position.y + Math.sin(rotation*2)*2 ;
 
-    camera.position.z = Math.sin(rotation) * 150;
-    camera.position.x = Math.cos(rotation) * 150;
-
-    controls.update( clock.getDelta() );
+        camera.position.z = Math.sin(rotation) * 150;
+        camera.position.x = Math.cos(rotation) * 150;
+    }else{
+        spin_timeout-=clock.getDelta()*10000 
+    }
+//    console.log(spin_timeout);
+    controls.update( timedelta );
     renderer.render( scene, camera );
+}
+document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+function onDocumentMouseDown( event ) {
+    spin_timeout=10
+    map_clicked=true
 }
 
 function generateBaseElevation(){
@@ -76,7 +87,7 @@ function generateBaseElevation(){
 }   
 
 function setup_controls(camera, baseElevation, mapscale){
-    controls = new THREE.OrbitControls( camera );
+    controls = new THREE.OrbitControls( camera, document.getElementById( 'mapcontainer' )  );
     // farthest camera can zoom out
     controls.maxDistance = mapscale*1.5;
     // This sets the target that the camera focuses on
@@ -150,7 +161,7 @@ function addCamera(scene, mapscale, baseElevation){
 //    camera.position.z = -mapscale * zoom;
 
     //centered above
-    camera.position.yorig = baseElevation+225;
+    camera.position.y= baseElevation+225;
 
 //    camera.position.x = 0
 //    camera.position.z = mapscale * zoom 
