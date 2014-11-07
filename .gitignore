@@ -19,3 +19,6 @@ nosetests.xml
 
 # prod deploy files
 .bash_history
+
+megacosm/static/gen/
+megacosm/static/.webassets-cache/

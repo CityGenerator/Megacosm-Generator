@@ -5,6 +5,9 @@
   {{ super() }}
 {% endblock %}
 {% block content %}
+<div style="float:left;margin-right:30px" id="mapcontainer">Loading...</div>
+<h1> {{tempobj.name['full']}} ( {{tempobj.seed}} )</h1>
+
 <p>You come across the {{tempobj['size']['name']}} of {{tempobj.name['full']}}, population {{tempobj.population_estimate}}</p>
 
 <p>Favored hangout: <a href="/business?seed={{tempobj.gatheringplace.seed}}&business_kind={{tempobj.gatheringplace.kind}}">{{tempobj.gatheringplace}}</a></p>
@@ -27,4 +30,18 @@
  {%endfor%}
 </pre>
 -->
+        {% assets "js_city" %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+
+<script>
+
+    // seed
+    Math.seedrandom( {{tempobj.seed}}  );
+
+    init( Math.seed);
+
+    animate();
+
+</script>
 {% endblock %}
