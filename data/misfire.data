@@ -374,9 +374,6 @@ LPUSH misfire_template A {{params.size}} cloud of thick smoke appears {{params.d
 LPUSH misfire_template {{params.target}} start to froth at the mouth uncontrollably and prolifically.
 LPUSH misfire_template {{params.target}} suffer a {{params.size}} amount of {{params.damagetype}} damage.
 
-LPUSH misfire_template Absolutely nothing happens (time is stopped for {{params.duration}}).
-LPUSH misfire_template A faeries dance affects {{params.target}}.
-<<<<<<< HEAD
 LPUSH misfire_template A loud Gong sounds.
 LPUSH misfire_template A strong {{params.taste}} taste affects {{params.target}}.
 LPUSH misfire_template A swarm of vicious rats surround {{params.target}} and attack after a few moments of confusion.
@@ -392,7 +389,9 @@ LPUSH misfire_template {{params.target}} turns to stone for {{params.duration}}
 LPUSH misfire_template Spell fails
 LPUSH misfire_template Spell is delayed for {{params.combatduration}} and has half the effect.
 LPUSH misfire_template Spell simply fails
-=======
+
+LPUSH misfire_template A faeries dance affects {{params.target}}.
+
 LPUSH misfire_template {{params.target}} emit the scent of a dangerous predator for the next hour.  Domestic animals become hostile.
 LPUSH misfire_template Absolutely nothing happens (time is stopped {{params.duration}}).
 LPUSH misfire_template A swarm of viscious rats surround {{params.target}} and attack after a few moments of confusion.
@@ -402,7 +401,7 @@ LPUSH misfire_template Spell simply fails
 LPUSH misfire_template {{params.target}} grow via an enlarged spell.
 LPUSH misfire_template {{params.target}} become hastened {{params.duration}}.
 LPUSH misfire_template {{params.target}} turn to stone for {{params.duration}}
->>>>>>> more modifications
+
 LPUSH misfire_template {{params.target}} age 1d20 years.
 LPUSH misfire_template {{params.target}} uncontrollably strip.
 LPUSH misfire_template {{params.target}} suffer {{params.suffers}} for {{params.duration}}
@@ -444,7 +443,6 @@ LPUSH misfire_template {{params.target}} are imprisoned on another plane.
 LPUSH misfire_template A desert oasis grows around {{params.target}}.
 LPUSH misfire_template Burst of fireworks explode from {{params.target}} (harmless but loud and visible).
 
-<<<<<<< HEAD
 LPUSH misfire_template {{params.target}} are in great pain for {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} need no sleep for {{params.coduration}}.
 LPUSH misfire_template {{params.largeanimal|article|capitalize}} appears and considers itself to be your pet.
@@ -619,23 +617,7 @@ LPUSH misfire_template {{params.target}} is cured of 5d10 hit points (up to norm
 
 LPUSH misfire_template The {{params.target}} speaks with a lisp until the effects wear off. 
 LPUSH misfire_template All magical items within {{params.radius}} of {{params.target}} glow for {{params.duration}}.
-#LPUSH misfire_template All normal fires within 60' of the {{params.target}} are extinguished.
-=======
-LPUSH misfire_template {{params.target}} are in great pain for 1d3 rounds.
-LPUSH misfire_template {{params.target}} need no sleep for 1d4 days.
-LPUSH misfire_template All metal on {{params.target}} turns into wood.
-LPUSH misfire_template All wood on {{params.target}} turns into {{params.metal}}.
-LPUSH misfire_template {{params.largeanimal|article|capitalize}} considers itself to be your pet.
-LPUSH misfire_template {{params.largeanimal|article|capitalize}} appears in front of {{params.target}}.
-LPUSH misfire_template A skunk is conjured before {{params.target}}, who are promptly sprayed.
-LPUSH misfire_template A prostitute turns up from nowhere and wants to do your bidding.
-LPUSH misfire_template {{params.largeanimal|article|capitalize}} offers to be your pet.
-LPUSH misfire_template A {{params.color}} Jinn materializes in front of you and bows.
-LPUSH misfire_template {{params.target}} are transformed into a {{params.largeanimal}} for 1d8 hours.
-LPUSH misfire_template {{params.largeanimal|article|capitalize}} comes up to {{params.target}} and says she's sorry.
-LPUSH misfire_template A stream of {{params.liquid}} shoots from the caster's fingertips for 1d3 rounds.
-LPUSH misfire_template Nothing happens. The GM should roll many dice and chuckle a bit.
-LPUSH misfire_template The surrounding area (2d100 yard radius) is turned into {{params.location}}.
+LPUSH misfire_template All normal fires within {{params.radius}} of the {{params.target}} are extinguished.
 
 #LPUSH misfire_template Cone of Cold directed at {{params.target}}. Brrrrr.
 #LPUSH misfire_template {{params.target}} grow a beard, 2 ft long, permanent. 
@@ -760,7 +742,6 @@ LPUSH misfire_template The surrounding area (2d100 yard radius) is turned into {
 #LPUSH misfire_template 1d1000 yard radius centered on the nearest person, not you!
 #LPUSH misfire_template All magical items within 60 ft of caster glow for 2d8 days.
 #LPUSH misfire_template All normal fires within 60' of the caster are extinguished.
->>>>>>> more modifications
 #LPUSH misfire_template A rainbow (as per the spell) appears for one-hour overhead.
 #LPUSH misfire_template {{params.target}} is healed of all non-fatal damage incurred thus far.
 #LPUSH misfire_template Everything you touch for the next 3d3 hours starts to burn.
