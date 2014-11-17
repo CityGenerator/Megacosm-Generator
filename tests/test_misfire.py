@@ -20,3 +20,12 @@ class TestMisfire(unittest.TestCase):
         print misfire.text
         self.assertNotEqual(misfire.text, '')
         self.assertEqual('%s' % misfire, misfire.text)
+
+    def test_misfire_data(self):
+        misfire = Misfire(self.redis)
+        total = self.redis.llen('misfire_template')
+        for i in range(0, total):
+            misfire.template = self.redis.lindex('misfire_template', i)
+            results = misfire.render_template(misfire.template)
+            self.assertNotEquals("", results)
+            self.assertNotIn("{{", results)
