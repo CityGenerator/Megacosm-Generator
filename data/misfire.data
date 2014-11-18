@@ -29,6 +29,21 @@
 # minions
 # flowers
 # language
+# coverage
+# heavitem
+
+
+LPUSH misfire_heavyitem safe
+LPUSH misfire_heavyitem anvil
+LPUSH misfire_heavyitem barrel
+LPUSH misfire_heavyitem lead bar
+LPUSH misfire_heavyitem orb of hot, molten lead
+
+LPUSH misfire_coverage mud
+LPUSH misfire_coverage ash
+LPUSH misfire_coverage flower petals
+LPUSH misfire_coverage marshmellow fluff
+LPUSH misfire_coverage feces
 
 
 LPUSH misfire_language common
@@ -444,7 +459,7 @@ LPUSH misfire_template Spell fails
 LPUSH misfire_template Spell is delayed for {{params.combatduration}} and has half the effect.
 LPUSH misfire_template Spell simply fails
 
-LPUSH misfire_template A faeries dance affects {{params.target}}.
+LPUSH misfire_template A faeries dance affects {{params.target}} for {{params.combatduration}}.
 
 LPUSH misfire_template {{params.target}} emit the scent of a dangerous predator for the next hour.  Domestic animals become hostile.
 LPUSH misfire_template Absolutely nothing happens (time is stopped {{params.duration}}).
@@ -473,7 +488,7 @@ LPUSH misfire_template Death himself comes to claim {{params.target}}.
 LPUSH misfire_template {{params.target}} forget the last 24 hours.
 LPUSH misfire_template {{params.target}} glow as per a light spell for {{params.duration}}.
 LPUSH misfire_template {{params.target}} change sex for {{params.duration}}.
-LPUSH misfire_template {{params.target}} find a {{params.smalanimal}} among your gear.
+LPUSH misfire_template {{params.target}} is now unknowinly in possession of {{params.smalanimal|article}}.
 LPUSH misfire_template {{params.target}} set the nearest forest ablaze.
 LPUSH misfire_template 2d20 {{params.plants}} grow up around {{params.target}}.
 LPUSH misfire_template Skin turns pale {{params.color}} for 2d6 months
@@ -506,76 +521,55 @@ LPUSH misfire_template A skunk is conjured and sprays {{params.target}}.
 
 LPUSH misfire_template A {{disposition}} prostitute turns up from nowhere and demands payment for services rendered.
 LPUSH misfire_template A {{params.color}} Djinn materializes in front of you. It says nothing.
-
 LPUSH misfire_template A stream of {{params.liquid}} shoots from the caster's fingertips countinuously for {{params.combatduration}}.
-
 LPUSH misfire_template The surrounding area {{params.distance}}  is turned into {{params.location}}.
 LPUSH misfire_template a 10 foot diamter circle of caltrops surround {{params.target}}.
 LPUSH misfire_template A rift is opened revealing a Banshee, which appears by {{params.target}} and Wails before disappearing.
 LPUSH misfire_template A desert oasis grows around the {{params.target}}.
 LPUSH misfire_template All food and rations within 50 feet spoils and becomes poisonous. 
-
 LPUSH misfire_template All nonmagical metal on the {{params.target}} turns into balsawood (including armor, weapons and equipment).
 LPUSH misfire_template A minor air elemental offers you its help for {{params.target}}. (usefulness decreases with longer durations).
-
 LPUSH misfire_template A passing butterfly tells {{params.target}} who the betrayer really is.
 
 LPUSH misfire_template A raven decides to follow you and be helpful for {{params.duration}}.
-
 LPUSH misfire_template A stinking cloud centers on the {{params.target}}.
 LPUSH misfire_template An explosion of fireworks erupts above, and can be seen and heard for miles.
 LPUSH misfire_template {{params.target}} lose color vision in exchange for x-ray vision for {{params.duration}}.
-
 LPUSH misfire_template Caster is in great incapacitating pain for {{params.combatduration}}.
-
 LPUSH misfire_template {{params.target}} is Mute for the next {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} become color blind for {{params.duration}}.
-
 LPUSH misfire_template {{params.target}} forgets identity and motivation for {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} glows bright {{params.color}} for {{params.duration}}.
-
 LPUSH misfire_template {{params.target}} grow a 2 foot long beard (that will continuously regrow if shaven) for {{params.duration}} . 
-
 LPUSH misfire_template {{params.target}} is safely displaced {{params.radius}} {{params.direction}} of it's current position.
 
 LPUSH misfire_template {{params.target}} is imprisoned on another plane for {{params.combatduration}}.
-
 LPUSH misfire_template {{params.target}} speak in reverse sentences for {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} skin turns {{params.color}}.
-
 LPUSH misfire_template Summon lesser demon (DM's discretion.)
 LPUSH misfire_template The intended spell functions as intended.
 LPUSH misfire_template Caster is affected by a Hold Person spell.
 LPUSH misfire_template Caster is temporarily blinded for {{params.combatduration}}
-
 LPUSH misfire_template Four goblins appear and begin beating the caster with socks full of copper coins (improvised weapon)
 LPUSH misfire_template Silence, {{params.radius}} radius centered on {{params.target}} for {{params.combatduration}}
-
 LPUSH misfire_template Spell goes off normally, no extra effects.
-
 LPUSH misfire_template {{params.target}} shot with 1d10 darts (1d4 dam each)
-
 LPUSH misfire_template A giant sock appears in the mouth of {{params.target}}
 LPUSH misfire_template A watermelon appears at the feet of {{params.target}}.
-
 LPUSH misfire_template {{params.target}} is affected by Invisibility, normal.
-
 LPUSH misfire_template The caster learns the name of the profession of {{params.target}}.
 LPUSH misfire_template The clothes on {{params.target}} itch unbearably, affecting initiative, concentration, and dexterity.
 LPUSH misfire_template The caster suffers same spell effect as {{params.target}}.
 LPUSH misfire_template The caster and {{params.target}} exchange current HP total for {{params.duration}}
 LPUSH misfire_template Normal fire springs up at the feet of{{params.target}}.
 LPUSH misfire_template {{params.target}} has an insatiable craving for {{params.craving}}.
-
 LPUSH misfire_template {{params.target}} affected by True Sight for {{params.combatduration}}.
 LPUSH misfire_template The caster is teleported directly behind {{params.target}}.
 LPUSH misfire_template The caster amuses the gods and gets one casting of any desired spell.
-
 LPUSH misfire_template Weight increased by {{params.multiplier}} for {{params.duration}}
 LPUSH misfire_template Any nearby plants insist that {{params.target}} play a game of chess.
 
 LPUSH misfire_template An empty log cabin pops up next to the {{params.target}}.
-
 LPUSH misfire_template A Wall of Force appears in front of the {{params.target}}
 LPUSH misfire_template {{params.target}} is affected by Confusion, as the spell.
 LPUSH misfire_template {{params.target}}'s face is blackened by small explosion.
@@ -583,21 +577,13 @@ LPUSH misfire_template {{params.target}} smells like {{params.smell}} for spell 
 LPUSH misfire_template {{params.target}} speaks in a squeaky voice for {{params.duration}}.
 LPUSH misfire_template {{params.target}} summons {{params.disposition|article}} {{params.smallanimal}}.
 LPUSH misfire_template {{params.target}}'s weapons disappear and are replaced with a scythe.
-
 LPUSH misfire_template A phantom footman turns up and offers his help.
-
 LPUSH misfire_template A sketch of {{params.target}} falls to the ground beside you.
-
 LPUSH misfire_template {{params.target}} automatically succeeds on the next roll.
-
 LPUSH misfire_template {{params.target}} instantly coated in unlit flammable oil.
-
 LPUSH misfire_template {{params.target}} is struck by an invisible fist (unarmed attack) in the back of the head.
-
 LPUSH misfire_template a key falls to the ground in front of {{params.target}}.
-
 LPUSH misfire_template {{params.target}} hair is coated in {{params.coating}}.
-
 LPUSH misfire_template A peach tree starts growing in one of your bags. Grows to full size in {{params.combatduration}}.
 
 LPUSH misfire_template {{params.target}} levitates 20 feet for {{params.combatduration}}, then falls slowly.
@@ -619,12 +605,10 @@ LPUSH misfire_template {{params.target}} is Slowed (opposite of Haste) for {{par
 LPUSH misfire_template {{params.target}} catch a very, very bad cold.  Lasts {{params.duration}}.
 LPUSH misfire_template {{params.target}} drop all of your teeth in your upper left jaw.
 LPUSH misfire_template A large green worm appears and jumps at the {{params.target}}.
-
 LPUSH misfire_template A lightning bolt strikes the {{params.target}}.
 LPUSH misfire_template All gold in the {{params.target}}'s possession turns to water.
 LPUSH misfire_template An Imp appears, insults the {{params.target}}, and disappears.
 LPUSH misfire_template A pack of Orcs selects you to be their next victim, will attack in {{params.duration}}
-
 LPUSH misfire_template Disco Inferno! Harmless colourful light beams radiate from {{params.target}}.
 LPUSH misfire_template A Leprechaun (or other suitable Fae) is summoned. It is {{params.disposition}} towards the caster.
 
@@ -633,12 +617,10 @@ LPUSH misfire_template {{params.target}} is teleported {{params.distance}} away.
 LPUSH misfire_template The {{params.target}} forgets the events of the last {{params.combatduration}}
 LPUSH misfire_template 2d20 bottle of the finest wine appear at your feet.
 LPUSH misfire_template {{params.target}} speed is doubled for {{params.combatduration}}.
-
 LPUSH misfire_template Random plant appears and takes root at the feet {{params.target}}.
 LPUSH misfire_template The caster becomes a Wraith for {{params.combatduration}}
 LPUSH misfire_template The area around {{params.target}} becomes uncomfortably hot.
 LPUSH misfire_template 3d6 {{params.minions}} rise from the ground to do your bidding for {{params.combatduration}} before disappearing.
-
 LPUSH misfire_template A colony of black ants explains its {{params.disposition}} disposition towards you.
 LPUSH misfire_template All gold in the {{params.target}}'s possession turns to platinum.
 LPUSH misfire_template An eternal flame is instantly created where you stand.
@@ -659,7 +641,6 @@ LPUSH misfire_template 1d4 rotten tomatoes hit {{params.target}} (effect at DM d
 
 LPUSH misfire_template All creatures within 30 ft of the {{params.target}} begin to hiccup.
 LPUSH misfire_template For the next 5 minutes, the {{params.target}} says everything twice.
-
 LPUSH misfire_template Spell effectiveness (range, duration, etc,) decreases 50%
 LPUSH misfire_template {{params.target}} gains magic resistance for {{params.combatduration}}.
 LPUSH misfire_template The ground beneath the {{params.target}} becomes slippery as if icy.
@@ -668,15 +649,12 @@ LPUSH misfire_template A random person within {{params.radius}} of you becomes i
 
 LPUSH misfire_template {{params.target}} turn ethereal for {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} is cured of 5d10 hit points (up to normal maximum).
-
 LPUSH misfire_template The {{params.target}} speaks with a lisp until the effects wear off. 
 LPUSH misfire_template All magical items within {{params.radius}} of {{params.target}} glow for {{params.duration}}.
 LPUSH misfire_template All normal fires within {{params.radius}} of the {{params.target}} are extinguished.
-
 LPUSH misfire_template Cone of Cold directed at {{params.target}}. Brrrrr.
 LPUSH misfire_template A rainbow appears over this location for {{params.duration}}.
 LPUSH misfire_template {{params.target}} is healed of all non-fatal damage incurred thus far.
-
 LPUSH misfire_template Everything you touch not in currently in your possession for the next {{params.combatduration}} starts to burn.
 
 LPUSH misfire_template For the next {{params.duration}}, all of {{params.target}}'s rolls are at -5.
@@ -694,23 +672,19 @@ LPUSH misfire_template Any darkvision possessed by {{params.target}} is nullifie
 LPUSH misfire_template {{params.target}} are disarmed and weapons are flung 10 feet away.
 LPUSH misfire_template A reversed tongues affects all within {{params.radius}} of the {{params.target}}.
 LPUSH misfire_template A ring of mushrooms appears around {{params.target}} (no other effect).
-
 LPUSH misfire_template The caster is paralyzed for {{params.combatduration}} but makes a full recovery.
 LPUSH misfire_template a 10x10x10 cube of ground beneath {{params.target}} vanishes, causing them to fall.
-
 LPUSH misfire_template 1d4 skeletons rise from their graves to tear {{params.target}} apart.
 LPUSH misfire_template 1d6 raw eggs hit {{params.target}} from above (effect at DM discretion).
 
 LPUSH misfire_template A 20 foot log wall of fire sweeps ahead of you for {{params.distance}}, passing through any solid barriers.
 LPUSH misfire_template {{params.target}} is teleported home. Normal teleport error rules apply.
 LPUSH misfire_template Tip of {{params.target}}'s nose glows red for a second. No other effect.
-
 LPUSH misfire_template {{params.target}}'s {{params.growth}} grows to 10 times its normal size for {{params.combatduration}}.
 LPUSH misfire_template A potion pops into existence in front of you (DM choice on contents)
 LPUSH misfire_template {{params.target}} and {{params.target}} exchange voices.
-
-LPUSH misfire_template  The caster breathes fire as a small dragon for one breath only.
-LPUSH misfire_template No gravity at the {{params.target}}'s location (max 5' radius) for {{params.shortduration}}.
+LPUSH misfire_template The caster breathes fire as a small dragon for one breath only.
+LPUSH misfire_template No gravity in a {{params.radius}} radius around {{params.target}} for {{params.shortduration}}.
 LPUSH misfire_template The {{params.target}} belches once with the same effect as a thunderstone.
 
 LPUSH misfire_template All water within 60' of {{params.target}} turns to fine Elvin wine. Cheers!
@@ -724,17 +698,14 @@ LPUSH misfire_template {{params.target}} has a small, black rain cloud form 3 fe
 LPUSH misfire_template The next stranger you talk to will mistake you for an old friend.
 
 LPUSH misfire_template {{params.target}}'s clothing and equipment turn invisible for {{params.combatduration}}. Very embarrassing.
-
 LPUSH misfire_template Next successful attack on {{params.target}} heals instead of harms.
 LPUSH misfire_template {{params.target}} becomes dizzy for {{params.combatduration}}.
 LPUSH misfire_template 2d6 chickens appear at the {{params.target}}'s feet and run away at top speed.
-
 LPUSH misfire_template A Lesser Air Elemental is summoned and promptly attacks the {{params.target}}.
 LPUSH misfire_template All non-magical glass or crystal within 30 feet of {{params.target}} shatters.
 LPUSH misfire_template A poisonous spider (DM choice) appears near the {{params.target}} and attacks.
 LPUSH misfire_template {{params.target}} Forgets all spells for {{params.combatduration}}. Items still function.
 LPUSH misfire_template Everyone in {{params.target}}'s view feels cold for {{params.shortduration}}. No other effect.
-
 LPUSH misfire_template Smoke trickles from the ears of the {{params.target}} for {{params.duration}}.  Harmless.
 LPUSH misfire_template {{params.target}} go berserk for {{params.combatduration}}, lashing out at anyone within 13 ft.
 
@@ -757,11 +728,8 @@ LPUSH misfire_template The caster opens a rift to another plane, which sucks in 
 LPUSH misfire_template Rope appears around {{params.target}} (completely restraining).
 LPUSH misfire_template The {{params.target}} grows small wings on their temples and can fly. They will whither and fall off in {{params.shortduration}}.
 LPUSH misfire_template a random mundane item appears.
-
 LPUSH misfire_template {{params.target}} forgets a language of their choice and learns {{params.language}}.
-
 LPUSH misfire_template A portal opens unleashing a carriage at full speed, which tramples {{params.target}}. The driver is confused.
-
 LPUSH misfire_template Beer suds flow from the mouth of {{params.target}} for {{params.combatduration}}, inhibiting speech.
 LPUSH misfire_template {{params.target}} is encased in lime gellatin one size larger than the target.
 LPUSH misfire_template A portal betweeen you and your target, allowing melee attacks despite distance. Lasts {{params.combatduration}}.
@@ -769,17 +737,11 @@ LPUSH misfire_template Lightning strikes the tallest creature in your vicinity.
 LPUSH misfire_template Lightning strikes the shortest creature in your vicinity.
 
 LPUSH misfire_template An energy bolt (4d6 dam) suddenly shoots out from your left ear and hits the nearest object/person, etc.  (Dodge of 18)
-
 LPUSH misfire_template {{params.target}} is suddenly fluent in {{params.language}}. Also craves the taste of {{params.craving}}
-
 LPUSH misfire_template Area within {{params.radius}} of {{params.target}} becomes a null magic zone.
-
 LPUSH misfire_template {{params.target}} develops a phobia.
-
 LPUSH misfire_template A random creature in the area turns to wood and explodes into 30 parts. If not reassembled in {{params.shortduration}}, it will result in death.
-
 LPUSH misfire_template {{params.target}} finds their mouth filled with 30 {{params.coinmetal}} coins.
-
 LPUSH misfire_template All copper pieces within 30 feet of {{params.target}} are changed into {{params.coinmetal}} pieces, and vice versa.
 LPUSH misfire_template your head shrinks by 30% (otherwise harmless).
 
@@ -791,18 +753,11 @@ LPUSH misfire_template The intended spell functions with a flashy lightshow and 
 LPUSH misfire_template A forest of appropriate plants sprout to life {{params.radius}} around you, creating difficult terrain.
 LPUSH misfire_template A forest of inappropriate plants sprout to life {{params.radius}} around you, creating difficult terrain.
 
-
 LPUSH misfire_template All creatures in a {{params.radius}} radius currently hostile to the caster are duplicated (including possessions).
-
 LPUSH misfire_template a single possession on {{params.target}} becomes sentient with the personality of a random NPC. 
-
 LPUSH misfire_template Caster drains the lifeforce from a single random enemy and distributes it to the team. any remaining lifeforce is kept by caster as temp HP.
-
 LPUSH misfire_template The caster learns the history of a random item in their possession.
-
 LPUSH misfire_template The caster gains an unimpressed personal narrator that can be heard by anyone in a 30 foot radius.
-
-
 LPUSH misfire_template The caster and target are imprisoned in a 20x20 foot impenetrable box. The box will disappear when one of them is dead.
 LPUSH misfire_template The caster sees a vision of the future which may or may not be true.
 LPUSH misfire_template {{params.target}} appear on a reward poster that appears in front of the caster with a substantial reward for capture.
@@ -811,86 +766,56 @@ LPUSH misfire_template {{params.target}} appear on a reward poster that appears 
 LPUSH misfire_template {{params.target}} are knocked prone. Twice.
 LPUSH misfire_template A random spell of the same level affects {{params.target}} instead.
 LPUSH misfire_template {{params.target}} loses all teeth.
-
 LPUSH misfire_template {{params.target}} bursts into flames, taking {{params.damagetype}} damage until the flames are extinguished.
 LPUSH misfire_template {{params.target}} begins to recite poetry for {{params.combatduration}}.
-
 LPUSH misfire_template {{params.target}} will rise as a fresh zombie when killed and attack their allies.
-
 LPUSH misfire_template a demonic tax collector appears and demands 10% of their earnings for services rendered.
-
-
 LPUSH misfire_template The caster disappears and reappears after {{params.combatduration}}.
 LPUSH misfire_template The spell is delayed {{params.shortduration}}.
 LPUSH misfire_template One magical item within {{params.radius}} is stripped of enchantment.
 
 LPUSH misfire_template Disco Fever. Everyone dances in sight dances until a will save is made.
 LPUSH misfire_template A god's face appears before the caster and says "hushhhhh". Caster is mute for {{params.combatduration}}.
-
 LPUSH misfire_template Small harmless rubber balls pelt {{params.target}}. They disappear after {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} is sent forward in time {{params.combatduration}}. 
 LPUSH misfire_template {{params.target}} is pelted by a flurry of snowballs.
 LPUSH misfire_template The caster finds themselves teleported to a fine dinner call for {{params.combatduration}} where a king is feasting.
-
 LPUSH misfire_template {{params.target}} grows a hairy tail 4d12 inches long.
-
 LPUSH misfire_template A circle of protection is created around the caster.
-
 LPUSH misfire_template The target is affected as per a Charm spell, no save.
-
 LPUSH misfire_template {{params.target}} is attacked by a random swarm.
 
-#LPUSH misfire_template {{params.target}} gains a familiar if she doesn't already have one. It will appear in 1d4 hours and no spells are necessary to affect the bond.
-#LPUSH misfire_template A random person within 100 yards from you is transformed into a bat and flies off to a better-suited place in order to sleep.  The person is permanently transformed, and only a remove curse can return them to a normal life…. if they can be found.
-#LPUSH misfire_template {{params.target}} thinks the spell has functioned as intended when it actually hasn't. This delusion lasts for 1 round.
-#LPUSH misfire_template A gallows appears. {{params.target}} must make a PP roll to avoid being hung. The rope can be cut down before the {{params.target}} is killed in one round.
-#LPUSH misfire_template {{params.target}}'s ferrous items must make a save vs. spell or rust completely away in one round.
-#LPUSH misfire_template All weapons within 60 feet of {{params.target}} sing one shrill note for one round.
-#LPUSH misfire_template {{params.target}} hit by 1d6+4 giant staples, which do puncture damage for 1d3 each and staple the {{params.target}} to the nearest surface.  This may be the ground.
-#LPUSH misfire_template {{params.target}} teleport 1d100 miles in random direction, but lucky as you are you appear on the ground.
-#LPUSH misfire_template A random person within 30 yards falls in love with you, no matter how strange it may sound.
-#LPUSH misfire_template The world 'forgets' you for 1d4 hours and you are practically invisible during this period.
-#LPUSH misfire_template {{params.target}} is turned upside down and right side up in the same round. {{params.target}} is stunned 3 rounds and is at –3 s/p/d.
-#LPUSH misfire_template {{params.target}}'re deafened for 1d10 days by the sound of this spell, which strangely enough only you seem to have heard.
-#LPUSH misfire_template {{params.target}} spins rapidly for 1d4 rounds and is stunned for 1d6 rounds afterward.
-#LPUSH misfire_template Nearest creature friendly to the {{params.target}} is replaced by a doppelganger. The original creature is imprisoned in the doppelganger's lair (wherever that may be).
-#LPUSH misfire_template Five foot long pink flower petals with green polka dots rain from the sky in an area 50' around the {{params.target}}.  Everything in the area is buried and combat stops for 2d6 rounds while everyone fights their way to the surface.
-#LPUSH misfire_template {{params.target}}r head is tired of being on your shoulders and decides to take a look at the world from a different angle.  It moves down between your legs.  Duration: 1d6 months.  (Remove curse at ½ chance will restore your head to its normal resting place.)
-#LPUSH misfire_template Somehow you didn't quite understand how it was you were supposed to pronounce those last words and the spell is certainly not the desired one, DMs choice.
-#LPUSH misfire_template The spell should work occasionally, so you are encouraged to use it again.  So the spell hits its intended {{params.target}} just as desired.  But roll again on this table to get some extra spice.
-#LPUSH misfire_template A greater Fire elemental sees you as one of the ancient "lost" elementals and in order to help your quest it grants you resistance to all kinds of fire and heat (magical or non-magical.)  {{params.target}} also grow the mark of fire on your forehead and your pupils from now on glow with a deep red light.  May be removed by a remove curse at 1/3 of normal chance.
-#LPUSH misfire_template A 200-foot long chain appears on the ground for a few seconds before it blinks out of existence.
-#LPUSH misfire_template The {{params.target}}'s eyes burn with the spell's power.  The eyes serve as a light source of the intensity of a torch.  The {{params.target}} suffers no penalty from having the light in his eyes, but it might be difficult for them to hide.
-#LPUSH misfire_template The {{params.target}} is infected with blinding sickness. (Pg 175 of the DM's Guide)
-#LPUSH misfire_template Absolutely nothing happens and you loose the rest of your actions for this melee.
-#LPUSH misfire_template {{params.target}} loose your balance and fall to the ground, which means that the spell didn't work, and you retain your spell cost, but loose the initiative.  Try again next melee.
-#LPUSH misfire_template Was it like that, or? For the moment you can't remember the spell, try again next melee.
-#LPUSH misfire_template A random person in your vicinity is reduced to 6 inches tall, permanently.  A negate magic may restore the victim to a normal life.
-#LPUSH misfire_template 50 feet above your intended {{params.target}} appears a cow.  When the cow falls the {{params.target}} and the cow both take 10d6 damage.
-#LPUSH misfire_template A spray of molten gold shoots from the {{params.target}}'s hands towards the {{params.target}}.  This lasts 1d6 melees.  ({{params.target}} may dodge at 16)  If it hits, {{params.target}} takes appropriate damage.  If the {{params.target}} dodges the {{params.target}} may re-aim every melee.  If the {{params.target}} hits the {{params.target}} for more than 4 melees {{params.target}} looks like a golden statue of themselves, and is most likely dead from the damage.
-#LPUSH misfire_template The person closest to {{params.target}} grows hair on their eyeballs. This is very painful and will cause blindness. A successful remove curse spell will remove the hair but not the damage.
-#LPUSH misfire_template The {{params.target}} belches a 30-foot-long cone of fire.  Anything caught within the cone must make a dodge roll of 13 or higher or take 2d6 points of fire damage.
-#LPUSH misfire_template {{params.target}} becomes a very strong magnet for 1d4 rounds.  All metal in the area will fall toward the {{params.target}}.  Metal weapons will attack the {{params.target}} at +2; those wearing metal armour will fall on the {{params.target}}, who will take appropriate damage.
-#LPUSH misfire_template A randomly chosen wand within 50 feet of the {{params.target}} (unless there is a wand of elemental anything nearby, in which case it is affected) explodes; all within 10' of it take appropriate damage.
-#LPUSH misfire_template A bunch of flowers, different types, 24 all in all. Appear before your feet with a card. The card reads: "We humbly apologize for not telling you to duck earlier... Love: The council of most unbelievable and unpredictable accidents." If you look up when you've read this you see a gray stone made windmill falling directly on you from the sky. {{params.target}} may dodge it (14 or higher) or suffer 10d20 points of damage.
-#LPUSH misfire_template Heavy object (boulder, anvil, safe, etc.) appears over {{params.target}} and falls for 2d20 points of damage.
-#LPUSH misfire_template A church organ materializes 60 feet above your head and decides to fall on you, if a perception roll is made a dodge may be tried at 18.  Otherwise you suffer the wrath of a god in the shape of 10d6 points of damage.
-#LPUSH misfire_template {{params.target}} is yanked into the air 10 feet and spins around rapidly, transfixing all those who see it as per Hypnotize.  {{params.target}} will continue to spin until she fails a PE roll, at which time she falls, taking 1d6 points of damage.
-#LPUSH misfire_template A pillow (25%), small table (25%), or anvil (50%) appears over the {{params.target}}'s head. The pillow causes no damage; the table causes 1d10 points of damage, and the anvil 4d6 points of damage.
-#LPUSH misfire_template A pool of boiling lead is created 10 feet above your head.  {{params.target}} are aware of it and may dodge it (10 or Higher) If you fail you will suffer 8d6 points of damage. 
-#LPUSH misfire_template A light brown snake bites you in your left knee.  It is a non-poisonous snake and it only deals 1 point of damage.
-#LPUSH misfire_template A rat crawls up your back and bites you in your left ear and runs off leaving you with an infected wound.  {{params.target}} also receive one point of damage.
-#LPUSH misfire_template The next arrow fired in your vicinity will hit your head.  Normal damage.
-#LPUSH misfire_template {{params.target}} feel an itch on your back.  As you scratch yourself you become aware that something is not as it used to be.  {{params.target}} grow 1d12 hand sized green mushrooms on your body.  Each mushroom may be removed, but it will inflict 1d3 points of damage directly to your HP in the process.  Good Luck.  After a month they fall off naturally. (causing no damage.)
-#LPUSH misfire_template 1d4 flame arrows shoot at {{params.target}}. Use {{params.target}}'s archery attack bonus, or spell strength, whichever is greater.  Roll each attack separately.  Arrows do Longbow damage.
-#LPUSH misfire_template A hard-core goblin child attacks you from behind with a crude cudgel; he will flee if he suffers any damage.
-#LPUSH misfire_template {{params.target}} grow an extra set of teeth, permanently.   -19% to speak any language.
-#LPUSH misfire_template The {{params.target}} is covered in an inert green slime that drips incessantly into her eyes. This goes on for 1d6 rounds during which time {{params.target}} is at a –5 to Strike, parry, and dodge.
-#LPUSH misfire_template {{params.target}} is endowed with impressively large genitals (if male) or breasts (if female).
-#LPUSH misfire_template {{params.target}}'s feet are changed to two left feet for one day. {{params.target}}'s SPD is halved and fitted footwear becomes uncomfortable.
-#LPUSH misfire_template Somehow you forget one of your spells, but you get a replacement.  Determine randomly, which spell you lose.  {{params.target}} get one spell 3 levels higher, also random, and also unstable.
-#LPUSH misfire_template {{params.target}} realize what's wrong with this spell and from now on it is never unstable.
-#LPUSH misfire_template All soil and ground covering a 100' radius around {{params.target}} becomes invisible for 1d6 days, so that it will seem everyone is standing on air. Buried objects will be visible.
+LPUSH misfire_template A random enemy is transformed into a bat and flies away.
+LPUSH misfire_template The caster thinks the spell has functioned as intended when it actually hasn't. This delusion lasts for {{params.combatduration}}.
+
+LPUSH misfire_template A rope noose appears around {{params.target}}'s neck with 10 feet of loose rope.
+LPUSH misfire_template {{params.target}}'s ferrous items must make a save wisdom save or rust completely away in one round.
+LPUSH misfire_template All weapons within 60 feet of {{params.target}} sing one shrill note for {{params.combatduration}}.
+LPUSH misfire_template {{params.target}} are knocked prone and "stapled" to the ground by a large metal staple.
+LPUSH misfire_template The world 'forgets' you for {{params.shortduration}} and you are practically invisible during this period.
+LPUSH misfire_template {{params.target}} is turned upside down and right side up in the same round. {{params.target}} is stunned 3 rounds and is at –3 s/p/d.
+LPUSH misfire_template {{params.target}} are deafened for {{params.shortduration}} by the sound of this spell.
+LPUSH misfire_template {{params.target}} spins rapidly for {{params.combatduration}} and is dizzy for {{params.combatduration}}.
+LPUSH misfire_template Nearest creature friendly to the {{params.target}} is replaced by a doppelganger. The original creature is imprisoned in the doppelganger's lair (wherever that may be).
+LPUSH misfire_template A {{params.radius}} radius centered around {{params.target}} is suddenly layered in 3 feet of {{params.coverage}}, making it difficult terrain.
+
+LPUSH misfire_template Your head becomes an arrow magnet for {{params.shortduration}}- any arrows fired by anyone will veer to hit you.  Normal damage.
+LPUSH misfire_template A light brown snake bites {{params.target}} on the left knee. It hurts.
+
+LPUSH misfire_template {{params.radius}} above your intended target appears {{params.largeanimal|article}}.  When the {{params.largeanimal}} falls, both it and the target take appropriate fall damage.
+LPUSH misfire_template A spray of molten {{params.metal}} shoots from the caster's hands towards the target. it does 2d6 {{params.damagetype}} damage.
+LPUSH misfire_template The person closest to {{params.target}} grows hair on their eyeballs. This is very painful and will cause blindness.
+
+
+LPUSH misfire_template A large stream of urin falls from the sky to douse {{params.target}}. A booming jolly laugh is heard.
+LPUSH misfire_template A {{params.heavyitem}} appears over {{params.target}} and falls for 2d20 points of damage if a dex save is failed.
+
+LPUSH misfire_template {{params.target}} is covered with {{params.color}} mushrooms. each picked mushroom causes a point of damage. They whither and fall off harmlessly after {{params.shortduration}}.
+LPUSH misfire_template An angry goblin child appears and attacks you from behind with a frying pan, and will flee if injured.
+
+LPUSH misfire_template {{params.target}} grow an extra set of teeth which last for {{params.duration}}.
+LPUSH misfire_template {{params.target}} is endowed with impressively large forearms.
+
 #LPUSH misfire_template A star falls from the sky crashing into the nearest village. {{params.target}} know you're responsible.
 #LPUSH misfire_template {{params.target}}'s mouth is puckered for d10+10 rounds. No speech, spell casting, breath weapons, or other uses of the mouth are possible.
 #LPUSH misfire_template An earthquake comes to visit the area surrounding you.  (300-yard radius, 4-5 on the Richter scale.)  Buildings shake and might crumble.
