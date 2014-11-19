@@ -33,6 +33,15 @@
 # heavitem
 
 
+LPUSH misfire_dexsave There is no save.
+LPUSH misfire_dexsave (easy dexterity save)
+LPUSH misfire_dexsave (moderate dexterity save)
+
+LPUSH misfire_wissave There is no save.
+LPUSH misfire_wissave (easy wisdom save)
+LPUSH misfire_wissave (moderate wisdom save)
+
+
 LPUSH misfire_heavyitem safe
 LPUSH misfire_heavyitem anvil
 LPUSH misfire_heavyitem barrel
@@ -130,7 +139,9 @@ LPUSH misfire_combatduration ten minutes
 LPUSH misfire_combatduration an hour
 
 
-# ___ are covered
+# the area center on ___ is covered
+# _______ are covered
+# 
 
 LPUSH misfire_target you
 LPUSH misfire_target a random creature
@@ -488,7 +499,7 @@ LPUSH misfire_template Death himself comes to claim {{params.target}}.
 LPUSH misfire_template {{params.target}} forget the last 24 hours.
 LPUSH misfire_template {{params.target}} glow as per a light spell for {{params.duration}}.
 LPUSH misfire_template {{params.target}} change sex for {{params.duration}}.
-LPUSH misfire_template {{params.target}} is now unknowinly in possession of {{params.smalanimal|article}}.
+LPUSH misfire_template {{params.target}} now possess {{params.smallanimal|article}}.
 LPUSH misfire_template {{params.target}} set the nearest forest ablaze.
 LPUSH misfire_template 2d20 {{params.plants}} grow up around {{params.target}}.
 LPUSH misfire_template Skin turns pale {{params.color}} for 2d6 months
@@ -692,7 +703,7 @@ LPUSH misfire_template {{params.target}}'s next spell is cast as though it is a 
 LPUSH misfire_template The shield closest to the {{params.target}} is turned into a flower basket.
 LPUSH misfire_template A levitation spell is mistakenly laid on {{params.target}}, lasting {{params.combatduration}}
 LPUSH misfire_template {{params.target}} are chained to ground; chains are near impossible to break.
-LPUSH misfire_template {{params.target}} makes a will save to avoid a Random curse. 
+LPUSH misfire_template {{params.target}} is struck by a random curse. {{params.wissave}}
 LPUSH misfire_template {{params.target}}'s next spell is cast at 1d4 levels lower in effectiveness if possible.
 LPUSH misfire_template {{params.target}} has a small, black rain cloud form 3 feet over their head. It follows them for {{params.duration}}
 LPUSH misfire_template The next stranger you talk to will mistake you for an old friend.
@@ -736,8 +747,8 @@ LPUSH misfire_template A portal betweeen you and your target, allowing melee att
 LPUSH misfire_template Lightning strikes the tallest creature in your vicinity.
 LPUSH misfire_template Lightning strikes the shortest creature in your vicinity.
 
-LPUSH misfire_template An energy bolt (4d6 dam) suddenly shoots out from your left ear and hits the nearest object/person, etc.  (Dodge of 18)
-LPUSH misfire_template {{params.target}} is suddenly fluent in {{params.language}}. Also craves the taste of {{params.craving}}
+LPUSH misfire_template An energy bolt explodes from one ear and hits the nearest object/person.
+LPUSH misfire_template {{params.target}} are suddenly fluent in {{params.language}} and craves the taste of {{params.craving}}.
 LPUSH misfire_template Area within {{params.radius}} of {{params.target}} becomes a null magic zone.
 LPUSH misfire_template {{params.target}} develops a phobia.
 LPUSH misfire_template A random creature in the area turns to wood and explodes into 30 parts. If not reassembled in {{params.shortduration}}, it will result in death.
@@ -774,7 +785,7 @@ LPUSH misfire_template The caster disappears and reappears after {{params.combat
 LPUSH misfire_template The spell is delayed {{params.shortduration}}.
 LPUSH misfire_template One magical item within {{params.radius}} is stripped of enchantment.
 
-LPUSH misfire_template Disco Fever. Everyone dances in sight dances until a will save is made.
+LPUSH misfire_template Disco Fever. Everyone dances in sight dances. {{params.wissave}}
 LPUSH misfire_template A god's face appears before the caster and says "hushhhhh". Caster is mute for {{params.combatduration}}.
 LPUSH misfire_template Small harmless rubber balls pelt {{params.target}}. They disappear after {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} is sent forward in time {{params.combatduration}}. 
@@ -782,18 +793,18 @@ LPUSH misfire_template {{params.target}} is pelted by a flurry of snowballs.
 LPUSH misfire_template The caster finds themselves teleported to a fine dinner call for {{params.combatduration}} where a king is feasting.
 LPUSH misfire_template {{params.target}} grows a hairy tail 4d12 inches long.
 LPUSH misfire_template A circle of protection is created around the caster.
-LPUSH misfire_template The target is affected as per a Charm spell, no save.
+LPUSH misfire_template The target is affected as per a Charm spell. {{params.wissave}}
 LPUSH misfire_template {{params.target}} is attacked by a random swarm.
 
 LPUSH misfire_template A random enemy is transformed into a bat and flies away.
 LPUSH misfire_template The caster thinks the spell has functioned as intended when it actually hasn't. This delusion lasts for {{params.combatduration}}.
 
 LPUSH misfire_template A rope noose appears around {{params.target}}'s neck with 10 feet of loose rope.
-LPUSH misfire_template {{params.target}}'s ferrous items must make a save wisdom save or rust completely away in one round.
+LPUSH misfire_template {{params.target}}'s ferrous items rust completely away in one round. {{params.wissave}}
 LPUSH misfire_template All weapons within 60 feet of {{params.target}} sing one shrill note for {{params.combatduration}}.
 LPUSH misfire_template {{params.target}} are knocked prone and "stapled" to the ground by a large metal staple.
 LPUSH misfire_template The world 'forgets' you for {{params.shortduration}} and you are practically invisible during this period.
-LPUSH misfire_template {{params.target}} is turned upside down and right side up in the same round. {{params.target}} is stunned 3 rounds and is at –3 s/p/d.
+
 LPUSH misfire_template {{params.target}} are deafened for {{params.shortduration}} by the sound of this spell.
 LPUSH misfire_template {{params.target}} spins rapidly for {{params.combatduration}} and is dizzy for {{params.combatduration}}.
 LPUSH misfire_template Nearest creature friendly to the {{params.target}} is replaced by a doppelganger. The original creature is imprisoned in the doppelganger's lair (wherever that may be).
@@ -808,7 +819,7 @@ LPUSH misfire_template The person closest to {{params.target}} grows hair on the
 
 
 LPUSH misfire_template A large stream of urin falls from the sky to douse {{params.target}}. A booming jolly laugh is heard.
-LPUSH misfire_template A {{params.heavyitem}} appears over {{params.target}} and falls for 2d20 points of damage if a dex save is failed.
+LPUSH misfire_template A {{params.heavyitem}} appears over {{params.target}} and falls for 2d20 points of damage. {{params.wissave}}
 
 LPUSH misfire_template {{params.target}} is covered with {{params.color}} mushrooms. each picked mushroom causes a point of damage. They whither and fall off harmlessly after {{params.shortduration}}.
 LPUSH misfire_template An angry goblin child appears and attacks you from behind with a frying pan, and will flee if injured.

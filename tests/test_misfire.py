@@ -26,6 +26,7 @@ class TestMisfire(unittest.TestCase):
         total = self.redis.llen('misfire_template')
         for i in range(0, total):
             misfire.template = self.redis.lindex('misfire_template', i)
+            print "%s\n" % misfire.template
             results = misfire.render_template(misfire.template)
             self.assertNotEquals("", results)
             self.assertNotIn("{{", results)
