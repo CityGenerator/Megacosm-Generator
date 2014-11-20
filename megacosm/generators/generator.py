@@ -115,12 +115,8 @@ class Generator(object):
             if not hasattr(self, featurename + '_description'):
                 try:
                     desc_text = self.redis.hmget(key + '_description', getattr(self, featurename))[0]
-                    print "Query %s for %s and get %s.\n" % (key + '_description', getattr(self, featurename), desc_text )
-                    print "is text not none? %s" % (desc_text is not None)
                     if desc_text is not None:
                         featurevalue = json.loads(desc_text)
-                        print "load %s as json and get %s\n" % (desc_text, featurevalue)
-                        print "so %s is now %s\n" % (featurename+'_description', featurevalue)
                         setattr(self, featurename + '_description', featurevalue)
                 except ValueError:
                     self.logger.critical("JSON parsing error: Couldn't read json %s", desc_text)
