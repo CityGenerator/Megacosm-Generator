@@ -280,6 +280,16 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
+    def test_loot_route(self):
+        response = self.app.get('/loot')
+        self.assert200(response)
+
+    def test_loot_builder_route(self):
+        response = self.app.get('/loot_builder')
+        self.assert200(response)
+
+################################################################
+
     def test_magicitem_route(self):
         response = self.app.get('/magicitem')
         self.assert200(response)

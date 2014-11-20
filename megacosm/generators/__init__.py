@@ -43,6 +43,8 @@ from leader import Leader
 assert Leader
 from legend import Legend
 assert Legend
+from loot import Loot
+assert Loot
 from magicitem import MagicItem
 assert MagicItem
 from misfire import Misfire

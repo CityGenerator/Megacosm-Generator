@@ -17,6 +17,7 @@ from megacosm.generators import Flag
 from megacosm.generators import GeomorphDungeon
 from megacosm.generators import Govt
 from megacosm.generators import Leader
+from megacosm.generators import Loot
 from megacosm.generators import MagicItem
 from megacosm.generators import Moon
 from megacosm.generators import NPC
@@ -502,6 +503,27 @@ def leader_builder():
     """Build a a leader"""
 
     classname = 'leader'
+    (plist, pstring, pset) = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+
+#########################################################################
+
+@app.route('/loot')
+def generateloot():
+    """Generate a loot"""
+
+    features = feature_filter('loot')
+    loot = Loot(app.server, features)
+    return render_template('loot.html', tempobj=loot)
+
+
+@app.route('/loot_builder')
+def loot_builder():
+    """Build a a loot"""
+
+    classname = 'loot'
     (plist, pstring, pset) = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)

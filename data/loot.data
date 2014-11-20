@@ -24,65 +24,65 @@ HSET loot_kind_description weaponrack { "name":"weapon rack",         "gem":0,  
 HSET loot_kind_description largechest { "name":"large chest",         "gem":50,  "currency":80,   "art":80,  "mundane":80,  "potion":50,  "scroll":50,  "armor":50,  "weapon":50    }
 HSET loot_kind_description smallchest { "name":"small chest",         "gem":80,  "currency":80,   "art":40,  "mundane":40,  "potion":50,  "scroll":50,  "armor":50,  "weapon":5     }
 
-# You find ____ work(s) of art.
-SET  loot_art_chance 100
-ZADD loot_art  15 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_art  30 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_art  45 {"name":"a few",             "min":2,  "max":4    }
-ZADD loot_art  65 {"name":"a handful of",      "min":3,  "max":9    }
-ZADD loot_art 100 {"name":"about a dozen",     "min":8,  "max":15   }
-
-
-# You find ____ mundane item(s)
-SET  loot_mundane_chance 100
-ZADD loot_mundane  15 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_mundane  30 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_mundane  45 {"name":"a few",             "min":2,  "max":4    }
-ZADD loot_mundane  65 {"name":"a handful of",      "min":3,  "max":9    }
-ZADD loot_mundane  85 {"name":"about a dozen",     "min":8,  "max":15   }
-ZADD loot_mundane 100 {"name":"around two dozen",  "min":20, "max":26   }
-
-# You find ____ gem(s)
-SET  loot_gem_chance 100
-ZADD loot_gem  15 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_gem  30 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_gem  45 {"name":"a few",             "min":2,  "max":4    }
-ZADD loot_gem  65 {"name":"a handful of",      "min":3,  "max":9    }
-ZADD loot_gem  85 {"name":"about a dozen",     "min":8,  "max":15   }
-ZADD loot_gem 100 {"name":"around two dozen",  "min":20, "max":26   }
-
-# You find ____ type(s) of coin
-SET  loot_currency_chance 100
-ZADD loot_currency  60 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_currency  85 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_currency 100 {"name":"a few",             "min":2,  "max":4    }
-
-# You find ____ potion(s)
-SET  loot_potion_chance 100
-ZADD loot_potion  40 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_potion  60 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_potion  90 {"name":"a few",             "min":2,  "max":4    }
-ZADD loot_potion  95 {"name":"a handful of",      "min":3,  "max":9    }
-ZADD loot_potion 100 {"name":"about a dozen",     "min":8,  "max":15   }
-
-# You find _____ scroll(s)
-SET  loot_scroll_chance 100
-ZADD loot_scroll  40 {"name":"a single",          "min":1,  "max":1    }
-ZADD loot_scroll  60 {"name":"a couple",          "min":2,  "max":2    }
-ZADD loot_scroll  90 {"name":"a few",             "min":2,  "max":4    }
-ZADD loot_scroll  95 {"name":"a handful of",      "min":3,  "max":9    }
-ZADD loot_scroll 100 {"name":"about a dozen",     "min":8,  "max":15   }
-
-# You find _____ of armor.
-SET  loot_armor_chance 100
-ZADD loot_armor  60 {"name":"a single piece",  "min":1,  "max":1    }
-ZADD loot_armor  95 {"name":"a couple pieces", "min":2,  "max":2    }
-ZADD loot_armor 100 {"name":"a few pieces",    "min":2,  "max":4    }
-
-# You find _____ weapon(s).
-SET  loot_weapon_chance 100
-ZADD loot_weapon  60 {"name":"a single",        "min":1,  "max":1    }
-ZADD loot_weapon  95 {"name":"a couple",        "min":2,  "max":2    }
-ZADD loot_weapon 100 {"name":"a few",           "min":2,  "max":4    }
-ZADD loot_weapon  95 {"name":"a handful of",    "min":3,  "max":9    }
-
+## You find ____ work(s) of art.
+#SET  loot_art_chance 100
+#ZADD loot_art  15 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_art  30 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_art  45 {"name":"a few",             "min":2,  "max":4    }
+#ZADD loot_art  65 {"name":"a handful of",      "min":3,  "max":9    }
+#ZADD loot_art 100 {"name":"about a dozen",     "min":8,  "max":15   }
+#
+#
+## You find ____ mundane item(s)
+#SET  loot_mundane_chance 100
+#ZADD loot_mundane  15 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_mundane  30 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_mundane  45 {"name":"a few",             "min":2,  "max":4    }
+#ZADD loot_mundane  65 {"name":"a handful of",      "min":3,  "max":9    }
+#ZADD loot_mundane  85 {"name":"about a dozen",     "min":8,  "max":15   }
+#ZADD loot_mundane 100 {"name":"around two dozen",  "min":20, "max":26   }
+#
+## You find ____ gem(s)
+#SET  loot_gem_chance 100
+#ZADD loot_gem  15 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_gem  30 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_gem  45 {"name":"a few",             "min":2,  "max":4    }
+#ZADD loot_gem  65 {"name":"a handful of",      "min":3,  "max":9    }
+#ZADD loot_gem  85 {"name":"about a dozen",     "min":8,  "max":15   }
+#ZADD loot_gem 100 {"name":"around two dozen",  "min":20, "max":26   }
+#
+## You find ____ type(s) of coin
+#SET  loot_currency_chance 100
+#ZADD loot_currency  60 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_currency  85 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_currency 100 {"name":"a few",             "min":2,  "max":4    }
+#
+## You find ____ potion(s)
+#SET  loot_potion_chance 100
+#ZADD loot_potion  40 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_potion  60 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_potion  90 {"name":"a few",             "min":2,  "max":4    }
+#ZADD loot_potion  95 {"name":"a handful of",      "min":3,  "max":9    }
+#ZADD loot_potion 100 {"name":"about a dozen",     "min":8,  "max":15   }
+#
+## You find _____ scroll(s)
+#SET  loot_scroll_chance 100
+#ZADD loot_scroll  40 {"name":"a single",          "min":1,  "max":1    }
+#ZADD loot_scroll  60 {"name":"a couple",          "min":2,  "max":2    }
+#ZADD loot_scroll  90 {"name":"a few",             "min":2,  "max":4    }
+#ZADD loot_scroll  95 {"name":"a handful of",      "min":3,  "max":9    }
+#ZADD loot_scroll 100 {"name":"about a dozen",     "min":8,  "max":15   }
+#
+## You find _____ of armor.
+#SET  loot_armor_chance 100
+#ZADD loot_armor  60 {"name":"a single piece",  "min":1,  "max":1    }
+#ZADD loot_armor  95 {"name":"a couple pieces", "min":2,  "max":2    }
+#ZADD loot_armor 100 {"name":"a few pieces",    "min":2,  "max":4    }
+#
+## You find _____ weapon(s).
+#SET  loot_weapon_chance 100
+#ZADD loot_weapon  60 {"name":"a single",        "min":1,  "max":1    }
+#ZADD loot_weapon  95 {"name":"a couple",        "min":2,  "max":2    }
+#ZADD loot_weapon 100 {"name":"a few",           "min":2,  "max":4    }
+#ZADD loot_weapon  95 {"name":"a handful of",    "min":3,  "max":9    }
+#
