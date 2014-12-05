@@ -1,9 +1,10 @@
 # A Greatsword, which is  _______
+# an excellent, ___________ greatsword
 ZADD mundaneitem_repair   5 {"name":"broken",                    "score":5   }
-ZADD mundaneitem_repair  20 {"name":"in disrepair",              "score":20  }
+ZADD mundaneitem_repair  20 {"name":"damaged",                   "score":20  }
 ZADD mundaneitem_repair  60 {"name":"intact",                    "score":60  }
 ZADD mundaneitem_repair  80 {"name":"well maintained",           "score":80  }
-ZADD mundaneitem_repair 100 {"name":"in pristine condition",     "score":100 }
+ZADD mundaneitem_repair 100 {"name":"pristine",                  "score":100 }
 
 # Foo is a ________ greatsword that is well maintained
 ZADD mundaneitem_quality   5 {"name":"shoddy",   "score":5   }
@@ -296,7 +297,7 @@ LPUSH mundaneitem_kind foliage camouflage
 LPUSH mundaneitem_kind footman's lance
 LPUSH mundaneitem_kind forgery kit
 LPUSH mundaneitem_kind fork, spoon and knife
-LPUSH mundaneitem_kind four pieces of charcoal
+LPUSH mundaneitem_kind bag of charcoal
 LPUSH mundaneitem_kind frostshard ore
 LPUSH mundaneitem_kind full-length fur coat
 LPUSH mundaneitem_kind full-length leather coat
@@ -539,10 +540,10 @@ LPUSH mundaneitem_kind oak cane
 LPUSH mundaneitem_kind oars
 LPUSH mundaneitem_kind obsidian
 LPUSH mundaneitem_kind oil (1-pint flask)
-LPUSH mundaneitem_kind oil based colored paint
+LPUSH mundaneitem_kind oil based  paint
 LPUSH mundaneitem_kind oil based white wash paint
-LPUSH mundaneitem_kind one piece camouflage utility jumpsuit
-LPUSH mundaneitem_kind one piece utility jumpsuit
+LPUSH mundaneitem_kind one-piece camouflage utility jumpsuit
+LPUSH mundaneitem_kind one-piece utility jumpsuit
 LPUSH mundaneitem_kind one-gallon cask of Demon's Vale Wine
 LPUSH mundaneitem_kind oranges
 LPUSH mundaneitem_kind orc battle-blade

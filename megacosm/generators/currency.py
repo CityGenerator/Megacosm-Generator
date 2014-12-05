@@ -32,5 +32,7 @@ class Currency(Generator):
             self.text = self.render_template(self.text)
         self.text = self.text[0].capitalize() + self.text[1:]
 
+        self.listing =" %s %s %s %s" %  (self.count, self.value['name'], self.material, self.name['full']  )
+
     def __str__(self):
         return self.text

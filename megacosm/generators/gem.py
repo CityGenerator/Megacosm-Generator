@@ -23,6 +23,7 @@ class Gem(Generator):
             self.text = self.render_template(self.template)
             self.text = self.render_template(self.text)
         self.text = self.text[0].capitalize() + self.text[1:]
+        self.listing =" %s %s %s %s" %  (self.count, self.quality['name'], self.color, self.kind_description['name']  )
 
     def __str__(self):
         return '%s %s %s, %s' % (self.quality['name'], self.color, self.kind_description['name'], self.value['name'])

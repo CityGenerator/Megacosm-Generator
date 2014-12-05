@@ -20,6 +20,7 @@ class MundaneItem(Generator):
 
             self.text = self.render_template('{{params.kind}}')
         self.text = self.text[0].capitalize() + self.text[1:]
+        self.listing =" %s, %s %s" %  (self.quality['name'], self.repair['name'], self.text  )
 
     def __str__(self):
         return self.text

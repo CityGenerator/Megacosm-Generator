@@ -33,11 +33,9 @@
     <input type="submit" value="More"></input>
 </form>
 </p>
-<!--
     <ul>
-%for field in oneliner.__dict__|sort %}
-    <li>{field}} : {oneliner[field]}}
-%endfor%}
+{%for field in oneliner.__dict__|sort %}
+    <li>{{field}} : {{oneliner[field]}}
+{%endfor%}
     </ul>
--->
 {% endblock %}
