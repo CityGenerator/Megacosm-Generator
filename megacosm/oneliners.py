@@ -1,6 +1,7 @@
 from flask import render_template, request
 from megacosm.generators import Artwork
 from megacosm.generators import Bond
+from megacosm.generators import Curse
 from megacosm.generators import Resource
 from megacosm.generators import Rumor
 from megacosm.generators import Flaw
@@ -21,6 +22,37 @@ from megacosm.util.Seeds import set_seed
 from megacosm import app, feature_filter, builder_form_data
 
 
+#########################################################################
+
+
+@app.route('/curse')
+def generatecurse():
+    """Generate a curse"""
+
+    features = feature_filter('curse')
+    titletext = 'Unforseen Consequences...'
+    if ('count' in request.args and
+            request.args['count'].isdigit() and
+            int(request.args['count']) > 1 and
+            int(request.args['count']) <= 100):
+        curses = []
+        for _ in xrange(int(request.args['count'])):
+            curses.append(Curse(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=curses,
+                               oneliner=curses[0], titletext=titletext, generator='curse')
+    else:
+        curse = Curse(app.server, features)
+        return render_template('oneliner.html', oneliner=curse, titletext=titletext, generator='curse')
+
+
+@app.route('/curse_builder')
+def curse_builder():
+    """Build a a curse"""
+    classname = 'curse'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 #########################################################################
 
 

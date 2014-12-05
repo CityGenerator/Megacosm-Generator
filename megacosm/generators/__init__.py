@@ -21,6 +21,8 @@ from cuisine import Cuisine
 assert Cuisine
 from currency import Currency
 assert Currency
+from curse import Curse
+assert Curse
 from deity import Deity
 assert Deity
 from event import Event
