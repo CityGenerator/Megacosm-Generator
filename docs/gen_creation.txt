@@ -1,0 +1,20 @@
+The following are steps needed to create a new oneliner.
+
+
+create a data file under data/ with plenty of entries. (use artwork.data as a template)
+
+
+create a generator script under megacosm/generators/ (use artwork.py as a template)
+
+
+# create stub for Flask
+in megacosm/oneliners.py
+    Clone one of the pre-existing sections, then change the titletext, variables, and strings to your new oneliner.
+    Make sure you get the generator and the builder 
+    add the new class import 
+
+add an import in megacosm/generators/__init__.py
+
+edit megacosm/templates/base.html to include the new oneliner
+
+run ./reimport_data.py

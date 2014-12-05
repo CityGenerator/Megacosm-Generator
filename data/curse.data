@@ -1,0 +1,94 @@
+
+LPUSH curse_kind bezerker
+LPUSH curse_kind narcolepsy
+LPUSH curse_kind fanatic
+LPUSH curse_kind greed
+LPUSH curse_kind hubris
+LPUSH curse_kind addiction
+LPUSH curse_kind penalty
+LPUSH curse_kind derp
+LPUSH curse_kind yawning
+LPUSH curse_kind submission
+LPUSH curse_kind lethargy
+LPUSH curse_kind bigspender
+LPUSH curse_kind truthteller
+LPUSH curse_kind precious
+LPUSH curse_kind braddoro
+LPUSH curse_kind karrius
+LPUSH curse_kind quint
+LPUSH curse_kind ibiwan
+LPUSH curse_kind greenimposter
+LPUSH curse_kind mabdelnour
+LPUSH curse_kind trammelle
+LPUSH curse_kind jamangai
+LPUSH curse_kind phobic
+LPUSH curse_kind babbler
+LPUSH curse_kind kudla
+LPUSH curse_kind toolio
+LPUSH curse_kind sleepless
+
+# The Bezerker Curse ____________
+HSET curse_kind_description bezerker  {"name":"bezerker", "description":"causes intermittent, uncontrollable rage in the victim"  }
+HSET curse_kind_description narcolepsy  {"name":"narcolepsy", "description":"causes the victim to fall asleep in stressful situations"   }
+HSET curse_kind_description fanatic  {"name":"fanatic", "description":"causes overzealous feeling of love or hate towards a single random person, action or thing"   }
+HSET curse_kind_description greed  {"name":"greed", "description":"causes the victim to take unnecessary risks for treasure"   }
+HSET curse_kind_description hubris  {"name":"hubris", "description":"causes the victim to overvalue their ability"   }
+HSET curse_kind_description addiction  {"name":"addiction", "description":"causes the victim to grow overly dependent on an action or thing"   }
+HSET curse_kind_description penalty  {"name":"disadvantaged", "description":"causes victim to perform poorly at everything" }
+HSET curse_kind_description derp  {"name":"derp", "description":"causes the victim to become noticeably stupider than everyone around"   }
+HSET curse_kind_description yawning  {"name":"yawning", "description":"causes uncontrollable, loud yawning"   }
+HSET curse_kind_description submission  {"name":"submission", "description":"will randomly submit to anyone disagreeing or displaying force"   }
+HSET curse_kind_description lethargy  {"name":"lethargy", "description":"causes the victim to perform poorly at physical tasks"  }
+HSET curse_kind_description bigspender  {"name":"big spender", "description":"causes victim to overcompensate when making purchases"   }
+HSET curse_kind_description truthteller  {"name":"truth teller", "description":"prevents you from lying, bending or ommitting the truth"   }
+HSET curse_kind_description precious  {"name":"precious", "description":"causes paranoia relating to theft of an item"   }
+HSET curse_kind_description braddoro  {"name":"braddoro", "description":"causes a preoccupation with juvenile jokes, and uncontrollable giggles"   }
+HSET curse_kind_description karrius  {"name":"carrius", "description":"causes an obnoxious preoccupation with random topics that no one cares about"   }
+HSET curse_kind_description quint  {"name":"quint", "description":"causes the victim to randomly berate and threaten friends and colleagues"   }
+HSET curse_kind_description ibiwan  {"name":"ibiwan", "description":"causes inability to comprehend being wrong, even if it leads to death"   }
+HSET curse_kind_description greenimposter  {"name":"greenimposter", "description":"causes the victim to suddenly believe their are unqualified for whatever task is at hand"   }
+HSET curse_kind_description mabdelnour  {"name":"mabdelnour", "description":"causes random shortness of breath and inability to run" }
+HSET curse_kind_description trammelle  {"name":"trammelle", "description":"causes fits of rage when any filth is left on a glossy surface and a compulsion to clean it"   }
+HSET curse_kind_description jamangai  {"name":"jamangai", "description":"causes the victim to feel compelled to one-up others"   }
+HSET curse_kind_description phobic  {"name":"phobic", "description":"causes irrational fear of one or more things"   }
+HSET curse_kind_description babbler  {"name":"babbler", "description":"causes incessant, uncontrollable talking that becomes worse with stressful situations"   }
+HSET curse_kind_description kudla {"name":"kudla", "description":"causes the victim's skin to secrete a disgusting, oozing slime"   }
+HSET curse_kind_description toolio {"name":"toolio", "description":"causes the victim extreme discomfort when being decisive or making decisions"   }
+HSET curse_kind_description unlucky  {"name":"unlucky", "description":"causes the victim to become unlucky when they don't have their lucky charm"  }
+HSET curse_kind_description sleepless  {"name":"sleepless", "description":"prevents the victim from resting through mundane or magical means"  }
+
+# The effects of the curse _____________.
+ZADD curse_duration   5  {"name":"are intermittent",      "score":5  }
+ZADD curse_duration  10  {"name":"are temporary",         "score":10  }
+ZADD curse_duration  40  {"name":"last a few minutes",    "score":40  }
+ZADD curse_duration  50  {"name":"last several minutes",  "score":50  }
+ZADD curse_duration  60  {"name":"last an hour",          "score":60  }
+ZADD curse_duration  70  {"name":"last a few hours",      "score":70  }
+ZADD curse_duration  95  {"name":"last several hours",    "score":95  }
+ZADD curse_duration  96  {"name":"last a day",            "score":96  }
+ZADD curse_duration  97  {"name":"last a few days",       "score":97  }
+ZADD curse_duration  98  {"name":"last a week",           "score":98  }
+ZADD curse_duration  99  {"name":"last weeks",            "score":99  }
+ZADD curse_duration 100  {"name":"last a lifetime",       "score":100 }
+
+
+# ...and can only be undone by ___________
+
+LPUSH curse_removal a remove curse spell
+LPUSH curse_removal a restoration spell
+LPUSH curse_removal performing an appropriate selfless act
+LPUSH curse_removal performing a blood sacrifice
+LPUSH curse_removal destroying a related artifact
+LPUSH curse_removal undoing the action that lead to the curse
+LPUSH curse_removal passing the curse on to another
+LPUSH curse_removal killing the one who cursed you
+LPUSH curse_removal undoing the original cause
+LPUSH curse_removal performing an epic task
+
+
+LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}. The effects of the curse {{params.duration['name']}}.
+LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}. Nothing else is known about it.
+LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}.
+LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}, and can only be undone by {{params.removal}}.
+
+
