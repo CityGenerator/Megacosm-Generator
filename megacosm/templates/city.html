@@ -30,6 +30,9 @@
  {%endfor%}
 </pre>
 -->
+        {% assets "js_flag" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
         {% assets "js_city" %}
             <script type="text/javascript" src="{{ ASSET_URL }}"></script>
         {% endassets %}

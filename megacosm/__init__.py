@@ -53,9 +53,10 @@ app = create_app()
 assets = Environment(app)
 
 js = Bundle(
+    'js/threejs/seedrandom-2.3.10.min.js',
 #    'js/*.js',
 #    filters='jsmin',
-#    output='gen/jspacked.js'
+    output='gen/jspacked.js'
 )
 assets.register('js_all', js)
 
@@ -65,18 +66,25 @@ css = Bundle('css/*.css',
 )
 assets.register('css_all', css)
 
+jsflag = Bundle(
+
+    'js/flag/*.js',
+#    filters='jsmin',
+    output='gen/flagpacked.js'
+)
+assets.register('js_flag', jsflag)
+
 jscity = Bundle(
 
-    'js/threejs/seedrandom-2.3.10.min.js',
     'js/threejs/three*.js',
     'js/threejs/stats.min.js',
     'js/threejs/OrbitControls.js',
     'js/threejs/ImprovedNoise.js',
     'js/threejs/Detector.js',
     'js/city/*.js',
-    'js/flag/*.js',
-    filters='jsmin',
-    output='gen/citypacked.js'
+    #FIXME this can't be packed without breaking perlin noise... why??
+#    filters='jsmin',
+#    output='gen/citypacked.js'
 )
 assets.register('js_city', jscity)
 

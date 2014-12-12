@@ -4,14 +4,6 @@
 {% block title %}A Wild Flag Appears...{% endblock %}
 {% block head %}
   {{ super() }}
-    <script type="text/javascript" src="/static/js/flagshape.js"></script>
-    <script type="text/javascript" src="/static/js/flagdivision.js"></script>
-    <script type="text/javascript" src="/static/js/flagoverlay.js"></script>
-    <script type="text/javascript" src="/static/js/flagsymbol.js"></script>
-    <script type="text/javascript" src="/static/js/flagborder.js"></script>
-    <script type="text/javascript" src="/static/js/flagutils.js"></script>
-    <script type="text/javascript" src="/static/js/flag.js"></script>
-
 {% endblock %}
 {% block content %}
     <h1> A Wild Flag Appears...</h1>
@@ -19,6 +11,9 @@
         <canvas id='flag' height='200' >
         </canvas>
     </div>
+    {% assets "js_flag" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
 
     <script type="text/javascript">
         create_flag( {{flagjson|safe}},  document.getElementById("flag") );
