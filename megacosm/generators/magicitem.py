@@ -3,9 +3,11 @@
 
 from generator import Generator
 from npc import NPC
+from curse import Curse
 from jinja2.environment import Environment
 from megacosm.util import Filters
 import logging
+import random
 
 
 class MagicItem(Generator):
@@ -17,6 +19,12 @@ class MagicItem(Generator):
         self.generate_features(self.kind)
 
         self.npc = NPC(redis)
+
+        self.curse_chance_roll = random.randint(1, 100);
+        if self.curse_chance_roll < self.curse_chance :
+            self.curse = Curse(redis)
+        else:
+            del self.curse
 
         self.build_creator()
 

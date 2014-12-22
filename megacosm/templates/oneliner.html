@@ -33,11 +33,14 @@
     <input type="submit" value="More"></input>
 </form>
 </p>
-<!--
+
+{% if request.args.get('debug') and oneliner is defined%}
     <ul>
-%for field in oneliner.__dict__|sort %}
-    <li>{field}} : {oneliner[field]}}
-%endfor%}
+    {%for field in oneliner.__dict__|sort %}
+        <li>{{field}} : {{oneliner[field]}}
+    {%endfor%}
     </ul>
--->
+{% endif %}
+
+
 {% endblock %}
