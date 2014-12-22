@@ -26,6 +26,47 @@ LPUSH curse_kind babbler
 LPUSH curse_kind kudla
 LPUSH curse_kind toolio
 LPUSH curse_kind sleepless
+LPUSH curse_kind agro
+LPUSH curse_kind blinding
+LPUSH curse_kind butterfinger
+LPUSH curse_kind cleese
+LPUSH curse_kind deathscent
+LPUSH curse_kind deathspite
+LPUSH curse_kind decaying
+LPUSH curse_kind doublevision
+LPUSH curse_kind drowning
+LPUSH curse_kind echo
+LPUSH curse_kind fashionista
+LPUSH curse_kind festering
+LPUSH curse_kind forgetful
+LPUSH curse_kind habitualliar
+LPUSH curse_kind halfhearted
+LPUSH curse_kind humming
+LPUSH curse_kind itchy
+LPUSH curse_kind leadenedleg
+LPUSH curse_kind lostmojo
+LPUSH curse_kind maximumpain
+LPUSH curse_kind misfiring
+LPUSH curse_kind misplacing
+LPUSH curse_kind muted
+LPUSH curse_kind pacifistic
+LPUSH curse_kind princely
+LPUSH curse_kind puedelathos
+LPUSH curse_kind reflectedsins
+LPUSH curse_kind respondent
+LPUSH curse_kind seashell
+LPUSH curse_kind sexybeast
+LPUSH curse_kind shakyhands
+LPUSH curse_kind singletasking
+LPUSH curse_kind skippy
+LPUSH curse_kind smoothness
+LPUSH curse_kind spinny
+LPUSH curse_kind startling
+LPUSH curse_kind stutterer
+LPUSH curse_kind tonguetied
+LPUSH curse_kind trueself
+LPUSH curse_kind truthteller
+LPUSH curse_kind tunnelvision
 
 # The Bezerker Curse ____________
 HSET curse_kind_description bezerker  {"name":"bezerker", "description":"causes intermittent, uncontrollable rage in the victim"  }
@@ -57,14 +98,59 @@ HSET curse_kind_description toolio {"name":"toolio", "description":"causes the v
 HSET curse_kind_description unlucky  {"name":"unlucky", "description":"causes the victim to become unlucky when they don't have their lucky charm"  }
 HSET curse_kind_description sleepless  {"name":"sleepless", "description":"prevents the victim from resting through mundane or magical means"  }
 
+
+HSET curse_kind_description agro  {"name":"agro", "description":"causes enemies to always target the victim"  }
+HSET curse_kind_description blinding  {"name":"blinding", "description":"causes decay of sight"  }
+HSET curse_kind_description butterfinger  {"name":"butterfinger", "description":"prevents the victim from griping anything for more than 30 seconds"  }
+HSET curse_kind_description cleese  {"name":"cleese", "description":"causes the victim to walk strangely, reducing movement and stealth"  }
+HSET curse_kind_description deathscent  {"name":"death scent", "description":"causes the victim to reek of death, frightening nearby animals"  }
+HSET curse_kind_description deathspite  {"name":"death spite", "description":"causes dying enemies within range to get one last attack against the victim before dying"  }
+HSET curse_kind_description decaying  {"name":"decaying", "description":"causes physical rotting and losing a bit of health each day"  }
+HSET curse_kind_description doublevision  {"name":"double vision", "description":"causes the victim to see double (disadvantage in combat and perception)"  }
+HSET curse_kind_description drowning  {"name":"drowning", "description":"causes prevents the victim from remembering how to swim"  }
+HSET curse_kind_description echo  {"name":"", "description":"causes the victim to randomly parrot phrases"  }
+HSET curse_kind_description fashionista  {"name":"fashionista", "description":"causes the victim to become are uncomfortable in whatever clothing or armor they are wearing (at a disadvantage while wearing it)"  }
+HSET curse_kind_description festering  {"name":"festering", "description":"causes the victim to become resistant to healing"  }
+HSET curse_kind_description forgetful  {"name":"forgetful", "description":"become forgetful when trying to recall important things"  }
+HSET curse_kind_description habitualliar  {"name":"habitual liar", "description":"causes the victim to be strongly compelled to needlessly lie"  }
+HSET curse_kind_description halfhearted  {"name":"half-hearted", "description":"causes the victim to strike in a minimally damaging way"  }
+HSET curse_kind_description humming  {"name":"humming", "description":"causes the victim to unconsciously hum or sing"  }
+HSET curse_kind_description itchy  {"name":"itchy ", "description":"causes the victim to develop a full body, insufferable rash in the presence of a specific catalyst"  }
+HSET curse_kind_description leadenedleg  {"name":"leadened leg", "description":"causes the victim's leg to permanently fall asleep, reducing movement"  }
+HSET curse_kind_description lostmojo  {"name":"lost mojo", "description":"prevents the victim from attuning or using magical items"  }
+HSET curse_kind_description maximumpain  {"name":"maximum pain", "description":"causes an enemies damage to always maximized against the victim"  }
+HSET curse_kind_description misfiring  {"name":"misfiring", "description":"causes a 25% chance of failure to properly cast a spell or use a ranged weapon"  }
+HSET curse_kind_description misplacing  {"name":"misplacing", "description":"causes the victim to have a 5% chance of realizing a possession is missing when trying to use it"  }
+HSET curse_kind_description muted  {"name":"muted", "description":"causes an inability to vocalize"  }
+HSET curse_kind_description pacifistic  {"name":"pacifistic", "description":"causes the victim's hands to burn and blister while holding a weapon"  }
+HSET curse_kind_description princely  {"name":"princely", "description":"causes the victim to be polymorphed into a talking animal."  }
+HSET curse_kind_description puedelathos  {"name":"puedelathos", "description":"causes a 50% chance to automatically fail any successful saving throw"  }
+HSET curse_kind_description reflectedsins  {"name":"reflected sins", "description":"causes any damage inflicted on an opponent to be mirrored on the victim"  }
+HSET curse_kind_description respondent  {"name":"respondent", "description":"causes the victim to repeat a phrase in response to a trigger"  }
+HSET curse_kind_description seashell  {"name":"seashell", "description":"causes the victim's hearing to be replaced with the roar of the ocean"  }
+HSET curse_kind_description sexybeast  {"name":"sexy beast", "description":"causes the victim to release mating hormones of random nearby creatures"  }
+HSET curse_kind_description shakyhands  {"name":"shaky hands", "description":"causes a 25% chance to drop whatever the victim is holding in combat situations"  }
+HSET curse_kind_description singletasking {"name":"single-tasking", "description":"prevents the victim from performing more than one action at a time."  }
+HSET curse_kind_description skippy  {"name":"skippy", "description":"causes the victim to forget how to walk (but can still skip)"  }
+HSET curse_kind_description smoothness  {"name":"smoothness", "description":"causes all hair, feathers, spines or scales fall off the victim"  }
+HSET curse_kind_description spinny  {"name":"spinny", "description":"prevents walking or running in a straight line, reducing movement"  }
+HSET curse_kind_description startling  {"name":"startling", "description":"causes the victim to always be surpised in new combat situations"  }
+HSET curse_kind_description stutterer  {"name":"stutterer", "description":"causes the victim to develop an incomprehensible stutter "  }
+HSET curse_kind_description tonguetied  {"name":"tonguetied", "description":"causes the victim to grow a fleshy webbing that holds their tongue down, impeding speech"  }
+HSET curse_kind_description trueself  {"name":"true self", "description":"causes the victim to gradually morph cosmetically into another race"  }
+HSET curse_kind_description truthteller  {"name":"truthteller", "description":"causes the victim to be strongly compelled to tell the complete truth"  }
+HSET curse_kind_description tunnelvision  {"name":"tunnel vision", "description":"causes the victim to lose peripheral vision (disadvantage in combat and perception)"  }
+
+
+
 # The effects of the curse _____________.
-ZADD curse_duration   5  {"name":"are intermittent",      "score":5  }
+ZADD curse_duration   5  {"name":"appear intermittently", "score":5  }
 ZADD curse_duration  10  {"name":"are temporary",         "score":10  }
-ZADD curse_duration  40  {"name":"last a few minutes",    "score":40  }
-ZADD curse_duration  50  {"name":"last several minutes",  "score":50  }
-ZADD curse_duration  60  {"name":"last an hour",          "score":60  }
-ZADD curse_duration  70  {"name":"last a few hours",      "score":70  }
-ZADD curse_duration  95  {"name":"last several hours",    "score":95  }
+ZADD curse_duration  40  {"name":"last for a few minutes at a time",    "score":40  }
+ZADD curse_duration  50  {"name":"last for several minutes at a time",  "score":50  }
+ZADD curse_duration  60  {"name":"last for an hour at a time",          "score":60  }
+ZADD curse_duration  70  {"name":"last for a few hours at a time",      "score":70  }
+ZADD curse_duration  95  {"name":"last several hours at a time",    "score":95  }
 ZADD curse_duration  96  {"name":"last a day",            "score":96  }
 ZADD curse_duration  97  {"name":"last a few days",       "score":97  }
 ZADD curse_duration  98  {"name":"last a week",           "score":98  }
@@ -90,5 +176,5 @@ LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{param
 LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}. Nothing else is known about it.
 LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}.
 LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}, and can only be undone by {{params.removal}}.
-
+LPUSH curse_template The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}, and can only be undone by {{params.removal}}. Untreated, the effects of the curse {{params.duration['name']}}.
 
