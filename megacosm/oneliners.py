@@ -1,5 +1,6 @@
 from flask import render_template, request
 from megacosm.generators import Artwork
+from megacosm.generators import Artwork2
 from megacosm.generators import Bond
 from megacosm.generators import Curse
 from megacosm.generators import Resource
@@ -145,7 +146,6 @@ def generateartwork():
         artwork = Artwork(app.server, features)
         return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
 
-
 @app.route('/artwork_builder')
 def artwork_builder():
     """Build a a artwork"""
@@ -156,6 +156,34 @@ def artwork_builder():
 
 #########################################################################
 
+@app.route('/artwork2')
+def generateartwork2():
+    """Generate a artwork2"""
+    features = feature_filter('artwork')
+    titletext = 'A Work of Art...2'
+    if ('count' in request.args and
+            request.args['count'].isdigit() and
+            int(request.args['count']) > 1 and
+            int(request.args['count']) <= 100):
+        artworks = []
+        for _ in xrange(int(request.args['count'])):
+            artworks.append(Artwork2(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=artworks,
+                               oneliner=artworks[0], titletext=titletext, generator='artwork2')
+    else:
+        artwork2 = Artwork2(app.server, features)
+        return render_template('oneliner.html', oneliner=artwork2, titletext=titletext, generator='artwork2')
+
+@app.route('/artwork2_builder')
+def artwork_builder2():
+    """Build a a artwork"""
+    classname = 'artwork'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+#########################################################################
 
 @app.route('/rumor')
 def generaterumor():
