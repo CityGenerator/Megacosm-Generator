@@ -4,7 +4,8 @@
 """
     Generators package
 """
-
+from drink import Drink
+assert Drink
 from artwork import Artwork
 assert Artwork
 from artwork2 import Artwork2

@@ -29,6 +29,7 @@ from megacosm.generators import Star
 from megacosm.generators import Street
 from megacosm.generators import Wanted
 from megacosm.generators import Weather
+from megacosm.generators import Drink
 from megacosm.util.Seeds import set_seed
 from megacosm.util import Filters
 import redis
