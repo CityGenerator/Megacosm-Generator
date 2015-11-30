@@ -17,6 +17,7 @@ from megacosm.generators import MundaneItem
 from megacosm.generators import Cuisine
 from megacosm.generators import NPC
 from megacosm.generators import Region
+from megacosm.generators import Potion
 
 from megacosm.util.Seeds import set_seed
 
@@ -156,29 +157,29 @@ def artwork_builder():
 
 #########################################################################
 
-@app.route('/artwork2')
+@app.route('/potion')
 def generateartwork2():
-    """Generate a artwork2"""
-    features = feature_filter('artwork')
-    titletext = 'A Work of Art...2'
+    """Generate a potion"""
+    features = feature_filter('potion')
+    titletext = 'A mysterious potion of liquid...'
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
-        artworks = []
+        potion = []
         for _ in xrange(int(request.args['count'])):
-            artworks.append(Artwork2(app.server, features))
+            potion.append(Potion(app.server, features))
             features['seed'] = set_seed()
-        return render_template('oneliner.html', oneliners=artworks,
-                               oneliner=artworks[0], titletext=titletext, generator='artwork2')
+        return render_template('oneliner.html', oneliners=potion,
+                               oneliner=potion[0], titletext=titletext, generator='potion')
     else:
-        artwork2 = Artwork2(app.server, features)
-        return render_template('oneliner.html', oneliner=artwork2, titletext=titletext, generator='artwork2')
+        potion = Potion(app.server, features)
+        return render_template('oneliner.html', oneliner=potion, titletext=titletext, generator='potion')
 
-@app.route('/artwork2_builder')
+@app.route('/potion_builder')
 def artwork_builder2():
     """Build a a artwork"""
-    classname = 'artwork'
+    classname = 'potion'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)

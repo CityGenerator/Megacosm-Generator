@@ -83,3 +83,5 @@ from wanted import Wanted
 assert Wanted
 from weather import Weather
 assert Weather
+from potion import Potion
+assert Potion
