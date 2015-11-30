@@ -72,4 +72,26 @@ ZADD drink_volume  30 {"name":"in short supply",     "score":30    }
 ZADD drink_volume  70 {"name":"commonly found",     "score":70    }
 ZADD drink_volume 100 {"name":"in excess",     "score":100    }
 
-LPUSH drink_template {{params.appearance}} {{params.type}}: A {{params.type}} with a {{params.flavor_strength}} flavor of {{params.flavor}}. It's {{params.rarity['name']}} to the region, and is {{params.volume['name']}} these days.
+LPUSH drink_feel cold
+LPUSH drink_feel cool
+LPUSH drink_feel crisp
+LPUSH drink_feel dry
+LPUSH drink_feel fleshy
+LPUSH drink_feel furry
+LPUSH drink_feel fuzzy
+LPUSH drink_feel gritty
+LPUSH drink_feel refreshing
+LPUSH drink_feel icy
+LPUSH drink_feel lukewarm
+LPUSH drink_feel oily
+LPUSH drink_feel pulpy
+LPUSH drink_feel slimy
+LPUSH drink_feel sticky
+LPUSH drink_feel tacky
+LPUSH drink_feel thick
+LPUSH drink_feel thin
+LPUSH drink_feel velvety
+LPUSH drink_feel warm
+LPUSH drink_feel waxy
+
+LPUSH drink_template  You sip a {{params.appearance}} {{params.type}} that is {{params.rarity['name']}} to {{params.region.name['full']}}. It has a {{params.flavor_strength}} flavor of {{params.flavor}}, and feels {{params.feel}} on the tongue.
