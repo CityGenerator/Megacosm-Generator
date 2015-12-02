@@ -21,10 +21,8 @@ class TestDrink(unittest.TestCase):
     def test_drink_template(self):
         """ """
         drink = Drink(self.redis, {
-            'color' : 'ale',
+            'type' : 'ale',
             'flavor' : 'sour',
-            'appearance' : 'ruby',
-            'strength' : 'aggressive',
             'template' :  'template {{params.flavor}} {{params.type}}'
         })
 
@@ -41,7 +39,7 @@ class TestDrink(unittest.TestCase):
         self.assertEqual('Something', drink.text)
         self.assertEqual('Something', "%s" % drink)
 
-    def test_artwork_data(self):
+    def test_drink_data(self):
         drink = Drink(self.redis)
         total = self.redis.llen('drink_template')
         for i in range(0, total):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from megacosm.generators import Potion
+from megacosm.generators import Elixir
 import unittest2 as unittest
 
 import redis
@@ -13,37 +13,37 @@ class TestDrink(unittest.TestCase):
         """  """
         self.redis = redis.from_url(TestConfiguration.REDIS_URL)
 
-    def test_random_potion(self):
+    def test_random_elixir(self):
         """ """
-        potion = Potion(self.redis)
-        self.assertNotEqual('', potion.name)
+        elixir = Elixir(self.redis)
+        self.assertNotEqual('', elixir.name)
 
-    def test_potion_template(self):
+    def test_elixir_template(self):
         """ """
-        potion = Potion(self.redis, {
+        elixir = Elixir(self.redis, {
             'type' : 'ale',
             'taste' : 'rubbery',
             'container' : 'bowl',
             'template' :  'template {{params.taste}} {{params.container}}'
         })
 
-        self.assertEqual('Template rubbery bowl', potion.text)
-        self.assertEqual('Template rubbery bowl', "%s" % potion)
+        self.assertEqual('Template rubbery bowl', elixir.text)
+        self.assertEqual('Template rubbery bowl', "%s" % elixir)
 
-    def test_potion_text(self):
+    def test_elixir_text(self):
         """  """
-        potion = Potion(self.redis, {
+        potion = Elixir(self.redis, {
             'text': 'something'
             })
 
         self.assertEqual('Something', potion.text)
         self.assertEqual('Something', "%s" % potion)
 
-    def test_potion_data(self):
-        potion = Potion(self.redis)
-        total = self.redis.llen('potion_template')
+    def test_elixir_data(self):
+        elixir = Elixir(self.redis)
+        total = self.redis.llen('elixir_template')
         for i in range(0, total):
-            potion.template = self.redis.lindex('potion_template', i)
-            results = potion.render_template(potion.template)
+            elixir.template = self.redis.lindex('elixir_template', i)
+            results = elixir.render_template(elixir.template)
             self.assertNotEquals("", results)
             self.assertNotIn("{{", results)
