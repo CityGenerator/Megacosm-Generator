@@ -9,9 +9,10 @@ from config import TestConfiguration
 
 class TestDrink(unittest.TestCase):
 
-    # def setUp(self):
-    #     """  """
-    #     self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+    """
+    def setUp(self):
+        """  """
+        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
 
     def test_random_drink(self):
         """ """
@@ -47,3 +48,4 @@ class TestDrink(unittest.TestCase):
     #         results = drink.render_template(drink.template)
     #         self.assertNotEquals("", results)
     #         self.assertNotIn("{{", results)
+    """
