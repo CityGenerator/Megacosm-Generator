@@ -1,6 +1,5 @@
 from flask import render_template, request
 from megacosm.generators import Artwork
-from megacosm.generators import Artwork2
 from megacosm.generators import Bond
 from megacosm.generators import Curse
 from megacosm.generators import Resource
@@ -190,7 +189,7 @@ def artwork_builder():
 #########################################################################
 
 @app.route('/elixir')
-def generateartwork2():
+def generateelixir():
     """Generate a elixir"""
     features = feature_filter('elixir')
     titletext = 'A mysterious elixir of liquid...'
@@ -209,7 +208,7 @@ def generateartwork2():
         return render_template('oneliner.html', oneliner=elixir, titletext=titletext, generator='elixir')
 
 @app.route('/elixir_builder')
-def artwork_builder2():
+def elixir_builder():
     """Build a a artwork"""
     classname = 'elixir'
     plist, pstring, pset = builder_form_data(classname)
