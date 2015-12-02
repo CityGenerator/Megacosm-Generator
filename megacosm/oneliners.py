@@ -178,6 +178,7 @@ def generateartwork():
         artwork = Artwork(app.server, features)
         return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
 
+
 @app.route('/artwork_builder')
 def artwork_builder():
     """Build a a artwork"""

@@ -78,7 +78,6 @@ server = redis.from_url(BaseConfiguration.REDIS_URL)
 pipe = server.pipeline()
 
 pipe.flushall()
-pipe.execute()
 
 for filename in sorted(glob.glob('data/*.data')):
     parse_file(pipe, filename)
