@@ -17,7 +17,7 @@ from megacosm.generators import MundaneItem
 from megacosm.generators import Cuisine
 from megacosm.generators import NPC
 from megacosm.generators import Region
-from megacosm.generators import Potion
+from megacosm.generators import Elixir
 from megacosm.generators import Drink
 
 from megacosm.util.Seeds import set_seed
@@ -187,29 +187,29 @@ def artwork_builder():
 
 #########################################################################
 
-@app.route('/potion')
+@app.route('/elixir')
 def generateartwork2():
-    """Generate a potion"""
-    features = feature_filter('potion')
-    titletext = 'A mysterious potion of liquid...'
+    """Generate a elixir"""
+    features = feature_filter('elixir')
+    titletext = 'A mysterious elixir of liquid...'
     if ('count' in request.args and
             request.args['count'].isdigit() and
             int(request.args['count']) > 1 and
             int(request.args['count']) <= 100):
-        potion = []
+        elixir = []
         for _ in xrange(int(request.args['count'])):
-            potion.append(Potion(app.server, features))
+            elixir.append(Elixir(app.server, features))
             features['seed'] = set_seed()
-        return render_template('oneliner.html', oneliners=potion,
-                               oneliner=potion[0], titletext=titletext, generator='potion')
+        return render_template('oneliner.html', oneliners=elixir,
+                               oneliner=elixir[0], titletext=titletext, generator='potion')
     else:
-        potion = Potion(app.server, features)
-        return render_template('oneliner.html', oneliner=potion, titletext=titletext, generator='potion')
+        elixir = Elixir(app.server, features)
+        return render_template('oneliner.html', oneliner=elixir, titletext=titletext, generator='elixir')
 
-@app.route('/potion_builder')
+@app.route('/elixir_builder')
 def artwork_builder2():
     """Build a a artwork"""
-    classname = 'potion'
+    classname = 'elixir'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)

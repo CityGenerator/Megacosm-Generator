@@ -5,7 +5,7 @@ from generator import Generator
 import logging
 
 
-class Potion(Generator):
+class Elixir(Generator):
 
     def __init__(self, redis, features={}):
 
