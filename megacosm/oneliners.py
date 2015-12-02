@@ -31,6 +31,7 @@ def generatedrink():
     """Generate a drink"""
 
     features = feature_filter('drink')
+    features['region'] = Region(app.server)
     titletext = "What's on tap today?"
     if ('count' in request.args and
             request.args['count'].isdigit() and
