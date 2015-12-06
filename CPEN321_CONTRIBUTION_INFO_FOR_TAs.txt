@@ -1,0 +1,7 @@
+1. We want to add two additional random sentence generators. 
+2. 
+	implementation: random drink sentence generator
+	files:  drink.py, oneliners.py, drinks.data, test_drink.py
+	
+	implementation: random elixir sentence generator
+	files: elixir.py, oneliners.py, elixir.data, test_elixir.py
