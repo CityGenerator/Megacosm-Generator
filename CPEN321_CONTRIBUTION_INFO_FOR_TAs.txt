@@ -5,3 +5,6 @@
 	
 	implementation: random elixir sentence generator
 	files: megacosm/generators/elixir.py, megacosm/oneliners.py, data/elixir.data, tests/test_elixir.py, megacosm/generators/__init__.py , megacosm/templates/base.html
+	
+	
+PULL REQUEST: https://github.com/CityGenerator/Megacosm-Generator/pull/128
