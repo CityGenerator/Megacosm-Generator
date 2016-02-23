@@ -554,3 +554,41 @@ class MegacosmFlaskTestCast(TestCase):
         response = self.app.get('/cuisine_builder')
         self.assertTemplateUsed('generic_builder.html')
         self.assert200(response)
+
+################################################################
+
+    def test_phobia_route(self):
+        response = self.app.get('/phobia?seed=99')
+        self.assertIn('seed=99', response.data)
+        self.assertTemplateUsed('oneliner.html')
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_multi_phobia_toolow_route(self):
+        response = self.app.get('/phobia?count=0')
+        self.assertTemplateUsed('oneliner.html')
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_multi_phobia_toohigh_route(self):
+        response = self.app.get('/phobia?count=101')
+        self.assertTemplateUsed('oneliner.html')
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_multi_phobia_nondigit_route(self):
+        response = self.app.get('/phobia?count=duck')
+        self.assertTemplateUsed('oneliner.html')
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_multi_phobia_route(self):
+        response = self.app.get('/phobia?count=5')
+        self.assertTemplateUsed('oneliner.html')
+        self.assertIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_phobia_builder_route(self):
+        response = self.app.get('/phobia_builder')
+        self.assertTemplateUsed('generic_builder.html')
+        self.assert200(response)

@@ -10,6 +10,7 @@ from megacosm.generators import Currency
 from megacosm.generators import Event
 from megacosm.generators import Gem
 from megacosm.generators import Motivation
+from megacosm.generators import Phobia
 from megacosm.generators import JobPosting
 from megacosm.generators import Legend
 from megacosm.generators import MundaneItem
@@ -378,6 +379,38 @@ def generatemotivation():
 def motivation_builder():
     """Build a a motivation"""
     classname = 'motivation'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+#########################################################################
+
+
+@app.route('/phobia')
+def generatephobia():
+    """Generate a phobia"""
+    features = feature_filter('phobia')
+    titletext = 'You know what really scares me?'
+
+    if ('count' in request.args and
+            request.args['count'].isdigit() and
+            int(request.args['count']) > 1 and
+            int(request.args['count']) <= 100):
+        phobias = []
+        for _ in xrange(int(request.args['count'])):
+            phobias.append(Phobia(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=phobias,
+                               oneliner=phobias[0], titletext=titletext, generator='phobia')
+    else:
+        phobia = Phobia(app.server, features)
+        return render_template('oneliner.html', oneliner=phobia, titletext=titletext, generator='phobia')
+
+
+@app.route('/phobia_builder')
+def phobia_builder():
+    """Build a a phobia"""
+    classname = 'phobia'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
