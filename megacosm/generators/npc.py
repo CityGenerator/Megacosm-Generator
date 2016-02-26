@@ -3,6 +3,7 @@
 
 from generator import Generator
 import motivation
+import phobia
 import json
 import logging
 import random
@@ -30,6 +31,9 @@ class NPC(Generator):
 
         if not hasattr(self, 'motivation'):
             self.motivation = motivation.Motivation(self.redis, {'npc': self})
+
+        if not hasattr(self, 'phobia'):
+            self.phobia = phobia.Phobia(self.redis, {'npc': self})
 
     def select_names(self):
         nameorder = self.redis.zrange(self.race + '_name_order', 0, -1)

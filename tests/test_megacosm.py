@@ -320,6 +320,16 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
+    def test_phobia_route(self):
+        response = self.app.get('/phobia')
+        self.assert200(response)
+
+    def test_phobia_builder_route(self):
+        response = self.app.get('/phobia_builder')
+        self.assert200(response)
+
+################################################################
+
     def test_mundaneitem_route(self):
         response = self.app.get('/mundaneitem')
         self.assert200(response)

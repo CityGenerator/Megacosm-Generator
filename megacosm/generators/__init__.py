@@ -59,6 +59,8 @@ from npc import NPC
 assert NPC
 from organization import Organization
 assert Organization
+from phobia import Phobia
+assert Phobia
 from planet import Planet
 assert Planet
 from region import Region
