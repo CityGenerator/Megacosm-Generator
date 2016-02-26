@@ -2,7 +2,7 @@
 
 LPUSH motivationfollow_text to follow others
 LPUSH motivationfollow_text to investigate rumors of riches
-LPUSH motivationfollow_text to learned more about rediscovered ancient lore
-LPUSH motivationfollow_text to follow the voices
+LPUSH motivationfollow_text to learn more about rediscovered ancient lore
+LPUSH motivationfollow_text to follow voices
 LPUSH motivationfollow_text to follow instructions from an angel
 

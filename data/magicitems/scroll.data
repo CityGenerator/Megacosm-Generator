@@ -458,11 +458,11 @@ HSET scroll_effect_description shrinking    {"name":"shrinking",    "description
 LPUSH scroll_effect shrinking
 HSET scroll_effect_description sickness    {"name":"sickness",    "description":"causes the user to display symptoms of severe illness" }
 LPUSH scroll_effect sickness
-HSET scroll_effect_description skelegro    {"name":"skelegro",    "description":"regrows any missing bones" }
-LPUSH scroll_effect skelegro
+HSET scroll_effect_description skelegrow    {"name":"skelegrow",    "description":"regrows any missing bones" }
+LPUSH scroll_effect skelegrow
 HSET scroll_effect_description slashingfury    {"name":"slashing fury",    "description":"causes the user to fly into a frenzy when holding a blade" }
 LPUSH scroll_effect slashingfury
-HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants the user unnatural vigor when combating a specific enemy" }
+HSET scroll_effect_description slaying    {"name":"slaying",    "description":"grants the user unnatural vigor when combatting a specific enemy" }
 LPUSH scroll_effect slaying
 HSET scroll_effect_description sleep    {"name":"sleep",    "description":"causes the user to fall asleep for up to 24 hours" }
 LPUSH scroll_effect sleep
