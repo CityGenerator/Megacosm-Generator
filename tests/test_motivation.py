@@ -29,3 +29,12 @@ class TestMotivation(unittest.TestCase):
         self.assertNotEqual(motivation.text, '')
         self.assertEqual(motivation.npc, npc)
         self.assertNotEqual('%s' % motivation, '')
+
+    def test_motivation_w_fear(self):
+        """  """
+
+        npc = NPC(self.redis)
+        motivation = Motivation(self.redis, {'npc': npc, 'kind': 'fear'})
+        self.assertNotEqual(motivation.text, '')
+        self.assertEqual(motivation.npc, npc)
+        self.assertNotEqual('%s' % motivation, '')

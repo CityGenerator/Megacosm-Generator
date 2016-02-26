@@ -3,7 +3,6 @@
 
 from megacosm.generators import Phobia
 import unittest2 as unittest
-from pprint import pprint
 import redis
 from config import TestConfiguration
 

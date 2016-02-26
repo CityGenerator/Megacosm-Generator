@@ -3,11 +3,9 @@
 
 from megacosm.generators import NPC
 import unittest2 as unittest
-
 import redis
 from megacosm.util.Seeds import set_seed
 from config import TestConfiguration
-
 
 class TestNPC(unittest.TestCase):
 
@@ -17,10 +15,19 @@ class TestNPC(unittest.TestCase):
         self.redis = redis.from_url(TestConfiguration.REDIS_URL)
         self.seed = set_seed('3')
 
-    def test_races(self):
+    def test_generated_race(self):
         """  """
 
         npc = NPC(self.redis)
+        self.assertNotEqual('', npc.race)
+        npc = NPC(self.redis, {})
+        self.assertNotEqual('', npc.race)
+
+    def test_races(self):
+        """  """
+
+        npc = NPC(self.redis, {'race': 'kobold'})
+        self.assertEqual(npc.race, 'kobold')
 
         # FIXME: subraces broke this assertion
         # self.assertIn(npc.race, self.redis.lrange('npc_race',0,-1))
@@ -49,9 +56,12 @@ class TestNPC(unittest.TestCase):
         self.assertRegexpMatches(npc.name['full'], '.+ .+')
 
     def test_phobias(self):
-        """  """
-        npc = NPC(self.redis)
+        """ Test NPC Phobias """
+        npc = NPC(self.redis, {'race':'human'})
+        self.assertNotEqual('',npc.race)
         self.assertNotEqual('',npc.phobia.text)
+        self.assertIn('which is a fear of',npc.phobia.text)
+
     def test_motivation(self):
         """  """
         npc = NPC(self.redis)

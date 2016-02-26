@@ -1,2 +1,2 @@
-LPUSH motivationfear_text by {{params.npc.phobia.strength|article}} {{params.npc.phobia}}
+LPUSH motivationfear_text by {{params.npc.phobia.strength}} {{params.npc.phobia.kind}}.
 

@@ -2,9 +2,10 @@
 LPUSH phobia_template You have {{params.strength['name']}} {{params.kind_description['name']}}, which is a fear of {{params.kind_description['description']}}.
 
 
-ZADD phobia_strength  60 {"name":"mild",  "score":60     }
-ZADD phobia_strength  90 {"name":"moderate", "score":90    }
-ZADD phobia_strength 100 {"name":"severe",     "score":100    }
+ZADD phobia_strength  60 {"name":"mild",      "score":60    }
+ZADD phobia_strength  80 {"name":"moderate",  "score":80    }
+ZADD phobia_strength  90 {"name":"severe",    "score":90    }
+ZADD phobia_strength 100 {"name":"crippling", "score":100   }
 
 
 LPUSH phobia_kind ablutophobia
