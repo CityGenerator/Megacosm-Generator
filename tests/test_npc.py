@@ -47,3 +47,12 @@ class TestNPC(unittest.TestCase):
         npc = NPC(self.redis, {'race': 'human'})
         self.assertEqual(npc.race, 'human')
         self.assertRegexpMatches(npc.name['full'], '.+ .+')
+
+    def test_phobias(self):
+        """  """
+        npc = NPC(self.redis)
+        self.assertNotEqual('',npc.phobia.text)
+    def test_motivation(self):
+        """  """
+        npc = NPC(self.redis)
+        self.assertNotEqual('',npc.motivation.text)

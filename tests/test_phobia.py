@@ -3,7 +3,7 @@
 
 from megacosm.generators import Phobia
 import unittest2 as unittest
-
+from pprint import pprint
 import redis
 from config import TestConfiguration
 
@@ -18,4 +18,6 @@ class TestPhobia(unittest.TestCase):
         """  """
         phobia = Phobia(self.redis)
         self.assertNotEquals('', phobia.text)
+        self.assertIn( phobia.kind_description['name'], phobia.text)
+        self.assertIn( phobia.strength['name'], phobia.text)
 
