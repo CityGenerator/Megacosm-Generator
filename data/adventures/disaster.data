@@ -1,0 +1,4 @@
+LPUSH adventure_kind disaster
+
+HSET adventure_kind_description disaster {"name":"disaster", "Description":"Survive or deal with the fallout of a disaster"}
+

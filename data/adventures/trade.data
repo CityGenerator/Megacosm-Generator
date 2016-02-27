@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind trade
+
+HSET adventure_kind_description trade {"name":"trade", "Description":"Organize a trade between two parties in a safe location."}
+

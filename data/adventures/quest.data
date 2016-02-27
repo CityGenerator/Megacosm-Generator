@@ -1,0 +1,5 @@
+
+
+LPUSH adventure_kind quest
+
+HSET adventure_kind_description quest {"name":"quest", "Description":"Go out on a grand quest."}

@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind sabotage
+
+HSET adventure_kind_description sabotage {"name":"sabotage", "Description":"Covertly sow chaos and destruction."}
+

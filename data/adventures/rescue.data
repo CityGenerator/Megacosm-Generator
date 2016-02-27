@@ -1,0 +1,7 @@
+
+LPUSH adventure_kind rescue
+
+HSET adventure_kind_description rescue {"name":"rescue", "Description":"Rescue someone from a horrible fate"}
+
+
+

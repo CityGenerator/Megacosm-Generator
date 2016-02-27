@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind negotiate
+
+HSET adventure_kind_description negotiate {"name":"negotiate", "Description":"Try to negotiate a truce between two or more parties"}
+

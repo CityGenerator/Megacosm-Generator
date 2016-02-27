@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind war
+
+HSET adventure_kind_description war {"name":"war", "Description":"Face the onslaught of a full scale war."}
+

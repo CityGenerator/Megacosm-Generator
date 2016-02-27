@@ -1,0 +1,5 @@
+
+
+LPUSH adventure_kind piracy
+
+HSET adventure_kind_description piracy {"name":"piracy", "Description":"Waylay someone and steal their goods on the high seas."}

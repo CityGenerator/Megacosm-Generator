@@ -5,6 +5,8 @@
     Generators package
 """
 
+from adventure import Adventure
+assert Adventure
 from artwork import Artwork
 assert Artwork
 from bond import Bond

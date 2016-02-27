@@ -1,0 +1,4 @@
+LPUSH adventure_kind decide
+
+HSET adventure_kind_description decide {"name":"decide", "Description":"Decide the fate of someone or something based on gathered information"}
+

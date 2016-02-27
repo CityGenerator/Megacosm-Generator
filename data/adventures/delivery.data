@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind delivery
+
+HSET adventure_kind_description delivery {"name":"delivery", "Description":"Deliver a person or thing under the given conditions"}

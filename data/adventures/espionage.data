@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind espionage
+
+HSET adventure_kind_description espionage {"name":"espionage", "Description":"Secretly gather information."}
+

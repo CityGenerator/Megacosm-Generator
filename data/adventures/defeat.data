@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind defeat
+
+HSET adventure_kind_description defeat {"name":"defeat", "Description":"Defeat an opponent"}

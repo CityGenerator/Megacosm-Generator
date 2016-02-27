@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind journey
+
+HSET adventure_kind_description journey {"name":"journey", "Description":"Travel to a far away land."}

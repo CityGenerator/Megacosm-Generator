@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind kill
+
+HSET adventure_kind_description kill {"name":"kill", "Description":"End the life of someone or something."}

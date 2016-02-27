@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind comedy
+
+HSET adventure_kind_description comedy {"name":"comedy", "Description":"Do your best to distract and amuse"}

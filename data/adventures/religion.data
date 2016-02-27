@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind religion
+
+HSET adventure_kind_description religion {"name":"religion", "Description":"Do something in the service of a greater power."}

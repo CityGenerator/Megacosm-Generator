@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind escape
+
+HSET adventure_kind_description escape {"name":"escape", "Description":"Escape a bad situation."}

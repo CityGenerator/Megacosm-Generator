@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind perform
+
+HSET adventure_kind_description perform {"name":"perform", "Description":"Do your best to entertain an audience."}
+

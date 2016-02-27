@@ -1,11 +1,25 @@
-# 
-
 
 
 # Theme
 #Horror, Fantasy, Scifi, action, romance, espionage
+LPUSH adventure_theme Horror
+LPUSH adventure_theme Fantasy
+LPUSH adventure_theme Scifi
+LPUSH adventure_theme Action
+LPUSH adventure_theme Romance
+LPUSH adventure_theme Espionage
 
-# story
+
+LPUSH adventure_mcguffin ring
+LPUSH adventure_mcguffin idol
+LPUSH adventure_mcguffin orb
+LPUSH adventure_mcguffin trinket
+LPUSH adventure_mcguffin key
+LPUSH adventure_mcguffin spellbook
+
+LPUSH adventure_hook {{params.ally.occupation|article|capitalize}} is looking for assistance.
+LPUSH adventure_hook The party finds a mysterious {{params.mcguffin}}.
+
 
 #Goal
 #
@@ -27,41 +41,40 @@
 #rewards
 
 #TODO: split these into separate configs    
-#LPUSH adventure_category assault
-LPUSH adventure_category challenge # challenge someone to change their ways, possibly with violence.
-LPUSH adventure_category change # change the way something is currently done
-LPUSH adventure_category chase
-LPUSH adventure_category comedy
-LPUSH adventure_category contest
-LPUSH adventure_category create # create an artifact, town, event, etc
-LPUSH adventure_category decide # decide the fate of someone or something based on gathered information
-LPUSH adventure_category defeat # Defeat someone to claim something
-LPUSH adventure_category defend # defend a place, an item, a person, etc
-LPUSH adventure_category delivery
-LPUSH adventure_category diplomacy
-LPUSH adventure_category disaster
-LPUSH adventure_category escape
-LPUSH adventure_category escort
-LPUSH adventure_category espionage
-LPUSH adventure_category exploration
-LPUSH adventure_category find # find a missing artifact, person, clue, etc
-LPUSH adventure_category heist
-LPUSH adventure_category investigate # investigate a rumor, some ruins, or an event
-LPUSH adventure_category journey
-LPUSH adventure_category kill # kill for a contract, assassination, etc
-LPUSH adventure_category liberate
-LPUSH adventure_category morality
-LPUSH adventure_category negotiate # negotiate between several parties, some of which are lying
-LPUSH adventure_category perform  # Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
-LPUSH adventure_category piracy
-LPUSH adventure_category quest
-LPUSH adventure_category religion
-LPUSH adventure_category rescue
-LPUSH adventure_category resistance
-LPUSH adventure_category shepherd
-LPUSH adventure_category survival
-LPUSH adventure_category trade
-LPUSH adventure_category war
+#LPUSH adventure_category challenge # challenge someone to change their ways, possibly with violence.
+#LPUSH adventure_category change # change the way something is currently done
+#LPUSH adventure_category chase
+#LPUSH adventure_category comedy
+#LPUSH adventure_category contest
+#LPUSH adventure_category create # create an artifact, town, event, etc
+#LPUSH adventure_category decide # decide the fate of someone or something based on gathered information
+#LPUSH adventure_category defeat # Defeat someone to claim something
+#LPUSH adventure_category defend # defend a place, an item, a person, etc
+#LPUSH adventure_category delivery
+#LPUSH adventure_category diplomacy
+#LPUSH adventure_category disaster
+#LPUSH adventure_category escape
+#LPUSH adventure_category escort
+#LPUSH adventure_category espionage
+#LPUSH adventure_category exploration
+#LPUSH adventure_category find # find a missing artifact, person, clue, etc
+#LPUSH adventure_category heist
+#LPUSH adventure_category investigate # investigate a rumor, some ruins, or an event
+#LPUSH adventure_category journey
+#LPUSH adventure_category kill # kill for a contract, assassination, etc
+#LPUSH adventure_category liberate
+#LPUSH adventure_category morality
+#LPUSH adventure_category negotiate # negotiate between several parties, some of which are lying
+#LPUSH adventure_category perform  # Perform a menial task for a reward- plow a field, build a barn, etc which may have complications.
+#LPUSH adventure_category piracy
+#LPUSH adventure_category quest
+#LPUSH adventure_category religion
+#LPUSH adventure_category rescue
+#LPUSH adventure_category resistance
+#LPUSH adventure_category shepherd
+#LPUSH adventure_category survival
+#LPUSH adventure_category trade
+#LPUSH adventure_category war
 
 
 
@@ -82,27 +95,21 @@ LPUSH adventure_villiantype criminal leader
 LPUSH adventure_villiantype gang leader
 LPUSH adventure_villiantype hive mind
 LPUSH adventure_villiantype cult leader
-LPUSH adventure_villiantype
-LPUSH adventure_villiantype
-LPUSH adventure_villiantype
-LPUSH adventure_villiantype
-LPUSH adventure_villiantype
 
-villian power type
-political, religious, criminal, civil
+#villian power type
+#political, religious, criminal, civil
 
-why is the villian mad? are they mad?
-motivation
-
-power level
+#why is the villian mad? are they mad?
+#motivation
+#power level
 
 #element: curse, kidnapping
 
 
-villian type
-ally type
-location
-evidence
+#villian type
+#ally type
+#location
+#evidence
 
 
 

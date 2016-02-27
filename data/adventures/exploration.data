@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind exploration
+
+HSET adventure_kind_description exploration {"name":"exploration", "Description":"Explore a new location"}

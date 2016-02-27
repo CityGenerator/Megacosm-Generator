@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind create
+
+HSET adventure_kind_description create {"name":"create", "Description":"Strive to create something"}

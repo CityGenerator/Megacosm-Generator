@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind contest
+
+HSET adventure_kind_description contest {"name":"contest", "Description":"Try to outperform others"}

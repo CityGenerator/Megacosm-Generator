@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind survival
+
+HSET adventure_kind_description survival {"name":"survival", "Description":"The goal is simple: survive."}
+

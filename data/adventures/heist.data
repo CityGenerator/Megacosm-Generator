@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind heist
+
+HSET adventure_kind_description heist {"name":"heist", "Description":"Covertly steal something valuable"}

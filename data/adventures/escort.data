@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind escort
+
+HSET adventure_kind_description escort {"name":"escort", "Description":"Escort a person, thing or group to a given location"}

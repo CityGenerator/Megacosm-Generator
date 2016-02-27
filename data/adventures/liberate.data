@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind liberate
+
+HSET adventure_kind_description liberate {"name":"liberate", "Description":"Free someone or something from oppression"}

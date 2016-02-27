@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind shepherd
+
+HSET adventure_kind_description shepherd {"name":"shepherd", "Description":"Move a large herd safely from one location to another"}
+

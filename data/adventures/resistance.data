@@ -1,0 +1,5 @@
+
+LPUSH adventure_kind resistance
+
+HSET adventure_kind_description resistance {"name":"resistance", "Description":"Fight to overthrow an empire."}
+

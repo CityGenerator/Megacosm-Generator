@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind find
+
+HSET adventure_kind_description find {"name":"find", "Description":"Track down the location of a person, place or thing"}

@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind morality
+
+HSET adventure_kind_description morality {"name":"morality", "Description":"Decide the fate of a moral quandry."}

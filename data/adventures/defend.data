@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind defend
+
+HSET adventure_kind_description defend {"name":"defend", "Description":"Successfully defend a person, place or thing."}

@@ -1,0 +1,5 @@
+
+
+LPUSH adventure_kind chase
+
+HSET adventure_kind_description chase {"name":"chase", "Description":"Give chase to someone or something"}

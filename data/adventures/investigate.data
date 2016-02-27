@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind investigate
+
+HSET adventure_kind_description investigate {"name":"investigate", "Description":"Investigate the details of a rumor or lead."}

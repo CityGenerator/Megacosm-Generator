@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind change
+
+HSET adventure_kind_description change {"name":"change", "Description":"Strive to change the status quo"}

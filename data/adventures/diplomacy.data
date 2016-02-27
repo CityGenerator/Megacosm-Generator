@@ -1,0 +1,4 @@
+
+LPUSH adventure_kind diplomacy
+
+HSET adventure_kind_description diplomacy {"name":"diplomacy", "Description":"Do your best to resolve a political issue"}

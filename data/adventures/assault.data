@@ -1,16 +1,24 @@
 #
-LPUSH adventure_category assault
+LPUSH adventure_kind assault
 
-HSET adventure_category_description assault {"name":"Assault", "Description":"Taking the fight to someone else"}
+#Assault: This adventure type features storming castles, wiping out or running off hostile groups, tracking down space pirates, and any other scenario where the focus is on the PCs taking the fight to someone else hard.
+
+HSET adventure_kind_description assault {"name":"Assault", "Description":"Taking the fight to someone else"}
+
+LPUSH adventureassault_template Your adventure begins by taking the fight to {{params.assault_target|article}}. The {{params.assault_target}} is {{params.assault_awareness}} your presence and are {{params.assault_preparation}} an attack.
 
 #Your adventure begins by taking the fight to a[n] ______
-LPUSH adventure_assault_target thieves guild
-LPUSH adventure_assault_target crew of pirates
-LPUSH adventure_assault_target warlord
-LPUSH adventure_assault_target king
-LPUSH adventure_assault_target baron
-LPUSH adventure_assault_target band of briggands
+LPUSH adventureassault_target thieves guild
+LPUSH adventureassault_target crew of pirates
+LPUSH adventureassault_target warlord
+LPUSH adventureassault_target king
+LPUSH adventureassault_target baron
+LPUSH adventureassault_target band of briggands
 
 # the target is _________ your presence
-LPUSH adventure_assault_awareness unaware of
-LPUSH adventure_assault_awareness preparing for
+LPUSH adventureassault_awareness unaware of
+LPUSH adventureassault_awareness aware of
+
+
+LPUSH adventureassault_preparation prepared for
+LPUSH adventureassault_preparation unprepared for
