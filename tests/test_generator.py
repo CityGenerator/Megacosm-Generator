@@ -18,10 +18,12 @@ class TestGenerator(unittest.TestCase):
         self.redis.zadd('bogus_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }',1.0)
         self.redis.zadd('bogus_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }',40.0)
         self.redis.zadd('bogus_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }',100.0)
-        self.redis.lpush('bogus_list', 1)
-        self.redis.lpush('bogus_list', 2)
-        self.redis.lpush('bogus_list', 3)
-        self.redis.lpush('bogus_list', 4)
+        self.redis.lpush('bogus_mylist', 1)
+        self.redis.lpush('bogus_mylist', 2)
+        self.redis.lpush('bogus_mylist', 3)
+        self.redis.lpush('bogus_mylist', 4)
+        
+        self.redis.set('bogus_booyahfeature', 'Booyah')
 
         self.redis.lpush('other_misslist', 'a')
         self.redis.lpush('other_misslist', 'b')
@@ -31,20 +33,20 @@ class TestGenerator(unittest.TestCase):
         self.redis.zadd('chnc_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }',1.0)
         self.redis.zadd('chnc_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }',40.0)
         self.redis.zadd('chnc_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }',100.0)
-        self.redis.set('chnc_list_chance', 101)
-        self.redis.lpush('chnc_list', 1)
-        self.redis.lpush('chnc_list', 2)
-        self.redis.lpush('chnc_list', 3)
+        self.redis.set('chnc_mylist_chance', 101)
+        self.redis.lpush('chnc_mylist', 1)
+        self.redis.lpush('chnc_mylist', 2)
+        self.redis.lpush('chnc_mylist', 3)
 
         #Used for testing chances that never happen
         self.redis.set('nochnc_size_chance', 0)
         self.redis.zadd('nochnc_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }',1.0)
         self.redis.zadd('nochnc_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }',40.0)
         self.redis.zadd('nochnc_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }',100.0)
-        self.redis.set('nochnc_list_chance', 0)
-        self.redis.lpush('nochnc_list', 1)
-        self.redis.lpush('nochnc_list', 2)
-        self.redis.lpush('nochnc_list', 3)
+        self.redis.set('nochnc_mylist_chance', 0)
+        self.redis.lpush('nochnc_mylist', 1)
+        self.redis.lpush('nochnc_mylist', 2)
+        self.redis.lpush('nochnc_mylist', 3)
 
         self.redis.lpush('myknd_kind', 'big')
         self.redis.lpush('myknd_kind', 'med')
@@ -73,6 +75,23 @@ class TestGenerator(unittest.TestCase):
         self.redis.lpush('fullcitypost', 'wood')
         self.redis.lpush('fullcitytrailer', 'Mount')
         self.redis.lpush('fullcitytrailer', 'Park')
+
+
+        self.redis.set('mincitytitle_chance', 0)
+        self.redis.set('mincitypre_chance', 0)
+        self.redis.set('mincitytrailer_chance', 0)
+
+        self.redis.lpush('mincitytitle', 'Alta')
+        self.redis.lpush('mincitytitle', 'Bad')
+
+        self.redis.lpush('mincitypre', 'De')
+        self.redis.lpush('mincitypre', 'Le')
+        self.redis.lpush('mincityroot', 'Ack')
+        self.redis.lpush('mincityroot', 'Ad')
+        self.redis.lpush('mincitypost', 'thistle')
+        self.redis.lpush('mincitypost', 'wood')
+        self.redis.lpush('mincitytrailer', 'Mount')
+        self.redis.lpush('mincitytrailer', 'Park')
 
 
         self.redis.zadd('incompleteset_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }',1.0)
@@ -111,7 +130,7 @@ class TestGenerator(unittest.TestCase):
     def test_select_by_roll_key_doesnt_exist(self):
         ''' Try to select funion for a role, only to find it doesn't exist.'''
         generator = Generator(self.redis)
-        with self.assertRaisesRegexp(IndexError, 'Is funion a valid key?'):
+        with self.assertRaisesRegexp(ValueError, 'The key funion does not exist.'):
             generator.select_by_roll('funion')
         self.assertNotEqual('', generator.select_by_roll('bogus_size'))
 
@@ -127,15 +146,15 @@ class TestGenerator(unittest.TestCase):
 
     def test_select_by_roll_key_wrong_type(self):
         '''Intentionally try to roll on the wrong datatype.'''
-        generator = Generator(self.redis, {'seed': 1007, 'bogus_list_roll': 37})
+        generator = Generator(self.redis, {'seed': 1007, 'bogus_mylist_roll': 37})
         with self.assertRaisesRegexp(Exception,
-                                     "the key \(bogus_list\) doesn't appear to exist or isn't a zset \(list\)."):
-            generator.select_by_roll('bogus_list')
+                                     "The key bogus_mylist is not a zset; the type is list."):
+            generator.select_by_roll('bogus_mylist')
 
     def test_random_list_value(self):
         ''' Find a random list value '''
         generator = Generator(self.redis)
-        self.assertIn(generator.rand_value('bogus_list'), ['1','2','3','4'])
+        self.assertIn(generator.rand_value('bogus_mylist'), ['1','2','3','4'])
 
     def test_rand_value_key_wrong_type(self):
         ''' Try to use a zset as a list. '''
@@ -161,8 +180,8 @@ class TestGenerator(unittest.TestCase):
         generator = Generator(self.redis, {'bogus_size_roll': 1})
         self.assertNotIn('bogus', generator.dump_vars())
         generator.generate_features('bogus')
-        self.assertIn('list', generator.dump_vars())
-        self.assertIn(generator.list, ['1','2','3','4'])
+        self.assertIn('booyahfeature', generator.dump_vars())
+        self.assertEqual('Booyah',generator.booyahfeature)
         self.assertEqual('tiny', generator.size['name'])
         '''Ensure misslist from other was not included. '''
         with self.assertRaises(AttributeError):
@@ -173,8 +192,8 @@ class TestGenerator(unittest.TestCase):
         generator = Generator(self.redis, {'chnc_size_roll': 1})
         self.assertNotIn('chnc', generator.dump_vars())
         generator.generate_features('chnc')
-        self.assertIn('list', generator.dump_vars())
-        self.assertIn(generator.list, ['1','2','3','4'])
+        self.assertIn('mylist', generator.dump_vars())
+        self.assertIn(generator.mylist, ['1','2','3','4'])
         self.assertEqual('tiny', generator.size['name'])
         '''Ensure misslist from other was not included. '''
         with self.assertRaises(AttributeError):
@@ -182,10 +201,10 @@ class TestGenerator(unittest.TestCase):
 
     def test_generate_feature_chance_roll(self):
         '''test Feature Generation from a namekey with 0% chance.'''
-        generator = Generator(self.redis, {'nochnc_size_roll': 1, 'nochnc_size_chance':5,'nochnc_list_chance':5 })
-        self.assertNotIn('list_chance', generator.dump_vars())
+        generator = Generator(self.redis, {'nochnc_size_roll': 1, 'nochnc_size_chance':5,'nochnc_mylist_chance':5 })
+        self.assertNotIn('mylist_chance', generator.dump_vars())
         generator.generate_features('nochnc')
-        self.assertIn('list_chance', generator.dump_vars())
+        self.assertIn('mylist_chance', generator.dump_vars())
 
         '''Ensure misslist from other was not included. '''
         with self.assertRaises(AttributeError):
@@ -212,25 +231,45 @@ class TestGenerator(unittest.TestCase):
         generator = Generator(self.redis)
         generator.generate_name('fullcity')
 
+    def test_mincity_name(self):
+        '''Ensure that a minname is generated.'''
+        generator = Generator(self.redis)
+        generator.generate_name('mincity')
+
 
     def test_error_handling_roll(self):
         '''Ensure that select_by_roll handles errors properly.'''
         generator = Generator(self.redis, {'incompleteset_size_roll':10 })
-        with self.assertRaises(IndexError) as cm:
+
+
+        with self.assertRaises(ValueError) as cm:
             generator.select_by_roll('derpderp_size')
-        pprint(cm.exception)
-        self.assertEqual(str(cm.exception), 'Is derpderp_size a valid key?')
+        self.assertEqual(str(cm.exception), "The key derpderp_size does not exist.")
 
 
         with self.assertRaises(LookupError) as cm:
             generator.select_by_roll('incompleteset_size')
-        self.assertEqual(str(cm.exception), 'Is incompleteset_size a valid key?')
+        self.assertEqual(str(cm.exception), 'The key (incompleteset_size) appears to be empty for a roll of 10- This should never happen.')
 
         with self.assertRaises(ValueError) as cm:
             generator.select_by_roll('badjson_widget')
         self.assertEqual(str(cm.exception), '("JSON parsing error: Couldn\'t read json", \'waffles not json\')')
 
-        with self.assertRaises(Exception) as cm:
-            generator.select_by_roll('badroletable')
-        self.assertEqual(str(cm.exception), 'Is badroletable a valid key?')
+    def test_bogus_generator(self):
+        '''Ensure that a fullname is generated.'''
+        generator = Generator(self.redis,{},'bogus')
+        self.assertIn('booyahfeature',generator.dump_vars())
+        
+    def test_generate_feature(self):
+        '''Ensure that a fullname is generated.'''
+        generator = Generator(self.redis,{'mylist':'foobar'})
+        generator.generate_feature( 'bogus', 'bogus_mylist')
 
+        generator = Generator(self.redis,{'kind':'small', 'kind_description':'foobar'})
+        generator.generate_feature( 'myknd', 'myknd_kind')
+
+
+    def test_render_template(self):
+        '''Ensure that a fullname is generated.'''
+        generator = Generator(self.redis,{'test_value':'a bigger string'})    
+        self.assertEqual('A large string, a bigger string.',generator.render_template("A large string, {{params.test_value}}."))

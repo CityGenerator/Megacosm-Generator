@@ -66,8 +66,6 @@ class Generator(object):
 
     def generate_feature(self, namekey, key):
 
-        # check to see if your key has a related chance key
-
         if self.redis.exists(key + '_chance'):
 
             # make sure the value is not already set, then grab it.
@@ -176,20 +174,19 @@ class Generator(object):
 
         roll = max(1, min(getattr(self, key + '_roll'), 100))
 
+        if self.redis.type(key) is None:
+            raise ValueError('The key %s does not exist.' % key)
+        elif self.redis.type(key) != 'zset':
+            raise TypeError('The key %s is not a zset; the type is %s.' % (key, self.redis.type(key)))
+
         try:
             rollvalue = self.redis.zrangebyscore(key, roll, 100, 0, 1)
-            if rollvalue is None:
-                raise LookupError()
+            if not rollvalue :
+                raise LookupError('The key (%s) appears to be empty for a roll of %s- This should never happen.' % (key, roll))
             return json.loads(rollvalue[0])
-        except IndexError:
-            raise IndexError('Is %s a valid key?' % key)
-        except LookupError:
-            raise LookupError('the key (%s) appears to be empty for a roll of %s- This should never happen.' % (key,
-                            roll))
         except ValueError:
             raise ValueError("JSON parsing error: Couldn't read json", rollvalue[0])
-        except Exception:
-            raise Exception("the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
+
 
     def render_template(self, template):
         """ Renders a given template using itself."""
