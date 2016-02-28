@@ -11,7 +11,7 @@ from megacosm.util import Seeds
 import json
 import logging
 import random
-
+from pprint import pprint
 
 class Generator(object):
 
@@ -85,6 +85,8 @@ class Generator(object):
 
             if int(getattr(self, key + '_roll')) > getattr(self, key + '_chance'):
                 return
+            # FIXME Note that there is no condition for a seperate chance and roll; 
+            # i.e. a 1% chance of something happening, then a separate d100 roll to determine effect.
 
         # #########################################################################################
         # Provided you had no associated _chance or that you succeeded on the chance roll, you can
@@ -177,15 +179,15 @@ class Generator(object):
         try:
             rollvalue = self.redis.zrangebyscore(key, roll, 100, 0, 1)
             if rollvalue is None:
-                raise LookupError
+                raise LookupError()
             return json.loads(rollvalue[0])
         except IndexError:
             raise IndexError('Is %s a valid key?' % key)
         except LookupError:
-            raise Exception('the key (%s) appears to be empty for a roll of %s- This should never happen.' % (key,
+            raise LookupError('the key (%s) appears to be empty for a roll of %s- This should never happen.' % (key,
                             roll))
         except ValueError:
-            raise Exception("JSON parsing error: Couldn't read json", rollvalue[0])
+            raise ValueError("JSON parsing error: Couldn't read json", rollvalue[0])
         except Exception:
             raise Exception("the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
 
@@ -202,3 +204,7 @@ class Generator(object):
         template = environment.from_string(template)
 
         return template.render(params=self)
+
+    def dump_vars(self):
+        pprint(vars(self))
+        return vars(self)
