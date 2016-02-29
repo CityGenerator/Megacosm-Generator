@@ -15,7 +15,7 @@
     {% if oneliners %}
         <ul class='oneliner-list'>
         {%for oneliner in oneliners%}
-        <li>{{oneliner.text}} </li>
+        <li class='{{generator}}_oneliner'>{{oneliner.text}} </li>
         {%endfor%}
         </ul>
     {%endif%}

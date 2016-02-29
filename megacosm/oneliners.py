@@ -24,36 +24,42 @@ from megacosm import app, feature_filter, builder_form_data
 
 
 #########################################################################
-
-
-@app.route('/curse')
-def generatecurse():
-    """Generate a curse"""
-
-    features = feature_filter('curse')
-    titletext = 'Unforseen Consequences...'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
-        curses = []
-        for _ in xrange(int(request.args['count'])):
-            curses.append(Curse(app.server, features))
-            features['seed'] = set_seed()
-        return render_template('oneliner.html', oneliners=curses,
-                               oneliner=curses[0], titletext=titletext, generator='curse')
+def valid_count(count):
+    if ( count.isdigit() and
+            int(count) > 1 and
+            int(count) <= 100):
+        return True
     else:
-        curse = Curse(app.server, features)
-        return render_template('oneliner.html', oneliner=curse, titletext=titletext, generator='curse')
+        return False
+
+#########################################################################
 
 
-@app.route('/curse_builder')
-def curse_builder():
-    """Build a a curse"""
-    classname = 'curse'
+@app.route('/artwork')
+def generateartwork():
+    """Generate a artwork"""
+    features = feature_filter('artwork')
+    titletext = 'A Work of Art...'
+    if ('count' in request.args and valid_count(request.args['count'])):
+        artworks = []
+        for _ in xrange(int(request.args['count'])):
+            artworks.append(Artwork(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=artworks,
+                               oneliner=artworks[0], titletext=titletext, generator='artwork')
+    else:
+        artwork = Artwork(app.server, features)
+        return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
+
+
+@app.route('/artwork_builder')
+def artwork_builder():
+    """Build a a artwork"""
+    classname = 'artwork'
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
 #########################################################################
 
 
@@ -63,11 +69,8 @@ def generatebond():
 
     features = feature_filter('bond')
     titletext = 'The Ties that Bind Us..'
-    features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    features['npc'] = NPC(app.server, {})
+    if ('count' in request.args and valid_count(request.args['count'])):
         bonds = []
         for _ in xrange(int(request.args['count'])):
             bonds.append(Bond(app.server, features))
@@ -94,6 +97,36 @@ def bond_builder():
 #########################################################################
 
 
+@app.route('/curse')
+def generatecurse():
+    """Generate a curse"""
+
+    features = feature_filter('curse')
+    titletext = 'Unforseen Consequences...'
+    if ('count' in request.args and valid_count(request.args['count'])):
+        curses = []
+        for _ in xrange(int(request.args['count'])):
+            curses.append(Curse(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=curses,
+                               oneliner=curses[0], titletext=titletext, generator='curse')
+    else:
+        curse = Curse(app.server, features)
+        return render_template('oneliner.html', oneliner=curse, titletext=titletext, generator='curse')
+
+
+@app.route('/curse_builder')
+def curse_builder():
+    """Build a a curse"""
+    classname = 'curse'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+#########################################################################
+
+
+
+
 @app.route('/resource')
 def generateresource():
     """Generate a resource"""
@@ -101,10 +134,7 @@ def generateresource():
     features = feature_filter('resource')
     titletext = 'At Your Disposal...'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         resources = []
         for _ in xrange(int(request.args['count'])):
             resources.append(Resource(app.server, features))
@@ -127,47 +157,13 @@ def resource_builder():
 #########################################################################
 
 
-@app.route('/artwork')
-def generateartwork():
-    """Generate a artwork"""
-    features = feature_filter('artwork')
-    titletext = 'A Work of Art...'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
-        artworks = []
-        for _ in xrange(int(request.args['count'])):
-            artworks.append(Artwork(app.server, features))
-            features['seed'] = set_seed()
-        return render_template('oneliner.html', oneliners=artworks,
-                               oneliner=artworks[0], titletext=titletext, generator='artwork')
-    else:
-        artwork = Artwork(app.server, features)
-        return render_template('oneliner.html', oneliner=artwork, titletext=titletext, generator='artwork')
-
-
-@app.route('/artwork_builder')
-def artwork_builder():
-    """Build a a artwork"""
-    classname = 'artwork'
-    plist, pstring, pset = builder_form_data(classname)
-
-    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
-
-#########################################################################
-
-
 @app.route('/rumor')
 def generaterumor():
     """Generate a rumor"""
     features = feature_filter('rumor')
     titletext = 'Did You Hear?'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         rumors = []
         for _ in xrange(int(request.args['count'])):
             rumors.append(Rumor(app.server, features))
@@ -197,10 +193,7 @@ def generatemisfire():
     features = feature_filter('misfire')
     titletext = 'My Spell Misfired!'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         misfires = []
         for _ in xrange(int(request.args['count'])):
             misfires.append(Misfire(app.server, features))
@@ -229,10 +222,7 @@ def generateflaw():
     features = feature_filter('flaw')
     titletext = 'My Greatest Flaw...'
 
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         flaws = []
         for _ in xrange(int(request.args['count'])):
             flaws.append(Flaw(app.server, features))
@@ -261,10 +251,7 @@ def generatecurrency():
     features = feature_filter('currency')
     titletext = 'Spare Some Change?'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         currencys = []
         for _ in xrange(int(request.args['count'])):
             currencys.append(Currency(app.server, features))
@@ -294,10 +281,7 @@ def generatejobposting():
     features = feature_filter('jobposting')
     titletext = 'Help Wanted!'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         jobpostings = []
         for _ in xrange(int(request.args['count'])):
             jobpostings.append(JobPosting(app.server, features))
@@ -328,10 +312,7 @@ def generateevent():
     features = feature_filter('event')
     titletext = 'Look over there...'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         events = []
         for _ in xrange(int(request.args['count'])):
             events.append(Event(app.server, features))
@@ -360,10 +341,7 @@ def generatemotivation():
     features = feature_filter('motivation')
     titletext = 'I\'m Motivated...'
     features['npc'] = NPC(app.server)
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         motivations = []
         for _ in xrange(int(request.args['count'])):
             motivations.append(Motivation(app.server, features))
@@ -392,10 +370,7 @@ def generatephobia():
     features = feature_filter('phobia')
     titletext = 'You know what really scares me?'
 
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         phobias = []
         for _ in xrange(int(request.args['count'])):
             phobias.append(Phobia(app.server, features))
@@ -423,10 +398,7 @@ def generategem():
     """Generate a gem"""
     features = feature_filter('gem')
     titletext = 'OOOH, Shiny...'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         gems = []
         for _ in xrange(int(request.args['count'])):
             gems.append(Gem(app.server, features))
@@ -454,10 +426,7 @@ def generatemundaneitem():
 
     features = feature_filter('mundaneitem')
     titletext = 'Look what I found!'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         mundaneitems = []
         for _ in xrange(int(request.args['count'])):
             mundaneitems.append(MundaneItem(app.server, features))
@@ -485,10 +454,7 @@ def generatelegend():
     """Generate a legend"""
     features = feature_filter('legend')
     titletext = 'Let me tell you a story...'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         legends = []
         for _ in xrange(int(request.args['count'])):
             legends.append(Legend(app.server, features))
@@ -517,10 +483,7 @@ def generatecuisine():
     features = feature_filter('cuisine')
     features['region'] = Region(app.server)
     titletext = 'What\'s for Dinner?'
-    if ('count' in request.args and
-            request.args['count'].isdigit() and
-            int(request.args['count']) > 1 and
-            int(request.args['count']) <= 100):
+    if ('count' in request.args and valid_count(request.args['count'])):
         cuisines = []
         for _ in xrange(int(request.args['count'])):
             cuisines.append(Cuisine(app.server, features))
