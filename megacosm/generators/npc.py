@@ -29,11 +29,12 @@ class NPC(Generator):
         if hasattr(self, 'subrace'):
             self.race = self.subrace_description['subrace'].lower()
 
+        if not hasattr(self, 'phobia'):
+            self.phobia = phobia.Phobia(self.redis )
+
         if not hasattr(self, 'motivation'):
             self.motivation = motivation.Motivation(self.redis, {'npc': self})
 
-        if not hasattr(self, 'phobia'):
-            self.phobia = phobia.Phobia(self.redis )
 
     def select_names(self):
         nameorder = self.redis.zrange(self.race + '_name_order', 0, -1)

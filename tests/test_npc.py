@@ -27,7 +27,7 @@ class TestNPC(unittest.TestCase):
         """  """
 
         npc = NPC(self.redis, {'race': 'kobold'})
-        self.assertEqual(npc.race, 'kobold')
+        self.assertIn('kobold', npc.race)
 
         # FIXME: subraces broke this assertion
         # self.assertIn(npc.race, self.redis.lrange('npc_race',0,-1))
