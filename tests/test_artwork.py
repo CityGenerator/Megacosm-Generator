@@ -13,7 +13,6 @@ class TestArtwork(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('bogus_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }',100.0)
         self.redis.lpush('artwork_metal', 'bronze')
         self.redis.lpush('artwork_weapon', 'dagger')
         self.redis.lpush('artwork_item', 'harp')
@@ -24,7 +23,13 @@ class TestArtwork(unittest.TestCase):
         self.redis.lpush('artwork_cloth_material', 'silk')
         self.redis.lpush('artwork_template', "a necklace of {{params.gem.size}} {{params.gem.kind_description['name']|pluralize(2)}}")
 
-
+        self.redis.zadd('gem_amount',  '{ "name":"a single",  "min":1, "max":100, "score":100  }',100.0)
+        self.redis.zadd('gem_value',  '{ "name":"costly", "score":100  }',100.0)
+        self.redis.zadd('gem_saturation',  '{ "name":"blanched", "score":100  }',100.0)
+        self.redis.zadd('gem_quality',  '{ "name":"chipped", "score":100  }',100.0)
+        self.redis.hset('gem_kind_description', 'emerald', '{ "name":"emerald", "color":["green"] }')
+        self.redis.lpush('gem_kind', 'emerald')
+        self.redis.lpush('gem_template', 'A Gem Template')
 
     def test_random_artwork(self):
         """  """
