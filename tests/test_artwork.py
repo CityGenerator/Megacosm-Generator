@@ -4,7 +4,7 @@
 from megacosm.generators import Artwork, Gem
 import unittest2 as unittest
 
-import redis
+import fakeredis
 from config import TestConfiguration
 
 
@@ -12,7 +12,19 @@ class TestArtwork(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = fakeredis.FakeRedis()
+        self.redis.zadd('bogus_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }',100.0)
+        self.redis.lpush('artwork_metal', 'bronze')
+        self.redis.lpush('artwork_weapon', 'dagger')
+        self.redis.lpush('artwork_item', 'harp')
+        self.redis.lpush('artwork_item_material', 'ivory')
+        self.redis.lpush('artwork_item_decoration', 'bear')
+        self.redis.lpush('artwork_jewelry', 'ring')
+        self.redis.lpush('artwork_cloth_item', 'glove')
+        self.redis.lpush('artwork_cloth_material', 'silk')
+        self.redis.lpush('artwork_template', "a necklace of {{params.gem.size}} {{params.gem.kind_description['name']|pluralize(2)}}")
+
+
 
     def test_random_artwork(self):
         """  """
