@@ -51,11 +51,11 @@ class Deity(NPC):
         """  use the deity's importance to determine how many portfolios it has. """
 
         points = int(self.importance['points'])
-
         # domains are split up by power level; the more valuable, the higher the power
         # Values currently include: 16, 8, 6, 5, 4, 3, 2, 1
 
         powerlevels = self.redis.lrange('portfolio_level', 0, -1)
+        print powerlevels
 
         # Only set this if it's empty.
 
@@ -69,6 +69,7 @@ class Deity(NPC):
             # Grab the highest power level available
 
             powerlevel = int(powerlevels.pop())
+	    print powerlevel
 
             # Check to make sure this deity has the points to buy at that power level
 
@@ -79,6 +80,7 @@ class Deity(NPC):
 
                 random.shuffle(powerlevels)
                 powerlevels.insert(0, powerlevel)
+        	print powerlevels
 
                 # get all the domains at the current powerlevel
 

@@ -751,7 +751,7 @@ ZADD portfolio_domain 4 {"name":"fire-using dragons",          "score":4 }
 ZADD portfolio_domain 4 {"name":"fitness",                     "score":4 }
 ZADD portfolio_domain 4 {"name":"flying",                      "score":4 }
 ZADD portfolio_domain 4 {"name":"fools",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"forbidden knowledge",          "score":4 }
+ZADD portfolio_domain 4 {"name":"forbidden knowledge",         "score":4 }
 ZADD portfolio_domain 4 {"name":"foresight",                   "score":4 }
 ZADD portfolio_domain 4 {"name":"formality",                   "score":4 }
 ZADD portfolio_domain 4 {"name":"full moons",                  "score":4 }
