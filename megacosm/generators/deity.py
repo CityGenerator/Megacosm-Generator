@@ -55,7 +55,6 @@ class Deity(NPC):
         # Values currently include: 16, 8, 6, 5, 4, 3, 2, 1
 
         powerlevels = self.redis.lrange('portfolio_level', 0, -1)
-        print powerlevels
 
         # Only set this if it's empty.
 
@@ -69,7 +68,6 @@ class Deity(NPC):
             # Grab the highest power level available
 
             powerlevel = int(powerlevels.pop())
-	    print powerlevel
 
             # Check to make sure this deity has the points to buy at that power level
 
@@ -80,7 +78,6 @@ class Deity(NPC):
 
                 random.shuffle(powerlevels)
                 powerlevels.insert(0, powerlevel)
-        	print powerlevels
 
                 # get all the domains at the current powerlevel
 
@@ -92,10 +89,9 @@ class Deity(NPC):
 
                 # While we can support this power level, lets use it until we can't.
 
-                while powerlevel <= points:
+                while powerlevel <= points and len(portfolios) > 0:
 
                     # pop a new portfolio off the list.
-
                     newdomain = json.loads(portfolios.pop())
 
                     # make sure our powerlevel is still what we expect

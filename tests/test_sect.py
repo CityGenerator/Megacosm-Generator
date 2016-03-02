@@ -47,13 +47,19 @@ class TestSect(unittest.TestCase):
     def tearDown(self):
         self.redis.flushall()
 
-#    def test_random_sect(self):
-#        """  """
-#        sect = Sect(self.redis)
-#        self.assertNotEqual(sect.domain, '')
-#    def test_static_sect(self):
-#        """  """
-#	deity=Deity(self.redis)
-#        sect = Sect(self.redis, {'deity':deity})
-#        self.assertNotEqual(sect.domain, '')
-#        self.assertIn(sect.domain, deity.portfolios)
+    def test_random_sect(self):
+        """  """
+        sect = Sect(self.redis)
+        self.assertNotEqual(sect.domain, '')
+
+    def test_static_sect(self):
+        """  """
+	deity=Deity(self.redis)
+        sect = Sect(self.redis, {'deity':deity})
+        self.assertNotEqual(sect.domain, '')
+        self.assertIn(sect.domain, deity.portfolios)
+
+    def test_static_domain(self):
+        """  """
+        sect = Sect(self.redis, {'domain':'tacos'})
+        self.assertEqual(sect.domain, 'tacos')
