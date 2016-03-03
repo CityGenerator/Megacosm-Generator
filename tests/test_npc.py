@@ -99,6 +99,9 @@ class TestNPC(unittest.TestCase):
 
 	self.redis.hset('kobold_subrace_description', 'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }')
 
+    def tearDown(self):
+        self.redis.flushall()
+
     def test_generated_race(self):
         """  """
 	# only human is in the npc_race array
@@ -148,6 +151,7 @@ class TestNPC(unittest.TestCase):
         """ Test NPC Phobias """
 	#Our Static Phobia
 	phobia = Phobia(self.redis)
+	self.redis.lpush('npc_race','human')
 
         npc = NPC(self.redis, {'race':'human'})
         self.assertNotEqual('',npc.race)
@@ -166,6 +170,9 @@ class TestNPC(unittest.TestCase):
     def test_motivations(self):
         """ Test NPC Motivations """
 	#Our Static Motivation
+	self.redis.lpush('npc_race','human')
+	self.redis.lpush('npc_race','kobold')
+
 	motivation = Motivation(self.redis)
 
         npc = NPC(self.redis, {'race':'human'})

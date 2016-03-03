@@ -31,6 +31,9 @@ class TestArtwork(unittest.TestCase):
         self.redis.lpush('gem_kind', 'emerald')
         self.redis.lpush('gem_template', 'A Gem Template')
 
+    def tearDown(self):
+        self.redis.flushall()
+
     def test_random_artwork(self):
         """  """
         artwork = Artwork(self.redis)

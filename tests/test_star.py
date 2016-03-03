@@ -13,6 +13,9 @@ class TestStar(unittest.TestCase):
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
 
+    def tearDown(self):
+        self.redis.flushall()
+
     def test_creation(self):
         """  """
 

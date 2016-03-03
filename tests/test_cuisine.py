@@ -30,6 +30,9 @@ class TestCuisine(unittest.TestCase):
 
         self.redis.lpush('cuisine_template', 'words go here.')
 
+    def tearDown(self):
+        self.redis.flushall()
+
     def test_random_cuisine(self):
         """  """
         cuisine = Cuisine(self.redis)

@@ -26,6 +26,8 @@ class TestBond(unittest.TestCase):
         self.redis.lpush('gnome_name_first_post', 'Tom')
         self.redis.lpush('gnome_name_last_pre', 'Gyro')
 
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_bond(self):
         """  Test a "random" bond. """

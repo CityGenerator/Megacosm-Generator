@@ -31,6 +31,8 @@ class TestCurrency(unittest.TestCase):
         self.redis.lpush('name_currencyroot','fel')
         self.redis.lpush('name_currencypost','abbi')
 
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_currency(self):
         """  """

@@ -98,8 +98,8 @@ class TestGenerator(unittest.TestCase):
 
         self.redis.zadd('badjson_widget',  'waffles not json',100.0)
 
-        self.redis.lpush('badroltable', 'Bad')
-
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_missing_feature(self):
         """  Test a feature that doesn't exist."""
