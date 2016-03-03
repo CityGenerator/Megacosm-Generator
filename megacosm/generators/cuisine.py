@@ -3,6 +3,7 @@
 
 from generator import Generator
 from npc import NPC
+from region import Region
 import logging
 
 
@@ -18,6 +19,9 @@ class Cuisine(Generator):
 
         if not hasattr(self, 'creator'):
             setattr(self, 'creator', NPC(self.redis))
+
+        if not hasattr(self, 'region'):
+            setattr(self, 'region', Region(self.redis))
 
         # Double parse the template to fill in templated template values.
 
