@@ -68,7 +68,7 @@ def generatebond():
     """Generate a bond"""
 
     features = feature_filter('bond')
-    titletext = 'The Ties that Bind Us..'
+    titletext = 'The Ties that Bind Us...'
     features['npc'] = NPC(app.server, {})
     if ('count' in request.args and valid_count(request.args['count'])):
         bonds = []
