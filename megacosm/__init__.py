@@ -31,7 +31,6 @@ from megacosm.generators import Wanted
 from megacosm.generators import Weather
 from megacosm.util.Seeds import set_seed
 from megacosm.util import Filters
-import redis
 import datetime
 import json
 import re
@@ -41,7 +40,7 @@ import traceback
 def create_app(config_location='config.BaseConfiguration'):
     app = Flask(__name__)
     app.config.from_object(config_location)
-    app.server = redis.from_url(app.config['REDIS_URL'])
+    app.server = app.config['REDIS']
     return app
 
 

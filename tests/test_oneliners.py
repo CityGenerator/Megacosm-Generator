@@ -32,6 +32,44 @@ class MegacosmFlaskTestCast(TestCase):
         self.assertFalse( oneliners.valid_count('-1000'))
         self.assertFalse( oneliners.valid_count('Waffles'))
 
+#################################################################
+
+    def test_artwork_route(self):
+        response = self.app.get('/artwork?seed=99')
+        self.assertIn('seed=99', response.data)
+        self.assertTemplateUsed('oneliner.html')
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+#
+#    def test_multi_artwork_toolow_route(self):
+#        response = self.app.get('/artwork?count=0')
+#        self.assertTemplateUsed('oneliner.html')
+#        self.assertNotIn('oneliner-list', response.data)
+#        self.assert200(response)
+#
+#    def test_multi_artwork_toohigh_route(self):
+#        response = self.app.get('/artwork?count=101')
+#        self.assertTemplateUsed('oneliner.html')
+#        self.assertNotIn('oneliner-list', response.data)
+#        self.assert200(response)
+#
+#    def test_multi_artwork_nondigit_route(self):
+#        response = self.app.get('/artwork?count=duck')
+#        self.assertTemplateUsed('oneliner.html')
+#        self.assertNotIn('oneliner-list', response.data)
+#        self.assert200(response)
+#
+#    def test_multi_artwork_route(self):
+#        response = self.app.get('/artwork?count=5')
+#        self.assertTemplateUsed('oneliner.html')
+#        self.assertIn('oneliner-list', response.data)
+#        self.assert200(response)
+#
+#    def test_artwork_builder_route(self):
+#        response = self.app.get('/artwork_builder')
+#        self.assertTemplateUsed('generic_builder.html')
+#        self.assert200(response)
+#
 ################################################################
 
     def test_bond_route(self):
@@ -55,11 +93,12 @@ class MegacosmFlaskTestCast(TestCase):
 
 
 
-#    def test_bond_builder_route(self):
-#        response = self.app.get('/bond_builder')
-#        self.assertTemplateUsed('bond_builder.html')
-#        self.assertIn('The Ties that Bind Us..', response.data)
-#        self.assert200(response)
+    def test_bond_builder_route(self):
+        response = self.app.get('/bond_builder')
+        self.assertTemplateUsed('bond_builder.html')
+        self.assertIn('Create a Bond', response.data)
+
+        self.assert200(response)
 
 #################################################################
 #
@@ -96,44 +135,6 @@ class MegacosmFlaskTestCast(TestCase):
 #
 #    def test_resource_builder_route(self):
 #        response = self.app.get('/resource_builder')
-#        self.assertTemplateUsed('generic_builder.html')
-#        self.assert200(response)
-#
-#################################################################
-#
-#    def test_artwork_route(self):
-#        response = self.app.get('/artwork?seed=99')
-#        self.assertIn('seed=99', response.data)
-#        self.assertTemplateUsed('oneliner.html')
-#        self.assertNotIn('oneliner-list', response.data)
-#        self.assert200(response)
-#
-#    def test_multi_artwork_toolow_route(self):
-#        response = self.app.get('/artwork?count=0')
-#        self.assertTemplateUsed('oneliner.html')
-#        self.assertNotIn('oneliner-list', response.data)
-#        self.assert200(response)
-#
-#    def test_multi_artwork_toohigh_route(self):
-#        response = self.app.get('/artwork?count=101')
-#        self.assertTemplateUsed('oneliner.html')
-#        self.assertNotIn('oneliner-list', response.data)
-#        self.assert200(response)
-#
-#    def test_multi_artwork_nondigit_route(self):
-#        response = self.app.get('/artwork?count=duck')
-#        self.assertTemplateUsed('oneliner.html')
-#        self.assertNotIn('oneliner-list', response.data)
-#        self.assert200(response)
-#
-#    def test_multi_artwork_route(self):
-#        response = self.app.get('/artwork?count=5')
-#        self.assertTemplateUsed('oneliner.html')
-#        self.assertIn('oneliner-list', response.data)
-#        self.assert200(response)
-#
-#    def test_artwork_builder_route(self):
-#        response = self.app.get('/artwork_builder')
 #        self.assertTemplateUsed('generic_builder.html')
 #        self.assert200(response)
 #
