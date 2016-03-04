@@ -1,0 +1,40 @@
+
+# The following message is written in _______ with blood.
+LPUSH grafitti_language Common
+LPUSH grafitti_language Dwarven
+LPUSH grafitti_language Elven
+LPUSH grafitti_language Draconic
+LPUSH grafitti_language Halfling
+LPUSH grafitti_language Giant
+LPUSH grafitti_language Infernal
+LPUSH grafitti_language Celestial
+LPUSH grafitti_language Abyssal
+LPUSH grafitti_language Gnomish
+LPUSH grafitti_language Gnollish
+LPUSH grafitti_language Slimese
+
+#The following message is written in Common with _________.
+LPUSH grafitti_material blood
+LPUSH grafitti_material crayon
+LPUSH grafitti_material marker
+LPUSH grafitti_material chalk
+LPUSH grafitti_material slime 
+LPUSH grafitti_material feces
+LPUSH grafitti_material paint
+LPUSH grafitti_material ink
+LPUSH grafitti_material graphite
+LPUSH grafitti_material liver mush
+
+LPUSH grafitti_message This isn't a dungeon, it's a prison!
+LPUSH grafitti_message {{params.npc.name['full']}} sees all.
+
+#The message is signed ________.
+SET grafitti_message_chance 50
+LPUSH grafitti_signature with a paw print
+LPUSH grafitti_signature Igor the Mad
+LPUSH grafitti_signature illegibly
+LPUSH grafitti_signature but smeared from the wall
+LPUSH grafitti_signature {{params.npc.name['full']}}
+LPUSH grafitti_signature with a sigil
+
+LPUSH grafitti_template The following message is written in {{params.language}} with {{grafitti_material}}. " {{params.message}}"
