@@ -25,6 +25,10 @@ class TestBond(unittest.TestCase):
         self.redis.lpush('motivationacceptance_text', 'to impress someone')
         self.redis.lpush('gnome_name_first_post', 'Tom')
         self.redis.lpush('gnome_name_last_pre', 'Gyro')
+        self.redis.hset('gnome_name_first','post', 100)
+        self.redis.hset('gnome_name_last','pre', 100)
+        self.redis.zadd('gnome_name_order','{ "name":"first" }',50)
+        self.redis.zadd('gnome_name_order','{ "name":"last"}',100)
 
     def tearDown(self):
         self.redis.flushall()
