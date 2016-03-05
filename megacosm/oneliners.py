@@ -208,15 +208,12 @@ def generategrafitti():
 
 @app.route('/grafitti_builder')
 def grafitti_builder():
-    """Build some grafitti"""
+    """Build a a grafitti"""
+    classname = 'grafitti'
+    plist, pstring, pset = builder_form_data(classname)
 
-    statinfo = {}
-    for stat in ['when', 'template']:
-        statinfo[stat] = []
-        for statstring in app.server.lrange('grafitti_'+stat, 0, -1):
-            statinfo[stat].append(statstring)
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
-    return render_template('grafitti_builder.html', statinfo=statinfo)
 
 #########################################################################
 

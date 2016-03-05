@@ -32,6 +32,9 @@ class TestGrafitti(unittest.TestCase):
         self.redis.zadd('gnome_name_order','{ "name":"first" }',50)
         self.redis.zadd('gnome_name_order','{ "name":"last"}',100)
 
+    def tearDown(self):
+        self.redis.flushall()
+
     def test_random_grafitti(self):
         """  """
         grafitti = Grafitti(self.redis)

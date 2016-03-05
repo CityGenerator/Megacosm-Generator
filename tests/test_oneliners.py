@@ -142,6 +142,32 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
+    def test_grafitti_route(self):
+        response = self.app.get('/grafitti')
+        self.assertTemplateUsed('oneliner.html')
+        self.assertIn('Scrawled on a Nearby Wall...', response.data)
+        self.assertNotIn('oneliner-list', response.data)
+        self.assert200(response)
+
+    def test_grafitti_route_count(self):
+        ''' Test the route count and ensure the right number appear'''
+        response = self.app.get('/grafitti?count=90')
+        self.assertEqual(90,   len(     re.findall('grafitti_oneliner', response.data)))
+        self.assert200(response)
+
+    def test_grafitti_route_count_bad(self):
+        ''' Test the route count for a bad value'''
+        response = self.app.get('/grafitti?count=crackers')
+        self.assertEqual(0,   len(     re.findall('grafitti_oneliner', response.data)))
+        self.assert200(response)
+
+    def test_grafitti_builder_route(self):
+        response = self.app.get('/grafitti_builder')
+        self.assertTemplateUsed('generic_builder.html')
+        self.assertIn('Create a Grafitti', response.data)
+        self.assert200(response)
+################################################################
+
     def test_misfire_route(self):
         response = self.app.get('/misfire')
         self.assertTemplateUsed('oneliner.html')

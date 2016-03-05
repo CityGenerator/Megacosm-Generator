@@ -627,6 +627,11 @@ def page_borked(error):
 
     return (render_template('500.html', seed=app.seed, request=request, e=error, time=time), 500)
 
+@app.template_filter('uppercase')
+def select_uppercase(word):
+    """Switch the word to uppercase"""
+
+    return Filters.select_uppercase(word)
 
 @app.template_filter('article')
 def select_article(noun):
