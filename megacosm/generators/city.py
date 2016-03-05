@@ -16,6 +16,7 @@ class City(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
         if not hasattr(self, 'region'):
+            print "noregion!!!"
             self.region = region.Region(self.redis)
 
         self.gatheringplace = Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
@@ -63,6 +64,8 @@ class City(Generator):
         subraces = self.redis.lrange(parentrace + '_subrace', 0, -1)
         random.shuffle(subraces)
         for subrace in subraces:
+            print "for %s in %s" %(subrace,subraces)
+            print "parentpercentage: %s" % (parentpercentage)
             subracepercentage = random.randint(1, parentpercentage)
             if total + subracepercentage < parentpercentage:
                 total += subracepercentage
@@ -84,7 +87,11 @@ class City(Generator):
         final_racelist = {}
         self.racequalifiers = {'mostly': []}
         for race in sorted(self.races) :
+            #print "has_subraces: %s for %s, want subraces?" %(self.has_subraces(race), race)
+            #if self.has_subraces(race):
+            #    print self.want_subraces(race)
             if self.has_subraces(race) and self.want_subraces(race):
+                print "race: %s, races: %s" %(race, self.races[race])
                 subraces = self.calculate_which_subraces(race, self.races[race])
                 final_racelist[race] = subraces
             else:
@@ -99,7 +106,7 @@ class City(Generator):
 
     def want_subraces(self, race):
         roll = random.randint(0, 100)
-
+        #print "want_race %s with %s chance and a roll of %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll)
         if roll < int(self.redis.get(race + '_subrace_chance')):
             return True
         else:

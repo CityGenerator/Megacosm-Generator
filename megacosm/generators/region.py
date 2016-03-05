@@ -11,6 +11,8 @@ class Region(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
 
+    def __str__(self):
+        return '%s' % (self.name['full'])
 
 # TODO start a separate fork for cities and enable this with the new class
 #    def add_cities(self):
