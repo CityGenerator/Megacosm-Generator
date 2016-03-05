@@ -23,7 +23,7 @@ class Deity(NPC):
     def add_sects(self):  # TODO make this more like countries for continents
         """ each portfolio item except the largest domain can have a sect"""
 
-        if not hasattr(self, 'sect'):
+        if not hasattr(self, 'sects'):
             self.sects = []
 
         # ignore the primary domain and shuffle the rest
@@ -46,6 +46,9 @@ class Deity(NPC):
                 sect = Sect(self.redis, {'deity': self, 'domain': domain})
                 self.sects.append(sect)
                 sectchance = sectchance / 2
+        #Ensure the deity is set.
+        for sect in self.sects:
+            sect.deity=self
 
     def select_portfolio(self):
         """  use the deity's importance to determine how many portfolios it has. """
