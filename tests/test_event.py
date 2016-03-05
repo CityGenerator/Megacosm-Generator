@@ -4,7 +4,7 @@
 from megacosm.generators import Event
 import unittest2 as unittest
 
-import redis
+import fakeredis
 from config import TestConfiguration
 
 
@@ -12,7 +12,16 @@ class TestEvent(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = fakeredis.FakeRedis()
+        self.redis.zadd('event_magnitude', '{  "name":"of dire importance",            "score":100      }', 100)
+
+        self.redis.lpush('eventfestival_variety', 'a trade')
+        self.redis.lpush('eventdisaster_variety', 'animal infestation')
+        self.redis.lpush('event_kind', 'disaster')
+        self.redis.lpush('event_template', "{{params.variety }} {{params.kind}}, which is {{params.magnitude['name']}} to the people in the area.")
+
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_event(self):
         """  """

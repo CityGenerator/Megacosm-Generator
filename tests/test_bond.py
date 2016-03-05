@@ -29,6 +29,7 @@ class TestBond(unittest.TestCase):
         self.redis.hset('gnome_name_last','pre', 100)
         self.redis.zadd('gnome_name_order','{ "name":"first" }',50)
         self.redis.zadd('gnome_name_order','{ "name":"last"}',100)
+        self.redis.zadd('npc_sex', '{"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }', 100)
 
     def tearDown(self):
         self.redis.flushall()
