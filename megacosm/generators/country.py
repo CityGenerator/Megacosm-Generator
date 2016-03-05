@@ -21,8 +21,9 @@ class Country(Generator):
 
         if not hasattr(self, 'regions'):
             self.regions = []
-        for regionid in xrange(self.regioncount):
-            self.regions.append(Region(self.redis, {'country': self}))
+            for regionid in xrange(self.regioncount):
+                self.regions.append(Region(self.redis, {'country': self}))
 
     def __str__(self):
         return '%s with %s regions' % (self.name['full'], self.regioncount)
+
