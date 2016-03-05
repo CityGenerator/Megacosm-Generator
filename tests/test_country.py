@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from megacosm.generators import Country
+from megacosm.generators import Country, Region
 import unittest2 as unittest
 
-import redis
 from config import TestConfiguration
 
 
@@ -12,18 +11,40 @@ class TestCountry(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = TestConfiguration.REDIS
+        self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":100    }', 100)
+        self.redis.zadd('country_regiondetails','{"name":"a single",     "score":100,  "mincount":1,   "maxcount":1   }',100)
+        self.redis.lpush('name_countrytitle', 'Central')
+        self.redis.lpush('name_countrypre','Af')
+        self.redis.lpush('name_countryroot','kil')
+
 
     def test_random_country(self):
         """  """
         country = Country(self.redis)
         self.assertNotEqual('', country.name)
 
-    def test_country_region(self):
+    def test_country_region_count(self):
         """  """
-
         country = Country(self.redis, {'regioncount': 25})
         country.add_regions()
         self.assertNotEqual('', country.name)
 
         self.assertEqual(25, len(country.regions))
+
+    def test_country_region(self):
+        """  """
+        regiona=Region(self.redis)
+        regionb=Region(self.redis)
+        country = Country(self.redis, {'regions': [regiona,regionb]})
+        self.assertEqual(2, len(country.regions))
+        country.add_regions()
+        self.assertEqual(2, len(country.regions))
+
+
+    def test_country_region_str(self):
+        """  """
+        country = Country(self.redis, {'regioncount': 25})
+        country.add_regions()
+        self.assertEqual('Central Afkil with 25 regions',str(country))
+
