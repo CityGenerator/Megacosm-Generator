@@ -5,6 +5,9 @@ import inflect
 p = inflect.engine()
 
 
+def select_uppercase(s):
+    return s.upper()
+
 def select_article(s):
     return p.an(s)
 

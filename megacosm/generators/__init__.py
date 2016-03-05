@@ -33,6 +33,8 @@ from flaw import Flaw
 assert Flaw
 from gem import Gem
 assert Gem
+from grafitti import Grafitti
+assert Grafitti
 from generator import Generator
 assert Generator
 from geomorphdungeon import GeomorphDungeon

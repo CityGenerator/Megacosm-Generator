@@ -9,6 +9,7 @@ from megacosm.generators import Misfire
 from megacosm.generators import Currency
 from megacosm.generators import Event
 from megacosm.generators import Gem
+from megacosm.generators import Grafitti
 from megacosm.generators import Motivation
 from megacosm.generators import Phobia
 from megacosm.generators import JobPosting
@@ -182,6 +183,40 @@ def rumor_builder():
     plist, pstring, pset = builder_form_data(classname)
 
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+
+#########################################################################
+
+
+@app.route('/grafitti')
+def generategrafitti():
+    """Generate a grafitti"""
+
+    features = feature_filter('grafitti')
+    titletext = 'Scrawled on a Nearby Wall...'
+    features['npc'] = NPC(app.server, {})
+    if ('count' in request.args and valid_count(request.args['count'])):
+        grafittis = []
+        for _ in xrange(int(request.args['count'])):
+            grafittis.append(Grafitti(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=grafittis,
+                               oneliner=grafittis[0], titletext=titletext, generator='grafitti')
+    else:
+        grafitti = Grafitti(app.server, features)
+        return render_template('oneliner.html', oneliner=grafitti, titletext=titletext, generator='grafitti')
+
+
+@app.route('/grafitti_builder')
+def grafitti_builder():
+    """Build some grafitti"""
+
+    statinfo = {}
+    for stat in ['when', 'template']:
+        statinfo[stat] = []
+        for statstring in app.server.lrange('grafitti_'+stat, 0, -1):
+            statinfo[stat].append(statstring)
+
+    return render_template('grafitti_builder.html', statinfo=statinfo)
 
 #########################################################################
 
