@@ -4,7 +4,7 @@
 from megacosm.generators import Curse
 import unittest2 as unittest
 
-import redis
+import fakeredis
 from megacosm.util.Seeds import set_seed
 
 from config import TestConfiguration
@@ -14,7 +14,16 @@ class TestCurse(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = fakeredis.FakeRedis()
+        self.redis.hset('curse_kind_description', 'bezerker', '{"name":"bezerker", "description":"causes intermittent, uncontrollable rage in the victim"  }')
+        self.redis.zadd('curse_duration','{"name":"last a lifetime",       "score":100 }', 100)
+        self.redis.lpush('curse_kind', 'bezerker')
+        self.redis.lpush('curse_removal', 'performing an epic task')
+        self.redis.lpush('curse_template', 
+            "The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}, and can only be undone by {{params.removal}}. Untreated, the effects of the curse {{params.duration['name']}}.")
+
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_curse(self):
         """  """
@@ -25,15 +34,14 @@ class TestCurse(unittest.TestCase):
         self.assertNotEqual('', curse.kind)
     def test_static_features(self):
         """  """
-        curse = Curse(self.redis, {'kind': 'greed', 'curse_duration_roll':5, 'removal':'a remove curse spell', 'template': "The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}."})
+        curse = Curse(self.redis, {'kind': 'bezerker', 'removal':'a remove curse spell', 'template': "The {{params.kind_description['name']|title}} Curse {{params.kind_description['description']}}."})
         #pprint(vars(curse))
-        self.assertEqual("causes the victim to take unnecessary risks for treasure", curse.kind_description['description'])
+        self.assertEqual("causes intermittent, uncontrollable rage in the victim", curse.kind_description['description'])
         self.assertEqual('a remove curse spell', curse.removal)
-        self.assertEqual('appear intermittently', curse.duration['name'])
-        self.assertEqual('greed', curse.kind)
+        self.assertEqual('bezerker', curse.kind)
         self.assertIn('params.kind_description', curse.template)
-        self.assertIn('Greed Curse', curse.text)
-        self.assertNotIn('Greed Curse', curse.template)
+        self.assertIn('Bezerker Curse', curse.text)
+        self.assertNotIn('Bezerker Curse', curse.template)
 
     def test_static_text(self):
         """  """
