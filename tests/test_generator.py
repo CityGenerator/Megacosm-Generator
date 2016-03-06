@@ -13,7 +13,6 @@ from pprint import pprint
 class TestGenerator(unittest.TestCase):
 
     def setUp(self):
-#        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
         self.redis = fakeredis.FakeRedis()
         self.redis.zadd('bogus_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }',1.0)
         self.redis.zadd('bogus_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }',40.0)

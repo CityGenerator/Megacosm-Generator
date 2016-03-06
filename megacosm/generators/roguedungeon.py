@@ -16,16 +16,9 @@ class RogueDungeon(Generator):
         self.logger = logging.getLogger(__name__)
         self.generate_features('dungeon')
 
-        self.apply_text_template()
         self.generate_grid()
         self.generate_rooms()
         self.generate_halls()
-
-    def apply_text_template(self):
-        if not hasattr(self, 'text'):
-            self.text = self.render_template(self.template)
-            self.text = self.render_template(self.text)
-        self.text = self.text.title()
 
     def generate_grid(self):
         gridsize = random.randint(self.size['minsize'], self.size['maxsize'])

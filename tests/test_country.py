@@ -3,7 +3,7 @@
 
 from megacosm.generators import Country, Region
 import unittest2 as unittest
-
+import fakeredis
 from config import TestConfiguration
 
 
@@ -11,7 +11,7 @@ class TestCountry(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = TestConfiguration.REDIS
+        self.redis = fakeredis.FakeRedis()
         self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":100    }', 100)
         self.redis.zadd('country_regiondetails','{"name":"a single",     "score":100,  "mincount":1,   "maxcount":1   }',100)
         self.redis.lpush('name_countrytitle', 'Central')

@@ -1,6 +1,4 @@
 language: python
-services:
-  - redis-server
 python:
   - "2.7"
   - "pypy"

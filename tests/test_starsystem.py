@@ -13,7 +13,6 @@ from config import TestConfiguration
 class TestStarSystem(unittest.TestCase):
 
     def setUp(self):
-#        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
     	self.redis = fakeredis.FakeRedis()
         self.redis.zadd('starsystem_starcount',  '{ "name":"binary star",  "count":2, "score":100  }',100.0)
 
