@@ -418,7 +418,7 @@ def generategeomorphdungeon():
 
     features = feature_filter('geomorphdungeon')
     geomorphdungeon = GeomorphDungeon(app.server, features)
-    return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.convert_to_json())
+    return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.simplify_for_json())
 
 
 @app.route('/geomorphdungeon_builder')
@@ -439,7 +439,7 @@ def generateroguedungeon():
 
     features = feature_filter('roguedungeon')
     roguedungeon = RogueDungeon(app.server, features)
-    return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.convert_to_json())
+    return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.simplify_for_json())
 
 
 @app.route('/roguedungeon_builder')

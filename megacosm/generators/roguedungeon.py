@@ -16,6 +16,7 @@ class RogueDungeon(Generator):
         self.logger = logging.getLogger(__name__)
         self.generate_features('dungeon')
 
+        self.apply_text_template()  # FIXME refactor with RogueDungeon on dungeon names...
         self.generate_grid()
         self.generate_rooms()
         self.generate_halls()
@@ -27,7 +28,13 @@ class RogueDungeon(Generator):
 
         self.spaces = [[RogueDungeon.Tile() for i in range(self.width)] for j in range(self.height)]
 
-    def convert_to_json(self):
+    def apply_text_template(self):
+        if not hasattr(self, 'text'):
+            self.text = self.render_template(self.template)
+            self.text = self.render_template(self.text)
+        self.text = self.text.title()
+
+    def simplify_for_json(self):
         resultmatrix = []
 
         for row in self.spaces:
