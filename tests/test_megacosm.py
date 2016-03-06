@@ -13,7 +13,7 @@ class MegacosmFlaskTestCast(TestCase):
     def create_app(self):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
-        megacosm.app.debug = True
+        megacosm.app.debug = False
         megacosm.app.server=fakeredis.FakeRedis()
         return app
 
@@ -258,6 +258,10 @@ class MegacosmFlaskTestCast(TestCase):
         self.redis.lpush('name_currencypost','abbi')
         self.redis.lpush('name_currencypre','yua')
         self.redis.lpush('name_currencyroot','fel')
+        self.redis.lpush('name_organizationpost', 'za')
+        self.redis.lpush('name_organizationpre', 'Blood')
+        self.redis.lpush('name_organizationroot', 'for')
+        self.redis.lpush('name_organizationtrailer', 'Horsemen')
         self.redis.lpush('name_planetpost', 'ris')
         self.redis.lpush('name_planetpre', 'Ae')
         self.redis.lpush('name_planetroot', 'boo')
@@ -279,6 +283,10 @@ class MegacosmFlaskTestCast(TestCase):
         self.redis.lpush('npc_posession', 'map')
         self.redis.lpush('npc_race','gnome')
         self.redis.lpush('npc_regret', 'seriously injured a friend goofing around')
+        self.redis.lpush('organization_identification', 'by a tattoo')
+        self.redis.lpush('organization_kind', 'association')
+        self.redis.lpush('organization_powertype', 'criminal')
+        self.redis.lpush('organization_template', '{{params.leader.name["lastname"] or params.name["pre"]+params.name["root"] }}\'s {{params.kind|title}}')
         self.redis.lpush('phobia_template', "You are afraid.")
         self.redis.lpush('portfolio_level',1)
         self.redis.lpush('portfolio_level',16)
@@ -425,6 +433,57 @@ class MegacosmFlaskTestCast(TestCase):
         self.redis.zadd('npc_skill', '{"name":"legendarily skilled",   "score":100  }', 100)
         self.redis.zadd('npc_strength', '{"name":"herculean",   "score":100  }', 100)
         self.redis.zadd('npc_wisdom', '{"name":"wise",   "score":100  }', 100)
+        self.redis.zadd('organization_adaptability', '{"name":"stay ahead of new development",    "score":100  }', 100)
+        self.redis.zadd('organization_age', '{"name":"ancient",       "score":100  }', 100)
+        self.redis.zadd('organization_entry', '{"name":"impossible",      "score":100  }', 100)
+        self.redis.zadd('organization_failure', '{ "name":"better guidance and training",  "score":100 }', 100)
+        self.redis.zadd('organization_leadership', '{ "name":"strong",     "score":100 }', 100)
+        self.redis.zadd('organization_legal', '{"name":"legitimate",   "score":100   }', 100)
+        self.redis.zadd('organization_morale', '{"name":"encouraged",          "score":100  }', 100)
+        self.redis.zadd('organization_regulation', '{ "name":"strictly enforced",  "score":100 }', 100)
+        self.redis.zadd('organization_rules', '{ "name":"rigidly",    "score":100 }', 100)
+        self.redis.zadd('organization_size', '{ "name":"world",       "score":100 }', 100)
+        self.redis.zadd('organization_stability', '{ "name":"are rock solid",     "score":100 }', 100)
+        self.redis.zadd('organization_structure', '{ "name":"rigidly",    "score":100 }', 100)
+        self.redis.zadd('organization_teamwork', '{ "name":"as a well oiled machine",         "score":100 }', 100)
+        self.redis.zadd('organization_violence', '{"name":"passive",       "score":100  }', 100)
+        self.redis.zadd('organization_visibility', '{ "name":"well known",            "score":100 }', 100)
+
+        #Details for Kobolds
+        self.redis.set( 'kobold_details', '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}') 
+        self.redis.lpush('kobold_covering','skin') 
+        self.redis.zadd('kobold_name_order','{ "name":"first" }',50) 
+        self.redis.hset('kobold_name_first','root', 100) 
+        self.redis.lpush('kobold_name_first_root', 'Kole') 
+ 
+        self.redis.zadd('kobold_name_order','{ "name":"last" }',100) 
+        self.redis.hset('kobold_name_last','root', 0) 
+        self.redis.lpush('kobold_name_last_root', 'Sok') 
+ 
+        self.redis.set('kobold_subrace_chance',100) 
+        self.redis.lpush('kobold_subrace', 'aquatic') 
+ 
+        self.redis.hset('kobold_subrace_description', 'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }') 
+
+        self.redis.zadd('city_size', '{ "name":"capitol",       "minpop":"30001", "maxpop":"80000", "min_density":"240", "max_density":"40000", "min_dist":3,  "max_dist":14 }', 100)
+        self.redis.zadd('city_happiness', ' { "name":"estatic",     "score":100   }', 100)
+        self.redis.zadd('city_health', ' { "name":"vigorous",       "score":100   }', 100)
+        self.redis.zadd('city_age', ' { "name":"ancient",           "score":100    }', 100)
+        self.redis.zadd('city_terrain', '{ "name": "jagged",         "score":100   }', 100)
+        self.redis.zadd('city_pollution', '{ "name": "squalid",      "score":100  }', 100)
+        self.redis.zadd('city_moral', '{ "name": "virtuous",         "score":100   }', 100)
+        self.redis.zadd('city_order', '{ "name": "honorable",         "score":100   }', 100)
+        self.redis.zadd('city_tolerance', '{ "name": "love",                        "score":100   }', 100)
+        self.redis.zadd('city_economy', '{ "name": "lively",                        "score":100   }', 100)
+        self.redis.zadd('city_military', '{ "name": "reverent",                     "score":100   }', 100)
+        self.redis.zadd('city_magic', '{ "name": "growing",                         "score":100   }', 100)
+        self.redis.zadd('city_education', '{ "name": "wonderful",                   "score":100   }', 100)
+        self.redis.zadd('city_authority', '{ "name": "is very authoritarian",       "score":100   }', 100)
+        self.redis.zadd('city_crime', '{ "name": "unheard of",                      "score":100   }', 100)
+
+        self.redis.lpush('city_shape', 'octagonal')
+        self.redis.lpush('city_gatheringplace', 'adventurersguild')
+
         self.redis.zadd('planet_atmosphere', '{"name":"dense",    "opacity":0.99,  "score":100   } ', 100)
         self.redis.zadd('planet_civilization', '{"name":"thriving"    ,  "score":100   } ', 100)
         self.redis.zadd('planet_day', '{"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } ', 100)
@@ -511,6 +570,12 @@ class MegacosmFlaskTestCast(TestCase):
         self.assertFalse(megacosm.isvalidscore('-10'))
         self.assertFalse(megacosm.isvalidscore('1010'))
         self.assertFalse(megacosm.isvalidscore('Fred'))
+################################################################
+
+    def test_select_uppercase(self):
+        self.assertEquals('DOG', megacosm.select_uppercase('dog'))
+        self.assertEquals('APPLE?', megacosm.select_uppercase('Apple?'))
+        self.assertEquals('HOUR.!', megacosm.select_uppercase('HOUR.!'))
 
 ################################################################
 
@@ -588,6 +653,15 @@ class MegacosmFlaskTestCast(TestCase):
 
     def test_business_builder_route(self):
         response = self.app.get('/business_builder')
+        self.assert200(response)
+################################################################
+
+    def test_city_route(self):
+        response = self.app.get('/city')
+        self.assert200(response)
+
+    def test_city_builder_route(self):
+        response = self.app.get('/city_builder')
         self.assert200(response)
 
 ################################################################
@@ -762,6 +836,16 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
+    def test_organization_route(self):
+        response = self.app.get('/organization')
+        self.assert200(response)
+
+    def test_organization_builder_route(self):
+        response = self.app.get('/organization_builder')
+        self.assert200(response)
+
+################################################################
+
     def test_phobia_route(self):
         response = self.app.get('/phobia')
         self.assert200(response)
@@ -889,3 +973,25 @@ class MegacosmFlaskTestCast(TestCase):
     def test_weather_builder_route(self):
         response = self.app.get('/weather_builder')
         self.assert200(response)
+################################################################
+
+    def test_404_route(self):
+        response = self.app.get('/brokenroute')
+        self.assert404(response)
+
+################################################################
+    def test_feature_filter_npc(self):
+        response = self.app.get('/npc?npc_endurance_roll=100&npc_medical_condition=0')
+        self.assert200(response)
+
+    def test_feature_filter_business(self):
+        response = self.app.get('/business?business_kind=bus_adventurersguild')
+        self.assert200(response)
+        response = self.app.get('/business?business_kind=nothingcorrect')
+        self.assert200(response)
+        response = self.app.get('/business?business_kind=@@@')
+        self.assert200(response)
+        response = self.app.get('/business?business_kindof=bogus')
+        self.assert200(response)
+
+
