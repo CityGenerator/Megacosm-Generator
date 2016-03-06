@@ -1,3 +1,6 @@
+import fakeredis
+import redis
+
 class BaseConfiguration(object):
     # Statement for enabling the development environment
     DEBUG = True
