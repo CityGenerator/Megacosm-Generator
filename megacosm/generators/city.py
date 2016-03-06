@@ -92,7 +92,10 @@ class City(Generator):
             #    print self.want_subraces(race)
             if self.has_subraces(race) and self.want_subraces(race):
                 print "race: %s, races: %s" %(race, self.races[race])
-                subraces = self.calculate_which_subraces(race, self.races[race])
+                if isinstance(self.races[race], int ):
+                    subraces = self.calculate_which_subraces(race, self.races[race])
+                else:
+                    subraces=self.races[race]
                 final_racelist[race] = subraces
             else:
                 final_racelist[race] = self.races[race]

@@ -187,8 +187,7 @@ class TestCity(unittest.TestCase):
         subraces = city.calculate_which_subraces('elf', 40)
         self.assertDictEqual({'halfelf': 34, 'darkelf': 3, 'wildelf': 1, 'woodelf': 2}, subraces)
 
-    @patch('megacosm.generators.city.random')
-    def test_select_subraces(self, mockrand):
+    def test_select_subraces(self):
         """ verify subraces"""
         self.redis.lpush('npc_race','orc')
         self.redis.lpush('npc_race','elf')
