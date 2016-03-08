@@ -40,7 +40,7 @@ class Generator(object):
 
         # For naming conventions, we use "name"+classname+"stuff"
 
-        self.name = self.generate_name('name_' + namekey)
+#        self.name = Name(self.redis, namekey)
 
         # For each feature, set it as an attribute for this generator
 
