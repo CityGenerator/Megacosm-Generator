@@ -7,9 +7,9 @@ SET coatikin_details    {"name": "Coatikin",    "size": "small",  "description":
 LPUSH coatikin_covering fur
 
 
-set coatikinname_fullname_template {{params.title}} {{params.first_root}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
-set coatikinname_shortname_template {{params.first_root}}
-set coatikinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
+LPUSH coatikinname_fullname_template {{params.title}} {{params.first_root}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
+LPUSH coatikinname_shortname_template {{params.first_root}}
+LPUSH coatikinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
 
 set coatikinname_first_root_chance 100
 set coatikinname_last_pre_chance 100

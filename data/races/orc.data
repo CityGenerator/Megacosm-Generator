@@ -24,9 +24,9 @@ HSET orc_subrace_description babirusa  {"subrace": "Babirusa Orc",     "descript
 HSET orc_subrace_description stone     {"subrace": "Stone Orc",         "description": "" }
 HSET orc_subrace_description swamp     {"subrace": "Swamp Orc",         "description": "" }
 
-set orcname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set orcname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}
-set orcname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
+LPUSH orcname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH orcname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}
+LPUSH orcname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
 
 
 set orcname_first_pre_chance 100

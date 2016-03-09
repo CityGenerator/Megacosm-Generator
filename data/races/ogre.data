@@ -15,9 +15,9 @@ LPUSH ogre_subrace mage
 HSET ogre_subrace_description merrow      {"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }
 HSET ogre_subrace_description mage        {"subrace": "Ogre Mage",         "description": "" }
 
-set ogrename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set ogrename_shortname_template {{params.first_pre}}{{params.first_root}}
-set ogrename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH ogrename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH ogrename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH ogrename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set ogrename_first_pre_chance 100
 set ogrename_first_root_chance 100

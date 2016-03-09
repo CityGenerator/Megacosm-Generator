@@ -1,6 +1,6 @@
-set cityname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
-set cityname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
-set cityname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
+LPUSH cityname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
+LPUSH cityname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH cityname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
 
 
 set cityname_title_chance 10

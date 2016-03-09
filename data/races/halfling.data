@@ -37,9 +37,9 @@ HSET halfling_subrace_description stoneborn   {"subrace": "Stoneborn Halfling", 
 HSET halfling_subrace_description waterborn   {"subrace": "Waterborn Halfling",     "description": "" }
 HSET halfling_subrace_description dune        {"subrace": "Dune Halfling",          "description": "" }
 
-set halflingname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set halflingname_shortname_template {{params.first_pre}}
-set halflingname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH halflingname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH halflingname_shortname_template {{params.first_pre}}
+LPUSH halflingname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set halflingname_first_pre_chance 100
 set halflingname_first_root_chance 50

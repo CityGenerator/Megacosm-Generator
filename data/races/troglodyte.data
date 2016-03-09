@@ -6,9 +6,9 @@ SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": 
 
 LPUSH troglodyte_covering scales
 
-set troglodytename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}  {{params.trailer}}
-set troglodytename_shortname_template {{params.first_pre}}{{params.first_root}}
-set troglodytename_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
+LPUSH troglodytename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}  {{params.trailer}}
+LPUSH troglodytename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH troglodytename_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
 
 
 set troglodytename_first_pre_chance 100

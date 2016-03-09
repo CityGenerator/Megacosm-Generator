@@ -4,19 +4,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from megacosm.generators import Name
+from megacosm.generators import Name, NPC
 import unittest2 as unittest
 
 from pprint import pprint
 
 import redis
-from config import TestConfiguration
+from config import IntegrationTestConfiguration
 
 
 class TestName(unittest.TestCase):
 
     def setUp(self):
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = redis.from_url(IntegrationTestConfiguration.REDIS_URL)
 
     def tearDown(self):
         """Tear stuff Down."""
@@ -84,6 +84,40 @@ class TestName(unittest.TestCase):
         self.assertIn(' {{params.pre}}', str(name.fullname_template))
         self.assertIn('{{params.root}}', str(name.fullname_template))
         self.assertIn('{{params.post}}', str(name.fullname_template))
+        self.assertNotIn('{{', str(name.fullname))
+        self.assertNotIn('}}', str(name.fullname))
+        self.assertNotIn('params', str(name.fullname))
+        self.assertNotIn('{{', str(name.shortname))
+        self.assertNotIn('}}', str(name.shortname))
+        self.assertNotIn('params', str(name.shortname))
+        self.assertNotIn('{{', str(name.formalname))
+        self.assertNotIn('}}', str(name.formalname))
+        self.assertNotIn('params', str(name.formalname))
+
+    def test_dungeon(self):
+        """  """
+        name = Name(self.redis, 'dungeon')
+        self.assertEqual('dungeon', str(name.namesource))
+        print "dungeon:  %s | %s | %s" %( name.fullname, name.shortname, name.formalname)
+        self.assertIn('{{params.place}} ', str(name.fullname_template))
+        self.assertEqual(str(name.fullname), str(name.formalname))
+        self.assertNotIn('{{', str(name.fullname))
+        self.assertNotIn('}}', str(name.fullname))
+        self.assertNotIn('params', str(name.fullname))
+        self.assertNotIn('{{', str(name.shortname))
+        self.assertNotIn('}}', str(name.shortname))
+        self.assertNotIn('params', str(name.shortname))
+        self.assertNotIn('{{', str(name.formalname))
+        self.assertNotIn('}}', str(name.formalname))
+        self.assertNotIn('params', str(name.formalname))
+
+    def test_organization(self):
+        """  """
+        leader=NPC(self.redis)
+        name = Name(self.redis, 'organization', {'leader':leader})
+        self.assertEqual('organization', str(name.namesource ))
+        print "organization:  %s | %s | %s" %( name.fullname, name.shortname, name.formalname)
+        self.assertEqual(str(name.fullname), str(name.formalname))
         self.assertNotIn('{{', str(name.fullname))
         self.assertNotIn('}}', str(name.fullname))
         self.assertNotIn('params', str(name.fullname))

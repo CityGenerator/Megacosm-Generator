@@ -14,9 +14,9 @@ LPUSH human_subrace halfelf
 HSET human_subrace_description halforc   {"subrace": "Halforc",      "description": "Humans with a trace of Orc lineage." }
 HSET human_subrace_description halfelf   {"subrace": "Halfelf",      "description": "Humans with a trace of Elf lineage." }
 
-set humanname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
-set humanname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}}
-set humanname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
+LPUSH humanname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
+LPUSH humanname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}}
+LPUSH humanname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
 
 
 set humanname_first_pre_chance 10

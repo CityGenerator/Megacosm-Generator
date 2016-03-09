@@ -23,9 +23,19 @@ class ProductionConfiguration(BaseConfiguration):
 
 class TestConfiguration(BaseConfiguration):
     # Statement for enabling the development environment
-    DEBUG = False
+    DEBUG = True
 
     LOG_PATH = 'data/logging.json'
 
     REDIS_URL = 'redis://127.0.0.1:6379/'
     REDIS = fakeredis.FakeRedis()
+
+class IntegrationTestConfiguration(BaseConfiguration):
+    # Statement for enabling the development environment
+    DEBUG = True
+
+    LOG_PATH='data/logging.json'
+
+    REDIS_URL='redis://127.0.0.1:6379/'
+    REDIS = redis.Redis()
+

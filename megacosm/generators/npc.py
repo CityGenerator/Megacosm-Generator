@@ -4,6 +4,7 @@
 from generator import Generator
 import motivation
 import phobia
+from name import Name
 import json
 import logging
 import random
@@ -24,7 +25,7 @@ class NPC(Generator):
 
         self.details = json.loads(self.details)
 
-        self.select_names()
+        self.name=Name(self.redis, self.race)
 
         if hasattr(self, 'subrace'):
             self.race = self.subrace_description['subrace'].lower()

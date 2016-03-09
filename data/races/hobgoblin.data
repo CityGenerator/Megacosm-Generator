@@ -15,9 +15,9 @@ HSET hobgoblin_subrace_description shadow   {"subrace": "Shadow Hobgoblin",     
 HSET hobgoblin_subrace_description koalinth {"subrace": "Koalinth Hobgoblin",      "description": "" }
 
 
-set hobgoblinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set hobgoblinname_shortname_template {{params.first_pre}}{{params.first_root}}
-set hobgoblinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH hobgoblinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH hobgoblinname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH hobgoblinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set hobgoblinname_first_pre_chance 100
 set hobgoblinname_first_root_chance 100

@@ -35,9 +35,9 @@ HSET elf_subrace_description waterelf  {"subrace": "Water Elf",     "description
 HSET elf_subrace_description snowelf   {"subrace": "Snow Elf",      "description": "an elf that has adapted to cold mountain life"  }
 
 
-set elfname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}
-set elfname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}}
-set elfname_formalname_template {{params.title}} {{params.last_root}}{{params.last_post}}
+LPUSH elfname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}
+LPUSH elfname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}}
+LPUSH elfname_formalname_template {{params.title}} {{params.last_root}}{{params.last_post}}
 
 
 set elfname_first_pre_chance 100

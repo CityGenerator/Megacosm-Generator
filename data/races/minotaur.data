@@ -28,9 +28,9 @@ HSET minotaur_subrace_description turin      {"subrace": "Turin Minotaur",     "
 HSET minotaur_subrace_description kaunas     {"subrace": "Kaunas Minotaur",    "description": "long horned and wise" }
 
 
-set minotaurname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set minotaurname_shortname_template {{params.first_pre}}{{params.first_root}}
-set minotaurname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH minotaurname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH minotaurname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH minotaurname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 
 set minotaurname_first_pre_chance 100

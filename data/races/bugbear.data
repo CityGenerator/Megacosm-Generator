@@ -16,9 +16,9 @@ HSET bugbear_subrace_description koalinth {"subrace": "Koalinth Bugbear",      "
 
 
 
-set bugbearname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set bugbearname_shortname_template {{params.first_pre}}{{params.first_root}}
-set bugbearname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH bugbearname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH bugbearname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH bugbearname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set bugbearname_first_pre_chance 100
 set bugbearname_first_root_chance 50

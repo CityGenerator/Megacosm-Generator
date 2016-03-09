@@ -17,9 +17,9 @@ HSET catfolk_subrace_description pardii         {"subrace": "Pardii (Leopardfolk
 HSET catfolk_subrace_description lynxin         {"subrace": "Lynxin (catfolk)",         "description": "a solitary and gruff felinid" }
 
 
-set catfolkname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set catfolkname_shortname_template {{params.first_pre}}{{params.first_root}}
-set catfolkname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH catfolkname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH catfolkname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH catfolkname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set catfolkname_first_pre_chance 100
 set catfolkname_first_root_chance 100

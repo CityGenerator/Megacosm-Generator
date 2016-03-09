@@ -1,7 +1,7 @@
 # what
-set continentname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
-set continentname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
-set continentname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
 
 
 set continentname_title_chance 10

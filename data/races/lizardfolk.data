@@ -28,9 +28,9 @@ HSET lizardfolk_subrace_description crested     {"subrace": "Crested Lizardfolk"
 HSET lizardfolk_subrace_description bearded     {"subrace": "Bearded Lizardfolk",    "description": "" }
 HSET lizardfolk_subrace_description girdled     {"subrace": "Girdled Lizardfolk",    "description": "" }
 
-set lizardfolkname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set lizardfolkname_shortname_template {{params.first_pre}}{{params.first_root}}
-set lizardfolkname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH lizardfolkname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH lizardfolkname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH lizardfolkname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set lizardfolkname_first_pre_chance 100
 set lizardfolkname_first_root_chance 100

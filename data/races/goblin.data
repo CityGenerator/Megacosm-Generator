@@ -20,9 +20,9 @@ HSET goblin_subrace_description hill   {"subrace": "Hill Goblin",       "descrip
 HSET goblin_subrace_description tooth  {"subrace": "Tooth Goblin",       "description": "" }
 
 
-set goblinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set goblinname_shortname_template {{params.first_pre}}{{params.first_root}}
-set goblinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH goblinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH goblinname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH goblinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 set goblinname_first_pre_chance 100
 set goblinname_first_root_chance 100

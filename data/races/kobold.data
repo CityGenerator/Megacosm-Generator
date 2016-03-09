@@ -18,9 +18,9 @@ HSET kobold_subrace_description sand    {"subrace": "Sand Kobold",      "descrip
 HSET kobold_subrace_description mud     {"subrace": "Mud Kobold",       "description": "" }
 HSET kobold_subrace_description jungle  {"subrace": "Jungle Kobold",    "description": "" }
 
-set koboldname_fullname_template {{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}
-set koboldname_shortname_template {{params.first_root}}
-set koboldname_formalname_template {{params.title}} {{params.first_root}}
+LPUSH koboldname_fullname_template {{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}
+LPUSH koboldname_shortname_template {{params.first_root}}
+LPUSH koboldname_formalname_template {{params.title}} {{params.first_root}}
 
 
 set koboldname_first_root_chance 100

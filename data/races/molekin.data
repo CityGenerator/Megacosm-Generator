@@ -13,9 +13,9 @@ LPUSH molekin_subrace starnose
 
 HSET molekin_subrace_description starnose   {"subrace": "Star-nosed Molekin",      "description": "an unsettling hunter" }
 
-set molekinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set molekinname_shortname_template {{params.first_pre}}{{params.first_root}}
-set molekinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH molekinname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH molekinname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH molekinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 
 set molekinname_first_pre_chance 100

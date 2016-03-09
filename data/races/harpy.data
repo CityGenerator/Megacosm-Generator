@@ -8,9 +8,9 @@ LPUSH harpy_covering feathers
 
 
 
-set harpyname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.trailer}}
-set harpyname_shortname_template {{params.first_pre}}{{params.first_root}}
-set harpyname_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
+LPUSH harpyname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.trailer}}
+LPUSH harpyname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH harpyname_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
 
 set harpyname_first_pre_chance 100
 set harpyname_first_root_chance 100

@@ -1,7 +1,7 @@
 
-set businessname_fullname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
-set businessname_shortname_template {{params.adjective}} {{params.noun}}
-set businessname_formalname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
+LPUSH businessname_fullname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
+LPUSH businessname_shortname_template {{params.adjective}} {{params.noun}}
+LPUSH businessname_formalname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
 
 
 set businessname_adjective_chance 100

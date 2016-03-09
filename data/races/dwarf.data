@@ -27,9 +27,9 @@ HSET dwarf_subrace_description wild       {"subrace": "Wild Dwarf",       "descr
 HSET dwarf_subrace_description degenerate {"subrace": "Degenerate Dwarf", "description": "" }
 
 
-set dwarfname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_root}}{{params.last_post}} {{params.trailer}}
-set dwarfname_shortname_template {{params.first_pre}}{{params.first_root}}
-set dwarfname_formalname_template {{params.title}} {{params.last_root}}{{params.last_post}}
+LPUSH dwarfname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_root}}{{params.last_post}} {{params.trailer}}
+LPUSH dwarfname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH dwarfname_formalname_template {{params.title}} {{params.last_root}}{{params.last_post}}
 
 set dwarfname_first_pre_chance 100
 set dwarfname_first_root_chance 100

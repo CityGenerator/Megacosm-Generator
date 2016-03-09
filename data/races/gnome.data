@@ -21,9 +21,9 @@ HSET gnome_subrace_description rock     {"subrace": "Rock Gnome",       "descrip
 HSET gnome_subrace_description tinker   {"subrace": "Tinker Gnome",     "description": "" }
 HSET gnome_subrace_description garden   {"subrace": "Garden Gnome",     "description": "" }
 
-set gnomename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
-set gnomename_shortname_template {{params.first_pre}}{{params.first_root}}
-set gnomename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+LPUSH gnomename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH gnomename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH gnomename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 
 set gnomename_first_pre_chance 100
