@@ -6,10 +6,18 @@ set human_details {"name": "Human",  "size": "medium",  "description": "quick gr
 
 LPUSH human_covering skin
 
-set humanname_fullname_template ["title"," ","first_pre","first_root","first_post", " ", "last_pre", "last_root", "last_post", " ", "trailer"]
+SET human_subrace_chance 10
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH human_subrace halforc
+LPUSH human_subrace halfelf
 
-set humanname_shortname_template ["first_pre","first_root","first_post"]'
-set humanname_formalname_template ["title"," ","last_pre","last_root","last_post"]
+HSET human_subrace_description halforc   {"subrace": "Halforc",      "description": "Humans with a trace of Orc lineage." }
+HSET human_subrace_description halfelf   {"subrace": "Halfelf",      "description": "Humans with a trace of Elf lineage." }
+
+set humanname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
+set humanname_shortname_template {{params.first_pre}}{{params.first_root}}{{params.first_post}}
+set humanname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
+
 
 set humanname_first_pre_chance 10
 set humanname_first_root_chance 100

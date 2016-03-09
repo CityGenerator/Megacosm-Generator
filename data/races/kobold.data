@@ -18,68 +18,70 @@ HSET kobold_subrace_description sand    {"subrace": "Sand Kobold",      "descrip
 HSET kobold_subrace_description mud     {"subrace": "Mud Kobold",       "description": "" }
 HSET kobold_subrace_description jungle  {"subrace": "Jungle Kobold",    "description": "" }
 
+set koboldname_fullname_template {{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}
+set koboldname_shortname_template {{params.first_root}}
+set koboldname_formalname_template {{params.title}} {{params.first_root}}
 
 
-ZADD kobold_name_order 100 { "name":"first" }
+set koboldname_first_root_chance 100
 
-HSET kobold_name_first  root 100
 
-LPUSH kobold_name_first_root Bat
-LPUSH kobold_name_first_root Bap
-LPUSH kobold_name_first_root Bit
-LPUSH kobold_name_first_root Bip
-LPUSH kobold_name_first_root Bot
-LPUSH kobold_name_first_root Car
-LPUSH kobold_name_first_root Cor
-LPUSH kobold_name_first_root Cak
-LPUSH kobold_name_first_root Dat
-LPUSH kobold_name_first_root Dit
-LPUSH kobold_name_first_root Dot
-LPUSH kobold_name_first_root Fax
-LPUSH kobold_name_first_root Fat
-LPUSH kobold_name_first_root Fot
-LPUSH kobold_name_first_root Gat
-LPUSH kobold_name_first_root Git
-LPUSH kobold_name_first_root Gip
-LPUSH kobold_name_first_root Got
-LPUSH kobold_name_first_root Jat
-LPUSH kobold_name_first_root Jit
-LPUSH kobold_name_first_root Jot
-LPUSH kobold_name_first_root Jop
-LPUSH kobold_name_first_root Lat
-LPUSH kobold_name_first_root Lik
-LPUSH kobold_name_first_root Lot
-LPUSH kobold_name_first_root Nat
-LPUSH kobold_name_first_root Niz
-LPUSH kobold_name_first_root Nip
-LPUSH kobold_name_first_root Not
-LPUSH kobold_name_first_root Nop
-LPUSH kobold_name_first_root Pat
-LPUSH kobold_name_first_root Paz
-LPUSH kobold_name_first_root Pot
-LPUSH kobold_name_first_root Rat
-LPUSH kobold_name_first_root Rap
-LPUSH kobold_name_first_root Rit
-LPUSH kobold_name_first_root Rot
-LPUSH kobold_name_first_root Rop
-LPUSH kobold_name_first_root Taz
-LPUSH kobold_name_first_root Teb
-LPUSH kobold_name_first_root Tean
-LPUSH kobold_name_first_root Vab
-LPUSH kobold_name_first_root Vaz
-LPUSH kobold_name_first_root Vit
-LPUSH kobold_name_first_root Vor
-LPUSH kobold_name_first_root Wat
-LPUSH kobold_name_first_root Wit
-LPUSH kobold_name_first_root Wot
-LPUSH kobold_name_first_root Yat
-LPUSH kobold_name_first_root Yap
-LPUSH kobold_name_first_root Yik
-LPUSH kobold_name_first_root Yip
-LPUSH kobold_name_first_root Yot
-LPUSH kobold_name_first_root Yop
-LPUSH kobold_name_first_root Zat
-LPUSH kobold_name_first_root Zit
-LPUSH kobold_name_first_root Zol
+LPUSH koboldname_first_root Bat
+LPUSH koboldname_first_root Bap
+LPUSH koboldname_first_root Bit
+LPUSH koboldname_first_root Bip
+LPUSH koboldname_first_root Bot
+LPUSH koboldname_first_root Car
+LPUSH koboldname_first_root Cor
+LPUSH koboldname_first_root Cak
+LPUSH koboldname_first_root Dat
+LPUSH koboldname_first_root Dit
+LPUSH koboldname_first_root Dot
+LPUSH koboldname_first_root Fax
+LPUSH koboldname_first_root Fat
+LPUSH koboldname_first_root Fot
+LPUSH koboldname_first_root Gat
+LPUSH koboldname_first_root Git
+LPUSH koboldname_first_root Gip
+LPUSH koboldname_first_root Got
+LPUSH koboldname_first_root Jat
+LPUSH koboldname_first_root Jit
+LPUSH koboldname_first_root Jot
+LPUSH koboldname_first_root Jop
+LPUSH koboldname_first_root Lat
+LPUSH koboldname_first_root Lik
+LPUSH koboldname_first_root Lot
+LPUSH koboldname_first_root Nat
+LPUSH koboldname_first_root Niz
+LPUSH koboldname_first_root Nip
+LPUSH koboldname_first_root Not
+LPUSH koboldname_first_root Nop
+LPUSH koboldname_first_root Pat
+LPUSH koboldname_first_root Paz
+LPUSH koboldname_first_root Pot
+LPUSH koboldname_first_root Rat
+LPUSH koboldname_first_root Rap
+LPUSH koboldname_first_root Rit
+LPUSH koboldname_first_root Rot
+LPUSH koboldname_first_root Rop
+LPUSH koboldname_first_root Taz
+LPUSH koboldname_first_root Teb
+LPUSH koboldname_first_root Tean
+LPUSH koboldname_first_root Vab
+LPUSH koboldname_first_root Vaz
+LPUSH koboldname_first_root Vit
+LPUSH koboldname_first_root Vor
+LPUSH koboldname_first_root Wat
+LPUSH koboldname_first_root Wit
+LPUSH koboldname_first_root Wot
+LPUSH koboldname_first_root Yat
+LPUSH koboldname_first_root Yap
+LPUSH koboldname_first_root Yik
+LPUSH koboldname_first_root Yip
+LPUSH koboldname_first_root Yot
+LPUSH koboldname_first_root Yop
+LPUSH koboldname_first_root Zat
+LPUSH koboldname_first_root Zit
+LPUSH koboldname_first_root Zol
 
 

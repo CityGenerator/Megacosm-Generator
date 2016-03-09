@@ -12,23 +12,6 @@ class TestName(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
-        self.redis.set("humanname_fullname_template", '["title"," ","first_pre","first_root","first_post", " ", "last_pre", "last_root", "last_post", " ", "trailer"]')
-        self.redis.set("humanname_shortname_template", '["first_pre","first_root","first_post"]')
-        self.redis.set("humanname_formalname_template", '["title"," ","last_pre","last_root","last_post"]')
-
-        self.redis.set('humanname_first_pre_chance', '100')
-        self.redis.set('humanname_first_root_chance', '100')
-        self.redis.set('humanname_first_post_chance', '100')
-        self.redis.set('humanname_last_pre_chance', '100')
-        self.redis.set('humanname_last_root_chance', '100')
-        self.redis.set('humanname_last_post_chance', '100')
-
-        self.redis.lpush('humanname_first_pre', 'De')
-        self.redis.lpush('humanname_first_root', 'Col')
-        self.redis.lpush('humanname_first_post', 'tin')
-        self.redis.lpush('humanname_last_pre', 'Mac')
-        self.redis.lpush('humanname_last_root', 'Anton')
-        self.redis.lpush('humanname_last_post', 'ard')
 
     def tearDown(self):
         self.redis.flushall()

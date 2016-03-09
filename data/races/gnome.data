@@ -21,94 +21,93 @@ HSET gnome_subrace_description rock     {"subrace": "Rock Gnome",       "descrip
 HSET gnome_subrace_description tinker   {"subrace": "Tinker Gnome",     "description": "" }
 HSET gnome_subrace_description garden   {"subrace": "Garden Gnome",     "description": "" }
 
+set gnomename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+set gnomename_shortname_template {{params.first_pre}}{{params.first_root}}
+set gnomename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
 
-
-ZADD gnome_name_order 50 { "name":"first" }
-ZADD gnome_name_order 100 { "name":"last"}
-
-HSET gnome_name_first  pre 100 
-HSET gnome_name_first  post 70
-HSET gnome_name_last   pre  100
-HSET gnome_name_last   post 100
+set gnomename_first_pre_chance 100
+set gnomename_first_root_chance 70
+set gnomename_last_pre_chance 100
+set gnomename_last_root_chance 100
 
 
-LPUSH gnome_name_first_pre Ada
-LPUSH gnome_name_first_pre Ai
-LPUSH gnome_name_first_pre Alli
-LPUSH gnome_name_first_pre Arn
-LPUSH gnome_name_first_pre Bab
-LPUSH gnome_name_first_pre Bea
-LPUSH gnome_name_first_pre Bon
-LPUSH gnome_name_first_pre Cot
-LPUSH gnome_name_first_pre Car
-LPUSH gnome_name_first_pre Gav
-LPUSH gnome_name_first_pre Gab
-LPUSH gnome_name_first_pre Gil
-LPUSH gnome_name_first_pre Ham
-LPUSH gnome_name_first_pre Hew
-LPUSH gnome_name_first_pre Jen
-LPUSH gnome_name_first_pre Jun
-LPUSH gnome_name_first_pre Kia
-LPUSH gnome_name_first_pre Mal
-LPUSH gnome_name_first_pre Nin
-LPUSH gnome_name_first_pre Tul
-LPUSH gnome_name_first_pre Tor
-LPUSH gnome_name_first_pre Wiz
-LPUSH gnome_name_first_pre Tom
-LPUSH gnome_name_first_pre Tom
-LPUSH gnome_name_first_post an
-LPUSH gnome_name_first_post va
-LPUSH gnome_name_first_post son
-LPUSH gnome_name_first_post rette
-LPUSH gnome_name_first_post mida
-LPUSH gnome_name_first_post gan
-LPUSH gnome_name_first_post lita
-LPUSH gnome_name_first_post gles
-LPUSH gnome_name_first_post nk
-LPUSH gnome_name_first_post tsy
-LPUSH gnome_name_first_post lin
-LPUSH gnome_name_first_post by
-LPUSH gnome_name_first_post ley
-LPUSH gnome_name_first_post ina
-LPUSH gnome_name_first_post xie
-LPUSH gnome_name_first_post key
-LPUSH gnome_name_first_post ita
-LPUSH gnome_name_first_post ton
-LPUSH gnome_name_first_post vin
-LPUSH gnome_name_first_post eno
-LPUSH gnome_name_first_post wan
-LPUSH gnome_name_first_post dan
+LPUSH gnomename_first_pre Ada
+LPUSH gnomename_first_pre Ai
+LPUSH gnomename_first_pre Alli
+LPUSH gnomename_first_pre Arn
+LPUSH gnomename_first_pre Bab
+LPUSH gnomename_first_pre Bea
+LPUSH gnomename_first_pre Bon
+LPUSH gnomename_first_pre Cot
+LPUSH gnomename_first_pre Car
+LPUSH gnomename_first_pre Gav
+LPUSH gnomename_first_pre Gab
+LPUSH gnomename_first_pre Gil
+LPUSH gnomename_first_pre Ham
+LPUSH gnomename_first_pre Hew
+LPUSH gnomename_first_pre Jen
+LPUSH gnomename_first_pre Jun
+LPUSH gnomename_first_pre Kia
+LPUSH gnomename_first_pre Mal
+LPUSH gnomename_first_pre Nin
+LPUSH gnomename_first_pre Tul
+LPUSH gnomename_first_pre Tor
+LPUSH gnomename_first_pre Wiz
+LPUSH gnomename_first_pre Tom
+LPUSH gnomename_first_pre Tom
+LPUSH gnomename_first_root an
+LPUSH gnomename_first_root va
+LPUSH gnomename_first_root son
+LPUSH gnomename_first_root rette
+LPUSH gnomename_first_root mida
+LPUSH gnomename_first_root gan
+LPUSH gnomename_first_root lita
+LPUSH gnomename_first_root gles
+LPUSH gnomename_first_root nk
+LPUSH gnomename_first_root tsy
+LPUSH gnomename_first_root lin
+LPUSH gnomename_first_root by
+LPUSH gnomename_first_root ley
+LPUSH gnomename_first_root ina
+LPUSH gnomename_first_root xie
+LPUSH gnomename_first_root key
+LPUSH gnomename_first_root ita
+LPUSH gnomename_first_root ton
+LPUSH gnomename_first_root vin
+LPUSH gnomename_first_root eno
+LPUSH gnomename_first_root wan
+LPUSH gnomename_first_root dan
 
         
-LPUSH gnome_name_last_pre Coggle
-LPUSH gnome_name_last_pre Cobble
-LPUSH gnome_name_last_pre Electro
-LPUSH gnome_name_last_pre Fuse
-LPUSH gnome_name_last_pre Gear
-LPUSH gnome_name_last_pre Grease
-LPUSH gnome_name_last_pre Gyro
-LPUSH gnome_name_last_pre Rocket
-LPUSH gnome_name_last_pre Thermo
-LPUSH gnome_name_last_pre Tiddly
-LPUSH gnome_name_last_pre Tinker
-LPUSH gnome_name_last_pre Trigger
-LPUSH gnome_name_last_pre Wizz
-LPUSH gnome_name_last_pre Wobb
-LPUSH gnome_name_last_post fiz
-LPUSH gnome_name_last_post gauge
-LPUSH gnome_name_last_post sprocket
-LPUSH gnome_name_last_post gadget
-LPUSH gnome_name_last_post bit
-LPUSH gnome_name_last_post scope
-LPUSH gnome_name_last_post cog
-LPUSH gnome_name_last_post fuel
-LPUSH gnome_name_last_post bolt
-LPUSH gnome_name_last_post jet
-LPUSH gnome_name_last_post wink
-LPUSH gnome_name_last_post tonk
-LPUSH gnome_name_last_post blast
-LPUSH gnome_name_last_post bun
+LPUSH gnomename_last_pre Coggle
+LPUSH gnomename_last_pre Cobble
+LPUSH gnomename_last_pre Electro
+LPUSH gnomename_last_pre Fuse
+LPUSH gnomename_last_pre Gear
+LPUSH gnomename_last_pre Grease
+LPUSH gnomename_last_pre Gyro
+LPUSH gnomename_last_pre Rocket
+LPUSH gnomename_last_pre Thermo
+LPUSH gnomename_last_pre Tiddly
+LPUSH gnomename_last_pre Tinker
+LPUSH gnomename_last_pre Trigger
+LPUSH gnomename_last_pre Wizz
+LPUSH gnomename_last_pre Wobb
+LPUSH gnomename_last_root fiz
+LPUSH gnomename_last_root gauge
+LPUSH gnomename_last_root sprocket
+LPUSH gnomename_last_root gadget
+LPUSH gnomename_last_root bit
+LPUSH gnomename_last_root scope
+LPUSH gnomename_last_root cog
+LPUSH gnomename_last_root fuel
+LPUSH gnomename_last_root bolt
+LPUSH gnomename_last_root jet
+LPUSH gnomename_last_root wink
+LPUSH gnomename_last_root tonk
+LPUSH gnomename_last_root blast
+LPUSH gnomename_last_root bun
 
         
 

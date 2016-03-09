@@ -6,139 +6,140 @@ SET coatikin_details    {"name": "Coatikin",    "size": "small",  "description":
 
 LPUSH coatikin_covering fur
 
-ZADD coatikin_name_order 50 { "name":"first" }
-ZADD coatikin_name_order 100 { "name":"last" }
 
-HSET coatikin_name_first  root 100
+set coatikinname_fullname_template {{params.title}} {{params.first_root}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}
+set coatikinname_shortname_template {{params.first_root}}
+set coatikinname_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}
 
-
-HSET coatikin_name_last  pre 100
-HSET coatikin_name_last  root 100
-HSET coatikin_name_last  post 80
-
-
-
-LPUSH coatikin_name_first_root Beetle
-LPUSH coatikin_name_first_root Frog
-LPUSH coatikin_name_first_root Lichen
-LPUSH coatikin_name_first_root Leaf
-LPUSH coatikin_name_first_root Toad
-LPUSH coatikin_name_first_root Nut
-LPUSH coatikin_name_first_root Acorn
-LPUSH coatikin_name_first_root Bark
-LPUSH coatikin_name_first_root Berry
-LPUSH coatikin_name_first_root Root
-LPUSH coatikin_name_first_root Tadpole
-LPUSH coatikin_name_first_root Gecko
-LPUSH coatikin_name_first_root Bee
-LPUSH coatikin_name_first_root Buggy
-LPUSH coatikin_name_first_root Twig
-LPUSH coatikin_name_first_root Bushy
-LPUSH coatikin_name_first_root Grassley
+set coatikinname_first_root_chance 100
+set coatikinname_last_pre_chance 100
+set coatikinname_last_root_chance 100
+set coatikinname_last_post_chance 80
 
 
 
 
-
-LPUSH coatikin_name_last_pre B
-LPUSH coatikin_name_last_pre D
-LPUSH coatikin_name_last_pre R
-LPUSH coatikin_name_last_pre T
-LPUSH coatikin_name_last_pre G
-LPUSH coatikin_name_last_pre J
-LPUSH coatikin_name_last_pre K
-LPUSH coatikin_name_last_pre L
-LPUSH coatikin_name_last_pre Z
-LPUSH coatikin_name_last_pre Ch
-LPUSH coatikin_name_last_pre Sh
-LPUSH coatikin_name_last_pre N
-LPUSH coatikin_name_last_pre M
-LPUSH coatikin_name_last_pre Bl
-LPUSH coatikin_name_last_pre Th
-LPUSH coatikin_name_last_pre Cr
-
-
-LPUSH coatikin_name_last_root ab
-LPUSH coatikin_name_last_root ad
-LPUSH coatikin_name_last_root af
-LPUSH coatikin_name_last_root ag
-LPUSH coatikin_name_last_root ak
-LPUSH coatikin_name_last_root al
-LPUSH coatikin_name_last_root am
-LPUSH coatikin_name_last_root an
-LPUSH coatikin_name_last_root ar
-LPUSH coatikin_name_last_root as
-LPUSH coatikin_name_last_root at
-LPUSH coatikin_name_last_root av
-LPUSH coatikin_name_last_root aw
-LPUSH coatikin_name_last_root ax
-LPUSH coatikin_name_last_root az
+LPUSH coatikinname_first_root Beetle
+LPUSH coatikinname_first_root Frog
+LPUSH coatikinname_first_root Lichen
+LPUSH coatikinname_first_root Leaf
+LPUSH coatikinname_first_root Toad
+LPUSH coatikinname_first_root Nut
+LPUSH coatikinname_first_root Acorn
+LPUSH coatikinname_first_root Bark
+LPUSH coatikinname_first_root Berry
+LPUSH coatikinname_first_root Root
+LPUSH coatikinname_first_root Tadpole
+LPUSH coatikinname_first_root Gecko
+LPUSH coatikinname_first_root Bee
+LPUSH coatikinname_first_root Buggy
+LPUSH coatikinname_first_root Twig
+LPUSH coatikinname_first_root Bushy
+LPUSH coatikinname_first_root Grassley
 
 
-LPUSH coatikin_name_last_root eb
-LPUSH coatikin_name_last_root ed
-LPUSH coatikin_name_last_root ef
-LPUSH coatikin_name_last_root eg
-LPUSH coatikin_name_last_root ek
-LPUSH coatikin_name_last_root el
-LPUSH coatikin_name_last_root em
-LPUSH coatikin_name_last_root en
-LPUSH coatikin_name_last_root ep
-LPUSH coatikin_name_last_root er
-LPUSH coatikin_name_last_root es
-LPUSH coatikin_name_last_root et
-LPUSH coatikin_name_last_root ev
-LPUSH coatikin_name_last_root ew
-LPUSH coatikin_name_last_root ex
-LPUSH coatikin_name_last_root ez
-LPUSH coatikin_name_last_root ib
-LPUSH coatikin_name_last_root id
-LPUSH coatikin_name_last_root if
-LPUSH coatikin_name_last_root ig
-LPUSH coatikin_name_last_root ik
-LPUSH coatikin_name_last_root il
-LPUSH coatikin_name_last_root im
-LPUSH coatikin_name_last_root in
-LPUSH coatikin_name_last_root ip
-LPUSH coatikin_name_last_root ir
-LPUSH coatikin_name_last_root is
-LPUSH coatikin_name_last_root iv
-LPUSH coatikin_name_last_root iw
-LPUSH coatikin_name_last_root ix
-LPUSH coatikin_name_last_root iz
-LPUSH coatikin_name_last_root ob
-LPUSH coatikin_name_last_root od
-LPUSH coatikin_name_last_root of
-LPUSH coatikin_name_last_root og
-LPUSH coatikin_name_last_root ok
-LPUSH coatikin_name_last_root ol
-LPUSH coatikin_name_last_root om
-LPUSH coatikin_name_last_root on
-LPUSH coatikin_name_last_root op
-LPUSH coatikin_name_last_root or
-LPUSH coatikin_name_last_root os
-LPUSH coatikin_name_last_root ot
-LPUSH coatikin_name_last_root ov
-LPUSH coatikin_name_last_root ow
-LPUSH coatikin_name_last_root ox
-LPUSH coatikin_name_last_root oz
 
-LPUSH coatikin_name_last_post by
-LPUSH coatikin_name_last_post cy
-LPUSH coatikin_name_last_post dy
-LPUSH coatikin_name_last_post fy
-LPUSH coatikin_name_last_post gy
-LPUSH coatikin_name_last_post ky
-LPUSH coatikin_name_last_post ly
-LPUSH coatikin_name_last_post my
-LPUSH coatikin_name_last_post ny
-LPUSH coatikin_name_last_post py
-LPUSH coatikin_name_last_post ry
-LPUSH coatikin_name_last_post sy
-LPUSH coatikin_name_last_post ty
-LPUSH coatikin_name_last_post vy
-LPUSH coatikin_name_last_post xy
-LPUSH coatikin_name_last_post zy
+
+
+LPUSH coatikinname_last_pre B
+LPUSH coatikinname_last_pre D
+LPUSH coatikinname_last_pre R
+LPUSH coatikinname_last_pre T
+LPUSH coatikinname_last_pre G
+LPUSH coatikinname_last_pre J
+LPUSH coatikinname_last_pre K
+LPUSH coatikinname_last_pre L
+LPUSH coatikinname_last_pre Z
+LPUSH coatikinname_last_pre Ch
+LPUSH coatikinname_last_pre Sh
+LPUSH coatikinname_last_pre N
+LPUSH coatikinname_last_pre M
+LPUSH coatikinname_last_pre Bl
+LPUSH coatikinname_last_pre Th
+LPUSH coatikinname_last_pre Cr
+
+
+LPUSH coatikinname_last_root ab
+LPUSH coatikinname_last_root ad
+LPUSH coatikinname_last_root af
+LPUSH coatikinname_last_root ag
+LPUSH coatikinname_last_root ak
+LPUSH coatikinname_last_root al
+LPUSH coatikinname_last_root am
+LPUSH coatikinname_last_root an
+LPUSH coatikinname_last_root ar
+LPUSH coatikinname_last_root as
+LPUSH coatikinname_last_root at
+LPUSH coatikinname_last_root av
+LPUSH coatikinname_last_root aw
+LPUSH coatikinname_last_root ax
+LPUSH coatikinname_last_root az
+
+
+LPUSH coatikinname_last_root eb
+LPUSH coatikinname_last_root ed
+LPUSH coatikinname_last_root ef
+LPUSH coatikinname_last_root eg
+LPUSH coatikinname_last_root ek
+LPUSH coatikinname_last_root el
+LPUSH coatikinname_last_root em
+LPUSH coatikinname_last_root en
+LPUSH coatikinname_last_root ep
+LPUSH coatikinname_last_root er
+LPUSH coatikinname_last_root es
+LPUSH coatikinname_last_root et
+LPUSH coatikinname_last_root ev
+LPUSH coatikinname_last_root ew
+LPUSH coatikinname_last_root ex
+LPUSH coatikinname_last_root ez
+LPUSH coatikinname_last_root ib
+LPUSH coatikinname_last_root id
+LPUSH coatikinname_last_root if
+LPUSH coatikinname_last_root ig
+LPUSH coatikinname_last_root ik
+LPUSH coatikinname_last_root il
+LPUSH coatikinname_last_root im
+LPUSH coatikinname_last_root in
+LPUSH coatikinname_last_root ip
+LPUSH coatikinname_last_root ir
+LPUSH coatikinname_last_root is
+LPUSH coatikinname_last_root iv
+LPUSH coatikinname_last_root iw
+LPUSH coatikinname_last_root ix
+LPUSH coatikinname_last_root iz
+LPUSH coatikinname_last_root ob
+LPUSH coatikinname_last_root od
+LPUSH coatikinname_last_root of
+LPUSH coatikinname_last_root og
+LPUSH coatikinname_last_root ok
+LPUSH coatikinname_last_root ol
+LPUSH coatikinname_last_root om
+LPUSH coatikinname_last_root on
+LPUSH coatikinname_last_root op
+LPUSH coatikinname_last_root or
+LPUSH coatikinname_last_root os
+LPUSH coatikinname_last_root ot
+LPUSH coatikinname_last_root ov
+LPUSH coatikinname_last_root ow
+LPUSH coatikinname_last_root ox
+LPUSH coatikinname_last_root oz
+
+LPUSH coatikinname_last_post by
+LPUSH coatikinname_last_post cy
+LPUSH coatikinname_last_post dy
+LPUSH coatikinname_last_post fy
+LPUSH coatikinname_last_post gy
+LPUSH coatikinname_last_post ky
+LPUSH coatikinname_last_post ly
+LPUSH coatikinname_last_post my
+LPUSH coatikinname_last_post ny
+LPUSH coatikinname_last_post py
+LPUSH coatikinname_last_post ry
+LPUSH coatikinname_last_post sy
+LPUSH coatikinname_last_post ty
+LPUSH coatikinname_last_post vy
+LPUSH coatikinname_last_post xy
+LPUSH coatikinname_last_post zy
 
 
 
