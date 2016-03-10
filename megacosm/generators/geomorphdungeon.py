@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
+from name import Name
 import json
 import logging
 import random
@@ -62,7 +63,7 @@ class GeomorphDungeon(Generator):
 
     def __str__(self):
         """ print the name as a string."""
-        return self.text
+        return self.name.fullname
 
     def simplify_for_json(self):
         """ Convert our pretty grid into something json-friendly."""

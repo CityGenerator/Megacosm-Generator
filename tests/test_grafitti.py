@@ -23,14 +23,13 @@ class TestGrafitti(unittest.TestCase):
         self.redis.lpush('phobia_template', "You are afraid.")
         self.redis.lpush('motivation_kind', 'acceptance')
         self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnome_name_first_post', 'Tom')
-        self.redis.lpush('gnome_name_last_pre', 'Gyro')
+        self.redis.lpush('gnomename_first_root', 'Tom')
+        self.redis.lpush('gnomename_last_root', 'Gyro')
         self.redis.lpush('npc_profession', 'butcher')
+        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
+        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
-        self.redis.hset('gnome_name_first','post', 100)
-        self.redis.hset('gnome_name_last','pre', 100)
-        self.redis.zadd('gnome_name_order','{ "name":"first" }',50)
-        self.redis.zadd('gnome_name_order','{ "name":"last"}',100)
 
     def tearDown(self):
         self.redis.flushall()
@@ -47,7 +46,7 @@ class TestGrafitti(unittest.TestCase):
         npc = NPC(self.redis)
         grafitti = Grafitti(self.redis, {'npc':npc})
         self.assertEqual('Grafitti Template', grafitti.text)
-        self.assertEqual('Tom Gyro', grafitti.npcname)
+        self.assertEqual('Tom', grafitti.npcname)
 
     def test_static_npcprofession(self):
         """  """
