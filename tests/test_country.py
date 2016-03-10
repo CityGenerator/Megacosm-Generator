@@ -14,9 +14,16 @@ class TestCountry(unittest.TestCase):
         self.redis = fakeredis.FakeRedis()
         self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":100    }', 100)
         self.redis.zadd('country_regiondetails','{"name":"a single",     "score":100,  "mincount":1,   "maxcount":1   }',100)
-        self.redis.lpush('name_countrytitle', 'Central')
-        self.redis.lpush('name_countrypre','Af')
-        self.redis.lpush('name_countryroot','kil')
+
+
+        self.redis.lpush('countryname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+        self.redis.lpush('countryname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('countryname_formalname_template', '{{params.fullname}}')
+
+
+        self.redis.lpush('countryname_title', 'Central')
+        self.redis.lpush('countryname_pre','Af')
+        self.redis.lpush('countryname_root','kil')
 
 
     def test_random_country(self):

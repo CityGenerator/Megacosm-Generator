@@ -1,6 +1,6 @@
 LPUSH countryname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
-LPUSH countryname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
-LPUSH countryname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
+LPUSH countryname_shortname_template {{params.fullname}}
+LPUSH countryname_formalname_template {{params.fullname}}
 
 
 set countryname_title_chance 22

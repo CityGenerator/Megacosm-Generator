@@ -124,37 +124,37 @@ class Generator(object):
                     self.logger.critical("JSON parsing error: Couldn't read json %s", desc_text)
                     raise ValueError("JSON parsing error: Couldn't read json", desc_text)
 
-####################################################
-# needs refactoring below here.
-
-    # FIXME this needs to be integrated with what NPC races use...
-
-    def generate_name(self, key):
-        """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.
-            This creates the structure "Title PreRootPost Trailer"
-            Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
-            Pre, Root and Post have no spaces."""
-        name = {'full': ''}
-
-        if self.redis.exists(key + 'title'):
-            roll = random.randint(1, 100)
-            if not self.redis.exists(key + 'title_chance') or roll < int(self.redis.get(key + 'title_chance')):
-                name['title'] = self.rand_value(key + 'title')
-                name['full'] = name['title'] + ' '
-
-        for part in ['pre', 'root', 'post']:
-            if self.redis.exists(key + part):
-                if (not self.redis.exists(key + part + '_chance') or
-                        random.randint(1, 100) < int(self.redis.get(key + part + '_chance'))):
-                    name[part] = self.rand_value(key + part)
-                    name['full'] += name[part]
-
-        if self.redis.exists(key + 'trailer'):
-            roll = random.randint(1, 100)
-            if not self.redis.exists(key + 'trailer_chance') or roll < int(self.redis.get(key + 'trailer_chance')):
-                name['trailer'] = self.rand_value(key + 'trailer')
-                name['full'] += ' ' + name['trailer']
-        return name
+#####################################################
+## needs refactoring below here.
+#
+#    # FIXME this needs to be integrated with what NPC races use...
+#
+#    def generate_name(self, key):
+#        """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.
+#            This creates the structure "Title PreRootPost Trailer"
+#            Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
+#            Pre, Root and Post have no spaces."""
+#        name = {'full': ''}
+#
+#        if self.redis.exists(key + 'title'):
+#            roll = random.randint(1, 100)
+#            if not self.redis.exists(key + 'title_chance') or roll < int(self.redis.get(key + 'title_chance')):
+#                name['title'] = self.rand_value(key + 'title')
+#                name['full'] = name['title'] + ' '
+#
+#        for part in ['pre', 'root', 'post']:
+#            if self.redis.exists(key + part):
+#                if (not self.redis.exists(key + part + '_chance') or
+#                        random.randint(1, 100) < int(self.redis.get(key + part + '_chance'))):
+#                    name[part] = self.rand_value(key + part)
+#                    name['full'] += name[part]
+#
+#        if self.redis.exists(key + 'trailer'):
+#            roll = random.randint(1, 100)
+#            if not self.redis.exists(key + 'trailer_chance') or roll < int(self.redis.get(key + 'trailer_chance')):
+#                name['trailer'] = self.rand_value(key + 'trailer')
+#                name['full'] += ' ' + name['trailer']
+#        return name
 
     def rand_value(self, key):
         """ Select a Random Value from the list matching the key in redis. """

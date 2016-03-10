@@ -1,7 +1,7 @@
 #
 LPUSH currencyname_fullname_template {{params.pre}}{{params.root}}{{params.post}}
-LPUSH currencyname_shortname_template {{params.pre}}{{params.root}}{{params.post}}
-LPUSH currencyname_formalname_template {{params.pre}}{{params.root}}{{params.post}}
+LPUSH currencyname_shortname_template {{params.fullname}}
+LPUSH currencyname_formalname_template {{params.fullname}}
 
 
 set currencyname_pre_chance 30

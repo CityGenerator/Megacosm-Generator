@@ -45,7 +45,7 @@ class GeomorphDungeon(Generator):
         #These are generic dungon features shared with RogueDungeon
         self.generate_features('dungeon')
 
-        self.generate_dungeon_name()
+        self.name=Name(self.redis,'dungeon')
         self.width = self.gridwidth['tiles']
         self.height = self.gridheight['tiles']
 

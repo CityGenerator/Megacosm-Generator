@@ -24,12 +24,15 @@ class TestCurrency(unittest.TestCase):
         self.redis.lpush('currency_edges','ridges')
         self.redis.lpush('currency_front',"man's face")
         self.redis.lpush('currency_back','dragon')
-        self.redis.lpush( 'currency_template', "{{params.name['full']|article|title}} is {{params.weight['name'] | article}}, {{params.value['name']}} coin that is common in the {{params.scope['name']}}. It is {{params.size['name']}}, {{params.shape}}, and made of {{params.material}}. The coins are covered with {{params.detail['name']}} designs.")
+        self.redis.lpush('currency_template', "{{params.name.fullname|article|title}} is {{params.weight['name'] | article}}, {{params.value['name']}} coin that is common in the {{params.scope['name']}}. It is {{params.size['name']}}, {{params.shape}}, and made of {{params.material}}. The coins are covered with {{params.detail['name']}} designs.")
 
+        self.redis.lpush('currencyname_fullname_template', '{{params.pre}}{{params.root}}{{params.post}}')
+        self.redis.lpush('currencyname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('currencyname_formalname_template', '{{params.fullname}}')
 
-        self.redis.lpush('name_currencypre','yua')
-        self.redis.lpush('name_currencyroot','fel')
-        self.redis.lpush('name_currencypost','abbi')
+        self.redis.lpush('currencyname_pre','yua')
+        self.redis.lpush('currencyname_root','fel')
+        self.redis.lpush('currencyname_post','abbi')
 
     def tearDown(self):
         self.redis.flushall()
@@ -37,10 +40,11 @@ class TestCurrency(unittest.TestCase):
     def test_random_currency(self):
         """  """
         currency = Currency(self.redis)
-        self.assertEqual('yuafelabbi', currency.name['full'])
+        self.assertEqual('yuafelabbi', currency.name.fullname)
         self.assertEqual('A Yuafelabbi is a hefty, priceless coin that is common in the continent. It is giant (40mm ), square, and made of wood. The coins are covered with unmistakable designs.', str(currency))
     def test_static_values(self):
         """  """
         currency = Currency(self.redis, {'count':3,'text':'a yuafael'})
-        self.assertEqual('yuafelabbi', currency.name['full'])
+        self.assertEqual('yuafelabbi', currency.name.fullname)
         self.assertEqual('A yuafael', str(currency))
+

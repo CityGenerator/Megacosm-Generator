@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from country import Country
 from npc import NPC
+from name import Name
 import logging
 
 
@@ -25,8 +26,4 @@ class Leader(NPC):
 
             self.location = Country(self.redis, {'leader': self})
 
-        self.set_title()
-
-    def set_title(self):
-        self.name['title'] = self.leader_description[self.sex['name']]
-        self.name['fulltitled'] = self.name['title'] + ' ' + self.name['full']
+        self.name = Name(self.redis, 'npc', {'title':self.leader_description[self.sex['name']]})

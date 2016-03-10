@@ -25,8 +25,8 @@ class TestCuisine(unittest.TestCase):
         self.redis.lpush('phobia_template', "You are afraid.")
         self.redis.lpush('motivation_kind', 'acceptance')
         self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnome_name_first_post', 'Tom')
-        self.redis.lpush('gnome_name_last_pre', 'Gyro')
+        self.redis.lpush('gnomename_first_post', 'Tom')
+        self.redis.lpush('gnomename_last_pre', 'Gyro')
 
         self.redis.lpush('cuisine_template', 'words go here.')
 

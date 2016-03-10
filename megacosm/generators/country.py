@@ -3,6 +3,7 @@
 
 from generator import Generator
 from region import Region
+from name import Name
 import logging
 import random
 
@@ -15,6 +16,8 @@ class Country(Generator):
 
         if not hasattr(self, 'regioncount'):
             self.regioncount = random.randint(self.regiondetails['mincount'], self.regiondetails['maxcount'])
+        if not hasattr(self, 'name'):
+            self.name = Name(self.redis, 'country')
 
     def add_regions(self):
         """ add regions to the country"""
@@ -25,5 +28,5 @@ class Country(Generator):
                 self.regions.append(Region(self.redis, {'country': self}))
 
     def __str__(self):
-        return '%s with %s regions' % (self.name['full'], self.regioncount)
+        return '%s with %s regions' % (self.name.fullname, self.regioncount)
 

@@ -3,6 +3,7 @@
 
 from generator import Generator
 from npc import NPC
+from name import Name
 import logging
 import random
 
@@ -40,10 +41,8 @@ class Business(Generator):
 
         # Business is one of the few classes where trailer doesn't start as part of the name
         # So we have to add it here.
-
-        if hasattr(self, 'trailer'):
-            self.name['trailer'] = self.trailer
-            self.name['full'] = self.name['full'] + ' ' + self.trailer.title()
+        
+        self.name=Name(self.redis, 'business', {'trailer': self.trailer})
 
         # If maxfloors isn'd designated, set it to 1
 
@@ -56,4 +55,4 @@ class Business(Generator):
             self.floor = random.randint(1, int(self.maxfloors))
 
     def __str__(self):
-        return '%s (%s)' % (self.name['full'].title(), self.kindname)
+        return '%s (%s)' % (self.name.fullname.title(), self.kindname)

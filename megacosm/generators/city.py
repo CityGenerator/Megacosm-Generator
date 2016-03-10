@@ -4,6 +4,7 @@
 from generator import Generator
 from business import Business
 from npc import NPC
+from name import Name
 import region
 import json
 import random
@@ -20,6 +21,9 @@ class City(Generator):
             self.region = region.Region(self.redis)
 
         self.gatheringplace = Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
+
+        if not hasattr(self, 'name'):
+            self.name=Name(self.redis, 'city')
 
         self.citizen = NPC(self.redis)
 
@@ -145,4 +149,4 @@ class City(Generator):
         return scales
 
     def __str__(self):
-        return '%s' % (self.name['full'])
+        return '%s' % (self.name.fullname)
