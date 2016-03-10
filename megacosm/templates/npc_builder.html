@@ -32,9 +32,6 @@
 
 
         <h1>Let's build an NPC!</h1>
-        Lists: {{plist.keys()}}<br>
-        Sets: {{pset.keys()}}<br>
-        Strings: {{pstring}}<br>
     <div class='container-fluid'>
         <div class="row">
         <form action="/npc" id="npcform">
@@ -77,8 +74,7 @@
                     </div>
                     {% endfor %}
                 </div>
-            </div>
-            <div  class="col-xs-4">
+    
                 <div style="border:1px solid black;" >
                     <div style="font-weight:bold">Personality</div>
                     {% for stat in ['piety', 'honor', 'bravery', 'generous'] %}
@@ -93,6 +89,8 @@
                     </div>
                     {% endfor %}
                 </div>
+            </div>
+            <div  class="col-xs-4">
     
                 <div style="border:1px solid black;margin-top: 5px">
                     <div style="font-weight:bold">Physical Features</div>
@@ -144,18 +142,49 @@
                             {% endfor %}
                         <select><label>Medical Condition Chance</label> <input name="npc_medical_condition_chance" maxlength="3" size="2"/>%
                     </div>
+                </div>
+            </div>
+
+
+            <div  class="col-xs-4">
+                <div style="border:1px solid black;" >
+                    <div style="font-weight:bold">Misc</div>
+                    {% for stat in ['skill', 'experience', 'money', 'luck'] %}
                     <div>
-                        <label>Regret:</label>
-                        <select name="npc_regret">
+                        <label> {{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}_roll">
                             <option value=""></option>
-                            {% for statvalue in plist['regret'] %}
+                            {% for statvalue in pset[stat] %}
+                            <option value="{{ statvalue['score'] }}">{{statvalue['name'] }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                    {% for stat in ['posession','posessiondetail','marriagestatus','regret' ] %}
+                    <div>
+                        <label>{{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}">
+                            <option value=""></option>
+                            {% for statvalue in plist[stat] %}
                             <option value="{{ loop.index-1 }}">{{statvalue }} </option>
                             {% endfor %}
                         <select>
                     </div>
+                    {% endfor %}
                 </div>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <table>
             {% for statname in otherstats %}
