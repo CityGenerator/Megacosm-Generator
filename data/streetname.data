@@ -8,7 +8,6 @@ LPUSH streetname_shortname_template {{params.root}} {{params.trailer}}
 LPUSH streetname_formalname_template {{params.fullname}}
 
 SET streetname_title_chance 10
-SET streetname_trailer_chance 30
 
 
 LPUSH streetname_title black

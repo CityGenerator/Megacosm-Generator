@@ -27,8 +27,11 @@ class TestSect(unittest.TestCase):
         self.redis.lpush('phobia_template', "You are afraid.")
         self.redis.lpush('motivation_kind', 'acceptance')
         self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnome_name_first_post', 'Tom')
-        self.redis.lpush('gnome_name_last_pre', 'Gyro')
+        self.redis.lpush('gnomename_first_post', 'Tom')
+        self.redis.lpush('gnomename_last_pre', 'Gyro')
+        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
+        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
 	#Deity Details
 	self.redis.lpush('deity_favored_stat','skill')

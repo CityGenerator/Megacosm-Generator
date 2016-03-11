@@ -31,6 +31,10 @@ class TestCuisine(unittest.TestCase):
         self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
         self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
+        self.redis.lpush('regionname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+        self.redis.lpush('regionname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('regionname_formalname_template', '{{params.fullname}}')
+
         self.redis.lpush('cuisine_template', 'words go here.')
 
     def tearDown(self):

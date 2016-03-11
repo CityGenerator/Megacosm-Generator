@@ -25,6 +25,9 @@ class TestCountry(unittest.TestCase):
         self.redis.lpush('countryname_pre','Af')
         self.redis.lpush('countryname_root','kil')
 
+        self.redis.lpush('regionname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+        self.redis.lpush('regionname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('regionname_formalname_template', '{{params.fullname}}')
 
     def test_random_country(self):
         """  """
@@ -53,5 +56,6 @@ class TestCountry(unittest.TestCase):
         """  """
         country = Country(self.redis, {'regioncount': 25})
         country.add_regions()
-        self.assertEqual('Central Afkil with 25 regions',str(country))
+        self.assertEqual('Central Afkil',str(country))
+        self.assertEqual(25,len(country.regions))
 

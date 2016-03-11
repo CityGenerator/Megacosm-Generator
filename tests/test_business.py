@@ -6,6 +6,7 @@ import unittest2 as unittest
 import fakeredis
 from mock import Mock
 from config import TestConfiguration
+from pprint import pprint
 import json
 
 
@@ -30,13 +31,25 @@ class TestBusiness(unittest.TestCase):
         self.redis.zadd('business_popularity', '{  "name":"is constantly crowded"                              , "score":100 }',100)
         self.redis.zadd('business_size', '{  "name":"vast"           , "score":100 }',100)
         self.redis.zadd('business_status', '{  "name":"booming",            "score":100 }',100)
+        self.redis.lpush('business_kind', 'bus_adventurersguild')
         self.redis.set('bus_adventurersguild_kindname', 'adventurers guild')
         self.redis.set('bus_adventurersguild_perbuilding', '30')
         self.redis.set('bus_adventurersguild_maxfloors', '2')
         self.redis.set('bus_adventurersguild_district', 'professional')
-        self.redis.lpush('business_kind', 'bus_adventurersguild')
         self.redis.lpush('bus_adventurersguild_manager', 'adventurer')
-        self.redis.lpush('bus_adventurersguild_manager', 'mercenary')
+        self.redis.lpush('bus_adventurersguild_managerclass', 'warrior')
+        self.redis.lpush('bus_adventurersguild_service', 'contracts')
+        self.redis.lpush('bus_adventurersguild_sight', 'weapons against the wall')
+        self.redis.lpush('bus_adventurersguild_smell', 'scent of oil')
+        self.redis.lpush('bus_adventurersguild_sound', 'a dog barking')
+        self.redis.lpush('bus_adventurersguild_trailer', 'hall')
+        self.redis.lpush('businessname_fullname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
+        self.redis.lpush('businessname_shortname_template', '{{params.adjective}} {{params.noun}}')
+        self.redis.lpush('businessname_formalname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
+
+
+
+
         self.redis.lpush('npc_race','gnome')
         self.redis.lpush('gnome_covering','skin')
         self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
@@ -64,13 +77,14 @@ class TestBusiness(unittest.TestCase):
     def test_senses(self):
         """  """
         business = Business(self.redis, {'smell': 'stank', 'sight': 'ugly blinds', 'sound': 'cries for help'})
-        self.assertNotEqual('', str(business))
+        pprint(vars(business.name))
+        self.assertEqual("Angry Axe Hall", str(business))
 
     def test_maxfloors(self):
         """  """
         self.redis.set('bus_adventurersguild_maxfloors', None)
         business = Business(self.redis)
-        self.assertNotEqual('', str(business))
+        self.assertEqual("Angry Axe Hall", str(business))
         self.assertEqual(1, business.maxfloors)
 
     def test_business_params(self):
@@ -78,7 +92,7 @@ class TestBusiness(unittest.TestCase):
         dummyuser = Mock(NPC)
         business = Business(self.redis,
                             {'owner': dummyuser, 'patroncount': 3, 'trailer': 'a place', 'maxfloors': 2, 'floor': 1})
-        self.assertNotEqual('', str(business))
+        self.assertEqual("Angry Axe A Place", str(business))
 
     def test_business_data(self):
 

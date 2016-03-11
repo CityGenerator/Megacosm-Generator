@@ -225,17 +225,6 @@ class TestGenerator(unittest.TestCase):
             generator.generate_features('mybadknd')
 
 
-    def test_fullcity_name(self):
-        '''Ensure that a fullname is generated.'''
-        generator = Generator(self.redis)
-        generator.generate_name('fullcity')
-
-    def test_mincity_name(self):
-        '''Ensure that a minname is generated.'''
-        generator = Generator(self.redis)
-        generator.generate_name('mincity')
-
-
     def test_error_handling_roll(self):
         '''Ensure that select_by_roll handles errors properly.'''
         generator = Generator(self.redis, {'incompleteset_size_roll':10 })

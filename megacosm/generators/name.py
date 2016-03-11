@@ -36,4 +36,4 @@ class Name(Generator):
                 setattr(self, nametype+"name", rendered_template)
 
     def __str__(self):
-        return str(self.fullname)
+        return self.fullname.title()

@@ -12,6 +12,12 @@ class TestStar(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
+        self.redis.lpush('starname_fullname_template', '{{params.pre}}{{params.root}}{{params.post}}')
+        self.redis.lpush('starname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('starname_formalname_template', '{{params.fullname}}')
+        self.redis.lpush('starname_pre', 'Kro')
+        self.redis.lpush('starname_root', 'j')
+        self.redis.lpush('starname_post', 'el')
 
     def tearDown(self):
         self.redis.flushall()
@@ -20,4 +26,4 @@ class TestStar(unittest.TestCase):
         """  """
 
         star = Star(self.redis)
-        self.assertNotEquals('', star.name)
+        self.assertEqual('Krojel', str(star.name))

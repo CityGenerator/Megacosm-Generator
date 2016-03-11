@@ -12,4 +12,5 @@ class Moon(Generator):
         Generator.__init__(self, server, features)
         self.logger = logging.getLogger(__name__)
         self.name=Name(self.redis, 'moon')
-
+    def __str__(self):
+        return self.name.fullname.title()

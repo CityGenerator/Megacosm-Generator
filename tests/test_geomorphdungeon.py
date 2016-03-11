@@ -38,11 +38,7 @@ class TestGeomorphDungeon(unittest.TestCase):
     def test_random_geomorphdungeon(self):
         """  """
         geomorphdungeon = GeomorphDungeon(self.redis)
-        self.assertEqual('Lost Panopticon Of Chaos', str(geomorphdungeon))
-    def test_static_text(self):
-        """  """
-        geomorphdungeon = GeomorphDungeon(self.redis,{'text':'You are a loser.'})
-        self.assertEqual('You Are A Loser.', str(geomorphdungeon))
+        self.assertEqual('Lost Panopticon Of The King Of Chaos', str(geomorphdungeon))
 
     def test_simplify_for_json(self):
         """  """

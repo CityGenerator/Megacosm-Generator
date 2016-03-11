@@ -26,22 +26,54 @@ class TestCity(unittest.TestCase):
         self.redis.lpush('motivationacceptance_text', 'to impress someone')
         self.redis.lpush('gnomename_first_post', 'Tom')
         self.redis.lpush('gnomename_last_pre', 'Gyro')
-        self.redis.hset('gnomename_first','post', 100)
-        self.redis.hset('gnomename_last','pre', 100)
-        self.redis.zadd('gnomename_order','{ "name":"first" }',50)
-        self.redis.zadd('gnomename_order','{ "name":"last"}',100)
+        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
+        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
         #Details for Kobolds
         self.redis.set( 'kobold_details', '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}') 
         self.redis.lpush('kobold_covering','skin') 
-        self.redis.zadd('koboldname_order','{ "name":"first" }',50) 
-        self.redis.hset('koboldname_first','root', 100) 
         self.redis.lpush('koboldname_first_root', 'Kole') 
+        self.redis.lpush('koboldname_fullname_template', '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
+        self.redis.lpush('koboldname_shortname_template', '{{params.first_root}}')
+        self.redis.lpush('koboldname_formalname_template', '{{params.title}} {{params.first_root}}')
  
-        self.redis.zadd('koboldname_order','{ "name":"last" }',100) 
-        self.redis.hset('koboldname_last','root', 0) 
-        self.redis.lpush('koboldname_last_root', 'Sok') 
- 
+        self.redis.lpush('businessname_adjective','Angry')
+        self.redis.lpush('businessname_noun','Axe')
+        self.redis.lpush('business_direction', 'west')
+        self.redis.lpush('business_shade', 'bright')
+        self.redis.lpush('business_windows', 'clean')
+        self.redis.lpush('business_storefront', 'mud')
+        self.redis.lpush('business_rooftype', 'slate')
+        self.redis.lpush('business_condition', 'cluttered')
+        self.redis.lpush('business_trouble', 'slumping sales')
+        self.redis.zadd('business_neighborhood', '{ "name":"expensive",    "score":100 }',100)
+        self.redis.zadd('business_age', '{  "name":"old"          , "score":100  }',100)
+        self.redis.zadd('business_price', '{  "name":"very high"          , "score":100  }',100)
+        self.redis.zadd('business_reputation', '{  "name":"being a pillar of the community"          , "score":100  }',100)
+        self.redis.zadd('business_popularity', '{  "name":"is constantly crowded"                              , "score":100 }',100)
+        self.redis.zadd('business_size', '{  "name":"vast"           , "score":100 }',100)
+        self.redis.zadd('business_status', '{  "name":"booming",            "score":100 }',100)
+        self.redis.lpush('business_kind', 'bus_adventurersguild')
+        self.redis.set('bus_adventurersguild_kindname', 'adventurers guild')
+        self.redis.set('bus_adventurersguild_perbuilding', '30')
+        self.redis.set('bus_adventurersguild_maxfloors', '2')
+        self.redis.set('bus_adventurersguild_district', 'professional')
+        self.redis.lpush('bus_adventurersguild_manager', 'adventurer')
+        self.redis.lpush('bus_adventurersguild_managerclass', 'warrior')
+        self.redis.lpush('bus_adventurersguild_service', 'contracts')
+        self.redis.lpush('bus_adventurersguild_sight', 'weapons against the wall')
+        self.redis.lpush('bus_adventurersguild_smell', 'scent of oil')
+        self.redis.lpush('bus_adventurersguild_sound', 'a dog barking')
+        self.redis.lpush('bus_adventurersguild_trailer', 'hall')
+        self.redis.lpush('businessname_fullname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
+        self.redis.lpush('businessname_shortname_template', '{{params.adjective}} {{params.noun}}')
+        self.redis.lpush('businessname_formalname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
+
+
+
+
+
         self.redis.set('kobold_subrace_chance',100) 
         self.redis.lpush('kobold_subrace', 'aquatic') 
  
@@ -65,6 +97,9 @@ class TestCity(unittest.TestCase):
 
         self.redis.lpush('city_shape', 'octagonal')
         self.redis.lpush('city_gatheringplace', 'adventurersguild')
+        self.redis.lpush('cityname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+        self.redis.lpush('cityname_shortname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}}')
+        self.redis.lpush('cityname_formalname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
 
         self.redis.lpush('cityname_title', 'Alta')
         self.redis.lpush('cityname_pre', 'De')
@@ -84,10 +119,22 @@ class TestCity(unittest.TestCase):
         self.redis.lpush('regionname_post', 'ad')
         self.redis.lpush('regionname_post', 'ain')
         self.redis.lpush('regionname_post', 'dy')
+        self.redis.lpush('regionname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+        self.redis.lpush('regionname_shortname_template', '{{params.fullname}}')
+        self.redis.lpush('regionname_formalname_template', '{{params.fullname}}')
 
         self.redis.lpush('orc_covering','skin')
         self.redis.set('orc_details',  '{"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}')
+        self.redis.lpush('orcname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+        self.redis.lpush('orcname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}')
+        self.redis.lpush('orcname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
+
+
         self.redis.set('elf_details',  '{"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}')
+        self.redis.lpush('elfname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}')
+        self.redis.lpush('elfname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
+        self.redis.lpush('elfname_formalname_template', '{{params.title}} {{params.last_root}}{{params.last_post}}')
+
         self.redis.lpush('elf_covering','skin')
         self.redis.set('elf_subrace_chance',100) 
         self.redis.lpush('elf_subrace', 'shadowelf') 
@@ -104,8 +151,8 @@ class TestCity(unittest.TestCase):
     def test_random_city(self):
         """  """
         city = City(self.redis)
-        self.assertEqual('Alta DeAllentle Gate', city.name['full'])
-        self.assertEquals(city.name['full'], str(city))
+        self.assertEqual('Alta DeAllentle Gate', city.name.fullname)
+        self.assertEquals(city.name.fullname, str(city))
 
     def test_city_region(self):
         """  """

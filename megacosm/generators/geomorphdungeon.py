@@ -63,7 +63,7 @@ class GeomorphDungeon(Generator):
 
     def __str__(self):
         """ print the name as a string."""
-        return self.name.fullname
+        return self.name.fullname.title()
 
     def simplify_for_json(self):
         """ Convert our pretty grid into something json-friendly."""

@@ -67,33 +67,26 @@ class TestNPC(unittest.TestCase):
         #Details for Humans
         self.redis.set('human_details', '{"name": "Human",  "size": "medium",  "description": "quick growth and adaptability"}')
         self.redis.lpush('human_covering','skin')
-        self.redis.hset('human_name_first','pre', 100)
-        self.redis.hset('human_name_first','root', 100)
-        self.redis.hset('human_name_first','post', 100)
-        self.redis.hset('human_name_last','pre', 100)
-        self.redis.hset('human_name_last','root', 100)
-        self.redis.hset('human_name_last','post', 100)
-        self.redis.zadd('human_name_order','{ "name":"first" }',50)
-        self.redis.zadd('human_name_order','{ "name":"last"}',100)
-    
-        self.redis.lpush('human_name_first_pre', 'Dru')
-        self.redis.lpush('human_name_first_root', 'cil')
-        self.redis.lpush('human_name_first_post', 'la')
-        self.redis.lpush('human_name_last_pre', 'La')
-        self.redis.lpush('human_name_last_root', 'Sal')
-        self.redis.lpush('human_name_last_post', 'vae')
+        self.redis.lpush('humanname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}')
+        self.redis.lpush('humanname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
+        self.redis.lpush('humanname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
+   
+ 
+        self.redis.lpush('humanname_first_pre', 'Dru')
+        self.redis.lpush('humanname_first_root', 'cil')
+        self.redis.lpush('humanname_first_post', 'la')
+        self.redis.lpush('humanname_last_pre', 'La')
+        self.redis.lpush('humanname_last_root', 'Sal')
+        self.redis.lpush('humanname_last_post', 'vae')
     
         #Details for Kobolds
         self.redis.set( 'kobold_details', '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}')
         self.redis.lpush('kobold_covering','skin')
-        self.redis.zadd('kobold_name_order','{ "name":"first" }',50)
-        self.redis.hset('kobold_name_first','root', 100)
-        self.redis.lpush('kobold_name_first_root', 'Kole')
-    
-        self.redis.zadd('kobold_name_order','{ "name":"last" }',100)
-        self.redis.hset('kobold_name_last','root', 0)
-        self.redis.lpush('kobold_name_last_root', 'Sok')
-    
+        self.redis.lpush('koboldname_first_root', 'Kole')
+        self.redis.lpush('koboldname_fullname_template', '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
+        self.redis.lpush('koboldname_shortname_template', '{{params.first_root}}')
+        self.redis.lpush('koboldname_formalname_template', '{{params.title}} {{params.first_root}}')
+ 
         self.redis.set('kobold_subrace_chance',100)
         self.redis.lpush('kobold_subrace', 'aquatic')
     
@@ -118,7 +111,7 @@ class TestNPC(unittest.TestCase):
 
         npc = NPC(self.redis, {'race': 'kobold'})
         self.assertIn('kobold', npc.race)
-        self.assertEqual('Kole',npc.name['full'])
+        self.assertEqual('Kole',npc.name.fullname)
 
         with self.assertRaisesRegexp(Exception, 'turkeys is not a valid race and has no associated data'):
             npc = NPC(self.redis, {'race': 'turkeys'})
@@ -137,14 +130,12 @@ class TestNPC(unittest.TestCase):
     def test_names(self):
         """  """
 	self.redis.lpush('npc_race','human')
-	self.redis.hset('human_name_first','title', 100)
-	self.redis.lpush('human_name_first_title', 'Lady')
-	self.redis.hset('human_name_last','trailer', 100)
-	self.redis.lpush('human_name_last_trailer', 'Esq.')
+	self.redis.lpush('humanname_title', 'Lady')
+	self.redis.lpush('humanname_trailer', 'Esq.')
 
         npc = NPC(self.redis, {'race': 'human'})
         self.assertEqual(npc.race, 'human')
-        self.assertEqual('Lady Drucilla LaSalvae Esq.',npc.name['full'])
+        self.assertEqual('Lady Drucilla LaSalvae Esq.',npc.name.fullname)
         self.assertEqual('Lady Drucilla LaSalvae Esq.',str(npc))
 
     def test_phobias(self):

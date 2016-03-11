@@ -28,5 +28,5 @@ class Country(Generator):
                 self.regions.append(Region(self.redis, {'country': self}))
 
     def __str__(self):
-        return '%s with %s regions' % (self.name.fullname, self.regioncount)
+        return self.name.fullname.title()
 

@@ -1,12 +1,9 @@
 
-LPUSH businessname_fullname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
+LPUSH businessname_fullname_template {{params.adjective}} {{params.noun}} {{params.hall}}
 LPUSH businessname_shortname_template {{params.adjective}} {{params.noun}}
-LPUSH businessname_formalname_template {{params.adjective}} {{params.noun}} {{params.businesstype}}
+LPUSH businessname_formalname_template {{params.adjective}} {{params.noun}} {{params.hall}}
 
 
-set businessname_adjective_chance 100
-set businessname_noun_chance 100
-set businessname_businesstype_chance 100
 
 
 
