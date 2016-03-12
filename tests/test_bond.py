@@ -3,7 +3,7 @@
 
 from megacosm.generators import Bond
 import unittest2 as unittest
-
+import fixtures
 import fakeredis
 from config import TestConfiguration
 
@@ -13,22 +13,11 @@ class TestBond(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.lpush('bond_template', 'Bob accepted you despite obvious failings. Which failing was the hardest?')
+        fixtures.bond.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
-        self.redis.lpush('gnome_covering','skin')
-        self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
-        self.redis.set('skin_covertemplate', '{{params.skinkind}}, {{params.skincolor}} skin')
-        self.redis.lpush('skin_skincolor','alabaster')
-        self.redis.lpush('skin_skinkind', 'thick')
-        self.redis.lpush('phobia_template', "You are afraid.")
-        self.redis.lpush('motivation_kind', 'acceptance')
-        self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnomename_first_post', 'Tom')
-        self.redis.lpush('gnomename_last_pre', 'Gyro')
-        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
-        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
-        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
-        self.redis.zadd('npc_sex', '{"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }', 100)
 
     def tearDown(self):
         self.redis.flushall()
@@ -36,7 +25,7 @@ class TestBond(unittest.TestCase):
     def test_random_bond(self):
         """  Test a "random" bond. """
         bond = Bond(self.redis)
-        self.assertEqual('Bob accepted you despite obvious failings. Which failing was the hardest?', bond.text)
+        self.assertIn(  bond.text, [ 'Way back when, you amused Tom Gyro in an unusual way.', 'Way back when, Tom Gyro amused you in an unusual way.'])
 
     def test_bond_features(self):
         """  Pass in all bond fields. """

@@ -6,7 +6,7 @@ import unittest2 as unittest
 from mock import Mock, patch, MagicMock
 import fakeredis
 from config import TestConfiguration
-
+import fixtures
 
 class TestCity(unittest.TestCase):
 
@@ -14,114 +14,18 @@ class TestCity(unittest.TestCase):
         """  """
         # TODO see if testconfiguration can put a prefix on redis keys to prevent overlap
         self.redis = fakeredis.FakeRedis()
+        fixtures.business.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.region.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.city.import_fixtures(self)
 
-        self.redis.lpush('npc_race','gnome')
-        self.redis.lpush('gnome_covering','skin')
-        self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
-        self.redis.set('skin_covertemplate', '{{params.skinkind}}, {{params.skincolor}} skin')
-        self.redis.lpush('skin_skincolor','alabaster')
-        self.redis.lpush('skin_skinkind', 'thick')
-        self.redis.lpush('phobia_template', "You are afraid.")
-        self.redis.lpush('motivation_kind', 'acceptance')
-        self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnomename_first_post', 'Tom')
-        self.redis.lpush('gnomename_last_pre', 'Gyro')
-        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
-        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
-        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
-        #Details for Kobolds
-        self.redis.set( 'kobold_details', '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}') 
-        self.redis.lpush('kobold_covering','skin') 
-        self.redis.lpush('koboldname_first_root', 'Kole') 
-        self.redis.lpush('koboldname_fullname_template', '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
-        self.redis.lpush('koboldname_shortname_template', '{{params.first_root}}')
-        self.redis.lpush('koboldname_formalname_template', '{{params.title}} {{params.first_root}}')
  
-        self.redis.lpush('businessname_adjective','Angry')
-        self.redis.lpush('businessname_noun','Axe')
-        self.redis.lpush('business_direction', 'west')
-        self.redis.lpush('business_shade', 'bright')
-        self.redis.lpush('business_windows', 'clean')
-        self.redis.lpush('business_storefront', 'mud')
-        self.redis.lpush('business_rooftype', 'slate')
-        self.redis.lpush('business_condition', 'cluttered')
-        self.redis.lpush('business_trouble', 'slumping sales')
-        self.redis.zadd('business_neighborhood', '{ "name":"expensive",    "score":100 }',100)
-        self.redis.zadd('business_age', '{  "name":"old"          , "score":100  }',100)
-        self.redis.zadd('business_price', '{  "name":"very high"          , "score":100  }',100)
-        self.redis.zadd('business_reputation', '{  "name":"being a pillar of the community"          , "score":100  }',100)
-        self.redis.zadd('business_popularity', '{  "name":"is constantly crowded"                              , "score":100 }',100)
-        self.redis.zadd('business_size', '{  "name":"vast"           , "score":100 }',100)
-        self.redis.zadd('business_status', '{  "name":"booming",            "score":100 }',100)
-        self.redis.lpush('business_kind', 'bus_adventurersguild')
-        self.redis.set('bus_adventurersguild_kindname', 'adventurers guild')
-        self.redis.set('bus_adventurersguild_perbuilding', '30')
-        self.redis.set('bus_adventurersguild_maxfloors', '2')
-        self.redis.set('bus_adventurersguild_district', 'professional')
-        self.redis.lpush('bus_adventurersguild_manager', 'adventurer')
-        self.redis.lpush('bus_adventurersguild_managerclass', 'warrior')
-        self.redis.lpush('bus_adventurersguild_service', 'contracts')
-        self.redis.lpush('bus_adventurersguild_sight', 'weapons against the wall')
-        self.redis.lpush('bus_adventurersguild_smell', 'scent of oil')
-        self.redis.lpush('bus_adventurersguild_sound', 'a dog barking')
-        self.redis.lpush('bus_adventurersguild_trailer', 'hall')
-        self.redis.lpush('businessname_fullname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
-        self.redis.lpush('businessname_shortname_template', '{{params.adjective}} {{params.noun}}')
-        self.redis.lpush('businessname_formalname_template', '{{params.adjective}} {{params.noun}} {{params.trailer}}')
 
 
 
-
-
-        self.redis.set('kobold_subrace_chance',100) 
-        self.redis.lpush('kobold_subrace', 'aquatic') 
- 
-        self.redis.hset('kobold_subrace_description', 'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }') 
-
-        self.redis.zadd('city_size', '{ "name":"capitol",       "minpop":"30001", "maxpop":"80000", "min_density":"240", "max_density":"40000", "min_dist":3,  "max_dist":14 }', 100)
-        self.redis.zadd('city_happiness', ' { "name":"estatic",     "score":100   }', 100)
-        self.redis.zadd('city_health', ' { "name":"vigorous",       "score":100   }', 100)
-        self.redis.zadd('city_age', ' { "name":"ancient",           "score":100    }', 100)
-        self.redis.zadd('city_terrain', '{ "name": "jagged",         "score":100   }', 100)
-        self.redis.zadd('city_pollution', '{ "name": "squalid",      "score":100  }', 100)
-        self.redis.zadd('city_moral', '{ "name": "virtuous",         "score":100   }', 100)
-        self.redis.zadd('city_order', '{ "name": "honorable",         "score":100   }', 100)
-        self.redis.zadd('city_tolerance', '{ "name": "love",                        "score":100   }', 100)
-        self.redis.zadd('city_economy', '{ "name": "lively",                        "score":100   }', 100)
-        self.redis.zadd('city_military', '{ "name": "reverent",                     "score":100   }', 100)
-        self.redis.zadd('city_magic', '{ "name": "growing",                         "score":100   }', 100)
-        self.redis.zadd('city_education', '{ "name": "wonderful",                   "score":100   }', 100)
-        self.redis.zadd('city_authority', '{ "name": "is very authoritarian",       "score":100   }', 100)
-        self.redis.zadd('city_crime', '{ "name": "unheard of",                      "score":100   }', 100)
-
-        self.redis.lpush('city_shape', 'octagonal')
-        self.redis.lpush('city_gatheringplace', 'adventurersguild')
-        self.redis.lpush('cityname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
-        self.redis.lpush('cityname_shortname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}}')
-        self.redis.lpush('cityname_formalname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
-
-        self.redis.lpush('cityname_title', 'Alta')
-        self.redis.lpush('cityname_pre', 'De')
-        self.redis.lpush('cityname_root', 'Allen')
-        self.redis.lpush('cityname_post', 'tle')
-        self.redis.lpush('cityname_trailer', 'Gate')
-
-        self.redis.lpush('regionname_title', 'Upper')
-        self.redis.lpush('regionname_title', 'New')
-        self.redis.lpush('regionname_pre', 'Af')
-        self.redis.lpush('regionname_pre', 'Alb')
-        self.redis.lpush('regionname_pre', 'Lom')
-        self.redis.lpush('regionname_root', 'ad')
-        self.redis.lpush('regionname_root', 'am')
-        self.redis.lpush('regionname_root', 'bar')
-        self.redis.lpush('regionname_post', 'a')
-        self.redis.lpush('regionname_post', 'ad')
-        self.redis.lpush('regionname_post', 'ain')
-        self.redis.lpush('regionname_post', 'dy')
-        self.redis.lpush('regionname_fullname_template', '{{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
-        self.redis.lpush('regionname_shortname_template', '{{params.fullname}}')
-        self.redis.lpush('regionname_formalname_template', '{{params.fullname}}')
 
         self.redis.lpush('orc_covering','skin')
         self.redis.set('orc_details',  '{"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}')
@@ -150,13 +54,14 @@ class TestCity(unittest.TestCase):
 
     def test_random_city(self):
         """  """
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         self.assertEqual('Alta DeAllentle Gate', city.name.fullname)
         self.assertEquals(city.name.fullname, str(city))
 
     def test_city_region(self):
         """  """
-
+        self.redis.lpush('npc_race','gnome')
         region=Region(self.redis)
         city = City(self.redis, {'region': region})
         self.assertEqual(str(city.region), str(region))
@@ -164,6 +69,7 @@ class TestCity(unittest.TestCase):
 
     def test_has_subrace(self):
         """  """
+        self.redis.lpush('npc_race','kobold')
         city = City(self.redis)
         self.assertEquals(False, city.has_subraces('foo'))
         self.assertEquals(True, city.has_subraces('kobold'))
@@ -171,6 +77,7 @@ class TestCity(unittest.TestCase):
     @patch('megacosm.generators.city.random')
     def test_want_subraces(self, mockrand):
         """  """
+        self.redis.lpush('npc_race','kobold')
         city = City(self.redis)
         mockrand.randint.return_value = 1
         self.assertEquals(True, city.want_subraces('kobold'))
@@ -179,6 +86,7 @@ class TestCity(unittest.TestCase):
 
     def test_calculate_population(self):
         """  """
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         city.population_estimate = None
         city.population_density = None
@@ -193,6 +101,7 @@ class TestCity(unittest.TestCase):
     @patch('megacosm.generators.city.random')
     def test_calculate_racial_breakdown(self, mockrand):
         """  """
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         mockrand.randint.side_effect = [11, 30, 30, 30, 30]
         mockredis = Mock(self.redis)
@@ -205,6 +114,7 @@ class TestCity(unittest.TestCase):
 
     @patch('megacosm.generators.city.random')
     def test_calculate_racial_breakdown_lowrolls(self, mockrand):
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         mockrand.randint.side_effect = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         mockredis = Mock(self.redis)
@@ -216,6 +126,7 @@ class TestCity(unittest.TestCase):
 
     @patch('megacosm.generators.city.random')
     def test_calculate_subraces(self, mockrand):
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         mockrand.randint.side_effect = [29, 2, 39, 4, 5, 6, 7, 8, 9]
         mockredis = Mock(self.redis)
@@ -226,6 +137,7 @@ class TestCity(unittest.TestCase):
 
     @patch('megacosm.generators.city.random')
     def test_calculate_subraces_lowrolls(self, mockrand):
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         mockrand.randint.side_effect = [11, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         mockredis = Mock(self.redis)
@@ -268,6 +180,7 @@ class TestCity(unittest.TestCase):
     @patch('megacosm.generators.city.random')
     def test_get_race_breakdown(self, mockrand):
         """ verify race breakdown"""
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         self.redis.lpush('npc_race','orc')
         self.redis.lpush('npc_race','elf')
@@ -279,6 +192,7 @@ class TestCity(unittest.TestCase):
 
     def test_get_scale(self):
         mockredis = Mock(self.redis)
+        self.redis.lpush('npc_race','gnome')
         city = City(self.redis)
         citydata = [
             '{"maxpop": "100", "max_density": "400", "name": "settlement", "min_density": "10", "minpop": "25"}',

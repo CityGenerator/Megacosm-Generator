@@ -31,7 +31,7 @@ class Name(Generator):
                 template=getattr(self,nametype+'name_template')
                 # Render the name template
                 rendered_template=self.render_template(template).strip(' ')
-                pprint(rendered_template)
+                print("%s: %s" %(nametype,rendered_template))
                 # Assign the rendered template text to the right variable.
                 setattr(self, nametype+"name", rendered_template)
 

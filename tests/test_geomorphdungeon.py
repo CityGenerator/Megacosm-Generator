@@ -6,6 +6,7 @@ import unittest2 as unittest
 
 import fakeredis
 from config import TestConfiguration
+import fixtures
 import json
 
 class TestGeomorphDungeon(unittest.TestCase):
@@ -13,24 +14,8 @@ class TestGeomorphDungeon(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('geomorphdungeon_gridwidth', '{"name":"6",     "tiles":6,   "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_gridheight', '{"name":"4",    "tiles":4,    "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_segmentation', '{"name":"all",        "solidchance":0,        "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_decorationoffset', '{"name":"80%",   "offset":0.8,  "score":100 }', 100)
-        self.redis.lpush('dungeonname_template', '{{params.descriptor}} {{params.place}} of {{params.thing}}')
-        self.redis.lpush('dungeonname_place', 'panopticon')
-        self.redis.lpush('dungeonname_descriptor', 'lost')
-        self.redis.lpush('dungeonname_thingtype', 'king')
-        self.redis.lpush('dungeonname_thing', 'chaos')
-        self.redis.lpush('dungeonname_fullname_template', '{{params.descriptor}} {{params.place}} of the {{params.thingtype}} of {{params.thing}}')
-        self.redis.lpush('dungeonname_shortname_template', 'The {{params.place}}')
-        self.redis.lpush('dungeonname_formalname_template', '{{params.fullname}}')
-        self.redis.lpush('geomorph_type_0', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_1', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_2', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_3', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_4', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_5', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
+        fixtures.dungeon.import_fixtures(self)
+        fixtures.geomorphdungeon.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()

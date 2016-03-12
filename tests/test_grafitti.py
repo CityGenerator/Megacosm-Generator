@@ -5,30 +5,19 @@ from megacosm.generators import Grafitti, NPC
 import unittest2 as unittest
 
 import fakeredis
-
+import fixtures
 
 class TestGrafitti(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.lpush('grafitti_template', 'Grafitti Template')
+        fixtures.npc.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.grafitti.import_fixtures(self)
 
         self.redis.lpush('npc_race','gnome')
-        self.redis.lpush('gnome_covering','skin')
-        self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
-        self.redis.set('skin_covertemplate', '{{params.skinkind}}, {{params.skincolor}} skin')
-        self.redis.lpush('skin_skincolor','alabaster')
-        self.redis.lpush('skin_skinkind', 'thick')
-        self.redis.lpush('phobia_template', "You are afraid.")
-        self.redis.lpush('motivation_kind', 'acceptance')
-        self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnomename_first_root', 'Tom')
-        self.redis.lpush('gnomename_last_root', 'Gyro')
-        self.redis.lpush('npc_profession', 'butcher')
-        self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
-        self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
-        self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
 
 
     def tearDown(self):

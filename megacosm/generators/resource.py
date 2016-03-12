@@ -13,7 +13,6 @@ class Resource(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
 
-        del self.name
 
         if not hasattr(self, 'place'):
             self.place = Region(self.redis)

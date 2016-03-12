@@ -3,7 +3,7 @@
 
 from megacosm.generators import Name
 import unittest2 as unittest
-
+import fixtures
 import fakeredis
 from pprint import pprint
 #from config import TestConfiguration
@@ -12,15 +12,7 @@ class TestName(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
-        self.redis.lpush('humanname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}')
-        self.redis.lpush('humanname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
-        self.redis.lpush('humanname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
-        self.redis.lpush('humanname_first_pre', 'Dru')
-        self.redis.lpush('humanname_first_root', 'cil')
-        self.redis.lpush('humanname_first_post', 'la')
-        self.redis.lpush('humanname_last_pre', 'La')
-        self.redis.lpush('humanname_last_root', 'Sal')
-        self.redis.lpush('humanname_last_post', 'vae')
+        fixtures.npc.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()

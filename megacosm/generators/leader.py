@@ -26,4 +26,4 @@ class Leader(NPC):
 
             self.location = Country(self.redis, {'leader': self})
 
-        self.name = Name(self.redis, 'npc', {'title':self.leader_description[self.sex['name']]})
+        self.name = Name(self.redis, self.race, {'title':self.leader_description[self.sex['name']]})
