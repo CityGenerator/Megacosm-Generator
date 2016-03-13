@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %} {{tempobj.title}} {{tempobj.npc.name['full'] }}, Wanted for {{tempobj.crime}}. {% endblock %}
+{% block title %} {{tempobj.title}} {{tempobj.npc.name.fullname }}, Wanted for {{tempobj.crime}}. {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
@@ -9,7 +9,7 @@
 <div style="margin:auto; text-align:center;">
     <h1 ><a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a> </h1>
     <h1 >{{tempobj.headline }} </h1>
-    <h2> {{tempobj.npc.name['full']}} </h2>
+    <h2> {{tempobj.npc.name.fullname}} </h2>
 
     {% if tempobj.title %}
         <p>A.K.A.</p>
@@ -17,7 +17,7 @@
     {%endif%}
 
     <h3>Wanted for {{tempobj.crime}} by the {{tempobj.by}}. </h3>
-    <p>{{tempobj.npc.name['full']}} was last seen {{tempobj.lastseen}}. May claim to be a {{tempobj.npc.skill['name']}} {{tempobj.npc.profession}}.
+    <p>{{tempobj.npc.name.fullname}} was last seen {{tempobj.lastseen}}. May claim to be a {{tempobj.npc.skill['name']}} {{tempobj.npc.profession}}.
 
     {% if tempobj.npc.mark   %}
         {% if tempobj.npc.firstname%}

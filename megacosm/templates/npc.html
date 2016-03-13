@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}Meet {{tempobj.name['full']}} {% endblock %}
+{% block title %}Meet {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,25 +10,25 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Meet <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Meet <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
     <h2>Summary</h2>
-    {{tempobj.name['full']}} is {{tempobj.age['name']|article}} {{tempobj.race}} {{tempobj.sex['name']}} who is {{tempobj.skill['name'] | article}} {{tempobj.profession}} by trade. {{tempobj.name['firstname']}} is motivated {{tempobj.motivation.text}}.
+    {{tempobj.name.fullname}} is {{tempobj.age['name']|article}} {{tempobj.race}} {{tempobj.sex['name']}} who is {{tempobj.skill['name'] | article}} {{tempobj.profession}} by trade. {{tempobj.name.shortname}} is motivated {{tempobj.motivation.text}}.
     
     <h2>Description</h2>
-    {{tempobj.name['full']}} is {{tempobj.height| article}} {{tempobj.race}} with {{tempobj.complexion| article}} complexion and {{tempobj.coveringtext}}. {{tempobj.name['firstname']}} appears {{tempobj.build}} and has {{tempobj.eye}} eyes. 
+    {{tempobj.name.fullname}} is {{tempobj.height| article}} {{tempobj.race}} with {{tempobj.complexion| article}} complexion and {{tempobj.coveringtext}}. {{tempobj.name.shortname}} appears {{tempobj.build}} and has {{tempobj.eye}} eyes. 
 
-    {{tempobj.sex['possessive']|capitalize}} friends describe {{tempobj.sex['third-person']}} as {{tempobj.charisma['name']}}, while others see {{tempobj.name['firstname']}} as {{tempobj.attractiveness['name']}}. Physically, {{tempobj.sex['pronoun']}} appears {{tempobj.strength['name']}} and {{tempobj.endurance['name']}}.
+    {{tempobj.sex['possessive']|capitalize}} friends describe {{tempobj.sex['third-person']}} as {{tempobj.charisma['name']}}, while others see {{tempobj.name.shortname}} as {{tempobj.attractiveness['name']}}. Physically, {{tempobj.sex['pronoun']}} appears {{tempobj.strength['name']}} and {{tempobj.endurance['name']}}.
 
     <h2>Behavior</h2>
-<p>    {{tempobj.name['firstname']}} appears {{tempobj.emotion}}, but if approached, {{tempobj.sex['pronoun']}} will act {{tempobj.attitude}}.  When provoked, {{tempobj.name['firstname']}} is {{tempobj.bravery['name']}}. Peers consider {{tempobj.sex['third-person']}} {{tempobj.intelligence['name']}}. People who know {{tempobj.name['firstname']}} think {{tempobj.sex['pronoun']}} is {{tempobj.honor['name']}}. Looking back, {{tempobj.sex['pronoun']}} is {{tempobj.satisfaction['name']}} of {{tempobj.sex['possessive']}} past choices.</p>
-<p>{{tempobj.name['firstname']}} is {{tempobj.money['name']}}, and is {{tempobj.generous['name']}} with what {{tempobj.sex['pronoun']}} owns. Many would consider {{tempobj.sex['third-person']}} {{tempobj.luck['name']}} and {{tempobj.confident['name']}} confident.
+<p>    {{tempobj.name.shortname}} appears {{tempobj.emotion}}, but if approached, {{tempobj.sex['pronoun']}} will act {{tempobj.attitude}}.  When provoked, {{tempobj.name.shortname}} is {{tempobj.bravery['name']}}. Peers consider {{tempobj.sex['third-person']}} {{tempobj.intelligence['name']}}. People who know {{tempobj.name.shortname}} think {{tempobj.sex['pronoun']}} is {{tempobj.honor['name']}}. Looking back, {{tempobj.sex['pronoun']}} is {{tempobj.satisfaction['name']}} of {{tempobj.sex['possessive']}} past choices.</p>
+<p>{{tempobj.name.shortname}} is {{tempobj.money['name']}}, and is {{tempobj.generous['name']}} with what {{tempobj.sex['pronoun']}} owns. Many would consider {{tempobj.sex['third-person']}} {{tempobj.luck['name']}} and {{tempobj.confident['name']}} confident.
 </p>
 <p>{{tempobj.sex['possessive']|capitalize}} favorite hobby is {{tempobj.hobby}}.</p>
 
 {%if tempobj.medical_condition %}
-    <p>{{tempobj.name['firstname']}} also suffers from {{tempobj.medical_condition}}.</p>
+    <p>{{tempobj.name.shortname}} also suffers from {{tempobj.medical_condition}}.</p>
 {%endif%}
-{{tempobj.sex['pronoun']|capitalize}} considers {{tempobj.sex['third-person']}}self {{tempobj.piety['name']|article}} worshipper of the {{tempobj.deity.importance['name']}} <a href="/deity?seed={{tempobj.deity.seed}}">{{tempobj.deity.name['full']}}</a>.
+{{tempobj.sex['pronoun']|capitalize}} considers {{tempobj.sex['third-person']}}self {{tempobj.piety['name']|article}} worshipper of the {{tempobj.deity.importance['name']}} <a href="/deity?seed={{tempobj.deity.seed}}">{{tempobj.deity.name.fullname}}</a>.
 
 
 {% endblock %}

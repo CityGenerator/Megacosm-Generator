@@ -35,7 +35,7 @@
 			    gl_FragColor = vec4( glow, 1.0 );
 			}
 		</script>
-        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name['full']}} ({{starsystem.seed}})</a></h1>
+        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name.fullname}} ({{starsystem.seed}})</a></h1>
 
         <!--<img src="/worldmap.png?seed={{seed}}"/>-->
 
@@ -57,7 +57,7 @@
 
             {% for star in starsystem.stars %}
         
-                console.log("star: {{star.name['full']}}: {{star.pos.x}}, {{star.pos.y}}, {{star.pos.z}} Luminosity: {{star.luminosity}}" )
+                console.log("star: {{star.name.fullname}}: {{star.pos.x}}, {{star.pos.y}}, {{star.pos.z}} Luminosity: {{star.luminosity}}" )
                 var position= new THREE.Vector3({{star.pos.x}}-50+{{star.size['multiplier']}},{{star.pos.y}},{{star.pos.z}}  );
                 generateStar({{star.color['color']}}, position, {{star.size['multiplier']}}, {{star.color['luminosity']}}, 1+{{star.color['luminosity']}}, {{loop.index}});
 
@@ -65,7 +65,7 @@
             {% for moon in starsystem.planet.moons %}
                 var orbitdistance={{(loop.index**2)/2+1}};
                 var orbitspeed={{1+(loop.length-loop.index)/loop.length}};
-                console.log("moon: {{moon.name['full']}} orbitdistance: "+orbitdistance+" orbitspeed: "+orbitspeed) 
+                console.log("moon: {{moon.name.fullname}} orbitdistance: "+orbitdistance+" orbitspeed: "+orbitspeed) 
                 generateMoon({{moon.color['color']}},  
                              {{starsystem.planet.size['multiplier']}}*{{moon.size['multiplier']}},
                              orbitdistance, //orbit
@@ -74,7 +74,7 @@
 
             {% endfor %}
 
-            console.log("planet: {{starsystem.planet.name['full']}}: size: {{starsystem.planet.size['multiplier']}}" )
+            console.log("planet: {{starsystem.planet.name.fullname}}: size: {{starsystem.planet.size['multiplier']}}" )
             generate_planet({{starsystem.seed}}, {{starsystem.planet.size['multiplier']}});
 
             animate();

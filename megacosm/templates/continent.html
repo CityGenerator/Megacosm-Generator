@@ -1,17 +1,17 @@
 
 {% extends "base.html" %}
-{% block title %}Welcome to the Continent of {{tempobj.name['full']}} {% endblock %}
+{% block title %}Welcome to the Continent of {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Welcome to the Continent <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Welcome to the Continent <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
 
     <h2>Summary</h2>
 
-{{tempobj.name['full'] }} is {{tempobj.size['name'] |article }} continent with {{tempobj.civilization['name'] }} civilization.
- Most civilized areas in {{tempobj.name['full'] }} have {{tempobj.technology['name'] }} technology.
+{{tempobj.name.fullname }} is {{tempobj.size['name'] |article }} continent with {{tempobj.civilization['name'] }} civilization.
+ Most civilized areas in {{tempobj.name.fullname }} have {{tempobj.technology['name'] }} technology.
 
 
 {% if tempobj.countries  %}
@@ -21,7 +21,7 @@
 
     <ul>
     {%for country in tempobj.countries %}
-        <li><a href="/country?seed={{country.seed}}&continent_seed={{country.continent.seed}}">{{country.name['full']}} ({{country.seed}})</a> is {{country.age['name']|article}} {{country.size['name']}} country.</li>
+        <li><a href="/country?seed={{country.seed}}&continent_seed={{country.continent.seed}}">{{country.name.fullname}} ({{country.seed}})</a> is {{country.age['name']|article}} {{country.size['name']}} country.</li>
     {%endfor%}
     </ul>
 

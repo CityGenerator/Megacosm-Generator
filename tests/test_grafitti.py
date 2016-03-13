@@ -26,27 +26,28 @@ class TestGrafitti(unittest.TestCase):
     def test_random_grafitti(self):
         """  """
         grafitti = Grafitti(self.redis)
-        self.assertEqual('Grafitti Template', grafitti.text)
-        self.assertEqual('Grafitti Template', str(grafitti))
+        self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
+        self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', str(grafitti))
 
 
     def test_static_npc(self):
         """  """
         npc = NPC(self.redis)
         grafitti = Grafitti(self.redis, {'npc':npc})
-        self.assertEqual('Grafitti Template', grafitti.text)
+        self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
         self.assertEqual('Tom', grafitti.npcname)
 
     def test_static_npcprofession(self):
         """  """
         grafitti = Grafitti(self.redis, {'npcprofession': 'Spaceman'})
-        self.assertEqual('Grafitti Template', grafitti.text)
+        self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
         self.assertEqual('Spaceman', grafitti.npcprofession)
 
     def test_static_npcpname(self):
         """  """
         grafitti = Grafitti(self.redis, {'npcname': 'Guenter'})
-        self.assertEqual('Grafitti Template', grafitti.text)
+        print grafitti.text
+        self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
         self.assertEqual('Guenter', grafitti.npcname)
 
     def test_static_text(self):

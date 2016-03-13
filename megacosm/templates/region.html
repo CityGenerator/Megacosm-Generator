@@ -1,16 +1,16 @@
 
 {% extends "base.html" %}
-{% block title %}Welcome to the Region of {{tempobj.name['full']}} {% endblock %}
+{% block title %}Welcome to the Region of {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Welcome to the Region <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Welcome to the Region <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
 
     <h2>Summary</h2>
 
-{{tempobj.name['full'] }} is {{tempobj.size['name'] |article }} region. The political influence of {{tempobj.name['full']}} in the country is {{tempobj.influence['name']}}.
+{{tempobj.name.fullname }} is {{tempobj.size['name'] |article }} region. The political influence of {{tempobj.name.fullname}} in the country is {{tempobj.influence['name']}}.
     Religion in this region {{tempobj.theology['name']}}.
 
     <h2>National Relationship</h2>
@@ -26,7 +26,7 @@
 
     <ul>
     {%for city in tempobj.cities %}
-        <li><a href="/city?seed={{city.seed}}">{{city.name['full']}} ({{city.seed}})</a> is {{city.age['name']|article}} {{city.size['name']}} city.</li>
+        <li><a href="/city?seed={{city.seed}}">{{city.name.fullname}} ({{city.seed}})</a> is {{city.age['name']|article}} {{city.size['name']}} city.</li>
     {%endfor%}
     </ul>
 

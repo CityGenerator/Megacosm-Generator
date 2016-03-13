@@ -13,7 +13,7 @@
     <h1>Our Leader, <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['fulltitled']}} ({{tempobj.seed}})</a></h1>
 
 <h2>Summary</h2>
-{{tempobj.name['full']}} is the {{tempobj.name['title']}} of {{tempobj.location.name['full']|title}}. {{tempobj.name['firstname']}} is considered {{tempobj.charisma['name']}} and {{tempobj.skill['name']}}. {{tempobj.sex['possessive']|capitalize}} constituents consider {{tempobj.sex['third-person']}} {{tempobj.honor['name']}}.
+{{tempobj.name.fullname}} is the {{tempobj.name['title']}} of {{tempobj.location.name.fullname|title}}. {{tempobj.name['firstname']}} is considered {{tempobj.charisma['name']}} and {{tempobj.skill['name']}}. {{tempobj.sex['possessive']|capitalize}} constituents consider {{tempobj.sex['third-person']}} {{tempobj.honor['name']}}.
 
 
 
