@@ -97,10 +97,10 @@ class TestNPC(unittest.TestCase):
         self.assertNotEqual('',npc.motivation.text)
 	#This should be random, not our static
         self.assertNotEqual(motivation ,npc.motivation)
-        self.assertEqual('to impress someone',npc.motivation.text)
+        self.assertEqual('to gain the respect of her peers',npc.motivation.text)
 
         npc = NPC(self.redis, {'race':'human','motivation':motivation})
 	#This should be our static Motivation
         self.assertEqual(motivation ,npc.motivation)
-        self.assertEqual('to impress someone',npc.motivation.text)
+        self.assertEqual('to gain the respect of her peers',npc.motivation.text)
 

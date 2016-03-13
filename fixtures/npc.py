@@ -20,6 +20,8 @@ def import_fixtures(self):
     self.redis.zadd('npc_luck','{"name":"lucky",          "score":100 }',100)
     self.redis.zadd('npc_confident','{"name":"incredibly",     "score":100 }',100)
     self.redis.zadd('npc_kill','{"name":"killed without issue",             "score":100  }',100)
+    self.redis.lpush('npc_medical_condition', 'deafness in one ear')
+
     self.redis.lpush('npc_posessiondetail','was lost during the war')
     self.redis.lpush('npc_posession','jackknife')
     self.redis.lpush('npc_attitude','cautious')

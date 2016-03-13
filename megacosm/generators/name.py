@@ -20,12 +20,14 @@ class Name(Generator):
         self.namesource=namesource
         #Generate the content for a name, e.g. humanname_*
         self.generate_features(namesource+"name")
+        self.render()
 
+    def render(self):
         for nametype in ['full','short', 'formal']:
             # Ensure that all three templates exist.
             if not hasattr(self,nametype+'name_template'):
                 # Throw an exception if our templates are missing.
-                raise LookupError("%sname_template not found for %s" % (nametype, namesource ) )
+                raise LookupError("%sname_template not found for %s" % (nametype, self.namesource ) )
             else:
                 # Get the name template
                 template=getattr(self,nametype+'name_template')
@@ -34,6 +36,7 @@ class Name(Generator):
                 print("%s: %s" %(nametype,rendered_template))
                 # Assign the rendered template text to the right variable.
                 setattr(self, nametype+"name", rendered_template)
+        
 
     def __str__(self):
         return self.fullname.title()

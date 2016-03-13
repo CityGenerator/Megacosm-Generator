@@ -25,5 +25,5 @@ class Leader(NPC):
             #   TODO This should default to organization...
 
             self.location = Country(self.redis, {'leader': self})
-
-        self.name = Name(self.redis, self.race, {'title':self.leader_description[self.sex['name']]})
+        self.name.title = self.leader_description[self.sex['name']]
+        self.name.render()

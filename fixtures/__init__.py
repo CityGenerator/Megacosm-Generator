@@ -27,8 +27,10 @@ import grafitti
 import jobposting
 import leader
 import legend
+import magicitem
 import misfire
 import moon
+import mundaneitem
 import npc
 import organization
 import motivation
@@ -36,9 +38,11 @@ import planet
 import phobia
 import region
 import resource
+import roguedungeon
 import rumor
 import sect
 import star
 import starsystem
 import street
 import wanted
+import weather

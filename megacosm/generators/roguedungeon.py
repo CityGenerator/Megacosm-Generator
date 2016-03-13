@@ -5,7 +5,7 @@ from generator import Generator
 import json
 import logging
 import random
-
+from name import Name
 
 class RogueDungeon(Generator):
 
@@ -16,10 +16,10 @@ class RogueDungeon(Generator):
         self.logger = logging.getLogger(__name__)
         self.generate_features('dungeon')
 
-        self.apply_text_template()  # FIXME refactor with RogueDungeon on dungeon names...
         self.generate_grid()
         self.generate_rooms()
         self.generate_halls()
+        self.name=Name(self.redis, 'dungeon')
 
     def generate_grid(self):
         gridsize = random.randint(self.size['minsize'], self.size['maxsize'])
@@ -27,12 +27,6 @@ class RogueDungeon(Generator):
         self.width = int(gridsize * 1.8)
 
         self.spaces = [[RogueDungeon.Tile() for i in range(self.width)] for j in range(self.height)]
-
-    def apply_text_template(self):
-        if not hasattr(self, 'text'):
-            self.text = self.render_template(self.template)
-            self.text = self.render_template(self.text)
-        self.text = self.text.title()
 
     def simplify_for_json(self):
         resultmatrix = []
