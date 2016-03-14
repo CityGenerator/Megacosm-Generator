@@ -185,7 +185,7 @@ LPUSH jobposting_class wizard
 LPUSH jobposting_template Looking for new Tax Collectors.
 LPUSH jobposting_template Bounty for {{params.critter}}, dead or alive.
 LPUSH jobposting_template {{params.skill}} contest this weekend. Special prize for first place finish.
-LPUSH jobposting_template {{params.npc.name['full']}} has been kidnapped! Generous payment for safe return.
+LPUSH jobposting_template {{params.npc.name.shortname}} has been kidnapped! Generous payment for safe return.
 LPUSH jobposting_template Adventurers willing to explore recently discovered ruins and return any valuable artifacts.
 LPUSH jobposting_template Hearty souls needed to recover stolen {{params.item}}.
 LPUSH jobposting_template Someone stole my {{params.item}}. Find the louse, dead or alive.
@@ -212,7 +212,15 @@ LPUSH jobposting_template {{params.hazardlocation}} is overrun by {{params.critt
 LPUSH jobposting_template Missing {{params.item}}. We suspect {{params.critter}} are the culprit.
 LPUSH jobposting_template Translator Needed: Summoner seeks multilinguist willing to learn {{params.rarelanguage}} from "a guest"; fluency required within 2 weeks.
 
-LPUSH jobposting_template Uncle {{params.npc.name['firstname']}} needs {{params.favor|article}}.
+LPUSH jobposting_template {{params.title}} {{params.npc.name.shortname}} needs {{params.favor|article}}.
+
+LPUSH jobposting_title Uncle
+LPUSH jobposting_title Aunt
+LPUSH jobposting_title Granny
+LPUSH jobposting_title Lord
+LPUSH jobposting_title Duke
+LPUSH jobposting_title Duchess
+LPUSH jobposting_title Overseer
 
 LPUSH jobposting_favor delivery
 LPUSH jobposting_favor favor

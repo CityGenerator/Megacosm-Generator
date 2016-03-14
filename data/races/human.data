@@ -61,6 +61,7 @@ LPUSH humanname_first_root Phil
 LPUSH humanname_first_root Ros 
 LPUSH humanname_first_root Solo 
 LPUSH humanname_first_root Teren 
+LPUSH humanname_first_root Si
 LPUSH humanname_first_root Urs 
 LPUSH humanname_first_root Val 
 LPUSH humanname_first_root Will 

@@ -1,7 +1,7 @@
 
 # street name
 
-# {{tempobj.name['full']}} is {{tempobj.popularity['name']|article}} {{tempobj.size['name']}} {{tempobj.kind}} that is {{tempobj.age['name']|article}} {{tempobj.important['name']}} route in the location.
+# {{tempobj.name.fullname}} is {{tempobj.popularity['name']|article}} {{tempobj.size['name']}} {{tempobj.kind}} that is {{tempobj.age['name']|article}} {{tempobj.important['name']}} route in the location.
 
 
 ZADD  street_age  30  { "name":"new",             "score":30    }

@@ -13,7 +13,7 @@
 
     {% if tempobj.title %}
         <p>A.K.A.</p>
-        <h2>{{tempobj.title}} {{tempobj.npc.name['firstname'] }}</h2>
+        <h2>{{tempobj.title}} {{tempobj.npc.name.shortname }}</h2>
     {%endif%}
 
     <h3>Wanted for {{tempobj.crime}} by the {{tempobj.by}}. </h3>

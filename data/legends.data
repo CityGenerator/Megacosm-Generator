@@ -161,14 +161,14 @@ LPUSH legend_area swamps
 LPUSH legend_area fields
 LPUSH legend_area streets
         
-LPUSH legend_hero a hero named {{params.npc.name['full']}}
-LPUSH legend_hero a {{params.npc.race}} named {{params.npc.name['full']}}
-LPUSH legend_hero a {{params.npc.behavior}} {{params.npc.race}} named {{params.npc.name['full']}}
-LPUSH legend_hero {{params.npc.name['full']}} the {{params.npc.race}}
+LPUSH legend_hero a hero named {{params.npc.name.fullname}}
+LPUSH legend_hero a {{params.npc.race}} named {{params.npc.name.fullname}}
+LPUSH legend_hero a {{params.npc.behavior}} {{params.npc.race}} named {{params.npc.name.fullname}}
+LPUSH legend_hero {{params.npc.name.fullname}} the {{params.npc.race}}
         
-LPUSH legend_badguy a {{params.badguytype}} named {{params.villain.name['full']}}
-LPUSH legend_badguy an evil {{params.badguytype}} named {{params.villain.name['full']}}
-LPUSH legend_badguy {{params.villain.name['full']}} the {{params.badguytype}}
+LPUSH legend_badguy a {{params.badguytype}} named {{params.villain.name.fullname}}
+LPUSH legend_badguy an evil {{params.badguytype}} named {{params.villain.name.fullname}}
+LPUSH legend_badguy {{params.villain.name.fullname}} the {{params.badguytype}}
         
 LPUSH legend_badguytype dragon
 LPUSH legend_badguytype minotaur
@@ -234,15 +234,15 @@ LPUSH legend_goodstatus peaceful
 SET   legend_victory_chance 50
 LPUSH legend_victory and was killed in the process
 LPUSH legend_victory and rescued the hostages
-LPUSH legend_victory and rescued {{params.location.name['full']}}
+LPUSH legend_victory and rescued {{params.location.name.fullname}}
         
-LPUSH legend_results defeated {{params.villain.name['full']}}
+LPUSH legend_results defeated {{params.villain.name.fullname}}
 LPUSH legend_results killed the {{params.badguytype}}
-LPUSH legend_results tricked {{params.villain.name['full']}}
-LPUSH legend_results banished {{params.villain.name['full']}}
+LPUSH legend_results tricked {{params.villain.name.fullname}}
+LPUSH legend_results banished {{params.villain.name.fullname}}
         
 LPUSH legend_planaction by killing the {{params.badguytype}} while {{params.villain.sex['pronoun']}} slept
-LPUSH legend_planaction by making a wager with {{params.villain.name['full']}}
+LPUSH legend_planaction by making a wager with {{params.villain.name.fullname}}
 LPUSH legend_planaction by causing a distraction while others struck
 LPUSH legend_planaction by using magic to banish it
         
@@ -262,13 +262,13 @@ LPUSH legend_caughtfailing were caught
         
     
 LPUSH legend_failedresolution stop the {{params.badguytype}}
-LPUSH legend_failedresolution kill {{params.villain.name['full']}}
+LPUSH legend_failedresolution kill {{params.villain.name.fullname}}
         
 
 
-#LPUSH legend_template  Legends tell of {{params.npc.name['full']}}'s {{params.object |title}}, {{params.reputation | article}} {{params.object}} with the {{params.abilitytype}} to {{params.ability}}.  It  {{params.lastseen}}.
+#LPUSH legend_template  Legends tell of {{params.npc.name.fullname}}'s {{params.object |title}}, {{params.reputation | article}} {{params.object}} with the {{params.abilitytype}} to {{params.ability}}.  It  {{params.lastseen}}.
 
-LPUSH legend_template  {{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name['full']}} {{params.wander}} the {{params.area}} {{params.when}} {{params.drawn}}. {{params.who}} say that if you {{params.detect}} {{params.villain.sex['third-person']}}, you {{params.badfate}} {{params.stopit}}.
+LPUSH legend_template  {{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name.fullname}} {{params.wander}} the {{params.area}} {{params.when}} {{params.drawn}}. {{params.who}} say that if you {{params.detect}} {{params.villain.sex['third-person']}}, you {{params.badfate}} {{params.stopit}}.
 #LPUSH legend_template  {{params. USE infl = Lingua.EN.Inflect; -}}{{params.storytime}}, {{params.  infl.A( imaginarymonster )}} {{params.wander}} the {{params.area}}{{params.when}}{{params.drawn}}. {{params.who}} say that the {{params.imaginarymonster}} will {{params.baityou}}, then {{params.trapyou}}.
 
 

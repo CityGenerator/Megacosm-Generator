@@ -16,7 +16,8 @@ def import_fixtures(self):
     self.redis.lpush('jobposting_skill', 'boxing')
     self.redis.lpush('jobposting_subject', 'local lore')
     self.redis.lpush('jobposting_supplies', 'eye of newt')
-    self.redis.lpush('jobposting_template', '{{params.npc.name["full"]}} has been kidnapped! Generous payment for safe return.')
+    self.redis.lpush('jobposting_template', '{{params.npc.name.fullname}} has been kidnapped! Generous payment for safe return.')
     self.redis.lpush('jobposting_testitem', 'cheese')
     self.redis.lpush('jobposting_valuedpossession', 'house')
+    self.redis.lpush('jobposting_title', 'Uncle')
 
