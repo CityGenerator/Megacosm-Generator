@@ -12,7 +12,6 @@ def import_fixtures(self):
     self.redis.zadd('region_theology', '{ "name":"is used to control the populace",                                      "score":100    }', 100)
     self.redis.zadd('region_unity', '{ "name":"rallies behind its leaders",                         "score":100   }', 100)
     self.redis.lpush('regionname_title', 'New') 
-    self.redis.lpush('regionname_pre', 'Af') 
     self.redis.lpush('regionname_pre', 'Lom') 
     self.redis.lpush('regionname_root', 'bar') 
     self.redis.lpush('regionname_post', 'dy') 
