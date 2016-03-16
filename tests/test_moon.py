@@ -26,4 +26,4 @@ class TestMoon(unittest.TestCase):
         moon = Moon(self.redis)
         self.assertEqual('dull brown',moon.color['name'])
         self.assertEqual('massive', moon.size['name'])
-        self.assertEqual('Himalase', moon.name.fullname)
+        self.assertEqual('Himalase', str(moon))

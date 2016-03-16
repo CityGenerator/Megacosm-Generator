@@ -20,33 +20,11 @@ class TestCity(unittest.TestCase):
         fixtures.motivation.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.city.import_fixtures(self)
+        fixtures.organization.import_fixtures(self)
+        fixtures.leader.import_fixtures(self)
+        fixtures.country.import_fixtures(self)
 
 
- 
-
-
-
-
-        self.redis.lpush('orc_covering','skin')
-        self.redis.set('orc_details',  '{"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}')
-        self.redis.lpush('orcname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
-        self.redis.lpush('orcname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}')
-        self.redis.lpush('orcname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
-
-
-        self.redis.set('elf_details',  '{"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}')
-        self.redis.lpush('elfname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}')
-        self.redis.lpush('elfname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
-        self.redis.lpush('elfname_formalname_template', '{{params.title}} {{params.last_root}}{{params.last_post}}')
-
-        self.redis.lpush('elf_covering','skin')
-        self.redis.set('elf_subrace_chance',100) 
-        self.redis.lpush('elf_subrace', 'shadowelf') 
-        self.redis.hset('elf_subrace_description', 'shadowelf', '{"subrace": "Shadow Elf",   "description": "" }') 
-        self.redis.lpush('elf_subrace', 'snowelf') 
-        self.redis.hset('elf_subrace_description', 'snowelf', '{"subrace": "Snow Elf",   "description": "" }') 
-        self.redis.lpush('elf_subrace', 'waterelf') 
-        self.redis.hset('elf_subrace_description', 'waterelf', '{"subrace": "Water Elf",   "description": "" }') 
 
     def tearDown(self):
         """  """

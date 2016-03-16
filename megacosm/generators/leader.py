@@ -7,7 +7,7 @@ import country, city, organization
 from npc import NPC
 from name import Name
 import logging
-
+from pprint import pprint
 
 class Leader(NPC):
 
@@ -18,17 +18,23 @@ class Leader(NPC):
         self.logger = logging.getLogger(__name__)
 
         self.generate_features('leader')
+        #generates self.scope = "country"
+
+        self.generate_features('leader' + self.scope)
+        # generate self.kind from scope; scope.kind = absolutemonarchy
         self.generate_features('leader' + self.kind)
-        if not hasattr( self, 'location'):
-            if self.kind_description['scope'] == 'country':
-                self.location = country.Country(self.redis, {'leader': self})
-            elif self.kind_description['scope'] == 'city':
-                self.location = city.City(self.redis, {'leader': self})
-            elif self.kind_description['scope'] == 'organization':
-                self.location = organization.Organization(self.redis, {'leader': self})
-            else:
-                self.location = organization.Organization(self.redis, {'leader': self})
-                self.kind_description['scope']='organization'
+        # generate self.leader from leaderabsolutemonarchy_leader
+        # generate leader.description from leaderabsolutemonarchy_leader_description
+
+        if self.scope == 'country':
+            self.location = country.Country(self.redis, {'leader': self})
+        elif self.scope == 'city':
+            self.location = city.City(self.redis, {'leader': self})
+        elif self.scope == 'organization':
+            self.location = organization.Organization(self.redis, {'leader': self})
+        else:
+            self.location = organization.Organization(self.redis, {'leader': self})
+            self.scope='organization'
 
         self.name.title = self.leader_description[self.sex['name']]
         #re-render the name with the title.

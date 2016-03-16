@@ -1,23 +1,40 @@
 def import_fixtures(self):
 
-#FIXME
-#TODO throw an error if leader_kind doesn't already exist.
+    self.redis.lpush('leader_scope', 'country')
+    self.redis.lpush('leader_scope', 'region')
+    self.redis.lpush('leader_scope', 'city')
+    self.redis.lpush('leader_scope', 'organization')
 
-#    self.redis.lpush('leader_kind', 'absolutemonarchy')
+
+    self.redis.lpush('leadercountry_kind', 'absolutemonarchy')
+
+    self.redis.lpush('leaderregion_kind', 'barony')
+
+    self.redis.lpush('leadercity_kind', 'mayorcouncil')
+
+    self.redis.lpush('leaderorganization_kind', 'gang')
+
+
     self.redis.lpush('leaderabsolutemonarchy_leader', 'king')
-    self.redis.hset('leader_kind_description', 'absolutemonarchy', '{ "scope":"country"   }')
-    self.redis.hset('leaderabsolutemonarchy_leader_description', 'king', '{ "male":"King",    "female":"Queen"     }')
+    self.redis.hset('leaderabsolutemonarchy_leader_description', 'king','{ "male":"King",    "female":"Queen"     }')
 
-    self.redis.hset('leaderabsolutemonarchy_leader_description', 'emperor', '{ "male":"Emperor", "female":"Empress"   }')
+    self.redis.lpush('leaderbarony_leader', 'baron')
+    self.redis.hset('leaderbarony_leader_description', 'baron','{ "male":"Baron",      "female":"Baroness"      }')
+
+    self.redis.lpush('leadermayorcouncil_leader', 'mayor')
+    self.redis.hset('leadermayorcouncil_leader_description', 'mayor','{ "male":"Mayor",      "female":"Mayor"      }')
+
+    self.redis.lpush('leadergang_leader', 'gangleader')
+    self.redis.hset('leadergang_leader_description', 'gangleader','{ "male":"GangLeader",    "female":"Gang Leader"     }')
 
 
-#    self.redis.lpush('leader_kind', 'guild')
-    self.redis.lpush('leaderguild_leader', 'guildmaster')
-    self.redis.hset('leader_kind_description', 'guild', '{ "scope":"organization"   }')
-    self.redis.hset('leaderguild_leader_description', 'guildmaster', '{ "male":"Guildmaster",    "female":"Guildmaster"     }')
 
-#    self.redis.lpush('leader_kind', 'magistrate')
-    self.redis.lpush('leadermagistrate_leader', 'magistrate')
-    self.redis.hset('leader_kind_description', 'magistrate', '{ "scope":"city"   }')
-    self.redis.hset('leadermagistrate_leader_description', 'magistrate', '{ "male":"Magistrate",      "female":"Magistrate"      }')
+
+
+
+
+
+
+
+
 

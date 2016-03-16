@@ -16,7 +16,15 @@ class TestContinent(unittest.TestCase):
 
         fixtures.continent.import_fixtures(self)
         fixtures.country.import_fixtures(self)
-
+        fixtures.leader.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.organization.import_fixtures(self)
+        fixtures.region.import_fixtures(self)
+        fixtures.city.import_fixtures(self)
+        fixtures.business.import_fixtures(self)
+        self.redis.lpush('npc_race','gnome')
     def tearDown(self):
         self.redis.flushall()
 

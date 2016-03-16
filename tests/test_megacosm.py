@@ -58,6 +58,7 @@ class MegacosmFlaskTestCast(TestCase):
         fixtures.street.import_fixtures(self)
         fixtures.weather.import_fixtures(self)
         fixtures.wanted.import_fixtures(self)
+        self.redis.lpush('npc_race','kobold')
 
     def tearDown(self):
         megacosm.app.server.flushall()
@@ -155,7 +156,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_bond_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/bond')
         self.assert200(response)
 
@@ -166,7 +166,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_business_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/business')
         self.assert200(response)
 
@@ -176,7 +175,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_city_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/city')
         self.assert200(response)
 
@@ -207,7 +205,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_cuisine_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/cuisine')
         self.assert200(response)
 
@@ -218,7 +215,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_currency_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/currency')
         self.assert200(response)
 
@@ -229,7 +225,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_deity_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/deity')
         self.assert200(response)
 
@@ -240,7 +235,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_event_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/event')
         self.assert200(response)
 
@@ -291,7 +285,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_jobposting_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/jobposting')
         self.assert200(response)
 
@@ -302,7 +295,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_leader_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/leader')
         self.assert200(response)
 
@@ -313,7 +305,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_legend_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/legend')
         self.assert200(response)
 
@@ -324,7 +315,6 @@ class MegacosmFlaskTestCast(TestCase):
 ###############################################################
 
     def test_magicitem_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/magicitem')
         self.assert200(response)
 
@@ -335,7 +325,6 @@ class MegacosmFlaskTestCast(TestCase):
 ###############################################################
 
     def test_misfire_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/misfire')
         self.assert200(response)
 
@@ -356,7 +345,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_motivation_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/motivation')
         self.assert200(response)
 
@@ -367,12 +355,10 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_organization_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/organization')
         self.assert200(response)
 
     def test_organization_builder_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/organization_builder')
         self.assert200(response)
 
@@ -399,13 +385,11 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_npc_route(self):
-        self.redis.lpush('npc_race','kobold')
 
         response = self.app.get('/npc')
         self.assert200(response)
 
     def test_npc_builder_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/npc_builder')
         self.assert200(response)
 
@@ -432,7 +416,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_resource_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/resource')
         self.assert200(response)
 
@@ -453,7 +436,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_rumor_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/rumor')
         self.assert200(response)
 
