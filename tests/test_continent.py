@@ -3,31 +3,28 @@
 
 from megacosm.generators import Continent,Country
 import unittest2 as unittest
-
+from pprint import pprint
 import fakeredis
 from config import TestConfiguration
-
+import fixtures
 
 class TestContinent(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('continent_size', '{"name":"massive",  "multiplier":2.0,  "score":100   }',100)
-        self.redis.zadd('continent_civilization', '{"name":"thriving"    ,  "score":100   }',100)
-        self.redis.zadd('continent_technology', ' {"name":"Contemporary Age", "score":100   }',100)
-        self.redis.zadd('continent_countrydetails', '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }',100)
 
-        self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":100    }', 100)
-        self.redis.zadd('country_regiondetails','{"name":"a single",     "score":100,  "mincount":1,   "maxcount":1   }',100)
-        self.redis.lpush('name_countrytitle', 'Central')
-        self.redis.lpush('name_countrypre','Af')
-        self.redis.lpush('name_countryroot','kil')
-        self.redis.lpush('name_continenttitle', 'West')
-        self.redis.lpush('name_continentpre', 'As')
-        self.redis.lpush('name_continentroot', 'bar')
-        self.redis.lpush('name_continentpost', 'ca')
-
+        fixtures.continent.import_fixtures(self)
+        fixtures.country.import_fixtures(self)
+        fixtures.leader.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.organization.import_fixtures(self)
+        fixtures.region.import_fixtures(self)
+        fixtures.city.import_fixtures(self)
+        fixtures.business.import_fixtures(self)
+        self.redis.lpush('npc_race','gnome')
     def tearDown(self):
         self.redis.flushall()
 

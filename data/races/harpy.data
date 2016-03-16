@@ -6,50 +6,57 @@ SET harpy_details {"name": "Harpy", "size": "medium",  "description": "winged an
 
 LPUSH harpy_covering feathers
 
-ZADD harpy_name_order 100 { "name":"first" }
 
-HSET harpy_name_first  pre 100
-HSET harpy_name_first  post 100
 
-LPUSH harpy_name_first_pre Ae
-LPUSH harpy_name_first_pre Ocy
-LPUSH harpy_name_first_pre Cela
-LPUSH harpy_name_first_pre Pod
-LPUSH harpy_name_first_pre Nico
-LPUSH harpy_name_first_pre Achi
-LPUSH harpy_name_first_pre Aga
-LPUSH harpy_name_first_pre Aphro
-LPUSH harpy_name_first_pre Daph
-LPUSH harpy_name_first_pre Dor
-LPUSH harpy_name_first_pre Elek
-LPUSH harpy_name_first_pre Eva
-LPUSH harpy_name_first_pre Fron
-LPUSH harpy_name_first_pre Gia
-LPUSH harpy_name_first_pre Hath
-LPUSH harpy_name_first_pre Hy
-LPUSH harpy_name_first_pre Io
-LPUSH harpy_name_first_pre Kassa
-LPUSH harpy_name_first_pre Mel
-LPUSH harpy_name_first_pre My
-LPUSH harpy_name_first_pre Nata
-LPUSH harpy_name_first_pre Oly
-LPUSH harpy_name_first_pre Pan
+LPUSH harpyname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.trailer}}
+LPUSH harpyname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH harpyname_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
 
-LPUSH harpy_name_first_post llo
-LPUSH harpy_name_first_post pete
-LPUSH harpy_name_first_post eno
-LPUSH harpy_name_first_post arge
-LPUSH harpy_name_first_post thoe
-LPUSH harpy_name_first_post dora
-LPUSH harpy_name_first_post thys
-LPUSH harpy_name_first_post rine
-LPUSH harpy_name_first_post pias
-LPUSH harpy_name_first_post tine
-LPUSH harpy_name_first_post ibe
-LPUSH harpy_name_first_post andra
-LPUSH harpy_name_first_post thea
-LPUSH harpy_name_first_post rinna
-LPUSH harpy_name_first_post isto
-LPUSH harpy_name_first_post bel
+set harpyname_first_pre_chance 100
+set harpyname_first_root_chance 100
+
+
+
+
+LPUSH harpyname_first_pre Ae
+LPUSH harpyname_first_pre Ocy
+LPUSH harpyname_first_pre Cela
+LPUSH harpyname_first_pre Pod
+LPUSH harpyname_first_pre Nico
+LPUSH harpyname_first_pre Achi
+LPUSH harpyname_first_pre Aga
+LPUSH harpyname_first_pre Aphro
+LPUSH harpyname_first_pre Daph
+LPUSH harpyname_first_pre Dor
+LPUSH harpyname_first_pre Elek
+LPUSH harpyname_first_pre Eva
+LPUSH harpyname_first_pre Fron
+LPUSH harpyname_first_pre Gia
+LPUSH harpyname_first_pre Hath
+LPUSH harpyname_first_pre Hy
+LPUSH harpyname_first_pre Io
+LPUSH harpyname_first_pre Kassa
+LPUSH harpyname_first_pre Mel
+LPUSH harpyname_first_pre My
+LPUSH harpyname_first_pre Nata
+LPUSH harpyname_first_pre Oly
+LPUSH harpyname_first_pre Pan
+
+LPUSH harpyname_first_root llo
+LPUSH harpyname_first_root pete
+LPUSH harpyname_first_root eno
+LPUSH harpyname_first_root arge
+LPUSH harpyname_first_root thoe
+LPUSH harpyname_first_root dora
+LPUSH harpyname_first_root thys
+LPUSH harpyname_first_root rine
+LPUSH harpyname_first_root pias
+LPUSH harpyname_first_root tine
+LPUSH harpyname_first_root ibe
+LPUSH harpyname_first_root andra
+LPUSH harpyname_first_root thea
+LPUSH harpyname_first_root rinna
+LPUSH harpyname_first_root isto
+LPUSH harpyname_first_root bel
 
 

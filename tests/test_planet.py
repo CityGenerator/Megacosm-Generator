@@ -3,7 +3,7 @@
 
 from megacosm.generators import Planet, Continent, Moon
 import unittest2 as unittest
-
+import fixtures
 import fakeredis
 from config import TestConfiguration
 
@@ -12,22 +12,9 @@ class TestPlanet(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('planet_size', '{"name":"massive",  "multiplier":2.0,  "score":100   } ', 100)
-        self.redis.zadd('planet_temp', '{"name":"unbearably hot",  "multiplier":1.5,  "score":100   } ', 100)
-        self.redis.zadd('planet_atmosphere', '{"name":"dense",    "opacity":0.99,  "score":100   } ', 100)
-        self.redis.zadd('planet_wind', '{"name":"overwhelming", "multiplier":1.5,  "score":100   } ', 100)
-        self.redis.zadd('planet_day', '{"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } ', 100)
-        self.redis.zadd('planet_year', '{"name":"long"     ,  "score":100   } ', 100)
-        self.redis.zadd('planet_civilization', '{"name":"thriving"    ,  "score":100   } ', 100)
-        self.redis.zadd('planet_precipitation', '{"name":"excessive", "multiplier":1.5 ,  "score":100   } ', 100)
-        self.redis.zadd('planet_mooncount', '{"name":"quadruple moon",   "count":4,  "score":100   } ', 100)
-        self.redis.zadd('planet_technology', '{"name":"Contemporary Age", "description":"being similar to our own",           "score":100   } ', 100)
-        self.redis.zadd('moon_size', '{  "name":"massive", "multiplier":0.8 , "score":100  }', 100)
-        self.redis.zadd('moon_color', '{  "name":"dull brown", "color":"0x876e4b" , "score":100  }', 100)
-        self.redis.zadd('continent_countrydetails', '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }', 100)
-        self.redis.lpush('name_planetpre', 'Ae')
-        self.redis.lpush('name_planetroot', 'boo')
-        self.redis.lpush('name_planetpost', 'ris')
+        fixtures.planet.import_fixtures(self)
+        fixtures.moon.import_fixtures(self)
+        fixtures.continent.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
@@ -37,7 +24,7 @@ class TestPlanet(unittest.TestCase):
         planet=Planet(self.redis)
         planet.add_continents()
         planet.add_moons()
-        self.assertEquals('Aebooris', str(planet))
+        self.assertEquals('Absobah', str(planet))
         self.assertNotEquals(None, planet.continents)
         self.assertNotEquals(None, planet.moons)
 
@@ -47,7 +34,7 @@ class TestPlanet(unittest.TestCase):
         continentb=Continent(self.redis)
         planet=Planet(self.redis, {'continents':[continenta, continentb] })
         planet.add_continents()
-        self.assertNotEquals('Aebooris', planet.name)
+        self.assertNotEquals('Absobah', planet.name)
 
     def test_static_continentcount(self):
         """  """

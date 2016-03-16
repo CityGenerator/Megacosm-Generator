@@ -29,8 +29,8 @@ class JobPosting(Generator):
                 if hasattr(self, field):
                     self.template = self.template + ' ' + getattr(self, field)
 
-            self.template = self.template + ' Contact ' + self.contact.name['full']
-            self.template = self.template + ' at the ' + self.business.name['full']
+            self.template = self.template + ' Contact ' + self.contact.name.fullname
+            self.template = self.template + ' at the ' + self.business.name.fullname
             if hasattr(self, 'detail'):
                 self.template = self.template + ' ' + self.detail
 

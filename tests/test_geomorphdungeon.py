@@ -6,6 +6,7 @@ import unittest2 as unittest
 
 import fakeredis
 from config import TestConfiguration
+import fixtures
 import json
 
 class TestGeomorphDungeon(unittest.TestCase):
@@ -13,21 +14,8 @@ class TestGeomorphDungeon(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('geomorphdungeon_gridwidth', '{"name":"6",     "tiles":6,   "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_gridheight', '{"name":"4",    "tiles":4,    "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_segmentation', '{"name":"all",        "solidchance":0,        "score": 100  }', 100)
-        self.redis.zadd('geomorphdungeon_decorationoffset', '{"name":"80%",   "offset":0.8,  "score":100 }', 100)
-        self.redis.lpush('dungeon_template', '{{params.descriptor}} {{params.place}} of {{params.thing}}')
-        self.redis.lpush('dungeon_place', 'panopticon')
-        self.redis.lpush('dungeon_descriptor', 'lost')
-        self.redis.lpush('dungeon_thingtype', 'king')
-        self.redis.lpush('dungeon_thing', 'chaos')
-        self.redis.lpush('geomorph_type_0', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_1', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_2', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_3', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_4', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
-        self.redis.lpush('geomorph_type_5', '{ "path":"/somewhere", "author":"someone", "tileset":"stone"   }' )
+        fixtures.dungeon.import_fixtures(self)
+        fixtures.geomorphdungeon.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
@@ -35,11 +23,7 @@ class TestGeomorphDungeon(unittest.TestCase):
     def test_random_geomorphdungeon(self):
         """  """
         geomorphdungeon = GeomorphDungeon(self.redis)
-        self.assertEqual('Lost Panopticon Of Chaos', str(geomorphdungeon))
-    def test_static_text(self):
-        """  """
-        geomorphdungeon = GeomorphDungeon(self.redis,{'text':'You are a loser.'})
-        self.assertEqual('You Are A Loser.', str(geomorphdungeon))
+        self.assertEqual('Lost Panopticon Of The King Of Chaos', str(geomorphdungeon))
 
     def test_simplify_for_json(self):
         """  """

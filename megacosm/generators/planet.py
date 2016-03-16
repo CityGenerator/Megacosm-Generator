@@ -3,6 +3,7 @@
 
 from continent import Continent
 from generator import Generator
+from name import Name
 from moon import Moon
 import logging
 import random
@@ -15,6 +16,7 @@ class Planet(Generator):
         self.logger = logging.getLogger(__name__)
         if hasattr(self,'continents'):
             self.continentcount=len(self.continents)
+        self.name=Name(self.redis, 'planet')
 
     def add_continents(self):
         """ Generate the continents for this planet"""
@@ -45,4 +47,4 @@ class Planet(Generator):
             self.moons.append(Continent(self.redis, {'planet': self}))
 
     def __str__(self):
-        return self.name['full']
+        return self.name.fullname

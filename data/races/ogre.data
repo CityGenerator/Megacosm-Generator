@@ -15,54 +15,48 @@ LPUSH ogre_subrace mage
 HSET ogre_subrace_description merrow      {"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }
 HSET ogre_subrace_description mage        {"subrace": "Ogre Mage",         "description": "" }
 
+LPUSH ogrename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH ogrename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH ogrename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
 
+set ogrename_first_pre_chance 100
+set ogrename_first_root_chance 100
+set ogrename_last_pre_chance 100
+set ogrename_last_root_chance 100
 
+LPUSH ogrename_first_pre Po
+LPUSH ogrename_first_pre Do
+LPUSH ogrename_first_pre Du
+LPUSH ogrename_first_pre Da
+LPUSH ogrename_first_pre Gu
+LPUSH ogrename_first_pre U
+LPUSH ogrename_first_pre Gha
+LPUSH ogrename_first_pre Go
+LPUSH ogrename_first_pre Gu
+LPUSH ogrename_first_pre Ki
 
-
-
-
-
-ZADD ogre_name_order 50 { "name":"first" }
-ZADD ogre_name_order 100 { "name":"last"}
-
-HSET ogre_name_first  root 100
-HSET ogre_name_first  post 100
-HSET ogre_name_last   root 100
-HSET ogre_name_last   post 100
-
-LPUSH ogre_name_first_root Po
-LPUSH ogre_name_first_root Do
-LPUSH ogre_name_first_root Du
-LPUSH ogre_name_first_root Da
-LPUSH ogre_name_first_root Gu
-LPUSH ogre_name_first_root U
-LPUSH ogre_name_first_root Gha
-LPUSH ogre_name_first_root Go
-LPUSH ogre_name_first_root Gu
-LPUSH ogre_name_first_root Ki
-
-LPUSH ogre_name_first_post sh
-LPUSH ogre_name_first_post k
-LPUSH ogre_name_first_post ap
-LPUSH ogre_name_first_post gan
-LPUSH ogre_name_first_post duk
-LPUSH ogre_name_first_post bel
-LPUSH ogre_name_first_post bal
+LPUSH ogrename_first_root sh
+LPUSH ogrename_first_root k
+LPUSH ogrename_first_root ap
+LPUSH ogrename_first_root gan
+LPUSH ogrename_first_root duk
+LPUSH ogrename_first_root bel
+LPUSH ogrename_first_root bal
         
-LPUSH ogre_name_last_root Bear
-LPUSH ogre_name_last_root Boar
-LPUSH ogre_name_last_root Eagle
-LPUSH ogre_name_last_root Rock
-LPUSH ogre_name_last_root Oak
-LPUSH ogre_name_last_root Ox
+LPUSH ogrename_last_pre Bear
+LPUSH ogrename_last_pre Boar
+LPUSH ogrename_last_pre Eagle
+LPUSH ogrename_last_pre Rock
+LPUSH ogrename_last_pre Oak
+LPUSH ogrename_last_pre Ox
 
-LPUSH ogre_name_last_post mane
-LPUSH ogre_name_last_post snout
-LPUSH ogre_name_last_post fang
-LPUSH ogre_name_last_post claw
-LPUSH ogre_name_last_post tooth
-LPUSH ogre_name_last_post root
-LPUSH ogre_name_last_post branch
-LPUSH ogre_name_last_post nut
+LPUSH ogrename_last_root mane
+LPUSH ogrename_last_root snout
+LPUSH ogrename_last_root fang
+LPUSH ogrename_last_root claw
+LPUSH ogrename_last_root tooth
+LPUSH ogrename_last_root root
+LPUSH ogrename_last_root branch
+LPUSH ogrename_last_root nut
         
     

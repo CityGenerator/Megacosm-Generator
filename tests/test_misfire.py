@@ -4,6 +4,7 @@
 from megacosm.generators import Misfire
 import unittest2 as unittest
 
+import fixtures
 import fakeredis
 from config import TestConfiguration
 
@@ -13,23 +14,11 @@ class TestMisfire(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.lpush('misfire_template', '{{params.target}} grow a pair of small horns (2 in each) on the forehead, which contrasts with skin color.  A remove curse may remove them.')
+        fixtures.misfire.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
-        self.redis.lpush('gnome_covering','skin')
-        self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
-        self.redis.set('skin_covertemplate', '{{params.skinkind}}, {{params.skincolor}} skin')
-        self.redis.lpush('skin_skincolor','alabaster')
-        self.redis.lpush('skin_skinkind', 'thick')
-        self.redis.lpush('phobia_template', "You are afraid.")
-        self.redis.lpush('motivation_kind', 'acceptance')
-        self.redis.lpush('motivationacceptance_text', 'to impress someone')
-        self.redis.lpush('gnome_name_first_post', 'Tom')
-        self.redis.lpush('gnome_name_last_pre', 'Gyro')
-        self.redis.hset('gnome_name_first','post', 100)
-        self.redis.hset('gnome_name_last','pre', 100)
-        self.redis.zadd('gnome_name_order','{ "name":"first" }',50)
-        self.redis.zadd('gnome_name_order','{ "name":"last"}',100)
-        self.redis.zadd('npc_sex', '{"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }', 100)
 
     def tearDown(self):
         self.redis.flushall()

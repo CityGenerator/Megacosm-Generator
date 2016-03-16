@@ -21,6 +21,6 @@ class Sect(Generator):
             portfolio = self.deity.portfolios
             random.shuffle(portfolio)
             self.domain = portfolio[0]
-
+        self.name="sect name placeholder"
 
 # TODO this should have an __str__; is it using the text->template pattern?

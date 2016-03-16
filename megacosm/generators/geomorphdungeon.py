@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
+from name import Name
 import json
 import logging
 import random
@@ -45,7 +46,7 @@ class GeomorphDungeon(Generator):
         #These are generic dungon features shared with RogueDungeon
         self.generate_features('dungeon')
 
-        self.generate_dungeon_name()
+        self.name=Name(self.redis,'dungeon')
         self.width = self.gridwidth['tiles']
         self.height = self.gridheight['tiles']
 
@@ -62,7 +63,7 @@ class GeomorphDungeon(Generator):
 
     def __str__(self):
         """ print the name as a string."""
-        return self.text
+        return self.name.fullname.title()
 
     def simplify_for_json(self):
         """ Convert our pretty grid into something json-friendly."""

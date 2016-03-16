@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
-from leader import Leader
+import leader
+#from leader import Leader
+from name import Name
 import logging
 
 
@@ -14,9 +16,10 @@ class Organization(Generator):
         self.logger = logging.getLogger(__name__)
 
         if not hasattr(self, 'leader'):
-            self.leader = Leader(self.redis)
+            self.leader = leader.Leader(self.redis, {"location":self})
+            #self.leader = Leader(self.redis)
 
         if not hasattr(self, 'text'):
             self.text = self.render_template(self.template)
-        self.oldname = self.name['full']
-        self.name['full'] = self.text
+        self.name=Name(self.redis, 'organization', {'leader':self.leader})
+

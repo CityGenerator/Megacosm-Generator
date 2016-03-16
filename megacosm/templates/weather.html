@@ -12,7 +12,7 @@
 <p>Right now it is {{tempobj.temp['name']}} outside, with {{tempobj.wind['name']}} winds.</p>
 
 {%if tempobj.precipitation%}
-<p>It is {{tempobj.precipitation['none'] }} {{tempobj.precipitation_type}} at the moment.</p>
+<p>It is {{tempobj.precipitation['name'] }} {{tempobj.precipitation_type}} at the moment.</p>
 {%endif%}
 
 {%if tempobj.cloud%}
