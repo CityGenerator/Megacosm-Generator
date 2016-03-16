@@ -1,0 +1,19 @@
+
+LPUSH laborresource_kind unskilledlabor
+
+LPUSH laborresource_unskilledlabor_name_type strong
+LPUSH laborresource_unskilledlabor_name_type untiring
+
+# Lalabor is know for it's
+LPUSH laborresource_unskilledlabor_name unskilled labor
+
+#which ________ stuff
+SET laborresource_unskilledlabor_method produces
+
+# which provides
+
+LPUSH laborresource_unskilledlabor_product various services
+LPUSH laborresource_unskilledlabor_product cheap muscle
+LPUSH laborresource_unskilledlabor_product a powerful workforce
+
+

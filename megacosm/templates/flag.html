@@ -1,0 +1,23 @@
+
+
+{% extends "base.html" %}
+{% block title %}A Wild Flag Appears...{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+    <h1> A Wild Flag Appears...</h1>
+    <div>
+        <canvas id='flag' height='200' >
+        </canvas>
+    </div>
+    {% assets "js_flag" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+
+    <script type="text/javascript">
+        create_flag( {{flagjson|safe}},  document.getElementById("flag") );
+    </script>
+
+
+{% endblock %}

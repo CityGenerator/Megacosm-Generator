@@ -1,0 +1,10 @@
+LPUSH motivationgreed_text to steal
+LPUSH motivationgreed_text to cheat
+LPUSH motivationgreed_text by greed
+LPUSH motivationgreed_text to hoard precious items
+LPUSH motivationgreed_text to hoard coins
+LPUSH motivationgreed_text to hoard knowledge
+LPUSH motivationgreed_text to be the richest {{params.npc.race}} in town
+LPUSH motivationgreed_text to not share the wealth
+LPUSH motivationgreed_text to lie about money
+

@@ -1,0 +1,95 @@
+
+# I heard that Bob ______ Frank
+LPUSH rumor_verbed blackmailed
+LPUSH rumor_verbed bribed
+LPUSH rumor_verbed cheated
+LPUSH rumor_verbed extorted
+LPUSH rumor_verbed insulted
+LPUSH rumor_verbed kidnapped
+LPUSH rumor_verbed maimed
+LPUSH rumor_verbed murdered
+LPUSH rumor_verbed patronized
+LPUSH rumor_verbed robbed
+LPUSH rumor_verbed screwed
+LPUSH rumor_verbed stole from
+LPUSH rumor_verbed torched
+
+#  Bob ____________ cheated Frank
+LPUSH rumor_stealth flagrantly
+LPUSH rumor_stealth secretly
+LPUSH rumor_stealth quietly
+LPUSH rumor_stealth publicly
+
+SET   rumor_past_chance 30
+# Note that "past" is used in several templates.
+# and yes, the double space is needed to parse properly. Fugly, I know.
+LPUSH rumor_past  yesterday
+LPUSH rumor_past  the day before last
+LPUSH rumor_past  several days ago
+LPUSH rumor_past  last week
+LPUSH rumor_past  last month
+LPUSH rumor_past  last year
+LPUSH rumor_past  several years ago
+
+# A creepy place where a thing was seen
+# a ghost was spotted out at the __________
+LPUSH rumor_location old millhouse
+LPUSH rumor_location empty riverbed
+LPUSH rumor_location caves to the north
+LPUSH rumor_location abandoned farmhouse outside of town
+LPUSH rumor_location ancient ruins
+
+# They say a[n] ________ guards it
+LPUSH rumor_scarything ghost
+LPUSH rumor_scarything witch
+LPUSH rumor_scarything mummy
+LPUSH rumor_scarything werewolf
+LPUSH rumor_scarything dinosaur
+LPUSH rumor_scarything demon
+LPUSH rumor_scarything dragon
+LPUSH rumor_scarything ghoul
+LPUSH rumor_scarything three headed hound
+LPUSH rumor_scarything venomous serpent
+
+# bob saw the ghost and __________
+LPUSH rumor_fearresult fled in terror
+LPUSH rumor_fearresult was killed
+LPUSH rumor_fearresult was stricken dumb
+LPUSH rumor_fearresult was nearly killed
+LPUSH rumor_fearresult was gravely injured
+LPUSH rumor_fearresult fell to the ground, dead
+LPUSH rumor_fearresult ran home as fast as possible
+
+# Bob went missing and was last seen _____________.
+LPUSH rumor_dangeroushobby seeking revenge
+LPUSH rumor_dangeroushobby trying to earn some quick coin
+LPUSH rumor_dangeroushobby trying to win a bet
+LPUSH rumor_dangeroushobby threaten a mysterious stranger
+LPUSH rumor_dangeroushobby working for a new employer who suddenly skipped town.
+LPUSH rumor_dangeroushobby drunkenly arguing with people
+LPUSH rumor_dangeroushobby chasing something into the woods
+
+SET   rumor_belief_chance 30
+LPUSH rumor_belief {{params.believer}} believes it.
+LPUSH rumor_belief {{params.believer}} doesn't believe it.
+LPUSH rumor_belief {{params.believer}} wants to believe it.
+LPUSH rumor_belief {{params.believer}} doesn't want to believe it.
+
+SET   rumor_heardit_chance 30
+LPUSH rumor_heardit{{params.source}} heard
+LPUSH rumor_heardit{{params.source}} said
+
+SET   rumor_truth_chance 30
+LPUSH rumor_truth (True.)
+LPUSH rumor_truth (False.)
+LPUSH rumor_truth (Unknown.)
+LPUSH rumor_truth (Mistaken.)
+
+LPUSH rumor_template {{params.culprit}} {{params.stealth}} {{params.verbed}} {{params.victim}}{{params.past}}.
+LPUSH rumor_template {{params.scarything|article}} was spotted out by the {{params.location}}{{params.past}}. {{params.victim}} saw it and {{params.fearresult}}.
+LPUSH rumor_template there's a hidden treasure at the {{params.location}} for anyone stupid enough to go after it. They say {{params.scarything|article}} guards it.
+LPUSH rumor_template {{params.victim}} went missing{{params.past}} and was last seen {{params.dangeroushobby}}, never to be seen again.
+
+
+# FIXME change stupid enough to a variable
+# for anyone brave enough, stupid enough, etc.

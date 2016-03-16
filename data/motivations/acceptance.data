@@ -1,0 +1,4 @@
+LPUSH motivationacceptance_text to gain the respect of {{params.npc.sex['possessive']}} peers
+LPUSH motivationacceptance_text to gain acceptance in {{params.npc.sex['possessive']}} church
+LPUSH motivationacceptance_text to impress someone
+

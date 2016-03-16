@@ -1,0 +1,6 @@
+# Bob is motivated
+
+LPUSH motivationfamily_text to find a spouse
+LPUSH motivationfamily_text to have children
+LPUSH motivationfamily_text to find {{params.npc.sex['possessive']}} child
+

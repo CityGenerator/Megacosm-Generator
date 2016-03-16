@@ -1,0 +1,87 @@
+#
+
+LPUSH npc_race kobold
+
+SET kobold_details     {"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}
+
+LPUSH kobold_covering scales
+
+SET kobold_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH kobold_subrace aquatic
+LPUSH kobold_subrace sand
+LPUSH kobold_subrace mud
+LPUSH kobold_subrace jungle
+
+HSET kobold_subrace_description aquatic {"subrace": "Aquatic Kobold",   "description": "" }
+HSET kobold_subrace_description sand    {"subrace": "Sand Kobold",      "description": "" }
+HSET kobold_subrace_description mud     {"subrace": "Mud Kobold",       "description": "" }
+HSET kobold_subrace_description jungle  {"subrace": "Jungle Kobold",    "description": "" }
+
+LPUSH koboldname_fullname_template {{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}
+LPUSH koboldname_shortname_template {{params.first_root}}
+LPUSH koboldname_formalname_template {{params.title}} {{params.first_root}}
+
+
+set koboldname_first_root_chance 100
+
+
+LPUSH koboldname_first_root Bat
+LPUSH koboldname_first_root Bap
+LPUSH koboldname_first_root Bit
+LPUSH koboldname_first_root Bip
+LPUSH koboldname_first_root Bot
+LPUSH koboldname_first_root Car
+LPUSH koboldname_first_root Cor
+LPUSH koboldname_first_root Cak
+LPUSH koboldname_first_root Dat
+LPUSH koboldname_first_root Dit
+LPUSH koboldname_first_root Dot
+LPUSH koboldname_first_root Fax
+LPUSH koboldname_first_root Fat
+LPUSH koboldname_first_root Fot
+LPUSH koboldname_first_root Gat
+LPUSH koboldname_first_root Git
+LPUSH koboldname_first_root Gip
+LPUSH koboldname_first_root Got
+LPUSH koboldname_first_root Jat
+LPUSH koboldname_first_root Jit
+LPUSH koboldname_first_root Jot
+LPUSH koboldname_first_root Jop
+LPUSH koboldname_first_root Lat
+LPUSH koboldname_first_root Lik
+LPUSH koboldname_first_root Lot
+LPUSH koboldname_first_root Nat
+LPUSH koboldname_first_root Niz
+LPUSH koboldname_first_root Nip
+LPUSH koboldname_first_root Not
+LPUSH koboldname_first_root Nop
+LPUSH koboldname_first_root Pat
+LPUSH koboldname_first_root Paz
+LPUSH koboldname_first_root Pot
+LPUSH koboldname_first_root Rat
+LPUSH koboldname_first_root Rap
+LPUSH koboldname_first_root Rit
+LPUSH koboldname_first_root Rot
+LPUSH koboldname_first_root Rop
+LPUSH koboldname_first_root Taz
+LPUSH koboldname_first_root Teb
+LPUSH koboldname_first_root Tean
+LPUSH koboldname_first_root Vab
+LPUSH koboldname_first_root Vaz
+LPUSH koboldname_first_root Vit
+LPUSH koboldname_first_root Vor
+LPUSH koboldname_first_root Wat
+LPUSH koboldname_first_root Wit
+LPUSH koboldname_first_root Wot
+LPUSH koboldname_first_root Yat
+LPUSH koboldname_first_root Yap
+LPUSH koboldname_first_root Yik
+LPUSH koboldname_first_root Yip
+LPUSH koboldname_first_root Yot
+LPUSH koboldname_first_root Yop
+LPUSH koboldname_first_root Zat
+LPUSH koboldname_first_root Zit
+LPUSH koboldname_first_root Zol
+
+

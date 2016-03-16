@@ -1,0 +1,34 @@
+
+{% extends "base.html" %}
+{% block title %}Welcome to the Region of {{tempobj.name.fullname}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Welcome to the Region <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
+
+    <h2>Summary</h2>
+
+{{tempobj.name.fullname }} is {{tempobj.size['name'] |article }} region. The political influence of {{tempobj.name.fullname}} in the country is {{tempobj.influence['name']}}.
+    Religion in this region {{tempobj.theology['name']}}.
+
+    <h2>National Relationship</h2>
+    People in the region think the national government is {{tempobj.corruption['name']}} and many citizens {{tempobj.countryapproval['name']}} it.
+    They also describe the national government as {{tempobj.efficiency['name']}} and feels the rest of the regions {{tempobj.unity['name']}}.
+
+
+
+{% if tempobj.cities  %}
+    <h2>Cities</h2>
+
+    The region has {{tempobj.citydetails['name']}} known {{ 'city'|pluralize( tempobj.cities|length)}}.
+
+    <ul>
+    {%for city in tempobj.cities %}
+        <li><a href="/city?seed={{city.seed}}">{{city.name.fullname}} ({{city.seed}})</a> is {{city.age['name']|article}} {{city.size['name']}} city.</li>
+    {%endfor%}
+    </ul>
+
+{%endif%}
+{% endblock %}

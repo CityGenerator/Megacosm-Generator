@@ -1,0 +1,6 @@
+LPUSH motivationcohesion_text to get {{params.npc.sex['possessive']}} family back together
+LPUSH motivationcohesion_text to reunite the {{params.npc.race}} populace
+LPUSH motivationcohesion_text to unite every {{params.npc.profession}} in the land
+LPUSH motivationcohesion_text to unionize every {{params.npc.profession}}
+
+

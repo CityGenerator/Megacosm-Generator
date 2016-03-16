@@ -1,0 +1,5 @@
+[run]
+branch = True
+
+[report]
+omit = /usr/*, env/*, ~/virtualenv/python*/*, ~/virtualenv/pypy*/*, /opt/python/*, ~/Projects/.env/*

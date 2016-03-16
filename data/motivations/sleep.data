@@ -1,0 +1,6 @@
+
+
+# Bob is motivated
+
+LPUSH motivationsleep_text to get some sleep
+LPUSH motivationsleep_text by severe exhaustion

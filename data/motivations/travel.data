@@ -1,0 +1,16 @@
+# Bob is motivated
+
+LPUSH motivationtravel_text to travel
+LPUSH motivationtravel_text to travel with a diplomat
+LPUSH motivationtravel_text to travel with a circus
+LPUSH motivationtravel_text to go on an expedition
+LPUSH motivationtravel_text to travel with an important person
+LPUSH motivationtravel_text to travel with an acting troupe
+
+LPUSH motivationtravel_text to travel the world as a trader
+LPUSH motivationtravel_text to travel the world as a spy
+LPUSH motivationtravel_text to travel the world as a pilgrim
+LPUSH motivationtravel_text to travel the world as a missionary
+LPUSH motivationtravel_text to travel the world as a beggar
+LPUSH motivationtravel_text to travel the world as an unemployed {{params.npc.profession}}
+

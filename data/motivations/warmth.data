@@ -1,0 +1,7 @@
+
+#bob is motivated
+
+LPUSH motivationwarmth_text to keep warm
+LPUSH motivationwarmth_text to get out of the heat
+LPUSH motivationwarmth_text to get out of the cold
+LPUSH motivationwarmth_text to never be that cold again

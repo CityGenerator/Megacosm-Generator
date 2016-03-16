@@ -1,0 +1,22 @@
+language: python
+python:
+  - "2.7"
+  - "pypy"
+install:
+  - pip install -r requirements.txt
+before_script:
+  - cp config.py.example config.py
+#  - python reimport_data.py
+script: nosetests
+after_success:
+    coveralls
+notifications:
+  irc:
+    channels: "chat.freenode.net#megacosm"
+    on_success: change # default: always
+    on_failure: change # default: always
+    use_notice: false
+    skip_join: false
+    template:
+      - "%{repository} (%{commit}) : %{message} "
+      - "Build details: %{build_url}"

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body { margin: 0; overflow: hidden; }
+            .tm  { position: absolute; top: 10px; right: 10px; }
+            .webgl-error { font: 15px/30px monospace; text-align: center; color: #fff; margin: 50px; }
+            .webgl-error a { color: #fff; }
+        </style>
+
+
+    </head>
+    <body>
+		<script id="vertexShader" type="x-shader/x-vertex">
+			uniform vec3 viewVector;
+            uniform float c;
+			uniform float p;
+			varying float intensity;
+			void main() 
+			{
+			    vec3 vNormal = normalize( normalMatrix * normal );
+			    vec3 vNormel = normalize( normalMatrix * viewVector );
+			    intensity = pow( c - dot(vNormal, vNormel), p );
+			    gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+			}
+		</script>
+		<script id="fragmentShader" type="x-shader/x-vertex"> 
+			uniform vec3 glowColor;
+			varying float intensity;
+			void main() 
+			{
+			    vec3 glow = glowColor * intensity;
+			    gl_FragColor = vec4( glow, 1.0 );
+			}
+		</script>
+        <h1>Welcome to planet <a href="/?seed={{starsystem.seed}}">{{starsystem.planet.name.fullname}} ({{starsystem.seed}})</a></h1>
+
+        <!--<img src="/worldmap.png?seed={{seed}}"/>-->
+
+        <div id="planetwindow" style="width:800px;height:500px"></div>
+        <script src="static/js/three.min.js"></script>
+        <script src="static/js/Detector.js"></script>
+        <script src="static/js/TrackballControls.js"></script> 
+        <script src="static/js/planet.js"></script> 
+        <script src="static/js/moon.js"></script> 
+        <script src="static/js/background.js"></script> 
+        <script src="static/js/star.js"></script> 
+        <script>
+            if (!Detector.webgl) {
+                Detector.addGetWebGLMessage(planetwindow);
+                return;
+            }
+
+            generate_scene();
+
+            {% for star in starsystem.stars %}
+        
+                console.log("star: {{star.name.fullname}}: {{star.pos.x}}, {{star.pos.y}}, {{star.pos.z}} Luminosity: {{star.luminosity}}" )
+                var position= new THREE.Vector3({{star.pos.x}}-50+{{star.size['multiplier']}},{{star.pos.y}},{{star.pos.z}}  );
+                generateStar({{star.color['color']}}, position, {{star.size['multiplier']}}, {{star.color['luminosity']}}, 1+{{star.color['luminosity']}}, {{loop.index}});
+
+            {% endfor %}
+            {% for moon in starsystem.planet.moons %}
+                var orbitdistance={{(loop.index**2)/2+1}};
+                var orbitspeed={{1+(loop.length-loop.index)/loop.length}};
+                console.log("moon: {{moon.name.fullname}} orbitdistance: "+orbitdistance+" orbitspeed: "+orbitspeed) 
+                generateMoon({{moon.color['color']}},  
+                             {{starsystem.planet.size['multiplier']}}*{{moon.size['multiplier']}},
+                             orbitdistance, //orbit
+                             orbitspeed,  //speed
+                            {{loop.index}}); //rotation
+
+            {% endfor %}
+
+            console.log("planet: {{starsystem.planet.name.fullname}}: size: {{starsystem.planet.size['multiplier']}}" )
+            generate_planet({{starsystem.seed}}, {{starsystem.planet.size['multiplier']}});
+
+            animate();
+        </script>  
+    </body>
+</html>

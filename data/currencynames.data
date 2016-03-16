@@ -1,0 +1,87 @@
+#
+LPUSH currencyname_fullname_template {{params.pre}}{{params.root}}{{params.post}}
+LPUSH currencyname_shortname_template {{params.fullname}}
+LPUSH currencyname_formalname_template {{params.fullname}}
+
+
+set currencyname_pre_chance 30
+set currencyname_root_chance 100
+set currencyname_post_chance 30
+
+LPUSH currencyname_pre bo
+LPUSH currencyname_pre de
+LPUSH currencyname_pre no
+LPUSH currencyname_pre quala
+LPUSH currencyname_pre di
+LPUSH currencyname_pre nomo
+LPUSH currencyname_pre ban
+LPUSH currencyname_pre hol
+LPUSH currencyname_pre zin
+LPUSH currencyname_pre sul
+LPUSH currencyname_pre soo
+LPUSH currencyname_pre su
+LPUSH currencyname_pre nib
+LPUSH currencyname_pre yua
+        
+LPUSH currencyname_root plat
+LPUSH currencyname_root lat
+LPUSH currencyname_root cred
+LPUSH currencyname_root bol
+LPUSH currencyname_root hun
+LPUSH currencyname_root alb
+LPUSH currencyname_root pol
+LPUSH currencyname_root lud
+LPUSH currencyname_root din
+LPUSH currencyname_root dom
+LPUSH currencyname_root zom
+LPUSH currencyname_root zib
+LPUSH currencyname_root fen
+LPUSH currencyname_root fep
+LPUSH currencyname_root fel
+LPUSH currencyname_root chet
+LPUSH currencyname_root nar
+LPUSH currencyname_root bon
+LPUSH currencyname_root kol
+LPUSH currencyname_root dol
+LPUSH currencyname_root mul
+LPUSH currencyname_root pon
+LPUSH currencyname_root quat
+LPUSH currencyname_root wan
+LPUSH currencyname_root lod
+LPUSH currencyname_root juk
+LPUSH currencyname_root zin
+LPUSH currencyname_root pen
+LPUSH currencyname_root shil
+
+LPUSH currencyname_post rak
+LPUSH currencyname_post nik
+LPUSH currencyname_post dar
+LPUSH currencyname_post bit
+LPUSH currencyname_post inum
+LPUSH currencyname_post oni
+LPUSH currencyname_post olo
+LPUSH currencyname_post abbi
+LPUSH currencyname_post ish
+LPUSH currencyname_post lar
+LPUSH currencyname_post er
+LPUSH currencyname_post un
+LPUSH currencyname_post ny
+LPUSH currencyname_post nie
+LPUSH currencyname_post ett
+LPUSH currencyname_post ull
+LPUSH currencyname_post ack
+LPUSH currencyname_post ik
+LPUSH currencyname_post ing
+LPUSH currencyname_post ar
+LPUSH currencyname_post ma
+LPUSH currencyname_post na
+LPUSH currencyname_post re
+LPUSH currencyname_post ra
+LPUSH currencyname_post so
+LPUSH currencyname_post tre
+LPUSH currencyname_post pee
+LPUSH currencyname_post kel
+LPUSH currencyname_post it
+    
+
+

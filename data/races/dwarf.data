@@ -1,0 +1,288 @@
+#
+
+LPUSH npc_race dwarf
+
+SET dwarf_details      {"name": "Dwarf",      "size": "medium",  "description": "their stubby limbs and strict work ethic"}
+
+LPUSH dwarf_covering skin
+
+SET dwarf_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH dwarf_subrace mountain
+LPUSH dwarf_subrace hill
+LPUSH dwarf_subrace deep
+LPUSH dwarf_subrace gray
+LPUSH dwarf_subrace desert
+LPUSH dwarf_subrace arctic
+LPUSH dwarf_subrace wild
+LPUSH dwarf_subrace degenerate
+
+HSET dwarf_subrace_description mountain   {"subrace": "Mountain Dwarf",   "description": "" }
+HSET dwarf_subrace_description hill       {"subrace": "Hill Dwarf",       "description": "" }
+HSET dwarf_subrace_description deep       {"subrace": "Deep Dwarf",       "description": "" }
+HSET dwarf_subrace_description gray       {"subrace": "Gray Dwarf",       "description": "" }
+HSET dwarf_subrace_description desert     {"subrace": "Desert Dwarf",     "description": "" }
+HSET dwarf_subrace_description arctic     {"subrace": "Arctic Dwarf",     "description": "" }
+HSET dwarf_subrace_description wild       {"subrace": "Wild Dwarf",       "description": "" }
+HSET dwarf_subrace_description degenerate {"subrace": "Degenerate Dwarf", "description": "" }
+
+
+LPUSH dwarfname_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_root}}{{params.last_post}} {{params.trailer}}
+LPUSH dwarfname_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH dwarfname_formalname_template {{params.title}} {{params.last_root}}{{params.last_post}}
+
+set dwarfname_first_pre_chance 100
+set dwarfname_first_root_chance 100
+set dwarfname_last_root_chance 100
+set dwarfname_last_post_chance 100
+
+
+LPUSH dwarfname_first_pre Aba
+LPUSH dwarfname_first_pre Abo
+LPUSH dwarfname_first_pre Ada
+LPUSH dwarfname_first_pre Ar
+LPUSH dwarfname_first_pre Bal
+LPUSH dwarfname_first_pre Bar
+LPUSH dwarfname_first_pre Bor
+LPUSH dwarfname_first_pre Bal
+LPUSH dwarfname_first_pre Bro
+LPUSH dwarfname_first_pre Dro
+LPUSH dwarfname_first_pre Dur
+LPUSH dwarfname_first_pre Fal
+LPUSH dwarfname_first_pre Gar
+LPUSH dwarfname_first_pre Gor
+LPUSH dwarfname_first_pre Grim
+LPUSH dwarfname_first_pre Grum
+LPUSH dwarfname_first_pre Grun
+LPUSH dwarfname_first_pre Lo
+LPUSH dwarfname_first_pre Mor
+LPUSH dwarfname_first_pre Snor
+LPUSH dwarfname_first_pre Ska
+LPUSH dwarfname_first_pre Thro
+LPUSH dwarfname_first_pre Thor
+LPUSH dwarfname_first_pre Ul
+LPUSH dwarfname_first_pre Yor
+
+LPUSH dwarfname_first_root ag
+LPUSH dwarfname_first_root bin
+LPUSH dwarfname_first_root bor
+LPUSH dwarfname_first_root bul
+LPUSH dwarfname_first_root dal
+LPUSH dwarfname_first_root din
+LPUSH dwarfname_first_root dor
+LPUSH dwarfname_first_root gan
+LPUSH dwarfname_first_root gar
+LPUSH dwarfname_first_root gin
+LPUSH dwarfname_first_root kon
+LPUSH dwarfname_first_root mir
+LPUSH dwarfname_first_root nir
+LPUSH dwarfname_first_root ond
+LPUSH dwarfname_first_root orin
+LPUSH dwarfname_first_root ril
+LPUSH dwarfname_first_root rim
+LPUSH dwarfname_first_root rin
+LPUSH dwarfname_first_root run
+
+        
+LPUSH dwarfname_last_root Amber
+LPUSH dwarfname_last_root Armor
+LPUSH dwarfname_last_root Ash
+LPUSH dwarfname_last_root Barley
+LPUSH dwarfname_last_root Bear
+LPUSH dwarfname_last_root Bitter
+LPUSH dwarfname_last_root Black
+LPUSH dwarfname_last_root Blood
+LPUSH dwarfname_last_root Blue
+LPUSH dwarfname_last_root Brandy
+LPUSH dwarfname_last_root Brass
+LPUSH dwarfname_last_root Bright
+LPUSH dwarfname_last_root Broad
+LPUSH dwarfname_last_root Bronze
+LPUSH dwarfname_last_root Carbon
+LPUSH dwarfname_last_root Clashing
+LPUSH dwarfname_last_root Claw
+LPUSH dwarfname_last_root Clay
+LPUSH dwarfname_last_root Coal
+LPUSH dwarfname_last_root Cold
+LPUSH dwarfname_last_root Copper
+LPUSH dwarfname_last_root Coral
+LPUSH dwarfname_last_root Crunch
+LPUSH dwarfname_last_root Crystal
+LPUSH dwarfname_last_root Dark
+LPUSH dwarfname_last_root Deep
+LPUSH dwarfname_last_root Dog
+LPUSH dwarfname_last_root Dough
+LPUSH dwarfname_last_root Dragon
+LPUSH dwarfname_last_root Drake
+LPUSH dwarfname_last_root Drum
+LPUSH dwarfname_last_root Dull
+LPUSH dwarfname_last_root Dwarf
+LPUSH dwarfname_last_root Earth
+LPUSH dwarfname_last_root Feast
+LPUSH dwarfname_last_root Fire
+LPUSH dwarfname_last_root Foe
+LPUSH dwarfname_last_root Forge
+LPUSH dwarfname_last_root Gold
+LPUSH dwarfname_last_root Good
+LPUSH dwarfname_last_root Grand
+LPUSH dwarfname_last_root Granite
+LPUSH dwarfname_last_root Gravel
+LPUSH dwarfname_last_root Gray
+LPUSH dwarfname_last_root Greasey
+LPUSH dwarfname_last_root Green
+LPUSH dwarfname_last_root Hawk
+LPUSH dwarfname_last_root Holy
+LPUSH dwarfname_last_root Honor
+LPUSH dwarfname_last_root Ice
+LPUSH dwarfname_last_root Iron
+LPUSH dwarfname_last_root Ivory
+LPUSH dwarfname_last_root Jade
+LPUSH dwarfname_last_root Jet
+LPUSH dwarfname_last_root Kind
+LPUSH dwarfname_last_root Lead
+LPUSH dwarfname_last_root Light
+LPUSH dwarfname_last_root Lightning
+LPUSH dwarfname_last_root Lion
+LPUSH dwarfname_last_root Lumber
+LPUSH dwarfname_last_root Marble
+LPUSH dwarfname_last_root Mithril
+LPUSH dwarfname_last_root Moon
+LPUSH dwarfname_last_root Oat
+LPUSH dwarfname_last_root Oil
+LPUSH dwarfname_last_root Onyx
+LPUSH dwarfname_last_root Opal
+LPUSH dwarfname_last_root Orange
+LPUSH dwarfname_last_root Paper
+LPUSH dwarfname_last_root Pearl
+LPUSH dwarfname_last_root Platinum
+LPUSH dwarfname_last_root Quartz
+LPUSH dwarfname_last_root Rat
+LPUSH dwarfname_last_root Red
+LPUSH dwarfname_last_root Roar
+LPUSH dwarfname_last_root Ruby
+LPUSH dwarfname_last_root Rust
+LPUSH dwarfname_last_root Salt
+LPUSH dwarfname_last_root Shiny
+LPUSH dwarfname_last_root Silver
+LPUSH dwarfname_last_root Slate
+LPUSH dwarfname_last_root Smart
+LPUSH dwarfname_last_root Smoke
+LPUSH dwarfname_last_root Star
+LPUSH dwarfname_last_root Steel
+LPUSH dwarfname_last_root Stone
+LPUSH dwarfname_last_root Storm
+LPUSH dwarfname_last_root Strong
+LPUSH dwarfname_last_root Sun
+LPUSH dwarfname_last_root Talon
+LPUSH dwarfname_last_root Thud
+LPUSH dwarfname_last_root Tiger
+LPUSH dwarfname_last_root Tin
+LPUSH dwarfname_last_root Ugly
+LPUSH dwarfname_last_root War
+LPUSH dwarfname_last_root Wave
+LPUSH dwarfname_last_root Wheel
+LPUSH dwarfname_last_root White
+LPUSH dwarfname_last_root Wise
+
+LPUSH dwarfname_last_post ale
+LPUSH dwarfname_last_post altar
+LPUSH dwarfname_last_post ankle
+LPUSH dwarfname_last_post anvil
+LPUSH dwarfname_last_post arm
+LPUSH dwarfname_last_post axe
+LPUSH dwarfname_last_post back
+LPUSH dwarfname_last_post baker
+LPUSH dwarfname_last_post barrel
+LPUSH dwarfname_last_post battler
+LPUSH dwarfname_last_post beard
+LPUSH dwarfname_last_post bellows
+LPUSH dwarfname_last_post belly
+LPUSH dwarfname_last_post blade
+LPUSH dwarfname_last_post blood
+LPUSH dwarfname_last_post boot
+LPUSH dwarfname_last_post bread
+LPUSH dwarfname_last_post breaker
+LPUSH dwarfname_last_post breeches
+LPUSH dwarfname_last_post bridge
+LPUSH dwarfname_last_post brooch
+LPUSH dwarfname_last_post cairn
+LPUSH dwarfname_last_post cask
+LPUSH dwarfname_last_post castle
+LPUSH dwarfname_last_post cavern
+LPUSH dwarfname_last_post chest
+LPUSH dwarfname_last_post chisel
+LPUSH dwarfname_last_post cloak
+LPUSH dwarfname_last_post coin
+LPUSH dwarfname_last_post crown
+LPUSH dwarfname_last_post cutter
+LPUSH dwarfname_last_post door
+LPUSH dwarfname_last_post ear
+LPUSH dwarfname_last_post eye
+LPUSH dwarfname_last_post face
+LPUSH dwarfname_last_post fighter
+LPUSH dwarfname_last_post finger
+LPUSH dwarfname_last_post fist
+LPUSH dwarfname_last_post foot
+LPUSH dwarfname_last_post forge
+LPUSH dwarfname_last_post founder
+LPUSH dwarfname_last_post gem
+LPUSH dwarfname_last_post goblet
+LPUSH dwarfname_last_post grave
+LPUSH dwarfname_last_post grieve
+LPUSH dwarfname_last_post guard
+LPUSH dwarfname_last_post hair
+LPUSH dwarfname_last_post hall
+LPUSH dwarfname_last_post hammer
+LPUSH dwarfname_last_post hand
+LPUSH dwarfname_last_post head
+LPUSH dwarfname_last_post helm
+LPUSH dwarfname_last_post hill
+LPUSH dwarfname_last_post hunter
+LPUSH dwarfname_last_post keep
+LPUSH dwarfname_last_post keg
+LPUSH dwarfname_last_post killer
+LPUSH dwarfname_last_post knee
+LPUSH dwarfname_last_post leg
+LPUSH dwarfname_last_post mace
+LPUSH dwarfname_last_post mail
+LPUSH dwarfname_last_post mansion
+LPUSH dwarfname_last_post mead
+LPUSH dwarfname_last_post mill
+LPUSH dwarfname_last_post mine
+LPUSH dwarfname_last_post molder
+LPUSH dwarfname_last_post moor
+LPUSH dwarfname_last_post mouth
+LPUSH dwarfname_last_post mug
+LPUSH dwarfname_last_post neck
+LPUSH dwarfname_last_post nose
+LPUSH dwarfname_last_post plate
+LPUSH dwarfname_last_post ring
+LPUSH dwarfname_last_post river
+LPUSH dwarfname_last_post road
+LPUSH dwarfname_last_post robe
+LPUSH dwarfname_last_post sapper
+LPUSH dwarfname_last_post shield
+LPUSH dwarfname_last_post ship
+LPUSH dwarfname_last_post shoulder
+LPUSH dwarfname_last_post slasher
+LPUSH dwarfname_last_post slayer
+LPUSH dwarfname_last_post smasher
+LPUSH dwarfname_last_post smelter
+LPUSH dwarfname_last_post smith
+LPUSH dwarfname_last_post staff
+LPUSH dwarfname_last_post stomach
+LPUSH dwarfname_last_post stone
+LPUSH dwarfname_last_post stream
+LPUSH dwarfname_last_post sword
+LPUSH dwarfname_last_post table
+LPUSH dwarfname_last_post throne
+LPUSH dwarfname_last_post toe
+LPUSH dwarfname_last_post tower
+LPUSH dwarfname_last_post tracker
+LPUSH dwarfname_last_post tun
+LPUSH dwarfname_last_post tunnel
+LPUSH dwarfname_last_post vault
+LPUSH dwarfname_last_post vein
+LPUSH dwarfname_last_post vest
+        
+    

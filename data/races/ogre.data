@@ -1,0 +1,62 @@
+#
+
+LPUSH npc_race ogre
+
+SET ogre_details       {"name": "Ogre",       "size": "large",   "description": "large size and dim wits"}
+
+LPUSH ogre_covering skin
+
+
+SET ogre_subrace_chance 30
+# Note that descriptions aren't heavily used right now anyways.
+LPUSH ogre_subrace merrow
+LPUSH ogre_subrace mage
+
+HSET ogre_subrace_description merrow      {"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }
+HSET ogre_subrace_description mage        {"subrace": "Ogre Mage",         "description": "" }
+
+LPUSH ogrename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}
+LPUSH ogrename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH ogrename_formalname_template {{params.title}} {{params.last_pre}}{{params.last_root}}
+
+set ogrename_first_pre_chance 100
+set ogrename_first_root_chance 100
+set ogrename_last_pre_chance 100
+set ogrename_last_root_chance 100
+
+LPUSH ogrename_first_pre Po
+LPUSH ogrename_first_pre Do
+LPUSH ogrename_first_pre Du
+LPUSH ogrename_first_pre Da
+LPUSH ogrename_first_pre Gu
+LPUSH ogrename_first_pre U
+LPUSH ogrename_first_pre Gha
+LPUSH ogrename_first_pre Go
+LPUSH ogrename_first_pre Gu
+LPUSH ogrename_first_pre Ki
+
+LPUSH ogrename_first_root sh
+LPUSH ogrename_first_root k
+LPUSH ogrename_first_root ap
+LPUSH ogrename_first_root gan
+LPUSH ogrename_first_root duk
+LPUSH ogrename_first_root bel
+LPUSH ogrename_first_root bal
+        
+LPUSH ogrename_last_pre Bear
+LPUSH ogrename_last_pre Boar
+LPUSH ogrename_last_pre Eagle
+LPUSH ogrename_last_pre Rock
+LPUSH ogrename_last_pre Oak
+LPUSH ogrename_last_pre Ox
+
+LPUSH ogrename_last_root mane
+LPUSH ogrename_last_root snout
+LPUSH ogrename_last_root fang
+LPUSH ogrename_last_root claw
+LPUSH ogrename_last_root tooth
+LPUSH ogrename_last_root root
+LPUSH ogrename_last_root branch
+LPUSH ogrename_last_root nut
+        
+    

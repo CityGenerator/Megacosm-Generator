@@ -1,0 +1,45 @@
+#
+
+LPUSH moonname_fullname_template {{params.pre}}{{params.root}}{{params.post}}
+LPUSH moonname_shortname_template {{params.fullname}}
+LPUSH moonname_formalname_template {{params.fullname}}
+
+
+set moonname_post_chance 30
+
+LPUSH moonname_pre Mo
+LPUSH moonname_pre Dei
+LPUSH moonname_pre Pho
+LPUSH moonname_pre Gana
+LPUSH moonname_pre Calli
+LPUSH moonname_pre Hima
+LPUSH moonname_pre Ela
+LPUSH moonname_pre Sino
+LPUSH moonname_pre The
+LPUSH moonname_pre Cha
+LPUSH moonname_pre Spo
+LPUSH moonname_pre Pro
+
+LPUSH moonname_root ro
+LPUSH moonname_root ka
+LPUSH moonname_root di
+LPUSH moonname_root do
+LPUSH moonname_root la
+LPUSH moonname_root ta
+LPUSH moonname_root le
+LPUSH moonname_root me
+
+LPUSH moonname_post bos
+LPUSH moonname_post mos
+LPUSH moonname_post pa
+LPUSH moonname_post sto
+LPUSH moonname_post pe
+LPUSH moonname_post ke
+LPUSH moonname_post lite
+LPUSH moonname_post dene
+LPUSH moonname_post noe
+LPUSH moonname_post se
+LPUSH moonname_post thys
+LPUSH moonname_post dus
+LPUSH moonname_post pso
+LPUSH moonname_post theus

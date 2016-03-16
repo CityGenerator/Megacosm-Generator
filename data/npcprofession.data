@@ -1,0 +1,125 @@
+# all of the NPC professions
+
+LPUSH npc_profession actor
+LPUSH npc_profession adventurer
+LPUSH npc_profession alchemist
+LPUSH npc_profession apothecary
+LPUSH npc_profession armorer
+LPUSH npc_profession artist
+LPUSH npc_profession astrologer
+LPUSH npc_profession baker
+LPUSH npc_profession banker
+LPUSH npc_profession barber
+LPUSH npc_profession bather
+LPUSH npc_profession beer seller
+LPUSH npc_profession blacksmith
+LPUSH npc_profession bleacher
+LPUSH npc_profession bookbinder
+LPUSH npc_profession bookseller
+LPUSH npc_profession bounty hunter
+LPUSH npc_profession bowyer
+LPUSH npc_profession brewer
+LPUSH npc_profession bucklemaker
+LPUSH npc_profession butcher
+LPUSH npc_profession carpenter
+LPUSH npc_profession cartwright
+LPUSH npc_profession chandler
+LPUSH npc_profession cheesemaker
+LPUSH npc_profession chickenbutcher
+LPUSH npc_profession coach driver
+LPUSH npc_profession cobbler
+LPUSH npc_profession collier
+LPUSH npc_profession cooper
+LPUSH npc_profession copyist
+LPUSH npc_profession courtier
+LPUSH npc_profession cutler
+LPUSH npc_profession deputy
+LPUSH npc_profession doctor
+LPUSH npc_profession dyer
+LPUSH npc_profession engineer
+LPUSH npc_profession entertainer
+LPUSH npc_profession fishmonger
+LPUSH npc_profession forester
+LPUSH npc_profession furrier
+LPUSH npc_profession glassmaker
+LPUSH npc_profession glovemaker
+LPUSH npc_profession good Samaritan
+LPUSH npc_profession grocer
+LPUSH npc_profession handyman
+LPUSH npc_profession harness maker
+LPUSH npc_profession hatmaker
+LPUSH npc_profession haymerchant
+LPUSH npc_profession herbalist
+LPUSH npc_profession illuminator
+LPUSH npc_profession innkeeper
+LPUSH npc_profession interpreter
+LPUSH npc_profession jailer
+LPUSH npc_profession jeweler
+LPUSH npc_profession laborer
+LPUSH npc_profession lawyer
+LPUSH npc_profession leatherworker
+LPUSH npc_profession librarian
+LPUSH npc_profession locksmith
+LPUSH npc_profession lumberjack
+LPUSH npc_profession magic dealer
+LPUSH npc_profession maidservant
+LPUSH npc_profession mason
+LPUSH npc_profession mercenary
+LPUSH npc_profession mercer
+LPUSH npc_profession messenger
+LPUSH npc_profession miller
+LPUSH npc_profession navigator
+LPUSH npc_profession official
+LPUSH npc_profession ostler
+LPUSH npc_profession outfitter
+LPUSH npc_profession painter
+LPUSH npc_profession pastrycook
+LPUSH npc_profession physician
+LPUSH npc_profession plasterer
+LPUSH npc_profession porter
+LPUSH npc_profession potter
+LPUSH npc_profession priest
+LPUSH npc_profession professor
+LPUSH npc_profession prostitute
+LPUSH npc_profession pursemaker
+LPUSH npc_profession roofer
+LPUSH npc_profession ropemaker
+LPUSH npc_profession rugmaker
+LPUSH npc_profession saddler
+LPUSH npc_profession sage
+LPUSH npc_profession salter
+LPUSH npc_profession scabbardmaker
+LPUSH npc_profession scribe
+LPUSH npc_profession sculptor
+LPUSH npc_profession seamstress
+LPUSH npc_profession sheriff
+LPUSH npc_profession ship captain
+LPUSH npc_profession shipwright
+LPUSH npc_profession shoemaker
+LPUSH npc_profession smith
+LPUSH npc_profession social worker
+LPUSH npc_profession soldier
+LPUSH npc_profession specialty smith
+LPUSH npc_profession spicemerchant
+LPUSH npc_profession stablehand
+LPUSH npc_profession tailor
+LPUSH npc_profession tanner
+LPUSH npc_profession tavern keeper
+LPUSH npc_profession teacher
+LPUSH npc_profession teamster
+LPUSH npc_profession tilemaker
+LPUSH npc_profession timberwright
+LPUSH npc_profession tinker
+LPUSH npc_profession trader
+LPUSH npc_profession undertaker
+LPUSH npc_profession vintner
+LPUSH npc_profession wagoneer
+LPUSH npc_profession warehouse worker
+LPUSH npc_profession watercarrier
+LPUSH npc_profession weaponsmith
+LPUSH npc_profession weaver
+LPUSH npc_profession wine seller
+LPUSH npc_profession woodcarver
+LPUSH npc_profession woodseller
+LPUSH npc_profession woodworker
+

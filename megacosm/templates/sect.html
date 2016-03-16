@@ -1,0 +1,20 @@
+
+
+{% extends "base.html" %}
+{% block title %}Beware the {{tempobj.name.fullname}} {% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+    <h1>Beware the {{tempobj.name.fullname}}, followers of {{tempobj.deity.name.fullname}} <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+
+
+The {{tempobj.name.fullname}} are {{tempobj.acceptance['name'] |article}} {{tempobj.kind}} that focuses on {{tempobj.domain['name']}}.
+
+
+
+
+
+
+{% endblock %}

@@ -1,40 +1,24 @@
+# Deprecated Data files
+data/*.xml
 
-data/config.ini
-
+# compiled python files
 *.py[cod]
 env/
-# C extensions
-*.so
 
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-!lib/README.md
-lib64
-__pycache__
+# Secret Config files:
+config.py
 
-# Installer logs
-pip-log.txt
-
-# Unit test / coverage reports
+# generated files
+coverage/
 .coverage
 .tox
 nosetests.xml
 
-# Translations
-*.mo
+#vim temp files
+*.swp
 
-# Mr Developer
-.mr.developer.cfg
-.project
-.pydevproject
+# prod deploy files
+.bash_history
+
+megacosm/static/gen/
+megacosm/static/.webassets-cache/

@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationcompetition_text to be the best around
+LPUSH motivationcompetition_text to win at everything
+LPUSH motivationcompetition_text by a recent, humiliating loss

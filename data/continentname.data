@@ -1,0 +1,42 @@
+# what
+LPUSH continentname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+
+
+set continentname_title_chance 10
+set continentname_pre_chance 100
+set continentname_root_chance 100
+set continentname_post_chance 30
+
+
+LPUSH continentname_title North
+LPUSH continentname_title South
+LPUSH continentname_title East
+LPUSH continentname_title West
+
+LPUSH continentname_pre As
+LPUSH continentname_pre Eur
+LPUSH continentname_pre An
+LPUSH continentname_pre Del
+LPUSH continentname_pre Mon
+LPUSH continentname_pre Na
+LPUSH continentname_pre Ko
+LPUSH continentname_pre Mol
+
+LPUSH continentname_root sar
+LPUSH continentname_root gar
+LPUSH continentname_root bel
+LPUSH continentname_root por
+LPUSH continentname_root ama
+LPUSH continentname_root lax
+LPUSH continentname_root dov
+LPUSH continentname_root rov
+
+LPUSH continentname_post ica
+LPUSH continentname_post iv
+LPUSH continentname_post ek
+LPUSH continentname_post ar
+LPUSH continentname_post i
+
+

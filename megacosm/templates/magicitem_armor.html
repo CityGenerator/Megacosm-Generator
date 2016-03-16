@@ -1,0 +1,55 @@
+
+
+{% extends "base.html" %}
+{% block title %} You found {{tempobj.kind}} {% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+  </style>
+{% endblock %}
+{% block content %}
+
+    <h1>You found <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.kind}}  ({{tempobj.seed}})</a></h1>
+    <h2>Summary</h2>
+    The {{tempobj.name|title}} is {{tempobj.quality['name']|article }} {{tempobj.material_description['name'] }} {{tempobj.category_description['name']}} with {{tempobj.effect_description['name'] |article}} enchantment that {{tempobj.effect_description['description']}}. It is {{tempobj.repair['name'] }}.
+    <h2>Details</h2>
+    <p>
+    This {{tempobj.quality['name']|article }} {{tempobj.kind}} was created {{tempobj.age['name']}} by {{tempobj.creator}}. The enchantment on it {{tempobj.effect_description['description']}}.
+    {%if tempobj.decoration_description %}
+        The {{tempobj.category_description['materialpart']}} is decorated with {{tempobj.decoration_description['description']}}.
+    {%endif %}
+    {%if tempobj.visualeffect%}
+        When {{tempobj.visualcause_description['description']}}, the {{tempobj.kind}} {{tempobj.visualeffect_description['description']}}.
+    {%endif%}
+    {%if tempobj.ability%}
+        This {{tempobj.category_description['name']}} {{tempobj.ability_description['description']}}.
+    {%endif%}
+    </p>
+    <p>
+    Many consider it {{tempobj.strength['name'] }} {{tempobj.kind}} and a {{tempobj.value['name']}}.
+    {%if tempobj.flaw%}
+        This {{tempobj.category_description['name']}} is rather distinctive due to {{tempobj.flaw_description['name'] |article}} on the {{tempobj.category_description['materialpart']}}.
+    {%endif%}
+    </p>
+    
+    {% if tempobj.curse %}
+    <h2>Danger:</h2> 
+        This scroll carries the {{tempobj.curse}}.
+    {% endif%}
+
+
+
+
+    <h2>Description If Found...</h2>
+    <blockquote style="font-style:italic">
+        "{{tempobj.location|capitalize}} you find {{tempobj.material_description['name'] |article}}  {{tempobj.category_description['name']}}. It is {{tempobj.repair['name'] }}.
+        {%if tempobj.decoration_description %}
+            The {{tempobj.category_description['materialpart']}} is decorated with {{tempobj.decoration_description['description']}}.
+        {%endif %}
+        {%if tempobj.vibe%}
+            It {{tempobj.vibe}} when {{tempobj.vibe_when}} the {{tempobj.category_description['name']}}.
+        {%endif%}
+        "
+    </blockquote> 
+{% endblock %}

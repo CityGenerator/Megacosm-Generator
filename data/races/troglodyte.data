@@ -1,0 +1,37 @@
+#
+
+LPUSH npc_race troglodyte
+
+SET troglodyte_details {"name": "Troglodyte", "size": "medium",  "description": "crude behavior and foul smell"}
+
+LPUSH troglodyte_covering scales
+
+LPUSH troglodytename_fullname_template {{params.title}} {{params.first_pre}}{{params.first_root}}  {{params.trailer}}
+LPUSH troglodytename_shortname_template {{params.first_pre}}{{params.first_root}}
+LPUSH troglodytename_formalname_template {{params.title}} {{params.first_pre}}{{params.first_root}}
+
+
+set troglodytename_first_pre_chance 100
+set troglodytename_first_root_chance 100
+
+
+LPUSH troglodytename_first_pre An
+LPUSH troglodytename_first_pre Cee
+LPUSH troglodytename_first_pre Elh
+LPUSH troglodytename_first_pre Ghri
+LPUSH troglodytename_first_pre Goz
+LPUSH troglodytename_first_pre Por
+LPUSH troglodytename_first_pre Surp
+LPUSH troglodytename_first_pre Til
+LPUSH troglodytename_first_pre Voth
+
+LPUSH troglodytename_first_root ra
+LPUSH troglodytename_first_root zer
+LPUSH troglodytename_first_root s
+LPUSH troglodytename_first_root ka
+LPUSH troglodytename_first_root lak
+LPUSH troglodytename_first_root raz
+LPUSH troglodytename_first_root g
+LPUSH troglodytename_first_root karo
+        
+    

@@ -1,3 +1,0 @@
-[redis]
-#url=redis://redistogo:passwordgoeshere@hostname:port/
-url = redis://127.0.0.1:6379/

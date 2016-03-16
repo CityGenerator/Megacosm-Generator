@@ -1,0 +1,7 @@
+
+# Bob is motivated
+
+LPUSH motivationstatus_text to be seen as important
+LPUSH motivationstatus_text to acquire a position of status
+LPUSH motivationstatus_text to retain his status
+LPUSH motivationstatus_text to regain his status

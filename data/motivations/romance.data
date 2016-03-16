@@ -1,0 +1,10 @@
+# Bob is motivated
+
+LPUSH motivationromance_text to find {{params.npc.sex['possessive']}} lover
+LPUSH motivationromance_text by unrequited love
+LPUSH motivationromance_text to sabotage a rival
+LPUSH motivationromance_text to marry someone unobtainable
+LPUSH motivationromance_text to find the right person
+LPUSH motivationromance_text by love
+LPUSH motivationromance_text by lust
+

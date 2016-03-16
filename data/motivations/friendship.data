@@ -1,0 +1,6 @@
+
+# Bob is motivated
+
+LPUSH motivationfriendship_text to make friends
+LPUSH motivationfriendship_text to protect {{params.npc.sex['possessive']}} friends
+LPUSH motivationfriendship_text to help {{params.npc.sex['possessive']}} friends

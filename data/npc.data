@@ -1,0 +1,469 @@
+#
+
+ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
+ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
+
+# Bob is a[n] ________ follower of Grabesh.
+ZADD npc_piety   5 {"name":"noncommittal",  "score":5     }
+ZADD npc_piety  10 {"name":"dispassionate", "score":10    }
+ZADD npc_piety  20 {"name":"insincere",     "score":20    }
+ZADD npc_piety  30 {"name":"inattentive",   "score":30    }
+ZADD npc_piety  40 {"name":"dutiful",       "score":40    }
+ZADD npc_piety  50 {"name":"pious",         "score":50    }
+ZADD npc_piety  60 {"name":"devoted",       "score":60    }
+ZADD npc_piety  70 {"name":"reverent",      "score":70    }
+ZADD npc_piety  80 {"name":"devout",        "score":80    }
+ZADD npc_piety  90 {"name":"passionate",    "score":90    }
+ZADD npc_piety 100 {"name":"overzealous",   "score":100   }
+
+#Bob is a human 
+ZADD npc_age 5    {"name":"juvenile",       "score":5   }
+ZADD npc_age 10   {"name":"adolescent",     "score":10  }
+ZADD npc_age 20   {"name":"young",          "score":20  }
+ZADD npc_age 40   {"name":"adult",          "score":40  }
+ZADD npc_age 80   {"name":"middle-aged",    "score":80  }
+ZADD npc_age 95   {"name":"elderly",        "score":95  }
+ZADD npc_age 100  {"name":"ancient",        "score":100 }
+
+# friends consider bob ________
+ZADD npc_honor 5    {"name":"treacherous",   "score":5   }
+ZADD npc_honor 10   {"name":"untrustworthy", "score":10  }
+ZADD npc_honor 15   {"name":"dishonorable",  "score":15  }
+ZADD npc_honor 20   {"name":"devious",       "score":20  }
+ZADD npc_honor 30   {"name":"dishonest",     "score":30  }
+ZADD npc_honor 40   {"name":"inconsistent",  "score":40  }
+ZADD npc_honor 50   {"name":"dependable",    "score":50  }
+ZADD npc_honor 60   {"name":"reliable",      "score":60  }
+ZADD npc_honor 70   {"name":"honest",        "score":70  }
+ZADD npc_honor 80   {"name":"credible",      "score":80  }
+ZADD npc_honor 85   {"name":"faithful",      "score":85  }
+ZADD npc_honor 90   {"name":"loyal",         "score":90  }
+ZADD npc_honor 95   {"name":"trustworthy",   "score":95  }
+ZADD npc_honor 100  {"name":"honorable",     "score":100 }
+
+# When provoked, bob is 
+ZADD npc_bravery 5    {"name":"chicken-hearted",   "score":5  }
+ZADD npc_bravery 10   {"name":"spineless",   "score":10  }
+ZADD npc_bravery 15   {"name":"cowardly",   "score":15  }
+ZADD npc_bravery 20   {"name":"craven",   "score":20  }
+ZADD npc_bravery 30   {"name":"faint-hearted",   "score":30  }
+ZADD npc_bravery 40   {"name":"panicky",   "score":40  }
+ZADD npc_bravery 50   {"name":"nervous",   "score":50  }
+ZADD npc_bravery 60   {"name":"tough",   "score":60  }
+ZADD npc_bravery 70   {"name":"intrepid",   "score":70  }
+ZADD npc_bravery 80   {"name":"fearless",   "score":80  }
+ZADD npc_bravery 85   {"name":"bold",   "score":85  }
+ZADD npc_bravery 90   {"name":"unafraid",   "score":90  }
+ZADD npc_bravery 95   {"name":"brave",   "score":95  }
+ZADD npc_bravery 100  {"name":"heroic",   "score":100  }
+
+ZADD npc_skill 5   {"name":"incompetent",   "score":5  }
+ZADD npc_skill 10  {"name":"ineptly skilled",   "score":10  }
+ZADD npc_skill 30  {"name":"poorly skilled",   "score":30  }
+ZADD npc_skill 40  {"name":"mediocrely skilled",   "score":40  }
+ZADD npc_skill 50  {"name":"reasonably skilled",   "score":50  }
+ZADD npc_skill 70  {"name":"decently skilled",   "score":70  }
+ZADD npc_skill 80  {"name":"skilled",   "score":80  }
+ZADD npc_skill 90  {"name":"gifted",   "score":90  }
+ZADD npc_skill 98  {"name":"impressively skilled",   "score":98  }
+ZADD npc_skill 100 {"name":"legendarily skilled",   "score":100  }
+
+ZADD npc_experience 5    {"name":"new",   "score":5  }
+ZADD npc_experience 10   {"name":"naive",   "score":10  }
+ZADD npc_experience 15   {"name":"green",   "score":15  }
+ZADD npc_experience 20   {"name":"amateur",   "score":20  }
+ZADD npc_experience 25   {"name":"fledgling",   "score":25  }
+ZADD npc_experience 30   {"name":"inexperienced",   "score":30  }
+ZADD npc_experience 35   {"name":"rookie",   "score":35  }
+ZADD npc_experience 40   {"name":"trained",   "score":40  }
+ZADD npc_experience 45   {"name":"capable",   "score":45  }
+ZADD npc_experience 50   {"name":"qualified",   "score":50  }
+ZADD npc_experience 55   {"name":"proficient",   "score":55  }
+ZADD npc_experience 60   {"name":"average",   "score":60  }
+ZADD npc_experience 65   {"name":"effective",   "score":65  }
+ZADD npc_experience 70   {"name":"accomplished",   "score":70  }
+ZADD npc_experience 75   {"name":"gifted",   "score":75  }
+ZADD npc_experience 80   {"name":"adept",   "score":80  }
+ZADD npc_experience 85   {"name":"worldly",   "score":85  }
+ZADD npc_experience 90   {"name":"expert",   "score":90  }
+ZADD npc_experience 95   {"name":"veteran",   "score":95  }
+ZADD npc_experience 100  {"name":"grizzled",   "score":100  }
+
+ZADD npc_strength 10     {"name":"weak",   "score":10  }
+ZADD npc_strength 20     {"name":"shaky",   "score":20  }
+ZADD npc_strength 30     {"name":"delicate",   "score":30  }
+ZADD npc_strength 40     {"name":"inactive",   "score":40  }
+ZADD npc_strength 60     {"name":"able-bodied",   "score":60  }
+ZADD npc_strength 70     {"name":"strong",   "score":70  }
+ZADD npc_strength 80     {"name":"sinewy",   "score":80  }
+ZADD npc_strength 90     {"name":"powerful",   "score":90  }
+ZADD npc_strength 100    {"name":"herculean",   "score":100  }
+
+ZADD npc_endurance 10    {"name":"exhausted",   "score":10  }
+ZADD npc_endurance 20    {"name":"unenergetic",   "score":20  }
+ZADD npc_endurance 30    {"name":"lazy",   "score":30  }
+ZADD npc_endurance 40    {"name":"lethargic",   "score":40  }
+ZADD npc_endurance 60    {"name":"resistant",   "score":60  }
+ZADD npc_endurance 70    {"name":"vital",   "score":70  }
+ZADD npc_endurance 80    {"name":"fortified",   "score":80  }
+ZADD npc_endurance 90    {"name":"resolute",   "score":90  }
+ZADD npc_endurance 100   {"name":"unflagging",   "score":100  }
+
+# Looking at his past, bob is _____ of his choices in the past
+ZADD npc_satisfaction 10     {"name":"rueful",   "score":10  }
+ZADD npc_satisfaction 20     {"name":"regretful",   "score":20  }
+ZADD npc_satisfaction 30     {"name":"apologetic",   "score":30  }
+ZADD npc_satisfaction 40     {"name":"repentant",   "score":40  }
+ZADD npc_satisfaction 50     {"name":"remorseful",   "score":50  }
+ZADD npc_satisfaction 60     {"name":"questioning",   "score":60  }
+ZADD npc_satisfaction 70     {"name":"unrepentant",   "score":70  }
+ZADD npc_satisfaction 80     {"name":"unashamed",   "score":80  }
+ZADD npc_satisfaction 90     {"name":"accepting",   "score":90  }
+ZADD npc_satisfaction 100    {"name":"satisfied",   "score":100  }
+
+ZADD npc_agility 30      {"name":"clumsy",   "score":30  }
+ZADD npc_agility 60      {"name":"average",   "score":60  }
+ZADD npc_agility 100     {"name":"agile",   "score":100  }
+
+ZADD npc_wisdom 10       {"name":"foolish",   "score":10  }
+ZADD npc_wisdom 20       {"name":"obtuse",   "score":20  }
+ZADD npc_wisdom 30       {"name":"careless",   "score":30  }
+ZADD npc_wisdom 40       {"name":"indiscreet",   "score":40  }
+ZADD npc_wisdom 50       {"name":"average",   "score":50  }
+ZADD npc_wisdom 60       {"name":"keen",   "score":60  }
+ZADD npc_wisdom 70       {"name":"astute",   "score":70  }
+ZADD npc_wisdom 80       {"name":"thoughtful",   "score":80  }
+ZADD npc_wisdom 90       {"name":"enlightened",   "score":90  }
+ZADD npc_wisdom 100      {"name":"wise",   "score":100  }
+
+ZADD npc_charisma 30     {"name":"obnoxious",   "score":30  }
+ZADD npc_charisma 50     {"name":"off-putting",   "score":50  }
+ZADD npc_charisma 60     {"name":"average",   "score":60  }
+ZADD npc_charisma 80     {"name":"charming",   "score":80  }
+ZADD npc_charisma 100    {"name":"inspiring",   "score":100  }
+
+ZADD npc_intelligence 20    {"name":"dumb",   "score":20  }
+ZADD npc_intelligence 40    {"name":"dimwitted",   "score":40  }
+ZADD npc_intelligence 60    {"name":"average",   "score":60  }
+ZADD npc_intelligence 80    {"name":"clever",   "score":80  }
+ZADD npc_intelligence 100   {"name":"brilliant",   "score":100  }
+
+# Strangers take one look and consider Sydney _________
+ZADD npc_attractiveness   5 {"name":"hideous",      "score":5   }
+ZADD npc_attractiveness  10 {"name":"repulsive",    "score":10  }
+ZADD npc_attractiveness  20 {"name":"repellent",    "score":20  }
+ZADD npc_attractiveness  30 {"name":"ugly",         "score":30  }
+ZADD npc_attractiveness  40 {"name":"unattractive", "score":40  }
+ZADD npc_attractiveness  50 {"name":"homely",       "score":50  }
+ZADD npc_attractiveness  60 {"name":"average",      "score":60  }
+ZADD npc_attractiveness  70 {"name":"cute",         "score":70  }
+ZADD npc_attractiveness  80 {"name":"attractive",   "score":80  }
+ZADD npc_attractiveness  90 {"name":"good-looking", "score":90  }
+ZADD npc_attractiveness  95 {"name":"gorgeous",     "score":95  }
+ZADD npc_attractiveness 100 {"name":"stunning",     "score":100 }
+        
+#Bob is ____________
+ZADD npc_money 5    {"name":"destitute",        "score":5   }
+ZADD npc_money 20   {"name":"poor",             "score":20  }
+ZADD npc_money 40   {"name":"barely getting by","score":40  }
+ZADD npc_money 80   {"name":"making ends meet", "score":80  }
+ZADD npc_money 95   {"name":"well off",         "score":95  }
+ZADD npc_money 100  {"name":"rich",             "score":100 }
+
+# and is ________ with what he owns.
+ZADD npc_generous  50  {"name":"stingy",        "score":50  }
+ZADD npc_generous 100  {"name":"generous",     "score":100 }
+
+
+#Many people would consider bob ___________
+ZADD npc_luck 50   {"name":"unlucky",        "score":50  }
+ZADD npc_luck 100  {"name":"lucky",          "score":100 }
+
+#and  ____________ confident.
+ZADD npc_confident 30   {"name":"not very",       "score":30  }
+ZADD npc_confident 60   {"name":"somewhat",       "score":60  }
+ZADD npc_confident 100  {"name":"incredibly",     "score":100 }
+
+
+        
+LPUSH npc_posessiondetail was lost during the war
+LPUSH npc_posessiondetail was stolen weeks ago
+LPUSH npc_posessiondetail has great personal significance
+LPUSH npc_posessiondetail was a gift from someone close
+LPUSH npc_posessiondetail is always kept close
+LPUSH npc_posessiondetail is kept safe at all times
+LPUSH npc_posessiondetail was stolen from someone else
+LPUSH npc_posessiondetail was hidden away
+LPUSH npc_posessiondetail was a gift 
+LPUSH npc_posessiondetail was a gift from a parent
+LPUSH npc_posessiondetail was a gift from a mentor
+LPUSH npc_posessiondetail was a gift from a lover
+LPUSH npc_posessiondetail was a gift from a friend
+LPUSH npc_posessiondetail was found on the ground recently
+LPUSH npc_posessiondetail was found on the ground years ago
+LPUSH npc_posessiondetail was found in a tavern months ago
+        
+LPUSH npc_posession jackknife
+LPUSH npc_posession small trinket
+LPUSH npc_posession bouncyball
+LPUSH npc_posession lucky coin
+LPUSH npc_posession ancestral weapon
+LPUSH npc_posession family ring
+LPUSH npc_posession ballbearing
+LPUSH npc_posession small gem
+LPUSH npc_posession whistle
+LPUSH npc_posession throwing knife
+LPUSH npc_posession flask
+LPUSH npc_posession small flute
+LPUSH npc_posession necklace
+LPUSH npc_posession locket
+LPUSH npc_posession yoyo
+LPUSH npc_posession scarf
+LPUSH npc_posession arrowhead
+LPUSH npc_posession map
+LPUSH npc_posession deck of cards
+LPUSH npc_posession dagger
+LPUSH npc_posession horn
+LPUSH npc_posession horseshoe
+LPUSH npc_posession kaleidoscope
+LPUSH npc_posession holy symbol
+LPUSH npc_posession broken sword hilt
+LPUSH npc_posession lock of hair
+
+#If approached, bob will be
+LPUSH npc_attitude accusatory
+LPUSH npc_attitude apologetic
+LPUSH npc_attitude attentive
+LPUSH npc_attitude authoritarian
+LPUSH npc_attitude battle-ready
+LPUSH npc_attitude belligerent
+LPUSH npc_attitude boastful
+LPUSH npc_attitude cautious
+LPUSH npc_attitude chatty
+LPUSH npc_attitude clumsy
+LPUSH npc_attitude conspiratorial
+LPUSH npc_attitude contrarian
+LPUSH npc_attitude crude
+LPUSH npc_attitude conniving
+LPUSH npc_attitude cowed
+LPUSH npc_attitude deluded
+LPUSH npc_attitude drunken
+LPUSH npc_attitude easily offended
+LPUSH npc_attitude efficient
+LPUSH npc_attitude egotistical
+LPUSH npc_attitude embittered
+LPUSH npc_attitude exhausted
+LPUSH npc_attitude fashion conscious
+LPUSH npc_attitude fatalistic
+LPUSH npc_attitude flirtatious
+LPUSH npc_attitude forbidding
+LPUSH npc_attitude forgetful
+LPUSH npc_attitude giddy
+LPUSH npc_attitude gluttonous
+LPUSH npc_attitude gossipy
+LPUSH npc_attitude greedy
+LPUSH npc_attitude grieving
+LPUSH npc_attitude guarded
+LPUSH npc_attitude guilty
+LPUSH npc_attitude healthy
+LPUSH npc_attitude helpful
+LPUSH npc_attitude homesick
+LPUSH npc_attitude idealistic
+LPUSH npc_attitude impatient
+LPUSH npc_attitude insecure
+LPUSH npc_attitude intimidating
+LPUSH npc_attitude intimidated
+LPUSH npc_attitude jaded
+LPUSH npc_attitude jesterly
+LPUSH npc_attitude jolly
+LPUSH npc_attitude lonely
+LPUSH npc_attitude loud
+LPUSH npc_attitude lovelorn
+LPUSH npc_attitude melancholy
+LPUSH npc_attitude mocking
+LPUSH npc_attitude mopey
+LPUSH npc_attitude nervous
+LPUSH npc_attitude nihilistic
+LPUSH npc_attitude nosy
+LPUSH npc_attitude outlandish
+LPUSH npc_attitude pacifistic
+LPUSH npc_attitude patriotic
+LPUSH npc_attitude patronizing
+LPUSH npc_attitude pious
+LPUSH npc_attitude prejudiced
+LPUSH npc_attitude quiet
+LPUSH npc_attitude resentful
+LPUSH npc_attitude scattered
+LPUSH npc_attitude self-obsessed
+LPUSH npc_attitude shifty
+LPUSH npc_attitude sickly
+LPUSH npc_attitude skeptical
+LPUSH npc_attitude smitten
+LPUSH npc_attitude smug
+LPUSH npc_attitude solemn
+LPUSH npc_attitude spiteful
+LPUSH npc_attitude territorial
+LPUSH npc_attitude thick
+LPUSH npc_attitude treasure-obsessed
+LPUSH npc_attitude trusting
+LPUSH npc_attitude unreliable
+LPUSH npc_attitude vengeful
+LPUSH npc_attitude violent
+LPUSH npc_attitude gambling
+LPUSH npc_attitude worrying
+LPUSH npc_attitude xenophobic
+        
+LPUSH npc_regret was unable to save a loved one
+LPUSH npc_regret didn't lie to protect a close friend
+LPUSH npc_regret accidentally killed an innocent person
+LPUSH npc_regret seriously injured a friend goofing around
+LPUSH npc_regret ran away from home long ago
+LPUSH npc_regret scared a child
+        
+LPUSH npc_height short
+LPUSH npc_height average height
+LPUSH npc_height tall
+        
+LPUSH npc_build frail
+LPUSH npc_build thin
+LPUSH npc_build skinny
+LPUSH npc_build chubby
+LPUSH npc_build stocky
+LPUSH npc_build obese
+
+SET   npc_mark_chance 20
+        
+LPUSH npc_mark mole
+LPUSH npc_mark freckle
+LPUSH npc_mark blemish
+LPUSH npc_mark small scar
+LPUSH npc_mark large scar
+LPUSH npc_mark birth mark
+LPUSH npc_mark tattoo
+LPUSH npc_mark deformity
+        
+LPUSH npc_mark_location face
+LPUSH npc_mark_location head
+LPUSH npc_mark_location leg
+LPUSH npc_mark_location arm
+LPUSH npc_mark_location hand
+LPUSH npc_mark_location shoulder
+LPUSH npc_mark_location chest
+LPUSH npc_mark_location throat
+        
+LPUSH npc_complexion fair
+LPUSH npc_complexion flushed
+LPUSH npc_complexion jaundiced
+LPUSH npc_complexion florid
+LPUSH npc_complexion dull
+LPUSH npc_complexion sallow
+LPUSH npc_complexion radiant
+LPUSH npc_complexion pallid
+LPUSH npc_complexion tanned
+LPUSH npc_complexion flawless
+LPUSH npc_complexion light
+LPUSH npc_complexion dark
+LPUSH npc_complexion muddled
+        
+LPUSH npc_eye beady
+LPUSH npc_eye light
+LPUSH npc_eye dark
+LPUSH npc_eye clear
+LPUSH npc_eye bloodshot
+LPUSH npc_eye cross-eyed
+LPUSH npc_eye deep-set
+LPUSH npc_eye close-set
+LPUSH npc_eye heavy
+LPUSH npc_eye hollow
+LPUSH npc_eye piggish
+LPUSH npc_eye sunken
+LPUSH npc_eye brooding
+LPUSH npc_eye glazed
+LPUSH npc_eye haunted
+
+# Bobbette is  _________
+LPUSH npc_marriagestatus engaged
+LPUSH npc_marriagestatus married
+LPUSH npc_marriagestatus divorced
+LPUSH npc_marriagestatus widowed
+
+# Bob has 
+ZADD npc_kill 40    {"name":"never killed",                     "score":20  }
+ZADD npc_kill 80    {"name":"killed in self defense",           "score":40  }
+ZADD npc_kill 90    {"name":"killed in the heat of the moment", "score":60  }
+ZADD npc_kill 95    {"name":"killed to solve a problem",        "score":80  }
+ZADD npc_kill 100   {"name":"killed without issue",             "score":100  }
+
+# Bob suffers from
+SET   npc_medical_condition_chance 10
+LPUSH npc_medical_condition blindness in one eye
+LPUSH npc_medical_condition deafness in one ear
+LPUSH npc_medical_condition irritable bowels
+LPUSH npc_medical_condition eczema
+LPUSH npc_medical_condition syphilis
+LPUSH npc_medical_condition gout
+LPUSH npc_medical_condition a limp
+LPUSH npc_medical_condition clumsiness
+LPUSH npc_medical_condition poor circulation
+LPUSH npc_medical_condition color blindness
+LPUSH npc_medical_condition shortsightedness
+LPUSH npc_medical_condition depression
+LPUSH npc_medical_condition social anxiety
+LPUSH npc_medical_condition poor hygiene
+LPUSH npc_medical_condition allergies
+LPUSH npc_medical_condition asthma
+LPUSH npc_medical_condition arthritis
+LPUSH npc_medical_condition blood pressure
+LPUSH npc_medical_condition a cancerous growth
+LPUSH npc_medical_condition chronic pain
+LPUSH npc_medical_condition the flu
+LPUSH npc_medical_condition diabetes
+LPUSH npc_medical_condition diabeetus
+LPUSH npc_medical_condition consumption
+LPUSH npc_medical_condition cataracts
+LPUSH npc_medical_condition anxiety
+LPUSH npc_medical_condition cold sores
+LPUSH npc_medical_condition chronic illness
+LPUSH npc_medical_condition constipation
+LPUSH npc_medical_condition dementia
+LPUSH npc_medical_condition diarrhea
+LPUSH npc_medical_condition depression
+LPUSH npc_medical_condition food poisoning
+LPUSH npc_medical_condition gallstones
+LPUSH npc_medical_condition hay fever
+LPUSH npc_medical_condition migraines
+LPUSH npc_medical_condition impotence
+LPUSH npc_medical_condition insomnia
+LPUSH npc_medical_condition jaundice
+LPUSH npc_medical_condition lactose intolerance
+LPUSH npc_medical_condition liver disease
+LPUSH npc_medical_condition mental illness
+LPUSH npc_medical_condition an STD
+LPUSH npc_medical_condition the remnants of a stroke
+LPUSH npc_medical_condition whooping cough
+LPUSH npc_medical_condition flatulence
+LPUSH npc_medical_condition sleepwalking
+LPUSH npc_medical_condition night terrors
+LPUSH npc_medical_condition stammer
+LPUSH npc_medical_condition tone deafness
+LPUSH npc_medical_condition an arrow to the knee
+        
+    
+#        <option          max="23" >Commoner
+#	    <option min="24" max="35" >Expert
+#	    <option min="36" max="43" >Warrior
+#	    <option min="44" max="49" >Rogue
+#	    <option min="50" max="52" >Barbarian
+#	    <option min="53" max="55" >Monk
+#	    <option min="56" max="59" >Bard
+#	    <option min="60" max="65" >Cleric
+#	    <option min="66" max="69" >Druid
+#	    <option min="70" max="77" >Fighter
+#	    <option min="78" max="83" >Adept
+#	    <option min="84" max="87" >Sorcerer
+#	    <option min="88" max="91" >Wizard
+#	    <option min="92" max="95" >Aristocrat
+#	    <option min="96" max="97" >Paladin
+#	    <option min="99"          >Ranger
+	
+        
