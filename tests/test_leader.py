@@ -45,7 +45,7 @@ class TestLeader(unittest.TestCase):
         """  """
         self.redis.lpush('leader_kind', 'absolutemonarchy')
         leader = Leader(self.redis, {'kind':'absolutemonarchy'})
-        self.assertEqual('Queen Drucilla LaSalvae', str(leader.name))
+        self.assertEqual('Queen Drucilla LaSalvae', str(leader))
         self.assertEqual('country', str(leader.kind_description['scope']))
 
     def test_static_leader_city_scope(self):
