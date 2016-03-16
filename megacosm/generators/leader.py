@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from country import Country
+#from organization import Organization
+#from city import City
+#from country import Country
+import country, city, organization
 from npc import NPC
 from name import Name
 import logging
@@ -16,14 +19,17 @@ class Leader(NPC):
 
         self.generate_features('leader')
         self.generate_features('leader' + self.kind)
+        if not hasattr( self, 'location'):
+            if self.kind_description['scope'] == 'country':
+                self.location = country.Country(self.redis, {'leader': self})
+            elif self.kind_description['scope'] == 'city':
+                self.location = city.City(self.redis, {'leader': self})
+            elif self.kind_description['scope'] == 'organization':
+                self.location = organization.Organization(self.redis, {'leader': self})
+            else:
+                self.location = organization.Organization(self.redis, {'leader': self})
+                self.kind_description['scope']='organization'
 
-        if self.kind_description['scope'] == 'country':
-            self.location = Country(self.redis, {'leader': self})
-        else:
-            # elif self.kind_description['scope'] == 'city':
-            #   self.location=City(self.redis, {'leader':self})
-            #   TODO This should default to organization...
-
-            self.location = Country(self.redis, {'leader': self})
         self.name.title = self.leader_description[self.sex['name']]
+        #re-render the name with the title.
         self.name.render()
