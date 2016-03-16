@@ -1,68 +1,44 @@
-#
 
 
+LPUSH leader_scope country
+LPUSH leader_scope region
+LPUSH leader_scope city
+LPUSH leader_scope organization
+
+LPUSH leadercountry_kind absolutemonarchy
+LPUSH leadercountry_kind authoritarian
+LPUSH leadercountry_kind commonwealth
+LPUSH leadercountry_kind communist
+LPUSH leadercountry_kind constitutional
+LPUSH leadercountry_kind democracy
+LPUSH leadercountry_kind dictatorship
+LPUSH leadercountry_kind ecclesiastical
+LPUSH leadercountry_kind emirate
+LPUSH leadercountry_kind federation
+LPUSH leadercountry_kind monarchy
+LPUSH leadercountry_kind oligarchy
+LPUSH leadercountry_kind parliamentary
+LPUSH leadercountry_kind republic
+LPUSH leadercountry_kind theocracy
+LPUSH leadercountry_kind totalitarian
+
+LPUSH leaderregion_kind barony
+LPUSH leaderregion_kind duchy
+LPUSH leaderregion_kind governship
 
 
-LPUSH leader_kind absolutemonarchy
-HSET  leader_kind_description absolutemonarchy { "scope":"country"   }
-LPUSH leader_kind authoritarian
-HSET  leader_kind_description authoritarian { "scope":"country"   }
-LPUSH leader_kind commonwealth
-HSET  leader_kind_description commonwealth { "scope":"country"   }
-LPUSH leader_kind communist
-HSET  leader_kind_description communist { "scope":"country"   }
-LPUSH leader_kind constitutional
-HSET  leader_kind_description constitutional { "scope":"country"   }
-LPUSH leader_kind democracy
-HSET  leader_kind_description democracy { "scope":"country"   }
-LPUSH leader_kind dictatorship
-HSET  leader_kind_description dictatorship { "scope":"country"   }
-LPUSH leader_kind ecclesiastical
-HSET  leader_kind_description ecclesiastical { "scope":"country"   }
-LPUSH leader_kind emirate
-HSET  leader_kind_description emirate { "scope":"country"   }
-LPUSH leader_kind federation
-HSET  leader_kind_description federation { "scope":"country"   }
-LPUSH leader_kind monarchy
-HSET  leader_kind_description monarchy { "scope":"country"   }
-LPUSH leader_kind oligarchy
-HSET  leader_kind_description oligarchy { "scope":"country"   }
-LPUSH leader_kind parliamentary
-HSET  leader_kind_description parliamentary { "scope":"country"   }
-LPUSH leader_kind republic
-HSET  leader_kind_description republic { "scope":"country"   }
-LPUSH leader_kind theocracy
-HSET  leader_kind_description theocracy { "scope":"country"   }
-LPUSH leader_kind totalitarian
-HSET  leader_kind_description totalitarian { "scope":"country"   }
+LPUSH leadercity_kind councilmanager
+LPUSH leadercity_kind mayorcouncil
+LPUSH leadercity_kind commission
+LPUSH leadercity_kind townmeeting
+LPUSH leadercity_kind magistrate
 
-LPUSH leader_kind councilmanager
-HSET  leader_kind_description councilmanager { "scope":"city"   }
-LPUSH leader_kind mayorcouncil
-HSET  leader_kind_description mayorcouncil { "scope":"city"   }
-LPUSH leader_kind commission
-HSET  leader_kind_description commission { "scope":"city"   }
-LPUSH leader_kind townmeeting
-HSET  leader_kind_description townmeeting { "scope":"city"   }
-LPUSH leader_kind magistrate
-HSET  leader_kind_description magistrate { "scope":"city"   }
+LPUSH leaderorganization_kind guild
+LPUSH leaderorganization_kind gang
+LPUSH leaderorganization_kind union
 
-LPUSH leader_kind guild
-HSET  leader_kind_description guild { "scope":"organization"   }
-LPUSH leader_kind gang
-HSET  leader_kind_description gang { "scope":"organization"   }
-LPUSH leader_kind union
-HSET  leader_kind_description union { "scope":"organization"   }
-
-LPUSH leaderguild_leader guildmaster
-HSET  leaderguild_leader_description guildmaster { "male":"Guildmaster",    "female":"Guildmaster"     }
-LPUSH leadergang_leader gangleader
-HSET  leadergang_leader_description gangleader { "male":"GangLeader",    "female":"Gang Leader"     }
-LPUSH leadergang_leader kingpin
-HSET  leadergang_leader_description kingpin { "male":"Kingpin",    "female":"Kingpin"     }
-LPUSH leaderunion_leader president
-HSET  leaderunion_leader_description president { "male":"President",   "female":"President"   }
-
+LPUSH leadergovernship_leader governor
+HSET  leadergovernship_leader_description governor { "male":"Governor",     "female":"Governor"     }
 
 LPUSH leaderabsolutemonarchy_leader king
 HSET  leaderabsolutemonarchy_leader_description king { "male":"King",    "female":"Queen"     }
@@ -77,6 +53,8 @@ HSET  leaderabsolutemonarchy_leader_description shah { "male":"Shah",    "female
 LPUSH leaderabsolutemonarchy_leader prince
 HSET  leaderabsolutemonarchy_leader_description prince { "male":"Prince",  "female":"Princess"  }
 
+LPUSH leaderbarony_leader baron
+HSET  leaderbarony_leader_description baron { "male":"Baron",      "female":"Baroness"      }
 
 LPUSH leaderauthoritarian_leader boss
 HSET  leaderauthoritarian_leader_description boss { "male":"Boss",         "female":"Boss"         }
@@ -94,8 +72,6 @@ LPUSH leaderauthoritarian_leader despot
 HSET  leaderauthoritarian_leader_description despot { "male":"Despot",       "female":"Despot"       }
 LPUSH leaderauthoritarian_leader general
 HSET  leaderauthoritarian_leader_description general { "male":"General",      "female":"General"      }
-LPUSH leaderauthoritarian_leader governor
-HSET  leaderauthoritarian_leader_description governor { "male":"Governor",     "female":"Governor"     }
 LPUSH leaderauthoritarian_leader inquisitor
 HSET  leaderauthoritarian_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
 LPUSH leaderauthoritarian_leader leader
@@ -199,6 +175,8 @@ HSET  leaderdictatorship_leader_description tyrant { "male":"Tyrant",       "fem
 LPUSH leaderdictatorship_leader warlord
 HSET  leaderdictatorship_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
 
+LPUSH leaderduchy_leader duchy
+HSET  leaderduchy_leader_description duchy { "male":"Duke",      "female":"Duchess"      }
 
 LPUSH leaderecclesiastical_leader primeminister
 HSET  leaderecclesiastical_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
@@ -283,6 +261,13 @@ HSET  leaderfederation_leader_description president { "male":"President",   "fem
 LPUSH leaderfederation_leader steward
 HSET  leaderfederation_leader_description steward { "male":"Steward",      "female":"Steward"      }
 
+LPUSH leadergang_leader gangleader
+HSET  leadergang_leader_description gangleader { "male":"GangLeader",    "female":"Gang Leader"     }
+LPUSH leadergang_leader kingpin
+HSET  leadergang_leader_description kingpin { "male":"Kingpin",    "female":"Kingpin"     }
+
+LPUSH leaderguild_leader guildmaster
+HSET  leaderguild_leader_description guildmaster { "male":"Guildmaster",    "female":"Guildmaster"     }
 
 LPUSH leadermonarchy_leader king
 HSET  leadermonarchy_leader_description king { "male":"King",    "female":"Queen"     }
@@ -430,6 +415,9 @@ HSET  leadertownmeeting_leader_description elder { "male":"Elder",      "female"
 
 LPUSH leadermagistrate_leader magistrate
 HSET  leadermagistrate_leader_description magistrate { "male":"Magistrate",      "female":"Magistrate"      }
+
+LPUSH leaderunion_leader president
+HSET  leaderunion_leader_description president { "male":"President",   "female":"President"   }
 
 #
 #

@@ -3,6 +3,7 @@
 
 from country import Country
 from generator import Generator
+from name import Name
 import logging
 import random
 
@@ -13,8 +14,14 @@ class Continent(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
 
-        # set a random count
+        # If we're passing in a list of countries, we're hard-setting the country count.
+        if hasattr(self,'countries'):
+            self.countrycount=len(self.countries)
 
+        if not hasattr(self,'name'):
+            self.name=Name(self.redis, 'continent')
+
+        # set a random count
         if not hasattr(self, 'countrycount'):
             self.countrycount = random.randint(self.countrydetails['mincount'], self.countrydetails['maxcount'])
 
@@ -23,8 +30,8 @@ class Continent(Generator):
 
         if not hasattr(self, 'countries'):
             self.countries = []
-        for countryid in xrange(self.countrycount):
+        while len(self.countries) < self.countrycount :
             self.countries.append(Country(self.redis, {'continent': self}))
 
     def __str__(self):
-        return '%s with %s countries' % (self.name['full'], self.countrycount)
+        return self.name.fullname

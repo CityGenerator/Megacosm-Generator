@@ -3,8 +3,8 @@
 
 from megacosm.generators import Artwork, Gem
 import unittest2 as unittest
-
-import redis
+import fixtures
+import fakeredis
 from config import TestConfiguration
 
 
@@ -12,7 +12,11 @@ class TestArtwork(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = fakeredis.FakeRedis()
+        fixtures.artwork.import_fixtures(self)
+        fixtures.gem.import_fixtures(self)
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_artwork(self):
         """  """

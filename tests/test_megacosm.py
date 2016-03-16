@@ -4,6 +4,9 @@
 
 import megacosm
 from flask.ext.testing import TestCase
+import fakeredis
+import fixtures
+from flask import Flask
 
 
 class MegacosmFlaskTestCast(TestCase):
@@ -12,17 +15,54 @@ class MegacosmFlaskTestCast(TestCase):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
         megacosm.app.debug = False
+        megacosm.app.server=fakeredis.FakeRedis()
         return app
 
     def setUp(self):
         self.app = megacosm.app.test_client()
+        self.redis=megacosm.app.server
+        fixtures.bond.import_fixtures(self)
+        fixtures.business.import_fixtures(self)
+        fixtures.city.import_fixtures(self)
+        fixtures.continent.import_fixtures(self)
+        fixtures.country.import_fixtures(self)
+        fixtures.cuisine.import_fixtures(self)
+        fixtures.currency.import_fixtures(self)
+        fixtures.curse.import_fixtures(self)
+        fixtures.deity.import_fixtures(self)
+        fixtures.dungeon.import_fixtures(self)
+        fixtures.event.import_fixtures(self)
+        fixtures.flag.import_fixtures(self)
+        fixtures.gem.import_fixtures(self)
+        fixtures.geomorphdungeon.import_fixtures(self)
+        fixtures.govt.import_fixtures(self)
+        fixtures.jobposting.import_fixtures(self)
+        fixtures.leader.import_fixtures(self)
+        fixtures.legend.import_fixtures(self)
+        fixtures.misfire.import_fixtures(self)
+        fixtures.magicitem.import_fixtures(self)
+        fixtures.moon.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.mundaneitem.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.organization.import_fixtures(self)
+        fixtures.planet.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.region.import_fixtures(self)
+        fixtures.resource.import_fixtures(self)
+        fixtures.roguedungeon.import_fixtures(self)
+        fixtures.rumor.import_fixtures(self)
+        fixtures.sect.import_fixtures(self)
+        fixtures.star.import_fixtures(self)
+        fixtures.starsystem.import_fixtures(self)
+        fixtures.street.import_fixtures(self)
+        fixtures.weather.import_fixtures(self)
+        fixtures.wanted.import_fixtures(self)
+        self.redis.lpush('npc_race','kobold')
 
     def tearDown(self):
+        megacosm.app.server.flushall()
         self.app = None
-        megacosm.app.server.delete('unittestgenerator_list')
-        megacosm.app.server.delete('unittestgenerator_list_chance')
-        megacosm.app.server.delete('unittestgenerator_range')
-        megacosm.app.server.delete('unittestgenerator_list_description')
 
 ################################################################
 
@@ -41,27 +81,6 @@ class MegacosmFlaskTestCast(TestCase):
         with self.assertRaisesRegexp(ValueError, 'failed to parse unittestgenerator_range field {"name":"test2"'):
             megacosm.builder_form_data('unittestgenerator')
 
-#    paramlist={}
-#    paramstring={}
-#    paramset={}
-#    for key in server.keys(generator+'_*'):
-#        fieldname=key.replace(generator+'_','')
-#        if server.type(key) == 'list' :
-#            paramlist[fieldname]=server.lrange(key,0,-1)
-#        elif server.type(key) == 'string' :
-#            paramstring[fieldname]=server.get(key)
-#        elif server.type(key) == 'zset' :
-#            result= server.zrangebyscore(key,1,100)
-#            paramset[fieldname]=[]
-#            for field in result:
-#                try:
-#                    paramset[fieldname].append( json.loads(field))
-#                except ValueError as e:
-#                    raise Exception ("failed to parse",key,"field", field)
-#    return paramlist,paramstring,paramset
-
-################################################################
-
     def test_isvalidscore(self):
         self.assertTrue(megacosm.isvalidscore('100'))
         self.assertTrue(megacosm.isvalidscore('50'))
@@ -69,6 +88,12 @@ class MegacosmFlaskTestCast(TestCase):
         self.assertFalse(megacosm.isvalidscore('-10'))
         self.assertFalse(megacosm.isvalidscore('1010'))
         self.assertFalse(megacosm.isvalidscore('Fred'))
+################################################################
+
+    def test_select_uppercase(self):
+        self.assertEquals('DOG', megacosm.select_uppercase('dog'))
+        self.assertEquals('APPLE?', megacosm.select_uppercase('Apple?'))
+        self.assertEquals('HOUR.!', megacosm.select_uppercase('HOUR.!'))
 
 ################################################################
 
@@ -128,7 +153,7 @@ class MegacosmFlaskTestCast(TestCase):
         self.assertTemplateUsed('index.html')
         self.assert200(response)
 
-###############################################################
+################################################################
 
     def test_bond_route(self):
         response = self.app.get('/bond')
@@ -146,6 +171,15 @@ class MegacosmFlaskTestCast(TestCase):
 
     def test_business_builder_route(self):
         response = self.app.get('/business_builder')
+        self.assert200(response)
+################################################################
+
+    def test_city_route(self):
+        response = self.app.get('/city')
+        self.assert200(response)
+
+    def test_city_builder_route(self):
+        response = self.app.get('/city_builder')
         self.assert200(response)
 
 ################################################################
@@ -278,7 +312,7 @@ class MegacosmFlaskTestCast(TestCase):
         response = self.app.get('/legend_builder')
         self.assert200(response)
 
-################################################################
+###############################################################
 
     def test_magicitem_route(self):
         response = self.app.get('/magicitem')
@@ -288,7 +322,7 @@ class MegacosmFlaskTestCast(TestCase):
         response = self.app.get('/magicitem_builder')
         self.assert200(response)
 
-################################################################
+###############################################################
 
     def test_misfire_route(self):
         response = self.app.get('/misfire')
@@ -320,6 +354,26 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
 
+    def test_organization_route(self):
+        response = self.app.get('/organization')
+        self.assert200(response)
+
+    def test_organization_builder_route(self):
+        response = self.app.get('/organization_builder')
+        self.assert200(response)
+
+################################################################
+
+    def test_phobia_route(self):
+        response = self.app.get('/phobia')
+        self.assert200(response)
+
+    def test_phobia_builder_route(self):
+        response = self.app.get('/phobia_builder')
+        self.assert200(response)
+
+################################################################
+
     def test_mundaneitem_route(self):
         response = self.app.get('/mundaneitem')
         self.assert200(response)
@@ -331,6 +385,7 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_npc_route(self):
+
         response = self.app.get('/npc')
         self.assert200(response)
 
@@ -391,6 +446,7 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_sect_route(self):
+        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/sect')
         self.assert200(response)
 
@@ -398,7 +454,7 @@ class MegacosmFlaskTestCast(TestCase):
         response = self.app.get('/sect_builder')
         self.assert200(response)
 
-################################################################
+#################################################################
 
     def test_star_route(self):
         response = self.app.get('/star')
@@ -421,6 +477,7 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_wanted_route(self):
+        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/wanted')
         self.assert200(response)
 
@@ -431,9 +488,34 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_weather_route(self):
+        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/weather')
         self.assert200(response)
 
     def test_weather_builder_route(self):
         response = self.app.get('/weather_builder')
         self.assert200(response)
+################################################################
+
+    def test_404_route(self):
+        response = self.app.get('/brokenroute')
+        self.assert404(response)
+
+################################################################
+    def test_feature_filter_npc(self):
+        self.redis.lpush('npc_race','kobold')
+        response = self.app.get('/npc?npc_endurance_roll=100&npc_medical_condition=0')
+        self.assert200(response)
+
+    def test_feature_filter_business(self):
+        self.redis.lpush('npc_race','kobold')
+        response = self.app.get('/business?business_kind=bus_adventurersguild')
+        self.assert200(response)
+        response = self.app.get('/business?business_kind=nothingcorrect')
+        self.assert200(response)
+        response = self.app.get('/business?business_kind=@@@')
+        self.assert200(response)
+        response = self.app.get('/business?business_kindof=bogus')
+        self.assert200(response)
+
+

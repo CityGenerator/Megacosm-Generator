@@ -3,8 +3,8 @@
 
 from megacosm.generators import Bond
 import unittest2 as unittest
-
-import redis
+import fixtures
+import fakeredis
 from config import TestConfiguration
 
 
@@ -12,15 +12,23 @@ class TestBond(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+        self.redis = fakeredis.FakeRedis()
+        fixtures.bond.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        self.redis.lpush('npc_race','gnome')
+
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_random_bond(self):
-        """  """
+        """  Test a "random" bond. """
         bond = Bond(self.redis)
-        self.assertNotEqual('', bond.text)
+        self.assertIn(  bond.text, [ 'Way back when, you amused Tom Gyro in an unusual way.', 'Way back when, Tom Gyro amused you in an unusual way.'])
 
     def test_bond_features(self):
-        """  """
+        """  Pass in all bond fields. """
         bond = Bond(self.redis, {
             'you': 'Jesse',
             'other': 'Will',
@@ -29,35 +37,15 @@ class TestBond(unittest.TestCase):
             'partyB': 'Rich',
             'template': '{{params.you}} {{params.other}} {{params.either}} {{params.partyA}} {{params.partyB}}',
             'bond_when_roll': 5,
-            'when': 'Bob',
+            'when': 'Recently',
             })
-        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', bond.text)
-        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', "%s" % bond)
+        self.assertEqual('Recently, Jesse Will Tony Shaun Rich', bond.text)
+        self.assertEqual('Recently, Jesse Will Tony Shaun Rich', "%s" % bond)
 
-    def test_bond_non_features(self):
-        """  """
+
+    def test_bond_static_text(self):
+        """  Pass in all bond fields. """
         bond = Bond(self.redis, {
-            'bond_when_roll': 100,
-            'template': 'Bob, Jesse Will Tony Shaun Rich',
+            'text': 'Tacos Tacos Tacos',
             })
-
-        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', bond.text)
-        self.assertEqual('Bob, Jesse Will Tony Shaun Rich', "%s" % bond)
-
-    def test_bond_data(self):
-        bond = Bond(self.redis, {
-            'you': 'Jesse',
-            'other': 'Will',
-            'either': 'Tony',
-            'partyA': 'Shaun',
-            'partyB': 'Rich',
-            'template': '{{params.you}} {{params.other}} {{params.either}} {{params.partyA}} {{params.partyB}}',
-            'bond_when_roll': 100,
-            'when': 'Bob',
-            })
-        total = self.redis.llen('bond_template')
-        for i in range(0, total):
-            bond.template = self.redis.lindex('bond_template', i)
-            results = bond.render_template(bond.template)
-            self.assertNotEquals("", results)
-            self.assertNotIn("{{", results)
+        self.assertEqual('Tacos Tacos Tacos', bond.text)

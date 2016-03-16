@@ -3,6 +3,7 @@
 
 from generator import Generator
 from npc import NPC
+from name import Name
 import logging
 import random
 
@@ -18,12 +19,8 @@ class Currency(Generator):
 
         if not hasattr(self, 'count'):
             self.count = random.randint(self.amount['min'], self.amount['max'])
-
-        # Perhaps your currency has a person on it- a king, queen, etc.
-
-        if not hasattr(self, 'npc'):
-            setattr(self, 'npc', NPC(self.redis))
-        self.logger.error('test')
+        if not hasattr(self, 'name'):
+            self.name=Name(self.redis,'currency')
 
         # Double parse the template to fill in templated template values.
 

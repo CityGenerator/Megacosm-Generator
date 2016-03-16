@@ -11,7 +11,7 @@ from megacosm.util import Seeds
 import json
 import logging
 import random
-
+from pprint import pprint
 
 class Generator(object):
 
@@ -40,7 +40,7 @@ class Generator(object):
 
         # For naming conventions, we use "name"+classname+"stuff"
 
-        self.name = self.generate_name('name_' + namekey)
+#        self.name = Name(self.redis, namekey)
 
         # For each feature, set it as an attribute for this generator
 
@@ -66,8 +66,6 @@ class Generator(object):
 
     def generate_feature(self, namekey, key):
 
-        # check to see if your key has a related chance key
-
         if self.redis.exists(key + '_chance'):
 
             # make sure the value is not already set, then grab it.
@@ -85,6 +83,8 @@ class Generator(object):
 
             if int(getattr(self, key + '_roll')) > getattr(self, key + '_chance'):
                 return
+            # FIXME Note that there is no condition for a seperate chance and roll; 
+            # i.e. a 1% chance of something happening, then a separate d100 roll to determine effect.
 
         # #########################################################################################
         # Provided you had no associated _chance or that you succeeded on the chance roll, you can
@@ -124,38 +124,6 @@ class Generator(object):
                     self.logger.critical("JSON parsing error: Couldn't read json %s", desc_text)
                     raise ValueError("JSON parsing error: Couldn't read json", desc_text)
 
-####################################################
-# needs refactoring below here.
-
-    # FIXME this needs to be integrated with what NPC races use...
-
-    def generate_name(self, key):
-        """ Given a key, query redis and check if all 5 parts of a name exist, then generate a name structure.
-            This creates the structure "Title PreRootPost Trailer"
-            Note that in the full name, the title has a trailing space and the trailer has a preceeding space.
-            Pre, Root and Post have no spaces."""
-        name = {'full': ''}
-
-        if self.redis.exists(key + 'title'):
-            roll = random.randint(1, 100)
-            if not self.redis.exists(key + 'title_chance') or roll < int(self.redis.get(key + 'title_chance')):
-                name['title'] = self.rand_value(key + 'title')
-                name['full'] = name['title'] + ' '
-
-        for part in ['pre', 'root', 'post']:
-            if self.redis.exists(key + part):
-                if (not self.redis.exists(key + part + '_chance') or
-                        random.randint(1, 100) < int(self.redis.get(key + part + '_chance'))):
-                    name[part] = self.rand_value(key + part)
-                    name['full'] += name[part]
-
-        if self.redis.exists(key + 'trailer'):
-            roll = random.randint(1, 100)
-            if not self.redis.exists(key + 'trailer_chance') or roll < int(self.redis.get(key + 'trailer_chance')):
-                name['trailer'] = self.rand_value(key + 'trailer')
-                name['full'] += ' ' + name['trailer']
-        return name
-
     def rand_value(self, key):
         """ Select a Random Value from the list matching the key in redis. """
 
@@ -174,20 +142,19 @@ class Generator(object):
 
         roll = max(1, min(getattr(self, key + '_roll'), 100))
 
+        if self.redis.type(key) is None:
+            raise ValueError('The key %s does not exist.' % key)
+        elif self.redis.type(key) != 'zset':
+            raise TypeError('The key %s is not a zset; the type is %s.' % (key, self.redis.type(key)))
+
         try:
             rollvalue = self.redis.zrangebyscore(key, roll, 100, 0, 1)
-            if rollvalue is None:
-                raise LookupError
+            if not rollvalue :
+                raise LookupError('The key (%s) appears to be empty for a roll of %s- This should never happen.' % (key, roll))
             return json.loads(rollvalue[0])
-        except IndexError:
-            raise IndexError('Is %s a valid key?' % key)
-        except LookupError:
-            raise Exception('the key (%s) appears to be empty for a roll of %s- This should never happen.' % (key,
-                            roll))
         except ValueError:
-            raise Exception("JSON parsing error: Couldn't read json", rollvalue[0])
-        except Exception:
-            raise Exception("the key (%s) doesn't appear to exist or isn't a zset (%s)." % (key, self.redis.type(key)))
+            raise ValueError("JSON parsing error: Couldn't read json", rollvalue[0])
+
 
     def render_template(self, template):
         """ Renders a given template using itself."""
@@ -202,3 +169,7 @@ class Generator(object):
         template = environment.from_string(template)
 
         return template.render(params=self)
+
+    def dump_vars(self):
+        pprint(vars(self))
+        return vars(self)

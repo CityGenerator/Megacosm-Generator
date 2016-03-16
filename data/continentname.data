@@ -1,30 +1,42 @@
 # what
+LPUSH continentname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_shortname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
+LPUSH continentname_formalname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}}
 
-SET   name_continenttitle_chance 10
-LPUSH name_continenttitle North
-LPUSH name_continenttitle South
-LPUSH name_continenttitle East
-LPUSH name_continenttitle West
 
-LPUSH name_continentpre As
-LPUSH name_continentpre Eur
-LPUSH name_continentpre An
-LPUSH name_continentpre Del
-LPUSH name_continentpre Mon
-LPUSH name_continentpre Na
-LPUSH name_continentpre Ko
+set continentname_title_chance 10
+set continentname_pre_chance 100
+set continentname_root_chance 100
+set continentname_post_chance 30
 
-LPUSH name_continentroot sar
-LPUSH name_continentroot gar
-LPUSH name_continentroot bel
-LPUSH name_continentroot por
-LPUSH name_continentroot ama
-LPUSH name_continentroot lax
 
-SET   name_continentpost_chance 30
-LPUSH name_continentpost ica
-LPUSH name_continentpost iv
-LPUSH name_continentpost ek
-LPUSH name_continentpost ar
+LPUSH continentname_title North
+LPUSH continentname_title South
+LPUSH continentname_title East
+LPUSH continentname_title West
+
+LPUSH continentname_pre As
+LPUSH continentname_pre Eur
+LPUSH continentname_pre An
+LPUSH continentname_pre Del
+LPUSH continentname_pre Mon
+LPUSH continentname_pre Na
+LPUSH continentname_pre Ko
+LPUSH continentname_pre Mol
+
+LPUSH continentname_root sar
+LPUSH continentname_root gar
+LPUSH continentname_root bel
+LPUSH continentname_root por
+LPUSH continentname_root ama
+LPUSH continentname_root lax
+LPUSH continentname_root dov
+LPUSH continentname_root rov
+
+LPUSH continentname_post ica
+LPUSH continentname_post iv
+LPUSH continentname_post ek
+LPUSH continentname_post ar
+LPUSH continentname_post i
 
 

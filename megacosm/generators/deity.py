@@ -23,7 +23,7 @@ class Deity(NPC):
     def add_sects(self):  # TODO make this more like countries for continents
         """ each portfolio item except the largest domain can have a sect"""
 
-        if not hasattr(self, 'sect'):
+        if not hasattr(self, 'sects'):
             self.sects = []
 
         # ignore the primary domain and shuffle the rest
@@ -46,12 +46,14 @@ class Deity(NPC):
                 sect = Sect(self.redis, {'deity': self, 'domain': domain})
                 self.sects.append(sect)
                 sectchance = sectchance / 2
+        #Ensure the deity is set.
+        for sect in self.sects:
+            sect.deity=self
 
     def select_portfolio(self):
         """  use the deity's importance to determine how many portfolios it has. """
 
         points = int(self.importance['points'])
-
         # domains are split up by power level; the more valuable, the higher the power
         # Values currently include: 16, 8, 6, 5, 4, 3, 2, 1
 
@@ -90,10 +92,9 @@ class Deity(NPC):
 
                 # While we can support this power level, lets use it until we can't.
 
-                while powerlevel <= points:
+                while powerlevel <= points and len(portfolios) > 0:
 
                     # pop a new portfolio off the list.
-
                     newdomain = json.loads(portfolios.pop())
 
                     # make sure our powerlevel is still what we expect

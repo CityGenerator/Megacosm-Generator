@@ -1,6 +1,7 @@
 blinker
 coverage
 coveralls
+fakeredis
 fixture
 flake8
 Flask

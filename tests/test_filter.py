@@ -3,11 +3,14 @@
 #
 
 import unittest2 as unittest
-from megacosm import select_article, select_pluralize, select_conjunction
+from megacosm import select_article, select_pluralize, select_conjunction, select_uppercase
 from megacosm import select_plural_verb, select_plural_adj
 
 
 class TestFilter(unittest.TestCase):
+
+    def test_select_uppercase(self):
+        self.assertEquals('DOG', select_uppercase('dog'))
 
     def test_select_article(self):
         self.assertEquals('a dog', select_article('dog'))

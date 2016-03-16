@@ -1,39 +1,45 @@
 #
 
-LPUSH name_moonpre Mo
-LPUSH name_moonpre Dei
-LPUSH name_moonpre Pho
-LPUSH name_moonpre Gana
-LPUSH name_moonpre Calli
-LPUSH name_moonpre Hima
-LPUSH name_moonpre Ela
-LPUSH name_moonpre Sino
-LPUSH name_moonpre The
-LPUSH name_moonpre Cha
-LPUSH name_moonpre Spo
-LPUSH name_moonpre Pro
+LPUSH moonname_fullname_template {{params.pre}}{{params.root}}{{params.post}}
+LPUSH moonname_shortname_template {{params.fullname}}
+LPUSH moonname_formalname_template {{params.fullname}}
 
-LPUSH name_moonroot ro
-LPUSH name_moonroot ka
-LPUSH name_moonroot di
-LPUSH name_moonroot do
-LPUSH name_moonroot la
-LPUSH name_moonroot ta
-LPUSH name_moonroot le
-LPUSH name_moonroot me
 
-SET   name_moonpost_chance 30
-LPUSH name_moonpost bos
-LPUSH name_moonpost mos
-LPUSH name_moonpost pa
-LPUSH name_moonpost sto
-LPUSH name_moonpost pe
-LPUSH name_moonpost ke
-LPUSH name_moonpost lite
-LPUSH name_moonpost dene
-LPUSH name_moonpost noe
-LPUSH name_moonpost se
-LPUSH name_moonpost thys
-LPUSH name_moonpost dus
-LPUSH name_moonpost pso
-LPUSH name_moonpost theus
+set moonname_post_chance 30
+
+LPUSH moonname_pre Mo
+LPUSH moonname_pre Dei
+LPUSH moonname_pre Pho
+LPUSH moonname_pre Gana
+LPUSH moonname_pre Calli
+LPUSH moonname_pre Hima
+LPUSH moonname_pre Ela
+LPUSH moonname_pre Sino
+LPUSH moonname_pre The
+LPUSH moonname_pre Cha
+LPUSH moonname_pre Spo
+LPUSH moonname_pre Pro
+
+LPUSH moonname_root ro
+LPUSH moonname_root ka
+LPUSH moonname_root di
+LPUSH moonname_root do
+LPUSH moonname_root la
+LPUSH moonname_root ta
+LPUSH moonname_root le
+LPUSH moonname_root me
+
+LPUSH moonname_post bos
+LPUSH moonname_post mos
+LPUSH moonname_post pa
+LPUSH moonname_post sto
+LPUSH moonname_post pe
+LPUSH moonname_post ke
+LPUSH moonname_post lite
+LPUSH moonname_post dene
+LPUSH moonname_post noe
+LPUSH moonname_post se
+LPUSH moonname_post thys
+LPUSH moonname_post dus
+LPUSH moonname_post pso
+LPUSH moonname_post theus

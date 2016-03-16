@@ -4,6 +4,9 @@
 from generator import Generator
 from business import Business
 from npc import NPC
+import leader
+#from leader import Leader
+from name import Name
 import region
 import json
 import random
@@ -16,9 +19,16 @@ class City(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
         if not hasattr(self, 'region'):
+            print "noregion!!!"
             self.region = region.Region(self.redis)
 
         self.gatheringplace = Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
+        if not hasattr(self, 'leader'):
+            self.leader = leader.Leader(self.redis, {"location":self})
+            #self.leader = Leader(self.redis)
+
+        if not hasattr(self, 'name'):
+            self.name=Name(self.redis, 'city')
 
         self.citizen = NPC(self.redis)
 
@@ -63,6 +73,8 @@ class City(Generator):
         subraces = self.redis.lrange(parentrace + '_subrace', 0, -1)
         random.shuffle(subraces)
         for subrace in subraces:
+            print "for %s in %s" %(subrace,subraces)
+            print "parentpercentage: %s" % (parentpercentage)
             subracepercentage = random.randint(1, parentpercentage)
             if total + subracepercentage < parentpercentage:
                 total += subracepercentage
@@ -84,8 +96,15 @@ class City(Generator):
         final_racelist = {}
         self.racequalifiers = {'mostly': []}
         for race in sorted(self.races) :
+            #print "has_subraces: %s for %s, want subraces?" %(self.has_subraces(race), race)
+            #if self.has_subraces(race):
+            #    print self.want_subraces(race)
             if self.has_subraces(race) and self.want_subraces(race):
-                subraces = self.calculate_which_subraces(race, self.races[race])
+                print "race: %s, races: %s" %(race, self.races[race])
+                if isinstance(self.races[race], int ):
+                    subraces = self.calculate_which_subraces(race, self.races[race])
+                else:
+                    subraces=self.races[race]
                 final_racelist[race] = subraces
             else:
                 final_racelist[race] = self.races[race]
@@ -99,7 +118,7 @@ class City(Generator):
 
     def want_subraces(self, race):
         roll = random.randint(0, 100)
-
+        #print "want_race %s with %s chance and a roll of %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll)
         if roll < int(self.redis.get(race + '_subrace_chance')):
             return True
         else:
@@ -135,4 +154,4 @@ class City(Generator):
         return scales
 
     def __str__(self):
-        return '%s' % (self.name['full'])
+        return '%s' % (self.name.fullname)

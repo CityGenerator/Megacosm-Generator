@@ -1,7 +1,7 @@
 
 
 {% extends "base.html" %}
-{% block title %}Tremble Before {{tempobj.name['full']}} {% endblock %}
+{% block title %}Tremble Before {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
   <style type="text/css">
@@ -10,7 +10,7 @@
 {% endblock %}
 {% block content %}
 
-    <h1>Tremble Before <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Tremble Before <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
 
 
 
@@ -27,8 +27,8 @@
 
 <h2>Summary</h2>
 <p>
-{{tempobj.name['full']}} is {{tempobj.age['name'] |article}} {{tempobj.importance['name']}} who appreciates {{tempobj.favored_stat}}. 
-{{tempobj.name['firstname']}} is known as the god of {{tempobj.portfolios[0]['name']|title}}.
+{{tempobj.name.fullname}} is {{tempobj.age['name'] |article}} {{tempobj.importance['name']}} who appreciates {{tempobj.favored_stat}}. 
+{{tempobj.name.shortname}} is known as the god of {{tempobj.portfolios[0]['name']|title}}.
 {{tempobj.sex['pronoun']|capitalize}} is {{tempobj.health['name']}} in today's world.
 </p>
 <p>
@@ -37,25 +37,25 @@
 </p>
 
 <h2>Appearance</h2>
-{{tempobj.name['full']}} sometimes chooses to appear as {{tempobj.form|article}} before {{tempobj.sex['possessive']}} followers, but has been known to take the form of a {{tempobj.height}}, {{tempobj.age['name']}} {{tempobj.race}}.
+{{tempobj.name.fullname}} sometimes chooses to appear as {{tempobj.form|article}} before {{tempobj.sex['possessive']}} followers, but has been known to take the form of a {{tempobj.height}}, {{tempobj.age['name']}} {{tempobj.race}}.
 
 {{tempobj.sex['pronoun']|capitalize}} usually dresses in {{tempobj.sex['possessive']}} preferred colors, {{ tempobj.primarycolor_description['name']}} and {{ tempobj.secondarycolor_description['name']}}.
 
 <h2>Clergy</h2>
-While in public, {{tempobj.clergytype}} of {{tempobj.name['firstname']}} may wear {{tempobj.clergy_dress}}, and will often  follow a Vow of {{tempobj.vow_description['name']|capitalize}} - to {{tempobj.vow_description['description']}}.
+While in public, {{tempobj.clergytype}} of {{tempobj.name.shortname}} may wear {{tempobj.clergy_dress}}, and will often  follow a Vow of {{tempobj.vow_description['name']|capitalize}} - to {{tempobj.vow_description['description']}}.
 
 
 <h2>Followers</h2>
 
-{{tempobj.name['firstname']}}'s followers are {{tempobj.followerzeal['name']}}, and are often {{tempobj.secrecy['name']}} about their affiliation. {{tempobj.name['firstname']}} is thought to have {{tempobj.followercount['name']}} active worshipers throughout the world. Followers of Gobesh are {{tempobj.organized['name']}} organized.
+{{tempobj.name.shortname}}'s followers are {{tempobj.followerzeal['name']}}, and are often {{tempobj.secrecy['name']}} about their affiliation. {{tempobj.name.shortname}} is thought to have {{tempobj.followercount['name']}} active worshipers throughout the world. Followers of Gobesh are {{tempobj.organized['name']}} organized.
 
 
 {%if tempobj.sects%}
 <h2>Sects</h2>
-    {{tempobj.name['full']}} is known to have at least {{tempobj.sects|length}} {{ 'sect'|pluralize( tempobj.sects|length)}}.
+    {{tempobj.name.fullname}} is known to have at least {{tempobj.sects|length}} {{ 'sect'|pluralize( tempobj.sects|length)}}.
     <ul>
     {%for sect in tempobj.sects%}
-            <li>The {{sect.name['full']}} are {{sect.acceptance['name'] |article}} {{sect.kind}} that focuses on {{sect.domain['name']}}.
+            <li>The {{sect.name.fullname}} are {{sect.acceptance['name'] |article}} {{sect.kind}} that focuses on {{sect.domain['name']}}.
     {%endfor%}
     </ul>
 {%endif%}

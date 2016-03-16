@@ -127,9 +127,9 @@ HSET weapon_decoration_description runes    {"name":"runes",  "description":"str
 # painful sword[ of the bull]
 LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name']}}{%if params.ability_description%} of {{params.ability_description['name']}}{%endif%}
 # Bob's frigid sword
-LPUSH weapon_name_template {{ params.npc.name['firstname'] }}'s {{ params.category_description['name'] }}
+LPUSH weapon_name_template {{ params.npc.name.shortname }}'s {{ params.category_description['name'] }}
 # Sharp sword of Bob
-LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
+LPUSH weapon_name_template {{ params.effect_description['name'] }} {{ params.category_description['name'] }} of {{ params.npc.name.shortname }}
 # Sword of Bob
-LPUSH weapon_name_template {{ params.category_description['name'] }} of {{ params.npc.name['firstname'] }}
+LPUSH weapon_name_template {{ params.category_description['name'] }} of {{ params.npc.name.shortname }}
 

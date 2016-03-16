@@ -1,29 +1,29 @@
 
 {% extends "base.html" %}
-{% block title %}Welcome to {{tempobj.name['full']}} {% endblock %}
+{% block title %}Welcome to {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>Welcome to <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name['full']}} ({{tempobj.seed}})</a></h1>
+    <h1>Welcome to <a href="/{{tempobj.__class__.__name__.lower()}}?seed={{tempobj.seed}}">{{tempobj.name.fullname}} ({{tempobj.seed}})</a></h1>
 
     <h2>Summary</h2>
 <p>
-{{tempobj.name['full']}} is {{tempobj.age['name']|article}} {{tempobj.size['name']}} country.
-When foreigners are asked about {{tempobj.name['full']}}, they say it is {{tempobj.reputation['name']}} by other nations.
-Many outsiders consider {{tempobj.name['full']}} {{tempobj.aggression['name']}} towards other nations.
-People think the government of {{tempobj.name['full']}} is {{tempobj.corruption['name']}}, while the citizens {{tempobj.approval['name']}} it.
+{{tempobj.name.fullname}} is {{tempobj.age['name']|article}} {{tempobj.size['name']}} country.
+When foreigners are asked about {{tempobj.name.fullname}}, they say it is {{tempobj.reputation['name']}} by other nations.
+Many outsiders consider {{tempobj.name.fullname}} {{tempobj.aggression['name']}} towards other nations.
+People think the government of {{tempobj.name.fullname}} is {{tempobj.corruption['name']}}, while the citizens {{tempobj.approval['name']}} it.
 </p>
 <p>
 The country's Government is often described as {{tempobj.efficiency['name']}}.
-The political influence of {{tempobj.name['full']}} in the region is {{tempobj.influence['name']}}.
+The political influence of {{tempobj.name.fullname}} in the region is {{tempobj.influence['name']}}.
 In times of crisis, the population {{tempobj.unity['name']}}.
-Religion in {{tempobj.name['full']}} {{tempobj.theology['name']}}.
-Other nations see {{tempobj.name['full']}} as {{tempobj.military['name']}}.
+Religion in {{tempobj.name.fullname}} {{tempobj.theology['name']}}.
+Other nations see {{tempobj.name.fullname}} as {{tempobj.military['name']}}.
 </p>
 <p>
-Socially, {{tempobj.name['full']}} is {{tempobj.social['name']}} and {{tempobj.economic['name']}}.
+Socially, {{tempobj.name.fullname}} is {{tempobj.social['name']}} and {{tempobj.economic['name']}}.
 The right to govern was granted by {{tempobj.right}} and that power is maintained {{tempobj.maintained}}.
 </p>
 {% if tempobj.regions  %}
@@ -33,7 +33,7 @@ The right to govern was granted by {{tempobj.right}} and that power is maintaine
 
     <ul>
     {%for region in tempobj.regions %}
-        <li><a href="/region?seed={{region.seed}}&country_seed={{region.country.seed}}">{{region.name['full']}} ({{region.seed}})</a> is {{region.size['name']|article}} region.</li>
+        <li><a href="/region?seed={{region.seed}}&country_seed={{region.country.seed}}">{{region.name.fullname}} ({{region.seed}})</a> is {{region.size['name']|article}} region.</li>
     {%endfor%}
     </ul>
 

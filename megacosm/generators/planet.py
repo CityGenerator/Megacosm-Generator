@@ -3,6 +3,7 @@
 
 from continent import Continent
 from generator import Generator
+from name import Name
 from moon import Moon
 import logging
 import random
@@ -13,7 +14,9 @@ class Planet(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
-        self.add_moons()
+        if hasattr(self,'continents'):
+            self.continentcount=len(self.continents)
+        self.name=Name(self.redis, 'planet')
 
     def add_continents(self):
         """ Generate the continents for this planet"""
@@ -28,9 +31,8 @@ class Planet(Generator):
         if not hasattr(self, 'continentcount'):
             self.continentcount = random.randint(1, 5)
 
-        # Banzai, er generate continents!
 
-        for continentID in xrange(self.continentcount):
+        while len(self.continents) < self.continentcount:
             self.continents.append(Continent(self.redis, {'planet': self}))
 
     def add_moons(self):
@@ -38,8 +40,11 @@ class Planet(Generator):
 
         if not hasattr(self, 'moons'):
             self.moons = []
+        
 
         # Note that mooncount is a planet stat
+        while len(self.moons) < self.mooncount['count']:
+            self.moons.append(Continent(self.redis, {'planet': self}))
 
-        for moonId in xrange(self.mooncount['count']):
-            self.moons.append(Moon(self.redis))
+    def __str__(self):
+        return self.name.fullname

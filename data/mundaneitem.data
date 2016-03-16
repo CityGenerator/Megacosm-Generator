@@ -12,6 +12,14 @@ ZADD mundaneitem_quality  80 {"name":"average",  "score":90  }
 ZADD mundaneitem_quality  95 {"name":"good",     "score":95  }
 ZADD mundaneitem_quality 100 {"name":"excellent","score":100 }
 
+LPUSH mundaneitem_template {{params.quality['name']|article}} {{params.kind}} that is {{params.repair['name']}}
+
+LPUSH mundaneitem_metal gold
+LPUSH mundaneitem_metal silver 
+LPUSH mundaneitem_metal iron
+LPUSH mundaneitem_metal bronze
+LPUSH mundaneitem_metal tin
+LPUSH mundaneitem_metal copper
 
 
 LPUSH mundaneitem_kind 10-foot ladder

@@ -35,6 +35,8 @@ from flaw import Flaw
 assert Flaw
 from gem import Gem
 assert Gem
+from grafitti import Grafitti
+assert Grafitti
 from generator import Generator
 assert Generator
 from geomorphdungeon import GeomorphDungeon
@@ -57,10 +59,14 @@ from motivation import Motivation
 assert Motivation
 from mundaneitem import MundaneItem
 assert MundaneItem
+from name import Name
+assert Name
 from npc import NPC
 assert NPC
 from organization import Organization
 assert Organization
+from phobia import Phobia
+assert Phobia
 from planet import Planet
 assert Planet
 from region import Region

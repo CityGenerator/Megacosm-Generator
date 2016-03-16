@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from generator import Generator
+from name import Name
 import json
 import logging
 import random
@@ -9,51 +10,43 @@ import random
 
 class GeomorphDungeon(Generator):
 
-    # This is a simple translation table
-    # bits are sorted [ left bottom right top ]
-
-    CELL_TYPES = {  # No connections
-                    # one side
-                    # one side
-                    # twoside corner
-                    # one side
-                    # twoside straight
-                    # twosided corner
-                    # Three sides
-                    # one side
-                    # twosided corner
-                    # twosided straight
-                    # three sides
-                    # twosided corner
-                    # threesided
-                    # three sides
-                    # Four connections
-        '0b0': {'type': '0000', 'rotation': 0},
-        '0b1': {'type': '0001', 'rotation': 0},
-        '0b10': {'type': '0001', 'rotation': 1},
-        '0b11': {'type': '0010', 'rotation': 0},
-        '0b100': {'type': '0001', 'rotation': 2},
-        '0b101': {'type': '0011', 'rotation': 0},
-        '0b110': {'type': '0010', 'rotation': 1},
-        '0b111': {'type': '0100', 'rotation': 0},
-        '0b1000': {'type': '0001', 'rotation': 3},
-        '0b1001': {'type': '0010', 'rotation': 3},
-        '0b1010': {'type': '0011', 'rotation': 1},
-        '0b1011': {'type': '0100', 'rotation': 3},
-        '0b1100': {'type': '0010', 'rotation': 2},
-        '0b1101': {'type': '0100', 'rotation': 2},
-        '0b1110': {'type': '0100', 'rotation': 1},
-        '0b1111': {'type': '0101', 'rotation': 0},
+    # This is a simple translation table. I say simple, but it's probably not.
+    # All possible connection configurations result in 16 possible combinations.
+    # These combinations are described in binary (the lead string).
+    # Each combination can be broken down into only 5 tiles with different rotations.
+    # type: refers to one of the basic 5 tile types:
+    #       one side, two sides across, two sides adjacent, three sides, four sides.
+    # Rotation: refers to the orientation of the tile: It can be rotated 0-3 times.
+    CELL_TYPES = {
+        # bits are sorted [ left bottom right top ]
+        '0b0': {'type': '0000', 'rotation': 0},     # No connections
+        '0b1': {'type': '0001', 'rotation': 0},     # one side
+        '0b10': {'type': '0001', 'rotation': 1},    # one side
+        '0b11': {'type': '0010', 'rotation': 0},    # twoside adjacent
+        '0b100': {'type': '0001', 'rotation': 2},   # one side
+        '0b101': {'type': '0011', 'rotation': 0},   # twoside across
+        '0b110': {'type': '0010', 'rotation': 1},   # twosided adjacent
+        '0b111': {'type': '0100', 'rotation': 0},   # Three sides
+        '0b1000': {'type': '0001', 'rotation': 3},  # one side
+        '0b1001': {'type': '0010', 'rotation': 3},  # twosided adjacent
+        '0b1010': {'type': '0011', 'rotation': 1},  # twosided across
+        '0b1011': {'type': '0100', 'rotation': 3},  # three sides
+        '0b1100': {'type': '0010', 'rotation': 2},  # twosided adjacent
+        '0b1101': {'type': '0100', 'rotation': 2},  # threesided
+        '0b1110': {'type': '0100', 'rotation': 1},  # three sides
+        '0b1111': {'type': '0101', 'rotation': 0},  # Four connections
         }
 
     def __init__(self, redis, features={}):
         """ Generate a Geomorph-like dungeon """
-
+        #FIXME geomorph and rogue should share a parent DungeonGenerator
+        #FIXME move the dungeon_template to a dungeon_name object or something
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
+        #These are generic dungon features shared with RogueDungeon
         self.generate_features('dungeon')
 
-        self.apply_text_template()  # FIXME refactor with RogueDungeon on dungeon names...
+        self.name=Name(self.redis,'dungeon')
         self.width = self.gridwidth['tiles']
         self.height = self.gridheight['tiles']
 
@@ -61,111 +54,118 @@ class GeomorphDungeon(Generator):
         self.generate_connections()
         self.set_tiletypes()
 
-    def apply_text_template(self):
+    def generate_dungeon_name(self):
+        """ Read the dungeon_template from dungeon_data and construct the name."""
         if not hasattr(self, 'text'):
             self.text = self.render_template(self.template)
             self.text = self.render_template(self.text)
         self.text = self.text.title()
 
-    def convert_to_json(self):
+    def __str__(self):
+        """ print the name as a string."""
+        return self.name.fullname.title()
+
+    def simplify_for_json(self):
+        """ Convert our pretty grid into something json-friendly."""
         resultmatrix = []
-        for row in self.spaces:
+        for row in self.grid:
             resultrow = []
-            for cell in row:
-                resultrow.append({'path': cell.image, 'rotation': cell.imagerotation})
+            for tile in row:
+                resultrow.append({'path': tile.image, 'rotation': tile.imagerotation})
             resultmatrix.append(resultrow)
+        # Note this is returning a clean array of arrays
         return resultmatrix
 
     def set_tiletypes(self):
-        for row in self.spaces:
-            for cell in row:
+        """ """
+        for row in self.grid:
+            for tile in row:
+                tile = self.generate_tiletype(tile)
 
-                # calculate the binary "cell type"
+    def generate_tiletype(self, tile):
+        # calculate the binary "tile type"
+        tile.tiletype = bin((tile.left << 3) + (tile.bottom << 2) + (tile.right << 1) + (tile.top << 0))
 
-                cell.tiletype = bin((cell.left << 3) + (cell.bottom << 2) + (cell.right << 1) + (cell.top << 0))
+        # translate it with the table
+        tile.imagetype = int(self.CELL_TYPES[tile.tiletype]['type'], 2)
 
-                # translate it with the table
+        # Using the proper tile type, select an image from redis
+        tiledata = json.loads(self.rand_value('geomorph_type_' + str(tile.imagetype)))
+        tile.image = str(tiledata['path'])
+        tile.author = str(tiledata['author'])
+        tile.tileset = str(tiledata['tileset'])
 
-                cell.imagetype = int(self.CELL_TYPES[cell.tiletype]['type'], 2)
-
-                # Using the proper cell type, select an image from redis
-
-                tiledata = json.loads(self.rand_value('geomorph_type_' + str(cell.imagetype)))
-                cell.image = str(tiledata['path'])
-                cell.author = str(tiledata['author'])
-                cell.tileset = str(tiledata['tileset'])
-
-                # Make sure to capture the rotation needed
-
-                cell.imagerotation = self.CELL_TYPES[cell.tiletype]['rotation']
+        # Make sure to capture the rotation needed
+        tile.imagerotation = self.CELL_TYPES[tile.tiletype]['rotation']
+        return tile
 
     def generate_grid(self):
 
-        self.spaces = [[GeomorphDungeon.Tile(i, j) for i in range(self.width)] for j in range(self.height)]
+        self.grid = [[GeomorphDungeon.Tile(i, j) for i in range(self.width)] for j in range(self.height)]
 
     def generate_connections(self):
         alltiles = []
-        for row in self.spaces:
-            for cell in row:
-                alltiles.append(cell)
+        for row in self.grid:
+            for tile in row:
+                alltiles.append(tile)
 
         random.shuffle(alltiles)
 
-        for cell in alltiles:
-            self.calculate_top(cell)
-            self.calculate_right(cell)
-            self.calculate_bottom(cell)
-            self.calculate_left(cell)
+        for tile in alltiles:
+            self.calculate_top(tile)
+            self.calculate_right(tile)
+            self.calculate_bottom(tile)
+            self.calculate_left(tile)
 
-    def calculate_top(self, cell):
-        if cell.y == 0:
-            cell.top = False
-        elif self.spaces[cell.y - 1][cell.x].bottom is not None:
-            cell.top = self.spaces[cell.y - 1][cell.x].bottom
+    def calculate_top(self, tile):
+        if tile.y == 0:
+            tile.top = False
+        elif self.grid[tile.y - 1][tile.x].bottom is not None:
+            tile.top = self.grid[tile.y - 1][tile.x].bottom
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
-                cell.top = False
+                tile.top = False
             else:
-                cell.top = True
+                tile.top = True
 
-    def calculate_right(self, cell):
-        if cell.x == len(self.spaces[0]) - 1:
-            cell.right = False
-        elif self.spaces[cell.y][cell.x + 1].left is not None:
-            cell.right = self.spaces[cell.y][cell.x + 1].left
+    def calculate_right(self, tile):
+        if tile.x == len(self.grid[0]) - 1:
+            tile.right = False
+        elif self.grid[tile.y][tile.x + 1].left is not None:
+            tile.right = self.grid[tile.y][tile.x + 1].left
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
-                cell.right = False
+                tile.right = False
             else:
-                cell.right = True
+                tile.right = True
 
-    def calculate_bottom(self, cell):
-        if cell.y == len(self.spaces) - 1:
-            cell.bottom = False
-        elif self.spaces[cell.y + 1][cell.x].top is not None:
-            cell.bottom = self.spaces[cell.y + 1][cell.x].top
+    def calculate_bottom(self, tile):
+        if tile.y == len(self.grid) - 1:
+            tile.bottom = False
+        elif self.grid[tile.y + 1][tile.x].top is not None:
+            tile.bottom = self.grid[tile.y + 1][tile.x].top
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
-                cell.bottom = False
+                tile.bottom = False
             else:
-                cell.bottom = True
+                tile.bottom = True
 
-    def calculate_left(self, cell):
-        if cell.x == 0:
-            cell.left = False
-        elif self.spaces[cell.y][cell.x - 1].right is not None:
-            cell.left = self.spaces[cell.y][cell.x - 1].right
+    def calculate_left(self, tile):
+        if tile.x == 0:
+            tile.left = False
+        elif self.grid[tile.y][tile.x - 1].right is not None:
+            tile.left = self.grid[tile.y][tile.x - 1].right
         else:
             if random.randint(0, self.segmentation['solidchance']) == 0:
-                cell.left = False
+                tile.left = False
             else:
-                cell.left = True
+                tile.left = True
 
     class Tile(object):
 
         def __init__(self, x, y):
             """ test """
-
+            #TODO do testing on x and y to ensure they're digits.
         # def __init__(self, char='#'):
 
             self.left = None

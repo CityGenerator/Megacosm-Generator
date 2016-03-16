@@ -31,7 +31,6 @@ from megacosm.generators import Wanted
 from megacosm.generators import Weather
 from megacosm.util.Seeds import set_seed
 from megacosm.util import Filters
-import redis
 import datetime
 import json
 import re
@@ -41,7 +40,7 @@ import traceback
 def create_app(config_location='config.BaseConfiguration'):
     app = Flask(__name__)
     app.config.from_object(config_location)
-    app.server = redis.from_url(app.config['REDIS_URL'])
+    app.server = app.config['REDIS']
     return app
 
 
@@ -419,7 +418,7 @@ def generategeomorphdungeon():
 
     features = feature_filter('geomorphdungeon')
     geomorphdungeon = GeomorphDungeon(app.server, features)
-    return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.convert_to_json())
+    return render_template('geomorphdungeon.html', tempobj=geomorphdungeon, jsondata=geomorphdungeon.simplify_for_json())
 
 
 @app.route('/geomorphdungeon_builder')
@@ -440,7 +439,7 @@ def generateroguedungeon():
 
     features = feature_filter('roguedungeon')
     roguedungeon = RogueDungeon(app.server, features)
-    return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.convert_to_json())
+    return render_template('roguedungeon.html', tempobj=roguedungeon, jsondata=roguedungeon.simplify_for_json())
 
 
 @app.route('/roguedungeon_builder')
@@ -628,6 +627,11 @@ def page_borked(error):
 
     return (render_template('500.html', seed=app.seed, request=request, e=error, time=time), 500)
 
+@app.template_filter('uppercase')
+def select_uppercase(word):
+    """Switch the word to uppercase"""
+
+    return Filters.select_uppercase(word)
 
 @app.template_filter('article')
 def select_article(noun):
