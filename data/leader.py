@@ -38,386 +38,386 @@ self.redis.lpush('leaderorganization_kind', 'gang')
 self.redis.lpush('leaderorganization_kind', 'union')
 
 self.redis.lpush('leadergovernship_leader', 'governor')
-HSET  leadergovernship_leader_description governor { "male":"Governor",     "female":"Governor"     }
+self.redis.hset('leadergovernship_leader_description', 'governor', '{ "male":"Governor",     "female":"Governor"     }')
 
 self.redis.lpush('leaderabsolutemonarchy_leader', 'king')
-HSET  leaderabsolutemonarchy_leader_description king { "male":"King",    "female":"Queen"     }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'king', '{ "male":"King",    "female":"Queen"     }')
 self.redis.lpush('leaderabsolutemonarchy_leader', 'emperor')
-HSET  leaderabsolutemonarchy_leader_description emperor { "male":"Emperor", "female":"Empress"   }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'emperor', '{ "male":"Emperor", "female":"Empress"   }')
 self.redis.lpush('leaderabsolutemonarchy_leader', 'raja')
-HSET  leaderabsolutemonarchy_leader_description raja { "male":"Raja",    "female":"Rani"      }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'raja', '{ "male":"Raja",    "female":"Rani"      }')
 self.redis.lpush('leaderabsolutemonarchy_leader', 'sultan')
-HSET  leaderabsolutemonarchy_leader_description sultan { "male":"Sultan",  "female":"Sultana"   }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'sultan', '{ "male":"Sultan",  "female":"Sultana"   }')
 self.redis.lpush('leaderabsolutemonarchy_leader', 'shah')
-HSET  leaderabsolutemonarchy_leader_description shah { "male":"Shah",    "female":"Shahbanu"  }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'shah', '{ "male":"Shah",    "female":"Shahbanu"  }')
 self.redis.lpush('leaderabsolutemonarchy_leader', 'prince')
-HSET  leaderabsolutemonarchy_leader_description prince { "male":"Prince",  "female":"Princess"  }
+self.redis.hset('leaderabsolutemonarchy_leader_description', 'prince', '{ "male":"Prince",  "female":"Princess"  }')
 
 self.redis.lpush('leaderbarony_leader', 'baron')
-HSET  leaderbarony_leader_description baron { "male":"Baron",      "female":"Baroness"      }
+self.redis.hset('leaderbarony_leader_description', 'baron', '{ "male":"Baron",      "female":"Baroness"      }')
 
 self.redis.lpush('leaderauthoritarian_leader', 'boss')
-HSET  leaderauthoritarian_leader_description boss { "male":"Boss",         "female":"Boss"         }
+self.redis.hset('leaderauthoritarian_leader_description', 'boss', '{ "male":"Boss",         "female":"Boss"         }')
 self.redis.lpush('leaderauthoritarian_leader', 'captain')
-HSET  leaderauthoritarian_leader_description captain { "male":"Captain",      "female":"Captain"      }
+self.redis.hset('leaderauthoritarian_leader_description', 'captain', '{ "male":"Captain",      "female":"Captain"      }')
 self.redis.lpush('leaderauthoritarian_leader', 'chairman')
-HSET  leaderauthoritarian_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+self.redis.hset('leaderauthoritarian_leader_description', 'chairman', '{ "male":"Chairman",     "female":"Chairman"     }')
 self.redis.lpush('leaderauthoritarian_leader', 'chief')
-HSET  leaderauthoritarian_leader_description chief { "male":"Chief",        "female":"Chief"        }
+self.redis.hset('leaderauthoritarian_leader_description', 'chief', '{ "male":"Chief",        "female":"Chief"        }')
 self.redis.lpush('leaderauthoritarian_leader', 'commander')
-HSET  leaderauthoritarian_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderauthoritarian_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderauthoritarian_leader', 'czar')
-HSET  leaderauthoritarian_leader_description czar { "male":"Czar",         "female":"Czar"         }
+self.redis.hset('leaderauthoritarian_leader_description', 'czar', '{ "male":"Czar",         "female":"Czar"         }')
 self.redis.lpush('leaderauthoritarian_leader', 'despot')
-HSET  leaderauthoritarian_leader_description despot { "male":"Despot",       "female":"Despot"       }
+self.redis.hset('leaderauthoritarian_leader_description', 'despot', '{ "male":"Despot",       "female":"Despot"       }')
 self.redis.lpush('leaderauthoritarian_leader', 'general')
-HSET  leaderauthoritarian_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderauthoritarian_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderauthoritarian_leader', 'inquisitor')
-HSET  leaderauthoritarian_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+self.redis.hset('leaderauthoritarian_leader_description', 'inquisitor', '{ "male":"Inquisitor",   "female":"Inquisitor"   }')
 self.redis.lpush('leaderauthoritarian_leader', 'leader')
-HSET  leaderauthoritarian_leader_description leader { "male":"Leader",       "female":"Leader"       }
+self.redis.hset('leaderauthoritarian_leader_description', 'leader', '{ "male":"Leader",       "female":"Leader"       }')
 self.redis.lpush('leaderauthoritarian_leader', 'lord')
-HSET  leaderauthoritarian_leader_description lord { "male":"Lord",         "female":"Lord"         }
+self.redis.hset('leaderauthoritarian_leader_description', 'lord', '{ "male":"Lord",         "female":"Lord"         }')
 self.redis.lpush('leaderauthoritarian_leader', 'master')
-HSET  leaderauthoritarian_leader_description master { "male":"Master",       "female":"Master"       }
+self.redis.hset('leaderauthoritarian_leader_description', 'master', '{ "male":"Master",       "female":"Master"       }')
 self.redis.lpush('leaderauthoritarian_leader', 'overlord')
-HSET  leaderauthoritarian_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+self.redis.hset('leaderauthoritarian_leader_description', 'overlord', '{ "male":"Overlord",     "female":"Overlord"     }')
 self.redis.lpush('leaderauthoritarian_leader', 'overseer')
-HSET  leaderauthoritarian_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+self.redis.hset('leaderauthoritarian_leader_description', 'overseer', '{ "male":"Overseer",     "female":"Overseer"     }')
 self.redis.lpush('leaderauthoritarian_leader', 'premier')
-HSET  leaderauthoritarian_leader_description premier { "male":"Premier",      "female":"Premier"      }
+self.redis.hset('leaderauthoritarian_leader_description', 'premier', '{ "male":"Premier",      "female":"Premier"      }')
 self.redis.lpush('leaderauthoritarian_leader', 'sovereign')
-HSET  leaderauthoritarian_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+self.redis.hset('leaderauthoritarian_leader_description', 'sovereign', '{ "male":"Sovereign",    "female":"Sovereign"    }')
 self.redis.lpush('leaderauthoritarian_leader', 'steward')
-HSET  leaderauthoritarian_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderauthoritarian_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leaderauthoritarian_leader', 'supervisor')
-HSET  leaderauthoritarian_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+self.redis.hset('leaderauthoritarian_leader_description', 'supervisor', '{ "male":"Supervisor",   "female":"Supervisor"   }')
 self.redis.lpush('leaderauthoritarian_leader', 'tyrant')
-HSET  leaderauthoritarian_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+self.redis.hset('leaderauthoritarian_leader_description', 'tyrant', '{ "male":"Tyrant",       "female":"Tyrant"       }')
 self.redis.lpush('leaderauthoritarian_leader', 'vizier')
-HSET  leaderauthoritarian_leader_description vizier { "male":"Vizier",       "female":"Vizier"       }
+self.redis.hset('leaderauthoritarian_leader_description', 'vizier', '{ "male":"Vizier",       "female":"Vizier"       }')
 self.redis.lpush('leaderauthoritarian_leader', 'warlord')
-HSET  leaderauthoritarian_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+self.redis.hset('leaderauthoritarian_leader_description', 'warlord', '{ "male":"Warlord",      "female":"Warlord"      }')
 
 
 self.redis.lpush('leadercommonwealth_leader', 'primeminister')
-HSET  leadercommonwealth_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leadercommonwealth_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leadercommonwealth_leader', 'chancellor')
-HSET  leadercommonwealth_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+self.redis.hset('leadercommonwealth_leader_description', 'chancellor', '{ "male":"Chancellor",   "female":"Chancellor"   }')
 self.redis.lpush('leadercommonwealth_leader', 'steward')
-HSET  leadercommonwealth_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leadercommonwealth_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 
 
 self.redis.lpush('leadercommunist_leader', 'primeminister')
-HSET  leadercommunist_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leadercommunist_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leadercommunist_leader', 'president')
-HSET  leadercommunist_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leadercommunist_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 self.redis.lpush('leadercommunist_leader', 'chancellor')
-HSET  leadercommunist_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+self.redis.hset('leadercommunist_leader_description', 'chancellor', '{ "male":"Chancellor",   "female":"Chancellor"   }')
 
 
 self.redis.lpush('leaderconstitutional_leader', 'primeminister')
-HSET  leaderconstitutional_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderconstitutional_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderconstitutional_leader', 'governor')
-HSET  leaderconstitutional_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderconstitutional_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderconstitutional_leader', 'president')
-HSET  leaderconstitutional_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderconstitutional_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 
 self.redis.lpush('leaderdemocracy_leader', 'primeminister')
-HSET  leaderdemocracy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderdemocracy_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderdemocracy_leader', 'governor')
-HSET  leaderdemocracy_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderdemocracy_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderdemocracy_leader', 'president')
-HSET  leaderdemocracy_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderdemocracy_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 
 self.redis.lpush('leaderdictatorship_leader', 'boss')
-HSET  leaderdictatorship_leader_description boss { "male":"Boss",         "female":"Boss"         }
+self.redis.hset('leaderdictatorship_leader_description', 'boss', '{ "male":"Boss",         "female":"Boss"         }')
 self.redis.lpush('leaderdictatorship_leader', 'captain')
-HSET  leaderdictatorship_leader_description captain { "male":"Captain",      "female":"Captain"      }
+self.redis.hset('leaderdictatorship_leader_description', 'captain', '{ "male":"Captain",      "female":"Captain"      }')
 self.redis.lpush('leaderdictatorship_leader', 'chairman')
-HSET  leaderdictatorship_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+self.redis.hset('leaderdictatorship_leader_description', 'chairman', '{ "male":"Chairman",     "female":"Chairman"     }')
 self.redis.lpush('leaderdictatorship_leader', 'chief')
-HSET  leaderdictatorship_leader_description chief { "male":"Chief",        "female":"Chief"        }
+self.redis.hset('leaderdictatorship_leader_description', 'chief', '{ "male":"Chief",        "female":"Chief"        }')
 self.redis.lpush('leaderdictatorship_leader', 'commander')
-HSET  leaderdictatorship_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderdictatorship_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderdictatorship_leader', 'czar')
-HSET  leaderdictatorship_leader_description czar { "male":"Czar",         "female":"Czar"         }
+self.redis.hset('leaderdictatorship_leader_description', 'czar', '{ "male":"Czar",         "female":"Czar"         }')
 self.redis.lpush('leaderdictatorship_leader', 'despot')
-HSET  leaderdictatorship_leader_description despot { "male":"Despot",       "female":"Despot"       }
+self.redis.hset('leaderdictatorship_leader_description', 'despot', '{ "male":"Despot",       "female":"Despot"       }')
 self.redis.lpush('leaderdictatorship_leader', 'general')
-HSET  leaderdictatorship_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderdictatorship_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderdictatorship_leader', 'governor')
-HSET  leaderdictatorship_leader_description governor { "male":"Governor",     "female":"Governor"     }
+self.redis.hset('leaderdictatorship_leader_description', 'governor', '{ "male":"Governor",     "female":"Governor"     }')
 self.redis.lpush('leaderdictatorship_leader', 'inquisitor')
-HSET  leaderdictatorship_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+self.redis.hset('leaderdictatorship_leader_description', 'inquisitor', '{ "male":"Inquisitor",   "female":"Inquisitor"   }')
 self.redis.lpush('leaderdictatorship_leader', 'leader')
-HSET  leaderdictatorship_leader_description leader { "male":"Leader",       "female":"Leader"       }
+self.redis.hset('leaderdictatorship_leader_description', 'leader', '{ "male":"Leader",       "female":"Leader"       }')
 self.redis.lpush('leaderdictatorship_leader', 'lord')
-HSET  leaderdictatorship_leader_description lord { "male":"Lord",         "female":"Lord"         }
+self.redis.hset('leaderdictatorship_leader_description', 'lord', '{ "male":"Lord",         "female":"Lord"         }')
 self.redis.lpush('leaderdictatorship_leader', 'master')
-HSET  leaderdictatorship_leader_description master { "male":"Master",       "female":"Master"       }
+self.redis.hset('leaderdictatorship_leader_description', 'master', '{ "male":"Master",       "female":"Master"       }')
 self.redis.lpush('leaderdictatorship_leader', 'overlord')
-HSET  leaderdictatorship_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+self.redis.hset('leaderdictatorship_leader_description', 'overlord', '{ "male":"Overlord",     "female":"Overlord"     }')
 self.redis.lpush('leaderdictatorship_leader', 'overseer')
-HSET  leaderdictatorship_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+self.redis.hset('leaderdictatorship_leader_description', 'overseer', '{ "male":"Overseer",     "female":"Overseer"     }')
 self.redis.lpush('leaderdictatorship_leader', 'premier')
-HSET  leaderdictatorship_leader_description premier { "male":"Premier",      "female":"Premier"      }
+self.redis.hset('leaderdictatorship_leader_description', 'premier', '{ "male":"Premier",      "female":"Premier"      }')
 self.redis.lpush('leaderdictatorship_leader', 'sovereign')
-HSET  leaderdictatorship_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+self.redis.hset('leaderdictatorship_leader_description', 'sovereign', '{ "male":"Sovereign",    "female":"Sovereign"    }')
 self.redis.lpush('leaderdictatorship_leader', 'steward')
-HSET  leaderdictatorship_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderdictatorship_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leaderdictatorship_leader', 'supervisor')
-HSET  leaderdictatorship_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+self.redis.hset('leaderdictatorship_leader_description', 'supervisor', '{ "male":"Supervisor",   "female":"Supervisor"   }')
 self.redis.lpush('leaderdictatorship_leader', 'tyrant')
-HSET  leaderdictatorship_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+self.redis.hset('leaderdictatorship_leader_description', 'tyrant', '{ "male":"Tyrant",       "female":"Tyrant"       }')
 self.redis.lpush('leaderdictatorship_leader', 'warlord')
-HSET  leaderdictatorship_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+self.redis.hset('leaderdictatorship_leader_description', 'warlord', '{ "male":"Warlord",      "female":"Warlord"      }')
 
 self.redis.lpush('leaderduchy_leader', 'duchy')
-HSET  leaderduchy_leader_description duchy { "male":"Duke",      "female":"Duchess"      }
+self.redis.hset('leaderduchy_leader_description', 'duchy', '{ "male":"Duke",      "female":"Duchess"      }')
 
 self.redis.lpush('leaderecclesiastical_leader', 'primeminister')
-HSET  leaderecclesiastical_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'pontifex')
-HSET  leaderecclesiastical_leader_description pontifex { "male":"Pontifex",   "female":"Pontifex"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'pontifex', '{ "male":"Pontifex",   "female":"Pontifex"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'saint')
-HSET  leaderecclesiastical_leader_description saint { "male":"Saint",   "female":"Saint"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'saint', '{ "male":"Saint",   "female":"Saint"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'chief')
-HSET  leaderecclesiastical_leader_description chief { "male":"Chief",   "female":"Chief"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'chief', '{ "male":"Chief",   "female":"Chief"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'father')
-HSET  leaderecclesiastical_leader_description father { "male":"Father", "female":"Mother"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'father', '{ "male":"Father", "female":"Mother"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'bishop')
-HSET  leaderecclesiastical_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'bishop', '{ "male":"Bishop",   "female":"Bishop"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'archbishop')
-HSET  leaderecclesiastical_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'archbishop', '{ "male":"Archbishop",   "female":"Archbishop"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'elder')
-HSET  leaderecclesiastical_leader_description elder { "male":"Elder",   "female":"Elder"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'elder', '{ "male":"Elder",   "female":"Elder"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'president')
-HSET  leaderecclesiastical_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'brother')
-HSET  leaderecclesiastical_leader_description brother { "male":"Brother",  "female":"Sister"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'brother', '{ "male":"Brother",  "female":"Sister"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'guru')
-HSET  leaderecclesiastical_leader_description guru { "male":"Guru",   "female":"Guru"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'guru', '{ "male":"Guru",   "female":"Guru"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'lordchancellor')
-HSET  leaderecclesiastical_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'lordchancellor', '{ "male":"Lord Chancellor",   "female":"Lady Chancellor"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'lord')
-HSET  leaderecclesiastical_leader_description lord { "male":"Lord", "female":"Lady"  }
+self.redis.hset('leaderecclesiastical_leader_description', 'lord', '{ "male":"Lord", "female":"Lady"  }')
 self.redis.lpush('leaderecclesiastical_leader', 'chancellor')
-HSET  leaderecclesiastical_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'chancellor', '{ "male":"Chancellor",   "female":"Chancellor"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'steward')
-HSET  leaderecclesiastical_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderecclesiastical_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leaderecclesiastical_leader', 'cardinal')
-HSET  leaderecclesiastical_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'cardinal', '{ "male":"Cardinal",   "female":"Cardinal"   }')
 self.redis.lpush('leaderecclesiastical_leader', 'caliph')
-HSET  leaderecclesiastical_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+self.redis.hset('leaderecclesiastical_leader_description', 'caliph', '{ "male":"Caliph",   "female":"Caliph"   }')
 
 
 self.redis.lpush('leaderemirate_leader', 'primeminister')
-HSET  leaderemirate_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderemirate_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderemirate_leader', 'saint')
-HSET  leaderemirate_leader_description saint { "male":"Saint",   "female":"Saint"   }
+self.redis.hset('leaderemirate_leader_description', 'saint', '{ "male":"Saint",   "female":"Saint"   }')
 self.redis.lpush('leaderemirate_leader', 'chief')
-HSET  leaderemirate_leader_description chief { "male":"Chief",   "female":"Chief"   }
+self.redis.hset('leaderemirate_leader_description', 'chief', '{ "male":"Chief",   "female":"Chief"   }')
 self.redis.lpush('leaderemirate_leader', 'father')
-HSET  leaderemirate_leader_description father { "male":"Father", "female":"Mother"   }
+self.redis.hset('leaderemirate_leader_description', 'father', '{ "male":"Father", "female":"Mother"   }')
 self.redis.lpush('leaderemirate_leader', 'bishop')
-HSET  leaderemirate_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+self.redis.hset('leaderemirate_leader_description', 'bishop', '{ "male":"Bishop",   "female":"Bishop"   }')
 self.redis.lpush('leaderemirate_leader', 'archbishop')
-HSET  leaderemirate_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+self.redis.hset('leaderemirate_leader_description', 'archbishop', '{ "male":"Archbishop",   "female":"Archbishop"   }')
 self.redis.lpush('leaderemirate_leader', 'elder')
-HSET  leaderemirate_leader_description elder { "male":"Elder",   "female":"Elder"   }
+self.redis.hset('leaderemirate_leader_description', 'elder', '{ "male":"Elder",   "female":"Elder"   }')
 self.redis.lpush('leaderemirate_leader', 'president')
-HSET  leaderemirate_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderemirate_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 self.redis.lpush('leaderemirate_leader', 'brother')
-HSET  leaderemirate_leader_description brother { "male":"Brother",  "female":"Sister"   }
+self.redis.hset('leaderemirate_leader_description', 'brother', '{ "male":"Brother",  "female":"Sister"   }')
 self.redis.lpush('leaderemirate_leader', 'guru')
-HSET  leaderemirate_leader_description guru { "male":"Guru",   "female":"Guru"   }
+self.redis.hset('leaderemirate_leader_description', 'guru', '{ "male":"Guru",   "female":"Guru"   }')
 self.redis.lpush('leaderemirate_leader', 'steward')
-HSET  leaderemirate_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderemirate_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leaderemirate_leader', 'lordchancellor')
-HSET  leaderemirate_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+self.redis.hset('leaderemirate_leader_description', 'lordchancellor', '{ "male":"Lord Chancellor",   "female":"Lady Chancellor"   }')
 self.redis.lpush('leaderemirate_leader', 'lord')
-HSET  leaderemirate_leader_description lord { "male":"Lord", "female":"Lady"  }
+self.redis.hset('leaderemirate_leader_description', 'lord', '{ "male":"Lord", "female":"Lady"  }')
 self.redis.lpush('leaderemirate_leader', 'chancellor')
-HSET  leaderemirate_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+self.redis.hset('leaderemirate_leader_description', 'chancellor', '{ "male":"Chancellor",   "female":"Chancellor"   }')
 self.redis.lpush('leaderemirate_leader', 'cardinal')
-HSET  leaderemirate_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+self.redis.hset('leaderemirate_leader_description', 'cardinal', '{ "male":"Cardinal",   "female":"Cardinal"   }')
 self.redis.lpush('leaderemirate_leader', 'caliph')
-HSET  leaderemirate_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+self.redis.hset('leaderemirate_leader_description', 'caliph', '{ "male":"Caliph",   "female":"Caliph"   }')
 
 
 self.redis.lpush('leaderfederation_leader', 'commander')
-HSET  leaderfederation_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderfederation_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderfederation_leader', 'general')
-HSET  leaderfederation_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderfederation_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderfederation_leader', 'governor')
-HSET  leaderfederation_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderfederation_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderfederation_leader', 'primeminister')
-HSET  leaderfederation_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderfederation_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderfederation_leader', 'president')
-HSET  leaderfederation_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderfederation_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 self.redis.lpush('leaderfederation_leader', 'steward')
-HSET  leaderfederation_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderfederation_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 
 self.redis.lpush('leadergang_leader', 'gangleader')
-HSET  leadergang_leader_description gangleader { "male":"GangLeader",    "female":"Gang Leader"     }
+self.redis.hset('leadergang_leader_description', 'gangleader', '{ "male":"GangLeader",    "female":"Gang Leader"     }')
 self.redis.lpush('leadergang_leader', 'kingpin')
-HSET  leadergang_leader_description kingpin { "male":"Kingpin",    "female":"Kingpin"     }
+self.redis.hset('leadergang_leader_description', 'kingpin', '{ "male":"Kingpin",    "female":"Kingpin"     }')
 
 self.redis.lpush('leaderguild_leader', 'guildmaster')
-HSET  leaderguild_leader_description guildmaster { "male":"Guildmaster",    "female":"Guildmaster"     }
+self.redis.hset('leaderguild_leader_description', 'guildmaster', '{ "male":"Guildmaster",    "female":"Guildmaster"     }')
 
 self.redis.lpush('leadermonarchy_leader', 'king')
-HSET  leadermonarchy_leader_description king { "male":"King",    "female":"Queen"     }
+self.redis.hset('leadermonarchy_leader_description', 'king', '{ "male":"King",    "female":"Queen"     }')
 self.redis.lpush('leadermonarchy_leader', 'emperor')
-HSET  leadermonarchy_leader_description emperor { "male":"Emperor", "female":"Empress"   }
+self.redis.hset('leadermonarchy_leader_description', 'emperor', '{ "male":"Emperor", "female":"Empress"   }')
 self.redis.lpush('leadermonarchy_leader', 'raja')
-HSET  leadermonarchy_leader_description raja { "male":"Raja",    "female":"Rani"      }
+self.redis.hset('leadermonarchy_leader_description', 'raja', '{ "male":"Raja",    "female":"Rani"      }')
 self.redis.lpush('leadermonarchy_leader', 'sultan')
-HSET  leadermonarchy_leader_description sultan { "male":"Sultan",  "female":"Sultana"   }
+self.redis.hset('leadermonarchy_leader_description', 'sultan', '{ "male":"Sultan",  "female":"Sultana"   }')
 self.redis.lpush('leadermonarchy_leader', 'shah')
-HSET  leadermonarchy_leader_description shah { "male":"Shah",    "female":"Shahbanu"  }
+self.redis.hset('leadermonarchy_leader_description', 'shah', '{ "male":"Shah",    "female":"Shahbanu"  }')
 self.redis.lpush('leadermonarchy_leader', 'prince')
-HSET  leadermonarchy_leader_description prince { "male":"Prince",  "female":"Princess"  }
+self.redis.hset('leadermonarchy_leader_description', 'prince', '{ "male":"Prince",  "female":"Princess"  }')
 
 self.redis.lpush('leaderoligarchy_leader', 'commander')
-HSET  leaderoligarchy_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderoligarchy_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderoligarchy_leader', 'general')
-HSET  leaderoligarchy_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderoligarchy_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderoligarchy_leader', 'governor')
-HSET  leaderoligarchy_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderoligarchy_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderoligarchy_leader', 'primeminister')
-HSET  leaderoligarchy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderoligarchy_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderoligarchy_leader', 'president')
-HSET  leaderoligarchy_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderoligarchy_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 
 self.redis.lpush('leaderparliamentary_leader', 'commander')
-HSET  leaderparliamentary_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderparliamentary_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderparliamentary_leader', 'general')
-HSET  leaderparliamentary_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderparliamentary_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderparliamentary_leader', 'governor')
-HSET  leaderparliamentary_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderparliamentary_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderparliamentary_leader', 'primeminister')
-HSET  leaderparliamentary_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderparliamentary_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderparliamentary_leader', 'steward')
-HSET  leaderparliamentary_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leaderparliamentary_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leaderparliamentary_leader', 'president')
-HSET  leaderparliamentary_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderparliamentary_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 
 self.redis.lpush('leaderrepublic_leader', 'commander')
-HSET  leaderrepublic_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leaderrepublic_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leaderrepublic_leader', 'general')
-HSET  leaderrepublic_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leaderrepublic_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leaderrepublic_leader', 'governor')
-HSET  leaderrepublic_leader_description governor { "male":"Governor",      "female":"Governor"      }
+self.redis.hset('leaderrepublic_leader_description', 'governor', '{ "male":"Governor",      "female":"Governor"      }')
 self.redis.lpush('leaderrepublic_leader', 'primeminister')
-HSET  leaderrepublic_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leaderrepublic_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leaderrepublic_leader', 'president')
-HSET  leaderrepublic_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderrepublic_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 
 self.redis.lpush('leadertheocracy_leader', 'primeminister')
-HSET  leadertheocracy_leader_description primeminister { "male":"Prime Minister",   "female":"Prime Minister"   }
+self.redis.hset('leadertheocracy_leader_description', 'primeminister', '{ "male":"Prime Minister",   "female":"Prime Minister"   }')
 self.redis.lpush('leadertheocracy_leader', 'saint')
-HSET  leadertheocracy_leader_description saint { "male":"Saint",   "female":"Saint"   }
+self.redis.hset('leadertheocracy_leader_description', 'saint', '{ "male":"Saint",   "female":"Saint"   }')
 self.redis.lpush('leadertheocracy_leader', 'chief')
-HSET  leadertheocracy_leader_description chief { "male":"Chief",   "female":"Chief"   }
+self.redis.hset('leadertheocracy_leader_description', 'chief', '{ "male":"Chief",   "female":"Chief"   }')
 self.redis.lpush('leadertheocracy_leader', 'father')
-HSET  leadertheocracy_leader_description father { "male":"Father", "female":"Mother"   }
+self.redis.hset('leadertheocracy_leader_description', 'father', '{ "male":"Father", "female":"Mother"   }')
 self.redis.lpush('leadertheocracy_leader', 'bishop')
-HSET  leadertheocracy_leader_description bishop { "male":"Bishop",   "female":"Bishop"   }
+self.redis.hset('leadertheocracy_leader_description', 'bishop', '{ "male":"Bishop",   "female":"Bishop"   }')
 self.redis.lpush('leadertheocracy_leader', 'archbishop')
-HSET  leadertheocracy_leader_description archbishop { "male":"Archbishop",   "female":"Archbishop"   }
+self.redis.hset('leadertheocracy_leader_description', 'archbishop', '{ "male":"Archbishop",   "female":"Archbishop"   }')
 self.redis.lpush('leadertheocracy_leader', 'elder')
-HSET  leadertheocracy_leader_description elder { "male":"Elder",   "female":"Elder"   }
+self.redis.hset('leadertheocracy_leader_description', 'elder', '{ "male":"Elder",   "female":"Elder"   }')
 self.redis.lpush('leadertheocracy_leader', 'president')
-HSET  leadertheocracy_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leadertheocracy_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 self.redis.lpush('leadertheocracy_leader', 'brother')
-HSET  leadertheocracy_leader_description brother { "male":"Brother",  "female":"Sister"   }
+self.redis.hset('leadertheocracy_leader_description', 'brother', '{ "male":"Brother",  "female":"Sister"   }')
 self.redis.lpush('leadertheocracy_leader', 'guru')
-HSET  leadertheocracy_leader_description guru { "male":"Guru",   "female":"Guru"   }
+self.redis.hset('leadertheocracy_leader_description', 'guru', '{ "male":"Guru",   "female":"Guru"   }')
 self.redis.lpush('leadertheocracy_leader', 'lordchancellor')
-HSET  leadertheocracy_leader_description lordchancellor { "male":"Lord Chancellor",   "female":"Lady Chancellor"   }
+self.redis.hset('leadertheocracy_leader_description', 'lordchancellor', '{ "male":"Lord Chancellor",   "female":"Lady Chancellor"   }')
 self.redis.lpush('leadertheocracy_leader', 'steward')
-HSET  leadertheocracy_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leadertheocracy_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leadertheocracy_leader', 'lord')
-HSET  leadertheocracy_leader_description lord { "male":"Lord", "female":"Lady"  }
+self.redis.hset('leadertheocracy_leader_description', 'lord', '{ "male":"Lord", "female":"Lady"  }')
 self.redis.lpush('leadertheocracy_leader', 'chancellor')
-HSET  leadertheocracy_leader_description chancellor { "male":"Chancellor",   "female":"Chancellor"   }
+self.redis.hset('leadertheocracy_leader_description', 'chancellor', '{ "male":"Chancellor",   "female":"Chancellor"   }')
 self.redis.lpush('leadertheocracy_leader', 'cardinal')
-HSET  leadertheocracy_leader_description cardinal { "male":"Cardinal",   "female":"Cardinal"   }
+self.redis.hset('leadertheocracy_leader_description', 'cardinal', '{ "male":"Cardinal",   "female":"Cardinal"   }')
 self.redis.lpush('leadertheocracy_leader', 'caliph')
-HSET  leadertheocracy_leader_description caliph { "male":"Caliph",   "female":"Caliph"   }
+self.redis.hset('leadertheocracy_leader_description', 'caliph', '{ "male":"Caliph",   "female":"Caliph"   }')
 
 
 self.redis.lpush('leadertotalitarian_leader', 'boss')
-HSET  leadertotalitarian_leader_description boss { "male":"Boss",         "female":"Boss"         }
+self.redis.hset('leadertotalitarian_leader_description', 'boss', '{ "male":"Boss",         "female":"Boss"         }')
 self.redis.lpush('leadertotalitarian_leader', 'captain')
-HSET  leadertotalitarian_leader_description captain { "male":"Captain",      "female":"Captain"      }
+self.redis.hset('leadertotalitarian_leader_description', 'captain', '{ "male":"Captain",      "female":"Captain"      }')
 self.redis.lpush('leadertotalitarian_leader', 'chairman')
-HSET  leadertotalitarian_leader_description chairman { "male":"Chairman",     "female":"Chairman"     }
+self.redis.hset('leadertotalitarian_leader_description', 'chairman', '{ "male":"Chairman",     "female":"Chairman"     }')
 self.redis.lpush('leadertotalitarian_leader', 'chief')
-HSET  leadertotalitarian_leader_description chief { "male":"Chief",        "female":"Chief"        }
+self.redis.hset('leadertotalitarian_leader_description', 'chief', '{ "male":"Chief",        "female":"Chief"        }')
 self.redis.lpush('leadertotalitarian_leader', 'commander')
-HSET  leadertotalitarian_leader_description commander { "male":"Commander",    "female":"Commander"    }
+self.redis.hset('leadertotalitarian_leader_description', 'commander', '{ "male":"Commander",    "female":"Commander"    }')
 self.redis.lpush('leadertotalitarian_leader', 'czar')
-HSET  leadertotalitarian_leader_description czar { "male":"Czar",         "female":"Czar"         }
+self.redis.hset('leadertotalitarian_leader_description', 'czar', '{ "male":"Czar",         "female":"Czar"         }')
 self.redis.lpush('leadertotalitarian_leader', 'despot')
-HSET  leadertotalitarian_leader_description despot { "male":"Despot",       "female":"Despot"       }
+self.redis.hset('leadertotalitarian_leader_description', 'despot', '{ "male":"Despot",       "female":"Despot"       }')
 self.redis.lpush('leadertotalitarian_leader', 'general')
-HSET  leadertotalitarian_leader_description general { "male":"General",      "female":"General"      }
+self.redis.hset('leadertotalitarian_leader_description', 'general', '{ "male":"General",      "female":"General"      }')
 self.redis.lpush('leadertotalitarian_leader', 'governor')
-HSET  leadertotalitarian_leader_description governor { "male":"Governor",     "female":"Governor"     }
+self.redis.hset('leadertotalitarian_leader_description', 'governor', '{ "male":"Governor",     "female":"Governor"     }')
 self.redis.lpush('leadertotalitarian_leader', 'inquisitor')
-HSET  leadertotalitarian_leader_description inquisitor { "male":"Inquisitor",   "female":"Inquisitor"   }
+self.redis.hset('leadertotalitarian_leader_description', 'inquisitor', '{ "male":"Inquisitor",   "female":"Inquisitor"   }')
 self.redis.lpush('leadertotalitarian_leader', 'leader')
-HSET  leadertotalitarian_leader_description leader { "male":"Leader",       "female":"Leader"       }
+self.redis.hset('leadertotalitarian_leader_description', 'leader', '{ "male":"Leader",       "female":"Leader"       }')
 self.redis.lpush('leadertotalitarian_leader', 'lord')
-HSET  leadertotalitarian_leader_description lord { "male":"Lord",         "female":"Lord"         }
+self.redis.hset('leadertotalitarian_leader_description', 'lord', '{ "male":"Lord",         "female":"Lord"         }')
 self.redis.lpush('leadertotalitarian_leader', 'master')
-HSET  leadertotalitarian_leader_description master { "male":"Master",       "female":"Master"       }
+self.redis.hset('leadertotalitarian_leader_description', 'master', '{ "male":"Master",       "female":"Master"       }')
 self.redis.lpush('leadertotalitarian_leader', 'overlord')
-HSET  leadertotalitarian_leader_description overlord { "male":"Overlord",     "female":"Overlord"     }
+self.redis.hset('leadertotalitarian_leader_description', 'overlord', '{ "male":"Overlord",     "female":"Overlord"     }')
 self.redis.lpush('leadertotalitarian_leader', 'overseer')
-HSET  leadertotalitarian_leader_description overseer { "male":"Overseer",     "female":"Overseer"     }
+self.redis.hset('leadertotalitarian_leader_description', 'overseer', '{ "male":"Overseer",     "female":"Overseer"     }')
 self.redis.lpush('leadertotalitarian_leader', 'premier')
-HSET  leadertotalitarian_leader_description premier { "male":"Premier",      "female":"Premier"      }
+self.redis.hset('leadertotalitarian_leader_description', 'premier', '{ "male":"Premier",      "female":"Premier"      }')
 self.redis.lpush('leadertotalitarian_leader', 'sovereign')
-HSET  leadertotalitarian_leader_description sovereign { "male":"Sovereign",    "female":"Sovereign"    }
+self.redis.hset('leadertotalitarian_leader_description', 'sovereign', '{ "male":"Sovereign",    "female":"Sovereign"    }')
 self.redis.lpush('leadertotalitarian_leader', 'steward')
-HSET  leadertotalitarian_leader_description steward { "male":"Steward",      "female":"Steward"      }
+self.redis.hset('leadertotalitarian_leader_description', 'steward', '{ "male":"Steward",      "female":"Steward"      }')
 self.redis.lpush('leadertotalitarian_leader', 'supervisor')
-HSET  leadertotalitarian_leader_description supervisor { "male":"Supervisor",   "female":"Supervisor"   }
+self.redis.hset('leadertotalitarian_leader_description', 'supervisor', '{ "male":"Supervisor",   "female":"Supervisor"   }')
 self.redis.lpush('leadertotalitarian_leader', 'tyrant')
-HSET  leadertotalitarian_leader_description tyrant { "male":"Tyrant",       "female":"Tyrant"       }
+self.redis.hset('leadertotalitarian_leader_description', 'tyrant', '{ "male":"Tyrant",       "female":"Tyrant"       }')
 self.redis.lpush('leadertotalitarian_leader', 'warlord')
-HSET  leadertotalitarian_leader_description warlord { "male":"Warlord",      "female":"Warlord"      }
+self.redis.hset('leadertotalitarian_leader_description', 'warlord', '{ "male":"Warlord",      "female":"Warlord"      }')
 
 self.redis.lpush('leadercouncilmanager_leader', 'councilman')
-HSET  leadercouncilmanager_leader_description councilman { "male":"Councilman",      "female":"Councilwoman"      }
+self.redis.hset('leadercouncilmanager_leader_description', 'councilman', '{ "male":"Councilman",      "female":"Councilwoman"      }')
 self.redis.lpush('leadercouncilmanager_leader', 'manager')
-HSET  leadercouncilmanager_leader_description manager { "male":"Manager",      "female":"Manager"      }
+self.redis.hset('leadercouncilmanager_leader_description', 'manager', '{ "male":"Manager",      "female":"Manager"      }')
 
 self.redis.lpush('leadermayorcouncil_leader', 'councilman')
-HSET  leadermayorcouncil_leader_description councilman { "male":"Councilman",      "female":"Councilwoman"      }
+self.redis.hset('leadermayorcouncil_leader_description', 'councilman', '{ "male":"Councilman",      "female":"Councilwoman"      }')
 self.redis.lpush('leadermayorcouncil_leader', 'mayor')
-HSET  leadermayorcouncil_leader_description mayor { "male":"Mayor",      "female":"Mayor"      }
+self.redis.hset('leadermayorcouncil_leader_description', 'mayor', '{ "male":"Mayor",      "female":"Mayor"      }')
 
 self.redis.lpush('leadercommission_leader', 'commissioner')
-HSET  leadercommission_leader_description commissioner { "male":"Commissioner",      "female":"Commissioner"      }
+self.redis.hset('leadercommission_leader_description', 'commissioner', '{ "male":"Commissioner",      "female":"Commissioner"      }')
 
 self.redis.lpush('leadertownmeeting_leader', 'elder')
-HSET  leadertownmeeting_leader_description elder { "male":"Elder",      "female":"Elder"      }
+self.redis.hset('leadertownmeeting_leader_description', 'elder', '{ "male":"Elder",      "female":"Elder"      }')
 
 self.redis.lpush('leadermagistrate_leader', 'magistrate')
-HSET  leadermagistrate_leader_description magistrate { "male":"Magistrate",      "female":"Magistrate"      }
+self.redis.hset('leadermagistrate_leader_description', 'magistrate', '{ "male":"Magistrate",      "female":"Magistrate"      }')
 
 self.redis.lpush('leaderunion_leader', 'president')
-HSET  leaderunion_leader_description president { "male":"President",   "female":"President"   }
+self.redis.hset('leaderunion_leader_description', 'president', '{ "male":"President",   "female":"President"   }')
 
 #
 #

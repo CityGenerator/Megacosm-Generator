@@ -59,62 +59,62 @@ self.redis.lpush('gem_cut', 'square')
 self.redis.lpush('gem_cut', 'trillion')
 
 
-HSET gem_kind_description agate              { "name":"agate", "color":["black","blue","brown","green","white","yellow"]   }
-HSET gem_kind_description amethyst           { "name":"amethyst", "color":["violet"]   }
-HSET gem_kind_description ametrine           { "name":"ametrine", "color":["multicolor"]   }
-HSET gem_kind_description andalusite         { "name":"andalusite", "color":["multicolor"]   }
-HSET gem_kind_description andesine           { "name":"andesine", "color":["orange","red"]   }
-HSET gem_kind_description apatite            { "name":"apatite", "color":["blue","green"]   }
-HSET gem_kind_description aquamarine         { "name":"aquamarine", "color":["blue"]   }
-HSET gem_kind_description aventurine         { "name":"aventurine", "color":["green"]   }
-HSET gem_kind_description beryl              { "name":"beryl", "color":["yellow"]   }
-HSET gem_kind_description chalcedony         { "name":"chalcedony", "color":["violet"]   }
-HSET gem_kind_description chromediopside     { "name":"chrome diopside", "color":["green"]   }
-HSET gem_kind_description chrometourmaline   { "name":"chrome tourmaline", "color":["green"]   }
-HSET gem_kind_description chrysoberyl        { "name":"chrysoberyl", "color":["yellow"]   }
-HSET gem_kind_description citrine            { "name":"citrine", "color":["orange","yellow"]   }
-HSET gem_kind_description demantoidgarnet    { "name":"demantoid garnet", "color":["green"]   }
-HSET gem_kind_description diamond            { "name":"diamond", "color":["black","white","yellow"]   }
-HSET gem_kind_description emerald            { "name":"emerald", "color":["green"]   }
-HSET gem_kind_description fireopal           { "name":"fire opal", "color":["orange","white","yellow"]   }
-HSET gem_kind_description fluorite           { "name":"fluorite", "color":["blue","multicolor","silver","violet"]   }
-HSET gem_kind_description garnet             { "name":"garnet", "color":["red"]   }
-HSET gem_kind_description imperialtopaz      { "name":"imperial topaz", "color":["brown","orange"]   }
-HSET gem_kind_description iolite             { "name":"iolite", "color":["blue"]   }
-HSET gem_kind_description jade               { "name":"jade", "color":["green","white"]   }
-HSET gem_kind_description kunzite            { "name":"kunzite", "color":["pink"]   }
-HSET gem_kind_description kyanite            { "name":"kyanite", "color":["blue"]   }
-HSET gem_kind_description lapislazuli        { "name":"lapis lazuli", "color":["blue"]   }
-HSET gem_kind_description moonstone          { "name":"moonstone", "color":["orange","white"]   }
-HSET gem_kind_description morganite          { "name":"morganite", "color":["pink"]   }
-HSET gem_kind_description mysticquartz       { "name":"mystic quartz", "color":["multicolor"]   }
-HSET gem_kind_description mystictopaz        { "name":"mystic topaz", "color":["multicolor"]   }
-HSET gem_kind_description onyx               { "name":"onyx", "color":["black"]   }
-HSET gem_kind_description opal               { "name":"opal", "color":["multicolor"]   }
-HSET gem_kind_description orthoclase         { "name":"orthoclase", "color":["yellow"]   }
-HSET gem_kind_description paraibatourmaline  { "name":"paraiba tourmaline", "color":["blue","green"]   }
-HSET gem_kind_description peridot            { "name":"peridot", "color":["green"]   }
-HSET gem_kind_description prehnite           { "name":"prehnite", "color":["green"]   }
-HSET gem_kind_description quartz             { "name":"quartz", "color":["white","yellow"]   }
-HSET gem_kind_description rainbowmoonstone   { "name":"rainbow moonstone", "color":["blue"]   }
-HSET gem_kind_description rhodolitegarnet    { "name":"rhodolite garnet", "color":["pink"]   }
-HSET gem_kind_description rosequartz         { "name":"rose quartz", "color":["pink"]   }
-HSET gem_kind_description ruby               { "name":"ruby", "color":["red"]   }
-HSET gem_kind_description rubyzoisite        { "name":"ruby-zoisite", "color":["green"]   }
-HSET gem_kind_description sapphire           { "name":"sapphire", "color":["black","blue","green","multicolor","orange","pink","violet","white","yellow"]   }
-HSET gem_kind_description smokyquartz        { "name":"smoky quartz", "color":["brown"]   }
-HSET gem_kind_description spessartitegarnet  { "name":"spessartite garnet", "color":["orange"]   }
-HSET gem_kind_description sphene             { "name":"sphene", "color":["multicolor","yellow"]   }
-HSET gem_kind_description spinel             { "name":"spinel", "color":["blue","pink","red","silver", "violet"]   }
-HSET gem_kind_description spodumene          { "name":"spodumene", "color":["yellow"]   }
-HSET gem_kind_description starmoonstone      { "name":"star moonstone", "color":["orange"]   }
-HSET gem_kind_description starsapphire       { "name":"star sapphire", "color":["black"]   }
-HSET gem_kind_description tanzanite          { "name":"tanzanite", "color":["blue"]   }
-HSET gem_kind_description tigerseye          { "name":"tiger\'s eye", "color":["brown"]   }
-HSET gem_kind_description topaz              { "name":"topaz", "color":["blue","white"]   }
-HSET gem_kind_description tourmaline         { "name":"tourmaline", "color":["black","blue","brown","green","multicolor","orange","pink","red","silver","violet","yellow"]   }
-HSET gem_kind_description tsavoritegarnet    { "name":"tsavorite garnet", "color":["green"]   }
-HSET gem_kind_description zircon             { "name":"zircon", "color":["blue","orange","red","white","yellow"]   }
+self.redis.hset('gem_kind_description', 'agate', '{ "name":"agate", "color":["black","blue","brown","green","white","yellow"]   }')
+self.redis.hset('gem_kind_description', 'amethyst', '{ "name":"amethyst", "color":["violet"]   }')
+self.redis.hset('gem_kind_description', 'ametrine', '{ "name":"ametrine", "color":["multicolor"]   }')
+self.redis.hset('gem_kind_description', 'andalusite', '{ "name":"andalusite", "color":["multicolor"]   }')
+self.redis.hset('gem_kind_description', 'andesine', '{ "name":"andesine", "color":["orange","red"]   }')
+self.redis.hset('gem_kind_description', 'apatite', '{ "name":"apatite", "color":["blue","green"]   }')
+self.redis.hset('gem_kind_description', 'aquamarine', '{ "name":"aquamarine", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'aventurine', '{ "name":"aventurine", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'beryl', '{ "name":"beryl", "color":["yellow"]   }')
+self.redis.hset('gem_kind_description', 'chalcedony', '{ "name":"chalcedony", "color":["violet"]   }')
+self.redis.hset('gem_kind_description', 'chromediopside', '{ "name":"chrome diopside", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'chrometourmaline', '{ "name":"chrome tourmaline", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'chrysoberyl', '{ "name":"chrysoberyl", "color":["yellow"]   }')
+self.redis.hset('gem_kind_description', 'citrine', '{ "name":"citrine", "color":["orange","yellow"]   }')
+self.redis.hset('gem_kind_description', 'demantoidgarnet', '{ "name":"demantoid garnet", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'diamond', '{ "name":"diamond", "color":["black","white","yellow"]   }')
+self.redis.hset('gem_kind_description', 'emerald', '{ "name":"emerald", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'fireopal', '{ "name":"fire opal", "color":["orange","white","yellow"]   }')
+self.redis.hset('gem_kind_description', 'fluorite', '{ "name":"fluorite", "color":["blue","multicolor","silver","violet"]   }')
+self.redis.hset('gem_kind_description', 'garnet', '{ "name":"garnet", "color":["red"]   }')
+self.redis.hset('gem_kind_description', 'imperialtopaz', '{ "name":"imperial topaz", "color":["brown","orange"]   }')
+self.redis.hset('gem_kind_description', 'iolite', '{ "name":"iolite", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'jade', '{ "name":"jade", "color":["green","white"]   }')
+self.redis.hset('gem_kind_description', 'kunzite', '{ "name":"kunzite", "color":["pink"]   }')
+self.redis.hset('gem_kind_description', 'kyanite', '{ "name":"kyanite", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'lapislazuli', '{ "name":"lapis lazuli", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'moonstone', '{ "name":"moonstone", "color":["orange","white"]   }')
+self.redis.hset('gem_kind_description', 'morganite', '{ "name":"morganite", "color":["pink"]   }')
+self.redis.hset('gem_kind_description', 'mysticquartz', '{ "name":"mystic quartz", "color":["multicolor"]   }')
+self.redis.hset('gem_kind_description', 'mystictopaz', '{ "name":"mystic topaz", "color":["multicolor"]   }')
+self.redis.hset('gem_kind_description', 'onyx', '{ "name":"onyx", "color":["black"]   }')
+self.redis.hset('gem_kind_description', 'opal', '{ "name":"opal", "color":["multicolor"]   }')
+self.redis.hset('gem_kind_description', 'orthoclase', '{ "name":"orthoclase", "color":["yellow"]   }')
+self.redis.hset('gem_kind_description', 'paraibatourmaline', '{ "name":"paraiba tourmaline", "color":["blue","green"]   }')
+self.redis.hset('gem_kind_description', 'peridot', '{ "name":"peridot", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'prehnite', '{ "name":"prehnite", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'quartz', '{ "name":"quartz", "color":["white","yellow"]   }')
+self.redis.hset('gem_kind_description', 'rainbowmoonstone', '{ "name":"rainbow moonstone", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'rhodolitegarnet', '{ "name":"rhodolite garnet", "color":["pink"]   }')
+self.redis.hset('gem_kind_description', 'rosequartz', '{ "name":"rose quartz", "color":["pink"]   }')
+self.redis.hset('gem_kind_description', 'ruby', '{ "name":"ruby", "color":["red"]   }')
+self.redis.hset('gem_kind_description', 'rubyzoisite', '{ "name":"ruby-zoisite", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'sapphire', '{ "name":"sapphire", "color":["black","blue","green","multicolor","orange","pink","violet","white","yellow"]   }')
+self.redis.hset('gem_kind_description', 'smokyquartz', '{ "name":"smoky quartz", "color":["brown"]   }')
+self.redis.hset('gem_kind_description', 'spessartitegarnet', '{ "name":"spessartite garnet", "color":["orange"]   }')
+self.redis.hset('gem_kind_description', 'sphene', '{ "name":"sphene", "color":["multicolor","yellow"]   }')
+self.redis.hset('gem_kind_description', 'spinel', '{ "name":"spinel", "color":["blue","pink","red","silver", "violet"]   }')
+self.redis.hset('gem_kind_description', 'spodumene', '{ "name":"spodumene", "color":["yellow"]   }')
+self.redis.hset('gem_kind_description', 'starmoonstone', '{ "name":"star moonstone", "color":["orange"]   }')
+self.redis.hset('gem_kind_description', 'starsapphire', '{ "name":"star sapphire", "color":["black"]   }')
+self.redis.hset('gem_kind_description', 'tanzanite', '{ "name":"tanzanite", "color":["blue"]   }')
+self.redis.hset('gem_kind_description', 'tigerseye', '{ "name":"tiger\'s eye", "color":["brown"]   }')
+self.redis.hset('gem_kind_description', 'topaz', '{ "name":"topaz", "color":["blue","white"]   }')
+self.redis.hset('gem_kind_description', 'tourmaline', '{ "name":"tourmaline", "color":["black","blue","brown","green","multicolor","orange","pink","red","silver","violet","yellow"]   }')
+self.redis.hset('gem_kind_description', 'tsavoritegarnet', '{ "name":"tsavorite garnet", "color":["green"]   }')
+self.redis.hset('gem_kind_description', 'zircon', '{ "name":"zircon", "color":["blue","orange","red","white","yellow"]   }')
 
 self.redis.lpush('gem_kind', 'agate')
 self.redis.lpush('gem_kind', 'amethyst')

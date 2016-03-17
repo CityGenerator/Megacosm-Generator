@@ -19,14 +19,14 @@ self.redis.lpush('lizardfolk_subrace', 'crested')
 self.redis.lpush('lizardfolk_subrace', 'bearded')
 self.redis.lpush('lizardfolk_subrace', 'girdled')
 
-HSET lizardfolk_subrace_description horned      {"subrace": "Horned Lizardfolk",     "description": "" }
-HSET lizardfolk_subrace_description chameleon   {"subrace": "Chameleonfolk",         "description": "" }
-HSET lizardfolk_subrace_description frilled     {"subrace": "Frilled Lizardfolk",    "description": "" }
-HSET lizardfolk_subrace_description bluetongue  {"subrace": "Bluetongue Lizardfolk", "description": "" }
-HSET lizardfolk_subrace_description spiny       {"subrace": "Spiny Lizardfolk",      "description": "" }
-HSET lizardfolk_subrace_description crested     {"subrace": "Crested Lizardfolk",    "description": "" }
-HSET lizardfolk_subrace_description bearded     {"subrace": "Bearded Lizardfolk",    "description": "" }
-HSET lizardfolk_subrace_description girdled     {"subrace": "Girdled Lizardfolk",    "description": "" }
+self.redis.hset('lizardfolk_subrace_description', 'horned', '{"subrace": "Horned Lizardfolk",     "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'chameleon', '{"subrace": "Chameleonfolk",         "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'frilled', '{"subrace": "Frilled Lizardfolk",    "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'bluetongue', '{"subrace": "Bluetongue Lizardfolk", "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'spiny', '{"subrace": "Spiny Lizardfolk",      "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'crested', '{"subrace": "Crested Lizardfolk",    "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'bearded', '{"subrace": "Bearded Lizardfolk",    "description": "" }')
+self.redis.hset('lizardfolk_subrace_description', 'girdled', '{"subrace": "Girdled Lizardfolk",    "description": "" }')
 
 self.redis.lpush('lizardfolkname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('lizardfolkname_shortname_template', '{{params.first_pre}}{{params.first_root}}')

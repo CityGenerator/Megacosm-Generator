@@ -11,8 +11,8 @@ SET human_subrace_chance 10
 self.redis.lpush('human_subrace', 'halforc')
 self.redis.lpush('human_subrace', 'halfelf')
 
-HSET human_subrace_description halforc   {"subrace": "Halforc",      "description": "Humans with a trace of Orc lineage." }
-HSET human_subrace_description halfelf   {"subrace": "Halfelf",      "description": "Humans with a trace of Elf lineage." }
+self.redis.hset('human_subrace_description', 'halforc', '{"subrace": "Halforc",      "description": "Humans with a trace of Orc lineage." }')
+self.redis.hset('human_subrace_description', 'halfelf', '{"subrace": "Halfelf",      "description": "Humans with a trace of Elf lineage." }')
 
 self.redis.lpush('humanname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}')
 self.redis.lpush('humanname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')

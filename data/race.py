@@ -1,9 +1,9 @@
 # Various races that are available
 
 
-HSET race_size small    {"modifier":"-1"}
-HSET race_size medium   {"modifier":"0" }
-HSET race_size large    {"modifier":"+1"}
+self.redis.hset('race_size', 'small', '{"modifier":"-1"}')
+self.redis.hset('race_size', 'medium', '{"modifier":"0" }')
+self.redis.hset('race_size', 'large', '{"modifier":"+1"}')
 
 #LPUSH race gnome       
 #LPUSH race minotaur    

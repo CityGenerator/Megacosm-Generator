@@ -69,77 +69,77 @@ self.redis.lpush('curse_kind', 'truthteller')
 self.redis.lpush('curse_kind', 'tunnelvision')
 
 # The Bezerker Curse ____________
-HSET curse_kind_description bezerker  {"name":"bezerker", "description":"causes intermittent, uncontrollable rage in the victim"  }
-HSET curse_kind_description narcolepsy  {"name":"narcolepsy", "description":"causes the victim to fall asleep in stressful situations"   }
-HSET curse_kind_description fanatic  {"name":"fanatic", "description":"causes overzealous feeling of love or hate towards a single random person, action or thing"   }
-HSET curse_kind_description greed  {"name":"greed", "description":"causes the victim to take unnecessary risks for treasure"   }
-HSET curse_kind_description hubris  {"name":"hubris", "description":"causes the victim to overvalue their ability"   }
-HSET curse_kind_description addiction  {"name":"addiction", "description":"causes the victim to grow overly dependent on an action or thing"   }
-HSET curse_kind_description penalty  {"name":"disadvantaged", "description":"causes victim to perform poorly at everything" }
-HSET curse_kind_description derp  {"name":"derp", "description":"causes the victim to become noticeably stupider than everyone around"   }
-HSET curse_kind_description yawning  {"name":"yawning", "description":"causes uncontrollable, loud yawning"   }
-HSET curse_kind_description submission  {"name":"submission", "description":"will randomly submit to anyone disagreeing or displaying force"   }
-HSET curse_kind_description lethargy  {"name":"lethargy", "description":"causes the victim to perform poorly at physical tasks"  }
-HSET curse_kind_description bigspender  {"name":"big spender", "description":"causes victim to overcompensate when making purchases"   }
-HSET curse_kind_description truthteller  {"name":"truth teller", "description":"prevents you from lying, bending or ommitting the truth"   }
-HSET curse_kind_description precious  {"name":"precious", "description":"causes paranoia relating to theft of an item"   }
-HSET curse_kind_description braddoro  {"name":"braddoro", "description":"causes a preoccupation with juvenile jokes, and uncontrollable giggles"   }
-HSET curse_kind_description karrius  {"name":"carrius", "description":"causes an obnoxious preoccupation with random topics that no one cares about"   }
-HSET curse_kind_description quint  {"name":"quint", "description":"causes the victim to randomly berate and threaten friends and colleagues"   }
-HSET curse_kind_description ibiwan  {"name":"ibiwan", "description":"causes inability to comprehend being wrong, even if it leads to death"   }
-HSET curse_kind_description greenimposter  {"name":"greenimposter", "description":"causes the victim to suddenly believe their are unqualified for whatever task is at hand"   }
-HSET curse_kind_description mabdelnour  {"name":"mabdelnour", "description":"causes random shortness of breath and inability to run" }
-HSET curse_kind_description trammelle  {"name":"trammelle", "description":"causes fits of rage when any filth is left on a glossy surface and a compulsion to clean it"   }
-HSET curse_kind_description jamangai  {"name":"jamangai", "description":"causes the victim to feel compelled to one-up others"   }
-HSET curse_kind_description phobic  {"name":"phobic", "description":"causes irrational fear of one or more things"   }
-HSET curse_kind_description babbler  {"name":"babbler", "description":"causes incessant, uncontrollable talking that becomes worse with stressful situations"   }
-HSET curse_kind_description kudla {"name":"kudla", "description":"causes the victim\'s skin to secrete a disgusting, oozing slime"   }
-HSET curse_kind_description toolio {"name":"toolio", "description":"causes the victim extreme discomfort when being decisive or making decisions"   }
-HSET curse_kind_description unlucky  {"name":"unlucky", "description":"causes the victim to become unlucky when they don\'t have their lucky charm"  }
-HSET curse_kind_description sleepless  {"name":"sleepless", "description":"prevents the victim from resting through mundane or magical means"  }
+self.redis.hset('curse_kind_description', 'bezerker', '{"name":"bezerker", "description":"causes intermittent, uncontrollable rage in the victim"  }')
+self.redis.hset('curse_kind_description', 'narcolepsy', '{"name":"narcolepsy", "description":"causes the victim to fall asleep in stressful situations"   }')
+self.redis.hset('curse_kind_description', 'fanatic', '{"name":"fanatic", "description":"causes overzealous feeling of love or hate towards a single random person, action or thing"   }')
+self.redis.hset('curse_kind_description', 'greed', '{"name":"greed", "description":"causes the victim to take unnecessary risks for treasure"   }')
+self.redis.hset('curse_kind_description', 'hubris', '{"name":"hubris", "description":"causes the victim to overvalue their ability"   }')
+self.redis.hset('curse_kind_description', 'addiction', '{"name":"addiction", "description":"causes the victim to grow overly dependent on an action or thing"   }')
+self.redis.hset('curse_kind_description', 'penalty', '{"name":"disadvantaged", "description":"causes victim to perform poorly at everything" }')
+self.redis.hset('curse_kind_description', 'derp', '{"name":"derp", "description":"causes the victim to become noticeably stupider than everyone around"   }')
+self.redis.hset('curse_kind_description', 'yawning', '{"name":"yawning", "description":"causes uncontrollable, loud yawning"   }')
+self.redis.hset('curse_kind_description', 'submission', '{"name":"submission", "description":"will randomly submit to anyone disagreeing or displaying force"   }')
+self.redis.hset('curse_kind_description', 'lethargy', '{"name":"lethargy", "description":"causes the victim to perform poorly at physical tasks"  }')
+self.redis.hset('curse_kind_description', 'bigspender', '{"name":"big spender", "description":"causes victim to overcompensate when making purchases"   }')
+self.redis.hset('curse_kind_description', 'truthteller', '{"name":"truth teller", "description":"prevents you from lying, bending or ommitting the truth"   }')
+self.redis.hset('curse_kind_description', 'precious', '{"name":"precious", "description":"causes paranoia relating to theft of an item"   }')
+self.redis.hset('curse_kind_description', 'braddoro', '{"name":"braddoro", "description":"causes a preoccupation with juvenile jokes, and uncontrollable giggles"   }')
+self.redis.hset('curse_kind_description', 'karrius', '{"name":"carrius", "description":"causes an obnoxious preoccupation with random topics that no one cares about"   }')
+self.redis.hset('curse_kind_description', 'quint', '{"name":"quint", "description":"causes the victim to randomly berate and threaten friends and colleagues"   }')
+self.redis.hset('curse_kind_description', 'ibiwan', '{"name":"ibiwan", "description":"causes inability to comprehend being wrong, even if it leads to death"   }')
+self.redis.hset('curse_kind_description', 'greenimposter', '{"name":"greenimposter", "description":"causes the victim to suddenly believe their are unqualified for whatever task is at hand"   }')
+self.redis.hset('curse_kind_description', 'mabdelnour', '{"name":"mabdelnour", "description":"causes random shortness of breath and inability to run" }')
+self.redis.hset('curse_kind_description', 'trammelle', '{"name":"trammelle", "description":"causes fits of rage when any filth is left on a glossy surface and a compulsion to clean it"   }')
+self.redis.hset('curse_kind_description', 'jamangai', '{"name":"jamangai", "description":"causes the victim to feel compelled to one-up others"   }')
+self.redis.hset('curse_kind_description', 'phobic', '{"name":"phobic", "description":"causes irrational fear of one or more things"   }')
+self.redis.hset('curse_kind_description', 'babbler', '{"name":"babbler", "description":"causes incessant, uncontrollable talking that becomes worse with stressful situations"   }')
+self.redis.hset('curse_kind_description', 'kudla', '{"name":"kudla", "description":"causes the victim\'s skin to secrete a disgusting, oozing slime"   }')
+self.redis.hset('curse_kind_description', 'toolio', '{"name":"toolio", "description":"causes the victim extreme discomfort when being decisive or making decisions"   }')
+self.redis.hset('curse_kind_description', 'unlucky', '{"name":"unlucky", "description":"causes the victim to become unlucky when they don\'t have their lucky charm"  }')
+self.redis.hset('curse_kind_description', 'sleepless', '{"name":"sleepless", "description":"prevents the victim from resting through mundane or magical means"  }')
 
 
-HSET curse_kind_description agro  {"name":"agro", "description":"causes enemies to always target the victim"  }
-HSET curse_kind_description blinding  {"name":"blinding", "description":"causes decay of sight"  }
-HSET curse_kind_description butterfinger  {"name":"butterfinger", "description":"prevents the victim from griping anything for more than 30 seconds"  }
-HSET curse_kind_description cleese  {"name":"cleese", "description":"causes the victim to walk strangely, reducing movement and stealth"  }
-HSET curse_kind_description deathscent  {"name":"death scent", "description":"causes the victim to reek of death, frightening nearby animals"  }
-HSET curse_kind_description deathspite  {"name":"death spite", "description":"causes dying enemies within range to get one last attack against the victim before dying"  }
-HSET curse_kind_description decaying  {"name":"decaying", "description":"causes physical rotting and losing a bit of health each day"  }
-HSET curse_kind_description doublevision  {"name":"double vision", "description":"causes the victim to see double (disadvantage in combat and perception)"  }
-HSET curse_kind_description drowning  {"name":"drowning", "description":"causes prevents the victim from remembering how to swim"  }
-HSET curse_kind_description echo  {"name":"", "description":"causes the victim to randomly parrot phrases"  }
-HSET curse_kind_description fashionista  {"name":"fashionista", "description":"causes the victim to become are uncomfortable in whatever clothing or armor they are wearing (at a disadvantage while wearing it)"  }
-HSET curse_kind_description festering  {"name":"festering", "description":"causes the victim to become resistant to healing"  }
-HSET curse_kind_description forgetful  {"name":"forgetful", "description":"become forgetful when trying to recall important things"  }
-HSET curse_kind_description habitualliar  {"name":"habitual liar", "description":"causes the victim to be strongly compelled to needlessly lie"  }
-HSET curse_kind_description halfhearted  {"name":"half-hearted", "description":"causes the victim to strike in a minimally damaging way"  }
-HSET curse_kind_description humming  {"name":"humming", "description":"causes the victim to unconsciously hum or sing"  }
-HSET curse_kind_description itchy  {"name":"itchy ", "description":"causes the victim to develop a full body, insufferable rash in the presence of a specific catalyst"  }
-HSET curse_kind_description leadenedleg  {"name":"leadened leg", "description":"causes the victim\'s leg to permanently fall asleep, reducing movement"  }
-HSET curse_kind_description lostmojo  {"name":"lost mojo", "description":"prevents the victim from attuning or using magical items"  }
-HSET curse_kind_description maximumpain  {"name":"maximum pain", "description":"causes an enemies damage to always maximized against the victim"  }
-HSET curse_kind_description misfiring  {"name":"misfiring", "description":"causes a 25% chance of failure to properly cast a spell or use a ranged weapon"  }
-HSET curse_kind_description misplacing  {"name":"misplacing", "description":"causes the victim to have a 5% chance of realizing a possession is missing when trying to use it"  }
-HSET curse_kind_description muted  {"name":"muted", "description":"causes an inability to vocalize"  }
-HSET curse_kind_description pacifistic  {"name":"pacifistic", "description":"causes the victim\'s hands to burn and blister while holding a weapon"  }
-HSET curse_kind_description princely  {"name":"princely", "description":"causes the victim to be polymorphed into a talking animal."  }
-HSET curse_kind_description puedelathos  {"name":"puedelathos", "description":"causes a 50% chance to automatically fail any successful saving throw"  }
-HSET curse_kind_description reflectedsins  {"name":"reflected sins", "description":"causes any damage inflicted on an opponent to be mirrored on the victim"  }
-HSET curse_kind_description respondent  {"name":"respondent", "description":"causes the victim to repeat a phrase in response to a trigger"  }
-HSET curse_kind_description seashell  {"name":"seashell", "description":"causes the victim\'s hearing to be replaced with the roar of the ocean"  }
-HSET curse_kind_description sexybeast  {"name":"sexy beast", "description":"causes the victim to release mating hormones of random nearby creatures"  }
-HSET curse_kind_description shakyhands  {"name":"shaky hands", "description":"causes a 25% chance to drop whatever the victim is holding in combat situations"  }
-HSET curse_kind_description singletasking {"name":"single-tasking", "description":"prevents the victim from performing more than one action at a time."  }
-HSET curse_kind_description skippy  {"name":"skippy", "description":"causes the victim to forget how to walk (but can still skip)"  }
-HSET curse_kind_description smoothness  {"name":"smoothness", "description":"causes all hair, feathers, spines or scales fall off the victim"  }
-HSET curse_kind_description spinny  {"name":"spinny", "description":"prevents walking or running in a straight line, reducing movement"  }
-HSET curse_kind_description startling  {"name":"startling", "description":"causes the victim to always be surpised in new combat situations"  }
-HSET curse_kind_description stutterer  {"name":"stutterer", "description":"causes the victim to develop an incomprehensible stutter "  }
-HSET curse_kind_description tonguetied  {"name":"tonguetied", "description":"causes the victim to grow a fleshy webbing that holds their tongue down, impeding speech"  }
-HSET curse_kind_description trueself  {"name":"true self", "description":"causes the victim to gradually morph cosmetically into another race"  }
-HSET curse_kind_description truthteller  {"name":"truthteller", "description":"causes the victim to be strongly compelled to tell the complete truth"  }
-HSET curse_kind_description tunnelvision  {"name":"tunnel vision", "description":"causes the victim to lose peripheral vision (disadvantage in combat and perception)"  }
+self.redis.hset('curse_kind_description', 'agro', '{"name":"agro", "description":"causes enemies to always target the victim"  }')
+self.redis.hset('curse_kind_description', 'blinding', '{"name":"blinding", "description":"causes decay of sight"  }')
+self.redis.hset('curse_kind_description', 'butterfinger', '{"name":"butterfinger", "description":"prevents the victim from griping anything for more than 30 seconds"  }')
+self.redis.hset('curse_kind_description', 'cleese', '{"name":"cleese", "description":"causes the victim to walk strangely, reducing movement and stealth"  }')
+self.redis.hset('curse_kind_description', 'deathscent', '{"name":"death scent", "description":"causes the victim to reek of death, frightening nearby animals"  }')
+self.redis.hset('curse_kind_description', 'deathspite', '{"name":"death spite", "description":"causes dying enemies within range to get one last attack against the victim before dying"  }')
+self.redis.hset('curse_kind_description', 'decaying', '{"name":"decaying", "description":"causes physical rotting and losing a bit of health each day"  }')
+self.redis.hset('curse_kind_description', 'doublevision', '{"name":"double vision", "description":"causes the victim to see double (disadvantage in combat and perception)"  }')
+self.redis.hset('curse_kind_description', 'drowning', '{"name":"drowning", "description":"causes prevents the victim from remembering how to swim"  }')
+self.redis.hset('curse_kind_description', 'echo', '{"name":"", "description":"causes the victim to randomly parrot phrases"  }')
+self.redis.hset('curse_kind_description', 'fashionista', '{"name":"fashionista", "description":"causes the victim to become are uncomfortable in whatever clothing or armor they are wearing (at a disadvantage while wearing it)"  }')
+self.redis.hset('curse_kind_description', 'festering', '{"name":"festering", "description":"causes the victim to become resistant to healing"  }')
+self.redis.hset('curse_kind_description', 'forgetful', '{"name":"forgetful", "description":"become forgetful when trying to recall important things"  }')
+self.redis.hset('curse_kind_description', 'habitualliar', '{"name":"habitual liar", "description":"causes the victim to be strongly compelled to needlessly lie"  }')
+self.redis.hset('curse_kind_description', 'halfhearted', '{"name":"half-hearted", "description":"causes the victim to strike in a minimally damaging way"  }')
+self.redis.hset('curse_kind_description', 'humming', '{"name":"humming", "description":"causes the victim to unconsciously hum or sing"  }')
+self.redis.hset('curse_kind_description', 'itchy', '{"name":"itchy ", "description":"causes the victim to develop a full body, insufferable rash in the presence of a specific catalyst"  }')
+self.redis.hset('curse_kind_description', 'leadenedleg', '{"name":"leadened leg", "description":"causes the victim\'s leg to permanently fall asleep, reducing movement"  }')
+self.redis.hset('curse_kind_description', 'lostmojo', '{"name":"lost mojo", "description":"prevents the victim from attuning or using magical items"  }')
+self.redis.hset('curse_kind_description', 'maximumpain', '{"name":"maximum pain", "description":"causes an enemies damage to always maximized against the victim"  }')
+self.redis.hset('curse_kind_description', 'misfiring', '{"name":"misfiring", "description":"causes a 25% chance of failure to properly cast a spell or use a ranged weapon"  }')
+self.redis.hset('curse_kind_description', 'misplacing', '{"name":"misplacing", "description":"causes the victim to have a 5% chance of realizing a possession is missing when trying to use it"  }')
+self.redis.hset('curse_kind_description', 'muted', '{"name":"muted", "description":"causes an inability to vocalize"  }')
+self.redis.hset('curse_kind_description', 'pacifistic', '{"name":"pacifistic", "description":"causes the victim\'s hands to burn and blister while holding a weapon"  }')
+self.redis.hset('curse_kind_description', 'princely', '{"name":"princely", "description":"causes the victim to be polymorphed into a talking animal."  }')
+self.redis.hset('curse_kind_description', 'puedelathos', '{"name":"puedelathos", "description":"causes a 50% chance to automatically fail any successful saving throw"  }')
+self.redis.hset('curse_kind_description', 'reflectedsins', '{"name":"reflected sins", "description":"causes any damage inflicted on an opponent to be mirrored on the victim"  }')
+self.redis.hset('curse_kind_description', 'respondent', '{"name":"respondent", "description":"causes the victim to repeat a phrase in response to a trigger"  }')
+self.redis.hset('curse_kind_description', 'seashell', '{"name":"seashell", "description":"causes the victim\'s hearing to be replaced with the roar of the ocean"  }')
+self.redis.hset('curse_kind_description', 'sexybeast', '{"name":"sexy beast", "description":"causes the victim to release mating hormones of random nearby creatures"  }')
+self.redis.hset('curse_kind_description', 'shakyhands', '{"name":"shaky hands", "description":"causes a 25% chance to drop whatever the victim is holding in combat situations"  }')
+self.redis.hset('curse_kind_description', 'singletasking', '{"name":"single-tasking", "description":"prevents the victim from performing more than one action at a time."  }')
+self.redis.hset('curse_kind_description', 'skippy', '{"name":"skippy", "description":"causes the victim to forget how to walk (but can still skip)"  }')
+self.redis.hset('curse_kind_description', 'smoothness', '{"name":"smoothness", "description":"causes all hair, feathers, spines or scales fall off the victim"  }')
+self.redis.hset('curse_kind_description', 'spinny', '{"name":"spinny", "description":"prevents walking or running in a straight line, reducing movement"  }')
+self.redis.hset('curse_kind_description', 'startling', '{"name":"startling", "description":"causes the victim to always be surpised in new combat situations"  }')
+self.redis.hset('curse_kind_description', 'stutterer', '{"name":"stutterer", "description":"causes the victim to develop an incomprehensible stutter "  }')
+self.redis.hset('curse_kind_description', 'tonguetied', '{"name":"tonguetied", "description":"causes the victim to grow a fleshy webbing that holds their tongue down, impeding speech"  }')
+self.redis.hset('curse_kind_description', 'trueself', '{"name":"true self", "description":"causes the victim to gradually morph cosmetically into another race"  }')
+self.redis.hset('curse_kind_description', 'truthteller', '{"name":"truthteller", "description":"causes the victim to be strongly compelled to tell the complete truth"  }')
+self.redis.hset('curse_kind_description', 'tunnelvision', '{"name":"tunnel vision", "description":"causes the victim to lose peripheral vision (disadvantage in combat and perception)"  }')
 
 
 

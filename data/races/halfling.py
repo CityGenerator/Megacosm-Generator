@@ -23,19 +23,19 @@ self.redis.lpush('halfling_subrace', 'stoneborn')
 self.redis.lpush('halfling_subrace', 'waterborn')
 self.redis.lpush('halfling_subrace', 'dune')
 
-HSET halfling_subrace_description hairfoot    {"subrace": "Hairfoot Halfling",      "description": "" }
-HSET halfling_subrace_description tallfellow  {"subrace": "Tallfellow Halfling",    "description": "" }
-HSET halfling_subrace_description stout       {"subrace": "Stout Halfling",         "description": "" }
-HSET halfling_subrace_description polar       {"subrace": "Polar Halfling",         "description": "" }
-HSET halfling_subrace_description lightfoot   {"subrace": "Lightfoot Halfling",     "description": "" }
-HSET halfling_subrace_description vile        {"subrace": "Vile Halfling",          "description": "" }
-HSET halfling_subrace_description strongheart {"subrace": "Strongheart Halfling",   "description": "" }
-HSET halfling_subrace_description kender      {"subrace": "Kender",                 "description": "" }
-HSET halfling_subrace_description deep        {"subrace": "Deep Halfling",          "description": "" }
-HSET halfling_subrace_description pygmy       {"subrace": "Pygmy Halfling",         "description": "" }
-HSET halfling_subrace_description stoneborn   {"subrace": "Stoneborn Halfling",     "description": "" }
-HSET halfling_subrace_description waterborn   {"subrace": "Waterborn Halfling",     "description": "" }
-HSET halfling_subrace_description dune        {"subrace": "Dune Halfling",          "description": "" }
+self.redis.hset('halfling_subrace_description', 'hairfoot', '{"subrace": "Hairfoot Halfling",      "description": "" }')
+self.redis.hset('halfling_subrace_description', 'tallfellow', '{"subrace": "Tallfellow Halfling",    "description": "" }')
+self.redis.hset('halfling_subrace_description', 'stout', '{"subrace": "Stout Halfling",         "description": "" }')
+self.redis.hset('halfling_subrace_description', 'polar', '{"subrace": "Polar Halfling",         "description": "" }')
+self.redis.hset('halfling_subrace_description', 'lightfoot', '{"subrace": "Lightfoot Halfling",     "description": "" }')
+self.redis.hset('halfling_subrace_description', 'vile', '{"subrace": "Vile Halfling",          "description": "" }')
+self.redis.hset('halfling_subrace_description', 'strongheart', '{"subrace": "Strongheart Halfling",   "description": "" }')
+self.redis.hset('halfling_subrace_description', 'kender', '{"subrace": "Kender",                 "description": "" }')
+self.redis.hset('halfling_subrace_description', 'deep', '{"subrace": "Deep Halfling",          "description": "" }')
+self.redis.hset('halfling_subrace_description', 'pygmy', '{"subrace": "Pygmy Halfling",         "description": "" }')
+self.redis.hset('halfling_subrace_description', 'stoneborn', '{"subrace": "Stoneborn Halfling",     "description": "" }')
+self.redis.hset('halfling_subrace_description', 'waterborn', '{"subrace": "Waterborn Halfling",     "description": "" }')
+self.redis.hset('halfling_subrace_description', 'dune', '{"subrace": "Dune Halfling",          "description": "" }')
 
 self.redis.lpush('halflingname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('halflingname_shortname_template', '{{params.first_pre}}')

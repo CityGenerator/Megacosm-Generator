@@ -11,7 +11,7 @@ SET molekin_subrace_chance 10
 # Note that descriptions aren\'t heavily used right now anyways.
 self.redis.lpush('molekin_subrace', 'starnose')
 
-HSET molekin_subrace_description starnose   {"subrace": "Star-nosed Molekin",      "description": "an unsettling hunter" }
+self.redis.hset('molekin_subrace_description', 'starnose', '{"subrace": "Star-nosed Molekin",      "description": "an unsettling hunter" }')
 
 self.redis.lpush('molekinname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('molekinname_shortname_template', '{{params.first_pre}}{{params.first_root}}')

@@ -18,14 +18,14 @@ self.redis.lpush('minotaur_subrace', 'turin')
 self.redis.lpush('minotaur_subrace', 'kaunas')
 
 
-HSET minotaur_subrace_description taurine    {"subrace": "Taurine Minotaur",   "description": "" }
-HSET minotaur_subrace_description bovan      {"subrace": "Bovan Minotaur",     "description": "thugs" }
-HSET minotaur_subrace_description nandi      {"subrace": "Nandi Minotaur",     "description": "guardians and lawkeepers" }
-HSET minotaur_subrace_description auroch     {"subrace": "Auroch Minotaur",    "description": "ancient" }
-HSET minotaur_subrace_description oxine      {"subrace": "Oxine Minotaur",     "description": "large and stupid" }
-HSET minotaur_subrace_description brahman    {"subrace": "Brahman Minotaur",   "description": "long eared and patient" }
-HSET minotaur_subrace_description turin      {"subrace": "Turin Minotaur",     "description": "merchants and traders" }
-HSET minotaur_subrace_description kaunas     {"subrace": "Kaunas Minotaur",    "description": "long horned and wise" }
+self.redis.hset('minotaur_subrace_description', 'taurine', '{"subrace": "Taurine Minotaur",   "description": "" }')
+self.redis.hset('minotaur_subrace_description', 'bovan', '{"subrace": "Bovan Minotaur",     "description": "thugs" }')
+self.redis.hset('minotaur_subrace_description', 'nandi', '{"subrace": "Nandi Minotaur",     "description": "guardians and lawkeepers" }')
+self.redis.hset('minotaur_subrace_description', 'auroch', '{"subrace": "Auroch Minotaur",    "description": "ancient" }')
+self.redis.hset('minotaur_subrace_description', 'oxine', '{"subrace": "Oxine Minotaur",     "description": "large and stupid" }')
+self.redis.hset('minotaur_subrace_description', 'brahman', '{"subrace": "Brahman Minotaur",   "description": "long eared and patient" }')
+self.redis.hset('minotaur_subrace_description', 'turin', '{"subrace": "Turin Minotaur",     "description": "merchants and traders" }')
+self.redis.hset('minotaur_subrace_description', 'kaunas', '{"subrace": "Kaunas Minotaur",    "description": "long horned and wise" }')
 
 
 self.redis.lpush('minotaurname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')

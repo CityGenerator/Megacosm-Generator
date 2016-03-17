@@ -12,8 +12,8 @@ SET ogre_subrace_chance 30
 self.redis.lpush('ogre_subrace', 'merrow')
 self.redis.lpush('ogre_subrace', 'mage')
 
-HSET ogre_subrace_description merrow      {"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }
-HSET ogre_subrace_description mage        {"subrace": "Ogre Mage",         "description": "" }
+self.redis.hset('ogre_subrace_description', 'merrow', '{"subrace": "Merrow (Ogre)",     "description": "aquatic ogre" }')
+self.redis.hset('ogre_subrace_description', 'mage', '{"subrace": "Ogre Mage",         "description": "" }')
 
 self.redis.lpush('ogrename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('ogrename_shortname_template', '{{params.first_pre}}{{params.first_root}}')

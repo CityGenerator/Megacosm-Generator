@@ -11,8 +11,8 @@ SET hobgoblin_subrace_chance 30
 self.redis.lpush('hobgoblin_subrace', 'shadow')
 self.redis.lpush('hobgoblin_subrace', 'koalinth')
 
-HSET hobgoblin_subrace_description shadow   {"subrace": "Shadow Hobgoblin",      "description": "" }
-HSET hobgoblin_subrace_description koalinth {"subrace": "Koalinth Hobgoblin",      "description": "" }
+self.redis.hset('hobgoblin_subrace_description', 'shadow', '{"subrace": "Shadow Hobgoblin",      "description": "" }')
+self.redis.hset('hobgoblin_subrace_description', 'koalinth', '{"subrace": "Koalinth Hobgoblin",      "description": "" }')
 
 
 self.redis.lpush('hobgoblinname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')

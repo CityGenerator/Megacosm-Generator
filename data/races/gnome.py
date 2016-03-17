@@ -15,11 +15,11 @@ self.redis.lpush('gnome_subrace', 'rock')
 self.redis.lpush('gnome_subrace', 'tinker')
 self.redis.lpush('gnome_subrace', 'garden')
 
-HSET gnome_subrace_description deep     {"subrace": "Deep Gnome",       "description": "" }
-HSET gnome_subrace_description forest   {"subrace": "Forest Gnome",     "description": "" }
-HSET gnome_subrace_description rock     {"subrace": "Rock Gnome",       "description": "" }
-HSET gnome_subrace_description tinker   {"subrace": "Tinker Gnome",     "description": "" }
-HSET gnome_subrace_description garden   {"subrace": "Garden Gnome",     "description": "" }
+self.redis.hset('gnome_subrace_description', 'deep', '{"subrace": "Deep Gnome",       "description": "" }')
+self.redis.hset('gnome_subrace_description', 'forest', '{"subrace": "Forest Gnome",     "description": "" }')
+self.redis.hset('gnome_subrace_description', 'rock', '{"subrace": "Rock Gnome",       "description": "" }')
+self.redis.hset('gnome_subrace_description', 'tinker', '{"subrace": "Tinker Gnome",     "description": "" }')
+self.redis.hset('gnome_subrace_description', 'garden', '{"subrace": "Garden Gnome",     "description": "" }')
 
 self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')

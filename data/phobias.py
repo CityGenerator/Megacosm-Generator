@@ -446,434 +446,434 @@ self.redis.lpush('phobia_kind', 'zoophobia')
 
 
 
-HSET phobia_kind_description ablutophobia       {"name":"Ablutophobia",       "description":"washing or bathing" }
-HSET phobia_kind_description acarophobia        {"name":"Acarophobia",        "description":"skin infestation by mites or ticks" }
-HSET phobia_kind_description acerophobia        {"name":"Acerophobia",        "description":"sourness" }
-HSET phobia_kind_description acousticophobia    {"name":"Acousticophobia",    "description":"noise" }
-HSET phobia_kind_description acrophobia         {"name":"Acrophobia",         "description":"heights" }
-HSET phobia_kind_description aeroacrophobia     {"name":"Aeroacrophobia",     "description":"open high places" }
-HSET phobia_kind_description aeronausiphobia    {"name":"Aeronausiphobia",    "description":"vomiting due to airsickness" }
-HSET phobia_kind_description aerophobia         {"name":"Aerophobia",         "description":"drafts, air swallowing, or airbourne noxious substances" }
-HSET phobia_kind_description agoraphobia        {"name":"Agoraphobia",        "description":"open spaces or of being in crowded, public places" }
-HSET phobia_kind_description agrizoophobia      {"name":"Agrizoophobia",      "description":"wild animals" }
-HSET phobia_kind_description agyrophobia        {"name":"Agyrophobia",        "description":"crossing streets" }
-HSET phobia_kind_description aibohphobia        {"name":"Aibohphobia",        "description":"palindromes" }
-HSET phobia_kind_description aichmophobia       {"name":"Aichmophobia",       "description":"sharp things, like pins and needles" }
-HSET phobia_kind_description albuminurophobia   {"name":"Albuminurophobia",   "description":"kidney disease" }
-HSET phobia_kind_description alektorophobia     {"name":"Alektorophobia",     "description":"chickens" }
-HSET phobia_kind_description alliumphobia       {"name":"Alliumphobia",       "description":"garlic" }
-HSET phobia_kind_description allodoxaphobia     {"name":"Allodoxaphobia",     "description":"opinions" }
-HSET phobia_kind_description altophobia         {"name":"Altophobia",         "description":"high places" }
-HSET phobia_kind_description amaxophobia        {"name":"Amaxophobia",        "description":"being in or riding in vehicles" }
-HSET phobia_kind_description ambulophobia       {"name":"Ambulophobia",       "description":"walking" }
-HSET phobia_kind_description amnesiphobia       {"name":"Amnesiphobia",       "description":"amnesia" }
-HSET phobia_kind_description amychophobia       {"name":"Amychophobia",       "description":"scratches or being scratched" }
-HSET phobia_kind_description anablephobia       {"name":"Anablephobia",       "description":"looking up" }
-HSET phobia_kind_description ancraophobia       {"name":"Ancraophobia",       "description":"wind or drafts" }
-HSET phobia_kind_description androphobia        {"name":"Androphobia",        "description":"men" }
-HSET phobia_kind_description anemophobia        {"name":"Anemophobia",        "description":"drafts of wind" }
-HSET phobia_kind_description anginophobia       {"name":"Anginophobia",       "description":"choking or smothering" }
-HSET phobia_kind_description angrophobia        {"name":"Angrophobia",        "description":"anger or of becoming angry" }
-HSET phobia_kind_description ankylophobia       {"name":"Ankylophobia",       "description":"immobility of a joint" }
-HSET phobia_kind_description anthrophobia       {"name":"Anthrophobia",       "description":"flowers" }
-HSET phobia_kind_description anthropophobia     {"name":"Anthropophobia",     "description":"people or company" }
-HSET phobia_kind_description antlophobia        {"name":"Antlophobia",        "description":"floods" }
-HSET phobia_kind_description anuptaphobia       {"name":"Anuptaphobia",       "description":"staying single" }
-HSET phobia_kind_description apeirophobia       {"name":"Apeirophobia",       "description":"infinity" }
-HSET phobia_kind_description aphephobia         {"name":"Aphephobia",         "description":"touching or being touched" }
-HSET phobia_kind_description apiphobia          {"name":"Apiphobia",          "description":"bees" }
-HSET phobia_kind_description apotemnophobia     {"name":"Apotemnophobia",     "description":"persons with amputations" }
-HSET phobia_kind_description aquaphobia         {"name":"Aquaphobia",         "description":"water" }
-HSET phobia_kind_description arachibutyrophobia {"name":"Arachibutyrophobia", "description":"peanut butter sticking to the roof of the mouth" }
-HSET phobia_kind_description arachnophobia      {"name":"Arachnophobia",      "description":"spiders" }
-HSET phobia_kind_description arithmophobia      {"name":"Arithmophobia",      "description":"numbers" }
-HSET phobia_kind_description arsonphobia        {"name":"Arsonphobia",        "description":"causing a fire" }
-HSET phobia_kind_description asthenophobia      {"name":"Asthenophobia",      "description":"fainting or weakness" }
-HSET phobia_kind_description astraphobia        {"name":"Astraphobia",        "description":"lightning" }
-HSET phobia_kind_description astrapophobia      {"name":"Astrapophobia",      "description":"thunder and lightning" }
-HSET phobia_kind_description astrophobia        {"name":"Astrophobia",        "description":"stars or celestial space" }
-HSET phobia_kind_description asymmetriphobia    {"name":"Asymmetriphobia",    "description":"asymmetrical things" }
-HSET phobia_kind_description ataxiophobia       {"name":"Ataxiophobia",       "description":"muscular incoordination" }
-HSET phobia_kind_description ataxophobia        {"name":"Ataxophobia",        "description":"disorder or untidiness" }
-HSET phobia_kind_description atelophobia        {"name":"Atelophobia",        "description":"imperfection" }
-HSET phobia_kind_description atephobia          {"name":"Atephobia",          "description":"ruins" }
-HSET phobia_kind_description athazagoraphobia   {"name":"Athazagoraphobia",   "description":"being forgotten or ignored or forgetting" }
-HSET phobia_kind_description atychiphobia       {"name":"Atychiphobia",       "description":"failure" }
-HSET phobia_kind_description aulophobia         {"name":"Aulophobia",         "description":"flutes" }
-HSET phobia_kind_description aurophobia         {"name":"Aurophobia",         "description":"gold" }
-HSET phobia_kind_description auroraphobia       {"name":"Auroraphobia",       "description":"northern lights" }
-HSET phobia_kind_description autodysomophobia   {"name":"Autodysomophobia",   "description":"one that has a vile odor" }
-HSET phobia_kind_description automatonophobia   {"name":"Automatonophobia",   "description":"anything that falsly represents a sentient being" }
-HSET phobia_kind_description automysophobia     {"name":"Automysophobia",     "description":"being dirty" }
-HSET phobia_kind_description autophobia         {"name":"Autophobia",         "description":"being alone" }
-HSET phobia_kind_description aviophobia         {"name":"Aviophobia",         "description":"flying" }
-HSET phobia_kind_description bacillophobia      {"name":"Bacillophobia",      "description":"bacteria" }
-HSET phobia_kind_description ballistophobia     {"name":"Ballistophobia",     "description":"missiles or projectiles" }
-HSET phobia_kind_description barophobia         {"name":"Barophobia",         "description":"gravity" }
-HSET phobia_kind_description basiphobia         {"name":"Basiphobia",         "description":"inability to stand or walk" }
-HSET phobia_kind_description bathmophobia       {"name":"Bathmophobia",       "description":"stairs or steep slopes" }
-HSET phobia_kind_description bathophobia        {"name":"Bathophobia",        "description":"depth" }
-HSET phobia_kind_description batophobia         {"name":"Batophobia",         "description":"heights or being close to high buildings" }
-HSET phobia_kind_description batrachophobia     {"name":"Batrachophobia",     "description":"amphibians, such as frogs, newts, salamanders, etc" }
-HSET phobia_kind_description belomophobia       {"name":"Belomophobia",       "description":"needles" }
-HSET phobia_kind_description bibliophobia       {"name":"Bibliophobia",       "description":"books" }
-HSET phobia_kind_description bogyphobia         {"name":"Bogyphobia",         "description":"the bogeyman" }
-HSET phobia_kind_description botanophobia       {"name":"Botanophobia",       "description":"plants" }
-HSET phobia_kind_description bromidrophobia     {"name":"Bromidrophobia",     "description":"body smells" }
-HSET phobia_kind_description brontophobia       {"name":"Brontophobia",       "description":"thunder storms" }
-HSET phobia_kind_description bufonophobia       {"name":"Bufonophobia",       "description":"toads" }
-HSET phobia_kind_description cacomorphobia      {"name":"Cacomorphobia",      "description":"fat people" }
-HSET phobia_kind_description cacophobia         {"name":"Cacophobia",         "description":"ugliness" }
-HSET phobia_kind_description cainophobia        {"name":"Cainophobia",        "description":"novelty" }
-HSET phobia_kind_description cainotophobia      {"name":"Cainotophobia",      "description":"newness" }
-HSET phobia_kind_description carcinophobia      {"name":"Carcinophobia",      "description":"cancer" }
-HSET phobia_kind_description cardiophobia       {"name":"Cardiophobia",       "description":"the heart or heart disease" }
-HSET phobia_kind_description carnophobia        {"name":"Carnophobia",        "description":"meat" }
-HSET phobia_kind_description catagelophobia     {"name":"Catagelophobia",     "description":"being ridiculed" }
-HSET phobia_kind_description catapedaphobia     {"name":"Catapedaphobia",     "description":"jumping from high and low places" }
-HSET phobia_kind_description cathisophobia      {"name":"Cathisophobia",      "description":"sitting" }
-HSET phobia_kind_description catoptrophobia     {"name":"Catoptrophobia",     "description":"mirrors" }
-HSET phobia_kind_description cenophobia         {"name":"Cenophobia",         "description":"empty spaces" }
-HSET phobia_kind_description centophobia        {"name":"Centophobia",        "description":"new ideas" }
-HSET phobia_kind_description ceraunophobia      {"name":"Ceraunophobia",      "description":"thunder" }
-HSET phobia_kind_description chemophobia        {"name":"Chemophobia",        "description":"chemicals or working with chemicals" }
-HSET phobia_kind_description cherophobia        {"name":"Cherophobia",        "description":"gaiety" }
-HSET phobia_kind_description chinophobia        {"name":"Chinophobia",        "description":"snow" }
-HSET phobia_kind_description chiraptophobia     {"name":"Chiraptophobia",     "description":"being touched" }
-HSET phobia_kind_description chirophobia        {"name":"Chirophobia",        "description":"hands" }
-HSET phobia_kind_description chiroptophobia     {"name":"Chiroptophobia",     "description":"bats" }
-HSET phobia_kind_description cholerophobia      {"name":"Cholerophobia",      "description":"cholera" }
-HSET phobia_kind_description chorophobia        {"name":"Chorophobia",        "description":"dancing" }
-HSET phobia_kind_description chrometophobia     {"name":"Chrometophobia",     "description":"money" }
-HSET phobia_kind_description chromophobia       {"name":"Chromophobia",       "description":"colors" }
-HSET phobia_kind_description chronomentrophobia {"name":"Chronomentrophobia", "description":"clocks" }
-HSET phobia_kind_description chronophobia       {"name":"Chronophobia",       "description":"time" }
-HSET phobia_kind_description cibophobia         {"name":"Cibophobia",         "description":"food" }
-HSET phobia_kind_description claustrophobia     {"name":"Claustrophobia",     "description":"confined spaces" }
-HSET phobia_kind_description cleithrophobia     {"name":"Cleithrophobia",     "description":"being enclosed" }
-HSET phobia_kind_description climacophobia      {"name":"Climacophobia",      "description":"stairs, climbing, or of falling downstairs" }
-HSET phobia_kind_description clinophobia        {"name":"Clinophobia",        "description":"beds" }
-HSET phobia_kind_description cnidophobia        {"name":"Cnidophobia",        "description":"insect stings" }
-HSET phobia_kind_description coimetrophobia     {"name":"Coimetrophobia",     "description":"cemeteries" }
-HSET phobia_kind_description cometophobia       {"name":"Cometophobia",       "description":"comets" }
-HSET phobia_kind_description consecotaleophobia {"name":"Consecotaleophobia", "description":"chopsticks" }
-HSET phobia_kind_description coprastasophobia   {"name":"Coprastasophobia",   "description":"constipation" }
-HSET phobia_kind_description coulrophobia       {"name":"Coulrophobia",       "description":"clowns" }
-HSET phobia_kind_description cremnophobia       {"name":"Cremnophobia",       "description":"precipices" }
-HSET phobia_kind_description cryophobia         {"name":"Cryophobia",         "description":"extreme cold, ice or frost" }
-HSET phobia_kind_description crystallophobia    {"name":"Crystallophobia",    "description":"crystals or glass" }
-HSET phobia_kind_description cyclophobia        {"name":"Cyclophobia",        "description":"bicycles" }
-HSET phobia_kind_description cynophobia         {"name":"Cynophobia",         "description":"dogs" }
-HSET phobia_kind_description daemonophobia      {"name":"Daemonophobia",      "description":"demons" }
-HSET phobia_kind_description decidophobia       {"name":"Decidophobia",       "description":"making decisions" }
-HSET phobia_kind_description deipnophobia       {"name":"Deipnophobia",       "description":"dining or dinner conversations" }
-HSET phobia_kind_description dementophobia      {"name":"Dementophobia",      "description":"insanity" }
-HSET phobia_kind_description demonophobia       {"name":"Demonophobia",       "description":"spirits or demons" }
-HSET phobia_kind_description demophobia         {"name":"Demophobia",         "description":"crowds" }
-HSET phobia_kind_description dendrophobia       {"name":"Dendrophobia",       "description":"trees" }
-HSET phobia_kind_description dermatopathophobia {"name":"Dermatopathophobia", "description":"skin disease" }
-HSET phobia_kind_description dermatophobia      {"name":"Dermatophobia",      "description":"skin" }
-HSET phobia_kind_description dextrophobia       {"name":"Dextrophobia",       "description":"objects on the right side of the body" }
-HSET phobia_kind_description diabetophobia      {"name":"Diabetophobia",      "description":"diabetes" }
-HSET phobia_kind_description didaskaleinophobia {"name":"Didaskaleinophobia", "description":"going to school" }
-HSET phobia_kind_description dikephobia         {"name":"Dikephobia",         "description":"justice" }
-HSET phobia_kind_description dinophobia         {"name":"Dinophobia",         "description":"dizziness or whirlpools" }
-HSET phobia_kind_description diplophobia        {"name":"Diplophobia",        "description":"double vision" }
-HSET phobia_kind_description dipsophobia        {"name":"Dipsophobia",        "description":"drinking" }
-HSET phobia_kind_description dishabiliophobia   {"name":"Dishabiliophobia",   "description":"undressing in front of someone" }
-HSET phobia_kind_description disposophobia      {"name":"Disposophobia",      "description":"throwing stuff out" }
-HSET phobia_kind_description domatophobia       {"name":"Domatophobia",       "description":"being in a house" }
-HSET phobia_kind_description doraphobia         {"name":"Doraphobia",         "description":"fur or skins of animals" }
-HSET phobia_kind_description doxophobia         {"name":"Doxophobia",         "description":"expressing opinions or of receiving praise" }
-HSET phobia_kind_description dysmorphophobia    {"name":"Dysmorphophobia",    "description":"deformity" }
-HSET phobia_kind_description dystychiphobia     {"name":"Dystychiphobia",     "description":"accidents" }
-HSET phobia_kind_description ecclesiophobia     {"name":"Ecclesiophobia",     "description":"church" }
-HSET phobia_kind_description ecophobia          {"name":"Ecophobia",          "description":"home" }
-HSET phobia_kind_description eisoptrophobia     {"name":"Eisoptrophobia",     "description":"looking into mirrors" }
-HSET phobia_kind_description electrophobia      {"name":"Electrophobia",      "description":"electricity" }
-HSET phobia_kind_description eleutherophobia    {"name":"Eleutherophobia",    "description":"freedom" }
-HSET phobia_kind_description emetophobia        {"name":"Emetophobia",        "description":"vomiting" }
-HSET phobia_kind_description enetophobia        {"name":"Enetophobia",        "description":"pins" }
-HSET phobia_kind_description enosiophobia       {"name":"Enosiophobia",       "description":"having committed an unpardonable sin" }
-HSET phobia_kind_description entomophobia       {"name":"Entomophobia",       "description":"insects" }
-HSET phobia_kind_description eosophobia         {"name":"Eosophobia",         "description":"dawn or daylight" }
-HSET phobia_kind_description ephebiphobia       {"name":"Ephebiphobia",       "description":"teenagers" }
-HSET phobia_kind_description epistaxiophobia    {"name":"Epistaxiophobia",    "description":"nosebleeds" }
-HSET phobia_kind_description epistemophobia     {"name":"Epistemophobia",     "description":"knowledge" }
-HSET phobia_kind_description equinophobia       {"name":"Equinophobia",       "description":"horses" }
-HSET phobia_kind_description eremophobia        {"name":"Eremophobia",        "description":"being alone" }
-HSET phobia_kind_description ereuthophobia      {"name":"Ereuthophobia",      "description":"red" }
-HSET phobia_kind_description ereuthrophobia     {"name":"Ereuthrophobia",     "description":"blushing" }
-HSET phobia_kind_description ergasiophobia      {"name":"Ergasiophobia",      "description":"work or functioning" }
-HSET phobia_kind_description ergophobia         {"name":"Ergophobia",         "description":"work" }
-HSET phobia_kind_description erythrophobia      {"name":"Erythrophobia",      "description":"redlights" }
-HSET phobia_kind_description euphobia           {"name":"Euphobia",           "description":"hearing good news" }
-HSET phobia_kind_description felinophobia       {"name":"Felinophobia",       "description":"cats" }
-HSET phobia_kind_description frigophobia        {"name":"Frigophobia",        "description":"cold or cold things" }
-HSET phobia_kind_description gametophobia       {"name":"Gametophobia",       "description":"marriage" }
-HSET phobia_kind_description geliophobia        {"name":"Geliophobia",        "description":"laughter" }
-HSET phobia_kind_description gelotophobia       {"name":"Gelotophobia",       "description":"being laughed at" }
-HSET phobia_kind_description geniophobia        {"name":"Geniophobia",        "description":"chins" }
-HSET phobia_kind_description genuphobia         {"name":"Genuphobia",         "description":"knees" }
-HSET phobia_kind_description gephyrophobia      {"name":"Gephyrophobia",      "description":"crossing bridges" }
-HSET phobia_kind_description gerascophobia      {"name":"Gerascophobia",      "description":"growing old" }
-HSET phobia_kind_description gerontophobia      {"name":"Gerontophobia",      "description":"old people or of growing old" }
-HSET phobia_kind_description geumophobia        {"name":"Geumophobia",        "description":"taste" }
-HSET phobia_kind_description glossophobia       {"name":"Glossophobia",       "description":"speaking in public or of trying to speak" }
-HSET phobia_kind_description graphophobia       {"name":"Graphophobia",       "description":"writing" }
-HSET phobia_kind_description gynophobia         {"name":"Gynophobia",         "description":"women" }
-HSET phobia_kind_description haemaphobia        {"name":"Haemaphobia",        "description":"blood" }
-HSET phobia_kind_description haematophobia      {"name":"Haematophobia",      "description":"blood diseases" }
-HSET phobia_kind_description hagiophobia        {"name":"Hagiophobia",        "description":"saints" }
-HSET phobia_kind_description hamartophobia      {"name":"Hamartophobia",      "description":"sinning" }
-HSET phobia_kind_description haptophobia        {"name":"Haptophobia",        "description":"touch" }
-HSET phobia_kind_description harpaxophobia      {"name":"Harpaxophobia",      "description":"being robbed" }
-HSET phobia_kind_description hedonophobia       {"name":"Hedonophobia",       "description":"feeling pleasure" }
-HSET phobia_kind_description heliophobia        {"name":"Heliophobia",        "description":"the sun" }
-HSET phobia_kind_description hellenologophobia  {"name":"Hellenologophobia",  "description":"complex scientific terminology" }
-HSET phobia_kind_description helminthophobia    {"name":"Helminthophobia",    "description":"being infested with worms" }
-HSET phobia_kind_description heresyphobia       {"name":"Heresyphobia",       "description":"challenges to official doctrine or of radical deviation" }
-HSET phobia_kind_description herpetophobia      {"name":"Herpetophobia",      "description":"reptiles" }
-HSET phobia_kind_description hierophobia        {"name":"Hierophobia",        "description":"sacred objects" }
-HSET phobia_kind_description hobophobia         {"name":"Hobophobia",         "description":"bums or beggars" }
-HSET phobia_kind_description hodophobia         {"name":"Hodophobia",         "description":"road travel" }
-HSET phobia_kind_description homilophobia       {"name":"Homilophobia",       "description":"sermons" }
-HSET phobia_kind_description hominophobia       {"name":"Hominophobia",       "description":"humans" }
-HSET phobia_kind_description hormephobia        {"name":"Hormephobia",        "description":"shock" }
-HSET phobia_kind_description hydrargyophobia    {"name":"Hydrargyophobia",    "description":"mercurial medicines" }
-HSET phobia_kind_description hygrophobia        {"name":"Hygrophobia",        "description":"liquids, dampness, or moisture" }
-HSET phobia_kind_description hylephobia         {"name":"Hylephobia",         "description":"wood or woods" }
-HSET phobia_kind_description hylophobia         {"name":"Hylophobia",         "description":"forests" }
-HSET phobia_kind_description hypengyophobia     {"name":"Hypengyophobia",     "description":"responsibility" }
-HSET phobia_kind_description hypnophobia        {"name":"Hypnophobia",        "description":"sleep or of being hypnotized" }
-HSET phobia_kind_description iatrophobia        {"name":"Iatrophobia",        "description":"going to the doctor" }
-HSET phobia_kind_description ichthyophobia      {"name":"Ichthyophobia",      "description":"fish" }
-HSET phobia_kind_description ideophobia         {"name":"Ideophobia",         "description":"ideas" }
-HSET phobia_kind_description illyngophobia      {"name":"Illyngophobia",      "description":"vertigo or feeling dizzy when looking down" }
-HSET phobia_kind_description isopterophobia     {"name":"Isopterophobia",     "description":"termites" }
-HSET phobia_kind_description kakorrhaphiophobia {"name":"Kakorrhaphiophobia", "description":"failure or defeat" }
-HSET phobia_kind_description katagelophobia     {"name":"Katagelophobia",     "description":"ridicule" }
-HSET phobia_kind_description kathisophobia      {"name":"Kathisophobia",      "description":"sitting down" }
-HSET phobia_kind_description katsaridaphobia    {"name":"Katsaridaphobia",    "description":"cockroaches" }
-HSET phobia_kind_description kinetophobia       {"name":"Kinetophobia",       "description":"movement or motion" }
-HSET phobia_kind_description kleptophobia       {"name":"Kleptophobia",       "description":"theft and thieves" }
-HSET phobia_kind_description koinoniphobia      {"name":"Koinoniphobia",      "description":"rooms" }
-HSET phobia_kind_description koniophobia        {"name":"Koniophobia",        "description":"dust" }
-HSET phobia_kind_description kopophobia         {"name":"Kopophobia",         "description":"fatigue" }
-HSET phobia_kind_description kosmikophobia      {"name":"Kosmikophobia",      "description":"cosmic phenomenon" }
-HSET phobia_kind_description kymophobia         {"name":"Kymophobia",         "description":"waves or wave like motions" }
-HSET phobia_kind_description kynophobia         {"name":"Kynophobia",         "description":"rabies" }
-HSET phobia_kind_description kyphophobia        {"name":"Kyphophobia",        "description":"stooping" }
-HSET phobia_kind_description lachanophobia      {"name":"Lachanophobia",      "description":"vegetables" }
-HSET phobia_kind_description lalophobia         {"name":"Lalophobia",         "description":"speaking" }
-HSET phobia_kind_description leprophobia        {"name":"Leprophobia",        "description":"leprosy" }
-HSET phobia_kind_description leukophobia        {"name":"Leukophobia",        "description":"the color white" }
-HSET phobia_kind_description levophobia         {"name":"Levophobia",         "description":"objects on the left side of the body" }
-HSET phobia_kind_description ligyrophobia       {"name":"Ligyrophobia",       "description":"loud noises" }
-HSET phobia_kind_description lilapsophobia      {"name":"Lilapsophobia",      "description":"tornadoes" }
-HSET phobia_kind_description limnophobia        {"name":"Limnophobia",        "description":"lakes" }
-HSET phobia_kind_description linonophobia       {"name":"Linonophobia",       "description":"string" }
-HSET phobia_kind_description liticaphobia       {"name":"Liticaphobia",       "description":"lawsuits" }
-HSET phobia_kind_description logophobia         {"name":"Logophobia",         "description":"words" }
-HSET phobia_kind_description luiphobia          {"name":"Luiphobia",          "description":"lues, syphillis" }
-HSET phobia_kind_description lunaphobia         {"name":"Lunaphobia",         "description":"the moon" }
-HSET phobia_kind_description lutraphobia        {"name":"Lutraphobia",        "description":"otters" }
-HSET phobia_kind_description lygophobia         {"name":"Lygophobia",         "description":"darkness" }
-HSET phobia_kind_description lyssophobia        {"name":"Lyssophobia",        "description":"becoming insane" }
-HSET phobia_kind_description macrophobia        {"name":"Macrophobia",        "description":"long waits" }
-HSET phobia_kind_description mageirocophobia    {"name":"Mageirocophobia",    "description":"cooking" }
-HSET phobia_kind_description mechanophobia      {"name":"Mechanophobia",      "description":"machines" }
-HSET phobia_kind_description megalophobia       {"name":"Megalophobia",       "description":"large things" }
-HSET phobia_kind_description melanophobia       {"name":"Melanophobia",       "description":"the color black" }
-HSET phobia_kind_description melophobia         {"name":"Melophobia",         "description":"music" }
-HSET phobia_kind_description meningitophobia    {"name":"Meningitophobia",    "description":"brain disease" }
-HSET phobia_kind_description merinthophobia     {"name":"Merinthophobia",     "description":"being bound or tied up" }
-HSET phobia_kind_description metallophobia      {"name":"Metallophobia",      "description":"metal" }
-HSET phobia_kind_description metathesiophobia   {"name":"Metathesiophobia",   "description":"changes" }
-HSET phobia_kind_description meteorophobia      {"name":"Meteorophobia",      "description":"meteors or meteorites" }
-HSET phobia_kind_description methyphobia        {"name":"Methyphobia",        "description":"alcohol" }
-HSET phobia_kind_description metrophobia        {"name":"Metrophobia",        "description":"poetry" }
-HSET phobia_kind_description microbiophobia     {"name":"Microbiophobia",     "description":"microbes" }
-HSET phobia_kind_description microphobia        {"name":"Microphobia",        "description":"small things" }
-HSET phobia_kind_description mnemophobia        {"name":"Mnemophobia",        "description":"memories" }
-HSET phobia_kind_description molysomophobia     {"name":"Molysomophobia",     "description":"dirt or contamination" }
-HSET phobia_kind_description monopathophobia    {"name":"Monopathophobia",    "description":"specific diseases or sicknesses" }
-HSET phobia_kind_description monophobia         {"name":"Monophobia",         "description":"solitude or being alone" }
-HSET phobia_kind_description mottephobia        {"name":"Mottephobia",        "description":"moths" }
-HSET phobia_kind_description musophobia         {"name":"Musophobia",         "description":"mice" }
-HSET phobia_kind_description mycophobia         {"name":"Mycophobia",         "description":"mushrooms" }
-HSET phobia_kind_description myrmecophobia      {"name":"Myrmecophobia",      "description":"ants" }
-HSET phobia_kind_description mythophobia        {"name":"Mythophobia",        "description":"making false statements, including retelling myths or stories" }
-HSET phobia_kind_description myxophobia         {"name":"Myxophobia",         "description":"slime" }
-HSET phobia_kind_description nebulaphobia       {"name":"Nebulaphobia",       "description":"fog" }
-HSET phobia_kind_description necrophobia        {"name":"Necrophobia",        "description":"death or dead things" }
-HSET phobia_kind_description nelophobia         {"name":"Nelophobia",         "description":"glass" }
-HSET phobia_kind_description neophobia          {"name":"Neophobia",          "description":"anything new" }
-HSET phobia_kind_description nephophobia        {"name":"Nephophobia",        "description":"clouds" }
-HSET phobia_kind_description noctiphobia        {"name":"Noctiphobia",        "description":"the night" }
-HSET phobia_kind_description nomatophobia       {"name":"Nomatophobia",       "description":"names" }
-HSET phobia_kind_description nosemaphobia       {"name":"Nosemaphobia",       "description":"becoming ill" }
-HSET phobia_kind_description nosocomephobia     {"name":"Nosocomephobia",     "description":"hospitals" }
-HSET phobia_kind_description nostophobia        {"name":"Nostophobia",        "description":"returning home" }
-HSET phobia_kind_description novercaphobia      {"name":"Novercaphobia",      "description":"step-mothers" }
-HSET phobia_kind_description nucleomituphobia   {"name":"Nucleomituphobia",   "description":"nuclear weapons" }
-HSET phobia_kind_description nyctohylophobia    {"name":"Nyctohylophobia",    "description":"dark wooded areas or of forests at night" }
-HSET phobia_kind_description nyctophobia        {"name":"Nyctophobia",        "description":"the dark" }
-HSET phobia_kind_description ochlophobia        {"name":"Ochlophobia",        "description":"crowds or mobs" }
-HSET phobia_kind_description ochophobia         {"name":"Ochophobia",         "description":"vehicles" }
-HSET phobia_kind_description octophobia         {"name":"Octophobia",         "description":"the figure 8" }
-HSET phobia_kind_description odontophobia       {"name":"Odontophobia",       "description":"teeth" }
-HSET phobia_kind_description odynephobia        {"name":"Odynephobia",        "description":"pain" }
-HSET phobia_kind_description oenophobia         {"name":"Oenophobia",         "description":"wine" }
-HSET phobia_kind_description oikophobia         {"name":"Oikophobia",         "description":"home" }
-HSET phobia_kind_description olfactophobia      {"name":"Olfactophobia",      "description":"smells" }
-HSET phobia_kind_description ommetaphobia       {"name":"Ommetaphobia",       "description":"eyes" }
-HSET phobia_kind_description omphalophobia      {"name":"Omphalophobia",      "description":"belly buttons" }
-HSET phobia_kind_description oneirophobia       {"name":"Oneirophobia",       "description":"dreams" }
-HSET phobia_kind_description onomatophobia      {"name":"Onomatophobia",      "description":"hearing a certain word or of names" }
-HSET phobia_kind_description ophidiophobia      {"name":"Ophidiophobia",      "description":"snakes" }
-HSET phobia_kind_description ophthalmophobia    {"name":"Ophthalmophobia",    "description":"being stared at" }
-HSET phobia_kind_description optophobia         {"name":"Optophobia",         "description":"opening one\'s eyes" }
-HSET phobia_kind_description ornithophobia      {"name":"Ornithophobia",      "description":"birds" }
-HSET phobia_kind_description orthophobia        {"name":"Orthophobia",        "description":"property" }
-HSET phobia_kind_description ostraconophobia    {"name":"Ostraconophobia",    "description":"shellfish" }
-HSET phobia_kind_description ouranophobia       {"name":"Ouranophobia",       "description":"heaven" }
-HSET phobia_kind_description pagophobia         {"name":"Pagophobia",         "description":"ice or frost" }
-HSET phobia_kind_description panophobia         {"name":"Panophobia",         "description":"everything" }
-HSET phobia_kind_description panthophobia       {"name":"Panthophobia",       "description":"suffering and disease" }
-HSET phobia_kind_description pantophobia        {"name":"Pantophobia",        "description":"everything" }
-HSET phobia_kind_description papyrophobia       {"name":"Papyrophobia",       "description":"paper" }
-HSET phobia_kind_description paralipophobia     {"name":"Paralipophobia",     "description":"neglect of responsibility" }
-HSET phobia_kind_description parasitophobia     {"name":"Parasitophobia",     "description":"parasites" }
-HSET phobia_kind_description parthenophobia     {"name":"Parthenophobia",     "description":"young girls" }
-HSET phobia_kind_description pathophobia        {"name":"Pathophobia",        "description":"disease" }
-HSET phobia_kind_description patroiophobia      {"name":"Patroiophobia",      "description":"heredity" }
-HSET phobia_kind_description peccatophobia      {"name":"Peccatophobia",      "description":"sinning or imaginary crimes" }
-HSET phobia_kind_description pediophobia        {"name":"Pediophobia",        "description":"dolls" }
-HSET phobia_kind_description pedophobia         {"name":"Pedophobia",         "description":"children" }
-HSET phobia_kind_description peladophobia       {"name":"Peladophobia",       "description":"bald people or baldness" }
-HSET phobia_kind_description pellagrophobia     {"name":"Pellagrophobia",     "description":"pellagra" }
-HSET phobia_kind_description peniaphobia        {"name":"Peniaphobia",        "description":"poverty" }
-HSET phobia_kind_description pentheraphobia     {"name":"Pentheraphobia",     "description":"mother-in-law" }
-HSET phobia_kind_description phagophobia        {"name":"Phagophobia",        "description":"swallowing or of eating or of being eaten" }
-HSET phobia_kind_description phalacrophobia     {"name":"Phalacrophobia",     "description":"becoming bald" }
-HSET phobia_kind_description pharmacophobia     {"name":"Pharmacophobia",     "description":"taking medicine" }
-HSET phobia_kind_description pharmcophobia      {"name":"Pharmcophobia",      "description":"drugs" }
-HSET phobia_kind_description phasmophobia       {"name":"Phasmophobia",       "description":"ghosts" }
-HSET phobia_kind_description phengophobia       {"name":"Phengophobia",       "description":"daylight or sunshine" }
-HSET phobia_kind_description phenogophobia      {"name":"Phenogophobia",      "description":"daylight" }
-HSET phobia_kind_description philematophobia    {"name":"Philematophobia",    "description":"kissing" }
-HSET phobia_kind_description philophobia        {"name":"Philophobia",        "description":"falling in love or being in love" }
-HSET phobia_kind_description philosophobia      {"name":"Philosophobia",      "description":"philosophy" }
-HSET phobia_kind_description phobophobia        {"name":"Phobophobia",        "description":"phobias" }
-HSET phobia_kind_description phonophobia        {"name":"Phonophobia",        "description":"noises or voices" }
-HSET phobia_kind_description photalgiophobia    {"name":"Photalgiophobia",    "description":"photalgin, the pain in the eyes caused by bright light" }
-HSET phobia_kind_description photoaugliaphobia  {"name":"Photoaugliaphobia",  "description":"glaring lights" }
-HSET phobia_kind_description photophobia        {"name":"Photophobia",        "description":"light" }
-HSET phobia_kind_description phronemophobia     {"name":"Phronemophobia",     "description":"thinking" }
-HSET phobia_kind_description phthiriophobia     {"name":"Phthiriophobia",     "description":"lice" }
-HSET phobia_kind_description phthisiophobia     {"name":"Phthisiophobia",     "description":"tuberculosis" }
-HSET phobia_kind_description placophobia        {"name":"Placophobia",        "description":"tombstones" }
-HSET phobia_kind_description plutophobia        {"name":"Plutophobia",        "description":"wealth" }
-HSET phobia_kind_description pluviophobia       {"name":"Pluviophobia",       "description":"rain or of being rained on" }
-HSET phobia_kind_description pneumatophobia     {"name":"Pneumatophobia",     "description":"spirits or noncorporeal beings" }
-HSET phobia_kind_description pnigophobia        {"name":"Pnigophobia",        "description":"choking" }
-HSET phobia_kind_description pocrescophobia     {"name":"Pocrescophobia",     "description":"gaining weight" }
-HSET phobia_kind_description pogonophobia       {"name":"Pogonophobia",       "description":"beards" }
-HSET phobia_kind_description poinephobia        {"name":"Poinephobia",        "description":"punishment" }
-HSET phobia_kind_description poliosophobia      {"name":"Poliosophobia",      "description":"contracting poliomyelitis" }
-HSET phobia_kind_description politicophobia     {"name":"Politicophobia",     "description":"politicians" }
-HSET phobia_kind_description polyphobia         {"name":"Polyphobia",         "description":"many things" }
-HSET phobia_kind_description ponophobia         {"name":"Ponophobia",         "description":"overworking" }
-HSET phobia_kind_description porphyrophobia     {"name":"Porphyrophobia",     "description":"the color purple" }
-HSET phobia_kind_description potamophobia       {"name":"Potamophobia",       "description":"rivers or running water" }
-HSET phobia_kind_description prosophobia        {"name":"Prosophobia",        "description":"progress" }
-HSET phobia_kind_description psellismophobia    {"name":"Psellismophobia",    "description":"stuttering" }
-HSET phobia_kind_description psychophobia       {"name":"Psychophobia",       "description":"mind" }
-HSET phobia_kind_description pteronophobia      {"name":"Pteronophobia",      "description":"feathers" }
-HSET phobia_kind_description pupaphobia         {"name":"Pupaphobia",         "description":"puppets" }
-HSET phobia_kind_description pyrexiophobia      {"name":"Pyrexiophobia",      "description":"fever" }
-HSET phobia_kind_description pyrophobia         {"name":"Pyrophobia",         "description":"fire" }
-HSET phobia_kind_description radiophobia        {"name":"Radiophobia",        "description":"radiation, x-rays" }
-HSET phobia_kind_description ranidaphobia       {"name":"Ranidaphobia",       "description":"frogs" }
-HSET phobia_kind_description rhabdophobia       {"name":"Rhabdophobia",       "description":"being severely punished or criticized" }
-HSET phobia_kind_description rhytiphobia        {"name":"Rhytiphobia",        "description":"getting wrinkles" }
-HSET phobia_kind_description rupophobia         {"name":"Rupophobia",         "description":"dirt" }
-HSET phobia_kind_description scabiophobia       {"name":"Scabiophobia",       "description":"scabies" }
-HSET phobia_kind_description scelerophobia      {"name":"Scelerophobia",      "description":"criminals" }
-HSET phobia_kind_description scholionophobia    {"name":"Scholionophobia",    "description":"school" }
-HSET phobia_kind_description sciophobia         {"name":"Sciophobia",         "description":"shadows" }
-HSET phobia_kind_description scoleciphobia      {"name":"Scoleciphobia",      "description":"worms" }
-HSET phobia_kind_description scoptophobia       {"name":"Scoptophobia",       "description":"being seen or stared at" }
-HSET phobia_kind_description scotomaphobia      {"name":"Scotomaphobia",      "description":"blindness in visual field" }
-HSET phobia_kind_description scriptophobia      {"name":"Scriptophobia",      "description":"writing in public" }
-HSET phobia_kind_description selachophobia      {"name":"Selachophobia",      "description":"sharks" }
-HSET phobia_kind_description selaphobia         {"name":"Selaphobia",         "description":"light flashes" }
-HSET phobia_kind_description selenophobia       {"name":"Selenophobia",       "description":"the moon" }
-HSET phobia_kind_description septophobia        {"name":"Septophobia",        "description":"decaying matter" }
-HSET phobia_kind_description sesquipedalophobia {"name":"Sesquipedalophobia", "description":"long words" }
-HSET phobia_kind_description siderophobia       {"name":"Siderophobia",       "description":"stars" }
-HSET phobia_kind_description sinistrophobia     {"name":"Sinistrophobia",     "description":"things to the left or left-handed" }
-HSET phobia_kind_description soceraphobia       {"name":"Soceraphobia",       "description":"parents-in-law" }
-HSET phobia_kind_description sociophobia        {"name":"Sociophobia",        "description":"society or people in general" }
-HSET phobia_kind_description somniphobia        {"name":"Somniphobia",        "description":"sleep" }
-HSET phobia_kind_description sophophobia        {"name":"Sophophobia",        "description":"learning" }
-HSET phobia_kind_description soteriophobia      {"name":"Soteriophobia",      "description":"dependence on others" }
-HSET phobia_kind_description spacephobia        {"name":"Spacephobia",        "description":"outer space" }
-HSET phobia_kind_description spectrophobia      {"name":"Spectrophobia",      "description":"specters or ghosts" }
-HSET phobia_kind_description spheksophobia      {"name":"Spheksophobia",      "description":"wasps" }
-HSET phobia_kind_description stasiphobia        {"name":"Stasiphobia",        "description":"standing or walking" }
-HSET phobia_kind_description stenophobia        {"name":"Stenophobia",        "description":"narrow things or places" }
-HSET phobia_kind_description stygiophobia       {"name":"Stygiophobia",       "description":"hell" }
-HSET phobia_kind_description symbolophobia      {"name":"Symbolophobia",      "description":"symbolism" }
-HSET phobia_kind_description symmetrophobia     {"name":"Symmetrophobia",     "description":"symmetry" }
-HSET phobia_kind_description syngenesophobia    {"name":"Syngenesophobia",    "description":"relatives" }
-HSET phobia_kind_description syphilophobia      {"name":"Syphilophobia",      "description":"syphilis" }
-HSET phobia_kind_description tabophobia         {"name":"Tabophobia",         "description":"a wasting sickness" }
-HSET phobia_kind_description tachophobia        {"name":"Tachophobia",        "description":"speed" }
-HSET phobia_kind_description taphophobia        {"name":"Taphophobia",        "description":"graves or being buried alive" }
-HSET phobia_kind_description tapinophobia       {"name":"Tapinophobia",       "description":"being contagious" }
-HSET phobia_kind_description taurophobia        {"name":"Taurophobia",        "description":"bulls" }
-HSET phobia_kind_description technophobia       {"name":"Technophobia",       "description":"technology" }
-HSET phobia_kind_description teleophobia        {"name":"Teleophobia",        "description":"definite plans or religious ceremony" }
-HSET phobia_kind_description teniophobia        {"name":"Teniophobia",        "description":"tapeworms" }
-HSET phobia_kind_description teratophobia       {"name":"Teratophobia",       "description":"bearing a deformed child" }
-HSET phobia_kind_description testophobia        {"name":"Testophobia",        "description":"taking tests" }
-HSET phobia_kind_description tetanophobia       {"name":"Tetanophobia",       "description":"lockjaw, tetanus" }
-HSET phobia_kind_description textophobia        {"name":"Textophobia",        "description":"certain fabrics" }
-HSET phobia_kind_description thaasophobia       {"name":"Thaasophobia",       "description":"being idle" }
-HSET phobia_kind_description thalassophobia     {"name":"Thalassophobia",     "description":"the sea" }
-HSET phobia_kind_description thanatophobia      {"name":"Thanatophobia",      "description":"death or dying" }
-HSET phobia_kind_description theatrophobia      {"name":"Theatrophobia",      "description":"theatres" }
-HSET phobia_kind_description theologicophobia   {"name":"Theologicophobia",   "description":"theology" }
-HSET phobia_kind_description theophobia         {"name":"Theophobia",         "description":"gods or religion" }
-HSET phobia_kind_description thermophobia       {"name":"Thermophobia",       "description":"heat" }
-HSET phobia_kind_description thixophobia        {"name":"Thixophobia",        "description":"touching" }
-HSET phobia_kind_description tokophobia         {"name":"Tokophobia",         "description":"pregnancy" }
-HSET phobia_kind_description tomophobia         {"name":"Tomophobia",         "description":"surgical operations" }
-HSET phobia_kind_description topophobia         {"name":"Topophobia",         "description":"performing" }
-HSET phobia_kind_description toxiphobia         {"name":"Toxiphobia",         "description":"poison" }
-HSET phobia_kind_description traumatophobia     {"name":"Traumatophobia",     "description":"injury" }
-HSET phobia_kind_description tremophobia        {"name":"Tremophobia",        "description":"trembling" }
-HSET phobia_kind_description trichopathophobia  {"name":"Trichopathophobia",  "description":"diseases of hair" }
-HSET phobia_kind_description trichophobia       {"name":"Trichophobia",       "description":"hair" }
-HSET phobia_kind_description triskaidekaphobia  {"name":"Triskaidekaphobia",  "description":"the number 13" }
-HSET phobia_kind_description tropophobia        {"name":"Tropophobia",        "description":"moving or making changes" }
-HSET phobia_kind_description trypanophobia      {"name":"Trypanophobia",      "description":"injections" }
-HSET phobia_kind_description tyrannophobia      {"name":"Tyrannophobia",      "description":"tyrants" }
-HSET phobia_kind_description vaccinophobia      {"name":"Vaccinophobia",      "description":"vaccines and vaccination" }
-HSET phobia_kind_description venustraphobia     {"name":"Venustraphobia",     "description":"beautiful women" }
-HSET phobia_kind_description verminophobia      {"name":"Verminophobia",      "description":"germs" }
-HSET phobia_kind_description vermiphobia        {"name":"Vermiphobia",        "description":"earth worms" }
-HSET phobia_kind_description vestiphobia        {"name":"Vestiphobia",        "description":"clothing" }
-HSET phobia_kind_description vitricophobia      {"name":"Vitricophobia",      "description":"step-father" }
-HSET phobia_kind_description wiccaphobia        {"name":"Wiccaphobia",        "description":"witches and witchcraft" }
-HSET phobia_kind_description xanthophobia       {"name":"Xanthophobia",       "description":"the color yellow or the word yellow" }
-HSET phobia_kind_description xenoglossophobia   {"name":"Xenoglossophobia",   "description":"foreign languages" }
-HSET phobia_kind_description xenophobia         {"name":"Xenophobia",         "description":"strangers or foreigners" }
-HSET phobia_kind_description xerophobia         {"name":"Xerophobia",         "description":"dryness and dry places, esp deserts" }
-HSET phobia_kind_description xylophobia         {"name":"Xylophobia",         "description":"forests" }
-HSET phobia_kind_description xyrophobia         {"name":"Xyrophobia",         "description":"razors" }
-HSET phobia_kind_description zelophobia         {"name":"Zelophobia",         "description":"jealousy" }
-HSET phobia_kind_description zeusophobia        {"name":"Zeusophobia",        "description":"a god or gods" }
-HSET phobia_kind_description zoophobia          {"name":"Zoophobia",          "description":"animals" }
+self.redis.hset('phobia_kind_description', 'ablutophobia', '{"name":"Ablutophobia",       "description":"washing or bathing" }')
+self.redis.hset('phobia_kind_description', 'acarophobia', '{"name":"Acarophobia",        "description":"skin infestation by mites or ticks" }')
+self.redis.hset('phobia_kind_description', 'acerophobia', '{"name":"Acerophobia",        "description":"sourness" }')
+self.redis.hset('phobia_kind_description', 'acousticophobia', '{"name":"Acousticophobia",    "description":"noise" }')
+self.redis.hset('phobia_kind_description', 'acrophobia', '{"name":"Acrophobia",         "description":"heights" }')
+self.redis.hset('phobia_kind_description', 'aeroacrophobia', '{"name":"Aeroacrophobia",     "description":"open high places" }')
+self.redis.hset('phobia_kind_description', 'aeronausiphobia', '{"name":"Aeronausiphobia",    "description":"vomiting due to airsickness" }')
+self.redis.hset('phobia_kind_description', 'aerophobia', '{"name":"Aerophobia",         "description":"drafts, air swallowing, or airbourne noxious substances" }')
+self.redis.hset('phobia_kind_description', 'agoraphobia', '{"name":"Agoraphobia",        "description":"open spaces or of being in crowded, public places" }')
+self.redis.hset('phobia_kind_description', 'agrizoophobia', '{"name":"Agrizoophobia",      "description":"wild animals" }')
+self.redis.hset('phobia_kind_description', 'agyrophobia', '{"name":"Agyrophobia",        "description":"crossing streets" }')
+self.redis.hset('phobia_kind_description', 'aibohphobia', '{"name":"Aibohphobia",        "description":"palindromes" }')
+self.redis.hset('phobia_kind_description', 'aichmophobia', '{"name":"Aichmophobia",       "description":"sharp things, like pins and needles" }')
+self.redis.hset('phobia_kind_description', 'albuminurophobia', '{"name":"Albuminurophobia",   "description":"kidney disease" }')
+self.redis.hset('phobia_kind_description', 'alektorophobia', '{"name":"Alektorophobia",     "description":"chickens" }')
+self.redis.hset('phobia_kind_description', 'alliumphobia', '{"name":"Alliumphobia",       "description":"garlic" }')
+self.redis.hset('phobia_kind_description', 'allodoxaphobia', '{"name":"Allodoxaphobia",     "description":"opinions" }')
+self.redis.hset('phobia_kind_description', 'altophobia', '{"name":"Altophobia",         "description":"high places" }')
+self.redis.hset('phobia_kind_description', 'amaxophobia', '{"name":"Amaxophobia",        "description":"being in or riding in vehicles" }')
+self.redis.hset('phobia_kind_description', 'ambulophobia', '{"name":"Ambulophobia",       "description":"walking" }')
+self.redis.hset('phobia_kind_description', 'amnesiphobia', '{"name":"Amnesiphobia",       "description":"amnesia" }')
+self.redis.hset('phobia_kind_description', 'amychophobia', '{"name":"Amychophobia",       "description":"scratches or being scratched" }')
+self.redis.hset('phobia_kind_description', 'anablephobia', '{"name":"Anablephobia",       "description":"looking up" }')
+self.redis.hset('phobia_kind_description', 'ancraophobia', '{"name":"Ancraophobia",       "description":"wind or drafts" }')
+self.redis.hset('phobia_kind_description', 'androphobia', '{"name":"Androphobia",        "description":"men" }')
+self.redis.hset('phobia_kind_description', 'anemophobia', '{"name":"Anemophobia",        "description":"drafts of wind" }')
+self.redis.hset('phobia_kind_description', 'anginophobia', '{"name":"Anginophobia",       "description":"choking or smothering" }')
+self.redis.hset('phobia_kind_description', 'angrophobia', '{"name":"Angrophobia",        "description":"anger or of becoming angry" }')
+self.redis.hset('phobia_kind_description', 'ankylophobia', '{"name":"Ankylophobia",       "description":"immobility of a joint" }')
+self.redis.hset('phobia_kind_description', 'anthrophobia', '{"name":"Anthrophobia",       "description":"flowers" }')
+self.redis.hset('phobia_kind_description', 'anthropophobia', '{"name":"Anthropophobia",     "description":"people or company" }')
+self.redis.hset('phobia_kind_description', 'antlophobia', '{"name":"Antlophobia",        "description":"floods" }')
+self.redis.hset('phobia_kind_description', 'anuptaphobia', '{"name":"Anuptaphobia",       "description":"staying single" }')
+self.redis.hset('phobia_kind_description', 'apeirophobia', '{"name":"Apeirophobia",       "description":"infinity" }')
+self.redis.hset('phobia_kind_description', 'aphephobia', '{"name":"Aphephobia",         "description":"touching or being touched" }')
+self.redis.hset('phobia_kind_description', 'apiphobia', '{"name":"Apiphobia",          "description":"bees" }')
+self.redis.hset('phobia_kind_description', 'apotemnophobia', '{"name":"Apotemnophobia",     "description":"persons with amputations" }')
+self.redis.hset('phobia_kind_description', 'aquaphobia', '{"name":"Aquaphobia",         "description":"water" }')
+self.redis.hset('phobia_kind_description', 'arachibutyrophobia', '{"name":"Arachibutyrophobia", "description":"peanut butter sticking to the roof of the mouth" }')
+self.redis.hset('phobia_kind_description', 'arachnophobia', '{"name":"Arachnophobia",      "description":"spiders" }')
+self.redis.hset('phobia_kind_description', 'arithmophobia', '{"name":"Arithmophobia",      "description":"numbers" }')
+self.redis.hset('phobia_kind_description', 'arsonphobia', '{"name":"Arsonphobia",        "description":"causing a fire" }')
+self.redis.hset('phobia_kind_description', 'asthenophobia', '{"name":"Asthenophobia",      "description":"fainting or weakness" }')
+self.redis.hset('phobia_kind_description', 'astraphobia', '{"name":"Astraphobia",        "description":"lightning" }')
+self.redis.hset('phobia_kind_description', 'astrapophobia', '{"name":"Astrapophobia",      "description":"thunder and lightning" }')
+self.redis.hset('phobia_kind_description', 'astrophobia', '{"name":"Astrophobia",        "description":"stars or celestial space" }')
+self.redis.hset('phobia_kind_description', 'asymmetriphobia', '{"name":"Asymmetriphobia",    "description":"asymmetrical things" }')
+self.redis.hset('phobia_kind_description', 'ataxiophobia', '{"name":"Ataxiophobia",       "description":"muscular incoordination" }')
+self.redis.hset('phobia_kind_description', 'ataxophobia', '{"name":"Ataxophobia",        "description":"disorder or untidiness" }')
+self.redis.hset('phobia_kind_description', 'atelophobia', '{"name":"Atelophobia",        "description":"imperfection" }')
+self.redis.hset('phobia_kind_description', 'atephobia', '{"name":"Atephobia",          "description":"ruins" }')
+self.redis.hset('phobia_kind_description', 'athazagoraphobia', '{"name":"Athazagoraphobia",   "description":"being forgotten or ignored or forgetting" }')
+self.redis.hset('phobia_kind_description', 'atychiphobia', '{"name":"Atychiphobia",       "description":"failure" }')
+self.redis.hset('phobia_kind_description', 'aulophobia', '{"name":"Aulophobia",         "description":"flutes" }')
+self.redis.hset('phobia_kind_description', 'aurophobia', '{"name":"Aurophobia",         "description":"gold" }')
+self.redis.hset('phobia_kind_description', 'auroraphobia', '{"name":"Auroraphobia",       "description":"northern lights" }')
+self.redis.hset('phobia_kind_description', 'autodysomophobia', '{"name":"Autodysomophobia",   "description":"one that has a vile odor" }')
+self.redis.hset('phobia_kind_description', 'automatonophobia', '{"name":"Automatonophobia",   "description":"anything that falsly represents a sentient being" }')
+self.redis.hset('phobia_kind_description', 'automysophobia', '{"name":"Automysophobia",     "description":"being dirty" }')
+self.redis.hset('phobia_kind_description', 'autophobia', '{"name":"Autophobia",         "description":"being alone" }')
+self.redis.hset('phobia_kind_description', 'aviophobia', '{"name":"Aviophobia",         "description":"flying" }')
+self.redis.hset('phobia_kind_description', 'bacillophobia', '{"name":"Bacillophobia",      "description":"bacteria" }')
+self.redis.hset('phobia_kind_description', 'ballistophobia', '{"name":"Ballistophobia",     "description":"missiles or projectiles" }')
+self.redis.hset('phobia_kind_description', 'barophobia', '{"name":"Barophobia",         "description":"gravity" }')
+self.redis.hset('phobia_kind_description', 'basiphobia', '{"name":"Basiphobia",         "description":"inability to stand or walk" }')
+self.redis.hset('phobia_kind_description', 'bathmophobia', '{"name":"Bathmophobia",       "description":"stairs or steep slopes" }')
+self.redis.hset('phobia_kind_description', 'bathophobia', '{"name":"Bathophobia",        "description":"depth" }')
+self.redis.hset('phobia_kind_description', 'batophobia', '{"name":"Batophobia",         "description":"heights or being close to high buildings" }')
+self.redis.hset('phobia_kind_description', 'batrachophobia', '{"name":"Batrachophobia",     "description":"amphibians, such as frogs, newts, salamanders, etc" }')
+self.redis.hset('phobia_kind_description', 'belomophobia', '{"name":"Belomophobia",       "description":"needles" }')
+self.redis.hset('phobia_kind_description', 'bibliophobia', '{"name":"Bibliophobia",       "description":"books" }')
+self.redis.hset('phobia_kind_description', 'bogyphobia', '{"name":"Bogyphobia",         "description":"the bogeyman" }')
+self.redis.hset('phobia_kind_description', 'botanophobia', '{"name":"Botanophobia",       "description":"plants" }')
+self.redis.hset('phobia_kind_description', 'bromidrophobia', '{"name":"Bromidrophobia",     "description":"body smells" }')
+self.redis.hset('phobia_kind_description', 'brontophobia', '{"name":"Brontophobia",       "description":"thunder storms" }')
+self.redis.hset('phobia_kind_description', 'bufonophobia', '{"name":"Bufonophobia",       "description":"toads" }')
+self.redis.hset('phobia_kind_description', 'cacomorphobia', '{"name":"Cacomorphobia",      "description":"fat people" }')
+self.redis.hset('phobia_kind_description', 'cacophobia', '{"name":"Cacophobia",         "description":"ugliness" }')
+self.redis.hset('phobia_kind_description', 'cainophobia', '{"name":"Cainophobia",        "description":"novelty" }')
+self.redis.hset('phobia_kind_description', 'cainotophobia', '{"name":"Cainotophobia",      "description":"newness" }')
+self.redis.hset('phobia_kind_description', 'carcinophobia', '{"name":"Carcinophobia",      "description":"cancer" }')
+self.redis.hset('phobia_kind_description', 'cardiophobia', '{"name":"Cardiophobia",       "description":"the heart or heart disease" }')
+self.redis.hset('phobia_kind_description', 'carnophobia', '{"name":"Carnophobia",        "description":"meat" }')
+self.redis.hset('phobia_kind_description', 'catagelophobia', '{"name":"Catagelophobia",     "description":"being ridiculed" }')
+self.redis.hset('phobia_kind_description', 'catapedaphobia', '{"name":"Catapedaphobia",     "description":"jumping from high and low places" }')
+self.redis.hset('phobia_kind_description', 'cathisophobia', '{"name":"Cathisophobia",      "description":"sitting" }')
+self.redis.hset('phobia_kind_description', 'catoptrophobia', '{"name":"Catoptrophobia",     "description":"mirrors" }')
+self.redis.hset('phobia_kind_description', 'cenophobia', '{"name":"Cenophobia",         "description":"empty spaces" }')
+self.redis.hset('phobia_kind_description', 'centophobia', '{"name":"Centophobia",        "description":"new ideas" }')
+self.redis.hset('phobia_kind_description', 'ceraunophobia', '{"name":"Ceraunophobia",      "description":"thunder" }')
+self.redis.hset('phobia_kind_description', 'chemophobia', '{"name":"Chemophobia",        "description":"chemicals or working with chemicals" }')
+self.redis.hset('phobia_kind_description', 'cherophobia', '{"name":"Cherophobia",        "description":"gaiety" }')
+self.redis.hset('phobia_kind_description', 'chinophobia', '{"name":"Chinophobia",        "description":"snow" }')
+self.redis.hset('phobia_kind_description', 'chiraptophobia', '{"name":"Chiraptophobia",     "description":"being touched" }')
+self.redis.hset('phobia_kind_description', 'chirophobia', '{"name":"Chirophobia",        "description":"hands" }')
+self.redis.hset('phobia_kind_description', 'chiroptophobia', '{"name":"Chiroptophobia",     "description":"bats" }')
+self.redis.hset('phobia_kind_description', 'cholerophobia', '{"name":"Cholerophobia",      "description":"cholera" }')
+self.redis.hset('phobia_kind_description', 'chorophobia', '{"name":"Chorophobia",        "description":"dancing" }')
+self.redis.hset('phobia_kind_description', 'chrometophobia', '{"name":"Chrometophobia",     "description":"money" }')
+self.redis.hset('phobia_kind_description', 'chromophobia', '{"name":"Chromophobia",       "description":"colors" }')
+self.redis.hset('phobia_kind_description', 'chronomentrophobia', '{"name":"Chronomentrophobia", "description":"clocks" }')
+self.redis.hset('phobia_kind_description', 'chronophobia', '{"name":"Chronophobia",       "description":"time" }')
+self.redis.hset('phobia_kind_description', 'cibophobia', '{"name":"Cibophobia",         "description":"food" }')
+self.redis.hset('phobia_kind_description', 'claustrophobia', '{"name":"Claustrophobia",     "description":"confined spaces" }')
+self.redis.hset('phobia_kind_description', 'cleithrophobia', '{"name":"Cleithrophobia",     "description":"being enclosed" }')
+self.redis.hset('phobia_kind_description', 'climacophobia', '{"name":"Climacophobia",      "description":"stairs, climbing, or of falling downstairs" }')
+self.redis.hset('phobia_kind_description', 'clinophobia', '{"name":"Clinophobia",        "description":"beds" }')
+self.redis.hset('phobia_kind_description', 'cnidophobia', '{"name":"Cnidophobia",        "description":"insect stings" }')
+self.redis.hset('phobia_kind_description', 'coimetrophobia', '{"name":"Coimetrophobia",     "description":"cemeteries" }')
+self.redis.hset('phobia_kind_description', 'cometophobia', '{"name":"Cometophobia",       "description":"comets" }')
+self.redis.hset('phobia_kind_description', 'consecotaleophobia', '{"name":"Consecotaleophobia", "description":"chopsticks" }')
+self.redis.hset('phobia_kind_description', 'coprastasophobia', '{"name":"Coprastasophobia",   "description":"constipation" }')
+self.redis.hset('phobia_kind_description', 'coulrophobia', '{"name":"Coulrophobia",       "description":"clowns" }')
+self.redis.hset('phobia_kind_description', 'cremnophobia', '{"name":"Cremnophobia",       "description":"precipices" }')
+self.redis.hset('phobia_kind_description', 'cryophobia', '{"name":"Cryophobia",         "description":"extreme cold, ice or frost" }')
+self.redis.hset('phobia_kind_description', 'crystallophobia', '{"name":"Crystallophobia",    "description":"crystals or glass" }')
+self.redis.hset('phobia_kind_description', 'cyclophobia', '{"name":"Cyclophobia",        "description":"bicycles" }')
+self.redis.hset('phobia_kind_description', 'cynophobia', '{"name":"Cynophobia",         "description":"dogs" }')
+self.redis.hset('phobia_kind_description', 'daemonophobia', '{"name":"Daemonophobia",      "description":"demons" }')
+self.redis.hset('phobia_kind_description', 'decidophobia', '{"name":"Decidophobia",       "description":"making decisions" }')
+self.redis.hset('phobia_kind_description', 'deipnophobia', '{"name":"Deipnophobia",       "description":"dining or dinner conversations" }')
+self.redis.hset('phobia_kind_description', 'dementophobia', '{"name":"Dementophobia",      "description":"insanity" }')
+self.redis.hset('phobia_kind_description', 'demonophobia', '{"name":"Demonophobia",       "description":"spirits or demons" }')
+self.redis.hset('phobia_kind_description', 'demophobia', '{"name":"Demophobia",         "description":"crowds" }')
+self.redis.hset('phobia_kind_description', 'dendrophobia', '{"name":"Dendrophobia",       "description":"trees" }')
+self.redis.hset('phobia_kind_description', 'dermatopathophobia', '{"name":"Dermatopathophobia", "description":"skin disease" }')
+self.redis.hset('phobia_kind_description', 'dermatophobia', '{"name":"Dermatophobia",      "description":"skin" }')
+self.redis.hset('phobia_kind_description', 'dextrophobia', '{"name":"Dextrophobia",       "description":"objects on the right side of the body" }')
+self.redis.hset('phobia_kind_description', 'diabetophobia', '{"name":"Diabetophobia",      "description":"diabetes" }')
+self.redis.hset('phobia_kind_description', 'didaskaleinophobia', '{"name":"Didaskaleinophobia", "description":"going to school" }')
+self.redis.hset('phobia_kind_description', 'dikephobia', '{"name":"Dikephobia",         "description":"justice" }')
+self.redis.hset('phobia_kind_description', 'dinophobia', '{"name":"Dinophobia",         "description":"dizziness or whirlpools" }')
+self.redis.hset('phobia_kind_description', 'diplophobia', '{"name":"Diplophobia",        "description":"double vision" }')
+self.redis.hset('phobia_kind_description', 'dipsophobia', '{"name":"Dipsophobia",        "description":"drinking" }')
+self.redis.hset('phobia_kind_description', 'dishabiliophobia', '{"name":"Dishabiliophobia",   "description":"undressing in front of someone" }')
+self.redis.hset('phobia_kind_description', 'disposophobia', '{"name":"Disposophobia",      "description":"throwing stuff out" }')
+self.redis.hset('phobia_kind_description', 'domatophobia', '{"name":"Domatophobia",       "description":"being in a house" }')
+self.redis.hset('phobia_kind_description', 'doraphobia', '{"name":"Doraphobia",         "description":"fur or skins of animals" }')
+self.redis.hset('phobia_kind_description', 'doxophobia', '{"name":"Doxophobia",         "description":"expressing opinions or of receiving praise" }')
+self.redis.hset('phobia_kind_description', 'dysmorphophobia', '{"name":"Dysmorphophobia",    "description":"deformity" }')
+self.redis.hset('phobia_kind_description', 'dystychiphobia', '{"name":"Dystychiphobia",     "description":"accidents" }')
+self.redis.hset('phobia_kind_description', 'ecclesiophobia', '{"name":"Ecclesiophobia",     "description":"church" }')
+self.redis.hset('phobia_kind_description', 'ecophobia', '{"name":"Ecophobia",          "description":"home" }')
+self.redis.hset('phobia_kind_description', 'eisoptrophobia', '{"name":"Eisoptrophobia",     "description":"looking into mirrors" }')
+self.redis.hset('phobia_kind_description', 'electrophobia', '{"name":"Electrophobia",      "description":"electricity" }')
+self.redis.hset('phobia_kind_description', 'eleutherophobia', '{"name":"Eleutherophobia",    "description":"freedom" }')
+self.redis.hset('phobia_kind_description', 'emetophobia', '{"name":"Emetophobia",        "description":"vomiting" }')
+self.redis.hset('phobia_kind_description', 'enetophobia', '{"name":"Enetophobia",        "description":"pins" }')
+self.redis.hset('phobia_kind_description', 'enosiophobia', '{"name":"Enosiophobia",       "description":"having committed an unpardonable sin" }')
+self.redis.hset('phobia_kind_description', 'entomophobia', '{"name":"Entomophobia",       "description":"insects" }')
+self.redis.hset('phobia_kind_description', 'eosophobia', '{"name":"Eosophobia",         "description":"dawn or daylight" }')
+self.redis.hset('phobia_kind_description', 'ephebiphobia', '{"name":"Ephebiphobia",       "description":"teenagers" }')
+self.redis.hset('phobia_kind_description', 'epistaxiophobia', '{"name":"Epistaxiophobia",    "description":"nosebleeds" }')
+self.redis.hset('phobia_kind_description', 'epistemophobia', '{"name":"Epistemophobia",     "description":"knowledge" }')
+self.redis.hset('phobia_kind_description', 'equinophobia', '{"name":"Equinophobia",       "description":"horses" }')
+self.redis.hset('phobia_kind_description', 'eremophobia', '{"name":"Eremophobia",        "description":"being alone" }')
+self.redis.hset('phobia_kind_description', 'ereuthophobia', '{"name":"Ereuthophobia",      "description":"red" }')
+self.redis.hset('phobia_kind_description', 'ereuthrophobia', '{"name":"Ereuthrophobia",     "description":"blushing" }')
+self.redis.hset('phobia_kind_description', 'ergasiophobia', '{"name":"Ergasiophobia",      "description":"work or functioning" }')
+self.redis.hset('phobia_kind_description', 'ergophobia', '{"name":"Ergophobia",         "description":"work" }')
+self.redis.hset('phobia_kind_description', 'erythrophobia', '{"name":"Erythrophobia",      "description":"redlights" }')
+self.redis.hset('phobia_kind_description', 'euphobia', '{"name":"Euphobia",           "description":"hearing good news" }')
+self.redis.hset('phobia_kind_description', 'felinophobia', '{"name":"Felinophobia",       "description":"cats" }')
+self.redis.hset('phobia_kind_description', 'frigophobia', '{"name":"Frigophobia",        "description":"cold or cold things" }')
+self.redis.hset('phobia_kind_description', 'gametophobia', '{"name":"Gametophobia",       "description":"marriage" }')
+self.redis.hset('phobia_kind_description', 'geliophobia', '{"name":"Geliophobia",        "description":"laughter" }')
+self.redis.hset('phobia_kind_description', 'gelotophobia', '{"name":"Gelotophobia",       "description":"being laughed at" }')
+self.redis.hset('phobia_kind_description', 'geniophobia', '{"name":"Geniophobia",        "description":"chins" }')
+self.redis.hset('phobia_kind_description', 'genuphobia', '{"name":"Genuphobia",         "description":"knees" }')
+self.redis.hset('phobia_kind_description', 'gephyrophobia', '{"name":"Gephyrophobia",      "description":"crossing bridges" }')
+self.redis.hset('phobia_kind_description', 'gerascophobia', '{"name":"Gerascophobia",      "description":"growing old" }')
+self.redis.hset('phobia_kind_description', 'gerontophobia', '{"name":"Gerontophobia",      "description":"old people or of growing old" }')
+self.redis.hset('phobia_kind_description', 'geumophobia', '{"name":"Geumophobia",        "description":"taste" }')
+self.redis.hset('phobia_kind_description', 'glossophobia', '{"name":"Glossophobia",       "description":"speaking in public or of trying to speak" }')
+self.redis.hset('phobia_kind_description', 'graphophobia', '{"name":"Graphophobia",       "description":"writing" }')
+self.redis.hset('phobia_kind_description', 'gynophobia', '{"name":"Gynophobia",         "description":"women" }')
+self.redis.hset('phobia_kind_description', 'haemaphobia', '{"name":"Haemaphobia",        "description":"blood" }')
+self.redis.hset('phobia_kind_description', 'haematophobia', '{"name":"Haematophobia",      "description":"blood diseases" }')
+self.redis.hset('phobia_kind_description', 'hagiophobia', '{"name":"Hagiophobia",        "description":"saints" }')
+self.redis.hset('phobia_kind_description', 'hamartophobia', '{"name":"Hamartophobia",      "description":"sinning" }')
+self.redis.hset('phobia_kind_description', 'haptophobia', '{"name":"Haptophobia",        "description":"touch" }')
+self.redis.hset('phobia_kind_description', 'harpaxophobia', '{"name":"Harpaxophobia",      "description":"being robbed" }')
+self.redis.hset('phobia_kind_description', 'hedonophobia', '{"name":"Hedonophobia",       "description":"feeling pleasure" }')
+self.redis.hset('phobia_kind_description', 'heliophobia', '{"name":"Heliophobia",        "description":"the sun" }')
+self.redis.hset('phobia_kind_description', 'hellenologophobia', '{"name":"Hellenologophobia",  "description":"complex scientific terminology" }')
+self.redis.hset('phobia_kind_description', 'helminthophobia', '{"name":"Helminthophobia",    "description":"being infested with worms" }')
+self.redis.hset('phobia_kind_description', 'heresyphobia', '{"name":"Heresyphobia",       "description":"challenges to official doctrine or of radical deviation" }')
+self.redis.hset('phobia_kind_description', 'herpetophobia', '{"name":"Herpetophobia",      "description":"reptiles" }')
+self.redis.hset('phobia_kind_description', 'hierophobia', '{"name":"Hierophobia",        "description":"sacred objects" }')
+self.redis.hset('phobia_kind_description', 'hobophobia', '{"name":"Hobophobia",         "description":"bums or beggars" }')
+self.redis.hset('phobia_kind_description', 'hodophobia', '{"name":"Hodophobia",         "description":"road travel" }')
+self.redis.hset('phobia_kind_description', 'homilophobia', '{"name":"Homilophobia",       "description":"sermons" }')
+self.redis.hset('phobia_kind_description', 'hominophobia', '{"name":"Hominophobia",       "description":"humans" }')
+self.redis.hset('phobia_kind_description', 'hormephobia', '{"name":"Hormephobia",        "description":"shock" }')
+self.redis.hset('phobia_kind_description', 'hydrargyophobia', '{"name":"Hydrargyophobia",    "description":"mercurial medicines" }')
+self.redis.hset('phobia_kind_description', 'hygrophobia', '{"name":"Hygrophobia",        "description":"liquids, dampness, or moisture" }')
+self.redis.hset('phobia_kind_description', 'hylephobia', '{"name":"Hylephobia",         "description":"wood or woods" }')
+self.redis.hset('phobia_kind_description', 'hylophobia', '{"name":"Hylophobia",         "description":"forests" }')
+self.redis.hset('phobia_kind_description', 'hypengyophobia', '{"name":"Hypengyophobia",     "description":"responsibility" }')
+self.redis.hset('phobia_kind_description', 'hypnophobia', '{"name":"Hypnophobia",        "description":"sleep or of being hypnotized" }')
+self.redis.hset('phobia_kind_description', 'iatrophobia', '{"name":"Iatrophobia",        "description":"going to the doctor" }')
+self.redis.hset('phobia_kind_description', 'ichthyophobia', '{"name":"Ichthyophobia",      "description":"fish" }')
+self.redis.hset('phobia_kind_description', 'ideophobia', '{"name":"Ideophobia",         "description":"ideas" }')
+self.redis.hset('phobia_kind_description', 'illyngophobia', '{"name":"Illyngophobia",      "description":"vertigo or feeling dizzy when looking down" }')
+self.redis.hset('phobia_kind_description', 'isopterophobia', '{"name":"Isopterophobia",     "description":"termites" }')
+self.redis.hset('phobia_kind_description', 'kakorrhaphiophobia', '{"name":"Kakorrhaphiophobia", "description":"failure or defeat" }')
+self.redis.hset('phobia_kind_description', 'katagelophobia', '{"name":"Katagelophobia",     "description":"ridicule" }')
+self.redis.hset('phobia_kind_description', 'kathisophobia', '{"name":"Kathisophobia",      "description":"sitting down" }')
+self.redis.hset('phobia_kind_description', 'katsaridaphobia', '{"name":"Katsaridaphobia",    "description":"cockroaches" }')
+self.redis.hset('phobia_kind_description', 'kinetophobia', '{"name":"Kinetophobia",       "description":"movement or motion" }')
+self.redis.hset('phobia_kind_description', 'kleptophobia', '{"name":"Kleptophobia",       "description":"theft and thieves" }')
+self.redis.hset('phobia_kind_description', 'koinoniphobia', '{"name":"Koinoniphobia",      "description":"rooms" }')
+self.redis.hset('phobia_kind_description', 'koniophobia', '{"name":"Koniophobia",        "description":"dust" }')
+self.redis.hset('phobia_kind_description', 'kopophobia', '{"name":"Kopophobia",         "description":"fatigue" }')
+self.redis.hset('phobia_kind_description', 'kosmikophobia', '{"name":"Kosmikophobia",      "description":"cosmic phenomenon" }')
+self.redis.hset('phobia_kind_description', 'kymophobia', '{"name":"Kymophobia",         "description":"waves or wave like motions" }')
+self.redis.hset('phobia_kind_description', 'kynophobia', '{"name":"Kynophobia",         "description":"rabies" }')
+self.redis.hset('phobia_kind_description', 'kyphophobia', '{"name":"Kyphophobia",        "description":"stooping" }')
+self.redis.hset('phobia_kind_description', 'lachanophobia', '{"name":"Lachanophobia",      "description":"vegetables" }')
+self.redis.hset('phobia_kind_description', 'lalophobia', '{"name":"Lalophobia",         "description":"speaking" }')
+self.redis.hset('phobia_kind_description', 'leprophobia', '{"name":"Leprophobia",        "description":"leprosy" }')
+self.redis.hset('phobia_kind_description', 'leukophobia', '{"name":"Leukophobia",        "description":"the color white" }')
+self.redis.hset('phobia_kind_description', 'levophobia', '{"name":"Levophobia",         "description":"objects on the left side of the body" }')
+self.redis.hset('phobia_kind_description', 'ligyrophobia', '{"name":"Ligyrophobia",       "description":"loud noises" }')
+self.redis.hset('phobia_kind_description', 'lilapsophobia', '{"name":"Lilapsophobia",      "description":"tornadoes" }')
+self.redis.hset('phobia_kind_description', 'limnophobia', '{"name":"Limnophobia",        "description":"lakes" }')
+self.redis.hset('phobia_kind_description', 'linonophobia', '{"name":"Linonophobia",       "description":"string" }')
+self.redis.hset('phobia_kind_description', 'liticaphobia', '{"name":"Liticaphobia",       "description":"lawsuits" }')
+self.redis.hset('phobia_kind_description', 'logophobia', '{"name":"Logophobia",         "description":"words" }')
+self.redis.hset('phobia_kind_description', 'luiphobia', '{"name":"Luiphobia",          "description":"lues, syphillis" }')
+self.redis.hset('phobia_kind_description', 'lunaphobia', '{"name":"Lunaphobia",         "description":"the moon" }')
+self.redis.hset('phobia_kind_description', 'lutraphobia', '{"name":"Lutraphobia",        "description":"otters" }')
+self.redis.hset('phobia_kind_description', 'lygophobia', '{"name":"Lygophobia",         "description":"darkness" }')
+self.redis.hset('phobia_kind_description', 'lyssophobia', '{"name":"Lyssophobia",        "description":"becoming insane" }')
+self.redis.hset('phobia_kind_description', 'macrophobia', '{"name":"Macrophobia",        "description":"long waits" }')
+self.redis.hset('phobia_kind_description', 'mageirocophobia', '{"name":"Mageirocophobia",    "description":"cooking" }')
+self.redis.hset('phobia_kind_description', 'mechanophobia', '{"name":"Mechanophobia",      "description":"machines" }')
+self.redis.hset('phobia_kind_description', 'megalophobia', '{"name":"Megalophobia",       "description":"large things" }')
+self.redis.hset('phobia_kind_description', 'melanophobia', '{"name":"Melanophobia",       "description":"the color black" }')
+self.redis.hset('phobia_kind_description', 'melophobia', '{"name":"Melophobia",         "description":"music" }')
+self.redis.hset('phobia_kind_description', 'meningitophobia', '{"name":"Meningitophobia",    "description":"brain disease" }')
+self.redis.hset('phobia_kind_description', 'merinthophobia', '{"name":"Merinthophobia",     "description":"being bound or tied up" }')
+self.redis.hset('phobia_kind_description', 'metallophobia', '{"name":"Metallophobia",      "description":"metal" }')
+self.redis.hset('phobia_kind_description', 'metathesiophobia', '{"name":"Metathesiophobia",   "description":"changes" }')
+self.redis.hset('phobia_kind_description', 'meteorophobia', '{"name":"Meteorophobia",      "description":"meteors or meteorites" }')
+self.redis.hset('phobia_kind_description', 'methyphobia', '{"name":"Methyphobia",        "description":"alcohol" }')
+self.redis.hset('phobia_kind_description', 'metrophobia', '{"name":"Metrophobia",        "description":"poetry" }')
+self.redis.hset('phobia_kind_description', 'microbiophobia', '{"name":"Microbiophobia",     "description":"microbes" }')
+self.redis.hset('phobia_kind_description', 'microphobia', '{"name":"Microphobia",        "description":"small things" }')
+self.redis.hset('phobia_kind_description', 'mnemophobia', '{"name":"Mnemophobia",        "description":"memories" }')
+self.redis.hset('phobia_kind_description', 'molysomophobia', '{"name":"Molysomophobia",     "description":"dirt or contamination" }')
+self.redis.hset('phobia_kind_description', 'monopathophobia', '{"name":"Monopathophobia",    "description":"specific diseases or sicknesses" }')
+self.redis.hset('phobia_kind_description', 'monophobia', '{"name":"Monophobia",         "description":"solitude or being alone" }')
+self.redis.hset('phobia_kind_description', 'mottephobia', '{"name":"Mottephobia",        "description":"moths" }')
+self.redis.hset('phobia_kind_description', 'musophobia', '{"name":"Musophobia",         "description":"mice" }')
+self.redis.hset('phobia_kind_description', 'mycophobia', '{"name":"Mycophobia",         "description":"mushrooms" }')
+self.redis.hset('phobia_kind_description', 'myrmecophobia', '{"name":"Myrmecophobia",      "description":"ants" }')
+self.redis.hset('phobia_kind_description', 'mythophobia', '{"name":"Mythophobia",        "description":"making false statements, including retelling myths or stories" }')
+self.redis.hset('phobia_kind_description', 'myxophobia', '{"name":"Myxophobia",         "description":"slime" }')
+self.redis.hset('phobia_kind_description', 'nebulaphobia', '{"name":"Nebulaphobia",       "description":"fog" }')
+self.redis.hset('phobia_kind_description', 'necrophobia', '{"name":"Necrophobia",        "description":"death or dead things" }')
+self.redis.hset('phobia_kind_description', 'nelophobia', '{"name":"Nelophobia",         "description":"glass" }')
+self.redis.hset('phobia_kind_description', 'neophobia', '{"name":"Neophobia",          "description":"anything new" }')
+self.redis.hset('phobia_kind_description', 'nephophobia', '{"name":"Nephophobia",        "description":"clouds" }')
+self.redis.hset('phobia_kind_description', 'noctiphobia', '{"name":"Noctiphobia",        "description":"the night" }')
+self.redis.hset('phobia_kind_description', 'nomatophobia', '{"name":"Nomatophobia",       "description":"names" }')
+self.redis.hset('phobia_kind_description', 'nosemaphobia', '{"name":"Nosemaphobia",       "description":"becoming ill" }')
+self.redis.hset('phobia_kind_description', 'nosocomephobia', '{"name":"Nosocomephobia",     "description":"hospitals" }')
+self.redis.hset('phobia_kind_description', 'nostophobia', '{"name":"Nostophobia",        "description":"returning home" }')
+self.redis.hset('phobia_kind_description', 'novercaphobia', '{"name":"Novercaphobia",      "description":"step-mothers" }')
+self.redis.hset('phobia_kind_description', 'nucleomituphobia', '{"name":"Nucleomituphobia",   "description":"nuclear weapons" }')
+self.redis.hset('phobia_kind_description', 'nyctohylophobia', '{"name":"Nyctohylophobia",    "description":"dark wooded areas or of forests at night" }')
+self.redis.hset('phobia_kind_description', 'nyctophobia', '{"name":"Nyctophobia",        "description":"the dark" }')
+self.redis.hset('phobia_kind_description', 'ochlophobia', '{"name":"Ochlophobia",        "description":"crowds or mobs" }')
+self.redis.hset('phobia_kind_description', 'ochophobia', '{"name":"Ochophobia",         "description":"vehicles" }')
+self.redis.hset('phobia_kind_description', 'octophobia', '{"name":"Octophobia",         "description":"the figure 8" }')
+self.redis.hset('phobia_kind_description', 'odontophobia', '{"name":"Odontophobia",       "description":"teeth" }')
+self.redis.hset('phobia_kind_description', 'odynephobia', '{"name":"Odynephobia",        "description":"pain" }')
+self.redis.hset('phobia_kind_description', 'oenophobia', '{"name":"Oenophobia",         "description":"wine" }')
+self.redis.hset('phobia_kind_description', 'oikophobia', '{"name":"Oikophobia",         "description":"home" }')
+self.redis.hset('phobia_kind_description', 'olfactophobia', '{"name":"Olfactophobia",      "description":"smells" }')
+self.redis.hset('phobia_kind_description', 'ommetaphobia', '{"name":"Ommetaphobia",       "description":"eyes" }')
+self.redis.hset('phobia_kind_description', 'omphalophobia', '{"name":"Omphalophobia",      "description":"belly buttons" }')
+self.redis.hset('phobia_kind_description', 'oneirophobia', '{"name":"Oneirophobia",       "description":"dreams" }')
+self.redis.hset('phobia_kind_description', 'onomatophobia', '{"name":"Onomatophobia",      "description":"hearing a certain word or of names" }')
+self.redis.hset('phobia_kind_description', 'ophidiophobia', '{"name":"Ophidiophobia",      "description":"snakes" }')
+self.redis.hset('phobia_kind_description', 'ophthalmophobia', '{"name":"Ophthalmophobia",    "description":"being stared at" }')
+self.redis.hset('phobia_kind_description', 'optophobia', '{"name":"Optophobia",         "description":"opening one\'s eyes" }')
+self.redis.hset('phobia_kind_description', 'ornithophobia', '{"name":"Ornithophobia",      "description":"birds" }')
+self.redis.hset('phobia_kind_description', 'orthophobia', '{"name":"Orthophobia",        "description":"property" }')
+self.redis.hset('phobia_kind_description', 'ostraconophobia', '{"name":"Ostraconophobia",    "description":"shellfish" }')
+self.redis.hset('phobia_kind_description', 'ouranophobia', '{"name":"Ouranophobia",       "description":"heaven" }')
+self.redis.hset('phobia_kind_description', 'pagophobia', '{"name":"Pagophobia",         "description":"ice or frost" }')
+self.redis.hset('phobia_kind_description', 'panophobia', '{"name":"Panophobia",         "description":"everything" }')
+self.redis.hset('phobia_kind_description', 'panthophobia', '{"name":"Panthophobia",       "description":"suffering and disease" }')
+self.redis.hset('phobia_kind_description', 'pantophobia', '{"name":"Pantophobia",        "description":"everything" }')
+self.redis.hset('phobia_kind_description', 'papyrophobia', '{"name":"Papyrophobia",       "description":"paper" }')
+self.redis.hset('phobia_kind_description', 'paralipophobia', '{"name":"Paralipophobia",     "description":"neglect of responsibility" }')
+self.redis.hset('phobia_kind_description', 'parasitophobia', '{"name":"Parasitophobia",     "description":"parasites" }')
+self.redis.hset('phobia_kind_description', 'parthenophobia', '{"name":"Parthenophobia",     "description":"young girls" }')
+self.redis.hset('phobia_kind_description', 'pathophobia', '{"name":"Pathophobia",        "description":"disease" }')
+self.redis.hset('phobia_kind_description', 'patroiophobia', '{"name":"Patroiophobia",      "description":"heredity" }')
+self.redis.hset('phobia_kind_description', 'peccatophobia', '{"name":"Peccatophobia",      "description":"sinning or imaginary crimes" }')
+self.redis.hset('phobia_kind_description', 'pediophobia', '{"name":"Pediophobia",        "description":"dolls" }')
+self.redis.hset('phobia_kind_description', 'pedophobia', '{"name":"Pedophobia",         "description":"children" }')
+self.redis.hset('phobia_kind_description', 'peladophobia', '{"name":"Peladophobia",       "description":"bald people or baldness" }')
+self.redis.hset('phobia_kind_description', 'pellagrophobia', '{"name":"Pellagrophobia",     "description":"pellagra" }')
+self.redis.hset('phobia_kind_description', 'peniaphobia', '{"name":"Peniaphobia",        "description":"poverty" }')
+self.redis.hset('phobia_kind_description', 'pentheraphobia', '{"name":"Pentheraphobia",     "description":"mother-in-law" }')
+self.redis.hset('phobia_kind_description', 'phagophobia', '{"name":"Phagophobia",        "description":"swallowing or of eating or of being eaten" }')
+self.redis.hset('phobia_kind_description', 'phalacrophobia', '{"name":"Phalacrophobia",     "description":"becoming bald" }')
+self.redis.hset('phobia_kind_description', 'pharmacophobia', '{"name":"Pharmacophobia",     "description":"taking medicine" }')
+self.redis.hset('phobia_kind_description', 'pharmcophobia', '{"name":"Pharmcophobia",      "description":"drugs" }')
+self.redis.hset('phobia_kind_description', 'phasmophobia', '{"name":"Phasmophobia",       "description":"ghosts" }')
+self.redis.hset('phobia_kind_description', 'phengophobia', '{"name":"Phengophobia",       "description":"daylight or sunshine" }')
+self.redis.hset('phobia_kind_description', 'phenogophobia', '{"name":"Phenogophobia",      "description":"daylight" }')
+self.redis.hset('phobia_kind_description', 'philematophobia', '{"name":"Philematophobia",    "description":"kissing" }')
+self.redis.hset('phobia_kind_description', 'philophobia', '{"name":"Philophobia",        "description":"falling in love or being in love" }')
+self.redis.hset('phobia_kind_description', 'philosophobia', '{"name":"Philosophobia",      "description":"philosophy" }')
+self.redis.hset('phobia_kind_description', 'phobophobia', '{"name":"Phobophobia",        "description":"phobias" }')
+self.redis.hset('phobia_kind_description', 'phonophobia', '{"name":"Phonophobia",        "description":"noises or voices" }')
+self.redis.hset('phobia_kind_description', 'photalgiophobia', '{"name":"Photalgiophobia",    "description":"photalgin, the pain in the eyes caused by bright light" }')
+self.redis.hset('phobia_kind_description', 'photoaugliaphobia', '{"name":"Photoaugliaphobia",  "description":"glaring lights" }')
+self.redis.hset('phobia_kind_description', 'photophobia', '{"name":"Photophobia",        "description":"light" }')
+self.redis.hset('phobia_kind_description', 'phronemophobia', '{"name":"Phronemophobia",     "description":"thinking" }')
+self.redis.hset('phobia_kind_description', 'phthiriophobia', '{"name":"Phthiriophobia",     "description":"lice" }')
+self.redis.hset('phobia_kind_description', 'phthisiophobia', '{"name":"Phthisiophobia",     "description":"tuberculosis" }')
+self.redis.hset('phobia_kind_description', 'placophobia', '{"name":"Placophobia",        "description":"tombstones" }')
+self.redis.hset('phobia_kind_description', 'plutophobia', '{"name":"Plutophobia",        "description":"wealth" }')
+self.redis.hset('phobia_kind_description', 'pluviophobia', '{"name":"Pluviophobia",       "description":"rain or of being rained on" }')
+self.redis.hset('phobia_kind_description', 'pneumatophobia', '{"name":"Pneumatophobia",     "description":"spirits or noncorporeal beings" }')
+self.redis.hset('phobia_kind_description', 'pnigophobia', '{"name":"Pnigophobia",        "description":"choking" }')
+self.redis.hset('phobia_kind_description', 'pocrescophobia', '{"name":"Pocrescophobia",     "description":"gaining weight" }')
+self.redis.hset('phobia_kind_description', 'pogonophobia', '{"name":"Pogonophobia",       "description":"beards" }')
+self.redis.hset('phobia_kind_description', 'poinephobia', '{"name":"Poinephobia",        "description":"punishment" }')
+self.redis.hset('phobia_kind_description', 'poliosophobia', '{"name":"Poliosophobia",      "description":"contracting poliomyelitis" }')
+self.redis.hset('phobia_kind_description', 'politicophobia', '{"name":"Politicophobia",     "description":"politicians" }')
+self.redis.hset('phobia_kind_description', 'polyphobia', '{"name":"Polyphobia",         "description":"many things" }')
+self.redis.hset('phobia_kind_description', 'ponophobia', '{"name":"Ponophobia",         "description":"overworking" }')
+self.redis.hset('phobia_kind_description', 'porphyrophobia', '{"name":"Porphyrophobia",     "description":"the color purple" }')
+self.redis.hset('phobia_kind_description', 'potamophobia', '{"name":"Potamophobia",       "description":"rivers or running water" }')
+self.redis.hset('phobia_kind_description', 'prosophobia', '{"name":"Prosophobia",        "description":"progress" }')
+self.redis.hset('phobia_kind_description', 'psellismophobia', '{"name":"Psellismophobia",    "description":"stuttering" }')
+self.redis.hset('phobia_kind_description', 'psychophobia', '{"name":"Psychophobia",       "description":"mind" }')
+self.redis.hset('phobia_kind_description', 'pteronophobia', '{"name":"Pteronophobia",      "description":"feathers" }')
+self.redis.hset('phobia_kind_description', 'pupaphobia', '{"name":"Pupaphobia",         "description":"puppets" }')
+self.redis.hset('phobia_kind_description', 'pyrexiophobia', '{"name":"Pyrexiophobia",      "description":"fever" }')
+self.redis.hset('phobia_kind_description', 'pyrophobia', '{"name":"Pyrophobia",         "description":"fire" }')
+self.redis.hset('phobia_kind_description', 'radiophobia', '{"name":"Radiophobia",        "description":"radiation, x-rays" }')
+self.redis.hset('phobia_kind_description', 'ranidaphobia', '{"name":"Ranidaphobia",       "description":"frogs" }')
+self.redis.hset('phobia_kind_description', 'rhabdophobia', '{"name":"Rhabdophobia",       "description":"being severely punished or criticized" }')
+self.redis.hset('phobia_kind_description', 'rhytiphobia', '{"name":"Rhytiphobia",        "description":"getting wrinkles" }')
+self.redis.hset('phobia_kind_description', 'rupophobia', '{"name":"Rupophobia",         "description":"dirt" }')
+self.redis.hset('phobia_kind_description', 'scabiophobia', '{"name":"Scabiophobia",       "description":"scabies" }')
+self.redis.hset('phobia_kind_description', 'scelerophobia', '{"name":"Scelerophobia",      "description":"criminals" }')
+self.redis.hset('phobia_kind_description', 'scholionophobia', '{"name":"Scholionophobia",    "description":"school" }')
+self.redis.hset('phobia_kind_description', 'sciophobia', '{"name":"Sciophobia",         "description":"shadows" }')
+self.redis.hset('phobia_kind_description', 'scoleciphobia', '{"name":"Scoleciphobia",      "description":"worms" }')
+self.redis.hset('phobia_kind_description', 'scoptophobia', '{"name":"Scoptophobia",       "description":"being seen or stared at" }')
+self.redis.hset('phobia_kind_description', 'scotomaphobia', '{"name":"Scotomaphobia",      "description":"blindness in visual field" }')
+self.redis.hset('phobia_kind_description', 'scriptophobia', '{"name":"Scriptophobia",      "description":"writing in public" }')
+self.redis.hset('phobia_kind_description', 'selachophobia', '{"name":"Selachophobia",      "description":"sharks" }')
+self.redis.hset('phobia_kind_description', 'selaphobia', '{"name":"Selaphobia",         "description":"light flashes" }')
+self.redis.hset('phobia_kind_description', 'selenophobia', '{"name":"Selenophobia",       "description":"the moon" }')
+self.redis.hset('phobia_kind_description', 'septophobia', '{"name":"Septophobia",        "description":"decaying matter" }')
+self.redis.hset('phobia_kind_description', 'sesquipedalophobia', '{"name":"Sesquipedalophobia", "description":"long words" }')
+self.redis.hset('phobia_kind_description', 'siderophobia', '{"name":"Siderophobia",       "description":"stars" }')
+self.redis.hset('phobia_kind_description', 'sinistrophobia', '{"name":"Sinistrophobia",     "description":"things to the left or left-handed" }')
+self.redis.hset('phobia_kind_description', 'soceraphobia', '{"name":"Soceraphobia",       "description":"parents-in-law" }')
+self.redis.hset('phobia_kind_description', 'sociophobia', '{"name":"Sociophobia",        "description":"society or people in general" }')
+self.redis.hset('phobia_kind_description', 'somniphobia', '{"name":"Somniphobia",        "description":"sleep" }')
+self.redis.hset('phobia_kind_description', 'sophophobia', '{"name":"Sophophobia",        "description":"learning" }')
+self.redis.hset('phobia_kind_description', 'soteriophobia', '{"name":"Soteriophobia",      "description":"dependence on others" }')
+self.redis.hset('phobia_kind_description', 'spacephobia', '{"name":"Spacephobia",        "description":"outer space" }')
+self.redis.hset('phobia_kind_description', 'spectrophobia', '{"name":"Spectrophobia",      "description":"specters or ghosts" }')
+self.redis.hset('phobia_kind_description', 'spheksophobia', '{"name":"Spheksophobia",      "description":"wasps" }')
+self.redis.hset('phobia_kind_description', 'stasiphobia', '{"name":"Stasiphobia",        "description":"standing or walking" }')
+self.redis.hset('phobia_kind_description', 'stenophobia', '{"name":"Stenophobia",        "description":"narrow things or places" }')
+self.redis.hset('phobia_kind_description', 'stygiophobia', '{"name":"Stygiophobia",       "description":"hell" }')
+self.redis.hset('phobia_kind_description', 'symbolophobia', '{"name":"Symbolophobia",      "description":"symbolism" }')
+self.redis.hset('phobia_kind_description', 'symmetrophobia', '{"name":"Symmetrophobia",     "description":"symmetry" }')
+self.redis.hset('phobia_kind_description', 'syngenesophobia', '{"name":"Syngenesophobia",    "description":"relatives" }')
+self.redis.hset('phobia_kind_description', 'syphilophobia', '{"name":"Syphilophobia",      "description":"syphilis" }')
+self.redis.hset('phobia_kind_description', 'tabophobia', '{"name":"Tabophobia",         "description":"a wasting sickness" }')
+self.redis.hset('phobia_kind_description', 'tachophobia', '{"name":"Tachophobia",        "description":"speed" }')
+self.redis.hset('phobia_kind_description', 'taphophobia', '{"name":"Taphophobia",        "description":"graves or being buried alive" }')
+self.redis.hset('phobia_kind_description', 'tapinophobia', '{"name":"Tapinophobia",       "description":"being contagious" }')
+self.redis.hset('phobia_kind_description', 'taurophobia', '{"name":"Taurophobia",        "description":"bulls" }')
+self.redis.hset('phobia_kind_description', 'technophobia', '{"name":"Technophobia",       "description":"technology" }')
+self.redis.hset('phobia_kind_description', 'teleophobia', '{"name":"Teleophobia",        "description":"definite plans or religious ceremony" }')
+self.redis.hset('phobia_kind_description', 'teniophobia', '{"name":"Teniophobia",        "description":"tapeworms" }')
+self.redis.hset('phobia_kind_description', 'teratophobia', '{"name":"Teratophobia",       "description":"bearing a deformed child" }')
+self.redis.hset('phobia_kind_description', 'testophobia', '{"name":"Testophobia",        "description":"taking tests" }')
+self.redis.hset('phobia_kind_description', 'tetanophobia', '{"name":"Tetanophobia",       "description":"lockjaw, tetanus" }')
+self.redis.hset('phobia_kind_description', 'textophobia', '{"name":"Textophobia",        "description":"certain fabrics" }')
+self.redis.hset('phobia_kind_description', 'thaasophobia', '{"name":"Thaasophobia",       "description":"being idle" }')
+self.redis.hset('phobia_kind_description', 'thalassophobia', '{"name":"Thalassophobia",     "description":"the sea" }')
+self.redis.hset('phobia_kind_description', 'thanatophobia', '{"name":"Thanatophobia",      "description":"death or dying" }')
+self.redis.hset('phobia_kind_description', 'theatrophobia', '{"name":"Theatrophobia",      "description":"theatres" }')
+self.redis.hset('phobia_kind_description', 'theologicophobia', '{"name":"Theologicophobia",   "description":"theology" }')
+self.redis.hset('phobia_kind_description', 'theophobia', '{"name":"Theophobia",         "description":"gods or religion" }')
+self.redis.hset('phobia_kind_description', 'thermophobia', '{"name":"Thermophobia",       "description":"heat" }')
+self.redis.hset('phobia_kind_description', 'thixophobia', '{"name":"Thixophobia",        "description":"touching" }')
+self.redis.hset('phobia_kind_description', 'tokophobia', '{"name":"Tokophobia",         "description":"pregnancy" }')
+self.redis.hset('phobia_kind_description', 'tomophobia', '{"name":"Tomophobia",         "description":"surgical operations" }')
+self.redis.hset('phobia_kind_description', 'topophobia', '{"name":"Topophobia",         "description":"performing" }')
+self.redis.hset('phobia_kind_description', 'toxiphobia', '{"name":"Toxiphobia",         "description":"poison" }')
+self.redis.hset('phobia_kind_description', 'traumatophobia', '{"name":"Traumatophobia",     "description":"injury" }')
+self.redis.hset('phobia_kind_description', 'tremophobia', '{"name":"Tremophobia",        "description":"trembling" }')
+self.redis.hset('phobia_kind_description', 'trichopathophobia', '{"name":"Trichopathophobia",  "description":"diseases of hair" }')
+self.redis.hset('phobia_kind_description', 'trichophobia', '{"name":"Trichophobia",       "description":"hair" }')
+self.redis.hset('phobia_kind_description', 'triskaidekaphobia', '{"name":"Triskaidekaphobia",  "description":"the number 13" }')
+self.redis.hset('phobia_kind_description', 'tropophobia', '{"name":"Tropophobia",        "description":"moving or making changes" }')
+self.redis.hset('phobia_kind_description', 'trypanophobia', '{"name":"Trypanophobia",      "description":"injections" }')
+self.redis.hset('phobia_kind_description', 'tyrannophobia', '{"name":"Tyrannophobia",      "description":"tyrants" }')
+self.redis.hset('phobia_kind_description', 'vaccinophobia', '{"name":"Vaccinophobia",      "description":"vaccines and vaccination" }')
+self.redis.hset('phobia_kind_description', 'venustraphobia', '{"name":"Venustraphobia",     "description":"beautiful women" }')
+self.redis.hset('phobia_kind_description', 'verminophobia', '{"name":"Verminophobia",      "description":"germs" }')
+self.redis.hset('phobia_kind_description', 'vermiphobia', '{"name":"Vermiphobia",        "description":"earth worms" }')
+self.redis.hset('phobia_kind_description', 'vestiphobia', '{"name":"Vestiphobia",        "description":"clothing" }')
+self.redis.hset('phobia_kind_description', 'vitricophobia', '{"name":"Vitricophobia",      "description":"step-father" }')
+self.redis.hset('phobia_kind_description', 'wiccaphobia', '{"name":"Wiccaphobia",        "description":"witches and witchcraft" }')
+self.redis.hset('phobia_kind_description', 'xanthophobia', '{"name":"Xanthophobia",       "description":"the color yellow or the word yellow" }')
+self.redis.hset('phobia_kind_description', 'xenoglossophobia', '{"name":"Xenoglossophobia",   "description":"foreign languages" }')
+self.redis.hset('phobia_kind_description', 'xenophobia', '{"name":"Xenophobia",         "description":"strangers or foreigners" }')
+self.redis.hset('phobia_kind_description', 'xerophobia', '{"name":"Xerophobia",         "description":"dryness and dry places, esp deserts" }')
+self.redis.hset('phobia_kind_description', 'xylophobia', '{"name":"Xylophobia",         "description":"forests" }')
+self.redis.hset('phobia_kind_description', 'xyrophobia', '{"name":"Xyrophobia",         "description":"razors" }')
+self.redis.hset('phobia_kind_description', 'zelophobia', '{"name":"Zelophobia",         "description":"jealousy" }')
+self.redis.hset('phobia_kind_description', 'zeusophobia', '{"name":"Zeusophobia",        "description":"a god or gods" }')
+self.redis.hset('phobia_kind_description', 'zoophobia', '{"name":"Zoophobia",          "description":"animals" }')

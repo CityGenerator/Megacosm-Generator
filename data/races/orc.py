@@ -17,12 +17,12 @@ self.redis.lpush('orc_subrace', 'babirusa')
 self.redis.lpush('orc_subrace', 'stone')
 self.redis.lpush('orc_subrace', 'swamp')
 
-HSET orc_subrace_description deep      {"subrace": "Orog (Deep Orc)",     "description": "" }
-HSET orc_subrace_description mountain  {"subrace": "Mountain Orc",         "description": "" }
-HSET orc_subrace_description lowland   {"subrace": "Lowland Orc",     "description": "" }
-HSET orc_subrace_description babirusa  {"subrace": "Babirusa Orc",     "description": "Tusked orc with a flat, porcine nose." }
-HSET orc_subrace_description stone     {"subrace": "Stone Orc",         "description": "" }
-HSET orc_subrace_description swamp     {"subrace": "Swamp Orc",         "description": "" }
+self.redis.hset('orc_subrace_description', 'deep', '{"subrace": "Orog (Deep Orc)",     "description": "" }')
+self.redis.hset('orc_subrace_description', 'mountain', '{"subrace": "Mountain Orc",         "description": "" }')
+self.redis.hset('orc_subrace_description', 'lowland', '{"subrace": "Lowland Orc",     "description": "" }')
+self.redis.hset('orc_subrace_description', 'babirusa', '{"subrace": "Babirusa Orc",     "description": "Tusked orc with a flat, porcine nose." }')
+self.redis.hset('orc_subrace_description', 'stone', '{"subrace": "Stone Orc",         "description": "" }')
+self.redis.hset('orc_subrace_description', 'swamp', '{"subrace": "Swamp Orc",         "description": "" }')
 
 self.redis.lpush('orcname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
 self.redis.lpush('orcname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}')

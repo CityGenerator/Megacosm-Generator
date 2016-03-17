@@ -11,8 +11,8 @@ SET bugbear_subrace_chance 30
 self.redis.lpush('bugbear_subrace', 'shadow')
 self.redis.lpush('bugbear_subrace', 'koalinth')
 
-HSET bugbear_subrace_description shadow   {"subrace": "Shadow Bugbear",      "description": "" }
-HSET bugbear_subrace_description koalinth {"subrace": "Koalinth Bugbear",      "description": "" }
+self.redis.hset('bugbear_subrace_description', 'shadow', '{"subrace": "Shadow Bugbear",      "description": "" }')
+self.redis.hset('bugbear_subrace_description', 'koalinth', '{"subrace": "Koalinth Bugbear",      "description": "" }')
 
 
 

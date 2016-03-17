@@ -13,11 +13,11 @@ self.redis.lpush('goblin_subrace', 'fire')
 self.redis.lpush('goblin_subrace', 'dust')
 self.redis.lpush('goblin_subrace', 'hill')
 
-HSET goblin_subrace_description night  {"subrace": "Night Goblin",      "description": "" }
-HSET goblin_subrace_description fire   {"subrace": "Fire Goblin",       "description": "" }
-HSET goblin_subrace_description dust   {"subrace": "Dust Goblin",       "description": "" }
-HSET goblin_subrace_description hill   {"subrace": "Hill Goblin",       "description": "" }
-HSET goblin_subrace_description tooth  {"subrace": "Tooth Goblin",       "description": "" }
+self.redis.hset('goblin_subrace_description', 'night', '{"subrace": "Night Goblin",      "description": "" }')
+self.redis.hset('goblin_subrace_description', 'fire', '{"subrace": "Fire Goblin",       "description": "" }')
+self.redis.hset('goblin_subrace_description', 'dust', '{"subrace": "Dust Goblin",       "description": "" }')
+self.redis.hset('goblin_subrace_description', 'hill', '{"subrace": "Hill Goblin",       "description": "" }')
+self.redis.hset('goblin_subrace_description', 'tooth', '{"subrace": "Tooth Goblin",       "description": "" }')
 
 
 self.redis.lpush('goblinname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')

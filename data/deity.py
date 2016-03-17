@@ -168,108 +168,108 @@ self.redis.lpush('deity_worship', 'dances')
 
 
 self.redis.lpush('deity_primarycolor', 'aquamarine')
-HSET deity_primarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+self.redis.hset('deity_primarycolor_description', 'aquamarine', '{"name":"aquamarine", "hex":"7FFFD4" }')
 self.redis.lpush('deity_primarycolor', 'azure')
-HSET deity_primarycolor_description azure     {"name":"azure", "hex":"F0FFFF" }
+self.redis.hset('deity_primarycolor_description', 'azure', '{"name":"azure", "hex":"F0FFFF" }')
 self.redis.lpush('deity_primarycolor', 'banana')
-HSET deity_primarycolor_description banana     {"name":"banana", "hex":"E3CF57" }
+self.redis.hset('deity_primarycolor_description', 'banana', '{"name":"banana", "hex":"E3CF57" }')
 self.redis.lpush('deity_primarycolor', 'beige')
-HSET deity_primarycolor_description beige     {"name":"beige", "hex":"F5F5DC" }
+self.redis.hset('deity_primarycolor_description', 'beige', '{"name":"beige", "hex":"F5F5DC" }')
 self.redis.lpush('deity_primarycolor', 'bisque')
-HSET deity_primarycolor_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+self.redis.hset('deity_primarycolor_description', 'bisque', '{"name":"bisque", "hex":"FFE4C4" }')
 self.redis.lpush('deity_primarycolor', 'black')
-HSET deity_primarycolor_description black     {"name":"black", "hex":"000000" }
+self.redis.hset('deity_primarycolor_description', 'black', '{"name":"black", "hex":"000000" }')
 self.redis.lpush('deity_primarycolor', 'blanchedalmond')
-HSET deity_primarycolor_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+self.redis.hset('deity_primarycolor_description', 'blanchedalmond', '{"name":"blanched almond", "hex":"FFEBCD" }')
 self.redis.lpush('deity_primarycolor', 'blue')
-HSET deity_primarycolor_description blue     {"name":"blue", "hex":"0000FF" }
+self.redis.hset('deity_primarycolor_description', 'blue', '{"name":"blue", "hex":"0000FF" }')
 self.redis.lpush('deity_primarycolor', 'blueviolet')
-HSET deity_primarycolor_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+self.redis.hset('deity_primarycolor_description', 'blueviolet', '{"name":"blue-violet", "hex":"8A2BE2" }')
 self.redis.lpush('deity_primarycolor', 'brick')
-HSET deity_primarycolor_description brick     {"name":"brick", "hex":"9C661F" }
+self.redis.hset('deity_primarycolor_description', 'brick', '{"name":"brick", "hex":"9C661F" }')
 self.redis.lpush('deity_primarycolor', 'brown')
-HSET deity_primarycolor_description brown     {"name":"brown", "hex":"A52A2A" }
+self.redis.hset('deity_primarycolor_description', 'brown', '{"name":"brown", "hex":"A52A2A" }')
 self.redis.lpush('deity_primarycolor', 'burlywood')
-HSET deity_primarycolor_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+self.redis.hset('deity_primarycolor_description', 'burlywood', '{"name":"burly wood", "hex":"DEB887" }')
 self.redis.lpush('deity_primarycolor', 'burntsienna')
-HSET deity_primarycolor_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+self.redis.hset('deity_primarycolor_description', 'burntsienna', '{"name":"burnt sienna", "hex":"8A360F" }')
 self.redis.lpush('deity_primarycolor', 'burntumber')
-HSET deity_primarycolor_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+self.redis.hset('deity_primarycolor_description', 'burntumber', '{"name":"burnt umber", "hex":"8A3324" }')
 self.redis.lpush('deity_primarycolor', 'cadetblue')
-HSET deity_primarycolor_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+self.redis.hset('deity_primarycolor_description', 'cadetblue', '{"name":"cadet blue", "hex":"5F9EA0" }')
 self.redis.lpush('deity_primarycolor', 'cadmiumorange')
-HSET deity_primarycolor_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+self.redis.hset('deity_primarycolor_description', 'cadmiumorange', '{"name":"cadmium orange", "hex":"FF6103" }')
 self.redis.lpush('deity_primarycolor', 'cadmiumyellow')
-HSET deity_primarycolor_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+self.redis.hset('deity_primarycolor_description', 'cadmiumyellow', '{"name":"cadmium yellow", "hex":"FF9912" }')
 self.redis.lpush('deity_primarycolor', 'carrot')
-HSET deity_primarycolor_description carrot     {"name":"carrot", "hex":"ED9121" }
+self.redis.hset('deity_primarycolor_description', 'carrot', '{"name":"carrot", "hex":"ED9121" }')
 self.redis.lpush('deity_primarycolor', 'chartreuse')
-HSET deity_primarycolor_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+self.redis.hset('deity_primarycolor_description', 'chartreuse', '{"name":"chartreuse", "hex":"7FFF00" }')
 self.redis.lpush('deity_primarycolor', 'chocolate')
-HSET deity_primarycolor_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+self.redis.hset('deity_primarycolor_description', 'chocolate', '{"name":"chocolate-colored", "hex":"D2691E" }')
 self.redis.lpush('deity_primarycolor', 'cobalt')
-HSET deity_primarycolor_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+self.redis.hset('deity_primarycolor_description', 'cobalt', '{"name":"cobalt", "hex":"3D59AB" }')
 self.redis.lpush('deity_primarycolor', 'cobaltgreen')
-HSET deity_primarycolor_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+self.redis.hset('deity_primarycolor_description', 'cobaltgreen', '{"name":"cobalt green", "hex":"3D9140" }')
 self.redis.lpush('deity_primarycolor', 'coldgrey')
-HSET deity_primarycolor_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+self.redis.hset('deity_primarycolor_description', 'coldgrey', '{"name":"cold grey", "hex":"808A87" }')
 self.redis.lpush('deity_primarycolor', 'coral')
-HSET deity_primarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
+self.redis.hset('deity_primarycolor_description', 'coral', '{"name":"coral", "hex":"FF7F50" }')
 self.redis.lpush('deity_primarycolor', 'cornflowerblue')
-HSET deity_primarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
+self.redis.hset('deity_primarycolor_description', 'cornflowerblue', '{"name":"cornflower blue", "hex":"6495ED" }')
 
 
 
 self.redis.lpush('deity_secondarycolor', 'aquamarine')
-HSET deity_secondarycolor_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+self.redis.hset('deity_secondarycolor_description', 'aquamarine', '{"name":"aquamarine", "hex":"7FFFD4" }')
 self.redis.lpush('deity_secondarycolor', 'azure')
-HSET deity_secondarycolor_description azure     {"name":"azure", "hex":"F0FFFF" }
+self.redis.hset('deity_secondarycolor_description', 'azure', '{"name":"azure", "hex":"F0FFFF" }')
 self.redis.lpush('deity_secondarycolor', 'banana')
-HSET deity_secondarycolor_description banana     {"name":"banana", "hex":"E3CF57" }
+self.redis.hset('deity_secondarycolor_description', 'banana', '{"name":"banana", "hex":"E3CF57" }')
 self.redis.lpush('deity_secondarycolor', 'beige')
-HSET deity_secondarycolor_description beige     {"name":"beige", "hex":"F5F5DC" }
+self.redis.hset('deity_secondarycolor_description', 'beige', '{"name":"beige", "hex":"F5F5DC" }')
 self.redis.lpush('deity_secondarycolor', 'bisque')
-HSET deity_secondarycolor_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+self.redis.hset('deity_secondarycolor_description', 'bisque', '{"name":"bisque", "hex":"FFE4C4" }')
 self.redis.lpush('deity_secondarycolor', 'black')
-HSET deity_secondarycolor_description black     {"name":"black", "hex":"000000" }
+self.redis.hset('deity_secondarycolor_description', 'black', '{"name":"black", "hex":"000000" }')
 self.redis.lpush('deity_secondarycolor', 'blanchedalmond')
-HSET deity_secondarycolor_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+self.redis.hset('deity_secondarycolor_description', 'blanchedalmond', '{"name":"blanched almond", "hex":"FFEBCD" }')
 self.redis.lpush('deity_secondarycolor', 'blue')
-HSET deity_secondarycolor_description blue     {"name":"blue", "hex":"0000FF" }
+self.redis.hset('deity_secondarycolor_description', 'blue', '{"name":"blue", "hex":"0000FF" }')
 self.redis.lpush('deity_secondarycolor', 'blueviolet')
-HSET deity_secondarycolor_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+self.redis.hset('deity_secondarycolor_description', 'blueviolet', '{"name":"blue-violet", "hex":"8A2BE2" }')
 self.redis.lpush('deity_secondarycolor', 'brick')
-HSET deity_secondarycolor_description brick     {"name":"brick", "hex":"9C661F" }
+self.redis.hset('deity_secondarycolor_description', 'brick', '{"name":"brick", "hex":"9C661F" }')
 self.redis.lpush('deity_secondarycolor', 'brown')
-HSET deity_secondarycolor_description brown     {"name":"brown", "hex":"A52A2A" }
+self.redis.hset('deity_secondarycolor_description', 'brown', '{"name":"brown", "hex":"A52A2A" }')
 self.redis.lpush('deity_secondarycolor', 'burlywood')
-HSET deity_secondarycolor_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+self.redis.hset('deity_secondarycolor_description', 'burlywood', '{"name":"burly wood", "hex":"DEB887" }')
 self.redis.lpush('deity_secondarycolor', 'burntsienna')
-HSET deity_secondarycolor_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+self.redis.hset('deity_secondarycolor_description', 'burntsienna', '{"name":"burnt sienna", "hex":"8A360F" }')
 self.redis.lpush('deity_secondarycolor', 'burntumber')
-HSET deity_secondarycolor_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+self.redis.hset('deity_secondarycolor_description', 'burntumber', '{"name":"burnt umber", "hex":"8A3324" }')
 self.redis.lpush('deity_secondarycolor', 'cadetblue')
-HSET deity_secondarycolor_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+self.redis.hset('deity_secondarycolor_description', 'cadetblue', '{"name":"cadet blue", "hex":"5F9EA0" }')
 self.redis.lpush('deity_secondarycolor', 'cadmiumorange')
-HSET deity_secondarycolor_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+self.redis.hset('deity_secondarycolor_description', 'cadmiumorange', '{"name":"cadmium orange", "hex":"FF6103" }')
 self.redis.lpush('deity_secondarycolor', 'cadmiumyellow')
-HSET deity_secondarycolor_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+self.redis.hset('deity_secondarycolor_description', 'cadmiumyellow', '{"name":"cadmium yellow", "hex":"FF9912" }')
 self.redis.lpush('deity_secondarycolor', 'carrot')
-HSET deity_secondarycolor_description carrot     {"name":"carrot", "hex":"ED9121" }
+self.redis.hset('deity_secondarycolor_description', 'carrot', '{"name":"carrot", "hex":"ED9121" }')
 self.redis.lpush('deity_secondarycolor', 'chartreuse')
-HSET deity_secondarycolor_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+self.redis.hset('deity_secondarycolor_description', 'chartreuse', '{"name":"chartreuse", "hex":"7FFF00" }')
 self.redis.lpush('deity_secondarycolor', 'chocolate')
-HSET deity_secondarycolor_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+self.redis.hset('deity_secondarycolor_description', 'chocolate', '{"name":"chocolate-colored", "hex":"D2691E" }')
 self.redis.lpush('deity_secondarycolor', 'cobalt')
-HSET deity_secondarycolor_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+self.redis.hset('deity_secondarycolor_description', 'cobalt', '{"name":"cobalt", "hex":"3D59AB" }')
 self.redis.lpush('deity_secondarycolor', 'cobaltgreen')
-HSET deity_secondarycolor_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+self.redis.hset('deity_secondarycolor_description', 'cobaltgreen', '{"name":"cobalt green", "hex":"3D9140" }')
 self.redis.lpush('deity_secondarycolor', 'coldgrey')
-HSET deity_secondarycolor_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+self.redis.hset('deity_secondarycolor_description', 'coldgrey', '{"name":"cold grey", "hex":"808A87" }')
 self.redis.lpush('deity_secondarycolor', 'coral')
-HSET deity_secondarycolor_description coral     {"name":"coral", "hex":"FF7F50" }
+self.redis.hset('deity_secondarycolor_description', 'coral', '{"name":"coral", "hex":"FF7F50" }')
 self.redis.lpush('deity_secondarycolor', 'cornflowerblue')
-HSET deity_secondarycolor_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
+self.redis.hset('deity_secondarycolor_description', 'cornflowerblue', '{"name":"cornflower blue", "hex":"6495ED" }')
 
 # in battle, Gokl prefers
 self.redis.lpush('deity_favored_weapon', 'axes')
@@ -567,21 +567,21 @@ self.redis.lpush('deity_vow', 'stoicism')
 self.redis.lpush('deity_vow', 'submission')
 self.redis.lpush('deity_vow', 'surety')
 
-HSET deity_vow_description abstinence     {"name":"Abstinence",       "description":"abstain from alcoholic beverages, drugs, and intoxication"                                   }
-HSET deity_vow_description celibacy       {"name":"Celibacy",         "description":"refrain from marriage and sex"                                                               }
-HSET deity_vow_description charity        {"name":"Charity",          "description":"refrain from accepting compensation for any services rendered"                               }
-HSET deity_vow_description chastity       {"name":"Chastity",         "description":"refrain from marriage and sex"                                                               }
-HSET deity_vow_description humility       {"name":"Humility",         "description":"abstain from extolling your own virtues"                                                     }
-HSET deity_vow_description independence   {"name":"Independence",     "description":"never affiliate with or take orders from any organization, including the church"             }
-HSET deity_vow_description itinerancy     {"name":"Itinerancy",       "description":"constantly move from place to place, never settling"                                         }
-HSET deity_vow_description nonviolence    {"name":"Nonviolence",      "description":"avoid violence against other sentient creatures"                                             }
-HSET deity_vow_description obedience      {"name":"Obedience",        "description":"live according to the dictates of a superior in the religious order or similar organization" }
-HSET deity_vow_description peace          {"name":"Peace",            "description":"abstain from harming any living creature"                                                    }
-HSET deity_vow_description poverty        {"name":"Poverty",          "description":"forswear material possessions"                                                               }
-HSET deity_vow_description propriety      {"name":"Propriety",        "description":" seek glory, honor, and victory in tribute"                                                  }
-HSET deity_vow_description purity         {"name":"Purity",           "description":"avoid contact with dead flesh"                                                               }
-HSET deity_vow_description reconstruction {"name":"Reconstruction",   "description":"reunite factions after a long and bitter feud"                                               }
-HSET deity_vow_description silence        {"name":"Silence",          "description":"not speak under any circumstances"                                                           }
-HSET deity_vow_description stoicism       {"name":"Stoicism",         "description":"speak as few words as possible, often a given word to represent their faith"                 }
-HSET deity_vow_description submission     {"name":"Submission",       "description":"submit to those who ask of it"                                                               }
-HSET deity_vow_description surety         {"name":"Surety",           "description":"defend a group or groups with your very life"                                                }
+self.redis.hset('deity_vow_description', 'abstinence', '{"name":"Abstinence",       "description":"abstain from alcoholic beverages, drugs, and intoxication"                                   }')
+self.redis.hset('deity_vow_description', 'celibacy', '{"name":"Celibacy",         "description":"refrain from marriage and sex"                                                               }')
+self.redis.hset('deity_vow_description', 'charity', '{"name":"Charity",          "description":"refrain from accepting compensation for any services rendered"                               }')
+self.redis.hset('deity_vow_description', 'chastity', '{"name":"Chastity",         "description":"refrain from marriage and sex"                                                               }')
+self.redis.hset('deity_vow_description', 'humility', '{"name":"Humility",         "description":"abstain from extolling your own virtues"                                                     }')
+self.redis.hset('deity_vow_description', 'independence', '{"name":"Independence",     "description":"never affiliate with or take orders from any organization, including the church"             }')
+self.redis.hset('deity_vow_description', 'itinerancy', '{"name":"Itinerancy",       "description":"constantly move from place to place, never settling"                                         }')
+self.redis.hset('deity_vow_description', 'nonviolence', '{"name":"Nonviolence",      "description":"avoid violence against other sentient creatures"                                             }')
+self.redis.hset('deity_vow_description', 'obedience', '{"name":"Obedience",        "description":"live according to the dictates of a superior in the religious order or similar organization" }')
+self.redis.hset('deity_vow_description', 'peace', '{"name":"Peace",            "description":"abstain from harming any living creature"                                                    }')
+self.redis.hset('deity_vow_description', 'poverty', '{"name":"Poverty",          "description":"forswear material possessions"                                                               }')
+self.redis.hset('deity_vow_description', 'propriety', '{"name":"Propriety",        "description":" seek glory, honor, and victory in tribute"                                                  }')
+self.redis.hset('deity_vow_description', 'purity', '{"name":"Purity",           "description":"avoid contact with dead flesh"                                                               }')
+self.redis.hset('deity_vow_description', 'reconstruction', '{"name":"Reconstruction",   "description":"reunite factions after a long and bitter feud"                                               }')
+self.redis.hset('deity_vow_description', 'silence', '{"name":"Silence",          "description":"not speak under any circumstances"                                                           }')
+self.redis.hset('deity_vow_description', 'stoicism', '{"name":"Stoicism",         "description":"speak as few words as possible, often a given word to represent their faith"                 }')
+self.redis.hset('deity_vow_description', 'submission', '{"name":"Submission",       "description":"submit to those who ask of it"                                                               }')
+self.redis.hset('deity_vow_description', 'surety', '{"name":"Surety",           "description":"defend a group or groups with your very life"                                                }')

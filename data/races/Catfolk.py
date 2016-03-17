@@ -12,9 +12,9 @@ self.redis.lpush('catfolk_subrace', 'leosapien')
 self.redis.lpush('catfolk_subrace', 'pardii')
 self.redis.lpush('catfolk_subrace', 'lynxin')
 
-HSET catfolk_subrace_description leosapien      {"subrace": "Leosapien (Lionfolk)",     "description": "Largest and most powerful of the catfolk" }
-HSET catfolk_subrace_description pardii         {"subrace": "Pardii (Leopardfolk)",     "description": "a sly and cunning felinid" }
-HSET catfolk_subrace_description lynxin         {"subrace": "Lynxin (catfolk)",         "description": "a solitary and gruff felinid" }
+self.redis.hset('catfolk_subrace_description', 'leosapien', '{"subrace": "Leosapien (Lionfolk)",     "description": "Largest and most powerful of the catfolk" }')
+self.redis.hset('catfolk_subrace_description', 'pardii', '{"subrace": "Pardii (Leopardfolk)",     "description": "a sly and cunning felinid" }')
+self.redis.hset('catfolk_subrace_description', 'lynxin', '{"subrace": "Lynxin (catfolk)",         "description": "a solitary and gruff felinid" }')
 
 
 self.redis.lpush('catfolkname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.middle_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')

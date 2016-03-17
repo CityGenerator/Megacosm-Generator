@@ -21,18 +21,18 @@ self.redis.lpush('elf_subrace', 'shadowelf')
 self.redis.lpush('elf_subrace', 'waterelf')
 self.redis.lpush('elf_subrace', 'snowelf')
 
-HSET elf_subrace_description darkelf   {"subrace": "Dark Elf",      "description": "a more sinister and maligned version of their above-ground cousins" }
-HSET elf_subrace_description woodelf   {"subrace": "Wood Elf",      "description": "a stronger and less thoughtful elf with deep ties to the forest" }
-HSET elf_subrace_description wildelf   {"subrace": "Wild Elf",      "description": "an elusive and slightly feral elf" }
-HSET elf_subrace_description halfelf   {"subrace": "Half Elf",      "description": "having a mixed bloodline with humans" }
-HSET elf_subrace_description sunelf    {"subrace": "Sun Elf",       "description": "elves with strong ties to magic"  }
-HSET elf_subrace_description wingedelf {"subrace": "Winged Elf",    "description": "elves that are often mistaken for angels"  }
-HSET elf_subrace_description moonelf   {"subrace": "Moon Elf",      "description": "one of the more common species of elves" }
-HSET elf_subrace_description bloodelf  {"subrace": "Blood Elf",     "description": "a bulkier elf built for nomadic life" }
-HSET elf_subrace_description duneelf   {"subrace": "Dune Elf",      "description": "adapted to the hot sands of the desert"  }
-HSET elf_subrace_description shadowelf {"subrace": "Shadow Elf",    "description": "an elf that slinks though the moonlight"  }
-HSET elf_subrace_description waterelf  {"subrace": "Water Elf",     "description": "an elf that has bonded with the waterways"  }
-HSET elf_subrace_description snowelf   {"subrace": "Snow Elf",      "description": "an elf that has adapted to cold mountain life"  }
+self.redis.hset('elf_subrace_description', 'darkelf', '{"subrace": "Dark Elf",      "description": "a more sinister and maligned version of their above-ground cousins" }')
+self.redis.hset('elf_subrace_description', 'woodelf', '{"subrace": "Wood Elf",      "description": "a stronger and less thoughtful elf with deep ties to the forest" }')
+self.redis.hset('elf_subrace_description', 'wildelf', '{"subrace": "Wild Elf",      "description": "an elusive and slightly feral elf" }')
+self.redis.hset('elf_subrace_description', 'halfelf', '{"subrace": "Half Elf",      "description": "having a mixed bloodline with humans" }')
+self.redis.hset('elf_subrace_description', 'sunelf', '{"subrace": "Sun Elf",       "description": "elves with strong ties to magic"  }')
+self.redis.hset('elf_subrace_description', 'wingedelf', '{"subrace": "Winged Elf",    "description": "elves that are often mistaken for angels"  }')
+self.redis.hset('elf_subrace_description', 'moonelf', '{"subrace": "Moon Elf",      "description": "one of the more common species of elves" }')
+self.redis.hset('elf_subrace_description', 'bloodelf', '{"subrace": "Blood Elf",     "description": "a bulkier elf built for nomadic life" }')
+self.redis.hset('elf_subrace_description', 'duneelf', '{"subrace": "Dune Elf",      "description": "adapted to the hot sands of the desert"  }')
+self.redis.hset('elf_subrace_description', 'shadowelf', '{"subrace": "Shadow Elf",    "description": "an elf that slinks though the moonlight"  }')
+self.redis.hset('elf_subrace_description', 'waterelf', '{"subrace": "Water Elf",     "description": "an elf that has bonded with the waterways"  }')
+self.redis.hset('elf_subrace_description', 'snowelf', '{"subrace": "Snow Elf",      "description": "an elf that has adapted to cold mountain life"  }')
 
 
 self.redis.lpush('elfname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}')

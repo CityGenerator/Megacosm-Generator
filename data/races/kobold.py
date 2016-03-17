@@ -13,10 +13,10 @@ self.redis.lpush('kobold_subrace', 'sand')
 self.redis.lpush('kobold_subrace', 'mud')
 self.redis.lpush('kobold_subrace', 'jungle')
 
-HSET kobold_subrace_description aquatic {"subrace": "Aquatic Kobold",   "description": "" }
-HSET kobold_subrace_description sand    {"subrace": "Sand Kobold",      "description": "" }
-HSET kobold_subrace_description mud     {"subrace": "Mud Kobold",       "description": "" }
-HSET kobold_subrace_description jungle  {"subrace": "Jungle Kobold",    "description": "" }
+self.redis.hset('kobold_subrace_description', 'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }')
+self.redis.hset('kobold_subrace_description', 'sand', '{"subrace": "Sand Kobold",      "description": "" }')
+self.redis.hset('kobold_subrace_description', 'mud', '{"subrace": "Mud Kobold",       "description": "" }')
+self.redis.hset('kobold_subrace_description', 'jungle', '{"subrace": "Jungle Kobold",    "description": "" }')
 
 self.redis.lpush('koboldname_fullname_template', '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
 self.redis.lpush('koboldname_shortname_template', '{{params.first_root}}')

@@ -34,38 +34,38 @@ self.redis.lpush('flagcolor', 'black              ')
 self.redis.lpush('flagcolor', 'white              ')
 
 # colors are taken from vexology standards
-HSET flagcolor_description verylightred       {"name":"very light red",    "hex":"#ff6666",  "verb":"love",       "adverb":"lovingly"         }
-HSET flagcolor_description lightred           {"name":"light red",         "hex":"#ff3333",  "verb":"cherish",    "adverb":"peacefully"       }
-HSET flagcolor_description red                {"name":"red",               "hex":"#ff0000",  "verb":"expand",     "adverb":"gracefully"       }
-HSET flagcolor_description darkred            {"name":"dark red",          "hex":"#cc0000",  "verb":"enforce",    "adverb":"defiantly"        }
-HSET flagcolor_description verydarkred        {"name":"very dark red",     "hex":"#990000",  "verb":"march",      "adverb":"passionately"     }
-HSET flagcolor_description verylightblue      {"name":"very light blue",   "hex":"#33ccff",  "verb":"protect",    "adverb":"faithfully"       }
-HSET flagcolor_description lightblue          {"name":"light blue",        "hex":"#3399ff",  "verb":"inspire",    "adverb":"freely"           }
-HSET flagcolor_description blue               {"name":"blue",              "hex":"#0000ff",  "verb":"enjoy",      "adverb":"openly"           }
-HSET flagcolor_description darkblue           {"name":"dark blue",         "hex":"#0000cc",  "verb":"devote",     "adverb":"fully"            }
-HSET flagcolor_description verydarkblue       {"name":"very dark blue",    "hex":"#000099",  "verb":"honor",      "adverb":"justly"           }
-HSET flagcolor_description verylightgreen     {"name":"very light green",  "hex":"#00ff33",  "verb":"accelerate", "adverb":"tomorrow"         }
-HSET flagcolor_description lightgreen         {"name":"light green",       "hex":"#00cc00",  "verb":"grow",       "adverb":"quickly"          }
-HSET flagcolor_description green              {"name":"green",             "hex":"#009900",  "verb":"prosper",    "adverb":"always"           }
-HSET flagcolor_description darkgreen          {"name":"dark green",        "hex":"#006600",  "verb":"hope",       "adverb":"appropriately"    }
-HSET flagcolor_description verydarkgreen      {"name":"very dark green",   "hex":"#003300",  "verb":"cultivate",  "adverb":"brightly"         }
-HSET flagcolor_description verylightyellow    {"name":"very light yellow", "hex":"#ffffcc",  "verb":"strengthen", "adverb":"joyfully"         }
-HSET flagcolor_description lightyellow        {"name":"light yellow",      "hex":"#ffff99",  "verb":"surpass",    "adverb":"happily"          }
-HSET flagcolor_description yellow             {"name":"yellow",            "hex":"#ffff00",  "verb":"entertain",  "adverb":"cheerfully"       }
-HSET flagcolor_description darkyellow         {"name":"dark yellow",       "hex":"#ffcc00",  "verb":"relish",     "adverb":"gracefully"       }
-HSET flagcolor_description lightorange        {"name":"light orange",      "hex":"#ff9900",  "verb":"distrust",   "adverb":"enthusiastically" }
-HSET flagcolor_description orange             {"name":"orange",            "hex":"#ff6600",  "verb":"desire",     "adverb":"ambitiously"      }
-HSET flagcolor_description gold               {"name":"gold",              "hex":"#ffcc33",  "verb":"purchase",   "adverb":"wisely"           }
-HSET flagcolor_description lightgrey          {"name":"light grey",        "hex":"#cccccc",  "verb":"wonder",     "adverb":"cautiously"       }
-HSET flagcolor_description grey               {"name":"grey",              "hex":"#999999",  "verb":"compromise", "adverb":"patiently"        }
-HSET flagcolor_description darkgrey           {"name":"dark grey",         "hex":"#666666",  "verb":"conform",    "adverb":"impartially"      }
-HSET flagcolor_description verydarkgrey       {"name":"very dark grey",    "hex":"#333333",  "verb":"control",    "adverb":"reliably"         }
-HSET flagcolor_description lightbrown         {"name":"light brown",       "hex":"#996600",  "verb":"endure",     "adverb":"safely"           }
-HSET flagcolor_description brown              {"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"solidly"          }
-HSET flagcolor_description darkbrown          {"name":"dark brown",        "hex":"#330000",  "verb":"balance",    "adverb":"naturally"        }
-HSET flagcolor_description purple             {"name":"purple",            "hex":"#660099",  "verb":"rule",       "adverb":"majestically"     }
-HSET flagcolor_description black              {"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }
-HSET flagcolor_description white              {"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }
+self.redis.hset('flagcolor_description', 'verylightred', '{"name":"very light red",    "hex":"#ff6666",  "verb":"love",       "adverb":"lovingly"         }')
+self.redis.hset('flagcolor_description', 'lightred', '{"name":"light red",         "hex":"#ff3333",  "verb":"cherish",    "adverb":"peacefully"       }')
+self.redis.hset('flagcolor_description', 'red', '{"name":"red",               "hex":"#ff0000",  "verb":"expand",     "adverb":"gracefully"       }')
+self.redis.hset('flagcolor_description', 'darkred', '{"name":"dark red",          "hex":"#cc0000",  "verb":"enforce",    "adverb":"defiantly"        }')
+self.redis.hset('flagcolor_description', 'verydarkred', '{"name":"very dark red",     "hex":"#990000",  "verb":"march",      "adverb":"passionately"     }')
+self.redis.hset('flagcolor_description', 'verylightblue', '{"name":"very light blue",   "hex":"#33ccff",  "verb":"protect",    "adverb":"faithfully"       }')
+self.redis.hset('flagcolor_description', 'lightblue', '{"name":"light blue",        "hex":"#3399ff",  "verb":"inspire",    "adverb":"freely"           }')
+self.redis.hset('flagcolor_description', 'blue', '{"name":"blue",              "hex":"#0000ff",  "verb":"enjoy",      "adverb":"openly"           }')
+self.redis.hset('flagcolor_description', 'darkblue', '{"name":"dark blue",         "hex":"#0000cc",  "verb":"devote",     "adverb":"fully"            }')
+self.redis.hset('flagcolor_description', 'verydarkblue', '{"name":"very dark blue",    "hex":"#000099",  "verb":"honor",      "adverb":"justly"           }')
+self.redis.hset('flagcolor_description', 'verylightgreen', '{"name":"very light green",  "hex":"#00ff33",  "verb":"accelerate", "adverb":"tomorrow"         }')
+self.redis.hset('flagcolor_description', 'lightgreen', '{"name":"light green",       "hex":"#00cc00",  "verb":"grow",       "adverb":"quickly"          }')
+self.redis.hset('flagcolor_description', 'green', '{"name":"green",             "hex":"#009900",  "verb":"prosper",    "adverb":"always"           }')
+self.redis.hset('flagcolor_description', 'darkgreen', '{"name":"dark green",        "hex":"#006600",  "verb":"hope",       "adverb":"appropriately"    }')
+self.redis.hset('flagcolor_description', 'verydarkgreen', '{"name":"very dark green",   "hex":"#003300",  "verb":"cultivate",  "adverb":"brightly"         }')
+self.redis.hset('flagcolor_description', 'verylightyellow', '{"name":"very light yellow", "hex":"#ffffcc",  "verb":"strengthen", "adverb":"joyfully"         }')
+self.redis.hset('flagcolor_description', 'lightyellow', '{"name":"light yellow",      "hex":"#ffff99",  "verb":"surpass",    "adverb":"happily"          }')
+self.redis.hset('flagcolor_description', 'yellow', '{"name":"yellow",            "hex":"#ffff00",  "verb":"entertain",  "adverb":"cheerfully"       }')
+self.redis.hset('flagcolor_description', 'darkyellow', '{"name":"dark yellow",       "hex":"#ffcc00",  "verb":"relish",     "adverb":"gracefully"       }')
+self.redis.hset('flagcolor_description', 'lightorange', '{"name":"light orange",      "hex":"#ff9900",  "verb":"distrust",   "adverb":"enthusiastically" }')
+self.redis.hset('flagcolor_description', 'orange', '{"name":"orange",            "hex":"#ff6600",  "verb":"desire",     "adverb":"ambitiously"      }')
+self.redis.hset('flagcolor_description', 'gold', '{"name":"gold",              "hex":"#ffcc33",  "verb":"purchase",   "adverb":"wisely"           }')
+self.redis.hset('flagcolor_description', 'lightgrey', '{"name":"light grey",        "hex":"#cccccc",  "verb":"wonder",     "adverb":"cautiously"       }')
+self.redis.hset('flagcolor_description', 'grey', '{"name":"grey",              "hex":"#999999",  "verb":"compromise", "adverb":"patiently"        }')
+self.redis.hset('flagcolor_description', 'darkgrey', '{"name":"dark grey",         "hex":"#666666",  "verb":"conform",    "adverb":"impartially"      }')
+self.redis.hset('flagcolor_description', 'verydarkgrey', '{"name":"very dark grey",    "hex":"#333333",  "verb":"control",    "adverb":"reliably"         }')
+self.redis.hset('flagcolor_description', 'lightbrown', '{"name":"light brown",       "hex":"#996600",  "verb":"endure",     "adverb":"safely"           }')
+self.redis.hset('flagcolor_description', 'brown', '{"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"solidly"          }')
+self.redis.hset('flagcolor_description', 'darkbrown', '{"name":"dark brown",        "hex":"#330000",  "verb":"balance",    "adverb":"naturally"        }')
+self.redis.hset('flagcolor_description', 'purple', '{"name":"purple",            "hex":"#660099",  "verb":"rule",       "adverb":"majestically"     }')
+self.redis.hset('flagcolor_description', 'black', '{"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }')
+self.redis.hset('flagcolor_description', 'white', '{"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }')
 
 ZADD  flag_shape  50 {"name":"square",      "score":50    }
 ZADD  flag_shape  60 {"name":"para",        "score":60    }

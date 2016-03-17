@@ -17,14 +17,14 @@ self.redis.lpush('dwarf_subrace', 'arctic')
 self.redis.lpush('dwarf_subrace', 'wild')
 self.redis.lpush('dwarf_subrace', 'degenerate')
 
-HSET dwarf_subrace_description mountain   {"subrace": "Mountain Dwarf",   "description": "" }
-HSET dwarf_subrace_description hill       {"subrace": "Hill Dwarf",       "description": "" }
-HSET dwarf_subrace_description deep       {"subrace": "Deep Dwarf",       "description": "" }
-HSET dwarf_subrace_description gray       {"subrace": "Gray Dwarf",       "description": "" }
-HSET dwarf_subrace_description desert     {"subrace": "Desert Dwarf",     "description": "" }
-HSET dwarf_subrace_description arctic     {"subrace": "Arctic Dwarf",     "description": "" }
-HSET dwarf_subrace_description wild       {"subrace": "Wild Dwarf",       "description": "" }
-HSET dwarf_subrace_description degenerate {"subrace": "Degenerate Dwarf", "description": "" }
+self.redis.hset('dwarf_subrace_description', 'mountain', '{"subrace": "Mountain Dwarf",   "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'hill', '{"subrace": "Hill Dwarf",       "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'deep', '{"subrace": "Deep Dwarf",       "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'gray', '{"subrace": "Gray Dwarf",       "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'desert', '{"subrace": "Desert Dwarf",     "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'arctic', '{"subrace": "Arctic Dwarf",     "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'wild', '{"subrace": "Wild Dwarf",       "description": "" }')
+self.redis.hset('dwarf_subrace_description', 'degenerate', '{"subrace": "Degenerate Dwarf", "description": "" }')
 
 
 self.redis.lpush('dwarfname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_root}}{{params.last_post}} {{params.trailer}}')
