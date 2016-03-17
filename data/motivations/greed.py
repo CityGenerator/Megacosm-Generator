@@ -1,0 +1,10 @@
+self.redis.lpush('motivationgreed_text', 'to steal')
+self.redis.lpush('motivationgreed_text', 'to cheat')
+self.redis.lpush('motivationgreed_text', 'by greed')
+self.redis.lpush('motivationgreed_text', 'to hoard precious items')
+self.redis.lpush('motivationgreed_text', 'to hoard coins')
+self.redis.lpush('motivationgreed_text', 'to hoard knowledge')
+self.redis.lpush('motivationgreed_text', 'to be the richest {{params.npc.race}} in town')
+self.redis.lpush('motivationgreed_text', 'to not share the wealth')
+self.redis.lpush('motivationgreed_text', 'to lie about money')
+

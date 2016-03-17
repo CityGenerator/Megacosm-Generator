@@ -1,3 +1,0 @@
-LPUSH motivationselfimprovement_text to better {{params.npc.sex['third-person']}}self
-LPUSH motivationselfimprovement_text to be a better person
-

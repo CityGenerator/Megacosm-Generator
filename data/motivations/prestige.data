@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationprestige_text to be awarded a title
-LPUSH motivationprestige_text to be admired for {{params.npc.sex['possessive']}} skill
-LPUSH motivationprestige_text to be known as the greatest {{params.npc.profession}} in the city

@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationexperiences_text to try new things
-LPUSH motivationexperiences_text to go to new places
-LPUSH motivationexperiences_text to experience the world

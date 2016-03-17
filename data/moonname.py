@@ -1,0 +1,45 @@
+#
+
+self.redis.lpush('moonname_fullname_template', '{{params.pre}}{{params.root}}{{params.post}}')
+self.redis.lpush('moonname_shortname_template', '{{params.fullname}}')
+self.redis.lpush('moonname_formalname_template', '{{params.fullname}}')
+
+
+set moonname_post_chance 30
+
+self.redis.lpush('moonname_pre', 'Mo')
+self.redis.lpush('moonname_pre', 'Dei')
+self.redis.lpush('moonname_pre', 'Pho')
+self.redis.lpush('moonname_pre', 'Gana')
+self.redis.lpush('moonname_pre', 'Calli')
+self.redis.lpush('moonname_pre', 'Hima')
+self.redis.lpush('moonname_pre', 'Ela')
+self.redis.lpush('moonname_pre', 'Sino')
+self.redis.lpush('moonname_pre', 'The')
+self.redis.lpush('moonname_pre', 'Cha')
+self.redis.lpush('moonname_pre', 'Spo')
+self.redis.lpush('moonname_pre', 'Pro')
+
+self.redis.lpush('moonname_root', 'ro')
+self.redis.lpush('moonname_root', 'ka')
+self.redis.lpush('moonname_root', 'di')
+self.redis.lpush('moonname_root', 'do')
+self.redis.lpush('moonname_root', 'la')
+self.redis.lpush('moonname_root', 'ta')
+self.redis.lpush('moonname_root', 'le')
+self.redis.lpush('moonname_root', 'me')
+
+self.redis.lpush('moonname_post', 'bos')
+self.redis.lpush('moonname_post', 'mos')
+self.redis.lpush('moonname_post', 'pa')
+self.redis.lpush('moonname_post', 'sto')
+self.redis.lpush('moonname_post', 'pe')
+self.redis.lpush('moonname_post', 'ke')
+self.redis.lpush('moonname_post', 'lite')
+self.redis.lpush('moonname_post', 'dene')
+self.redis.lpush('moonname_post', 'noe')
+self.redis.lpush('moonname_post', 'se')
+self.redis.lpush('moonname_post', 'thys')
+self.redis.lpush('moonname_post', 'dus')
+self.redis.lpush('moonname_post', 'pso')
+self.redis.lpush('moonname_post', 'theus')

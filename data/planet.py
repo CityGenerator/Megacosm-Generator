@@ -1,0 +1,180 @@
+# Planet details
+
+ZADD planet_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   } 
+ZADD planet_size 10 {"name":"small",     "multiplier":0.7,  "score":10   } 
+ZADD planet_size 65 {"name":"average",   "multiplier":1.0,  "score":65   } 
+ZADD planet_size 85 {"name":"large",     "multiplier":1.5,  "score":85   } 
+ZADD planet_size 100 {"name":"massive",  "multiplier":2.0,  "score":100   } 
+
+ZADD planet_temp 5   {"name":"unbearably cold", "multiplier":0.5,  "score":5   } 
+ZADD planet_temp 10  {"name":"freezing",        "multiplier":0.6,  "score":10   } 
+ZADD planet_temp 15  {"name":"cold",            "multiplier":0.7,  "score":15   } 
+ZADD planet_temp 20  {"name":"cool",            "multiplier":0.8,  "score":20   } 
+ZADD planet_temp 30  {"name":"mild",            "multiplier":0.9,  "score":30   } 
+ZADD planet_temp 70  {"name":"ideal",           "multiplier":1.0,  "score":70   } 
+ZADD planet_temp 80  {"name":"pleasant",        "multiplier":1.1,  "score":80   } 
+ZADD planet_temp 85  {"name":"warm",            "multiplier":1.2,  "score":85   } 
+ZADD planet_temp 90  {"name":"hot",             "multiplier":1.3,  "score":90   } 
+ZADD planet_temp 95  {"name":"sweltering",      "multiplier":1.4,  "score":95   } 
+ZADD planet_temp 100 {"name":"unbearably hot",  "multiplier":1.5,  "score":100   } 
+                              
+ZADD planet_atmosphere 5   {"name":"thin",     "opacity":0.01,  "score":5   } 
+ZADD planet_atmosphere 10  {"name":"meager",   "opacity":0.10,  "score":10   } 
+ZADD planet_atmosphere 25  {"name":"slight",   "opacity":0.30,  "score":25   } 
+ZADD planet_atmosphere 75  {"name":"average",  "opacity":0.50,  "score":75   } 
+ZADD planet_atmosphere 85  {"name":"thick",    "opacity":0.70,  "score":85   } 
+ZADD planet_atmosphere 95  {"name":"heavy",    "opacity":0.90,  "score":95   } 
+ZADD planet_atmosphere 100 {"name":"dense",    "opacity":0.99,  "score":100   } 
+
+
+ZADD planet_wind 5   {"name":"dead",         "multiplier":0.5,  "score":5   } 
+ZADD planet_wind 10  {"name":"soft",         "multiplier":0.7,  "score":10   } 
+ZADD planet_wind 25  {"name":"slight",       "multiplier":0.9,  "score":25   } 
+ZADD planet_wind 75  {"name":"breezy",       "multiplier":1.0,  "score":75   } 
+ZADD planet_wind 85  {"name":"gusty",        "multiplier":1.1,  "score":85   } 
+ZADD planet_wind 95  {"name":"heavy",        "multiplier":1.3,  "score":95   } 
+ZADD planet_wind 100 {"name":"overwhelming", "multiplier":1.5,  "score":100   } 
+
+ZADD planet_day 5   {"name":"short",       "minhour":10,     "maxhour":15 ,  "score":5   } 
+ZADD planet_day 10  {"name":"swift",       "minhour":16,     "maxhour":20 ,  "score":10   } 
+ZADD planet_day 90  {"name":"average",     "minhour":21,     "maxhour":40 ,  "score":90   } 
+ZADD planet_day 95  {"name":"slow",        "minhour":40,     "maxhour":50 ,  "score":95   } 
+ZADD planet_day 100 {"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } 
+
+ZADD planet_year 5   {"name":"short"    ,  "score":5   } 
+ZADD planet_year 10  {"name":"swift"    ,  "score":10   } 
+ZADD planet_year 90  {"name":"average"  ,  "score":90   } 
+ZADD planet_year 95  {"name":"slow"     ,  "score":95   } 
+ZADD planet_year 100 {"name":"long"     ,  "score":100   } 
+
+ZADD planet_civilization 5   {"name":"crude"       ,  "score":5   } 
+ZADD planet_civilization 10  {"name":"scattered"   ,  "score":10   } 
+ZADD planet_civilization 90  {"name":"moderate"    ,  "score":90   } 
+ZADD planet_civilization 95  {"name":"prosperous"  ,  "score":95   } 
+ZADD planet_civilization 100 {"name":"thriving"    ,  "score":100   } 
+
+ZADD planet_precipitation  10 {"name":"scarce",    "multiplier":0.5 ,  "score":10   } 
+ZADD planet_precipitation  30 {"name":"rare",      "multiplier":0.8 ,  "score":30   } 
+ZADD planet_precipitation  55 {"name":"common",    "multiplier":0.9 ,  "score":55   } 
+ZADD planet_precipitation  85 {"name":"plentiful", "multiplier":1.1 ,  "score":85   } 
+ZADD planet_precipitation  95 {"name":"abundant",  "multiplier":1.2 ,  "score":95   } 
+ZADD planet_precipitation 100 {"name":"excessive", "multiplier":1.5 ,  "score":100   } 
+
+# Details for moons.
+
+ZADD planet_mooncount 10     {"name":"no moons",         "count":0,  "score":10   } 
+ZADD planet_mooncount 70     {"name":"single moon",      "count":1,  "score":70   } 
+ZADD planet_mooncount 95     {"name":"double moon",      "count":2,  "score":95   } 
+ZADD planet_mooncount 97     {"name":"triple moon",      "count":3,  "score":97   } 
+ZADD planet_mooncount 100    {"name":"quadruple moon",   "count":4,  "score":100   } 
+
+
+# Most of this planet appears to be in the Stone Age, which is known for 
+ZADD planet_technology 5    {"name":"Stone Age",        "description":"implements made of stone",          "score":5   } 
+ZADD planet_technology 10   {"name":"Bronze Age",       "description":"implements of copper and bronze",    "score":10   } 
+ZADD planet_technology 15   {"name":"Iron Age",         "description":"implements of iron and steel",       "score":15   } 
+ZADD planet_technology 20   {"name":"Ancient Age",      "description":"advances in engineering",            "score":20   } 
+ZADD planet_technology 90   {"name":"Middle Age",       "description":"advances in weaponry",               "score":90   } 
+ZADD planet_technology 95   {"name":"Modern Age",       "description":"advances in science",                "score":95   } 
+ZADD planet_technology 100  {"name":"Contemporary Age", "description":"being similar to our own",           "score":100   } 
+
+
+
+
+#    <atmosphere reason_chance=\'50\' > <!-- The sky is _________[, partially due to ______ high in the atmosphere].-->
+#        <option          max="40" color="blue">
+#            <reason>water vapor</reason>
+#        </option>
+#        <option min="41" max="45" color="white">
+#            <reason>clouds</reason>
+#            <reason>pollution</reason>
+#        </option>
+#        <option min="46" max="50" color="gray">
+#            <reason>clouds</reason>
+#            <reason>pollution</reason>
+#        </option>
+#        <option min="51" max="55" color="brown">
+#            <reason>pollution</reason>
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="56" max="60" color="red">
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="61" max="65" color="pink">
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="66" max="70" color="green">
+#            <reason>noxious fumes</reason>
+#            <reason>airborn plankton</reason>
+#        </option>
+#        <option min="71" max="75" color="yellow">
+#            <reason>pollution</reason>
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="76" max="80" color="beige">
+#            <reason>pollution</reason>
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="81" max="85" color="orange">
+#            <reason>pollution</reason>
+#            <reason>dust</reason>
+#        </option>
+#        <option min="86" max="90" color="purple">
+#        </option>
+#        <option min="91"          color="murky">
+#            <reason>clouds</reason>
+#            <reason>pollution</reason>
+#            <reason>noxious fumes</reason>
+#            <reason>dust</reason>
+#        </option>
+#    </atmosphere>
+#
+#
+#
+#
+#    <year>
+#        <option          max="10"  minday="5"      maxday="10" />
+#        <option min="11" max="20"  minday="11"     maxday="100" />
+#        <option min="21" max="30"  minday="101"    maxday="200" />
+#        <option min="31" max="60"  minday="201"    maxday="400" />
+#        <option min="61" max="82"  minday="401"    maxday="600" />
+#        <option min="81" max="92"  minday="601"    maxday="800" />
+#        <option min="93" max="93"  minday="801"    maxday="1000" />
+#        <option min="94" max="94"  minday="1001"   maxday="2000" />
+#        <option min="95" max="95"  minday="2001"   maxday="10000" />
+#        <option min="96" max="96"  minday="10001"  maxday="50000" />
+#        <option min="97" max="97"  minday="50001"  maxday="100000" />
+#        <option min="98" max="98"  minday="100001" maxday="300000" />
+#        <option min="99" max="99"  minday="300001" maxday="700000" />
+#    </year>
+#
+#    
+#            
+#    </surface>
+#
+#
+
+#    <smallstorms>
+#        <option          max="10" >scarce</option>
+#        <option min="10" max="31" >rare</option>
+#        <option min="30" max="55" >common</option>
+#        <option min="65" max="85" >plentiful</option>
+#        <option min="86" max="95" >abundant</option>
+#        <option min="96"          >excessive</option>
+#    </smallstorms>
+#
+#    <clouds>
+#        <option          max="10" >scarce</option>
+#        <option min="10" max="31" >rare</option>
+#        <option min="30" max="55" >common</option>
+#        <option min="65" max="85" >plentiful</option>
+#        <option min="86" max="95" >abundant</option>
+#        <option min="96"          >excessive</option>
+#    </clouds>
+#
+

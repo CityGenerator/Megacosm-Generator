@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationhealth_text to lose weight
-LPUSH motivationhealth_text to eat better
-LPUSH motivationhealth_text to cure a recurring disease

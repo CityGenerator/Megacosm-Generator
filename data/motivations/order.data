@@ -1,5 +1,0 @@
-# Bob is motivated
-
-LPUSH motivationorder_text by a need to keep order
-LPUSH motivationorder_text by an obsessive compulsion
-

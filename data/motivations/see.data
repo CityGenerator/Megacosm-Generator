@@ -1,6 +1,0 @@
-# Bob is motivated
-
-LPUSH motivationsee_text to see the world
-LPUSH motivationsee_text to see the city
-LPUSH motivationsee_text to see {{params.npc.sex['possessive']}} family one last time
-

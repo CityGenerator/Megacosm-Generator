@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationindependence_text to earn {{params.npc.sex['possessive']}} freedom
-LPUSH motivationindependence_text to avoid going back to prison
-LPUSH motivationindependence_text to leave an abusive {{params.npc.sex['spouse']}}

@@ -1,0 +1,65 @@
+
+self.redis.lpush('laborresource_kind', 'manufacturing')
+
+self.redis.lpush('laborresource_manufacturing_name_type', 'highly skilled')
+self.redis.lpush('laborresource_manufacturing_name_type', 'moderately skilled')
+self.redis.lpush('laborresource_manufacturing_name_type', 'uniquely skilled')
+
+# Lalabor is know for it\'s
+self.redis.lpush('laborresource_manufacturing_name', 'manufacturing')
+self.redis.lpush('laborresource_manufacturing_name', 'fabrication')
+self.redis.lpush('laborresource_manufacturing_name', 'construction')
+self.redis.lpush('laborresource_manufacturing_name', 'workforce')
+self.redis.lpush('laborresource_manufacturing_name', 'mass-production')
+self.redis.lpush('laborresource_manufacturing_name', 'forgery')
+
+
+#which ________ pottery
+SET laborresource_manufacturing_method produces
+
+
+# which provides
+
+self.redis.lpush('laborresource_manufacturing_product', 'stylish marbles')
+self.redis.lpush('laborresource_manufacturing_product', 'glazed pottery')
+self.redis.lpush('laborresource_manufacturing_product', 'construction materials')
+self.redis.lpush('laborresource_manufacturing_product', 'petroleum jelly')
+self.redis.lpush('laborresource_manufacturing_product', 'scented oils')
+self.redis.lpush('laborresource_manufacturing_product', 'cooking oils')
+self.redis.lpush('laborresource_manufacturing_product', 'useful wax')
+self.redis.lpush('laborresource_manufacturing_product', 'bottled mineral water')
+self.redis.lpush('laborresource_manufacturing_product', 'luxury coffins')
+self.redis.lpush('laborresource_manufacturing_product', 'utility boxes')
+self.redis.lpush('laborresource_manufacturing_product', 'well-crafted barrels')
+self.redis.lpush('laborresource_manufacturing_product', 'reliable torches')
+self.redis.lpush('laborresource_manufacturing_product', 'reliable wheels')
+self.redis.lpush('laborresource_manufacturing_product', 'beautiful flutes')
+self.redis.lpush('laborresource_manufacturing_product', 'recognizable drums')
+self.redis.lpush('laborresource_manufacturing_product', 'unique dolls')
+self.redis.lpush('laborresource_manufacturing_product', 'decorative codpieces')
+self.redis.lpush('laborresource_manufacturing_product', 'secure chastity belts')
+self.redis.lpush('laborresource_manufacturing_product', 'terrifying iron maidens')
+self.redis.lpush('laborresource_manufacturing_product', 'decorative penis sheathes')
+self.redis.lpush('laborresource_manufacturing_product', 'warm kitten mittens')
+self.redis.lpush('laborresource_manufacturing_product', 'quality monkey wrenches')
+self.redis.lpush('laborresource_manufacturing_product', 'small lyres')
+self.redis.lpush('laborresource_manufacturing_product', 'colorful thread')
+self.redis.lpush('laborresource_manufacturing_product', 'colorful yarn')
+self.redis.lpush('laborresource_manufacturing_product', 'polished rocks')
+self.redis.lpush('laborresource_manufacturing_product', 'trained carrier pigeons')
+self.redis.lpush('laborresource_manufacturing_product', 'trained singing frogs')
+self.redis.lpush('laborresource_manufacturing_product', 'masterful knives')
+self.redis.lpush('laborresource_manufacturing_product', 'exquisite swords')
+self.redis.lpush('laborresource_manufacturing_product', 'well-crafted axes')
+self.redis.lpush('laborresource_manufacturing_product', 'sturdy maces')
+self.redis.lpush('laborresource_manufacturing_product', 'supple bows')
+self.redis.lpush('laborresource_manufacturing_product', 'various saws')
+self.redis.lpush('laborresource_manufacturing_product', 'sturdy picks')
+self.redis.lpush('laborresource_manufacturing_product', 'various shovels')
+self.redis.lpush('laborresource_manufacturing_product', 'cheap clubs')
+self.redis.lpush('laborresource_manufacturing_product', 'fanciful dream-catchers')
+self.redis.lpush('laborresource_manufacturing_product', 'pulp poems')
+self.redis.lpush('laborresource_manufacturing_product', 'beautiful quilts')
+self.redis.lpush('laborresource_manufacturing_product', 'delicious beer')
+self.redis.lpush('laborresource_manufacturing_product', 'fine wine')
+self.redis.lpush('laborresource_manufacturing_product', 'powerful spirits')

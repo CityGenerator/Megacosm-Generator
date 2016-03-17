@@ -1,0 +1,6 @@
+self.redis.lpush('motivationdestiny_text', 'by destiny')
+self.redis.lpush('motivationdestiny_text', 'by a prophecy')
+self.redis.lpush('motivationdestiny_text', 'to avoid {{params.npc.sex[\'possessive\']}} destiny')
+self.redis.lpush('motivationdestiny_text', 'to find {{params.npc.sex[\'possessive\']}} destiny')
+self.redis.lpush('motivationdestiny_text', 'to rebel against {{params.npc.sex[\'possessive\']}} destiny')
+self.redis.lpush('motivationdestiny_text', 'to not become a {{params.npc.profession}} like {{params.npc.sex[\'possessive\']}} parents')

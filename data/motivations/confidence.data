@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationconfidence_text by confidence
-LPUSH motivationconfidence_text to be confident
-LPUSH motivationconfidence_text by a lack of confidence

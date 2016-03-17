@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationpropertysafety_text to keep {{params.npc.sex['possessive']}} stuff safe
-LPUSH motivationpropertysafety_text to protect {{params.npc.sex['possessive']}} property
-LPUSH motivationpropertysafety_text by past burglaries

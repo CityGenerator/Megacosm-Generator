@@ -1,0 +1,1088 @@
+#
+
+self.redis.lpush('magicitem_kind', 'potion')
+
+
+self.redis.lpush('potion_name_template', '{{ params.strength[\'name\'] }} {{ params.effect_description[\'name\'] }} {{ params.kind }}')
+self.redis.lpush('potion_name_template', '{{ params.strength[\'name\'] }} {{ params.variety }} of {{ params.effect_description[\'name\'] }}')
+self.redis.lpush('potion_name_template', '{{ params.npc.name.shortname }}\'s {{ params.effect_description[\'name\'] }} {{ params.variety }}')
+
+
+
+
+            
+HSET potion_effect_description accuracyboost    {"name":"accuracy boost",    "description":"increases accuracy with projectiles" }
+self.redis.lpush('potion_effect', 'accuracyboost')
+HSET potion_effect_description acid    {"name":"acid",    "description":"can burn through most organic substances" }
+self.redis.lpush('potion_effect', 'acid')
+HSET potion_effect_description adnauseum    {"name":"ad nauseum",    "description":"causes sudden and severe nausea" }
+self.redis.lpush('potion_effect', 'adnauseum')
+HSET potion_effect_description agility    {"name":"agility",    "description":"grants improved agility" }
+self.redis.lpush('potion_effect', 'agility')
+HSET potion_effect_description aging    {"name":"aging",    "description":"causes instant aging" }
+self.redis.lpush('potion_effect', 'aging')
+HSET potion_effect_description animalmagnetism    {"name":"animal magnetism",    "description":"you become irresistible" }
+self.redis.lpush('potion_effect', 'animalmagnetism')
+HSET potion_effect_description antidote    {"name":"antidote",    "description":"removes the effect of any poision" }
+self.redis.lpush('potion_effect', 'antidote')
+HSET potion_effect_description anti-paralysis    {"name":"anti-paralysis",    "description":"cures paralysis" }
+self.redis.lpush('potion_effect', 'anti-paralysis')
+HSET potion_effect_description assassinsevasion    {"name":"assassin\'s evasion",    "description":"increases your natural stealth ability" }
+self.redis.lpush('potion_effect', 'assassinsevasion')
+HSET potion_effect_description auraofprotection    {"name":"aura of protection",    "description":"provides arcane protection" }
+self.redis.lpush('potion_effect', 'auraofprotection')
+HSET potion_effect_description awaken    {"name":"awaken",    "description":"wakes a sleeping person" }
+self.redis.lpush('potion_effect', 'awaken')
+HSET potion_effect_description babbling    {"name":"babbling",    "description":"causes uncontrollable speaking of nonsense" }
+self.redis.lpush('potion_effect', 'babbling')
+HSET potion_effect_description barkskin    {"name":"barkskin",    "description":"causes hardening of skin granting natural armor" }
+self.redis.lpush('potion_effect', 'barkskin')
+HSET potion_effect_description bearendurance    {"name":"bear endurance",    "description":"increases the endurance of the user" }
+self.redis.lpush('potion_effect', 'bearendurance')
+HSET potion_effect_description beautification    {"name":"beautification",    "description":"makes the user appear more attractive" }
+self.redis.lpush('potion_effect', 'beautification')
+HSET potion_effect_description befuddlement    {"name":"befuddlement",    "description":"user becomes confused and reckless" }
+self.redis.lpush('potion_effect', 'befuddlement')
+HSET potion_effect_description beguiling    {"name":"beguiling",    "description":"makes the user appear more trustworthy" }
+self.redis.lpush('potion_effect', 'beguiling')
+HSET potion_effect_description beneficialmutation    {"name":"beneficial mutation",    "description":"provides some sort of beneficial mutation" }
+self.redis.lpush('potion_effect', 'beneficialmutation')
+HSET potion_effect_description berserkrage     {"name":"berserk rage ",    "description":"throws user into uncontrollable rage" }
+self.redis.lpush('potion_effect', 'berserkrage ')
+HSET potion_effect_description bless    {"name":"bless",    "description":"grants the blessing of an unknown deity" }
+self.redis.lpush('potion_effect', 'bless')
+HSET potion_effect_description blessingofthefae    {"name":"blessing of the fae",    "description":"causes user to turn into a fairy" }
+self.redis.lpush('potion_effect', 'blessingofthefae')
+HSET potion_effect_description blindness    {"name":"blindness",    "description":"causes immediate blindness" }
+self.redis.lpush('potion_effect', 'blindness')
+HSET potion_effect_description blindnessremoval    {"name":"blindness removal",    "description":"restores sight to the blind" }
+self.redis.lpush('potion_effect', 'blindnessremoval')
+HSET potion_effect_description bliss    {"name":"bliss",    "description":"user becomes immediately blissful and happy" }
+self.redis.lpush('potion_effect', 'bliss')
+HSET potion_effect_description blood    {"name":"blood",    "description":"provides sustinence for creatures that drink blood" }
+self.redis.lpush('potion_effect', 'blood')
+HSET potion_effect_description blood-replenishing    {"name":"blood-replenishing",    "description":"restores lost blood from a severely injured person" }
+self.redis.lpush('potion_effect', 'blood-replenishing')
+HSET potion_effect_description bloodroot    {"name":"bloodroot",    "description":"causes the blood to become unappealing to blooddrinkers" }
+self.redis.lpush('potion_effect', 'bloodroot')
+HSET potion_effect_description bloodthirst    {"name":"bloodthirst",    "description":"causes an unnatural, literal thirst for blood" }
+self.redis.lpush('potion_effect', 'bloodthirst')
+HSET potion_effect_description blur    {"name":"blur",    "description":"causes user to become blurry and difficult to hit" }
+self.redis.lpush('potion_effect', 'blur')
+HSET potion_effect_description bottledgenie    {"name":"bottled genie",    "description":"turns the drinker into a genie, binds them to the bottle" }
+self.redis.lpush('potion_effect', 'bottledgenie')
+HSET potion_effect_description brilliance    {"name":"brilliance",    "description":"grants amazing insight" }
+self.redis.lpush('potion_effect', 'brilliance')
+HSET potion_effect_description bruiseremoval    {"name":"bruise removal",    "description":"removes minor injuries" }
+self.redis.lpush('potion_effect', 'bruiseremoval')
+HSET potion_effect_description bulge-eye    {"name":"bulge-eye",    "description":"causes user\'s eyes to bulge unnaturally" }
+self.redis.lpush('potion_effect', 'bulge-eye')
+HSET potion_effect_description bullstrength    {"name":"bull strength",    "description":"grants user powerful physical strength" }
+self.redis.lpush('potion_effect', 'bullstrength')
+HSET potion_effect_description burn-healing    {"name":"burn-healing",    "description":"soothes and heals minor to severe burns" }
+self.redis.lpush('potion_effect', 'burn-healing')
+HSET potion_effect_description cacophony    {"name":"cacophony",    "description":"causes user to hear incredibly loud, continual noise" }
+self.redis.lpush('potion_effect', 'cacophony')
+HSET potion_effect_description cagedimp    {"name":"caged imp",    "description":"user becomes subconsciously mischievious" }
+self.redis.lpush('potion_effect', 'cagedimp')
+HSET potion_effect_description calming    {"name":"calming",    "description":"calms the user of shock, trauma, etc" }
+self.redis.lpush('potion_effect', 'calming')
+HSET potion_effect_description catalyst    {"name":"catalyst",    "description":"another potion to double in potency" }
+self.redis.lpush('potion_effect', 'catalyst')
+HSET potion_effect_description catseye    {"name":"cats eye",    "description":"improves vision and enhances night vision" }
+self.redis.lpush('potion_effect', 'catseye')
+HSET potion_effect_description catsgrace    {"name":"cat\'s grace",    "description":"grants user uncanny grace" }
+self.redis.lpush('potion_effect', 'catsgrace')
+HSET potion_effect_description cheese    {"name":"cheese",    "description":"makes anything taste edible (although possibly still dangerous)" }
+self.redis.lpush('potion_effect', 'cheese')
+HSET potion_effect_description clone    {"name":"clone",    "description":"causes a painful splitting into two beings, one of which immediately dies" }
+self.redis.lpush('potion_effect', 'clone')
+HSET potion_effect_description coagulatedblood     {"name":"coagulated blood ",    "description":"provides slight satiation for vampires and carnivores" }
+self.redis.lpush('potion_effect', 'coagulatedblood ')
+HSET potion_effect_description confusion    {"name":"confusion",    "description":"confuses the taker" }
+self.redis.lpush('potion_effect', 'confusion')
+HSET potion_effect_description coughing    {"name":"coughing",    "description":"provokes a powerful coughing fit" }
+self.redis.lpush('potion_effect', 'coughing')
+HSET potion_effect_description cunning    {"name":"cunning",    "description":"grants user unsurpassed cleverness" }
+self.redis.lpush('potion_effect', 'cunning')
+HSET potion_effect_description cupid    {"name":"cupid",    "description":"causes drinker to have an immediate romantic infatuation with whoever they see next" }
+self.redis.lpush('potion_effect', 'cupid')
+HSET potion_effect_description cureboils    {"name":"cure boils",    "description":"will heal painful or unsightly boils" }
+self.redis.lpush('potion_effect', 'cureboils')
+HSET potion_effect_description curecorruption    {"name":"cure corruption",    "description":"heals diseased or corrupted flesh" }
+self.redis.lpush('potion_effect', 'curecorruption')
+HSET potion_effect_description curedisease    {"name":"cure disease",    "description":"cures most diseases" }
+self.redis.lpush('potion_effect', 'curedisease')
+HSET potion_effect_description cureinsanity    {"name":"cure insanity",    "description":"calms the most unsound mind" }
+self.redis.lpush('potion_effect', 'cureinsanity')
+HSET potion_effect_description curemutation    {"name":"cure mutation",    "description":"will remove any unnatural mutations" }
+self.redis.lpush('potion_effect', 'curemutation')
+HSET potion_effect_description cureparalysis    {"name":"cure paralysis",    "description":"cures paralysis" }
+self.redis.lpush('potion_effect', 'cureparalysis')
+HSET potion_effect_description cureweakness    {"name":"cure weakness",    "description":"removes any unnatural weakness" }
+self.redis.lpush('potion_effect', 'cureweakness')
+HSET potion_effect_description currentstopper    {"name":"current stopper",    "description":"prevents electrocution" }
+self.redis.lpush('potion_effect', 'currentstopper')
+HSET potion_effect_description curseofthelycan    {"name":"curse of the lycan",    "description":"infects user with lycanthropy" }
+self.redis.lpush('potion_effect', 'curseofthelycan')
+HSET potion_effect_description curseremoval    {"name":"curse removal",    "description":"removes most magical or supernatural curses" }
+self.redis.lpush('potion_effect', 'curseremoval')
+HSET potion_effect_description darkvision    {"name":"darkvision",    "description":"allows user to see in the dark" }
+self.redis.lpush('potion_effect', 'darkvision')
+HSET potion_effect_description daylight    {"name":"daylight",    "description":"allows the user to see as if there was daylight present" }
+self.redis.lpush('potion_effect', 'daylight')
+HSET potion_effect_description deafness    {"name":"deafness",    "description":"causes complete loss of hearing" }
+self.redis.lpush('potion_effect', 'deafness')
+HSET potion_effect_description death-cap    {"name":"death-cap",    "description":"causes death if used" }
+self.redis.lpush('potion_effect', 'death-cap')
+HSET potion_effect_description deathward    {"name":"death ward",    "description":"prevents user from dying" }
+self.redis.lpush('potion_effect', 'deathward')
+HSET potion_effect_description deathwish    {"name":"deathwish",    "description":"causes subconscious desire to die through reckless behavior" }
+self.redis.lpush('potion_effect', 'deathwish')
+HSET potion_effect_description decay    {"name":"decay",    "description":"immediately causes flesh to rot" }
+self.redis.lpush('potion_effect', 'decay')
+HSET potion_effect_description deflection    {"name":"deflection",    "description":"provides some protection from attacks" }
+self.redis.lpush('potion_effect', 'deflection')
+HSET potion_effect_description degeneration    {"name":"degeneration",    "description":"causes a random ability to reduce" }
+self.redis.lpush('potion_effect', 'degeneration')
+HSET potion_effect_description delaypoison    {"name":"delay poison",    "description":"prevents the onset if toxic substances" }
+self.redis.lpush('potion_effect', 'delaypoison')
+HSET potion_effect_description desire    {"name":"desire",    "description":"causes user to desperately desire something or someone" }
+self.redis.lpush('potion_effect', 'desire')
+HSET potion_effect_description despair    {"name":"despair",    "description":"causes a deep depression over the hopelessness of the situation" }
+self.redis.lpush('potion_effect', 'despair')
+HSET potion_effect_description detectcreature    {"name":"detect creature",    "description":"gives the user insight on the location of any nearby creatures" }
+self.redis.lpush('potion_effect', 'detectcreature')
+HSET potion_effect_description detectthings    {"name":"detect things",    "description":"gives the user insight on the location of a specific object" }
+self.redis.lpush('potion_effect', 'detectthings')
+HSET potion_effect_description dexterity    {"name":"dexterity",    "description":"grants the user impressive dexterity" }
+self.redis.lpush('potion_effect', 'dexterity')
+HSET potion_effect_description discord    {"name":"discord",    "description":"drinker becomes irritable and picks fights" }
+self.redis.lpush('potion_effect', 'discord')
+HSET potion_effect_description diseaseremoval    {"name":"disease removal",    "description":"cures drinker of most diseases" }
+self.redis.lpush('potion_effect', 'diseaseremoval')
+HSET potion_effect_description divinepower    {"name":"divine power",    "description":"Grants the user strength from an unknown deity" }
+self.redis.lpush('potion_effect', 'divinepower')
+HSET potion_effect_description divinerestoration    {"name":"divine restoration",    "description":"restores the user as a favor from an unknown deity" }
+self.redis.lpush('potion_effect', 'divinerestoration')
+HSET potion_effect_description dizziness    {"name":"dizziness",    "description":"makes the drinker dizzy and lightheaded" }
+self.redis.lpush('potion_effect', 'dizziness')
+HSET potion_effect_description dogbane    {"name":"dogbane",    "description":"poisonous to anything with canine ancestry" }
+self.redis.lpush('potion_effect', 'dogbane')
+HSET potion_effect_description dragondung    {"name":"dragon dung",    "description":"causes the drinker to defecate a small number of coins" }
+self.redis.lpush('potion_effect', 'dragondung')
+HSET potion_effect_description dragonsbreath    {"name":"dragon\'s breath",    "description":"grants user the ability to breathe fire like a dragon" }
+self.redis.lpush('potion_effect', 'dragonsbreath')
+HSET potion_effect_description dreamless    {"name":"dreamless",    "description":"prevents the user from dreaming during sleep" }
+self.redis.lpush('potion_effect', 'dreamless')
+HSET potion_effect_description drowsiness    {"name":"drowsiness",    "description":"makes the drinker incredibly drowsy" }
+self.redis.lpush('potion_effect', 'drowsiness')
+HSET potion_effect_description education    {"name":"education",    "description":"grants knowledge on a specific subject" }
+self.redis.lpush('potion_effect', 'education')
+HSET potion_effect_description embiggenment    {"name":"embiggenment",    "description":"embiggens the user by one size" }
+self.redis.lpush('potion_effect', 'embiggenment')
+HSET potion_effect_description endureelements    {"name":"endure elements",    "description":"grants resistence to the elements" }
+self.redis.lpush('potion_effect', 'endureelements')
+HSET potion_effect_description endure_elements      {"name":"endure elements",      "description":"increases resistance to the elements"    }
+self.redis.lpush('potion_effect', 'endure_elements')
+HSET potion_effect_description enlargement    {"name":"enlargement",    "description":"enlarges the user by one size" }
+self.redis.lpush('potion_effect', 'enlargement')
+HSET potion_effect_description enlightenment    {"name":"enlightenment",    "description":"provides user with a random bonus on a given skill" }
+self.redis.lpush('potion_effect', 'enlightenment')
+HSET potion_effect_description euphoria    {"name":"euphoria",    "description":"induces an irrational happiness" }
+self.redis.lpush('potion_effect', 'euphoria')
+HSET potion_effect_description exploding    {"name":"exploding",    "description":"causes an explosive reaction when exposed to certain substances" }
+self.redis.lpush('potion_effect', 'exploding')
+HSET potion_effect_description fatiguing    {"name":"fatiguing",    "description":"causes user to feel fatigued" }
+self.redis.lpush('potion_effect', 'fatiguing')
+HSET potion_effect_description fearremoval    {"name":"fear removal",    "description":"removes fear caused by a specific source" }
+self.redis.lpush('potion_effect', 'fearremoval')
+HSET potion_effect_description fireprotection    {"name":"fire protection",    "description":"protects the user from fire and heat" }
+self.redis.lpush('potion_effect', 'fireprotection')
+HSET potion_effect_description flatulence    {"name":"flatulence",    "description":"causes uncontrollable, loud and unsavory gas" }
+self.redis.lpush('potion_effect', 'flatulence')
+HSET potion_effect_description flesheater    {"name":"flesh eater",    "description":"causes uneven and grotesque disfigurement" }
+self.redis.lpush('potion_effect', 'flesheater')
+HSET potion_effect_description flight    {"name":"flight",    "description":"grants the ability to fly" }
+self.redis.lpush('potion_effect', 'flight')
+HSET potion_effect_description flinch    {"name":"flinch",    "description":"causes user to flinch uncontrollably" }
+self.redis.lpush('potion_effect', 'flinch')
+HSET potion_effect_description forgetfulness    {"name":"forgetfulness",    "description":"makes the user forgetful" }
+self.redis.lpush('potion_effect', 'forgetfulness')
+HSET potion_effect_description foxcunning     {"name":"fox cunning ",    "description":"make the user cleverer than normal" }
+self.redis.lpush('potion_effect', 'foxcunning ')
+HSET potion_effect_description freezing    {"name":"freezing",    "description":"lower the body temperature of the drinker" }
+self.redis.lpush('potion_effect', 'freezing')
+HSET potion_effect_description friendship    {"name":"friendship",    "description":"grants drinker the ability to become fast friends with someone upon meeting them" }
+self.redis.lpush('potion_effect', 'friendship')
+HSET potion_effect_description frostbite    {"name":"frostbite",    "description":"causes frost damage to drinker" }
+self.redis.lpush('potion_effect', 'frostbite')
+HSET potion_effect_description frostguard    {"name":"frostguard",    "description":"increases ice resistance" }
+self.redis.lpush('potion_effect', 'frostguard')
+HSET potion_effect_description fungal    {"name":"fungal",    "description":"causes user to grow unsightly fungal growths" }
+self.redis.lpush('potion_effect', 'fungal')
+HSET potion_effect_description fungiface    {"name":"fungiface",    "description":"makes the user\'s face erupt in fungus" }
+self.redis.lpush('potion_effect', 'fungiface')
+HSET potion_effect_description fury    {"name":"fury",    "description":"induces an uncontrollable rage towards others" }
+self.redis.lpush('potion_effect', 'fury')
+HSET potion_effect_description gaseousform    {"name":"gaseous form",    "description":"user takes a gaseous form" }
+self.redis.lpush('potion_effect', 'gaseousform')
+HSET potion_effect_description girding    {"name":"girding",    "description":"gives the user extra endurance" }
+self.redis.lpush('potion_effect', 'girding')
+HSET potion_effect_description grace    {"name":"grace",    "description":"grants the user unnatural grace" }
+self.redis.lpush('potion_effect', 'grace')
+HSET potion_effect_description hair    {"name":"hair",    "description":"causes user to grow thick, beautiful hair on their head" }
+self.redis.lpush('potion_effect', 'hair')
+HSET potion_effect_description hair-raising    {"name":"hair-raising",    "description":"causes the user\'s hair to stand on end" }
+self.redis.lpush('potion_effect', 'hair-raising')
+HSET potion_effect_description hallucination    {"name":"hallucination",    "description":"causes drinker to hallucinate" }
+self.redis.lpush('potion_effect', 'hallucination')
+HSET potion_effect_description hare    {"name":"hare",    "description":"causes user to grow thick, beautiful hare on their head" }
+self.redis.lpush('potion_effect', 'hare')
+HSET potion_effect_description haste                {"name":"haste",                "description":"allows user to move with extreme speed"  }
+self.redis.lpush('potion_effect', 'haste')
+HSET potion_effect_description hate    {"name":"hate",    "description":"causes a growing dislike of a person or thing" }
+self.redis.lpush('potion_effect', 'hate')
+HSET potion_effect_description healing              {"name":"healing",              "description":"can heal various wounds and ailments"    }
+self.redis.lpush('potion_effect', 'healing')
+HSET potion_effect_description heartbreak    {"name":"heartbreak",    "description":"causes an irrational feeling of loss and heartbreak" }
+self.redis.lpush('potion_effect', 'heartbreak')
+HSET potion_effect_description herbicide    {"name":"herbicide",    "description":"causes damage or death to plant-based life" }
+self.redis.lpush('potion_effect', 'herbicide')
+HSET potion_effect_description heroism    {"name":"heroism",    "description":"caused unusual recklessness and remission of fear" }
+self.redis.lpush('potion_effect', 'heroism')
+HSET potion_effect_description hiccupping    {"name":"hiccupping",    "description":"causes uncontrollable hiccupping" }
+self.redis.lpush('potion_effect', 'hiccupping')
+HSET potion_effect_description hidefromanimals    {"name":"hide from animals",    "description":"prevents animals from detecting the user" }
+self.redis.lpush('potion_effect', 'hidefromanimals')
+HSET potion_effect_description hidefromundead    {"name":"hide from undead",    "description":"prevents undead from detecting the user" }
+self.redis.lpush('potion_effect', 'hidefromundead')
+HSET potion_effect_description holyflame    {"name":"holy flame",    "description":"burns the drinker with a righteous flame" }
+self.redis.lpush('potion_effect', 'holyflame')
+HSET potion_effect_description hyena    {"name":"hyena",    "description":"causes hysteria and fits of uncontrollable laughter" }
+self.redis.lpush('potion_effect', 'hyena')
+HSET potion_effect_description ignition    {"name":"ignition",    "description":"causes user to uncontrollably belch flames" }
+self.redis.lpush('potion_effect', 'ignition')
+HSET potion_effect_description indestructibility    {"name":"indestructibility",    "description":"user cannot be damage" }
+self.redis.lpush('potion_effect', 'indestructibility')
+HSET potion_effect_description influence    {"name":"influence",    "description":"grants the ability to influence others" }
+self.redis.lpush('potion_effect', 'influence')
+HSET potion_effect_description insanity    {"name":"insanity",    "description":"causes user become irrational and uncontrollable" }
+self.redis.lpush('potion_effect', 'insanity')
+HSET potion_effect_description intimidation    {"name":"intimidation",    "description":"causes the user to be far more intimidating" }
+self.redis.lpush('potion_effect', 'intimidation')
+HSET potion_effect_description invigorating    {"name":"invigorating",    "description":"removes fatigue and keeps user awake" }
+self.redis.lpush('potion_effect', 'invigorating')
+HSET potion_effect_description invisibility    {"name":"invisibility",    "description":"makes the user invisible" }
+self.redis.lpush('potion_effect', 'invisibility')
+HSET potion_effect_description jawbind    {"name":"jawbind",    "description":"induces lockjaw in the user" }
+self.redis.lpush('potion_effect', 'jawbind')
+HSET potion_effect_description jumping              {"name":"jumping",              "description":"allows user to jump to amazing heights and distances"    }
+self.redis.lpush('potion_effect', 'jumping')
+HSET potion_effect_description knowledge    {"name":"knowledge",    "description":"grants the user knowledge on a specific subject" }
+self.redis.lpush('potion_effect', 'knowledge')
+HSET potion_effect_description laughter    {"name":"laughter",    "description":"causes the user to laugh uncontrollably" }
+self.redis.lpush('potion_effect', 'laughter')
+HSET potion_effect_description laxative    {"name":"laxative",    "description":"causes uncontrollable bowel movements" }
+self.redis.lpush('potion_effect', 'laxative')
+HSET potion_effect_description lazarus    {"name":"lazarus",    "description":"can return the user from death or near-death" }
+self.redis.lpush('potion_effect', 'lazarus')
+HSET potion_effect_description lean    {"name":"lean",    "description":"causes the user to immediately decrease body fat by 75%" }
+self.redis.lpush('potion_effect', 'lean')
+HSET potion_effect_description levitation    {"name":"levitation",    "description":"allows the user to levitate" }
+self.redis.lpush('potion_effect', 'levitation')
+HSET potion_effect_description librarian    {"name":"librarian",    "description":"grants user the ability to locate any nearby book" }
+self.redis.lpush('potion_effect', 'librarian')
+HSET potion_effect_description lightfoot    {"name":"light foot",    "description":"grants the user the ability to move quietly" }
+self.redis.lpush('potion_effect', 'lightfoot')
+HSET potion_effect_description livingdeath    {"name":"living death",    "description":"puts user into a death-like sleep" }
+self.redis.lpush('potion_effect', 'livingdeath')
+HSET potion_effect_description lockjaw    {"name":"lockjaw",    "description":"induces lockjaw in the user" }
+self.redis.lpush('potion_effect', 'lockjaw')
+HSET potion_effect_description longevity    {"name":"longevity",    "description":"cuts aging rage by half" }
+self.redis.lpush('potion_effect', 'longevity')
+HSET potion_effect_description love    {"name":"love",    "description":"makes the user fall in love with whoever held the substance previously" }
+self.redis.lpush('potion_effect', 'love')
+HSET potion_effect_description luck    {"name":"luck",    "description":"grants unnatural luck to the user" }
+self.redis.lpush('potion_effect', 'luck')
+HSET potion_effect_description magearmor    {"name":"mage armor",    "description":"grants magical protection to the user" }
+self.redis.lpush('potion_effect', 'magearmor')
+HSET potion_effect_description magebane    {"name":"magebane",    "description":"causes illness in anyone who manipulates magical energies" }
+self.redis.lpush('potion_effect', 'magebane')
+HSET potion_effect_description magicfang    {"name":"magic fang",    "description":"causes user to grow magical fangs" }
+self.redis.lpush('potion_effect', 'magicfang')
+HSET potion_effect_description magicstone    {"name":"magic stone",    "description":"summons a handful of small throwing stones" }
+self.redis.lpush('potion_effect', 'magicstone')
+HSET potion_effect_description magicvestment    {"name":"magic vestment",    "description":"grants magical protection to the users clothing" }
+self.redis.lpush('potion_effect', 'magicvestment')
+HSET potion_effect_description magicweapon    {"name":"magic weapon",    "description":"summons a force weapon shaped by the user\'s mind" }
+self.redis.lpush('potion_effect', 'magicweapon')
+HSET potion_effect_description malevolence    {"name":"malevolence",    "description":"causes brooding anger towards a random target" }
+self.redis.lpush('potion_effect', 'malevolence')
+HSET potion_effect_description manegrow    {"name":"manegrow",    "description":"causes users head to grow thick, luxurious hair rapidly" }
+self.redis.lpush('potion_effect', 'manegrow')
+HSET potion_effect_description melancholy    {"name":"melancholy",    "description":"impairs enjoyment and fun" }
+self.redis.lpush('potion_effect', 'melancholy')
+HSET potion_effect_description memory    {"name":"memory",    "description":"enhances the drinker\'s memory" }
+self.redis.lpush('potion_effect', 'memory')
+HSET potion_effect_description mentalresistance    {"name":"mental resistance",    "description":"protects the user from mental attacks and damage" }
+self.redis.lpush('potion_effect', 'mentalresistance')
+HSET potion_effect_description midastouch    {"name":"midas touch",    "description":"allows user to turn any small object to gold" }
+self.redis.lpush('potion_effect', 'midastouch')
+HSET potion_effect_description might    {"name":"might",    "description":"greatly increases user\'s strength" }
+self.redis.lpush('potion_effect', 'might')
+HSET potion_effect_description misdirection    {"name":"misdirection",    "description":"grants user the ability to misdirect others visually or verbally" }
+self.redis.lpush('potion_effect', 'misdirection')
+HSET potion_effect_description monster    {"name":"monster",    "description":"causes user to transform into a random creature" }
+self.redis.lpush('potion_effect', 'monster')
+HSET potion_effect_description mouthitching    {"name":"mouth itching",    "description":"causes insufferable itching of the inside of the mouth" }
+self.redis.lpush('potion_effect', 'mouthitching')
+HSET potion_effect_description muffling    {"name":"muffling",    "description":"wraps the user in a coccoon of silence" }
+self.redis.lpush('potion_effect', 'muffling')
+HSET potion_effect_description mummycurse    {"name":"mummy curse",    "description":"causes illness and a slow death unless curse is broken" }
+self.redis.lpush('potion_effect', 'mummycurse')
+HSET potion_effect_description neutralizepoison    {"name":"neutralize poison",    "description":"neutralizes any poisons in the user\'s system" }
+self.redis.lpush('potion_effect', 'neutralizepoison')
+HSET potion_effect_description neutralize_poison    {"name":"neutralize poison",    "description":"can neutralize various poisons"          }
+self.redis.lpush('potion_effect', 'neutralize_poison')
+HSET potion_effect_description neutralmutation    {"name":"neutral mutation",    "description":"provides some sort of neutral mutation" }
+self.redis.lpush('potion_effect', 'neutralmutation')
+HSET potion_effect_description nightmare    {"name":"nightmare",    "description":"invokes nightmares the next time the user sleeps" }
+self.redis.lpush('potion_effect', 'nightmare')
+HSET potion_effect_description nondetection    {"name":"nondetection",    "description":"makes the user undetectable through magical means" }
+self.redis.lpush('potion_effect', 'nondetection')
+HSET potion_effect_description noxiousfumes    {"name":"noxious fumes",    "description":"causes the user to emit noxious, suffocating fumes" }
+self.redis.lpush('potion_effect', 'noxiousfumes')
+HSET potion_effect_description obesity    {"name":"obesity",    "description":"causes an immediate increase in body fat by 100%" }
+self.redis.lpush('potion_effect', 'obesity')
+HSET potion_effect_description oculus    {"name":"oculus",    "description":"restores the user\'s sight" }
+self.redis.lpush('potion_effect', 'oculus')
+HSET potion_effect_description owlwisdom    {"name":"owl wisdom",    "description":"grants the user powerful insight" }
+self.redis.lpush('potion_effect', 'owlwisdom')
+HSET potion_effect_description paralysis    {"name":"paralysis",    "description":"paralyzes the user" }
+self.redis.lpush('potion_effect', 'paralysis')
+HSET potion_effect_description paralysisremoval    {"name":"paralysis removal",    "description":"removes paralysis from user" }
+self.redis.lpush('potion_effect', 'paralysisremoval')
+HSET potion_effect_description passification    {"name":"passification",    "description":"causes immediate aversion to confrontation" }
+self.redis.lpush('potion_effect', 'passification')
+HSET potion_effect_description passwithouttrace    {"name":"pass without trace",    "description":"grants the user the ability to move without leaving a trail" }
+self.redis.lpush('potion_effect', 'passwithouttrace')
+HSET potion_effect_description peace    {"name":"peace",    "description":"relieves anxiety" }
+self.redis.lpush('potion_effect', 'peace')
+HSET potion_effect_description perception    {"name":"perception",    "description":"increases the users perception" }
+self.redis.lpush('potion_effect', 'perception')
+HSET potion_effect_description piercingwit    {"name":"piercing wit",    "description":"user becomes keenly aware of the missteps of others" }
+self.redis.lpush('potion_effect', 'piercingwit')
+HSET potion_effect_description pinkeye    {"name":"pinkeye",    "description":"causes drinker to suffer immediate conjunctivitis" }
+self.redis.lpush('potion_effect', 'pinkeye')
+HSET potion_effect_description poison    {"name":"poison",    "description":"user becomes immediately ill" }
+self.redis.lpush('potion_effect', 'poison')
+HSET potion_effect_description polymorph    {"name":"polymorph",    "description":"grants the user the ability to morph into another shpe" }
+self.redis.lpush('potion_effect', 'polymorph')
+HSET potion_effect_description porridge    {"name":"porridge",    "description":"removes any immediate hunger" }
+self.redis.lpush('potion_effect', 'porridge')
+HSET potion_effect_description precision    {"name":"precision",    "description":"grants the user precision with ranged weaponry" }
+self.redis.lpush('potion_effect', 'precision')
+HSET potion_effect_description prowess    {"name":"prowess",    "description":"grants the user unmatched agility, strength or endurance" }
+self.redis.lpush('potion_effect', 'prowess')
+HSET potion_effect_description pumpkinhead    {"name":"pumpkinhead",    "description":"turns the user\'s head into an unlit jack-o-lantern" }
+self.redis.lpush('potion_effect', 'pumpkinhead')
+HSET potion_effect_description pureluck    {"name":"pure luck",    "description":"grants the user unnatural luck" }
+self.redis.lpush('potion_effect', 'pureluck')
+HSET potion_effect_description purification    {"name":"purification",    "description":"cleanses the user of any non-magical diseases and filth" }
+self.redis.lpush('potion_effect', 'purification')
+HSET potion_effect_description rage    {"name":"rage",    "description":"user develops uncontrolled, undirected rage" }
+self.redis.lpush('potion_effect', 'rage')
+HSET potion_effect_description rano    {"name":"rano",    "description":"causes user to develop large horns on their forehead" }
+self.redis.lpush('potion_effect', 'rano')
+HSET potion_effect_description rawchaos    {"name":"raw chaos",    "description":"user is innundated with raw chaos" }
+self.redis.lpush('potion_effect', 'rawchaos')
+HSET potion_effect_description reason    {"name":"reason",    "description":"user is protected from the effects of insanity" }
+self.redis.lpush('potion_effect', 'reason')
+HSET potion_effect_description reduceperson    {"name":"reduce person",    "description":"user decreases in size by 50%" }
+self.redis.lpush('potion_effect', 'reduceperson')
+HSET potion_effect_description reflection    {"name":"reflection",    "description":"grants the user insight" }
+self.redis.lpush('potion_effect', 'reflection')
+HSET potion_effect_description regeneration    {"name":"regeneration",    "description":"allows user to regrow lost limbs" }
+self.redis.lpush('potion_effect', 'regeneration')
+HSET potion_effect_description removeblindness    {"name":"remove blindness",    "description":"restores sight" }
+self.redis.lpush('potion_effect', 'removeblindness')
+HSET potion_effect_description removecurse    {"name":"remove curse",    "description":"removes minor curses" }
+self.redis.lpush('potion_effect', 'removecurse')
+HSET potion_effect_description removedeafness    {"name":"remove deafness",    "description":"restores hearing" }
+self.redis.lpush('potion_effect', 'removedeafness')
+HSET potion_effect_description removedisease    {"name":"remove disease",    "description":"removes most diseases" }
+self.redis.lpush('potion_effect', 'removedisease')
+HSET potion_effect_description removefear    {"name":"remove fear",    "description":"removes unnatural fear" }
+self.redis.lpush('potion_effect', 'removefear')
+HSET potion_effect_description remove_fear          {"name":"remove fear",          "description":"fortifies the user against the most terrifying foes"     }
+self.redis.lpush('potion_effect', 'remove_fear')
+HSET potion_effect_description removeparalysis    {"name":"remove paralysis",    "description":"grants the ability to move freely" }
+self.redis.lpush('potion_effect', 'removeparalysis')
+HSET potion_effect_description replenishing    {"name":"replenishing",    "description":"heals and revitalizes the user" }
+self.redis.lpush('potion_effect', 'replenishing')
+HSET potion_effect_description resistacid    {"name":"resist acid",    "description":"toughens the user and makes them resistant to corrosive substances" }
+self.redis.lpush('potion_effect', 'resistacid')
+HSET potion_effect_description resistcold    {"name":"resist cold",    "description":"provides resistance to the cold" }
+self.redis.lpush('potion_effect', 'resistcold')
+HSET potion_effect_description resistelectricity    {"name":"resist electricity",    "description":"provides resistance to electricity" }
+self.redis.lpush('potion_effect', 'resistelectricity')
+HSET potion_effect_description resistfire     {"name":"resist fire ",    "description":"provides resistance to fire" }
+self.redis.lpush('potion_effect', 'resistfire ')
+HSET potion_effect_description resistsonic     {"name":"resist sonic ",    "description":"provides resistance to sonic damage" }
+self.redis.lpush('potion_effect', 'resistsonic ')
+HSET potion_effect_description resourcefinder    {"name":"resource finder",    "description":"allows user to sniff out needed resources" }
+self.redis.lpush('potion_effect', 'resourcefinder')
+HSET potion_effect_description respiration          {"name":"respiration",          "description":"allows user breathe in otherwise dangerous environments" }
+self.redis.lpush('potion_effect', 'respiration')
+HSET potion_effect_description restoration     {"name":"restoration ",    "description":"reverts effects of any other spells" }
+self.redis.lpush('potion_effect', 'restoration ')
+HSET potion_effect_description revive    {"name":"revive",    "description":"awakens an unconscious person" }
+self.redis.lpush('potion_effect', 'revive')
+HSET potion_effect_description rockskin    {"name":"rock skin",    "description":"hardens the skin of the user while allowing flexibility" }
+self.redis.lpush('potion_effect', 'rockskin')
+HSET potion_effect_description sanctuary    {"name":"sanctuary",    "description":"grants the user protection from combat" }
+self.redis.lpush('potion_effect', 'sanctuary')
+HSET potion_effect_description scouringsolution    {"name":"scouring solution",    "description":"is good for cleaning caked on grime" }
+self.redis.lpush('potion_effect', 'scouringsolution')
+HSET potion_effect_description seduction    {"name":"seduction",    "description":"grants the user the ability to seduce anyone" }
+self.redis.lpush('potion_effect', 'seduction')
+HSET potion_effect_description seeinvisible    {"name":"see invisible",    "description":"grants the user the ability to see invisible things" }
+self.redis.lpush('potion_effect', 'seeinvisible')
+HSET potion_effect_description serpent    {"name":"serpent",    "description":"causes user to grow poisonous fangs" }
+self.redis.lpush('potion_effect', 'serpent')
+HSET potion_effect_description shield    {"name":"shield",    "description":"grants the user a magical force shield for protection" }
+self.redis.lpush('potion_effect', 'shield')
+HSET potion_effect_description shieldoffaith     {"name":"shield of faith ",    "description":"grants the user a magical force shield from an unknown deity" }
+self.redis.lpush('potion_effect', 'shieldoffaith ')
+HSET potion_effect_description shrinking    {"name":"shrinking",    "description":"causes the drinker to shrink" }
+self.redis.lpush('potion_effect', 'shrinking')
+HSET potion_effect_description sickness    {"name":"sickness",    "description":"causes user to display symptoms of severe illness" }
+self.redis.lpush('potion_effect', 'sickness')
+HSET potion_effect_description skelegro    {"name":"skelegro",    "description":"regrows any missing bones" }
+self.redis.lpush('potion_effect', 'skelegro')
+HSET potion_effect_description slashingfury    {"name":"slashing fury",    "description":"causes user to fly into a frenzy when holding a blade" }
+self.redis.lpush('potion_effect', 'slashingfury')
+HSET potion_effect_description slaying    {"name":"slaying",    "description":"grants user unnatural vigor when combatting a specific enemy" }
+self.redis.lpush('potion_effect', 'slaying')
+HSET potion_effect_description sleep    {"name":"sleep",    "description":"user will fall asleep for up to 24 hours" }
+self.redis.lpush('potion_effect', 'sleep')
+HSET potion_effect_description sleeping    {"name":"sleeping",    "description":"forces the user into a deep sleep" }
+self.redis.lpush('potion_effect', 'sleeping')
+HSET potion_effect_description slowness    {"name":"slowness",    "description":"causes the user to move with extreme slowness" }
+self.redis.lpush('potion_effect', 'slowness')
+HSET potion_effect_description snakehair    {"name":"snakehair",    "description":"causes user to sprout snakes from their head" }
+self.redis.lpush('potion_effect', 'snakehair')
+HSET potion_effect_description snuffling    {"name":"snuffling",    "description":"causes the user to continuously sniffle" }
+self.redis.lpush('potion_effect', 'snuffling')
+HSET potion_effect_description socialgrace    {"name":"social grace",    "description":"grants unnatural skill in social situations" }
+self.redis.lpush('potion_effect', 'socialgrace')
+HSET potion_effect_description spark    {"name":"spark",    "description":"user suffers from continual, uncontrollable electrical outbursts" }
+self.redis.lpush('potion_effect', 'spark')
+HSET potion_effect_description sparklingapplecider    {"name":"sparkling apple cider",    "description":"causes the user to desire apples" }
+self.redis.lpush('potion_effect', 'sparklingapplecider')
+HSET potion_effect_description speed    {"name":"speed",    "description":"allows the user to move quickly" }
+self.redis.lpush('potion_effect', 'speed')
+HSET potion_effect_description spellbreaker    {"name":"spell breaker",    "description":"breaks any existing spell effects on the user" }
+self.redis.lpush('potion_effect', 'spellbreaker')
+HSET potion_effect_description spicyfungalgumbo    {"name":"spicy fungal gumbo",    "description":"causes severe pain and hallucinations" }
+self.redis.lpush('potion_effect', 'spicyfungalgumbo')
+HSET potion_effect_description spiderclimb    {"name":"spider climb",    "description":"grants the user the ability to climb walls" }
+self.redis.lpush('potion_effect', 'spiderclimb')
+HSET potion_effect_description staticdischarge    {"name":"static discharge",    "description":"causes unnatural buildup of static discharge" }
+self.redis.lpush('potion_effect', 'staticdischarge')
+HSET potion_effect_description steeledcurtain    {"name":"steeled curtain",    "description":"increases the protection of existing armor" }
+self.redis.lpush('potion_effect', 'steeledcurtain')
+HSET potion_effect_description stomachgrowling    {"name":"stomach growling",    "description":"provokes stomach growling" }
+self.redis.lpush('potion_effect', 'stomachgrowling')
+HSET potion_effect_description stoneskin    {"name":"stoneskin",    "description":"grants the user hardened skin" }
+self.redis.lpush('potion_effect', 'stoneskin')
+HSET potion_effect_description stonetoflesh    {"name":"stone to flesh",    "description":"can be used to cure petrification" }
+self.redis.lpush('potion_effect', 'stonetoflesh')
+HSET potion_effect_description strength    {"name":"strength",    "description":"grants unusual strength to the drinker" }
+self.redis.lpush('potion_effect', 'strength')
+HSET potion_effect_description swelling    {"name":"swelling",    "description":"causes severe swelling of a random section of the body" }
+self.redis.lpush('potion_effect', 'swelling')
+HSET potion_effect_description swiftness    {"name":"swiftness",    "description":"grants the user the ability to move quickly" }
+self.redis.lpush('potion_effect', 'swiftness')
+HSET potion_effect_description tongues    {"name":"tongues",    "description":"allows user to speak and understand any language" }
+self.redis.lpush('potion_effect', 'tongues')
+HSET potion_effect_description toughness    {"name":"toughness",    "description":"grants user increased endurance" }
+self.redis.lpush('potion_effect', 'toughness')
+HSET potion_effect_description training    {"name":"training",    "description":"allows user to increase effectiveness of a single skill" }
+self.redis.lpush('potion_effect', 'training')
+HSET potion_effect_description trollblood    {"name":"troll blood",    "description":"grants the user minor regenerative abilities" }
+self.redis.lpush('potion_effect', 'trollblood')
+HSET potion_effect_description truth    {"name":"truth",    "description":"makes the user tell the truth" }
+self.redis.lpush('potion_effect', 'truth')
+HSET potion_effect_description tumbling    {"name":"tumbling",    "description":"grants the user unnatural tumbling skills" }
+self.redis.lpush('potion_effect', 'tumbling')
+HSET potion_effect_description unfortunatemutation    {"name":"unfortunate mutation",    "description":"provides some sort of unfortunate mutation" }
+self.redis.lpush('potion_effect', 'unfortunatemutation')
+HSET potion_effect_description uselessness    {"name":"uselessness",    "description":"has no discernible effect" }
+self.redis.lpush('potion_effect', 'uselessness')
+HSET potion_effect_description vampirebite    {"name":"vampire bite",    "description":"infects user with vampirism" }
+self.redis.lpush('potion_effect', 'vampirebite')
+HSET potion_effect_description vampiricsunscreen    {"name":"vampiric sunscreen",    "description":"mitigates any penalties taken from sunlight" }
+self.redis.lpush('potion_effect', 'vampiricsunscreen')
+HSET potion_effect_description venomguard    {"name":"venomguard",    "description":"grants poison resistance" }
+self.redis.lpush('potion_effect', 'venomguard')
+HSET potion_effect_description visibility    {"name":"visibility",    "description":"grants visibility to the invisible" }
+self.redis.lpush('potion_effect', 'visibility')
+HSET potion_effect_description vision    {"name":"vision",    "description":"grants user a mysterious and unclear vision" }
+self.redis.lpush('potion_effect', 'vision')
+HSET potion_effect_description vocality    {"name":"vocality",    "description":"alters the user\'s voice" }
+self.redis.lpush('potion_effect', 'vocality')
+HSET potion_effect_description waterbreathing    {"name":"water breathing",    "description":"allows the user to breathe underwater" }
+self.redis.lpush('potion_effect', 'waterbreathing')
+HSET potion_effect_description waterwalk    {"name":"water walk",    "description":"allows the user to walk on water" }
+self.redis.lpush('potion_effect', 'waterwalk')
+HSET potion_effect_description weakness    {"name":"weakness",    "description":"causes the user to feel weak" }
+self.redis.lpush('potion_effect', 'weakness')
+HSET potion_effect_description wide-eye    {"name":"wide-eye",    "description":"prevents the user from falling asleep" }
+self.redis.lpush('potion_effect', 'wide-eye')
+HSET potion_effect_description wolfsbane    {"name":"wolfsbane",    "description":"poisonous to a lycanthrope, protects user from infection" }
+self.redis.lpush('potion_effect', 'wolfsbane')
+HSET potion_effect_description wound-cleaning    {"name":"wound-cleaning",    "description":"antiseptic prevents infection frmo sinking in" }
+self.redis.lpush('potion_effect', 'wound-cleaning')
+HSET potion_effect_description zombification    {"name":"zombification",    "description":"causes user to show immediate signs of zombification" }
+self.redis.lpush('potion_effect', 'zombification')
+
+
+
+
+
+            
+#<!-- may cause blindness, which -->
+
+ZADD potion_duration  10  {"name":"is temporary",           "score":10  }
+ZADD potion_duration  20  {"name":"lasts a few seconds",    "score":20  }
+ZADD potion_duration  30  {"name":"lasts a minute",         "score":30  }
+ZADD potion_duration  40  {"name":"lasts a few minutes",    "score":40  }
+ZADD potion_duration  50  {"name":"lasts several minutes",  "score":50  }
+ZADD potion_duration  60  {"name":"lasts an hour",          "score":60  }
+ZADD potion_duration  70  {"name":"lasts a few hours",      "score":70  }
+ZADD potion_duration  80  {"name":"lasts several hours",    "score":80  }
+ZADD potion_duration  85  {"name":"lasts a day",            "score":85  }
+ZADD potion_duration  90  {"name":"lasts a few days",       "score":90  }
+ZADD potion_duration  95  {"name":"lasts a week",           "score":95  }
+ZADD potion_duration  98  {"name":"lasts weeks",            "score":98  }
+ZADD potion_duration 100  {"name":"is permanent",           "score":100  }
+
+
+# In the container is a _________ potion
+ZADD potion_consistency   3  {"name":"watery",   "score":3  }
+ZADD potion_consistency   6  {"name":"thick",   "score":6  }
+ZADD potion_consistency   9  {"name":"chunky",   "score":9  }
+ZADD potion_consistency  12  {"name":"viscous",   "score":12  }
+ZADD potion_consistency  15  {"name":"goopy",   "score":15  }
+ZADD potion_consistency  18  {"name":"gooey",   "score":18  }
+ZADD potion_consistency  21  {"name":"milky",   "score":21  }
+ZADD potion_consistency  24  {"name":"soupy",   "score":24  }
+ZADD potion_consistency  27  {"name":"sappy",   "score":27  }
+ZADD potion_consistency  30  {"name":"crusty",   "score":30  }
+ZADD potion_consistency  33  {"name":"buttery",   "score":33  }
+ZADD potion_consistency  36  {"name":"bubbly",   "score":36  }
+ZADD potion_consistency  39  {"name":"runny",   "score":39  }
+ZADD potion_consistency  42  {"name":"layered",   "score":42  }
+ZADD potion_consistency  45  {"name":"syrupy",   "score":45  }
+ZADD potion_consistency  48  {"name":"coagulated",   "score":48  }
+ZADD potion_consistency  51  {"name":"congealed",   "score":51  }
+ZADD potion_consistency  54  {"name":"gloppy",   "score":54  }
+ZADD potion_consistency  57  {"name":"gunky",   "score":57  }
+ZADD potion_consistency  60  {"name":"jellied",   "score":60  }
+ZADD potion_consistency  63  {"name":"solidified",   "score":63  }
+ZADD potion_consistency  66  {"name":"pulpy",   "score":66  }
+ZADD potion_consistency  69  {"name":"slushy",   "score":69  }
+ZADD potion_consistency  72  {"name":"tacky",   "score":72  }
+ZADD potion_consistency  75  {"name":"mucousy",   "score":75  }
+ZADD potion_consistency  78  {"name":"waxy",   "score":78  }
+ZADD potion_consistency  81  {"name":"scummy",   "score":81  }
+ZADD potion_consistency  84  {"name":"aqueous",   "score":84  }
+ZADD potion_consistency  87  {"name":"brothy",   "score":87  }
+ZADD potion_consistency  90  {"name":"fizzing",   "score":90  }
+ZADD potion_consistency  93  {"name":"chalky",   "score":93  }
+ZADD potion_consistency  96  {"name":"oily",   "score":96  }
+ZADD potion_consistency 100  {"name":"gritty",   "score":99  }
+
+            
+self.redis.lpush('potion_color', 'aquamarine')
+HSET potion_color_description aquamarine     {"name":"aquamarine", "hex":"7FFFD4" }
+self.redis.lpush('potion_color', 'azure')
+HSET potion_color_description azure     {"name":"azure", "hex":"F0FFFF" }
+self.redis.lpush('potion_color', 'banana')
+HSET potion_color_description banana     {"name":"banana", "hex":"E3CF57" }
+self.redis.lpush('potion_color', 'beige')
+HSET potion_color_description beige     {"name":"beige", "hex":"F5F5DC" }
+self.redis.lpush('potion_color', 'bisque')
+HSET potion_color_description bisque     {"name":"bisque", "hex":"FFE4C4" }
+self.redis.lpush('potion_color', 'black')
+HSET potion_color_description black     {"name":"black", "hex":"000000" }
+self.redis.lpush('potion_color', 'blanchedalmond')
+HSET potion_color_description blanchedalmond     {"name":"blanched almond", "hex":"FFEBCD" }
+self.redis.lpush('potion_color', 'blue')
+HSET potion_color_description blue     {"name":"blue", "hex":"0000FF" }
+self.redis.lpush('potion_color', 'blueviolet')
+HSET potion_color_description blueviolet     {"name":"blue-violet", "hex":"8A2BE2" }
+self.redis.lpush('potion_color', 'brick')
+HSET potion_color_description brick     {"name":"brick", "hex":"9C661F" }
+self.redis.lpush('potion_color', 'brown')
+HSET potion_color_description brown     {"name":"brown", "hex":"A52A2A" }
+self.redis.lpush('potion_color', 'burlywood')
+HSET potion_color_description burlywood     {"name":"burly wood", "hex":"DEB887" }
+self.redis.lpush('potion_color', 'burntsienna')
+HSET potion_color_description burntsienna     {"name":"burnt sienna", "hex":"8A360F" }
+self.redis.lpush('potion_color', 'burntumber')
+HSET potion_color_description burntumber     {"name":"burnt umber", "hex":"8A3324" }
+self.redis.lpush('potion_color', 'cadetblue')
+HSET potion_color_description cadetblue     {"name":"cadet blue", "hex":"5F9EA0" }
+self.redis.lpush('potion_color', 'cadmiumorange')
+HSET potion_color_description cadmiumorange     {"name":"cadmium orange", "hex":"FF6103" }
+self.redis.lpush('potion_color', 'cadmiumyellow')
+HSET potion_color_description cadmiumyellow     {"name":"cadmium yellow", "hex":"FF9912" }
+self.redis.lpush('potion_color', 'carrot')
+HSET potion_color_description carrot     {"name":"carrot", "hex":"ED9121" }
+self.redis.lpush('potion_color', 'chartreuse')
+HSET potion_color_description chartreuse     {"name":"chartreuse", "hex":"7FFF00" }
+self.redis.lpush('potion_color', 'chocolate')
+HSET potion_color_description chocolate     {"name":"chocolate-colored", "hex":"D2691E" }
+self.redis.lpush('potion_color', 'cobalt')
+HSET potion_color_description cobalt     {"name":"cobalt", "hex":"3D59AB" }
+self.redis.lpush('potion_color', 'cobaltgreen')
+HSET potion_color_description cobaltgreen     {"name":"cobalt green", "hex":"3D9140" }
+self.redis.lpush('potion_color', 'coldgrey')
+HSET potion_color_description coldgrey     {"name":"cold grey", "hex":"808A87" }
+self.redis.lpush('potion_color', 'coral')
+HSET potion_color_description coral     {"name":"coral", "hex":"FF7F50" }
+self.redis.lpush('potion_color', 'cornflowerblue')
+HSET potion_color_description cornflowerblue     {"name":"cornflower blue", "hex":"6495ED" }
+self.redis.lpush('potion_color', 'cornsilk')
+HSET potion_color_description cornsilk     {"name":"cornsilk-colored", "hex":"FFF8DC" }
+self.redis.lpush('potion_color', 'crimson')
+HSET potion_color_description crimson     {"name":"crimson", "hex":"DC143C" }
+self.redis.lpush('potion_color', 'cyan')
+HSET potion_color_description cyan     {"name":"cyan", "hex":"00FFFF" }
+self.redis.lpush('potion_color', 'darkblue')
+HSET potion_color_description darkblue     {"name":"dark blue", "hex":"00008B" }
+self.redis.lpush('potion_color', 'darkcyan')
+HSET potion_color_description darkcyan     {"name":"dark cyan", "hex":"008B8B" }
+self.redis.lpush('potion_color', 'darkgoldenrod')
+HSET potion_color_description darkgoldenrod     {"name":"dark goldenrod", "hex":"B8860B" }
+self.redis.lpush('potion_color', 'darkgray')
+HSET potion_color_description darkgray     {"name":"dark gray", "hex":"A9A9A9" }
+self.redis.lpush('potion_color', 'darkgreen')
+HSET potion_color_description darkgreen     {"name":"dark green", "hex":"006400" }
+self.redis.lpush('potion_color', 'darkkhaki')
+HSET potion_color_description darkkhaki     {"name":"dark khaki", "hex":"BDB76B" }
+self.redis.lpush('potion_color', 'darkolivegreen')
+HSET potion_color_description darkolivegreen     {"name":"dark olive green", "hex":"556B2F" }
+self.redis.lpush('potion_color', 'darkorange')
+HSET potion_color_description darkorange     {"name":"dark orange", "hex":"FF8C00" }
+self.redis.lpush('potion_color', 'darkorchid')
+HSET potion_color_description darkorchid     {"name":"dark orchid", "hex":"9932CC" }
+self.redis.lpush('potion_color', 'darkred')
+HSET potion_color_description darkred     {"name":"dark red", "hex":"8B0000" }
+self.redis.lpush('potion_color', 'darksalmon')
+HSET potion_color_description darksalmon     {"name":"dark salmon", "hex":"E9967A" }
+self.redis.lpush('potion_color', 'darkseagreen')
+HSET potion_color_description darkseagreen     {"name":"dark sea green", "hex":"8FBC8F" }
+self.redis.lpush('potion_color', 'darkslateblue')
+HSET potion_color_description darkslateblue     {"name":"dark slate blue", "hex":"483D8B" }
+self.redis.lpush('potion_color', 'darkslategray')
+HSET potion_color_description darkslategray     {"name":"dark slate gray", "hex":"2F4F4F" }
+self.redis.lpush('potion_color', 'darkturquoise')
+HSET potion_color_description darkturquoise     {"name":"dark turquoise", "hex":"00CED1" }
+self.redis.lpush('potion_color', 'darkviolet')
+HSET potion_color_description darkviolet     {"name":"dark violet", "hex":"9400D3" }
+self.redis.lpush('potion_color', 'deeppink')
+HSET potion_color_description deeppink     {"name":"deep pink", "hex":"FF1493" }
+self.redis.lpush('potion_color', 'deepskyblue')
+HSET potion_color_description deepskyblue     {"name":"deep sky blue", "hex":"00BFFF" }
+self.redis.lpush('potion_color', 'dimgray')
+HSET potion_color_description dimgray     {"name":"dim gray", "hex":"696969" }
+self.redis.lpush('potion_color', 'dodgerblue')
+HSET potion_color_description dodgerblue     {"name":"dodger blue", "hex":"1E90FF" }
+self.redis.lpush('potion_color', 'eggshell')
+HSET potion_color_description eggshell     {"name":"eggshell", "hex":"FCE6C9" }
+self.redis.lpush('potion_color', 'emeraldgreen')
+HSET potion_color_description emeraldgreen     {"name":"emerald green", "hex":"00C957" }
+self.redis.lpush('potion_color', 'firebrick')
+HSET potion_color_description firebrick     {"name":"firebrick", "hex":"B22222" }
+self.redis.lpush('potion_color', 'flesh')
+HSET potion_color_description flesh     {"name":"flesh", "hex":"FF7D40" }
+self.redis.lpush('potion_color', 'floralwhite')
+HSET potion_color_description floralwhite     {"name":"floral white", "hex":"FFFAF0" }
+self.redis.lpush('potion_color', 'forestgreen')
+HSET potion_color_description forestgreen     {"name":"forest green", "hex":"228B22" }
+self.redis.lpush('potion_color', 'fuchsia')
+HSET potion_color_description fuchsia     {"name":"fuchsia", "hex":"FF00FF" }
+self.redis.lpush('potion_color', 'ghostwhite')
+HSET potion_color_description ghostwhite     {"name":"ghost white", "hex":"F8F8FF" }
+self.redis.lpush('potion_color', 'goldenrod')
+HSET potion_color_description goldenrod     {"name":"goldenrod", "hex":"DAA520" }
+self.redis.lpush('potion_color', 'gold')
+HSET potion_color_description gold     {"name":"gold", "hex":"FFD700" }
+self.redis.lpush('potion_color', 'gray')
+HSET potion_color_description gray     {"name":"gray", "hex":"808080" }
+self.redis.lpush('potion_color', 'green')
+HSET potion_color_description green     {"name":"green", "hex":"008000" }
+self.redis.lpush('potion_color', 'greenyellow')
+HSET potion_color_description greenyellow     {"name":"green-yellow", "hex":"ADFF2F" }
+self.redis.lpush('potion_color', 'honeydew')
+HSET potion_color_description honeydew     {"name":"honeydew", "hex":"F0FFF0" }
+self.redis.lpush('potion_color', 'hotpink')
+HSET potion_color_description hotpink     {"name":"hot pink", "hex":"FF69B4" }
+self.redis.lpush('potion_color', 'indian')
+HSET potion_color_description indian     {"name":"indian red", "hex":"B0171F" }
+self.redis.lpush('potion_color', 'indigo')
+HSET potion_color_description indigo     {"name":"indigo", "hex":"4B0082" }
+self.redis.lpush('potion_color', 'ivoryblack')
+HSET potion_color_description ivoryblack     {"name":"ivoryblack", "hex":"292421" }
+self.redis.lpush('potion_color', 'ivory')
+HSET potion_color_description ivory     {"name":"ivory", "hex":"FFFFF0" }
+self.redis.lpush('potion_color', 'khaki')
+HSET potion_color_description khaki     {"name":"khaki-colored", "hex":"F0E68C" }
+self.redis.lpush('potion_color', 'lavender')
+HSET potion_color_description lavender     {"name":"lavender", "hex":"E6E6FA" }
+self.redis.lpush('potion_color', 'lawngreen')
+HSET potion_color_description lawngreen     {"name":"lawn green", "hex":"7CFC00" }
+self.redis.lpush('potion_color', 'lightblue')
+HSET potion_color_description lightblue     {"name":"light blue", "hex":"ADD8E6" }
+self.redis.lpush('potion_color', 'lightcoral')
+HSET potion_color_description lightcoral     {"name":"light coral", "hex":"F08080" }
+self.redis.lpush('potion_color', 'lightcyan')
+HSET potion_color_description lightcyan     {"name":"light cyan", "hex":"E0FFFF" }
+self.redis.lpush('potion_color', 'lightgoldenrod')
+HSET potion_color_description lightgoldenrod     {"name":"light goldenrod", "hex":"FFEC8B" }
+self.redis.lpush('potion_color', 'lightgoldenrodyellow')
+HSET potion_color_description lightgoldenrodyellow     {"name":"light goldenrod yellow", "hex":"FAFAD2" }
+self.redis.lpush('potion_color', 'lightgreen')
+HSET potion_color_description lightgreen     {"name":"light green", "hex":"90EE90" }
+self.redis.lpush('potion_color', 'lightgrey')
+HSET potion_color_description lightgrey     {"name":"light grey", "hex":"D3D3D3" }
+self.redis.lpush('potion_color', 'lightpink')
+HSET potion_color_description lightpink     {"name":"light pink", "hex":"FFB6C1" }
+self.redis.lpush('potion_color', 'lightsalmon')
+HSET potion_color_description lightsalmon     {"name":"light salmon", "hex":"FFA07A" }
+self.redis.lpush('potion_color', 'lightseagreen')
+HSET potion_color_description lightseagreen     {"name":"light sea green", "hex":"20B2AA" }
+self.redis.lpush('potion_color', 'lightskyblue')
+HSET potion_color_description lightskyblue     {"name":"light sky blue", "hex":"87CEFA" }
+self.redis.lpush('potion_color', 'lightslateblue')
+HSET potion_color_description lightslateblue     {"name":"light slate blue", "hex":"8470FF" }
+self.redis.lpush('potion_color', 'lightslategray')
+HSET potion_color_description lightslategray     {"name":"light slate gray", "hex":"778899" }
+self.redis.lpush('potion_color', 'lightsteelblue')
+HSET potion_color_description lightsteelblue     {"name":"light steel blue", "hex":"B0C4DE" }
+self.redis.lpush('potion_color', 'lightyellow')
+HSET potion_color_description lightyellow     {"name":"light yellow", "hex":"FFFFE0" }
+self.redis.lpush('potion_color', 'lime')
+HSET potion_color_description lime     {"name":"lime", "hex":"00FF00" }
+self.redis.lpush('potion_color', 'limegreen')
+HSET potion_color_description limegreen     {"name":"lime green", "hex":"32CD32" }
+self.redis.lpush('potion_color', 'linen')
+HSET potion_color_description linen     {"name":"linen white", "hex":"FAF0E6" }
+self.redis.lpush('potion_color', 'manganeseblue')
+HSET potion_color_description manganeseblue     {"name":"manganese blue", "hex":"03A89E" }
+self.redis.lpush('potion_color', 'maroon')
+HSET potion_color_description maroon     {"name":"maroon", "hex":"FF34B3" }
+self.redis.lpush('potion_color', 'midnightblue')
+HSET potion_color_description midnightblue     {"name":"midnight blue", "hex":"191970" }
+self.redis.lpush('potion_color', 'mint')
+HSET potion_color_description mint     {"name":"mint", "hex":"BDFCC9" }
+self.redis.lpush('potion_color', 'navy')
+HSET potion_color_description navy     {"name":"navy", "hex":"000080" }
+self.redis.lpush('potion_color', 'olive')
+HSET potion_color_description olive     {"name":"olive", "hex":"808000" }
+self.redis.lpush('potion_color', 'olivedrab')
+HSET potion_color_description olivedrab     {"name":"olive drab", "hex":"6B8E23" }
+self.redis.lpush('potion_color', 'orange')
+HSET potion_color_description orange     {"name":"orange", "hex":"FFA500" }
+self.redis.lpush('potion_color', 'orangered')
+HSET potion_color_description orangered     {"name":"orange-red", "hex":"FF4500" }
+self.redis.lpush('potion_color', 'orchid')
+HSET potion_color_description orchid     {"name":"orchid", "hex":"DA70D6" }
+self.redis.lpush('potion_color', 'palegoldenrod')
+HSET potion_color_description palegoldenrod     {"name":"pale goldenrod", "hex":"EEE8AA" }
+self.redis.lpush('potion_color', 'palegreen')
+HSET potion_color_description palegreen     {"name":"pale green", "hex":"98FB98" }
+self.redis.lpush('potion_color', 'paleturquoise')
+HSET potion_color_description paleturquoise     {"name":"pale turquoise", "hex":"AEEEEE" }
+self.redis.lpush('potion_color', 'palevioletred')
+HSET potion_color_description palevioletred     {"name":"pale violet-red", "hex":"DB7093" }
+self.redis.lpush('potion_color', 'pink')
+HSET potion_color_description pink     {"name":"pink", "hex":"FFC0CB" }
+self.redis.lpush('potion_color', 'plum')
+HSET potion_color_description plum     {"name":"plum", "hex":"DDA0DD" }
+self.redis.lpush('potion_color', 'powderblue')
+HSET potion_color_description powderblue     {"name":"powder-blue", "hex":"B0E0E6" }
+self.redis.lpush('potion_color', 'purple')
+HSET potion_color_description purple     {"name":"purple", "hex":"800080" }
+self.redis.lpush('potion_color', 'raspberry')
+HSET potion_color_description raspberry     {"name":"raspberry", "hex":"872657" }
+self.redis.lpush('potion_color', 'rawsienna')
+HSET potion_color_description rawsienna     {"name":"raw sienna", "hex":"C76114" }
+self.redis.lpush('potion_color', 'red')
+HSET potion_color_description red     {"name":"red", "hex":"FF0000" }
+self.redis.lpush('potion_color', 'rosybrown')
+HSET potion_color_description rosybrown     {"name":"rosy brown", "hex":"BC8F8F" }
+self.redis.lpush('potion_color', 'royalblue')
+HSET potion_color_description royalblue     {"name":"royal blue", "hex":"4169E1" }
+self.redis.lpush('potion_color', 'saddlebrown')
+HSET potion_color_description saddlebrown     {"name":"saddle brown", "hex":"8B4513" }
+self.redis.lpush('potion_color', 'salmon')
+HSET potion_color_description salmon     {"name":"salmon-colored", "hex":"FA8072" }
+self.redis.lpush('potion_color', 'sandybrown')
+HSET potion_color_description sandybrown     {"name":"sandy brown", "hex":"F4A460" }
+self.redis.lpush('potion_color', 'sapgreen')
+HSET potion_color_description sapgreen     {"name":"sap green", "hex":"308014" }
+self.redis.lpush('potion_color', 'seagreen')
+HSET potion_color_description seagreen     {"name":"sea green", "hex":"2E8B57" }
+self.redis.lpush('potion_color', 'seashell')
+HSET potion_color_description seashell     {"name":"seashell", "hex":"FFF5EE" }
+self.redis.lpush('potion_color', 'sepia')
+HSET potion_color_description sepia     {"name":"sepia", "hex":"5E2612" }
+self.redis.lpush('potion_color', 'sienna')
+HSET potion_color_description sienna     {"name":"sienna", "hex":"A0522D" }
+self.redis.lpush('potion_color', 'silver')
+HSET potion_color_description silver     {"name":"silver", "hex":"C0C0C0" }
+self.redis.lpush('potion_color', 'skyblue')
+HSET potion_color_description skyblue     {"name":"sky blue", "hex":"87CEEB" }
+self.redis.lpush('potion_color', 'slateblue')
+HSET potion_color_description slateblue     {"name":"slate blue", "hex":"6A5ACD" }
+self.redis.lpush('potion_color', 'slategray')
+HSET potion_color_description slategray     {"name":"slate gray", "hex":"708090" }
+self.redis.lpush('potion_color', 'snow')
+HSET potion_color_description snow     {"name":"snow-white", "hex":"FFFAFA" }
+self.redis.lpush('potion_color', 'springgreen')
+HSET potion_color_description springgreen     {"name":"spring green", "hex":"00FF7F" }
+self.redis.lpush('potion_color', 'steelblue')
+HSET potion_color_description steelblue     {"name":"steel blue", "hex":"4682B4" }
+self.redis.lpush('potion_color', 'tan')
+HSET potion_color_description tan     {"name":"tan", "hex":"D2B48C" }
+self.redis.lpush('potion_color', 'teal')
+HSET potion_color_description teal     {"name":"teal", "hex":"008080" }
+self.redis.lpush('potion_color', 'thistle')
+HSET potion_color_description thistle     {"name":"thistle", "hex":"D8BFD8" }
+self.redis.lpush('potion_color', 'tomato')
+HSET potion_color_description tomato     {"name":"tomato", "hex":"FF6347" }
+self.redis.lpush('potion_color', 'turquoise')
+HSET potion_color_description turquoise     {"name":"turquoise", "hex":"00F5FF" }
+self.redis.lpush('potion_color', 'turquoiseblue')
+HSET potion_color_description turquoiseblue     {"name":"turquoise blue", "hex":"00C78C" }
+self.redis.lpush('potion_color', 'violet')
+HSET potion_color_description violet     {"name":"violet", "hex":"EE82EE" }
+self.redis.lpush('potion_color', 'violetred')
+HSET potion_color_description violetred     {"name":"violet-red", "hex":"D02090" }
+self.redis.lpush('potion_color', 'warmgrey')
+HSET potion_color_description warmgrey     {"name":"warm grey", "hex":"808069" }
+self.redis.lpush('potion_color', 'wheat')
+HSET potion_color_description wheat     {"name":"wheat", "hex":"F5DEB3" }
+self.redis.lpush('potion_color', 'white')
+HSET potion_color_description white     {"name":"white", "hex":"FFFFFF" }
+self.redis.lpush('potion_color', 'yellow')
+HSET potion_color_description yellow     {"name":"yellow", "hex":"FFFF00" }
+self.redis.lpush('potion_color', 'yellowgreen')
+HSET potion_color_description yellowgreen     {"name":"yellow green", "hex":"9ACD32" }
+
+
+
+SET   potion_sideeffect_chance 20
+self.redis.lpush('potion_sideeffect', 'seizures')
+self.redis.lpush('potion_sideeffect', 'blindness')
+self.redis.lpush('potion_sideeffect', 'death')
+self.redis.lpush('potion_sideeffect', 'melting flesh')
+self.redis.lpush('potion_sideeffect', 'spontaneous combustion')
+self.redis.lpush('potion_sideeffect', 'muteness')
+self.redis.lpush('potion_sideeffect', 'mouth glued shut')
+self.redis.lpush('potion_sideeffect', 'skin to turn an unnatural color')
+self.redis.lpush('potion_sideeffect', 'vomiting')
+self.redis.lpush('potion_sideeffect', 'nausea ')
+self.redis.lpush('potion_sideeffect', 'irritability')
+self.redis.lpush('potion_sideeffect', 'dizziness')
+self.redis.lpush('potion_sideeffect', 'fatigue')
+self.redis.lpush('potion_sideeffect', 'allergic reactions')
+self.redis.lpush('potion_sideeffect', 'fever')
+self.redis.lpush('potion_sideeffect', 'apathy')
+self.redis.lpush('potion_sideeffect', 'lethargy')
+self.redis.lpush('potion_sideeffect', 'paranoia')
+self.redis.lpush('potion_sideeffect', 'irrational behavior')
+self.redis.lpush('potion_sideeffect', 'hallucinations')
+self.redis.lpush('potion_sideeffect', 'levitation')
+self.redis.lpush('potion_sideeffect', 'colour blindness')
+self.redis.lpush('potion_sideeffect', 'sprouting feathers')
+self.redis.lpush('potion_sideeffect', 'sprouting hairs')
+self.redis.lpush('potion_sideeffect', 'vertigo')
+self.redis.lpush('potion_sideeffect', 'uncontrolled bowel movements')
+self.redis.lpush('potion_sideeffect', 'uncontrolled urination')
+self.redis.lpush('potion_sideeffect', 'severe muscle cramps')
+            
+self.redis.lpush('potion_variety', 'potion')
+self.redis.lpush('potion_variety', 'brew')
+self.redis.lpush('potion_variety', 'elixir')
+self.redis.lpush('potion_variety', 'philer')
+self.redis.lpush('potion_variety', 'tonic')
+self.redis.lpush('potion_variety', 'balm')
+self.redis.lpush('potion_variety', 'dram')
+self.redis.lpush('potion_variety', 'formula')
+self.redis.lpush('potion_variety', 'lotion')
+self.redis.lpush('potion_variety', 'gel')
+self.redis.lpush('potion_variety', 'pomade')
+self.redis.lpush('potion_variety', 'slurry')
+self.redis.lpush('potion_variety', 'draught')
+self.redis.lpush('potion_variety', 'essence')
+self.redis.lpush('potion_variety', 'serum')
+            
+            
+self.redis.lpush('potion_smell', 'bubblegum')
+self.redis.lpush('potion_smell', 'sewage')
+self.redis.lpush('potion_smell', 'cornflour')
+self.redis.lpush('potion_smell', 'vinegar')
+self.redis.lpush('potion_smell', 'alcohol')
+self.redis.lpush('potion_smell', 'strawberries')
+self.redis.lpush('potion_smell', 'sweat')
+self.redis.lpush('potion_smell', 'lilac')
+self.redis.lpush('potion_smell', 'fruit')
+self.redis.lpush('potion_smell', 'fresh-cut grass')
+self.redis.lpush('potion_smell', 'mint')
+self.redis.lpush('potion_smell', 'harsh chemicals')
+self.redis.lpush('potion_smell', 'stinkbugs')
+            
+# , tastes _______,
+self.redis.lpush('potion_taste', 'acidic')
+self.redis.lpush('potion_taste', 'amazing')
+self.redis.lpush('potion_taste', 'bitter')
+self.redis.lpush('potion_taste', 'bland')
+self.redis.lpush('potion_taste', 'burned')
+self.redis.lpush('potion_taste', 'buttery')
+self.redis.lpush('potion_taste', 'cheesy')
+self.redis.lpush('potion_taste', 'chocolaty')
+self.redis.lpush('potion_taste', 'delicious')
+self.redis.lpush('potion_taste', 'delightful')
+self.redis.lpush('potion_taste', 'divine')
+self.redis.lpush('potion_taste', 'earthy')
+self.redis.lpush('potion_taste', 'excellent')
+self.redis.lpush('potion_taste', 'extraordinary')
+self.redis.lpush('potion_taste', 'fantastic')
+self.redis.lpush('potion_taste', 'fatty')
+self.redis.lpush('potion_taste', 'fiery')
+self.redis.lpush('potion_taste', 'fishy')
+self.redis.lpush('potion_taste', 'flavorful')
+self.redis.lpush('potion_taste', 'fresh')
+self.redis.lpush('potion_taste', 'fried')
+self.redis.lpush('potion_taste', 'fruity')
+self.redis.lpush('potion_taste', 'gamey')
+self.redis.lpush('potion_taste', 'garlicky')
+self.redis.lpush('potion_taste', 'gingery')
+self.redis.lpush('potion_taste', 'greasy')
+self.redis.lpush('potion_taste', 'heavenly')
+self.redis.lpush('potion_taste', 'lemony')
+self.redis.lpush('potion_taste', 'marvelous')
+self.redis.lpush('potion_taste', 'meaty')
+self.redis.lpush('potion_taste', 'mellow')
+self.redis.lpush('potion_taste', 'mild')
+self.redis.lpush('potion_taste', 'minty')
+self.redis.lpush('potion_taste', 'nutty')
+self.redis.lpush('potion_taste', 'oniony')
+self.redis.lpush('potion_taste', 'peppery')
+self.redis.lpush('potion_taste', 'pickled')
+self.redis.lpush('potion_taste', 'plain')
+self.redis.lpush('potion_taste', 'pleasant')
+self.redis.lpush('potion_taste', 'powdery')
+self.redis.lpush('potion_taste', 'rich')
+self.redis.lpush('potion_taste', 'robust')
+self.redis.lpush('potion_taste', 'salty')
+self.redis.lpush('potion_taste', 'satisfying')
+self.redis.lpush('potion_taste', 'savory')
+self.redis.lpush('potion_taste', 'scrumptious')
+self.redis.lpush('potion_taste', 'seasoned')
+self.redis.lpush('potion_taste', 'sharp')
+self.redis.lpush('potion_taste', 'smokey')
+self.redis.lpush('potion_taste', 'soupy')
+self.redis.lpush('potion_taste', 'sour')
+self.redis.lpush('potion_taste', 'spicy')
+self.redis.lpush('potion_taste', 'strong')
+self.redis.lpush('potion_taste', 'sugary')
+self.redis.lpush('potion_taste', 'superb')
+self.redis.lpush('potion_taste', 'sweet')
+self.redis.lpush('potion_taste', 'tangy')
+self.redis.lpush('potion_taste', 'tart')
+self.redis.lpush('potion_taste', 'terrific')
+self.redis.lpush('potion_taste', 'unflavored')
+self.redis.lpush('potion_taste', 'unseasoned')
+self.redis.lpush('potion_taste', 'vinegary')
+self.redis.lpush('potion_taste', 'wonderful')
+self.redis.lpush('potion_taste', 'woody')
+self.redis.lpush('potion_taste', 'yeasty')
+self.redis.lpush('potion_taste', 'zesty')
+self.redis.lpush('potion_taste', 'zingy')
+
+#and has a[n] _________ texture
+self.redis.lpush('potion_texture', 'chalky')
+self.redis.lpush('potion_texture', 'chewy')
+self.redis.lpush('potion_texture', 'creamy')
+self.redis.lpush('potion_texture', 'crunchy')
+self.redis.lpush('potion_texture', 'crusty')
+self.redis.lpush('potion_texture', 'fizzy')
+self.redis.lpush('potion_texture', 'gelatinous')
+self.redis.lpush('potion_texture', 'gooey')
+self.redis.lpush('potion_texture', 'gritty')
+self.redis.lpush('potion_texture', 'hearty')
+self.redis.lpush('potion_texture', 'light')
+self.redis.lpush('potion_texture', 'malty')
+self.redis.lpush('potion_texture', 'mushy')
+self.redis.lpush('potion_texture', 'oily')
+self.redis.lpush('potion_texture', 'pasty')
+self.redis.lpush('potion_texture', 'rubbery')
+self.redis.lpush('potion_texture', 'runny')
+self.redis.lpush('potion_texture', 'silky')
+self.redis.lpush('potion_texture', 'slimy')
+self.redis.lpush('potion_texture', 'smooth')
+self.redis.lpush('potion_texture', 'sticky')
+self.redis.lpush('potion_texture', 'stringy')
+self.redis.lpush('potion_texture', 'syrupy')
+self.redis.lpush('potion_texture', 'velvety')
+self.redis.lpush('potion_texture', 'watery')
+self.redis.lpush('potion_texture', 'whipped')
+self.redis.lpush('potion_container_material', 'glass')
+self.redis.lpush('potion_container_material', 'copper')
+self.redis.lpush('potion_container_material', 'tin')
+self.redis.lpush('potion_container_material', 'iron')
+self.redis.lpush('potion_container_material', 'ceramic')
+self.redis.lpush('potion_container_material', 'leather')
+            
+SET   potion_container_decoration_chance 30
+self.redis.lpush('potion_container_decoration', 'cryptic writing')
+self.redis.lpush('potion_container_decoration', 'worthless jewels')
+self.redis.lpush('potion_container_decoration', 'feathers')
+self.redis.lpush('potion_container_decoration', 'beaded strings')
+            
+SET   potion_container_label_chance 30
+self.redis.lpush('potion_container_label', 'illegible')
+self.redis.lpush('potion_container_label', 'clearly labeled')
+self.redis.lpush('potion_container_label', 'written in an uncommon language')
+self.redis.lpush('potion_container_label', 'ideogram')
+
+#The Weak Blur Potion is a lime green potion in an iron ____________.
+self.redis.lpush('potion_container_shape', 'ampoule')
+self.redis.lpush('potion_container_shape', 'bottle')
+self.redis.lpush('potion_container_shape', 'cannister')
+self.redis.lpush('potion_container_shape', 'canteen')
+self.redis.lpush('potion_container_shape', 'carafe')
+self.redis.lpush('potion_container_shape', 'decanter')
+self.redis.lpush('potion_container_shape', 'demijohn')
+self.redis.lpush('potion_container_shape', 'dropper')
+self.redis.lpush('potion_container_shape', 'ewer')
+self.redis.lpush('potion_container_shape', 'figurine')
+self.redis.lpush('potion_container_shape', 'flagon')
+self.redis.lpush('potion_container_shape', 'flask')
+self.redis.lpush('potion_container_shape', 'jar')
+self.redis.lpush('potion_container_shape', 'jug')
+self.redis.lpush('potion_container_shape', 'phial')
+self.redis.lpush('potion_container_shape', 'vial')
+
+
+# rarity- how rare is this potion in this region
+# rarity controls how likely they will know of it.
+
+

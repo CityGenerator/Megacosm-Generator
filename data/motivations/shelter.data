@@ -1,5 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationshelter_text to find a new home
-LPUSH motivationshelter_text by the loss of {{params.npc.sex['posessive']}} home

@@ -1,6 +1,0 @@
-
-# Bob is motivated
-
-LPUSH motivationgrowth_text to grow spiritually
-LPUSH motivationgrowth_text to find {{params.npc.sex['possessive']}} own home
-LPUSH motivationgrowth_text to improve {{params.npc.sex['possessive']}} life

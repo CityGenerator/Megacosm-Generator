@@ -1,6 +1,0 @@
-# Bob is motivated
-
-LPUSH motivationcomfort_text to find a comfortable chair
-LPUSH motivationcomfort_text by severe back pain
-LPUSH motivationcomfort_text to find a doctor for an injury
-
