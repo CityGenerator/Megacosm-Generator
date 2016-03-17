@@ -1,222 +1,222 @@
 #
 
-ZADD  country_size    5   {"name":"micro",    "mincities":1,   "maxcities":2,       "score":5    }
-ZADD  country_size    10   {"name":"small",    "mincities":3,   "maxcities":5,       "score":10    }
-ZADD  country_size    50   {"name":"medium",   "mincities":5,   "maxcities":20,      "score":50    }
-ZADD  country_size    80   {"name":"large",    "mincities":20,  "maxcities":100,     "score":80    }
-ZADD  country_size    100   {"name":"massive",  "mincities":100, "maxcities":200,     "score":100    }
+self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":5    }', '5')
+self.redis.zadd('country_size', '{"name":"small",    "mincities":3,   "maxcities":5,       "score":10    }', '10')
+self.redis.zadd('country_size', '{"name":"medium",   "mincities":5,   "maxcities":20,      "score":50    }', '50')
+self.redis.zadd('country_size', '{"name":"large",    "mincities":20,  "maxcities":100,     "score":80    }', '80')
+self.redis.zadd('country_size', '{"name":"massive",  "mincities":100, "maxcities":200,     "score":100    }', '100')
 
 
 
 # When foreigners are asked about Bogoland, they say it is __________ by other nations.
 
-ZADD  country_reputation    10   {"name":"despised",    "score":10    }
-ZADD  country_reputation    20   {"name":"hated",       "score":20    }
-ZADD  country_reputation    30   {"name":"feared",      "score":30    }
-ZADD  country_reputation    40   {"name":"ridiculed",   "score":40    }
-ZADD  country_reputation    50   {"name":"mocked",      "score":50    }
-ZADD  country_reputation    60   {"name":"praised",     "score":60    }
-ZADD  country_reputation    70   {"name":"loved",       "score":70    }
-ZADD  country_reputation    80   {"name":"respected",   "score":80    }
-ZADD  country_reputation    90   {"name":"honored",     "score":90    }
-ZADD  country_reputation    100   {"name":"revered",     "score":100    }
+self.redis.zadd('country_reputation', '{"name":"despised",    "score":10    }', '10')
+self.redis.zadd('country_reputation', '{"name":"hated",       "score":20    }', '20')
+self.redis.zadd('country_reputation', '{"name":"feared",      "score":30    }', '30')
+self.redis.zadd('country_reputation', '{"name":"ridiculed",   "score":40    }', '40')
+self.redis.zadd('country_reputation', '{"name":"mocked",      "score":50    }', '50')
+self.redis.zadd('country_reputation', '{"name":"praised",     "score":60    }', '60')
+self.redis.zadd('country_reputation', '{"name":"loved",       "score":70    }', '70')
+self.redis.zadd('country_reputation', '{"name":"respected",   "score":80    }', '80')
+self.redis.zadd('country_reputation', '{"name":"honored",     "score":90    }', '90')
+self.redis.zadd('country_reputation', '{"name":"revered",     "score":100    }', '100')
 
 
 # Many consider Bogoland ___________ towards other nations
-ZADD  country_aggression    10   {"name":"rabid",        "score":10    }
-ZADD  country_aggression    20   {"name":"hostile",      "score":20    }
-ZADD  country_aggression    30   {"name":"combative",    "score":30    }
-ZADD  country_aggression    40   {"name":"quarrelsome",  "score":40    }
-ZADD  country_aggression    50   {"name":"standoffish",  "score":50    }
-ZADD  country_aggression    60   {"name":"neutral",      "score":60    }
-ZADD  country_aggression    70   {"name":"supportive",   "score":70    }
-ZADD  country_aggression    80   {"name":"passive",      "score":80    }
-ZADD  country_aggression    90   {"name":"impotent",     "score":90    }
-ZADD  country_aggression    100   {"name":"timid",        "score":100    }
+self.redis.zadd('country_aggression', '{"name":"rabid",        "score":10    }', '10')
+self.redis.zadd('country_aggression', '{"name":"hostile",      "score":20    }', '20')
+self.redis.zadd('country_aggression', '{"name":"combative",    "score":30    }', '30')
+self.redis.zadd('country_aggression', '{"name":"quarrelsome",  "score":40    }', '40')
+self.redis.zadd('country_aggression', '{"name":"standoffish",  "score":50    }', '50')
+self.redis.zadd('country_aggression', '{"name":"neutral",      "score":60    }', '60')
+self.redis.zadd('country_aggression', '{"name":"supportive",   "score":70    }', '70')
+self.redis.zadd('country_aggression', '{"name":"passive",      "score":80    }', '80')
+self.redis.zadd('country_aggression', '{"name":"impotent",     "score":90    }', '90')
+self.redis.zadd('country_aggression', '{"name":"timid",        "score":100    }', '100')
 
 
 #People think the government of Bogoland is _____________________,
 
-ZADD  country_corruption    5  { "name":"the epitome of corruption",     "score":5    }
-ZADD  country_corruption    10  { "name":"corrupt and nefarious",     "score":10    }
-ZADD  country_corruption    15  { "name":"willing to look the other way for the right price",     "score":15    }
-ZADD  country_corruption    20  { "name":"crooked",         "score":20    }
-ZADD  country_corruption    25  { "name":"on the take",     "score":25    }
-ZADD  country_corruption    30  { "name":"underhanded",     "score":30    }
-ZADD  country_corruption    35  { "name":"unethical",       "score":35    }
-ZADD  country_corruption    40  { "name":"disreputable",    "score":40    }
-ZADD  country_corruption    45  { "name":"equitable",       "score":45    }
-ZADD  country_corruption    50  { "name":"reasonable",      "score":50    }
-ZADD  country_corruption    55  { "name":"fair",            "score":55    }
-ZADD  country_corruption    60  { "name":"honest",          "score":60    }
-ZADD  country_corruption    65  { "name":"principled",      "score":65    }
-ZADD  country_corruption    70  { "name":"decent",          "score":70    }
-ZADD  country_corruption    75  { "name":"resolute",        "score":75    }
-ZADD  country_corruption    80  { "name":"honorable",       "score":80    }
-ZADD  country_corruption    85  { "name":"trustworthy",     "score":85    }
-ZADD  country_corruption    90  { "name":"upright",         "score":90    }
-ZADD  country_corruption    95  { "name":"virtuous",        "score":95    }
-ZADD  country_corruption    100  { "name":"incorruptible",   "score":100    }
+self.redis.zadd('country_corruption', '{ "name":"the epitome of corruption",     "score":5    }', '5')
+self.redis.zadd('country_corruption', '{ "name":"corrupt and nefarious",     "score":10    }', '10')
+self.redis.zadd('country_corruption', '{ "name":"willing to look the other way for the right price",     "score":15    }', '15')
+self.redis.zadd('country_corruption', '{ "name":"crooked",         "score":20    }', '20')
+self.redis.zadd('country_corruption', '{ "name":"on the take",     "score":25    }', '25')
+self.redis.zadd('country_corruption', '{ "name":"underhanded",     "score":30    }', '30')
+self.redis.zadd('country_corruption', '{ "name":"unethical",       "score":35    }', '35')
+self.redis.zadd('country_corruption', '{ "name":"disreputable",    "score":40    }', '40')
+self.redis.zadd('country_corruption', '{ "name":"equitable",       "score":45    }', '45')
+self.redis.zadd('country_corruption', '{ "name":"reasonable",      "score":50    }', '50')
+self.redis.zadd('country_corruption', '{ "name":"fair",            "score":55    }', '55')
+self.redis.zadd('country_corruption', '{ "name":"honest",          "score":60    }', '60')
+self.redis.zadd('country_corruption', '{ "name":"principled",      "score":65    }', '65')
+self.redis.zadd('country_corruption', '{ "name":"decent",          "score":70    }', '70')
+self.redis.zadd('country_corruption', '{ "name":"resolute",        "score":75    }', '75')
+self.redis.zadd('country_corruption', '{ "name":"honorable",       "score":80    }', '80')
+self.redis.zadd('country_corruption', '{ "name":"trustworthy",     "score":85    }', '85')
+self.redis.zadd('country_corruption', '{ "name":"upright",         "score":90    }', '90')
+self.redis.zadd('country_corruption', '{ "name":"virtuous",        "score":95    }', '95')
+self.redis.zadd('country_corruption', '{ "name":"incorruptible",   "score":100    }', '100')
 
 # while the citizens _________ it.
-ZADD  country_approval    10 { "name":"despise",        "score":10    }
-ZADD  country_approval    20 { "name":"hate",           "score":20    }
-ZADD  country_approval    30 { "name":"fear",           "score":30    }
-ZADD  country_approval    40 { "name":"ridicule",       "score":40    }
-ZADD  country_approval    50 { "name":"mock",           "score":50    }
-ZADD  country_approval    60 { "name":"praise",         "score":60    }
-ZADD  country_approval    70 { "name":"love",           "score":70    }
-ZADD  country_approval    80 { "name":"respect",       "score":80    }
-ZADD  country_approval    90 { "name":"honor",          "score":90    }
-ZADD  country_approval    100 { "name":"revere",         "score":100    }
+self.redis.zadd('country_approval', '{ "name":"despise",        "score":10    }', '10')
+self.redis.zadd('country_approval', '{ "name":"hate",           "score":20    }', '20')
+self.redis.zadd('country_approval', '{ "name":"fear",           "score":30    }', '30')
+self.redis.zadd('country_approval', '{ "name":"ridicule",       "score":40    }', '40')
+self.redis.zadd('country_approval', '{ "name":"mock",           "score":50    }', '50')
+self.redis.zadd('country_approval', '{ "name":"praise",         "score":60    }', '60')
+self.redis.zadd('country_approval', '{ "name":"love",           "score":70    }', '70')
+self.redis.zadd('country_approval', '{ "name":"respect",       "score":80    }', '80')
+self.redis.zadd('country_approval', '{ "name":"honor",          "score":90    }', '90')
+self.redis.zadd('country_approval', '{ "name":"revere",         "score":100    }', '100')
 
 
 # The country\'s Government is often described as ____________________
-ZADD  country_efficiency    5  { "name":"the pinnacle of inefficiency",       "score":5    }
-ZADD  country_efficiency    10  { "name":"incapable of even simple tasks",     "score":10    }
-ZADD  country_efficiency    15  { "name":"clearly incompetent",                "score":15    }
-ZADD  country_efficiency    20  { "name":"horribly inefficient",               "score":20    }
-ZADD  country_efficiency    25  { "name":"sloppy and disorganized",            "score":25    }
-ZADD  country_efficiency    30  { "name":"inept and inadequate",               "score":30    }
-ZADD  country_efficiency    35  { "name":"slipshod",                           "score":35    }
-ZADD  country_efficiency    40  { "name":"minimally competent",                "score":40    }
-ZADD  country_efficiency    45  { "name":"somewhat capable",                    "score":45    }
-ZADD  country_efficiency    50  { "name":"adequate",                           "score":50    }
-ZADD  country_efficiency    55  { "name":"satisfactory",                       "score":55    }
-ZADD  country_efficiency    60  { "name":"mostly sufficient",                  "score":60    }
-ZADD  country_efficiency    65  { "name":"surprisingly decent",                "score":65    }
-ZADD  country_efficiency    70  { "name":"effective overall",                  "score":70    }
-ZADD  country_efficiency    75  { "name":"on the ball",                        "score":75    }
-ZADD  country_efficiency    80  { "name":"efficient",                          "score":80    }
-ZADD  country_efficiency    85  { "name":"shrewd",                             "score":85    }
-ZADD  country_efficiency    90  { "name":"surprisingly skillful",              "score":90    }
-ZADD  country_efficiency    95  { "name":"magnificently organized",            "score":95    }
-ZADD  country_efficiency    100  { "name":"ruthlessly effective",               "score":100    }
+self.redis.zadd('country_efficiency', '{ "name":"the pinnacle of inefficiency",       "score":5    }', '5')
+self.redis.zadd('country_efficiency', '{ "name":"incapable of even simple tasks",     "score":10    }', '10')
+self.redis.zadd('country_efficiency', '{ "name":"clearly incompetent",                "score":15    }', '15')
+self.redis.zadd('country_efficiency', '{ "name":"horribly inefficient",               "score":20    }', '20')
+self.redis.zadd('country_efficiency', '{ "name":"sloppy and disorganized",            "score":25    }', '25')
+self.redis.zadd('country_efficiency', '{ "name":"inept and inadequate",               "score":30    }', '30')
+self.redis.zadd('country_efficiency', '{ "name":"slipshod",                           "score":35    }', '35')
+self.redis.zadd('country_efficiency', '{ "name":"minimally competent",                "score":40    }', '40')
+self.redis.zadd('country_efficiency', '{ "name":"somewhat capable",                    "score":45    }', '45')
+self.redis.zadd('country_efficiency', '{ "name":"adequate",                           "score":50    }', '50')
+self.redis.zadd('country_efficiency', '{ "name":"satisfactory",                       "score":55    }', '55')
+self.redis.zadd('country_efficiency', '{ "name":"mostly sufficient",                  "score":60    }', '60')
+self.redis.zadd('country_efficiency', '{ "name":"surprisingly decent",                "score":65    }', '65')
+self.redis.zadd('country_efficiency', '{ "name":"effective overall",                  "score":70    }', '70')
+self.redis.zadd('country_efficiency', '{ "name":"on the ball",                        "score":75    }', '75')
+self.redis.zadd('country_efficiency', '{ "name":"efficient",                          "score":80    }', '80')
+self.redis.zadd('country_efficiency', '{ "name":"shrewd",                             "score":85    }', '85')
+self.redis.zadd('country_efficiency', '{ "name":"surprisingly skillful",              "score":90    }', '90')
+self.redis.zadd('country_efficiency', '{ "name":"magnificently organized",            "score":95    }', '95')
+self.redis.zadd('country_efficiency', '{ "name":"ruthlessly effective",               "score":100    }', '100')
 
 # The political influence of __CITY__ in the region is __INFLUENCE__ 
-ZADD  country_influence    5   { "name":"negligible",            "score":5    }
-ZADD  country_influence    10  { "name":"dwindling rapidly",     "score":10    }
-ZADD  country_influence    15  { "name":"wilting",               "score":15    }
-ZADD  country_influence    20  { "name":"wasting away",          "score":20    }
-ZADD  country_influence    25  { "name":"shrinking",             "score":25    }
-ZADD  country_influence    30  { "name":"declining",             "score":30    }
-ZADD  country_influence    35  { "name":"receding",              "score":35    }
-ZADD  country_influence    40  { "name":"consistent",            "score":40    }
-ZADD  country_influence    45  { "name":"steady",                "score":45    }
-ZADD  country_influence    50  { "name":"lasting",               "score":50    }
-ZADD  country_influence    55  { "name":"enduring",              "score":55    }
-ZADD  country_influence    60  { "name":"steadfast",             "score":60    }
-ZADD  country_influence    65  { "name":"unwavering",            "score":65    }
-ZADD  country_influence    70  { "name":"broadening",            "score":70    }
-ZADD  country_influence    75  { "name":"improving",             "score":75    }
-ZADD  country_influence    80  { "name":"spreading",             "score":80    }
-ZADD  country_influence    85  { "name":"growing",               "score":85    }
-ZADD  country_influence    90  { "name":"maturing",              "score":90    }
-ZADD  country_influence    95  { "name":"flourishing",           "score":95    }
-ZADD  country_influence    100  { "name":"thriving",              "score":100    }
+self.redis.zadd('country_influence', '{ "name":"negligible",            "score":5    }', '5')
+self.redis.zadd('country_influence', '{ "name":"dwindling rapidly",     "score":10    }', '10')
+self.redis.zadd('country_influence', '{ "name":"wilting",               "score":15    }', '15')
+self.redis.zadd('country_influence', '{ "name":"wasting away",          "score":20    }', '20')
+self.redis.zadd('country_influence', '{ "name":"shrinking",             "score":25    }', '25')
+self.redis.zadd('country_influence', '{ "name":"declining",             "score":30    }', '30')
+self.redis.zadd('country_influence', '{ "name":"receding",              "score":35    }', '35')
+self.redis.zadd('country_influence', '{ "name":"consistent",            "score":40    }', '40')
+self.redis.zadd('country_influence', '{ "name":"steady",                "score":45    }', '45')
+self.redis.zadd('country_influence', '{ "name":"lasting",               "score":50    }', '50')
+self.redis.zadd('country_influence', '{ "name":"enduring",              "score":55    }', '55')
+self.redis.zadd('country_influence', '{ "name":"steadfast",             "score":60    }', '60')
+self.redis.zadd('country_influence', '{ "name":"unwavering",            "score":65    }', '65')
+self.redis.zadd('country_influence', '{ "name":"broadening",            "score":70    }', '70')
+self.redis.zadd('country_influence', '{ "name":"improving",             "score":75    }', '75')
+self.redis.zadd('country_influence', '{ "name":"spreading",             "score":80    }', '80')
+self.redis.zadd('country_influence', '{ "name":"growing",               "score":85    }', '85')
+self.redis.zadd('country_influence', '{ "name":"maturing",              "score":90    }', '90')
+self.redis.zadd('country_influence', '{ "name":"flourishing",           "score":95    }', '95')
+self.redis.zadd('country_influence', '{ "name":"thriving",              "score":100    }', '100')
 
 # In times of crisis, the population ___________.
-ZADD  country_unity    10  { "name":"turns against itself",                               "score":10    }
-ZADD  country_unity    20  { "name":"is eager to point fingers",                          "score":20    }
-ZADD  country_unity    30  { "name":"gives up their freedom in exchange for security",    "score":30    }
-ZADD  country_unity    40  { "name":"flees for the hills",                                "score":40    }
-ZADD  country_unity    50  { "name":"cowers in fear",                                     "score":50    }
-ZADD  country_unity    60  { "name":"squabbles amongst themselves",                       "score":60    }
-ZADD  country_unity    70  { "name":"stages ineffective protests",                        "score":70    }
-ZADD  country_unity    80  { "name":"overcomes their differences",                        "score":80    }
-ZADD  country_unity    90  { "name":"comes together and fights as one",                   "score":90    }
-ZADD  country_unity    100  { "name":"rallies behind its leaders",                         "score":100    }
+self.redis.zadd('country_unity', '{ "name":"turns against itself",                               "score":10    }', '10')
+self.redis.zadd('country_unity', '{ "name":"is eager to point fingers",                          "score":20    }', '20')
+self.redis.zadd('country_unity', '{ "name":"gives up their freedom in exchange for security",    "score":30    }', '30')
+self.redis.zadd('country_unity', '{ "name":"flees for the hills",                                "score":40    }', '40')
+self.redis.zadd('country_unity', '{ "name":"cowers in fear",                                     "score":50    }', '50')
+self.redis.zadd('country_unity', '{ "name":"squabbles amongst themselves",                       "score":60    }', '60')
+self.redis.zadd('country_unity', '{ "name":"stages ineffective protests",                        "score":70    }', '70')
+self.redis.zadd('country_unity', '{ "name":"overcomes their differences",                        "score":80    }', '80')
+self.redis.zadd('country_unity', '{ "name":"comes together and fights as one",                   "score":90    }', '90')
+self.redis.zadd('country_unity', '{ "name":"rallies behind its leaders",                         "score":100    }', '100')
 
 
 #  Religion in Willis ________.
-ZADD  country_theology    5   { "name":"is strictly forbidden on pain of death",                                "score":5    }
-ZADD  country_theology    10  { "name":"is forbidden",                                                          "score":10    }
-ZADD  country_theology    15  { "name":"will get you in trouble",                                               "score":15    }
-ZADD  country_theology    20  { "name":"is unwelcome",                                                          "score":20    }
-ZADD  country_theology    25  { "name":"is unregulated",                                                        "score":25    }
-ZADD  country_theology    30  { "name":"is taxed heavily",                                                      "score":30    }
-ZADD  country_theology    35  { "name":"is tightly regulated by the government",                                "score":35    }
-ZADD  country_theology    40  { "name":"is viewed as a nuisance",                                               "score":40    }
-ZADD  country_theology    45  { "name":"is practiced behind closed doors",                                      "score":45    }
-ZADD  country_theology    50  { "name":"is left to the people",                                                 "score":50    }
-ZADD  country_theology    55  { "name":"is common place",                                                       "score":55    }
-ZADD  country_theology    60  { "name":"is unregulated and diverse, making it a melting pot of many faiths",    "score":60    }
-ZADD  country_theology    65  { "name":"enjoys many legal benefits",                                            "score":65    }
-ZADD  country_theology    70  { "name":"is widespread",                                                         "score":70    }
-ZADD  country_theology    75  { "name":"is sanctioned by the government",                                       "score":75    }
-ZADD  country_theology    80  { "name":"is limited to a single deity",                                          "score":80    }
-ZADD  country_theology    85  { "name":"plays a central role in the lawmaking process",                         "score":85    }
-ZADD  country_theology    90  { "name":"controlled by the government",                                          "score":90    }
-ZADD  country_theology    95  { "name":"is sacred, and the words of the gods are law",                          "score":95    }
-ZADD  country_theology    100  { "name":"is used to control the populace",                                       "score":100    }
+self.redis.zadd('country_theology', '{ "name":"is strictly forbidden on pain of death",                                "score":5    }', '5')
+self.redis.zadd('country_theology', '{ "name":"is forbidden",                                                          "score":10    }', '10')
+self.redis.zadd('country_theology', '{ "name":"will get you in trouble",                                               "score":15    }', '15')
+self.redis.zadd('country_theology', '{ "name":"is unwelcome",                                                          "score":20    }', '20')
+self.redis.zadd('country_theology', '{ "name":"is unregulated",                                                        "score":25    }', '25')
+self.redis.zadd('country_theology', '{ "name":"is taxed heavily",                                                      "score":30    }', '30')
+self.redis.zadd('country_theology', '{ "name":"is tightly regulated by the government",                                "score":35    }', '35')
+self.redis.zadd('country_theology', '{ "name":"is viewed as a nuisance",                                               "score":40    }', '40')
+self.redis.zadd('country_theology', '{ "name":"is practiced behind closed doors",                                      "score":45    }', '45')
+self.redis.zadd('country_theology', '{ "name":"is left to the people",                                                 "score":50    }', '50')
+self.redis.zadd('country_theology', '{ "name":"is common place",                                                       "score":55    }', '55')
+self.redis.zadd('country_theology', '{ "name":"is unregulated and diverse, making it a melting pot of many faiths",    "score":60    }', '60')
+self.redis.zadd('country_theology', '{ "name":"enjoys many legal benefits",                                            "score":65    }', '65')
+self.redis.zadd('country_theology', '{ "name":"is widespread",                                                         "score":70    }', '70')
+self.redis.zadd('country_theology', '{ "name":"is sanctioned by the government",                                       "score":75    }', '75')
+self.redis.zadd('country_theology', '{ "name":"is limited to a single deity",                                          "score":80    }', '80')
+self.redis.zadd('country_theology', '{ "name":"plays a central role in the lawmaking process",                         "score":85    }', '85')
+self.redis.zadd('country_theology', '{ "name":"controlled by the government",                                          "score":90    }', '90')
+self.redis.zadd('country_theology', '{ "name":"is sacred, and the words of the gods are law",                          "score":95    }', '95')
+self.redis.zadd('country_theology', '{ "name":"is used to control the populace",                                       "score":100    }', '100')
 
 
 # The Bogolan Empire is a large,  _____________ land.
-ZADD  country_age    5  { "name":"nascent",        "score":5    }
-ZADD  country_age    10  { "name":"dawning",        "score":10    }
-ZADD  country_age    15  { "name":"developing",     "score":15    }
-ZADD  country_age    20  { "name":"young",          "score":20    }
-ZADD  country_age    25  { "name":"budding",        "score":25    }
-ZADD  country_age    30  { "name":"fledgling",      "score":30    }
-ZADD  country_age    35  { "name":"emergent",       "score":35    }
-ZADD  country_age    40  { "name":"burgeoning",     "score":40    }
-ZADD  country_age    45  { "name":"maturing",       "score":45    }
-ZADD  country_age    50  { "name":"established",    "score":50    }
-ZADD  country_age    55  { "name":"developed",      "score":55    }
-ZADD  country_age    60  { "name":"modern",         "score":60    }
-ZADD  country_age    65  { "name":"settled",        "score":65    }
-ZADD  country_age    70  { "name":"grown",          "score":70    }
-ZADD  country_age    75  { "name":"mature",         "score":75    }
-ZADD  country_age    80  { "name":"old",            "score":80    }
-ZADD  country_age    90  { "name":"aging",          "score":90    }
-ZADD  country_age    100  { "name":"ancient",        "score":100    }
+self.redis.zadd('country_age', '{ "name":"nascent",        "score":5    }', '5')
+self.redis.zadd('country_age', '{ "name":"dawning",        "score":10    }', '10')
+self.redis.zadd('country_age', '{ "name":"developing",     "score":15    }', '15')
+self.redis.zadd('country_age', '{ "name":"young",          "score":20    }', '20')
+self.redis.zadd('country_age', '{ "name":"budding",        "score":25    }', '25')
+self.redis.zadd('country_age', '{ "name":"fledgling",      "score":30    }', '30')
+self.redis.zadd('country_age', '{ "name":"emergent",       "score":35    }', '35')
+self.redis.zadd('country_age', '{ "name":"burgeoning",     "score":40    }', '40')
+self.redis.zadd('country_age', '{ "name":"maturing",       "score":45    }', '45')
+self.redis.zadd('country_age', '{ "name":"established",    "score":50    }', '50')
+self.redis.zadd('country_age', '{ "name":"developed",      "score":55    }', '55')
+self.redis.zadd('country_age', '{ "name":"modern",         "score":60    }', '60')
+self.redis.zadd('country_age', '{ "name":"settled",        "score":65    }', '65')
+self.redis.zadd('country_age', '{ "name":"grown",          "score":70    }', '70')
+self.redis.zadd('country_age', '{ "name":"mature",         "score":75    }', '75')
+self.redis.zadd('country_age', '{ "name":"old",            "score":80    }', '80')
+self.redis.zadd('country_age', '{ "name":"aging",          "score":90    }', '90')
+self.redis.zadd('country_age', '{ "name":"ancient",        "score":100    }', '100')
 
 # Other nations see bogoland as ________________.
-ZADD  country_military    5   {"name":"peace-loving",         "score":5    }
-ZADD  country_military    10   {"name":"harmonious",           "score":10    }
-ZADD  country_military    15   {"name":"gentle",               "score":15    }
-ZADD  country_military    20   {"name":"sociable",             "score":20    }
-ZADD  country_military    25   {"name":"nonviolent",           "score":25    }
-ZADD  country_military    30   {"name":"tranquil",              "score":30    }
-ZADD  country_military    35   {"name":"mellow",               "score":35    }
-ZADD  country_military    40   {"name":"cordial",              "score":40    }
-ZADD  country_military    45   {"name":"neutral",              "score":45    }
-ZADD  country_military    50   {"name":"agitated",             "score":50    }
-ZADD  country_military    55   {"name":"assertive",            "score":55    }
-ZADD  country_military    60   {"name":"combat-ready",         "score":60    }
-ZADD  country_military    65   {"name":"violent",              "score":65    }
-ZADD  country_military    70   {"name":"militaristic",         "score":70    }
-ZADD  country_military    75   {"name":"militant",             "score":75    }
-ZADD  country_military    80   {"name":"warlike",              "score":80    }
-ZADD  country_military    85   {"name":"warmongers",           "score":85    }
-ZADD  country_military    90   {"name":"a threat",             "score":90    }
-ZADD  country_military    95   {"name":"an imminent threat",   "score":95    }
-ZADD  country_military    100   {"name":"bloodthirsty",         "score":100    }
+self.redis.zadd('country_military', '{"name":"peace-loving",         "score":5    }', '5')
+self.redis.zadd('country_military', '{"name":"harmonious",           "score":10    }', '10')
+self.redis.zadd('country_military', '{"name":"gentle",               "score":15    }', '15')
+self.redis.zadd('country_military', '{"name":"sociable",             "score":20    }', '20')
+self.redis.zadd('country_military', '{"name":"nonviolent",           "score":25    }', '25')
+self.redis.zadd('country_military', '{"name":"tranquil",              "score":30    }', '30')
+self.redis.zadd('country_military', '{"name":"mellow",               "score":35    }', '35')
+self.redis.zadd('country_military', '{"name":"cordial",              "score":40    }', '40')
+self.redis.zadd('country_military', '{"name":"neutral",              "score":45    }', '45')
+self.redis.zadd('country_military', '{"name":"agitated",             "score":50    }', '50')
+self.redis.zadd('country_military', '{"name":"assertive",            "score":55    }', '55')
+self.redis.zadd('country_military', '{"name":"combat-ready",         "score":60    }', '60')
+self.redis.zadd('country_military', '{"name":"violent",              "score":65    }', '65')
+self.redis.zadd('country_military', '{"name":"militaristic",         "score":70    }', '70')
+self.redis.zadd('country_military', '{"name":"militant",             "score":75    }', '75')
+self.redis.zadd('country_military', '{"name":"warlike",              "score":80    }', '80')
+self.redis.zadd('country_military', '{"name":"warmongers",           "score":85    }', '85')
+self.redis.zadd('country_military', '{"name":"a threat",             "score":90    }', '90')
+self.redis.zadd('country_military', '{"name":"an imminent threat",   "score":95    }', '95')
+self.redis.zadd('country_military', '{"name":"bloodthirsty",         "score":100    }', '100')
 
 
 # Socially, Bogoland is _______________
 
-ZADD  country_social     5   {"name":"libertarian",         "score":5     }
-ZADD  country_social    10   {"name":"populist",            "score":10    }
-ZADD  country_social    30   {"name":"individualistic",     "score":30    }
-ZADD  country_social    40   {"name":"balanced",            "score":40    }
-ZADD  country_social    60   {"name":"rigid",               "score":60    }
-ZADD  country_social    80   {"name":"harsh",               "score":80    }
-ZADD  country_social    95   {"name":"disciplinarian",      "score":95    }
-ZADD  country_social   100   {"name":"authoritarian",       "score":100   }
+self.redis.zadd('country_social', '{"name":"libertarian",         "score":5     }', '5')
+self.redis.zadd('country_social', '{"name":"populist",            "score":10    }', '10')
+self.redis.zadd('country_social', '{"name":"individualistic",     "score":30    }', '30')
+self.redis.zadd('country_social', '{"name":"balanced",            "score":40    }', '40')
+self.redis.zadd('country_social', '{"name":"rigid",               "score":60    }', '60')
+self.redis.zadd('country_social', '{"name":"harsh",               "score":80    }', '80')
+self.redis.zadd('country_social', '{"name":"disciplinarian",      "score":95    }', '95')
+self.redis.zadd('country_social', '{"name":"authoritarian",       "score":100   }', '100')
 
 
 # and _______________
 
-ZADD  country_economic    10   {"name":"liberal",          "score":10    }
-ZADD  country_economic    20   {"name":"progressive",      "score":20    }
-ZADD  country_economic    30   {"name":"lenient",          "score":30    }
-ZADD  country_economic    40   {"name":"permissive",       "score":40    }
-ZADD  country_economic    60   {"name":"understanding",    "score":60    }
-ZADD  country_economic    70   {"name":"strict",           "score":70    }
-ZADD  country_economic    80   {"name":"limited",          "score":80    }
-ZADD  country_economic    90   {"name":"intolerant",       "score":90    }
-ZADD  country_economic   100   {"name":"conservative",     "score":100   }
+self.redis.zadd('country_economic', '{"name":"liberal",          "score":10    }', '10')
+self.redis.zadd('country_economic', '{"name":"progressive",      "score":20    }', '20')
+self.redis.zadd('country_economic', '{"name":"lenient",          "score":30    }', '30')
+self.redis.zadd('country_economic', '{"name":"permissive",       "score":40    }', '40')
+self.redis.zadd('country_economic', '{"name":"understanding",    "score":60    }', '60')
+self.redis.zadd('country_economic', '{"name":"strict",           "score":70    }', '70')
+self.redis.zadd('country_economic', '{"name":"limited",          "score":80    }', '80')
+self.redis.zadd('country_economic', '{"name":"intolerant",       "score":90    }', '90')
+self.redis.zadd('country_economic', '{"name":"conservative",     "score":100   }', '100')
 
 
 # The right to govern was granted by _______________
@@ -252,9 +252,9 @@ self.redis.lpush('country_maintained', 'through the acclaim of the nobles')
 self.redis.lpush('country_maintained', 'by unwavering supporters')
 self.redis.lpush('country_maintained', 'through the support of merchant groups')
 
-ZADD country_regiondetails 10  {"name":"a single",     "score":10,  "mincount":1,   "maxcount":1   }
-ZADD country_regiondetails 20  {"name":"a couple",     "score":20,  "mincount":2,   "maxcount":2   }
-ZADD country_regiondetails 90  {"name":"several",      "score":90,  "mincount":3,   "maxcount":6   }
-ZADD country_regiondetails 95  {"name":"many",         "score":95,  "mincount":6,   "maxcount":11  }
-ZADD country_regiondetails 100 {"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }
+self.redis.zadd('country_regiondetails', '{"name":"a single",     "score":10,  "mincount":1,   "maxcount":1   }', '10')
+self.redis.zadd('country_regiondetails', '{"name":"a couple",     "score":20,  "mincount":2,   "maxcount":2   }', '20')
+self.redis.zadd('country_regiondetails', '{"name":"several",      "score":90,  "mincount":3,   "maxcount":6   }', '90')
+self.redis.zadd('country_regiondetails', '{"name":"many",         "score":95,  "mincount":6,   "maxcount":11  }', '95')
+self.redis.zadd('country_regiondetails', '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }', '100')
 

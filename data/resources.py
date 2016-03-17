@@ -1,37 +1,37 @@
 #ubiquity - Where can you find it? anywhere? just here?
 # This resource is _________ to this particular region,
-ZADD resource_ubiquity  50 {  "name":"very specific",      "score":50        }
-ZADD resource_ubiquity 100 {  "name":"not specific",       "score":100       }
+self.redis.zadd('resource_ubiquity', '{  "name":"very specific",      "score":50        }', '50')
+self.redis.zadd('resource_ubiquity', '{  "name":"not specific",       "score":100       }', '100')
     
 #Utility -  Level of Usefulness; Wool sweaters are not as useful in the tropics.
 # which many consider ____________.
-ZADD resource_utility   50 {  "name":"useless",         "score":50       }
-ZADD resource_utility  100 {  "name":"useful",          "score":100      }
+self.redis.zadd('resource_utility', '{  "name":"useless",         "score":50       }', '50')
+self.redis.zadd('resource_utility', '{  "name":"useful",          "score":100      }', '100')
 
 #Value- what do people consider this? (can be recalculated rather than randomly selected)
 # slippers are often seen as a _______ resource.
-ZADD resource_value   50 {  "name":"inexpensive",         "score":50       }
-ZADD resource_value  100 {  "name":"valuable",          "score":100      }
+self.redis.zadd('resource_value', '{  "name":"inexpensive",         "score":50       }', '50')
+self.redis.zadd('resource_value', '{  "name":"valuable",          "score":100      }', '100')
 
 #Competition -  How available is the resource for the region? the country? is this place the sole supplier? Is there a trade war?
 #Competition in the frog market is ____
-ZADD resource_competition   50 {  "name":"negligible",         "score":50       }
-ZADD resource_competition  100 {  "name":"fierce",             "score":100      }
+self.redis.zadd('resource_competition', '{  "name":"negligible",         "score":50       }', '50')
+self.redis.zadd('resource_competition', '{  "name":"fierce",             "score":100      }', '100')
 
 #Management - Is any effort being put in place to artificially control the production?
 # And are ________ managed
-ZADD resource_management   50 {  "name":"poorly",         "score":50       }
-ZADD resource_management  100 {  "name":"well",           "score":100      }
+self.redis.zadd('resource_management', '{  "name":"poorly",         "score":50       }', '50')
+self.redis.zadd('resource_management', '{  "name":"well",           "score":100      }', '100')
        
 # Depletion -  the amount of stuff left
 # The deep mines are ___________.
-ZADD resource_depletion   50 {  "name":"nearly-empty",         "score":50       }
-ZADD resource_depletion  100 {  "name":"bountiful",           "score":100      }
+self.redis.zadd('resource_depletion', '{  "name":"nearly-empty",         "score":50       }', '50')
+self.redis.zadd('resource_depletion', '{  "name":"bountiful",           "score":100      }', '100')
 
 # export region -  where does it get exported
 # the fruit crops are exported  ___________.
-ZADD resource_exportregion  50 {  "name":"to neighboring cities",         "score":50       }
-ZADD resource_exportregion 100 {  "name":"across the continent",           "score":100      }
+self.redis.zadd('resource_exportregion', '{  "name":"to neighboring cities",         "score":50       }', '50')
+self.redis.zadd('resource_exportregion', '{  "name":"across the continent",           "score":100      }', '100')
 
 self.redis.lpush('resource_kind', 'naturalresource')
 self.redis.lpush('resource_kind', 'laborresource')

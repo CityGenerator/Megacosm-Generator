@@ -1,82 +1,82 @@
 # Planet details
 
-ZADD planet_size 5  {"name":"tiny",      "multiplier":0.4,  "score":5   } 
-ZADD planet_size 10 {"name":"small",     "multiplier":0.7,  "score":10   } 
-ZADD planet_size 65 {"name":"average",   "multiplier":1.0,  "score":65   } 
-ZADD planet_size 85 {"name":"large",     "multiplier":1.5,  "score":85   } 
-ZADD planet_size 100 {"name":"massive",  "multiplier":2.0,  "score":100   } 
+self.redis.zadd('planet_size', '{"name":"tiny",      "multiplier":0.4,  "score":5   } ', '5')
+self.redis.zadd('planet_size', '{"name":"small",     "multiplier":0.7,  "score":10   } ', '10')
+self.redis.zadd('planet_size', '{"name":"average",   "multiplier":1.0,  "score":65   } ', '65')
+self.redis.zadd('planet_size', '{"name":"large",     "multiplier":1.5,  "score":85   } ', '85')
+self.redis.zadd('planet_size', '{"name":"massive",  "multiplier":2.0,  "score":100   } ', '100')
 
-ZADD planet_temp 5   {"name":"unbearably cold", "multiplier":0.5,  "score":5   } 
-ZADD planet_temp 10  {"name":"freezing",        "multiplier":0.6,  "score":10   } 
-ZADD planet_temp 15  {"name":"cold",            "multiplier":0.7,  "score":15   } 
-ZADD planet_temp 20  {"name":"cool",            "multiplier":0.8,  "score":20   } 
-ZADD planet_temp 30  {"name":"mild",            "multiplier":0.9,  "score":30   } 
-ZADD planet_temp 70  {"name":"ideal",           "multiplier":1.0,  "score":70   } 
-ZADD planet_temp 80  {"name":"pleasant",        "multiplier":1.1,  "score":80   } 
-ZADD planet_temp 85  {"name":"warm",            "multiplier":1.2,  "score":85   } 
-ZADD planet_temp 90  {"name":"hot",             "multiplier":1.3,  "score":90   } 
-ZADD planet_temp 95  {"name":"sweltering",      "multiplier":1.4,  "score":95   } 
-ZADD planet_temp 100 {"name":"unbearably hot",  "multiplier":1.5,  "score":100   } 
+self.redis.zadd('planet_temp', '{"name":"unbearably cold", "multiplier":0.5,  "score":5   } ', '5')
+self.redis.zadd('planet_temp', '{"name":"freezing",        "multiplier":0.6,  "score":10   } ', '10')
+self.redis.zadd('planet_temp', '{"name":"cold",            "multiplier":0.7,  "score":15   } ', '15')
+self.redis.zadd('planet_temp', '{"name":"cool",            "multiplier":0.8,  "score":20   } ', '20')
+self.redis.zadd('planet_temp', '{"name":"mild",            "multiplier":0.9,  "score":30   } ', '30')
+self.redis.zadd('planet_temp', '{"name":"ideal",           "multiplier":1.0,  "score":70   } ', '70')
+self.redis.zadd('planet_temp', '{"name":"pleasant",        "multiplier":1.1,  "score":80   } ', '80')
+self.redis.zadd('planet_temp', '{"name":"warm",            "multiplier":1.2,  "score":85   } ', '85')
+self.redis.zadd('planet_temp', '{"name":"hot",             "multiplier":1.3,  "score":90   } ', '90')
+self.redis.zadd('planet_temp', '{"name":"sweltering",      "multiplier":1.4,  "score":95   } ', '95')
+self.redis.zadd('planet_temp', '{"name":"unbearably hot",  "multiplier":1.5,  "score":100   } ', '100')
                               
-ZADD planet_atmosphere 5   {"name":"thin",     "opacity":0.01,  "score":5   } 
-ZADD planet_atmosphere 10  {"name":"meager",   "opacity":0.10,  "score":10   } 
-ZADD planet_atmosphere 25  {"name":"slight",   "opacity":0.30,  "score":25   } 
-ZADD planet_atmosphere 75  {"name":"average",  "opacity":0.50,  "score":75   } 
-ZADD planet_atmosphere 85  {"name":"thick",    "opacity":0.70,  "score":85   } 
-ZADD planet_atmosphere 95  {"name":"heavy",    "opacity":0.90,  "score":95   } 
-ZADD planet_atmosphere 100 {"name":"dense",    "opacity":0.99,  "score":100   } 
+self.redis.zadd('planet_atmosphere', '{"name":"thin",     "opacity":0.01,  "score":5   } ', '5')
+self.redis.zadd('planet_atmosphere', '{"name":"meager",   "opacity":0.10,  "score":10   } ', '10')
+self.redis.zadd('planet_atmosphere', '{"name":"slight",   "opacity":0.30,  "score":25   } ', '25')
+self.redis.zadd('planet_atmosphere', '{"name":"average",  "opacity":0.50,  "score":75   } ', '75')
+self.redis.zadd('planet_atmosphere', '{"name":"thick",    "opacity":0.70,  "score":85   } ', '85')
+self.redis.zadd('planet_atmosphere', '{"name":"heavy",    "opacity":0.90,  "score":95   } ', '95')
+self.redis.zadd('planet_atmosphere', '{"name":"dense",    "opacity":0.99,  "score":100   } ', '100')
 
 
-ZADD planet_wind 5   {"name":"dead",         "multiplier":0.5,  "score":5   } 
-ZADD planet_wind 10  {"name":"soft",         "multiplier":0.7,  "score":10   } 
-ZADD planet_wind 25  {"name":"slight",       "multiplier":0.9,  "score":25   } 
-ZADD planet_wind 75  {"name":"breezy",       "multiplier":1.0,  "score":75   } 
-ZADD planet_wind 85  {"name":"gusty",        "multiplier":1.1,  "score":85   } 
-ZADD planet_wind 95  {"name":"heavy",        "multiplier":1.3,  "score":95   } 
-ZADD planet_wind 100 {"name":"overwhelming", "multiplier":1.5,  "score":100   } 
+self.redis.zadd('planet_wind', '{"name":"dead",         "multiplier":0.5,  "score":5   } ', '5')
+self.redis.zadd('planet_wind', '{"name":"soft",         "multiplier":0.7,  "score":10   } ', '10')
+self.redis.zadd('planet_wind', '{"name":"slight",       "multiplier":0.9,  "score":25   } ', '25')
+self.redis.zadd('planet_wind', '{"name":"breezy",       "multiplier":1.0,  "score":75   } ', '75')
+self.redis.zadd('planet_wind', '{"name":"gusty",        "multiplier":1.1,  "score":85   } ', '85')
+self.redis.zadd('planet_wind', '{"name":"heavy",        "multiplier":1.3,  "score":95   } ', '95')
+self.redis.zadd('planet_wind', '{"name":"overwhelming", "multiplier":1.5,  "score":100   } ', '100')
 
-ZADD planet_day 5   {"name":"short",       "minhour":10,     "maxhour":15 ,  "score":5   } 
-ZADD planet_day 10  {"name":"swift",       "minhour":16,     "maxhour":20 ,  "score":10   } 
-ZADD planet_day 90  {"name":"average",     "minhour":21,     "maxhour":40 ,  "score":90   } 
-ZADD planet_day 95  {"name":"slow",        "minhour":40,     "maxhour":50 ,  "score":95   } 
-ZADD planet_day 100 {"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } 
+self.redis.zadd('planet_day', '{"name":"short",       "minhour":10,     "maxhour":15 ,  "score":5   } ', '5')
+self.redis.zadd('planet_day', '{"name":"swift",       "minhour":16,     "maxhour":20 ,  "score":10   } ', '10')
+self.redis.zadd('planet_day', '{"name":"average",     "minhour":21,     "maxhour":40 ,  "score":90   } ', '90')
+self.redis.zadd('planet_day', '{"name":"slow",        "minhour":40,     "maxhour":50 ,  "score":95   } ', '95')
+self.redis.zadd('planet_day', '{"name":"long",        "minhour":51,     "maxhour":100,  "score":100   } ', '100')
 
-ZADD planet_year 5   {"name":"short"    ,  "score":5   } 
-ZADD planet_year 10  {"name":"swift"    ,  "score":10   } 
-ZADD planet_year 90  {"name":"average"  ,  "score":90   } 
-ZADD planet_year 95  {"name":"slow"     ,  "score":95   } 
-ZADD planet_year 100 {"name":"long"     ,  "score":100   } 
+self.redis.zadd('planet_year', '{"name":"short"    ,  "score":5   } ', '5')
+self.redis.zadd('planet_year', '{"name":"swift"    ,  "score":10   } ', '10')
+self.redis.zadd('planet_year', '{"name":"average"  ,  "score":90   } ', '90')
+self.redis.zadd('planet_year', '{"name":"slow"     ,  "score":95   } ', '95')
+self.redis.zadd('planet_year', '{"name":"long"     ,  "score":100   } ', '100')
 
-ZADD planet_civilization 5   {"name":"crude"       ,  "score":5   } 
-ZADD planet_civilization 10  {"name":"scattered"   ,  "score":10   } 
-ZADD planet_civilization 90  {"name":"moderate"    ,  "score":90   } 
-ZADD planet_civilization 95  {"name":"prosperous"  ,  "score":95   } 
-ZADD planet_civilization 100 {"name":"thriving"    ,  "score":100   } 
+self.redis.zadd('planet_civilization', '{"name":"crude"       ,  "score":5   } ', '5')
+self.redis.zadd('planet_civilization', '{"name":"scattered"   ,  "score":10   } ', '10')
+self.redis.zadd('planet_civilization', '{"name":"moderate"    ,  "score":90   } ', '90')
+self.redis.zadd('planet_civilization', '{"name":"prosperous"  ,  "score":95   } ', '95')
+self.redis.zadd('planet_civilization', '{"name":"thriving"    ,  "score":100   } ', '100')
 
-ZADD planet_precipitation  10 {"name":"scarce",    "multiplier":0.5 ,  "score":10   } 
-ZADD planet_precipitation  30 {"name":"rare",      "multiplier":0.8 ,  "score":30   } 
-ZADD planet_precipitation  55 {"name":"common",    "multiplier":0.9 ,  "score":55   } 
-ZADD planet_precipitation  85 {"name":"plentiful", "multiplier":1.1 ,  "score":85   } 
-ZADD planet_precipitation  95 {"name":"abundant",  "multiplier":1.2 ,  "score":95   } 
-ZADD planet_precipitation 100 {"name":"excessive", "multiplier":1.5 ,  "score":100   } 
+self.redis.zadd('planet_precipitation', '{"name":"scarce",    "multiplier":0.5 ,  "score":10   } ', '10')
+self.redis.zadd('planet_precipitation', '{"name":"rare",      "multiplier":0.8 ,  "score":30   } ', '30')
+self.redis.zadd('planet_precipitation', '{"name":"common",    "multiplier":0.9 ,  "score":55   } ', '55')
+self.redis.zadd('planet_precipitation', '{"name":"plentiful", "multiplier":1.1 ,  "score":85   } ', '85')
+self.redis.zadd('planet_precipitation', '{"name":"abundant",  "multiplier":1.2 ,  "score":95   } ', '95')
+self.redis.zadd('planet_precipitation', '{"name":"excessive", "multiplier":1.5 ,  "score":100   } ', '100')
 
 # Details for moons.
 
-ZADD planet_mooncount 10     {"name":"no moons",         "count":0,  "score":10   } 
-ZADD planet_mooncount 70     {"name":"single moon",      "count":1,  "score":70   } 
-ZADD planet_mooncount 95     {"name":"double moon",      "count":2,  "score":95   } 
-ZADD planet_mooncount 97     {"name":"triple moon",      "count":3,  "score":97   } 
-ZADD planet_mooncount 100    {"name":"quadruple moon",   "count":4,  "score":100   } 
+self.redis.zadd('planet_mooncount', '{"name":"no moons",         "count":0,  "score":10   } ', '10')
+self.redis.zadd('planet_mooncount', '{"name":"single moon",      "count":1,  "score":70   } ', '70')
+self.redis.zadd('planet_mooncount', '{"name":"double moon",      "count":2,  "score":95   } ', '95')
+self.redis.zadd('planet_mooncount', '{"name":"triple moon",      "count":3,  "score":97   } ', '97')
+self.redis.zadd('planet_mooncount', '{"name":"quadruple moon",   "count":4,  "score":100   } ', '100')
 
 
 # Most of this planet appears to be in the Stone Age, which is known for 
-ZADD planet_technology 5    {"name":"Stone Age",        "description":"implements made of stone",          "score":5   } 
-ZADD planet_technology 10   {"name":"Bronze Age",       "description":"implements of copper and bronze",    "score":10   } 
-ZADD planet_technology 15   {"name":"Iron Age",         "description":"implements of iron and steel",       "score":15   } 
-ZADD planet_technology 20   {"name":"Ancient Age",      "description":"advances in engineering",            "score":20   } 
-ZADD planet_technology 90   {"name":"Middle Age",       "description":"advances in weaponry",               "score":90   } 
-ZADD planet_technology 95   {"name":"Modern Age",       "description":"advances in science",                "score":95   } 
-ZADD planet_technology 100  {"name":"Contemporary Age", "description":"being similar to our own",           "score":100   } 
+self.redis.zadd('planet_technology', '{"name":"Stone Age",        "description":"implements made of stone",          "score":5   } ', '5')
+self.redis.zadd('planet_technology', '{"name":"Bronze Age",       "description":"implements of copper and bronze",    "score":10   } ', '10')
+self.redis.zadd('planet_technology', '{"name":"Iron Age",         "description":"implements of iron and steel",       "score":15   } ', '15')
+self.redis.zadd('planet_technology', '{"name":"Ancient Age",      "description":"advances in engineering",            "score":20   } ', '20')
+self.redis.zadd('planet_technology', '{"name":"Middle Age",       "description":"advances in weaponry",               "score":90   } ', '90')
+self.redis.zadd('planet_technology', '{"name":"Modern Age",       "description":"advances in science",                "score":95   } ', '95')
+self.redis.zadd('planet_technology', '{"name":"Contemporary Age", "description":"being similar to our own",           "score":100   } ', '100')
 
 
 

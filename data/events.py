@@ -5,23 +5,23 @@ self.redis.lpush('event_template', '{{params.variety }} {{params.kind}}, which i
 
 #Magnitude - How important is this event?
 # The event is _________ to the people in the area.
-ZADD event_magnitude   0 {  "name":"negligible",                    "score":0        }
-ZADD event_magnitude   5 {  "name":"trivial",                       "score":5        }
-ZADD event_magnitude  10 {  "name":"unimportant",                   "score":10       }
-ZADD event_magnitude  15 {  "name":"of minor importance",           "score":15       }
-ZADD event_magnitude  20 {  "name":"of lesser concern",             "score":20       }
-ZADD event_magnitude  25 {  "name":"of casual interest",            "score":25       }
-ZADD event_magnitude  40 {  "name":"relevant",                      "score":40       }
-ZADD event_magnitude  45 {  "name":"of some importance",            "score":45       }
-ZADD event_magnitude  50 {  "name":"of some concern",               "score":50       }
-ZADD event_magnitude  55 {  "name":"worthy of consideration",       "score":55       }
-ZADD event_magnitude  70 {  "name":"important",                     "score":70       }
-ZADD event_magnitude  75 {  "name":"of significant import",         "score":75       }
-ZADD event_magnitude  80 {  "name":"of considerable importance",    "score":80       }
-ZADD event_magnitude  85 {  "name":"of major concern",              "score":85       }
-ZADD event_magnitude  90 {  "name":"of great significance",         "score":90       }
-ZADD event_magnitude  95 {  "name":"of critical concern",           "score":95       }
-ZADD event_magnitude 100 {  "name":"of dire importance",            "score":100      }
+self.redis.zadd('event_magnitude', '{  "name":"negligible",                    "score":0        }', '0')
+self.redis.zadd('event_magnitude', '{  "name":"trivial",                       "score":5        }', '5')
+self.redis.zadd('event_magnitude', '{  "name":"unimportant",                   "score":10       }', '10')
+self.redis.zadd('event_magnitude', '{  "name":"of minor importance",           "score":15       }', '15')
+self.redis.zadd('event_magnitude', '{  "name":"of lesser concern",             "score":20       }', '20')
+self.redis.zadd('event_magnitude', '{  "name":"of casual interest",            "score":25       }', '25')
+self.redis.zadd('event_magnitude', '{  "name":"relevant",                      "score":40       }', '40')
+self.redis.zadd('event_magnitude', '{  "name":"of some importance",            "score":45       }', '45')
+self.redis.zadd('event_magnitude', '{  "name":"of some concern",               "score":50       }', '50')
+self.redis.zadd('event_magnitude', '{  "name":"worthy of consideration",       "score":55       }', '55')
+self.redis.zadd('event_magnitude', '{  "name":"important",                     "score":70       }', '70')
+self.redis.zadd('event_magnitude', '{  "name":"of significant import",         "score":75       }', '75')
+self.redis.zadd('event_magnitude', '{  "name":"of considerable importance",    "score":80       }', '80')
+self.redis.zadd('event_magnitude', '{  "name":"of major concern",              "score":85       }', '85')
+self.redis.zadd('event_magnitude', '{  "name":"of great significance",         "score":90       }', '90')
+self.redis.zadd('event_magnitude', '{  "name":"of critical concern",           "score":95       }', '95')
+self.redis.zadd('event_magnitude', '{  "name":"of dire importance",            "score":100      }', '100')
 
 
 self.redis.lpush('event_kind', 'festival')

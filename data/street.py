@@ -4,31 +4,31 @@
 # {{tempobj.name.fullname}} is {{tempobj.popularity[\'name\']|article}} {{tempobj.size[\'name\']}} {{tempobj.kind}} that is {{tempobj.age[\'name\']|article}} {{tempobj.important[\'name\']}} route in the location.
 
 
-ZADD  street_age  30  { "name":"new",             "score":30    }
-ZADD  street_age  40  { "name":"established",     "score":40    }
-ZADD  street_age  60  { "name":"modern",          "score":60    }
-ZADD  street_age  80  { "name":"old",             "score":80    }
-ZADD  street_age 100  { "name":"ancient",         "score":100   }
+self.redis.zadd('street_age', '{ "name":"new",             "score":30    }', '30')
+self.redis.zadd('street_age', '{ "name":"established",     "score":40    }', '40')
+self.redis.zadd('street_age', '{ "name":"modern",          "score":60    }', '60')
+self.redis.zadd('street_age', '{ "name":"old",             "score":80    }', '80')
+self.redis.zadd('street_age', '{ "name":"ancient",         "score":100   }', '100')
 
 # Corning street is an unpopular narrow road that is an ancient  _________ route in the region
-ZADD  street_important  50  { "name":"minor",      "score":50    }
-ZADD  street_important  90  { "name":"major",      "score":90    }
-ZADD  street_important 100  { "name":"primary",    "score":100   }
+self.redis.zadd('street_important', '{ "name":"minor",      "score":50    }', '50')
+self.redis.zadd('street_important', '{ "name":"major",      "score":90    }', '90')
+self.redis.zadd('street_important', '{ "name":"primary",    "score":100   }', '100')
 
 # Corning street is an unpopular narrow road that is an ancient major route in the _______
-ZADD  street_scope  25  { "name":"district",    "score":25    }
-ZADD  street_scope  50  { "name":"city",        "score":50    }
-ZADD  street_scope  75  { "name":"region",      "score":75    }
-ZADD  street_scope 100  { "name":"country",     "score":100   }
+self.redis.zadd('street_scope', '{ "name":"district",    "score":25    }', '25')
+self.redis.zadd('street_scope', '{ "name":"city",        "score":50    }', '50')
+self.redis.zadd('street_scope', '{ "name":"region",      "score":75    }', '75')
+self.redis.zadd('street_scope', '{ "name":"country",     "score":100   }', '100')
 
 # Corning street is an unpopular ______ road that is an ancient major route in the region
-ZADD  street_size  50  { "name":"narrow",           "score":50    }
-ZADD  street_size  90  { "name":"broad",            "score":90    }
-ZADD  street_size 100  { "name":"wide",             "score":100   }
+self.redis.zadd('street_size', '{ "name":"narrow",           "score":50    }', '50')
+self.redis.zadd('street_size', '{ "name":"broad",            "score":90    }', '90')
+self.redis.zadd('street_size', '{ "name":"wide",             "score":100   }', '100')
 
-ZADD  street_popularity  50  { "name":"unpopular",  "score":50    }
-ZADD  street_popularity  70  { "name":"common",     "score":70    }
-ZADD  street_popularity 100  { "name":"popular",    "score":100   }
+self.redis.zadd('street_popularity', '{ "name":"unpopular",  "score":50    }', '50')
+self.redis.zadd('street_popularity', '{ "name":"common",     "score":70    }', '70')
+self.redis.zadd('street_popularity', '{ "name":"popular",    "score":100   }', '100')
 
 # Boson ________ is a[n] popular  ______ that runs ________
 self.redis.lpush('street_kind', 'path')
@@ -44,126 +44,126 @@ self.redis.lpush('street_kind', 'route')
 self.redis.lpush('street_kind', 'through-way')
 
 #        <pollution>
-ZADD street_pollution 10  {"name":"pristine",       "score":10  }
-ZADD street_pollution 20  {"name":"sterile",        "score":20  }
-ZADD street_pollution 30  {"name":"clean",          "score":30  }
-ZADD street_pollution 40  {"name":"tidy",           "score":40  }
-ZADD street_pollution 60  {"name":"disheveled",     "score":60  }
-ZADD street_pollution 70  {"name":"grungy",         "score":70  }
-ZADD street_pollution 80  {"name":"polluted",       "score":80  }
-ZADD street_pollution 90  {"name":"filthy",         "score":90  }
-ZADD street_pollution 100 {"name":"squalid",        "score":100 }
+self.redis.zadd('street_pollution', '{"name":"pristine",       "score":10  }', '10')
+self.redis.zadd('street_pollution', '{"name":"sterile",        "score":20  }', '20')
+self.redis.zadd('street_pollution', '{"name":"clean",          "score":30  }', '30')
+self.redis.zadd('street_pollution', '{"name":"tidy",           "score":40  }', '40')
+self.redis.zadd('street_pollution', '{"name":"disheveled",     "score":60  }', '60')
+self.redis.zadd('street_pollution', '{"name":"grungy",         "score":70  }', '70')
+self.redis.zadd('street_pollution', '{"name":"polluted",       "score":80  }', '80')
+self.redis.zadd('street_pollution', '{"name":"filthy",         "score":90  }', '90')
+self.redis.zadd('street_pollution', '{"name":"squalid",        "score":100 }', '100')
 
 
 #        <terrain>
-ZADD street_terrain 10  {"name":"flat",         "score":10  }
-ZADD street_terrain 20  {"name":"even",         "score":20  }
-ZADD street_terrain 30  {"name":"rolling",      "score":30  }
-ZADD street_terrain 40  {"name":"hilly",        "score":40  }
-ZADD street_terrain 60  {"name":"uneven",       "score":60  }
-ZADD street_terrain 70  {"name":"rough",        "score":70  }
-ZADD street_terrain 80  {"name":"rugged",       "score":80  }
-ZADD street_terrain 90  {"name":"broken",       "score":90  }
-ZADD street_terrain 100  {"name":"jagged",      "score":100 }
+self.redis.zadd('street_terrain', '{"name":"flat",         "score":10  }', '10')
+self.redis.zadd('street_terrain', '{"name":"even",         "score":20  }', '20')
+self.redis.zadd('street_terrain', '{"name":"rolling",      "score":30  }', '30')
+self.redis.zadd('street_terrain', '{"name":"hilly",        "score":40  }', '40')
+self.redis.zadd('street_terrain', '{"name":"uneven",       "score":60  }', '60')
+self.redis.zadd('street_terrain', '{"name":"rough",        "score":70  }', '70')
+self.redis.zadd('street_terrain', '{"name":"rugged",       "score":80  }', '80')
+self.redis.zadd('street_terrain', '{"name":"broken",       "score":90  }', '90')
+self.redis.zadd('street_terrain', '{"name":"jagged",      "score":100 }', '100')
 #
 #
 #        <moral>
-ZADD street_moral 4  {"name":"untrustworthy",                                    "score":4  }
-ZADD street_moral 8  {"name":"mean",                                    "score":8  }
-ZADD street_moral 12  {"name":"venomous",                                    "score":12  }
-ZADD street_moral 16  {"name":"corrupt",                                    "score":16  }
-ZADD street_moral 20  {"name":"repugnant",                                    "score":20  }
-ZADD street_moral 24  {"name":"unpleasant",                                    "score":24  }
-ZADD street_moral 28  {"name":"opportunistic",                                    "score":28  }
-ZADD street_moral 32  {"name":"villainous",                                    "score":32  }
-ZADD street_moral 36  {"name":"nefarious",                                    "score":36  }
-ZADD street_moral 40  {"name":"cold",                                    "score":40  }
-ZADD street_moral 45  {"name":"unconcerned",                                    "score":45  }
-ZADD street_moral 50  {"name":"undecided",                                    "score":50  }
-ZADD street_moral 55  {"name":"uncommitted",                                    "score":55  }
-ZADD street_moral 60  {"name":"indifferent",                                    "score":60  }
-ZADD street_moral 65  {"name":"indifferent",                                    "score":65  }
-ZADD street_moral 70  {"name":"well meaning",                                    "score":70  }
-ZADD street_moral 75  {"name":"trustworthy",                                    "score":75  }
-ZADD street_moral 80  {"name":"nice",                                    "score":80  }
-ZADD street_moral 85  {"name":"ethical",                                    "score":85  }
-ZADD street_moral 90  {"name":"honest",                                    "score":90  }
-ZADD street_moral 95  {"name":"praise-worthy",                                    "score":95  }
-ZADD street_moral 100  {"name":"virtuous",                                    "score":100  }
+self.redis.zadd('street_moral', '{"name":"untrustworthy",                                    "score":4  }', '4')
+self.redis.zadd('street_moral', '{"name":"mean",                                    "score":8  }', '8')
+self.redis.zadd('street_moral', '{"name":"venomous",                                    "score":12  }', '12')
+self.redis.zadd('street_moral', '{"name":"corrupt",                                    "score":16  }', '16')
+self.redis.zadd('street_moral', '{"name":"repugnant",                                    "score":20  }', '20')
+self.redis.zadd('street_moral', '{"name":"unpleasant",                                    "score":24  }', '24')
+self.redis.zadd('street_moral', '{"name":"opportunistic",                                    "score":28  }', '28')
+self.redis.zadd('street_moral', '{"name":"villainous",                                    "score":32  }', '32')
+self.redis.zadd('street_moral', '{"name":"nefarious",                                    "score":36  }', '36')
+self.redis.zadd('street_moral', '{"name":"cold",                                    "score":40  }', '40')
+self.redis.zadd('street_moral', '{"name":"unconcerned",                                    "score":45  }', '45')
+self.redis.zadd('street_moral', '{"name":"undecided",                                    "score":50  }', '50')
+self.redis.zadd('street_moral', '{"name":"uncommitted",                                    "score":55  }', '55')
+self.redis.zadd('street_moral', '{"name":"indifferent",                                    "score":60  }', '60')
+self.redis.zadd('street_moral', '{"name":"indifferent",                                    "score":65  }', '65')
+self.redis.zadd('street_moral', '{"name":"well meaning",                                    "score":70  }', '70')
+self.redis.zadd('street_moral', '{"name":"trustworthy",                                    "score":75  }', '75')
+self.redis.zadd('street_moral', '{"name":"nice",                                    "score":80  }', '80')
+self.redis.zadd('street_moral', '{"name":"ethical",                                    "score":85  }', '85')
+self.redis.zadd('street_moral', '{"name":"honest",                                    "score":90  }', '90')
+self.redis.zadd('street_moral', '{"name":"praise-worthy",                                    "score":95  }', '95')
+self.redis.zadd('street_moral', '{"name":"virtuous",                                    "score":100  }', '100')
 #
 #
 #
 #        <order>
-ZADD street_order 5  {"name":"unreliable",                                         "score":5  }
-ZADD street_order 10  {"name":"irresponsible",                                         "score":10  }
-ZADD street_order 15  {"name":"questionable",                                         "score":15  }
-ZADD street_order 20  {"name":"unpredictable",                                         "score":20  }
-ZADD street_order 25  {"name":"deranged",                                         "score":25  }
-ZADD street_order 30  {"name":"incoherent",                                         "score":30  }
-ZADD street_order 35  {"name":"vague",                                         "score":35  }
-ZADD street_order 40  {"name":"bystanding",                                         "score":40  }
-ZADD street_order 45  {"name":"detached",                                         "score":45  }
-ZADD street_order 50  {"name":"non-participating",                                         "score":50  }
-ZADD street_order 55  {"name":"non-conformist",                                         "score":55  }
-ZADD street_order 60  {"name":"unflappable",                                         "score":60  }
-ZADD street_order 65  {"name":"reliable",                                         "score":65  }
-ZADD street_order 70  {"name":"dependable",                                         "score":70  }
-ZADD street_order 75  {"name":"sure",                                         "score":75  }
-ZADD street_order 80  {"name":"legitimized",                                         "score":80  }
-ZADD street_order 85  {"name":"organized",                                         "score":85  }
-ZADD street_order 90  {"name":"dutiful",                                         "score":90  }
-ZADD street_order 100  {"name":"honorable",                                         "score":100  }
+self.redis.zadd('street_order', '{"name":"unreliable",                                         "score":5  }', '5')
+self.redis.zadd('street_order', '{"name":"irresponsible",                                         "score":10  }', '10')
+self.redis.zadd('street_order', '{"name":"questionable",                                         "score":15  }', '15')
+self.redis.zadd('street_order', '{"name":"unpredictable",                                         "score":20  }', '20')
+self.redis.zadd('street_order', '{"name":"deranged",                                         "score":25  }', '25')
+self.redis.zadd('street_order', '{"name":"incoherent",                                         "score":30  }', '30')
+self.redis.zadd('street_order', '{"name":"vague",                                         "score":35  }', '35')
+self.redis.zadd('street_order', '{"name":"bystanding",                                         "score":40  }', '40')
+self.redis.zadd('street_order', '{"name":"detached",                                         "score":45  }', '45')
+self.redis.zadd('street_order', '{"name":"non-participating",                                         "score":50  }', '50')
+self.redis.zadd('street_order', '{"name":"non-conformist",                                         "score":55  }', '55')
+self.redis.zadd('street_order', '{"name":"unflappable",                                         "score":60  }', '60')
+self.redis.zadd('street_order', '{"name":"reliable",                                         "score":65  }', '65')
+self.redis.zadd('street_order', '{"name":"dependable",                                         "score":70  }', '70')
+self.redis.zadd('street_order', '{"name":"sure",                                         "score":75  }', '75')
+self.redis.zadd('street_order', '{"name":"legitimized",                                         "score":80  }', '80')
+self.redis.zadd('street_order', '{"name":"organized",                                         "score":85  }', '85')
+self.redis.zadd('street_order', '{"name":"dutiful",                                         "score":90  }', '90')
+self.redis.zadd('street_order', '{"name":"honorable",                                         "score":100  }', '100')
 #
 #
 #        <tolerance>
-ZADD street_tolerance 20  {"name":"despise",                                         "score":20  }
-ZADD street_tolerance 30  {"name":"hate",                                         "score":30  }
-ZADD street_tolerance 40  {"name":"are critical of",                                         "score":40  }
-ZADD street_tolerance 50  {"name":"ignore",                                         "score":50  }
-ZADD street_tolerance 60  {"name":"are neutral towards",                                         "score":60  }
-ZADD street_tolerance 70  {"name":"are accepting of",                                         "score":70  }
-ZADD street_tolerance 80  {"name":"accept",                                         "score":80  }
-ZADD street_tolerance 100  {"name":"love",                                         "score":100  }
+self.redis.zadd('street_tolerance', '{"name":"despise",                                         "score":20  }', '20')
+self.redis.zadd('street_tolerance', '{"name":"hate",                                         "score":30  }', '30')
+self.redis.zadd('street_tolerance', '{"name":"are critical of",                                         "score":40  }', '40')
+self.redis.zadd('street_tolerance', '{"name":"ignore",                                         "score":50  }', '50')
+self.redis.zadd('street_tolerance', '{"name":"are neutral towards",                                         "score":60  }', '60')
+self.redis.zadd('street_tolerance', '{"name":"are accepting of",                                         "score":70  }', '70')
+self.redis.zadd('street_tolerance', '{"name":"accept",                                         "score":80  }', '80')
+self.redis.zadd('street_tolerance', '{"name":"love",                                         "score":100  }', '100')
 #
 #        <economy>
-ZADD street_economy 6  {"name":"crumbling",                                         "score":6  }
-ZADD street_economy 12  {"name":"failing",                                         "score":12  }
-ZADD street_economy 18  {"name":"uncertain",                                         "score":18  }
-ZADD street_economy 24  {"name":"shaky",                                         "score":24  }
-ZADD street_economy 30  {"name":"weak",                                         "score":30  }
-ZADD street_economy 36  {"name":"calm",                                         "score":36  }
-ZADD street_economy 42  {"name":"stable",                                         "score":42  }
-ZADD street_economy 48  {"name":"insulated",                                         "score":48  }
-ZADD street_economy 54  {"name":"unwavering",                                         "score":54  }
-ZADD street_economy 60  {"name":"steady",                                         "score":60  }
-ZADD street_economy 66  {"name":"steadfast",                                         "score":66  }
-ZADD street_economy 72  {"name":"good",                                         "score":72  }
-ZADD street_economy 78  {"name":"healthy",                                         "score":78  }
-ZADD street_economy 84  {"name":"flourishing",                                         "score":84  }
-ZADD street_economy 90  {"name":"growing",                                         "score":90  }
-ZADD street_economy 96  {"name":"vibrant",                                         "score":96  }
-ZADD street_economy 100  {"name":"lively",                                         "score":100  }
+self.redis.zadd('street_economy', '{"name":"crumbling",                                         "score":6  }', '6')
+self.redis.zadd('street_economy', '{"name":"failing",                                         "score":12  }', '12')
+self.redis.zadd('street_economy', '{"name":"uncertain",                                         "score":18  }', '18')
+self.redis.zadd('street_economy', '{"name":"shaky",                                         "score":24  }', '24')
+self.redis.zadd('street_economy', '{"name":"weak",                                         "score":30  }', '30')
+self.redis.zadd('street_economy', '{"name":"calm",                                         "score":36  }', '36')
+self.redis.zadd('street_economy', '{"name":"stable",                                         "score":42  }', '42')
+self.redis.zadd('street_economy', '{"name":"insulated",                                         "score":48  }', '48')
+self.redis.zadd('street_economy', '{"name":"unwavering",                                         "score":54  }', '54')
+self.redis.zadd('street_economy', '{"name":"steady",                                         "score":60  }', '60')
+self.redis.zadd('street_economy', '{"name":"steadfast",                                         "score":66  }', '66')
+self.redis.zadd('street_economy', '{"name":"good",                                         "score":72  }', '72')
+self.redis.zadd('street_economy', '{"name":"healthy",                                         "score":78  }', '78')
+self.redis.zadd('street_economy', '{"name":"flourishing",                                         "score":84  }', '84')
+self.redis.zadd('street_economy', '{"name":"growing",                                         "score":90  }', '90')
+self.redis.zadd('street_economy', '{"name":"vibrant",                                         "score":96  }', '96')
+self.redis.zadd('street_economy', '{"name":"lively",                                         "score":100  }', '100')
 #
 #        <crime>
-ZADD street_crime 10  {"name":"rampant",                                        "score":10  }
-ZADD street_crime 30  {"name":"common",                                         "score":30  }
-ZADD street_crime 50  {"name":"occasional",                                     "score":50  }
-ZADD street_crime 70  {"name":"unusual",                                        "score":70  }
-ZADD street_crime 90  {"name":"rare",                                           "score":90  }
-ZADD street_crime 100 {"name":"unheard of",                                     "score":100  }
+self.redis.zadd('street_crime', '{"name":"rampant",                                        "score":10  }', '10')
+self.redis.zadd('street_crime', '{"name":"common",                                         "score":30  }', '30')
+self.redis.zadd('street_crime', '{"name":"occasional",                                     "score":50  }', '50')
+self.redis.zadd('street_crime', '{"name":"unusual",                                        "score":70  }', '70')
+self.redis.zadd('street_crime', '{"name":"rare",                                           "score":90  }', '90')
+self.redis.zadd('street_crime', '{"name":"unheard of",                                     "score":100  }', '100')
 
 
 #muddy filthy
 #
-ZADD street_repair  10  { "name":"broken",              "score":10   }
-ZADD street_repair  20  { "name":"rough",               "score":20   }
-ZADD street_repair  30  { "name":"crude",               "score":30   }
-ZADD street_repair  40  { "name":"irregular",           "score":40   }
-ZADD street_repair  50  { "name":"bumpy",               "score":50   }
-ZADD street_repair  60  { "name":"even",                "score":60   }
-ZADD street_repair  70  { "name":"smooth",              "score":70   }
-ZADD street_repair  80  { "name":"well-maintained",     "score":80   }
-ZADD street_repair 100  { "name":"pristine",            "score":100   }
+self.redis.zadd('street_repair', '{ "name":"broken",              "score":10   }', '10')
+self.redis.zadd('street_repair', '{ "name":"rough",               "score":20   }', '20')
+self.redis.zadd('street_repair', '{ "name":"crude",               "score":30   }', '30')
+self.redis.zadd('street_repair', '{ "name":"irregular",           "score":40   }', '40')
+self.redis.zadd('street_repair', '{ "name":"bumpy",               "score":50   }', '50')
+self.redis.zadd('street_repair', '{ "name":"even",                "score":60   }', '60')
+self.redis.zadd('street_repair', '{ "name":"smooth",              "score":70   }', '70')
+self.redis.zadd('street_repair', '{ "name":"well-maintained",     "score":80   }', '80')
+self.redis.zadd('street_repair', '{ "name":"pristine",            "score":100   }', '100')
 
 
 self.redis.lpush('street_material', 'dirt')

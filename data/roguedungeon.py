@@ -1,36 +1,36 @@
 #
 
-ZADD roguedungeon_size  25 {"name":"tiny",     "minsize":20, "maxsize":20,   "score": 25   }
-ZADD roguedungeon_size  65 {"name":"small",    "minsize":30, "maxsize":30,   "score": 65   }
-ZADD roguedungeon_size  90 {"name":"medium",   "minsize":40, "maxsize":40,   "score": 90   }
-ZADD roguedungeon_size  97 {"name":"large",    "minsize":50, "maxsize":50,   "score": 97   }
-ZADD roguedungeon_size 100 {"name":"gigantic", "minsize":60, "maxsize":60,   "score": 100  }
+self.redis.zadd('roguedungeon_size', '{"name":"tiny",     "minsize":20, "maxsize":20,   "score": 25   }', '25')
+self.redis.zadd('roguedungeon_size', '{"name":"small",    "minsize":30, "maxsize":30,   "score": 65   }', '65')
+self.redis.zadd('roguedungeon_size', '{"name":"medium",   "minsize":40, "maxsize":40,   "score": 90   }', '90')
+self.redis.zadd('roguedungeon_size', '{"name":"large",    "minsize":50, "maxsize":50,   "score": 97   }', '97')
+self.redis.zadd('roguedungeon_size', '{"name":"gigantic", "minsize":60, "maxsize":60,   "score": 100  }', '100')
 
 
 
-ZADD roguedungeon_room_count  25 {"name":"few",        "minsize":3,  "maxsize":5,   "score": 25   }
-ZADD roguedungeon_room_count  65 {"name":"several",    "minsize":5,  "maxsize":10,  "score": 65   }
-ZADD roguedungeon_room_count  90 {"name":"many",       "minsize":10, "maxsize":25,  "score": 90   }
-ZADD roguedungeon_room_count 100 {"name":"lots",       "minsize":25, "maxsize":50,  "score": 100  }
+self.redis.zadd('roguedungeon_room_count', '{"name":"few",        "minsize":3,  "maxsize":5,   "score": 25   }', '25')
+self.redis.zadd('roguedungeon_room_count', '{"name":"several",    "minsize":5,  "maxsize":10,  "score": 65   }', '65')
+self.redis.zadd('roguedungeon_room_count', '{"name":"many",       "minsize":10, "maxsize":25,  "score": 90   }', '90')
+self.redis.zadd('roguedungeon_room_count', '{"name":"lots",       "minsize":25, "maxsize":50,  "score": 100  }', '100')
 
 
 
-ZADD roguedungeon_room_size  25 {"name":"tiny",     "minsize":3,  "maxsize":4,    "score": 25   }
-ZADD roguedungeon_room_size  65 {"name":"small",    "minsize":3,  "maxsize":10,   "score": 65   }
-ZADD roguedungeon_room_size  90 {"name":"medium",   "minsize":3,  "maxsize":15,   "score": 90   }
-ZADD roguedungeon_room_size 100 {"name":"gigantic", "minsize":3,  "maxsize":20,   "score": 100  }
+self.redis.zadd('roguedungeon_room_size', '{"name":"tiny",     "minsize":3,  "maxsize":4,    "score": 25   }', '25')
+self.redis.zadd('roguedungeon_room_size', '{"name":"small",    "minsize":3,  "maxsize":10,   "score": 65   }', '65')
+self.redis.zadd('roguedungeon_room_size', '{"name":"medium",   "minsize":3,  "maxsize":15,   "score": 90   }', '90')
+self.redis.zadd('roguedungeon_room_size', '{"name":"gigantic", "minsize":3,  "maxsize":20,   "score": 100  }', '100')
 
 
-ZADD roguedungeon_build  25 {"name":"natural caves",        "score": 25   }
-ZADD roguedungeon_build  65 {"name":"dungeon",              "score": 65   }
-ZADD roguedungeon_build 100 {"name":"dungeon and caves",    "score": 100  }
+self.redis.zadd('roguedungeon_build', '{"name":"natural caves",        "score": 25   }', '25')
+self.redis.zadd('roguedungeon_build', '{"name":"dungeon",              "score": 65   }', '65')
+self.redis.zadd('roguedungeon_build', '{"name":"dungeon and caves",    "score": 100  }', '100')
 
 
-ZADD roguedungeon_refinement  25 {"name":"natural caves",                       "score": 25   }
-ZADD roguedungeon_refinement  25 {"name":"natural caves with smoothed floors",  "score": 25   }
-ZADD roguedungeon_refinement  25 {"name":"widened caves",                       "score": 25   }
-ZADD roguedungeon_refinement  65 {"name":"dungeon and caves",                   "score": 65   }
-ZADD roguedungeon_refinement 100 {"name":"dungeon",                             "score": 100  }
+self.redis.zadd('roguedungeon_refinement', '{"name":"natural caves",                       "score": 25   }', '25')
+self.redis.zadd('roguedungeon_refinement', '{"name":"natural caves with smoothed floors",  "score": 25   }', '25')
+self.redis.zadd('roguedungeon_refinement', '{"name":"widened caves",                       "score": 25   }', '25')
+self.redis.zadd('roguedungeon_refinement', '{"name":"dungeon and caves",                   "score": 65   }', '65')
+self.redis.zadd('roguedungeon_refinement', '{"name":"dungeon",                             "score": 100  }', '100')
 
 
 self.redis.lpush('roguedungeon_theme', 'elvish')

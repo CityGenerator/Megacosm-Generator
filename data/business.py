@@ -12,107 +12,107 @@ self.redis.lpush('business_trouble', 'a fire')
 self.redis.lpush('business_trouble', 'slumping sales')
 
 # Business is  _____________.
-ZADD business_status  10 {  "name":"horrible",           "score":10  }
-ZADD business_status  20 {  "name":"bad",                "score":20  }
-ZADD business_status  30 {  "name":"not good",           "score":30  }
-ZADD business_status  40 {  "name":"stagnant",           "score":40  }
-ZADD business_status  50 {  "name":"middling",           "score":50  }
-ZADD business_status  60 {  "name":"ok",                 "score":60  }
-ZADD business_status  70 {  "name":"not bad",            "score":70  }
-ZADD business_status  80 {  "name":"doing great",        "score":80  }
-ZADD business_status  90 {  "name":"going excellent",    "score":90  }
-ZADD business_status 100 {  "name":"booming",            "score":100 }
+self.redis.zadd('business_status', '{  "name":"horrible",           "score":10  }', '10')
+self.redis.zadd('business_status', '{  "name":"bad",                "score":20  }', '20')
+self.redis.zadd('business_status', '{  "name":"not good",           "score":30  }', '30')
+self.redis.zadd('business_status', '{  "name":"stagnant",           "score":40  }', '40')
+self.redis.zadd('business_status', '{  "name":"middling",           "score":50  }', '50')
+self.redis.zadd('business_status', '{  "name":"ok",                 "score":60  }', '60')
+self.redis.zadd('business_status', '{  "name":"not bad",            "score":70  }', '70')
+self.redis.zadd('business_status', '{  "name":"doing great",        "score":80  }', '80')
+self.redis.zadd('business_status', '{  "name":"going excellent",    "score":90  }', '90')
+self.redis.zadd('business_status', '{  "name":"booming",            "score":100 }', '100')
 
 
 #        The Perfumed Twins Vintners is a[n] _______, disgusting-looking vineyard.
-ZADD business_size 5   {  "name":"tiny"           , "score":5   }
-ZADD business_size 10  {  "name":"insignificant"  , "score":10  }
-ZADD business_size 15  {  "name":"squat"          , "score":15  }
-ZADD business_size 20  {  "name":"small"          , "score":20  }
-ZADD business_size 25  {  "name":"minor"          , "score":25  }
-ZADD business_size 30  {  "name":"insubstantial"  , "score":30  }
-ZADD business_size 35  {  "name":"paltry"         , "score":35  }
-ZADD business_size 40  {  "name":"normal"         , "score":40  }
-ZADD business_size 45  {  "name":"typical"        , "score":45  }
-ZADD business_size 50  {  "name":"humdrum"        , "score":50  }
-ZADD business_size 55  {  "name":"ordinary"       , "score":55  }
-ZADD business_size 60  {  "name":"average"        , "score":60  }
-ZADD business_size 65  {  "name":"familiar"       , "score":65  }
-ZADD business_size 70  {  "name":"large"          , "score":70  }
-ZADD business_size 75  {  "name":"sizable"        , "score":75  }
-ZADD business_size 80  {  "name":"epic"           , "score":80  }
-ZADD business_size 85  {  "name":"monumental"     , "score":85  }
-ZADD business_size 90  {  "name":"massive"        , "score":90  }
-ZADD business_size 95  {  "name":"enormous"       , "score":95  }
-ZADD business_size 100 {  "name":"vast"           , "score":100 }
+self.redis.zadd('business_size', '{  "name":"tiny"           , "score":5   }', '5')
+self.redis.zadd('business_size', '{  "name":"insignificant"  , "score":10  }', '10')
+self.redis.zadd('business_size', '{  "name":"squat"          , "score":15  }', '15')
+self.redis.zadd('business_size', '{  "name":"small"          , "score":20  }', '20')
+self.redis.zadd('business_size', '{  "name":"minor"          , "score":25  }', '25')
+self.redis.zadd('business_size', '{  "name":"insubstantial"  , "score":30  }', '30')
+self.redis.zadd('business_size', '{  "name":"paltry"         , "score":35  }', '35')
+self.redis.zadd('business_size', '{  "name":"normal"         , "score":40  }', '40')
+self.redis.zadd('business_size', '{  "name":"typical"        , "score":45  }', '45')
+self.redis.zadd('business_size', '{  "name":"humdrum"        , "score":50  }', '50')
+self.redis.zadd('business_size', '{  "name":"ordinary"       , "score":55  }', '55')
+self.redis.zadd('business_size', '{  "name":"average"        , "score":60  }', '60')
+self.redis.zadd('business_size', '{  "name":"familiar"       , "score":65  }', '65')
+self.redis.zadd('business_size', '{  "name":"large"          , "score":70  }', '70')
+self.redis.zadd('business_size', '{  "name":"sizable"        , "score":75  }', '75')
+self.redis.zadd('business_size', '{  "name":"epic"           , "score":80  }', '80')
+self.redis.zadd('business_size', '{  "name":"monumental"     , "score":85  }', '85')
+self.redis.zadd('business_size', '{  "name":"massive"        , "score":90  }', '90')
+self.redis.zadd('business_size', '{  "name":"enormous"       , "score":95  }', '95')
+self.redis.zadd('business_size', '{  "name":"vast"           , "score":100 }', '100')
 
 #   The Wet Frog is a garden-variety tavern that  ____________.
-ZADD business_popularity 5   {  "name":"is avoided by the locals for reasons unknown"       , "score":5   }
-ZADD business_popularity 10  {  "name":"is unappreciated by the locals"                     , "score":10  }
-ZADD business_popularity 15  {  "name":"is usually empty"                                   , "score":15  }
-ZADD business_popularity 20  {  "name":"is usually busy but is strangely quiet as of late"  , "score":20  }
-ZADD business_popularity 25  {  "name":"holds the record for worst service in the region"   , "score":25  }
-ZADD business_popularity 30  {  "name":"has strange opening hours"                          , "score":30  }
-ZADD business_popularity 35  {  "name":"only attracts people from out of town"              , "score":35  }
-ZADD business_popularity 40  {  "name":"is popular on market days"                          , "score":40  }
-ZADD business_popularity 45  {  "name":"is eerily empty"                                    , "score":45  }
-ZADD business_popularity 50  {  "name":"is completely abandoned, and often forgotten"       , "score":50  }
-ZADD business_popularity 55  {  "name":"usually has few visitors"                           , "score":55  }
-ZADD business_popularity 60  {  "name":"is empty during the day but busy in the evening"    , "score":60  }
-ZADD business_popularity 65  {  "name":"is on the verge of closing"                         , "score":65  }
-ZADD business_popularity 70  {  "name":"is busy most days"                                  , "score":70  }
-ZADD business_popularity 75  {  "name":"is crowded every night"                             , "score":75  }
-ZADD business_popularity 80  {  "name":"rarely has room for new business"                   , "score":80  }
-ZADD business_popularity 85  {  "name":"has people queuing out in the street"               , "score":85  }
-ZADD business_popularity 90  {  "name":"is one of the busiest places in town"               , "score":90  }
-ZADD business_popularity 95  {  "name":"is always busy, regardless of the time"             , "score":95  }
-ZADD business_popularity 100 {  "name":"is constantly crowded"                              , "score":100 }
+self.redis.zadd('business_popularity', '{  "name":"is avoided by the locals for reasons unknown"       , "score":5   }', '5')
+self.redis.zadd('business_popularity', '{  "name":"is unappreciated by the locals"                     , "score":10  }', '10')
+self.redis.zadd('business_popularity', '{  "name":"is usually empty"                                   , "score":15  }', '15')
+self.redis.zadd('business_popularity', '{  "name":"is usually busy but is strangely quiet as of late"  , "score":20  }', '20')
+self.redis.zadd('business_popularity', '{  "name":"holds the record for worst service in the region"   , "score":25  }', '25')
+self.redis.zadd('business_popularity', '{  "name":"has strange opening hours"                          , "score":30  }', '30')
+self.redis.zadd('business_popularity', '{  "name":"only attracts people from out of town"              , "score":35  }', '35')
+self.redis.zadd('business_popularity', '{  "name":"is popular on market days"                          , "score":40  }', '40')
+self.redis.zadd('business_popularity', '{  "name":"is eerily empty"                                    , "score":45  }', '45')
+self.redis.zadd('business_popularity', '{  "name":"is completely abandoned, and often forgotten"       , "score":50  }', '50')
+self.redis.zadd('business_popularity', '{  "name":"usually has few visitors"                           , "score":55  }', '55')
+self.redis.zadd('business_popularity', '{  "name":"is empty during the day but busy in the evening"    , "score":60  }', '60')
+self.redis.zadd('business_popularity', '{  "name":"is on the verge of closing"                         , "score":65  }', '65')
+self.redis.zadd('business_popularity', '{  "name":"is busy most days"                                  , "score":70  }', '70')
+self.redis.zadd('business_popularity', '{  "name":"is crowded every night"                             , "score":75  }', '75')
+self.redis.zadd('business_popularity', '{  "name":"rarely has room for new business"                   , "score":80  }', '80')
+self.redis.zadd('business_popularity', '{  "name":"has people queuing out in the street"               , "score":85  }', '85')
+self.redis.zadd('business_popularity', '{  "name":"is one of the busiest places in town"               , "score":90  }', '90')
+self.redis.zadd('business_popularity', '{  "name":"is always busy, regardless of the time"             , "score":95  }', '95')
+self.redis.zadd('business_popularity', '{  "name":"is constantly crowded"                              , "score":100 }', '100')
 
 
 # The tavern has a reputation for _____________.
-ZADD business_reputation 10 {  "name":"deplorable clientele"                     , "score":10  }
-ZADD business_reputation 20 {  "name":"being a hive of scum and villainy"        , "score":20  }
-ZADD business_reputation 30 {  "name":"unpaid bills being bad for your health"   , "score":30  }
-ZADD business_reputation 40 {  "name":"poor sanitation"                          , "score":40  }
-ZADD business_reputation 50 {  "name":"unfortunate accidents"                    , "score":50  }
-ZADD business_reputation 60 {  "name":"being dull"                               , "score":60  }
-ZADD business_reputation 70 {  "name":"being open all hours"                     , "score":70  }
-ZADD business_reputation 80 {  "name":"having good services"                     , "score":80  }
-ZADD business_reputation 90 {  "name":"being a good place to find rumors"        , "score":90  }
-ZADD business_reputation 100 {  "name":"being a pillar of the community"          , "score":100  }
+self.redis.zadd('business_reputation', '{  "name":"deplorable clientele"                     , "score":10  }', '10')
+self.redis.zadd('business_reputation', '{  "name":"being a hive of scum and villainy"        , "score":20  }', '20')
+self.redis.zadd('business_reputation', '{  "name":"unpaid bills being bad for your health"   , "score":30  }', '30')
+self.redis.zadd('business_reputation', '{  "name":"poor sanitation"                          , "score":40  }', '40')
+self.redis.zadd('business_reputation', '{  "name":"unfortunate accidents"                    , "score":50  }', '50')
+self.redis.zadd('business_reputation', '{  "name":"being dull"                               , "score":60  }', '60')
+self.redis.zadd('business_reputation', '{  "name":"being open all hours"                     , "score":70  }', '70')
+self.redis.zadd('business_reputation', '{  "name":"having good services"                     , "score":80  }', '80')
+self.redis.zadd('business_reputation', '{  "name":"being a good place to find rumors"        , "score":90  }', '90')
+self.redis.zadd('business_reputation', '{  "name":"being a pillar of the community"          , "score":100  }', '100')
 
 
 # ... is known for ______________ prices for...
-ZADD business_price 6 {  "name":"suspiciously low"   , "score":6  }
-ZADD business_price 12 {  "name":"next to nothing"    , "score":12  }
-ZADD business_price 18 {  "name":"dirt cheap"         , "score":18  }
-ZADD business_price 24 {  "name":"inexpensive"        , "score":24  }
-ZADD business_price 30 {  "name":"fair"               , "score":30  }
-ZADD business_price 36 {  "name":"slightly high"      , "score":36  }
-ZADD business_price 42 {  "name":"minimal"            , "score":42  }
-ZADD business_price 48 {  "name":"varying"            , "score":48  }
-ZADD business_price 54 {  "name":"reasonable"         , "score":54  }
-ZADD business_price 60 {  "name":"moderate"           , "score":60  }
-ZADD business_price 66 {  "name":"steep"              , "score":66  }
-ZADD business_price 72 {  "name":"unreasonable"       , "score":72  }
-ZADD business_price 78 {  "name":"extravagant"        , "score":78  }
-ZADD business_price 94 {  "name":"high"               , "score":94  }
-ZADD business_price 100 {  "name":"very high"          , "score":100  }
+self.redis.zadd('business_price', '{  "name":"suspiciously low"   , "score":6  }', '6')
+self.redis.zadd('business_price', '{  "name":"next to nothing"    , "score":12  }', '12')
+self.redis.zadd('business_price', '{  "name":"dirt cheap"         , "score":18  }', '18')
+self.redis.zadd('business_price', '{  "name":"inexpensive"        , "score":24  }', '24')
+self.redis.zadd('business_price', '{  "name":"fair"               , "score":30  }', '30')
+self.redis.zadd('business_price', '{  "name":"slightly high"      , "score":36  }', '36')
+self.redis.zadd('business_price', '{  "name":"minimal"            , "score":42  }', '42')
+self.redis.zadd('business_price', '{  "name":"varying"            , "score":48  }', '48')
+self.redis.zadd('business_price', '{  "name":"reasonable"         , "score":54  }', '54')
+self.redis.zadd('business_price', '{  "name":"moderate"           , "score":60  }', '60')
+self.redis.zadd('business_price', '{  "name":"steep"              , "score":66  }', '66')
+self.redis.zadd('business_price', '{  "name":"unreasonable"       , "score":72  }', '72')
+self.redis.zadd('business_price', '{  "name":"extravagant"        , "score":78  }', '78')
+self.redis.zadd('business_price', '{  "name":"high"               , "score":94  }', '94')
+self.redis.zadd('business_price', '{  "name":"very high"          , "score":100  }', '100')
 
 
 #TODO chance this to a stat
-ZADD business_age  50 {  "name":"new"          , "score":50  }
-ZADD business_age 100 {  "name":"old"          , "score":100  }
+self.redis.zadd('business_age', '{  "name":"new"          , "score":50  }', '50')
+self.redis.zadd('business_age', '{  "name":"old"          , "score":100  }', '100')
 
 #TODO turn this into a stat
-ZADD business_neighborhood  10 { "name":"seedy",        "score":10  }
-ZADD business_neighborhood  20 { "name":"trashy",       "score":20  }
-ZADD business_neighborhood  30 { "name":"empty",        "score":30  }
-ZADD business_neighborhood  40 { "name":"rundown",      "score":40  }
-ZADD business_neighborhood  70 { "name":"new",          "score":70  }
-ZADD business_neighborhood  80 { "name":"old",          "score":80  }
-ZADD business_neighborhood  90 { "name":"nice",         "score":90  }
-ZADD business_neighborhood 100 { "name":"expensive",    "score":100 }
+self.redis.zadd('business_neighborhood', '{ "name":"seedy",        "score":10  }', '10')
+self.redis.zadd('business_neighborhood', '{ "name":"trashy",       "score":20  }', '20')
+self.redis.zadd('business_neighborhood', '{ "name":"empty",        "score":30  }', '30')
+self.redis.zadd('business_neighborhood', '{ "name":"rundown",      "score":40  }', '40')
+self.redis.zadd('business_neighborhood', '{ "name":"new",          "score":70  }', '70')
+self.redis.zadd('business_neighborhood', '{ "name":"old",          "score":80  }', '80')
+self.redis.zadd('business_neighborhood', '{ "name":"nice",         "score":90  }', '90')
+self.redis.zadd('business_neighborhood', '{ "name":"expensive",    "score":100 }', '100')
 
 self.redis.lpush('business_condition', 'neat')
 self.redis.lpush('business_condition', 'tidy')

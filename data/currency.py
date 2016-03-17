@@ -1,54 +1,54 @@
 # You find ____________ coins[s].
 
-ZADD currency_amount   5 { "name":"a single",           "min":1,    "max":1,    "score":5   }
-ZADD currency_amount  10 { "name":"a pair of",          "min":2,    "max":2,    "score":10  }
-ZADD currency_amount  20 { "name":"a few",              "min":3,    "max":4,    "score":20  }
-ZADD currency_amount  20 { "name":"several",            "min":3,    "max":8,    "score":20  }
-ZADD currency_amount  30 { "name":"a handful",          "min":4,    "max":10,   "score":30  }
-ZADD currency_amount  40 { "name":"about a dozen",      "min":8,    "max":15,   "score":40  }
-ZADD currency_amount  60 { "name":"about two dozen",    "min":20,   "max":30,   "score":60  }
-ZADD currency_amount  70 { "name":"a few dozen",        "min":30,   "max":60,   "score":70  }
-ZADD currency_amount  80 { "name":"several dozen",      "min":50,   "max":100,  "score":80  }
-ZADD currency_amount  90 { "name":"around a hundred",   "min":90,   "max":130,  "score":90  }
-ZADD currency_amount  95 { "name":"a couple hundred",   "min":190,  "max":250,  "score":95  }
-ZADD currency_amount 100 { "name":"a large pile of",    "min":100,  "max":3000, "score":100 }
+self.redis.zadd('currency_amount', '{ "name":"a single",           "min":1,    "max":1,    "score":5   }', '5')
+self.redis.zadd('currency_amount', '{ "name":"a pair of",          "min":2,    "max":2,    "score":10  }', '10')
+self.redis.zadd('currency_amount', '{ "name":"a few",              "min":3,    "max":4,    "score":20  }', '20')
+self.redis.zadd('currency_amount', '{ "name":"several",            "min":3,    "max":8,    "score":20  }', '20')
+self.redis.zadd('currency_amount', '{ "name":"a handful",          "min":4,    "max":10,   "score":30  }', '30')
+self.redis.zadd('currency_amount', '{ "name":"about a dozen",      "min":8,    "max":15,   "score":40  }', '40')
+self.redis.zadd('currency_amount', '{ "name":"about two dozen",    "min":20,   "max":30,   "score":60  }', '60')
+self.redis.zadd('currency_amount', '{ "name":"a few dozen",        "min":30,   "max":60,   "score":70  }', '70')
+self.redis.zadd('currency_amount', '{ "name":"several dozen",      "min":50,   "max":100,  "score":80  }', '80')
+self.redis.zadd('currency_amount', '{ "name":"around a hundred",   "min":90,   "max":130,  "score":90  }', '90')
+self.redis.zadd('currency_amount', '{ "name":"a couple hundred",   "min":190,  "max":250,  "score":95  }', '95')
+self.redis.zadd('currency_amount', '{ "name":"a large pile of",    "min":100,  "max":3000, "score":100 }', '100')
 
-ZADD currency_size  10 { "name":"tiny ( 18mm )"    , "score":10  }
-ZADD currency_size  30 { "name":"small ( 20mm )"   , "score":30  }
-ZADD currency_size  70 { "name":"medium ( 24mm )"  , "score":70  }
-ZADD currency_size  90 { "name":"large ( 30mm )"   , "score":90  }
-ZADD currency_size 100 { "name":"giant (40mm )"    , "score":100 }
+self.redis.zadd('currency_size', '{ "name":"tiny ( 18mm )"    , "score":10  }', '10')
+self.redis.zadd('currency_size', '{ "name":"small ( 20mm )"   , "score":30  }', '30')
+self.redis.zadd('currency_size', '{ "name":"medium ( 24mm )"  , "score":70  }', '70')
+self.redis.zadd('currency_size', '{ "name":"large ( 30mm )"   , "score":90  }', '90')
+self.redis.zadd('currency_size', '{ "name":"giant (40mm )"    , "score":100 }', '100')
 
 # the Bon is a worthless ingot
-ZADD currency_value  10 { "name":"worthless",         "score":10  }
-ZADD currency_value  30 { "name":"low-value",         "score":30  }
-ZADD currency_value  70 { "name":"moderate-value",    "score":70  }
-ZADD currency_value  98 { "name":"high-value",        "score":98  }
-ZADD currency_value 100 { "name":"priceless",         "score":100  }
+self.redis.zadd('currency_value', '{ "name":"worthless",         "score":10  }', '10')
+self.redis.zadd('currency_value', '{ "name":"low-value",         "score":30  }', '30')
+self.redis.zadd('currency_value', '{ "name":"moderate-value",    "score":70  }', '70')
+self.redis.zadd('currency_value', '{ "name":"high-value",        "score":98  }', '98')
+self.redis.zadd('currency_value', '{ "name":"priceless",         "score":100  }', '100')
 
-ZADD currency_scope  15 { "name":"city",        "score":15  }
-ZADD currency_scope  95 { "name":"region",      "score":95  }
-ZADD currency_scope 100 { "name":"continent",   "score":100  }
+self.redis.zadd('currency_scope', '{ "name":"city",        "score":15  }', '15')
+self.redis.zadd('currency_scope', '{ "name":"region",      "score":95  }', '95')
+self.redis.zadd('currency_scope', '{ "name":"continent",   "score":100  }', '100')
 
 # The level of detail on the Dorsh is ________
-ZADD currency_detail   5 {     "name":"crude" , "score":5  }
-ZADD currency_detail  10 {     "name":"rough" , "score":10  }
-ZADD currency_detail  15 {     "name":"careless" , "score":15  }
-ZADD currency_detail  20 {     "name":"lax" , "score":20  }
-ZADD currency_detail  25 {     "name":"uncomplicated" , "score":25  }
-ZADD currency_detail  30 {     "name":"precise" , "score":30  }
-ZADD currency_detail  40 {     "name":"refined" , "score":40  }
-ZADD currency_detail  50 {     "name":"exact" , "score":50  }
-ZADD currency_detail  60 {     "name":"sophisticated" , "score":60  }
-ZADD currency_detail  70 {     "name":"intricate" , "score":70  }
-ZADD currency_detail  80 {     "name":"elaborate" , "score":80  }
-ZADD currency_detail  90 {     "name":"meticulous" , "score":90  }
-ZADD currency_detail 100 {     "name":"unmistakable" , "score":100  }
+self.redis.zadd('currency_detail', '{     "name":"crude" , "score":5  }', '5')
+self.redis.zadd('currency_detail', '{     "name":"rough" , "score":10  }', '10')
+self.redis.zadd('currency_detail', '{     "name":"careless" , "score":15  }', '15')
+self.redis.zadd('currency_detail', '{     "name":"lax" , "score":20  }', '20')
+self.redis.zadd('currency_detail', '{     "name":"uncomplicated" , "score":25  }', '25')
+self.redis.zadd('currency_detail', '{     "name":"precise" , "score":30  }', '30')
+self.redis.zadd('currency_detail', '{     "name":"refined" , "score":40  }', '40')
+self.redis.zadd('currency_detail', '{     "name":"exact" , "score":50  }', '50')
+self.redis.zadd('currency_detail', '{     "name":"sophisticated" , "score":60  }', '60')
+self.redis.zadd('currency_detail', '{     "name":"intricate" , "score":70  }', '70')
+self.redis.zadd('currency_detail', '{     "name":"elaborate" , "score":80  }', '80')
+self.redis.zadd('currency_detail', '{     "name":"meticulous" , "score":90  }', '90')
+self.redis.zadd('currency_detail', '{     "name":"unmistakable" , "score":100  }', '100')
 
 # the kole is _____ for its size.-->
-ZADD currency_weight  20 {      "name":"lightweight" , "score":20  }
-ZADD currency_weight  80 {      "name":"ideally weighted" , "score":80  }
-ZADD currency_weight 100 {      "name":"hefty" , "score":100  }
+self.redis.zadd('currency_weight', '{      "name":"lightweight" , "score":20  }', '20')
+self.redis.zadd('currency_weight', '{      "name":"ideally weighted" , "score":80  }', '80')
+self.redis.zadd('currency_weight', '{      "name":"hefty" , "score":100  }', '100')
 
 # and is made out of
 self.redis.lpush('currency_material', 'wood')

@@ -1,33 +1,33 @@
 # Right now it is ___________,
-ZADD weather_temp  10  { "name":"unbearably cold",  "score":10      }
-ZADD weather_temp  20  { "name":"freezing",         "score":20      }
-ZADD weather_temp  30  { "name":"cold",             "score":30      }
-ZADD weather_temp  40  { "name":"chilly",           "score":40      }
-ZADD weather_temp  50  { "name":"cool",             "score":50      }
-ZADD weather_temp  60  { "name":"mild",             "score":60      }
-ZADD weather_temp  70  { "name":"pleasant",         "score":70      }
-ZADD weather_temp  80  { "name":"warm",             "score":80      }
-ZADD weather_temp  90  { "name":"hot",              "score":90      }
-ZADD weather_temp 100  { "name":"unbearably hot",   "score":100     }
+self.redis.zadd('weather_temp', '{ "name":"unbearably cold",  "score":10      }', '10')
+self.redis.zadd('weather_temp', '{ "name":"freezing",         "score":20      }', '20')
+self.redis.zadd('weather_temp', '{ "name":"cold",             "score":30      }', '30')
+self.redis.zadd('weather_temp', '{ "name":"chilly",           "score":40      }', '40')
+self.redis.zadd('weather_temp', '{ "name":"cool",             "score":50      }', '50')
+self.redis.zadd('weather_temp', '{ "name":"mild",             "score":60      }', '60')
+self.redis.zadd('weather_temp', '{ "name":"pleasant",         "score":70      }', '70')
+self.redis.zadd('weather_temp', '{ "name":"warm",             "score":80      }', '80')
+self.redis.zadd('weather_temp', '{ "name":"hot",              "score":90      }', '90')
+self.redis.zadd('weather_temp', '{ "name":"unbearably hot",   "score":100     }', '100')
 
 # Right now it is mild, with ______ winds.
-ZADD weather_wind  10  { "name":"calm",             "score":10      }
-ZADD weather_wind  20  { "name":"light",            "score":20      }
-ZADD weather_wind  30  { "name":"gentle",           "score":30      }
-ZADD weather_wind  40  { "name":"breezy",           "score":40      }
-ZADD weather_wind  50  { "name":"moderate",         "score":50      }
-ZADD weather_wind  60  { "name":"fresh",            "score":60      }
-ZADD weather_wind  70  { "name":"strong",           "score":70      }
-ZADD weather_wind  80  { "name":"gale-force",       "score":80      }
-ZADD weather_wind  90  { "name":"storm-force",      "score":90      }
-ZADD weather_wind 100  { "name":"hurricane-force",  "score":100     }
+self.redis.zadd('weather_wind', '{ "name":"calm",             "score":10      }', '10')
+self.redis.zadd('weather_wind', '{ "name":"light",            "score":20      }', '20')
+self.redis.zadd('weather_wind', '{ "name":"gentle",           "score":30      }', '30')
+self.redis.zadd('weather_wind', '{ "name":"breezy",           "score":40      }', '40')
+self.redis.zadd('weather_wind', '{ "name":"moderate",         "score":50      }', '50')
+self.redis.zadd('weather_wind', '{ "name":"fresh",            "score":60      }', '60')
+self.redis.zadd('weather_wind', '{ "name":"strong",           "score":70      }', '70')
+self.redis.zadd('weather_wind', '{ "name":"gale-force",       "score":80      }', '80')
+self.redis.zadd('weather_wind', '{ "name":"storm-force",      "score":90      }', '90')
+self.redis.zadd('weather_wind', '{ "name":"hurricane-force",  "score":100     }', '100')
 
 # it is ____ drizzling at the moment.
 SET  weather_precipitation_chance 20
-ZADD weather_precipitation  20  { "name":"lightly",    "score":20      }
-ZADD weather_precipitation  60  { "name":"moderately", "score":60      }
-ZADD weather_precipitation  90  { "name":"densely",    "score":90      }
-ZADD weather_precipitation 100  { "name":"heavily",    "score":100     }
+self.redis.zadd('weather_precipitation', '{ "name":"lightly",    "score":20      }', '20')
+self.redis.zadd('weather_precipitation', '{ "name":"moderately", "score":60      }', '60')
+self.redis.zadd('weather_precipitation', '{ "name":"densely",    "score":90      }', '90')
+self.redis.zadd('weather_precipitation', '{ "name":"heavily",    "score":100     }', '100')
 
 # It is heavily ______ at the moment.
 self.redis.lpush('weather_precipitation_type', 'drizzling')

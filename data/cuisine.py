@@ -1,40 +1,40 @@
 #
 
 # This dish is ______ to the region
-ZADD cuisine_rarity   5 {"name":"rare",        "score":5    }
-ZADD cuisine_rarity  10 {"name":"strange",     "score":10   }
-ZADD cuisine_rarity  20 {"name":"uncommon",    "score":20   }
-ZADD cuisine_rarity  30 {"name":"familiar",    "score":30   }
-ZADD cuisine_rarity  40 {"name":"ordinary",    "score":40   }
-ZADD cuisine_rarity  60 {"name":"common",      "score":60   }
-ZADD cuisine_rarity  70 {"name":"limited",     "score":70   }
-ZADD cuisine_rarity  80 {"name":"isolated",    "score":80   }
-ZADD cuisine_rarity  90 {"name":"native",      "score":90   }
-ZADD cuisine_rarity  95 {"name":"exclusive",   "score":95   }
-ZADD cuisine_rarity 100 {"name":"unique",      "score":100  }
+self.redis.zadd('cuisine_rarity', '{"name":"rare",        "score":5    }', '5')
+self.redis.zadd('cuisine_rarity', '{"name":"strange",     "score":10   }', '10')
+self.redis.zadd('cuisine_rarity', '{"name":"uncommon",    "score":20   }', '20')
+self.redis.zadd('cuisine_rarity', '{"name":"familiar",    "score":30   }', '30')
+self.redis.zadd('cuisine_rarity', '{"name":"ordinary",    "score":40   }', '40')
+self.redis.zadd('cuisine_rarity', '{"name":"common",      "score":60   }', '60')
+self.redis.zadd('cuisine_rarity', '{"name":"limited",     "score":70   }', '70')
+self.redis.zadd('cuisine_rarity', '{"name":"isolated",    "score":80   }', '80')
+self.redis.zadd('cuisine_rarity', '{"name":"native",      "score":90   }', '90')
+self.redis.zadd('cuisine_rarity', '{"name":"exclusive",   "score":95   }', '95')
+self.redis.zadd('cuisine_rarity', '{"name":"unique",      "score":100  }', '100')
 
 # Travelers consider the dish spice_ and presentation to the eye_. Portions are usually size
-ZADD cuisine_spice   5 {"name":"bland",     "score":5    }
-ZADD cuisine_spice  30 {"name":"mild",      "score":30   }
-ZADD cuisine_spice  70 {"name":"peppery",   "score":70   }
-ZADD cuisine_spice  95 {"name":"fiery",     "score":95   }
-ZADD cuisine_spice 100 {"name":"spicy",     "score":100  }
+self.redis.zadd('cuisine_spice', '{"name":"bland",     "score":5    }', '5')
+self.redis.zadd('cuisine_spice', '{"name":"mild",      "score":30   }', '30')
+self.redis.zadd('cuisine_spice', '{"name":"peppery",   "score":70   }', '70')
+self.redis.zadd('cuisine_spice', '{"name":"fiery",     "score":95   }', '95')
+self.redis.zadd('cuisine_spice', '{"name":"spicy",     "score":100  }', '100')
 
 # The dish is ________ to the eye
-ZADD cuisine_presentation   5 {"name":"ugly",           "score":5    }
-ZADD cuisine_presentation  30 {"name":"unsightly",      "score":30   }
-ZADD cuisine_presentation  70 {"name":"plain",          "score":70   }
-ZADD cuisine_presentation  80 {"name":"pleasing",       "score":80   }
-ZADD cuisine_presentation  95 {"name":"interesting",    "score":95   }
-ZADD cuisine_presentation 100 {"name":"beautiful",      "score":100  }
+self.redis.zadd('cuisine_presentation', '{"name":"ugly",           "score":5    }', '5')
+self.redis.zadd('cuisine_presentation', '{"name":"unsightly",      "score":30   }', '30')
+self.redis.zadd('cuisine_presentation', '{"name":"plain",          "score":70   }', '70')
+self.redis.zadd('cuisine_presentation', '{"name":"pleasing",       "score":80   }', '80')
+self.redis.zadd('cuisine_presentation', '{"name":"interesting",    "score":95   }', '95')
+self.redis.zadd('cuisine_presentation', '{"name":"beautiful",      "score":100  }', '100')
 
 # and seen as ____
-ZADD cuisine_size   5 {"name":"tiny",           "score":5    }
-ZADD cuisine_size  30 {"name":"small",          "score":30   }
-ZADD cuisine_size  70 {"name":"sufficient",     "score":70   }
-ZADD cuisine_size  80 {"name":"filling",        "score":80   }
-ZADD cuisine_size  95 {"name":"large",          "score":95   }
-ZADD cuisine_size 100 {"name":"gigantic",       "score":100  }
+self.redis.zadd('cuisine_size', '{"name":"tiny",           "score":5    }', '5')
+self.redis.zadd('cuisine_size', '{"name":"small",          "score":30   }', '30')
+self.redis.zadd('cuisine_size', '{"name":"sufficient",     "score":70   }', '70')
+self.redis.zadd('cuisine_size', '{"name":"filling",        "score":80   }', '80')
+self.redis.zadd('cuisine_size', '{"name":"large",          "score":95   }', '95')
+self.redis.zadd('cuisine_size', '{"name":"gigantic",       "score":100  }', '100')
 #Common folk consider it _____________
 # popularity
 

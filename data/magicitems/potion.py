@@ -555,55 +555,55 @@ self.redis.lpush('potion_effect', 'zombification')
             
 #<!-- may cause blindness, which -->
 
-ZADD potion_duration  10  {"name":"is temporary",           "score":10  }
-ZADD potion_duration  20  {"name":"lasts a few seconds",    "score":20  }
-ZADD potion_duration  30  {"name":"lasts a minute",         "score":30  }
-ZADD potion_duration  40  {"name":"lasts a few minutes",    "score":40  }
-ZADD potion_duration  50  {"name":"lasts several minutes",  "score":50  }
-ZADD potion_duration  60  {"name":"lasts an hour",          "score":60  }
-ZADD potion_duration  70  {"name":"lasts a few hours",      "score":70  }
-ZADD potion_duration  80  {"name":"lasts several hours",    "score":80  }
-ZADD potion_duration  85  {"name":"lasts a day",            "score":85  }
-ZADD potion_duration  90  {"name":"lasts a few days",       "score":90  }
-ZADD potion_duration  95  {"name":"lasts a week",           "score":95  }
-ZADD potion_duration  98  {"name":"lasts weeks",            "score":98  }
-ZADD potion_duration 100  {"name":"is permanent",           "score":100  }
+self.redis.zadd('potion_duration', '{"name":"is temporary",           "score":10  }', '10')
+self.redis.zadd('potion_duration', '{"name":"lasts a few seconds",    "score":20  }', '20')
+self.redis.zadd('potion_duration', '{"name":"lasts a minute",         "score":30  }', '30')
+self.redis.zadd('potion_duration', '{"name":"lasts a few minutes",    "score":40  }', '40')
+self.redis.zadd('potion_duration', '{"name":"lasts several minutes",  "score":50  }', '50')
+self.redis.zadd('potion_duration', '{"name":"lasts an hour",          "score":60  }', '60')
+self.redis.zadd('potion_duration', '{"name":"lasts a few hours",      "score":70  }', '70')
+self.redis.zadd('potion_duration', '{"name":"lasts several hours",    "score":80  }', '80')
+self.redis.zadd('potion_duration', '{"name":"lasts a day",            "score":85  }', '85')
+self.redis.zadd('potion_duration', '{"name":"lasts a few days",       "score":90  }', '90')
+self.redis.zadd('potion_duration', '{"name":"lasts a week",           "score":95  }', '95')
+self.redis.zadd('potion_duration', '{"name":"lasts weeks",            "score":98  }', '98')
+self.redis.zadd('potion_duration', '{"name":"is permanent",           "score":100  }', '100')
 
 
 # In the container is a _________ potion
-ZADD potion_consistency   3  {"name":"watery",   "score":3  }
-ZADD potion_consistency   6  {"name":"thick",   "score":6  }
-ZADD potion_consistency   9  {"name":"chunky",   "score":9  }
-ZADD potion_consistency  12  {"name":"viscous",   "score":12  }
-ZADD potion_consistency  15  {"name":"goopy",   "score":15  }
-ZADD potion_consistency  18  {"name":"gooey",   "score":18  }
-ZADD potion_consistency  21  {"name":"milky",   "score":21  }
-ZADD potion_consistency  24  {"name":"soupy",   "score":24  }
-ZADD potion_consistency  27  {"name":"sappy",   "score":27  }
-ZADD potion_consistency  30  {"name":"crusty",   "score":30  }
-ZADD potion_consistency  33  {"name":"buttery",   "score":33  }
-ZADD potion_consistency  36  {"name":"bubbly",   "score":36  }
-ZADD potion_consistency  39  {"name":"runny",   "score":39  }
-ZADD potion_consistency  42  {"name":"layered",   "score":42  }
-ZADD potion_consistency  45  {"name":"syrupy",   "score":45  }
-ZADD potion_consistency  48  {"name":"coagulated",   "score":48  }
-ZADD potion_consistency  51  {"name":"congealed",   "score":51  }
-ZADD potion_consistency  54  {"name":"gloppy",   "score":54  }
-ZADD potion_consistency  57  {"name":"gunky",   "score":57  }
-ZADD potion_consistency  60  {"name":"jellied",   "score":60  }
-ZADD potion_consistency  63  {"name":"solidified",   "score":63  }
-ZADD potion_consistency  66  {"name":"pulpy",   "score":66  }
-ZADD potion_consistency  69  {"name":"slushy",   "score":69  }
-ZADD potion_consistency  72  {"name":"tacky",   "score":72  }
-ZADD potion_consistency  75  {"name":"mucousy",   "score":75  }
-ZADD potion_consistency  78  {"name":"waxy",   "score":78  }
-ZADD potion_consistency  81  {"name":"scummy",   "score":81  }
-ZADD potion_consistency  84  {"name":"aqueous",   "score":84  }
-ZADD potion_consistency  87  {"name":"brothy",   "score":87  }
-ZADD potion_consistency  90  {"name":"fizzing",   "score":90  }
-ZADD potion_consistency  93  {"name":"chalky",   "score":93  }
-ZADD potion_consistency  96  {"name":"oily",   "score":96  }
-ZADD potion_consistency 100  {"name":"gritty",   "score":99  }
+self.redis.zadd('potion_consistency', '{"name":"watery",   "score":3  }', '3')
+self.redis.zadd('potion_consistency', '{"name":"thick",   "score":6  }', '6')
+self.redis.zadd('potion_consistency', '{"name":"chunky",   "score":9  }', '9')
+self.redis.zadd('potion_consistency', '{"name":"viscous",   "score":12  }', '12')
+self.redis.zadd('potion_consistency', '{"name":"goopy",   "score":15  }', '15')
+self.redis.zadd('potion_consistency', '{"name":"gooey",   "score":18  }', '18')
+self.redis.zadd('potion_consistency', '{"name":"milky",   "score":21  }', '21')
+self.redis.zadd('potion_consistency', '{"name":"soupy",   "score":24  }', '24')
+self.redis.zadd('potion_consistency', '{"name":"sappy",   "score":27  }', '27')
+self.redis.zadd('potion_consistency', '{"name":"crusty",   "score":30  }', '30')
+self.redis.zadd('potion_consistency', '{"name":"buttery",   "score":33  }', '33')
+self.redis.zadd('potion_consistency', '{"name":"bubbly",   "score":36  }', '36')
+self.redis.zadd('potion_consistency', '{"name":"runny",   "score":39  }', '39')
+self.redis.zadd('potion_consistency', '{"name":"layered",   "score":42  }', '42')
+self.redis.zadd('potion_consistency', '{"name":"syrupy",   "score":45  }', '45')
+self.redis.zadd('potion_consistency', '{"name":"coagulated",   "score":48  }', '48')
+self.redis.zadd('potion_consistency', '{"name":"congealed",   "score":51  }', '51')
+self.redis.zadd('potion_consistency', '{"name":"gloppy",   "score":54  }', '54')
+self.redis.zadd('potion_consistency', '{"name":"gunky",   "score":57  }', '57')
+self.redis.zadd('potion_consistency', '{"name":"jellied",   "score":60  }', '60')
+self.redis.zadd('potion_consistency', '{"name":"solidified",   "score":63  }', '63')
+self.redis.zadd('potion_consistency', '{"name":"pulpy",   "score":66  }', '66')
+self.redis.zadd('potion_consistency', '{"name":"slushy",   "score":69  }', '69')
+self.redis.zadd('potion_consistency', '{"name":"tacky",   "score":72  }', '72')
+self.redis.zadd('potion_consistency', '{"name":"mucousy",   "score":75  }', '75')
+self.redis.zadd('potion_consistency', '{"name":"waxy",   "score":78  }', '78')
+self.redis.zadd('potion_consistency', '{"name":"scummy",   "score":81  }', '81')
+self.redis.zadd('potion_consistency', '{"name":"aqueous",   "score":84  }', '84')
+self.redis.zadd('potion_consistency', '{"name":"brothy",   "score":87  }', '87')
+self.redis.zadd('potion_consistency', '{"name":"fizzing",   "score":90  }', '90')
+self.redis.zadd('potion_consistency', '{"name":"chalky",   "score":93  }', '93')
+self.redis.zadd('potion_consistency', '{"name":"oily",   "score":96  }', '96')
+self.redis.zadd('potion_consistency', '{"name":"gritty",   "score":99  }', '100')
 
             
 self.redis.lpush('potion_color', 'aquamarine')

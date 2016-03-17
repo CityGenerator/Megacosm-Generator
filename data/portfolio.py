@@ -1,1030 +1,1030 @@
 #
     
-ZADD portfolio_domain 1 {"name":"adventure",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"agony",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"agriculture",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"alcohol",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"ambition",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"ambush",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"amphibians",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"anger",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"appraisal",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"archery",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"architecture",                "score":1 }
-ZADD portfolio_domain 1 {"name":"arctic beasts",               "score":1 }
-ZADD portfolio_domain 1 {"name":"artifice",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"assassination",               "score":1 }
-ZADD portfolio_domain 1 {"name":"autumn",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"avariels",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"bad fortune",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"bad luck",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"bad weather",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"barrenness",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"bats",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"bees",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"bigotry",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"birds",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"black magic",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"blind beggars",               "score":1 }
-ZADD portfolio_domain 1 {"name":"blind destruction",           "score":1 }
-ZADD portfolio_domain 1 {"name":"bloodlust",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"brawling",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"brewing",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"brutality",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"burials",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"buried wealth",               "score":1 }
-ZADD portfolio_domain 1 {"name":"calligraphy",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"camels",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"campfires",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"cannibalism",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"caravans",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"carefree celebration",        "score":1 }
-ZADD portfolio_domain 1 {"name":"carousing",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"cats",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"cattle",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"civilization",                "score":1 }
-ZADD portfolio_domain 1 {"name":"conception",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"consumption",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"contentment",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"continuity",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"corn",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"creativity",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"crocodiles",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"crusades",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"cultivated foods",            "score":1 }
-ZADD portfolio_domain 1 {"name":"dancing girls",               "score":1 }
-ZADD portfolio_domain 1 {"name":"daylight",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"deformity",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"desert-dwelling vermin",      "score":1 }
-ZADD portfolio_domain 1 {"name":"desert raiders",              "score":1 }
-ZADD portfolio_domain 1 {"name":"desert storms",               "score":1 }
-ZADD portfolio_domain 1 {"name":"desert whirlwinds",           "score":1 }
-ZADD portfolio_domain 1 {"name":"dinosaurs",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"dogs",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"doom",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"dryads",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"eagles",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"ease",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"eastern light",               "score":1 }
-ZADD portfolio_domain 1 {"name":"eclipses",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"emotional hatreds",           "score":1 }
-ZADD portfolio_domain 1 {"name":"endings",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"enlightened justice",         "score":1 }
-ZADD portfolio_domain 1 {"name":"eternal darkness",            "score":1 }
-ZADD portfolio_domain 1 {"name":"eternal light",               "score":1 }
-ZADD portfolio_domain 1 {"name":"eternal youth",               "score":1 }
-ZADD portfolio_domain 1 {"name":"evil aquatic creatures",      "score":1 }
-ZADD portfolio_domain 1 {"name":"evil birds",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"experimentation",             "score":1 }
-ZADD portfolio_domain 1 {"name":"falcons",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"fatalism",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"favorable winds",             "score":1 }
-ZADD portfolio_domain 1 {"name":"felines",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"fine-smithing",               "score":1 }
-ZADD portfolio_domain 1 {"name":"fir trees",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"fishermen",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"fogs",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"folk music",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"forest creatures",            "score":1 }
-ZADD portfolio_domain 1 {"name":"forest dwellers",             "score":1 }
-ZADD portfolio_domain 1 {"name":"forest folk",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"forest gnomes",               "score":1 }
-ZADD portfolio_domain 1 {"name":"fortune telling",             "score":1 }
-ZADD portfolio_domain 1 {"name":"frog folk",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"frost giants",                "score":1 }
-ZADD portfolio_domain 1 {"name":"frost sprites",               "score":1 }
-ZADD portfolio_domain 1 {"name":"gambling",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"gem-cutting",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"gemstones",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"ghosts",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"ghouls",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"giant eagles",                "score":1 }
-ZADD portfolio_domain 1 {"name":"glaciers",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"grimlocks",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"hags",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"handicrafts",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"hedonism",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"hill giants",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"hills",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"historians",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"honorable combat",            "score":1 }
-ZADD portfolio_domain 1 {"name":"honor in battle",             "score":1 }
-ZADD portfolio_domain 1 {"name":"horizons",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"humiliation",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"hurricanes",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"ill council",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"ill luck",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"illumians",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"immediacy",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"impudence",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"inland waters",               "score":1 }
-ZADD portfolio_domain 1 {"name":"insomnia",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"inspiration",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"inventiveness",               "score":1 }
-ZADD portfolio_domain 1 {"name":"isolation",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"jellies",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"jewelrymaking",               "score":1 }
-ZADD portfolio_domain 1 {"name":"jungle survival",             "score":1 }
-ZADD portfolio_domain 1 {"name":"just rewards",                "score":1 }
-ZADD portfolio_domain 1 {"name":"krakens",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"lawful theft",                "score":1 }
-ZADD portfolio_domain 1 {"name":"lawyers",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"lichdom",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"lions",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"literary art",                "score":1 }
-ZADD portfolio_domain 1 {"name":"lizardfolk",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"loneliness",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"long-range traders",          "score":1 }
-ZADD portfolio_domain 1 {"name":"long rivers",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"lost causes",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"lycanthropes",                "score":1 }
-ZADD portfolio_domain 1 {"name":"magic users",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"magistrates",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"marauding beasts",            "score":1 }
-ZADD portfolio_domain 1 {"name":"martial arts",                "score":1 }
-ZADD portfolio_domain 1 {"name":"martial defense",             "score":1 }
-ZADD portfolio_domain 1 {"name":"martial skill",               "score":1 }
-ZADD portfolio_domain 1 {"name":"martial training",            "score":1 }
-ZADD portfolio_domain 1 {"name":"mastery of undead",           "score":1 }
-ZADD portfolio_domain 1 {"name":"mental dominion",             "score":1 }
-ZADD portfolio_domain 1 {"name":"mental health",               "score":1 }
-ZADD portfolio_domain 1 {"name":"mental mastery",              "score":1 }
-ZADD portfolio_domain 1 {"name":"mental prowess",              "score":1 }
-ZADD portfolio_domain 1 {"name":"merfolk",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"metalworking",                "score":1 }
-ZADD portfolio_domain 1 {"name":"mirrors",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"mirth",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"moisture",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"moonlight",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"mortal life",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"murderers",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"mystic insight",              "score":1 }
-ZADD portfolio_domain 1 {"name":"mysticism",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"napkins",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"narrow escapes",              "score":1 }
-ZADD portfolio_domain 1 {"name":"natural alchemy",             "score":1 }
-ZADD portfolio_domain 1 {"name":"natural balances",            "score":1 }
-ZADD portfolio_domain 1 {"name":"natural beauty",              "score":1 }
-ZADD portfolio_domain 1 {"name":"natural disasters",           "score":1 }
-ZADD portfolio_domain 1 {"name":"natural growth",              "score":1 }
-ZADD portfolio_domain 1 {"name":"navigators",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"necromancers",                "score":1 }
-ZADD portfolio_domain 1 {"name":"needlework",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"netherworld",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"night birds",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"night travelers",             "score":1 }
-ZADD portfolio_domain 1 {"name":"nobility",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"noble beasts",                "score":1 }
-ZADD portfolio_domain 1 {"name":"nonintervention",             "score":1 }
-ZADD portfolio_domain 1 {"name":"northern stars",              "score":1 }
-ZADD portfolio_domain 1 {"name":"northern wind",               "score":1 }
-ZADD portfolio_domain 1 {"name":"oases",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"occult lore",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"ocean creatures",             "score":1 }
-ZADD portfolio_domain 1 {"name":"oozes",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"opportunism",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"oppressed",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"outer space",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"outlaws",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"overwhelming numbers",        "score":1 }
-ZADD portfolio_domain 1 {"name":"pacifism",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"parasites",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"peaks",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"physical fitness",            "score":1 }
-ZADD portfolio_domain 1 {"name":"physical love",               "score":1 }
-ZADD portfolio_domain 1 {"name":"physical prowess",            "score":1 }
-ZADD portfolio_domain 1 {"name":"physical strength",           "score":1 }
-ZADD portfolio_domain 1 {"name":"plagues",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"play",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"poetic justice",              "score":1 }
-ZADD portfolio_domain 1 {"name":"poetry",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"poets",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"poisoners",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"polar environments",          "score":1 }
-ZADD portfolio_domain 1 {"name":"power-brokers",                "score":1 }
-ZADD portfolio_domain 1 {"name":"power-mongers",                "score":1 }
-ZADD portfolio_domain 1 {"name":"premeditated killing",        "score":1 }
-ZADD portfolio_domain 1 {"name":"pretty things",               "score":1 }
-ZADD portfolio_domain 1 {"name":"propriety",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"prose",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"psychotic behavior",          "score":1 }
-ZADD portfolio_domain 1 {"name":"quiet places",                "score":1 }
-ZADD portfolio_domain 1 {"name":"racing",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"radiance",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"rainbows",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"random mischief",             "score":1 }
-ZADD portfolio_domain 1 {"name":"rats",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"ravaging beasts",             "score":1 }
-ZADD portfolio_domain 1 {"name":"restful sleep",               "score":1 }
-ZADD portfolio_domain 1 {"name":"revelry",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"righteous indignation",       "score":1 }
-ZADD portfolio_domain 1 {"name":"river hazards",               "score":1 }
-ZADD portfolio_domain 1 {"name":"robbers",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"romantic love",               "score":1 }
-ZADD portfolio_domain 1 {"name":"ropers",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"royalty",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"rune magic",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"running",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"sailors",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"salamanders",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"savage lust",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"sea creatures",               "score":1 }
-ZADD portfolio_domain 1 {"name":"sea elves",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"sea life",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"seals",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"sea weather",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"sea winds",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"secret pursuits",             "score":1 }
-ZADD portfolio_domain 1 {"name":"self-deception",              "score":1 }
-ZADD portfolio_domain 1 {"name":"self-determination",          "score":1 }
-ZADD portfolio_domain 1 {"name":"senses",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"sensual fulfillment",         "score":1 }
-ZADD portfolio_domain 1 {"name":"serpents",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"servants",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"service",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"servitude",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"sewers",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"shadow elves",                "score":1 }
-ZADD portfolio_domain 1 {"name":"shield dwarves",              "score":1 }
-ZADD portfolio_domain 1 {"name":"silence",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"silver dragonkind",           "score":1 }
-ZADD portfolio_domain 1 {"name":"sinister ambition",           "score":1 }
-ZADD portfolio_domain 1 {"name":"skiing",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"skill-at-arms",               "score":1 }
-ZADD portfolio_domain 1 {"name":"skilled artisans",            "score":1 }
-ZADD portfolio_domain 1 {"name":"slimes",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"sly cleverness",              "score":1 }
-ZADD portfolio_domain 1 {"name":"small birds",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"smallpox",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"smithing",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"smithwork",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"snakes",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"snow elves",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"social behavior",             "score":1 }
-ZADD portfolio_domain 1 {"name":"social order",                "score":1 }
-ZADD portfolio_domain 1 {"name":"solidity",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"songwriting",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"sorcerers",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"southern stars",              "score":1 }
-ZADD portfolio_domain 1 {"name":"space",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"spawning",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"specific locality",           "score":1 }
-ZADD portfolio_domain 1 {"name":"spinning",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"sports",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"spriggans",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"springs",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"stalking",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"steadfastness",               "score":1 }
-ZADD portfolio_domain 1 {"name":"stillness",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"stone giants",                "score":1 }
-ZADD portfolio_domain 1 {"name":"storm giants",                "score":1 }
-ZADD portfolio_domain 1 {"name":"stray cats",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"study of magic",              "score":1 }
-ZADD portfolio_domain 1 {"name":"summer storms",               "score":1 }
-ZADD portfolio_domain 1 {"name":"surrounding lands",           "score":1 }
-ZADD portfolio_domain 1 {"name":"sword skills",                "score":1 }
-ZADD portfolio_domain 1 {"name":"swordsmanship",               "score":1 }
-ZADD portfolio_domain 1 {"name":"swordsmiths",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"swordwork",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"talking beasts",              "score":1 }
-ZADD portfolio_domain 1 {"name":"testing",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"theater",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"thoughtless acts",            "score":1 }
-ZADD portfolio_domain 1 {"name":"thunderstorms",               "score":1 }
-ZADD portfolio_domain 1 {"name":"tombs",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"tortured souls",              "score":1 }
-ZADD portfolio_domain 1 {"name":"torturers",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"traders",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"tradesmen",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"transcendence",               "score":1 }
-ZADD portfolio_domain 1 {"name":"transformation of art",       "score":1 }
-ZADD portfolio_domain 1 {"name":"travelers",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"treachery over honor",        "score":1 }
-ZADD portfolio_domain 1 {"name":"treasure-finding",            "score":1 }
-ZADD portfolio_domain 1 {"name":"tricks",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"truth-speakers",              "score":1 }
-ZADD portfolio_domain 1 {"name":"twilight",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"ugliness",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"ugly people",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"undefiled waters",            "score":1 }
-ZADD portfolio_domain 1 {"name":"unicorns",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"unrevealed secrets",          "score":1 }
-ZADD portfolio_domain 1 {"name":"vampires",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"vampirism",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"vegetation",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"vendettas",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"venomous creatures",          "score":1 }
-ZADD portfolio_domain 1 {"name":"vice",                        "score":1 }
-ZADD portfolio_domain 1 {"name":"vortices",                    "score":1 }
-ZADD portfolio_domain 1 {"name":"wakefulness",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"wandering",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"wards",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"war priests",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"watchfulness",                "score":1 }
-ZADD portfolio_domain 1 {"name":"waterfalls",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"water spirits",               "score":1 }
-ZADD portfolio_domain 1 {"name":"water travel",                "score":1 }
-ZADD portfolio_domain 1 {"name":"wave motions",                "score":1 }
-ZADD portfolio_domain 1 {"name":"weapon making",               "score":1 }
-ZADD portfolio_domain 1 {"name":"weapon smithing",              "score":1 }
-ZADD portfolio_domain 1 {"name":"weaving",                     "score":1 }
-ZADD portfolio_domain 1 {"name":"wells",                       "score":1 }
-ZADD portfolio_domain 1 {"name":"whales",                      "score":1 }
-ZADD portfolio_domain 1 {"name":"whirlpools",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"wilderness",                  "score":1 }
-ZADD portfolio_domain 1 {"name":"wildlands",                   "score":1 }
-ZADD portfolio_domain 1 {"name":"woodworkers",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"woodworking",                 "score":1 }
-ZADD portfolio_domain 1 {"name":"worms",                       "score":1 }
-ZADD portfolio_domain 2 {"name":"armor",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"artisans",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"athletes",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"benevolence",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"blizzards",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"bounty",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"bugbears",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"canines",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"caves",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"charity",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"charm",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"children",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"clarity",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"climbing",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"concealment",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"construction",                "score":2 }
-ZADD portfolio_domain 2 {"name":"contracts",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"courtship",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"covert activity",             "score":2 }
-ZADD portfolio_domain 2 {"name":"cowardice",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"creatures of the deep",       "score":2 }
-ZADD portfolio_domain 2 {"name":"crops",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"debauch",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"decision",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"desert mountains",            "score":2 }
-ZADD portfolio_domain 2 {"name":"deserts",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"determination",               "score":2 }
-ZADD portfolio_domain 2 {"name":"distance",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"domination",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"drought",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"duels",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"dying",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"earthquakes",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"east wind",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"eating",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"eloquence",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"enchantments",                "score":2 }
-ZADD portfolio_domain 2 {"name":"energy",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"enfeeblement",                "score":2 }
-ZADD portfolio_domain 2 {"name":"epidemics",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"aesthetics",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"evening",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"evil dreams",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"evil fate",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"evil reptiles",               "score":2 }
-ZADD portfolio_domain 2 {"name":"exhaustion",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"expansion",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"fair practices",              "score":2 }
-ZADD portfolio_domain 2 {"name":"faith",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"false promises",              "score":2 }
-ZADD portfolio_domain 2 {"name":"far journeys",                "score":2 }
-ZADD portfolio_domain 2 {"name":"fauna",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"festivals",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"feuds",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"fire giants",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"fish",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"flattery",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"flowers",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"foreknowledge",               "score":2 }
-ZADD portfolio_domain 2 {"name":"forests",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"forges",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"forgetfulness",               "score":2 }
-ZADD portfolio_domain 2 {"name":"forgiveness",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"foul weather",                "score":2 }
-ZADD portfolio_domain 2 {"name":"frenzy",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"fresh water",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"friendship",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"frozen seas",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"fruitfulness",                "score":2 }
-ZADD portfolio_domain 2 {"name":"funerals",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"games",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"gates",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"gems",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"glyphs",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"gold",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"goliaths",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"goodness",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"grief",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"growth",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"guadianship",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"guarding",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"guarding the underworld",     "score":2 }
-ZADD portfolio_domain 2 {"name":"guilt",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"happiness",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"harm",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"health",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"hearing",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"heat",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"hidden knowledge",            "score":2 }
-ZADD portfolio_domain 2 {"name":"hiding places",               "score":2 }
-ZADD portfolio_domain 2 {"name":"history",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"home",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"honesty",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"horses",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"hospitality",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"hunger",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"hyenas",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"ice",                         "score":2 }
-ZADD portfolio_domain 2 {"name":"images",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"immortality through undeath", "score":2 }
-ZADD portfolio_domain 2 {"name":"improvement",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"industry",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"inevitability",               "score":2 }
-ZADD portfolio_domain 2 {"name":"inflexibility",               "score":2 }
-ZADD portfolio_domain 2 {"name":"inquiry",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"insects",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"intoxication",                "score":2 }
-ZADD portfolio_domain 2 {"name":"invention",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"invisiblity",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"jokes",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"joy of battle",               "score":2 }
-ZADD portfolio_domain 2 {"name":"jungles",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"keen senses",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"kings",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"kuo-toas",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"languages",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"learning",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"liars",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"lightning",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"literature",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"living things",               "score":2 }
-ZADD portfolio_domain 2 {"name":"longevity",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"long life",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"loss",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"luck in battle",              "score":2 }
-ZADD portfolio_domain 2 {"name":"madness",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"magical knowledge",           "score":2 }
-ZADD portfolio_domain 2 {"name":"malice",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"malign knowledge",            "score":2 }
-ZADD portfolio_domain 2 {"name":"marauders",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"marshes",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"martyrdom",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"massacres",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"meadows",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"medicine",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"meditation",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"mental powers",               "score":2 }
-ZADD portfolio_domain 2 {"name":"messengers",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"metalcraft",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"metalsmiths",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"military excellence",         "score":2 }
-ZADD portfolio_domain 2 {"name":"minerals",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"miners",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"mines",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"mining",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"mischief",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"monks",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"morale",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"mourning",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"musicians",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"music",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"negative energy",             "score":2 }
-ZADD portfolio_domain 2 {"name":"noise",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"obligations",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"obscurement",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"ocean storms",                "score":2 }
-ZADD portfolio_domain 2 {"name":"old age",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"oppression",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"ores",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"outcasts",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"panic",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"paralysis",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"parenthood",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"patience",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"perfection",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"perseverance",                "score":2 }
-ZADD portfolio_domain 2 {"name":"pillaging",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"planting",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"plunder",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"police",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"pools",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"pottery",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"predestination",              "score":2 }
-ZADD portfolio_domain 2 {"name":"preservation",                "score":2 }
-ZADD portfolio_domain 2 {"name":"prestige",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"public combat",               "score":2 }
-ZADD portfolio_domain 2 {"name":"purification",                "score":2 }
-ZADD portfolio_domain 2 {"name":"puzzles",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"quarrels",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"questers",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"randomness",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"rebellion",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"reciprocity",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"relationships",               "score":2 }
-ZADD portfolio_domain 2 {"name":"reptiles",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"restraint",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"reverence",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"risks",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"romance",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"rot",                         "score":2 }
-ZADD portfolio_domain 2 {"name":"rotting death",               "score":2 }
-ZADD portfolio_domain 2 {"name":"rulership",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"running water",               "score":2 }
-ZADD portfolio_domain 2 {"name":"sages",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"savants",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"scholarship",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"scribes",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"sculptures",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"sea voyages",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"seekers",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"self-defense",                "score":2 }
-ZADD portfolio_domain 2 {"name":"self-perfection",             "score":2 }
-ZADD portfolio_domain 2 {"name":"self-sacrifice",              "score":2 }
-ZADD portfolio_domain 2 {"name":"sentries",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"shepherds",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"sickness",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"sight",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"singing",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"slaughter",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"sloth",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"slumber",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"smoke",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"societies",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"song",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"south wind",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"speech",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"speed",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"spite",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"starvation",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"stench",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"sterility",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"stonework",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"storytelling",                "score":2 }
-ZADD portfolio_domain 2 {"name":"streams",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"strong beasts",               "score":2 }
-ZADD portfolio_domain 2 {"name":"subtlety",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"subversion",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"success",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"suffering",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"sunlight",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"sunshine",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"surprise",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"swamps",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"tactics",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"technology",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"territory",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"thought",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"tolerance",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"tracking",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"tradition",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"trapmaking",                  "score":2 }
-ZADD portfolio_domain 2 {"name":"treachery",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"treasures",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"troglodytes",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"trolls",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"undead",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"unknown",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"unknown secrets",             "score":2 }
-ZADD portfolio_domain 2 {"name":"vandals",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"vengeance",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"vermin",                      "score":2 }
-ZADD portfolio_domain 2 {"name":"visions",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"vitality",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"volcanoes",                   "score":2 }
-ZADD portfolio_domain 2 {"name":"wanton destruction",          "score":2 }
-ZADD portfolio_domain 2 {"name":"wasting",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"waves",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"weaponsmiths",                "score":2 }
-ZADD portfolio_domain 2 {"name":"wetlands",                    "score":2 }
-ZADD portfolio_domain 2 {"name":"wetness",                     "score":2 }
-ZADD portfolio_domain 2 {"name":"wild beasts",                 "score":2 }
-ZADD portfolio_domain 2 {"name":"wine",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"work",                        "score":2 }
-ZADD portfolio_domain 2 {"name":"youth",                       "score":2 }
-ZADD portfolio_domain 2 {"name":"zeal",                        "score":2 }
-ZADD portfolio_domain 3 {"name":"cemeteries",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"clouds",                      "score":3 }
-ZADD portfolio_domain 3 {"name":"curative medicine",           "score":3 }
-ZADD portfolio_domain 3 {"name":"currents",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"dance",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"dancing",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"devouring",                   "score":3 }
-ZADD portfolio_domain 3 {"name":"doors",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"femininity",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"flowing water",               "score":3 }
-ZADD portfolio_domain 3 {"name":"fortification",               "score":3 }
-ZADD portfolio_domain 3 {"name":"guidance",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"guides",                      "score":3 }
-ZADD portfolio_domain 3 {"name":"heroism",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"imaginations",                "score":3 }
-ZADD portfolio_domain 3 {"name":"jealousy",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"keys",                        "score":3 }
-ZADD portfolio_domain 3 {"name":"leadership",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"liberation",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"locks",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"mages",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"mind flayers",                "score":3 }
-ZADD portfolio_domain 3 {"name":"misfortune",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"movement",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"naval combat",                "score":3 }
-ZADD portfolio_domain 3 {"name":"obsession",                   "score":3 }
-ZADD portfolio_domain 3 {"name":"paladins",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"planning",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"predators",                   "score":3 }
-ZADD portfolio_domain 3 {"name":"propagation",                 "score":3 }
-ZADD portfolio_domain 3 {"name":"psionics",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"rangers",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"records",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"rice",                        "score":3 }
-ZADD portfolio_domain 3 {"name":"rock gnomes",                 "score":3 }
-ZADD portfolio_domain 3 {"name":"sacrifice",                   "score":3 }
-ZADD portfolio_domain 3 {"name":"salt",                        "score":3 }
-ZADD portfolio_domain 3 {"name":"scapegoats",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"scheming",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"selfishness",                 "score":3 }
-ZADD portfolio_domain 3 {"name":"ships",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"slavery",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"starlight",                   "score":3 }
-ZADD portfolio_domain 3 {"name":"swords",                      "score":3 }
-ZADD portfolio_domain 3 {"name":"thievery",                    "score":3 }
-ZADD portfolio_domain 3 {"name":"thieves",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"tides",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"trust",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"undeath",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"victory",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"vigor",                       "score":3 }
-ZADD portfolio_domain 3 {"name":"warfare",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"weather",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"wickedness",                  "score":3 }
-ZADD portfolio_domain 3 {"name":"winter",                      "score":3 }
-ZADD portfolio_domain 3 {"name":"witches",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"wit",                         "score":3 }
-ZADD portfolio_domain 3 {"name":"wizards",                     "score":3 }
-ZADD portfolio_domain 3 {"name":"writing",                     "score":3 }
-ZADD portfolio_domain 4 {"name":"abundance",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"accidents",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"accountability",              "score":4 }
-ZADD portfolio_domain 4 {"name":"arcane knowledge",            "score":4 }
-ZADD portfolio_domain 4 {"name":"armies",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"astrology",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"astronomy",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"atmosphere",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"barbarians",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"bards",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"beasts",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"beginnings",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"berserking",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"birth",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"blacksmithing",               "score":4 }
-ZADD portfolio_domain 4 {"name":"books",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"bravery",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"building",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"bureaucracy",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"business",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"cartography",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"caverns",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"change",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"charisma",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"cloud giants",                "score":4 }
-ZADD portfolio_domain 4 {"name":"cold",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"common sense",                "score":4 }
-ZADD portfolio_domain 4 {"name":"community",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"competition",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"confusion",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"conquest",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"control",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"cooperation",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"courage",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"crafts",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"cruelty",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"cultures",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"cunning",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"curiosity",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"daring",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"darkness",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"dawn",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"day",                         "score":4 }
-ZADD portfolio_domain 4 {"name":"decay",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"deceit",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"deception",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"dedication",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"delight",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"dexterity",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"dignity",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"disasters",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"discord",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"discovery",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"divination",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"dreams",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"druids",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"dungeons",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"dusk",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"dwarves",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"earth",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"elements",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"elves",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"endurance",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"engineering",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"enjoyment",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"enlightenment",               "score":4 }
-ZADD portfolio_domain 4 {"name":"entropy",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"eroticism",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"ethics",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"evil dragons",                "score":4 }
-ZADD portfolio_domain 4 {"name":"evil liches",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"evil lycanthropes",           "score":4 }
-ZADD portfolio_domain 4 {"name":"evil plans",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"evil secrets",                "score":4 }
-ZADD portfolio_domain 4 {"name":"excellence",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"excess",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"exiles",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"exploration",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"faerie folk",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"faithfulness",                "score":4 }
-ZADD portfolio_domain 4 {"name":"fallen heroes",               "score":4 }
-ZADD portfolio_domain 4 {"name":"family",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"feasting",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"fey",                         "score":4 }
-ZADD portfolio_domain 4 {"name":"fidelity",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"fighters",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"fine arts",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"fire-using dragons",          "score":4 }
-ZADD portfolio_domain 4 {"name":"fitness",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"flying",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"fools",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"forbidden knowledge",         "score":4 }
-ZADD portfolio_domain 4 {"name":"foresight",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"formality",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"full moons",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"future",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"gardening",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"giants",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"gnolls",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"gnomes",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"goblins",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"good-aligned magical beasts", "score":4 }
-ZADD portfolio_domain 4 {"name":"good beasts",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"good dragons",                "score":4 }
-ZADD portfolio_domain 4 {"name":"good fortune",                "score":4 }
-ZADD portfolio_domain 4 {"name":"good giants",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"good luck",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"good magic",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"grain",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"gray dwarves",                "score":4 }
-ZADD portfolio_domain 4 {"name":"guile",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"halflings",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"harmony",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"hate",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"hatred",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"hearth",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"hidden things",               "score":4 }
-ZADD portfolio_domain 4 {"name":"hidden treasures",            "score":4 }
-ZADD portfolio_domain 4 {"name":"hobgoblins",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"honor",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"humility",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"humor",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"ideas",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"illness",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"illusions",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"independence",                "score":4 }
-ZADD portfolio_domain 4 {"name":"individuality",               "score":4 }
-ZADD portfolio_domain 4 {"name":"industriousness",             "score":4 }
-ZADD portfolio_domain 4 {"name":"infinity",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"influence",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"injustice",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"intrigue",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"iron",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"irrigation",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"joy",                         "score":4 }
-ZADD portfolio_domain 4 {"name":"killing",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"kobolds",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"labyrinths",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"lakes",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"law",                         "score":4 }
-ZADD portfolio_domain 4 {"name":"lies",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"life/fertility",              "score":4 }
-ZADD portfolio_domain 4 {"name":"light",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"literacy",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"livestock",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"loyalty",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"lust",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"mass destruction",            "score":4 }
-ZADD portfolio_domain 4 {"name":"memory",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"messages",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"metals",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"minotaurs",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"money",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"morning",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"mortality",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"motherhood",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"mothers",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"mountain dwarves",            "score":4 }
-ZADD portfolio_domain 4 {"name":"mountain giants",             "score":4 }
-ZADD portfolio_domain 4 {"name":"mountains",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"negotiation",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"neutral dragons",             "score":4 }
-ZADD portfolio_domain 4 {"name":"nightmares",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"night",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"obedience",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"oceans",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"ogres",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"omens",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"open paths",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"orcs",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"pain",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"passion",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"pestilence",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"philosophy",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"poisoning",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"poison",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"positive energy",             "score":4 }
-ZADD portfolio_domain 4 {"name":"power",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"procreation",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"prophecy",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"prosperity",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"protectors",                  "score":4 }
-ZADD portfolio_domain 4 {"name":"rage",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"rebels",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"rebirth",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"renewal",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"retribution",                 "score":4 }
-ZADD portfolio_domain 4 {"name":"rogues",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"rumor",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"safety",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"sailing",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"seas",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"secrecy",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"security",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"seduction",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"serenity",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"skill",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"smiths",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"snow",                        "score":4 }
-ZADD portfolio_domain 4 {"name":"soldiers",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"sorrow",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"spellcasters",                "score":4 }
-ZADD portfolio_domain 4 {"name":"spiders",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"stars",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"storms",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"structure",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"study",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"survival",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"suspicion",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"teaching",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"tedium",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"thunder",                     "score":4 }
-ZADD portfolio_domain 4 {"name":"transformation",              "score":4 }
-ZADD portfolio_domain 4 {"name":"trees",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"underdark",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"unpredictability",            "score":4 }
-ZADD portfolio_domain 4 {"name":"warmth",                      "score":4 }
-ZADD portfolio_domain 4 {"name":"warriors",                    "score":4 }
-ZADD portfolio_domain 4 {"name":"west wind",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"willpower",                   "score":4 }
-ZADD portfolio_domain 4 {"name":"winds",                       "score":4 }
-ZADD portfolio_domain 4 {"name":"wrath",                       "score":4 }
-ZADD portfolio_domain 5 {"name":"portals",                     "score":5 }
-ZADD portfolio_domain 5 {"name":"pride",                       "score":5 }
-ZADD portfolio_domain 5 {"name":"rivers",                      "score":5 }
-ZADD portfolio_domain 5 {"name":"sadism",                      "score":5 }
-ZADD portfolio_domain 5 {"name":"sky",                         "score":5 }
-ZADD portfolio_domain 5 {"name":"stone",                       "score":5 }
-ZADD portfolio_domain 5 {"name":"torment",                     "score":5 }
-ZADD portfolio_domain 5 {"name":"torture",                     "score":5 }
-ZADD portfolio_domain 5 {"name":"underwater",                  "score":5 }
-ZADD portfolio_domain 5 {"name":"underworld",                  "score":5 }
-ZADD portfolio_domain 5 {"name":"vanity",                      "score":5 }
-ZADD portfolio_domain 5 {"name":"vigilance",                   "score":5 }
-ZADD portfolio_domain 5 {"name":"women",                       "score":5 }
-ZADD portfolio_domain 6 {"name":"blood",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"celebrations",                "score":6 }
-ZADD portfolio_domain 6 {"name":"combat",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"comfort",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"communication",               "score":6 }
-ZADD portfolio_domain 6 {"name":"defense",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"despair",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"diplomacy",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"dragonkind",                  "score":6 }
-ZADD portfolio_domain 6 {"name":"drow",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"emotions",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"espionage",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"evil knowledge",              "score":6 }
-ZADD portfolio_domain 6 {"name":"evil magic",                  "score":6 }
-ZADD portfolio_domain 6 {"name":"famine",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"farming",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"fates",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"fear",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"fire",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"flora",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"food",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"glory",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"healing",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"hope",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"hunters",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"hunting",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"insanity",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"intellect",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"intelligence",                "score":6 }
-ZADD portfolio_domain 6 {"name":"laws",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"liberty",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"lore",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"love",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"marriage",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"merchants",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"might",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"moons",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"murder",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"mysteries",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"oaths",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"peace",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"plant life",                  "score":6 }
-ZADD portfolio_domain 6 {"name":"pleasure",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"plenty",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"pranks",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"protection",                  "score":6 }
-ZADD portfolio_domain 6 {"name":"punishment",                  "score":6 }
-ZADD portfolio_domain 6 {"name":"purity",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"rain",                        "score":6 }
-ZADD portfolio_domain 6 {"name":"reasoning",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"reason",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"revenge",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"righteousness",               "score":6 }
-ZADD portfolio_domain 6 {"name":"roads",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"science",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"sea",                         "score":6 }
-ZADD portfolio_domain 6 {"name":"shadows",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"sorcery",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"spells",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"spring",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"stealth",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"strategy",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"strength",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"summer",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"traps",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"truth",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"valor",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"violence",                    "score":6 }
-ZADD portfolio_domain 6 {"name":"wanderers",                   "score":6 }
-ZADD portfolio_domain 6 {"name":"water",                       "score":6 }
-ZADD portfolio_domain 6 {"name":"wealth",                      "score":6 }
-ZADD portfolio_domain 6 {"name":"weapons",                     "score":6 }
-ZADD portfolio_domain 6 {"name":"woodlands",                   "score":6 }
-ZADD portfolio_domain 8 {"name":"air",                         "score":8 }
-ZADD portfolio_domain 8 {"name":"animals",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"art",                         "score":8 }
-ZADD portfolio_domain 8 {"name":"authority",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"balance",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"battle",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"beauty",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"betrayal",                    "score":8 }
-ZADD portfolio_domain 8 {"name":"chance",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"chaos",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"commerce",                    "score":8 }
-ZADD portfolio_domain 8 {"name":"compassion",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"conflict",                    "score":8 }
-ZADD portfolio_domain 8 {"name":"corruption",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"death",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"destiny",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"destruction",                 "score":8 }
-ZADD portfolio_domain 8 {"name":"discipline",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"disease",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"disguise",                    "score":8 }
-ZADD portfolio_domain 8 {"name":"duty",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"envy",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"fertility",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"fortune",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"freedom",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"greed",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"growing things",              "score":8 }
-ZADD portfolio_domain 8 {"name":"guardians",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"harvest",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"judgment",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"justice",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"knowledge",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"life",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"lore",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"luck",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"magic",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"mercy",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"nature",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"navigation",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"necromancy",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"neutrality",                  "score":8 }
-ZADD portfolio_domain 8 {"name":"order",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"secrets",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"sleep",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"strife",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"stupidity",                   "score":8 }
-ZADD portfolio_domain 8 {"name":"sun",                         "score":8 }
-ZADD portfolio_domain 8 {"name":"time",                        "score":8 }
-ZADD portfolio_domain 8 {"name":"trade",                       "score":8 }
-ZADD portfolio_domain 8 {"name":"travel",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"trickery",                    "score":8 }
-ZADD portfolio_domain 8 {"name":"tyranny",                     "score":8 }
-ZADD portfolio_domain 8 {"name":"virtue",                      "score":8 }
-ZADD portfolio_domain 8 {"name":"war",                         "score":8 }
-ZADD portfolio_domain 8 {"name":"wisdom",                      "score":8 }
-ZADD portfolio_domain 16 {"name":"evil",                       "score":16 }
-ZADD portfolio_domain 16 {"name":"good",                       "score":16 }
+self.redis.zadd('portfolio_domain', '{"name":"adventure",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"agony",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"agriculture",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"alcohol",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ambition",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ambush",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"amphibians",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"anger",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"appraisal",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"archery",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"architecture",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"arctic beasts",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"artifice",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"assassination",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"autumn",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"avariels",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bad fortune",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bad luck",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bad weather",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"barrenness",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bats",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bees",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bigotry",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"birds",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"black magic",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"blind beggars",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"blind destruction",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"bloodlust",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"brawling",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"brewing",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"brutality",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"burials",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"buried wealth",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"calligraphy",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"camels",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"campfires",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"cannibalism",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"caravans",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"carefree celebration",        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"carousing",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"cats",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"cattle",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"civilization",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"conception",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"consumption",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"contentment",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"continuity",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"corn",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"creativity",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"crocodiles",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"crusades",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"cultivated foods",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"dancing girls",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"daylight",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"deformity",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"desert-dwelling vermin",      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"desert raiders",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"desert storms",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"desert whirlwinds",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"dinosaurs",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"dogs",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"doom",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"dryads",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eagles",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ease",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eastern light",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eclipses",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"emotional hatreds",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"endings",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"enlightened justice",         "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eternal darkness",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eternal light",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"eternal youth",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"evil aquatic creatures",      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"evil birds",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"experimentation",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"falcons",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fatalism",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"favorable winds",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"felines",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fine-smithing",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fir trees",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fishermen",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fogs",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"folk music",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"forest creatures",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"forest dwellers",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"forest folk",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"forest gnomes",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"fortune telling",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"frog folk",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"frost giants",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"frost sprites",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"gambling",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"gem-cutting",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"gemstones",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ghosts",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ghouls",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"giant eagles",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"glaciers",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"grimlocks",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"hags",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"handicrafts",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"hedonism",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"hill giants",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"hills",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"historians",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"honorable combat",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"honor in battle",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"horizons",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"humiliation",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"hurricanes",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ill council",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ill luck",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"illumians",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"immediacy",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"impudence",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"inland waters",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"insomnia",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"inspiration",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"inventiveness",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"isolation",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"jellies",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"jewelrymaking",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"jungle survival",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"just rewards",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"krakens",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lawful theft",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lawyers",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lichdom",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lions",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"literary art",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lizardfolk",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"loneliness",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"long-range traders",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"long rivers",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lost causes",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"lycanthropes",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"magic users",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"magistrates",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"marauding beasts",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"martial arts",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"martial defense",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"martial skill",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"martial training",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mastery of undead",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mental dominion",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mental health",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mental mastery",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mental prowess",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"merfolk",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"metalworking",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mirrors",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mirth",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"moisture",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"moonlight",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mortal life",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"murderers",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mystic insight",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"mysticism",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"napkins",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"narrow escapes",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"natural alchemy",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"natural balances",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"natural beauty",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"natural disasters",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"natural growth",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"navigators",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"necromancers",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"needlework",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"netherworld",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"night birds",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"night travelers",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"nobility",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"noble beasts",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"nonintervention",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"northern stars",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"northern wind",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"oases",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"occult lore",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ocean creatures",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"oozes",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"opportunism",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"oppressed",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"outer space",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"outlaws",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"overwhelming numbers",        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"pacifism",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"parasites",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"peaks",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"physical fitness",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"physical love",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"physical prowess",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"physical strength",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"plagues",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"play",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"poetic justice",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"poetry",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"poets",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"poisoners",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"polar environments",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"power-brokers",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"power-mongers",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"premeditated killing",        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"pretty things",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"propriety",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"prose",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"psychotic behavior",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"quiet places",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"racing",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"radiance",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"rainbows",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"random mischief",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"rats",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ravaging beasts",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"restful sleep",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"revelry",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"righteous indignation",       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"river hazards",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"robbers",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"romantic love",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ropers",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"royalty",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"rune magic",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"running",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sailors",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"salamanders",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"savage lust",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sea creatures",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sea elves",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sea life",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"seals",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sea weather",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sea winds",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"secret pursuits",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"self-deception",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"self-determination",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"senses",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sensual fulfillment",         "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"serpents",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"servants",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"service",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"servitude",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sewers",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"shadow elves",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"shield dwarves",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"silence",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"silver dragonkind",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sinister ambition",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"skiing",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"skill-at-arms",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"skilled artisans",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"slimes",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sly cleverness",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"small birds",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"smallpox",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"smithing",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"smithwork",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"snakes",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"snow elves",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"social behavior",             "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"social order",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"solidity",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"songwriting",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sorcerers",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"southern stars",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"space",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"spawning",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"specific locality",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"spinning",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sports",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"spriggans",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"springs",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"stalking",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"steadfastness",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"stillness",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"stone giants",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"storm giants",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"stray cats",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"study of magic",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"summer storms",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"surrounding lands",           "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"sword skills",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"swordsmanship",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"swordsmiths",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"swordwork",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"talking beasts",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"testing",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"theater",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"thoughtless acts",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"thunderstorms",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"tombs",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"tortured souls",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"torturers",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"traders",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"tradesmen",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"transcendence",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"transformation of art",       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"travelers",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"treachery over honor",        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"treasure-finding",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"tricks",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"truth-speakers",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"twilight",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ugliness",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"ugly people",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"undefiled waters",            "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"unicorns",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"unrevealed secrets",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vampires",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vampirism",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vegetation",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vendettas",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"venomous creatures",          "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vice",                        "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"vortices",                    "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wakefulness",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wandering",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wards",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"war priests",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"watchfulness",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"waterfalls",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"water spirits",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"water travel",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wave motions",                "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"weapon making",               "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"weapon smithing",              "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"weaving",                     "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wells",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"whales",                      "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"whirlpools",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wilderness",                  "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"wildlands",                   "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"woodworkers",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"woodworking",                 "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"worms",                       "score":1 }', '1')
+self.redis.zadd('portfolio_domain', '{"name":"armor",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"artisans",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"athletes",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"benevolence",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"blizzards",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"bounty",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"bugbears",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"canines",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"caves",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"charity",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"charm",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"children",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"clarity",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"climbing",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"concealment",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"construction",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"contracts",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"courtship",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"covert activity",             "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"cowardice",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"creatures of the deep",       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"crops",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"debauch",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"decision",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"desert mountains",            "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"deserts",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"determination",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"distance",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"domination",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"drought",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"duels",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"dying",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"earthquakes",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"east wind",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"eating",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"eloquence",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"enchantments",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"energy",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"enfeeblement",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"epidemics",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"aesthetics",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"evening",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"evil dreams",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"evil fate",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"evil reptiles",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"exhaustion",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"expansion",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fair practices",              "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"faith",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"false promises",              "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"far journeys",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fauna",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"festivals",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"feuds",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fire giants",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fish",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"flattery",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"flowers",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"foreknowledge",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"forests",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"forges",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"forgetfulness",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"forgiveness",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"foul weather",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"frenzy",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fresh water",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"friendship",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"frozen seas",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"fruitfulness",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"funerals",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"games",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"gates",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"gems",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"glyphs",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"gold",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"goliaths",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"goodness",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"grief",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"growth",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"guadianship",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"guarding",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"guarding the underworld",     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"guilt",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"happiness",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"harm",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"health",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hearing",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"heat",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hidden knowledge",            "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hiding places",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"history",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"home",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"honesty",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"horses",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hospitality",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hunger",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"hyenas",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"ice",                         "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"images",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"immortality through undeath", "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"improvement",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"industry",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"inevitability",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"inflexibility",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"inquiry",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"insects",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"intoxication",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"invention",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"invisiblity",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"jokes",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"joy of battle",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"jungles",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"keen senses",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"kings",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"kuo-toas",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"languages",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"learning",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"liars",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"lightning",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"literature",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"living things",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"longevity",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"long life",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"loss",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"luck in battle",              "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"madness",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"magical knowledge",           "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"malice",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"malign knowledge",            "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"marauders",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"marshes",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"martyrdom",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"massacres",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"meadows",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"medicine",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"meditation",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"mental powers",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"messengers",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"metalcraft",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"metalsmiths",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"military excellence",         "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"minerals",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"miners",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"mines",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"mining",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"mischief",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"monks",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"morale",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"mourning",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"musicians",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"music",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"negative energy",             "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"noise",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"obligations",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"obscurement",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"ocean storms",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"old age",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"oppression",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"ores",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"outcasts",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"panic",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"paralysis",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"parenthood",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"patience",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"perfection",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"perseverance",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"pillaging",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"planting",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"plunder",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"police",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"pools",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"pottery",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"predestination",              "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"preservation",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"prestige",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"public combat",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"purification",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"puzzles",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"quarrels",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"questers",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"randomness",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"rebellion",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"reciprocity",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"relationships",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"reptiles",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"restraint",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"reverence",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"risks",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"romance",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"rot",                         "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"rotting death",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"rulership",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"running water",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sages",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"savants",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"scholarship",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"scribes",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sculptures",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sea voyages",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"seekers",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"self-defense",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"self-perfection",             "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"self-sacrifice",              "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sentries",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"shepherds",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sickness",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sight",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"singing",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"slaughter",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sloth",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"slumber",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"smoke",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"societies",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"song",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"south wind",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"speech",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"speed",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"spite",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"starvation",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"stench",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sterility",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"stonework",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"storytelling",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"streams",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"strong beasts",               "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"subtlety",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"subversion",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"success",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"suffering",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sunlight",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"sunshine",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"surprise",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"swamps",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"tactics",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"technology",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"territory",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"thought",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"tolerance",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"tracking",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"tradition",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"trapmaking",                  "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"treachery",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"treasures",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"troglodytes",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"trolls",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"undead",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"unknown",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"unknown secrets",             "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"vandals",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"vengeance",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"vermin",                      "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"visions",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"vitality",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"volcanoes",                   "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wanton destruction",          "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wasting",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"waves",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"weaponsmiths",                "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wetlands",                    "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wetness",                     "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wild beasts",                 "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"wine",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"work",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"youth",                       "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"zeal",                        "score":2 }', '2')
+self.redis.zadd('portfolio_domain', '{"name":"cemeteries",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"clouds",                      "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"curative medicine",           "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"currents",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"dance",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"dancing",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"devouring",                   "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"doors",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"femininity",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"flowing water",               "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"fortification",               "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"guidance",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"guides",                      "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"heroism",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"imaginations",                "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"jealousy",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"keys",                        "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"leadership",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"liberation",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"locks",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"mages",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"mind flayers",                "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"misfortune",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"movement",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"naval combat",                "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"obsession",                   "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"paladins",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"planning",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"predators",                   "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"propagation",                 "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"psionics",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"rangers",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"records",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"rice",                        "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"rock gnomes",                 "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"sacrifice",                   "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"salt",                        "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"scapegoats",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"scheming",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"selfishness",                 "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"ships",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"slavery",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"starlight",                   "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"swords",                      "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"thievery",                    "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"thieves",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"tides",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"trust",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"undeath",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"victory",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"vigor",                       "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"warfare",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"weather",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"wickedness",                  "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"winter",                      "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"witches",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"wit",                         "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"wizards",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"writing",                     "score":3 }', '3')
+self.redis.zadd('portfolio_domain', '{"name":"abundance",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"accidents",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"accountability",              "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"arcane knowledge",            "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"armies",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"astrology",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"astronomy",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"atmosphere",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"barbarians",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"bards",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"beasts",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"beginnings",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"berserking",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"birth",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"blacksmithing",               "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"books",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"bravery",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"building",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"bureaucracy",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"business",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cartography",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"caverns",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"change",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"charisma",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cloud giants",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cold",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"common sense",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"community",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"competition",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"confusion",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"conquest",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"control",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cooperation",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"courage",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"crafts",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cruelty",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cultures",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"cunning",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"curiosity",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"daring",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"darkness",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dawn",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"day",                         "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"decay",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"deceit",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"deception",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dedication",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"delight",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dexterity",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dignity",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"disasters",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"discord",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"discovery",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"divination",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dreams",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"druids",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dungeons",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dusk",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"dwarves",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"earth",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"elements",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"elves",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"endurance",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"engineering",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"enjoyment",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"enlightenment",               "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"entropy",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"eroticism",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"ethics",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"evil dragons",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"evil liches",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"evil lycanthropes",           "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"evil plans",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"evil secrets",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"excellence",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"excess",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"exiles",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"exploration",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"faerie folk",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"faithfulness",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fallen heroes",               "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"family",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"feasting",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fey",                         "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fidelity",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fighters",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fine arts",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fire-using dragons",          "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fitness",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"flying",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"fools",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"forbidden knowledge",         "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"foresight",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"formality",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"full moons",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"future",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"gardening",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"giants",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"gnolls",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"gnomes",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"goblins",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good-aligned magical beasts", "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good beasts",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good dragons",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good fortune",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good giants",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good luck",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"good magic",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"grain",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"gray dwarves",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"guile",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"halflings",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"harmony",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hate",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hatred",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hearth",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hidden things",               "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hidden treasures",            "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"hobgoblins",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"honor",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"humility",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"humor",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"ideas",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"illness",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"illusions",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"independence",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"individuality",               "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"industriousness",             "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"infinity",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"influence",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"injustice",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"intrigue",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"iron",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"irrigation",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"joy",                         "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"killing",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"kobolds",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"labyrinths",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"lakes",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"law",                         "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"lies",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"life/fertility",              "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"light",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"literacy",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"livestock",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"loyalty",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"lust",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mass destruction",            "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"memory",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"messages",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"metals",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"minotaurs",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"money",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"morning",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mortality",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"motherhood",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mothers",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mountain dwarves",            "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mountain giants",             "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"mountains",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"negotiation",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"neutral dragons",             "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"nightmares",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"night",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"obedience",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"oceans",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"ogres",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"omens",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"open paths",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"orcs",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"pain",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"passion",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"pestilence",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"philosophy",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"poisoning",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"poison",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"positive energy",             "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"power",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"procreation",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"prophecy",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"prosperity",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"protectors",                  "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"rage",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"rebels",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"rebirth",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"renewal",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"retribution",                 "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"rogues",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"rumor",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"safety",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"sailing",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"seas",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"secrecy",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"security",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"seduction",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"serenity",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"skill",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"smiths",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"snow",                        "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"soldiers",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"sorrow",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"spellcasters",                "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"spiders",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"stars",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"storms",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"structure",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"study",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"survival",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"suspicion",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"teaching",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"tedium",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"thunder",                     "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"transformation",              "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"trees",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"underdark",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"unpredictability",            "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"warmth",                      "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"warriors",                    "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"west wind",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"willpower",                   "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"winds",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"wrath",                       "score":4 }', '4')
+self.redis.zadd('portfolio_domain', '{"name":"portals",                     "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"pride",                       "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"rivers",                      "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"sadism",                      "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"sky",                         "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"stone",                       "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"torment",                     "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"torture",                     "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"underwater",                  "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"underworld",                  "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"vanity",                      "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"vigilance",                   "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"women",                       "score":5 }', '5')
+self.redis.zadd('portfolio_domain', '{"name":"blood",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"celebrations",                "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"combat",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"comfort",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"communication",               "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"defense",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"despair",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"diplomacy",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"dragonkind",                  "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"drow",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"emotions",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"espionage",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"evil knowledge",              "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"evil magic",                  "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"famine",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"farming",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"fates",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"fear",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"fire",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"flora",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"food",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"glory",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"healing",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"hope",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"hunters",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"hunting",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"insanity",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"intellect",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"intelligence",                "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"laws",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"liberty",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"lore",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"love",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"marriage",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"merchants",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"might",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"moons",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"murder",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"mysteries",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"oaths",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"peace",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"plant life",                  "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"pleasure",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"plenty",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"pranks",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"protection",                  "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"punishment",                  "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"purity",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"rain",                        "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"reasoning",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"reason",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"revenge",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"righteousness",               "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"roads",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"science",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"sea",                         "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"shadows",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"sorcery",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"spells",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"spring",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"stealth",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"strategy",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"strength",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"summer",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"traps",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"truth",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"valor",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"violence",                    "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"wanderers",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"water",                       "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"wealth",                      "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"weapons",                     "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"woodlands",                   "score":6 }', '6')
+self.redis.zadd('portfolio_domain', '{"name":"air",                         "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"animals",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"art",                         "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"authority",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"balance",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"battle",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"beauty",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"betrayal",                    "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"chance",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"chaos",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"commerce",                    "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"compassion",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"conflict",                    "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"corruption",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"death",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"destiny",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"destruction",                 "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"discipline",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"disease",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"disguise",                    "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"duty",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"envy",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"fertility",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"fortune",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"freedom",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"greed",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"growing things",              "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"guardians",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"harvest",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"judgment",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"justice",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"knowledge",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"life",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"lore",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"luck",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"magic",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"mercy",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"nature",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"navigation",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"necromancy",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"neutrality",                  "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"order",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"secrets",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"sleep",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"strife",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"stupidity",                   "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"sun",                         "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"time",                        "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"trade",                       "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"travel",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"trickery",                    "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"tyranny",                     "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"virtue",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"war",                         "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"wisdom",                      "score":8 }', '8')
+self.redis.zadd('portfolio_domain', '{"name":"evil",                       "score":16 }', '16')
+self.redis.zadd('portfolio_domain', '{"name":"good",                       "score":16 }', '16')
 
 # If you don\'t have a corresponding entry here, it\'ll never be hit.
 self.redis.lpush('portfolio_level', '16')

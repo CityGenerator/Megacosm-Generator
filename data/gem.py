@@ -2,43 +2,43 @@
 
 self.redis.lpush('gem_template', 'You find {{params.amount[\'name\']}} {{params.quality[\'name\']}} {{params.cut}} {{params.kind_description[\'name\']|pluralize(params.count)}}. The color is {{params.saturation[\'name\']}} {{params.color}}. {{"This"| plural_adj(params.count)}} {{"gem"| pluralize(params.count)}} {{"is"| plural_verb(params.count)}} {{params.value[\'name\']}}.')
 
-ZADD gem_amount  10 { "name":"a single",           "min":1,    "max":1,    "score":10  }
-ZADD gem_amount  20 { "name":"a pair of",          "min":2,    "max":2,    "score":20  }
-ZADD gem_amount  30 { "name":"a few",              "min":3,    "max":4,    "score":30  }
-ZADD gem_amount  40 { "name":"several",            "min":3,    "max":8,    "score":40  }
-ZADD gem_amount  60 { "name":"a handful",          "min":4,    "max":10,   "score":60  }
-ZADD gem_amount  80 { "name":"about a dozen",      "min":8,    "max":15,   "score":80  }
-ZADD gem_amount  90 { "name":"about two dozen",    "min":20,   "max":30,   "score":90  }
-ZADD gem_amount  95 { "name":"a few dozen",        "min":30,   "max":60,   "score":95  }
-ZADD gem_amount 100 { "name":"a large pile of",    "min":30,   "max":120,  "score":100 }
+self.redis.zadd('gem_amount', '{ "name":"a single",           "min":1,    "max":1,    "score":10  }', '10')
+self.redis.zadd('gem_amount', '{ "name":"a pair of",          "min":2,    "max":2,    "score":20  }', '20')
+self.redis.zadd('gem_amount', '{ "name":"a few",              "min":3,    "max":4,    "score":30  }', '30')
+self.redis.zadd('gem_amount', '{ "name":"several",            "min":3,    "max":8,    "score":40  }', '40')
+self.redis.zadd('gem_amount', '{ "name":"a handful",          "min":4,    "max":10,   "score":60  }', '60')
+self.redis.zadd('gem_amount', '{ "name":"about a dozen",      "min":8,    "max":15,   "score":80  }', '80')
+self.redis.zadd('gem_amount', '{ "name":"about two dozen",    "min":20,   "max":30,   "score":90  }', '90')
+self.redis.zadd('gem_amount', '{ "name":"a few dozen",        "min":30,   "max":60,   "score":95  }', '95')
+self.redis.zadd('gem_amount', '{ "name":"a large pile of",    "min":30,   "max":120,  "score":100 }', '100')
 
-ZADD gem_value  10 { "name":"near worthless",           "score":10  }
-ZADD gem_value  20 { "name":"of little value",          "score":20  }
-ZADD gem_value  30 { "name":"worth a few coins",        "score":30  }
-ZADD gem_value  40 { "name":"cheap",                    "score":40  }
-ZADD gem_value  50 { "name":"of moderate value",        "score":50  }
-ZADD gem_value  60 { "name":"costly",                   "score":60  }
-ZADD gem_value  70 { "name":"very valuable",            "score":70  }
-ZADD gem_value  80 { "name":"worth a small fortune",    "score":80  }
-ZADD gem_value  90 { "name":"of inestimable value",     "score":90  }
-ZADD gem_value 100 { "name":"worth a king\'s ransom",    "score":100  }
+self.redis.zadd('gem_value', '{ "name":"near worthless",           "score":10  }', '10')
+self.redis.zadd('gem_value', '{ "name":"of little value",          "score":20  }', '20')
+self.redis.zadd('gem_value', '{ "name":"worth a few coins",        "score":30  }', '30')
+self.redis.zadd('gem_value', '{ "name":"cheap",                    "score":40  }', '40')
+self.redis.zadd('gem_value', '{ "name":"of moderate value",        "score":50  }', '50')
+self.redis.zadd('gem_value', '{ "name":"costly",                   "score":60  }', '60')
+self.redis.zadd('gem_value', '{ "name":"very valuable",            "score":70  }', '70')
+self.redis.zadd('gem_value', '{ "name":"worth a small fortune",    "score":80  }', '80')
+self.redis.zadd('gem_value', '{ "name":"of inestimable value",     "score":90  }', '90')
+self.redis.zadd('gem_value', '{ "name":"worth a king\'s ransom",    "score":100  }', '100')
 
-ZADD gem_saturation  10 { "name":"blanched",    "score":10  }
-ZADD gem_saturation  20 { "name":"dull",        "score":20  }
-ZADD gem_saturation  30 { "name":"washed out",  "score":30  }
-ZADD gem_saturation  40 { "name":"pale",        "score":40  }
-ZADD gem_saturation  50 { "name":"strong",      "score":50  }
-ZADD gem_saturation  60 { "name":"intense",     "score":60  }
-ZADD gem_saturation  70 { "name":"rich",        "score":70  }
-ZADD gem_saturation  80 { "name":"vivid",       "score":80  }
-ZADD gem_saturation  90 { "name":"brilliant",   "score":90  }
-ZADD gem_saturation 100 { "name":"vibrant",     "score":100 }
+self.redis.zadd('gem_saturation', '{ "name":"blanched",    "score":10  }', '10')
+self.redis.zadd('gem_saturation', '{ "name":"dull",        "score":20  }', '20')
+self.redis.zadd('gem_saturation', '{ "name":"washed out",  "score":30  }', '30')
+self.redis.zadd('gem_saturation', '{ "name":"pale",        "score":40  }', '40')
+self.redis.zadd('gem_saturation', '{ "name":"strong",      "score":50  }', '50')
+self.redis.zadd('gem_saturation', '{ "name":"intense",     "score":60  }', '60')
+self.redis.zadd('gem_saturation', '{ "name":"rich",        "score":70  }', '70')
+self.redis.zadd('gem_saturation', '{ "name":"vivid",       "score":80  }', '80')
+self.redis.zadd('gem_saturation', '{ "name":"brilliant",   "score":90  }', '90')
+self.redis.zadd('gem_saturation', '{ "name":"vibrant",     "score":100 }', '100')
 
-ZADD gem_quality  20 { "name":"chipped"     , "score":20   }
-ZADD gem_quality  40 { "name":"flawed"      , "score":40   }
-ZADD gem_quality  60 { "name":"flawless"    , "score":60   }
-ZADD gem_quality  80 { "name":"radiant"     , "score":80   }
-ZADD gem_quality 100 { "name":"perfect"     , "score":100  }
+self.redis.zadd('gem_quality', '{ "name":"chipped"     , "score":20   }', '20')
+self.redis.zadd('gem_quality', '{ "name":"flawed"      , "score":40   }', '40')
+self.redis.zadd('gem_quality', '{ "name":"flawless"    , "score":60   }', '60')
+self.redis.zadd('gem_quality', '{ "name":"radiant"     , "score":80   }', '80')
+self.redis.zadd('gem_quality', '{ "name":"perfect"     , "score":100  }', '100')
 
 
 SET   gem_cut_chance 50

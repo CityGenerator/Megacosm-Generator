@@ -67,12 +67,12 @@ self.redis.hset('flagcolor_description', 'purple', '{"name":"purple",           
 self.redis.hset('flagcolor_description', 'black', '{"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }')
 self.redis.hset('flagcolor_description', 'white', '{"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }')
 
-ZADD  flag_shape  50 {"name":"square",      "score":50    }
-ZADD  flag_shape  60 {"name":"para",        "score":60    }
-ZADD  flag_shape  70 {"name":"pennant",     "score":70    }
-ZADD  flag_shape  80 {"name":"tri",         "score":80    }
-ZADD  flag_shape  90 {"name":"swallow",     "score":90    }
-ZADD  flag_shape 100 {"name":"tongued",     "score":100   }
+self.redis.zadd('flag_shape', '{"name":"square",      "score":50    }', '50')
+self.redis.zadd('flag_shape', '{"name":"para",        "score":60    }', '60')
+self.redis.zadd('flag_shape', '{"name":"pennant",     "score":70    }', '70')
+self.redis.zadd('flag_shape', '{"name":"tri",         "score":80    }', '80')
+self.redis.zadd('flag_shape', '{"name":"swallow",     "score":90    }', '90')
+self.redis.zadd('flag_shape', '{"name":"tongued",     "score":100   }', '100')
 
 self.redis.lpush('flag_shape_swallow_depth', '10')
 self.redis.lpush('flag_shape_swallow_depth', '20')
@@ -91,25 +91,25 @@ self.redis.lpush('flag_shape_tongued_depth', '0.3')
 self.redis.lpush('flag_shape_tongued_depth', '0.1')
 self.redis.lpush('flag_shape_tongued_depth', '0.2')
 
-ZADD  flag_ratio  10  { "name":"1", "score":10  }
-ZADD  flag_ratio  20  { "name":"1.15", "score":20  }
-ZADD  flag_ratio  30  { "name":"1.25", "score":30  }
-ZADD  flag_ratio  40  { "name":"1.33", "score":40  }
-ZADD  flag_ratio  50  { "name":"1.32", "score":50  }
-ZADD  flag_ratio  55  { "name":"1.38", "score":55  }
-ZADD  flag_ratio  60  { "name":"1.39", "score":60  }
-ZADD  flag_ratio  65  { "name":"1.50", "score":65  }
-ZADD  flag_ratio  70  { "name":"1.6", "score":70  }
-ZADD  flag_ratio  75  { "name":"1.67", "score":75  }
-ZADD  flag_ratio  80  { "name":"1.9", "score":80  }
-ZADD  flag_ratio  90  { "name":"2.0", "score":90  }
-ZADD  flag_ratio  100  { "name":"2.55", "score":100  }
+self.redis.zadd('flag_ratio', '{ "name":"1", "score":10  }', '10')
+self.redis.zadd('flag_ratio', '{ "name":"1.15", "score":20  }', '20')
+self.redis.zadd('flag_ratio', '{ "name":"1.25", "score":30  }', '30')
+self.redis.zadd('flag_ratio', '{ "name":"1.33", "score":40  }', '40')
+self.redis.zadd('flag_ratio', '{ "name":"1.32", "score":50  }', '50')
+self.redis.zadd('flag_ratio', '{ "name":"1.38", "score":55  }', '55')
+self.redis.zadd('flag_ratio', '{ "name":"1.39", "score":60  }', '60')
+self.redis.zadd('flag_ratio', '{ "name":"1.50", "score":65  }', '65')
+self.redis.zadd('flag_ratio', '{ "name":"1.6", "score":70  }', '70')
+self.redis.zadd('flag_ratio', '{ "name":"1.67", "score":75  }', '75')
+self.redis.zadd('flag_ratio', '{ "name":"1.9", "score":80  }', '80')
+self.redis.zadd('flag_ratio', '{ "name":"2.0", "score":90  }', '90')
+self.redis.zadd('flag_ratio', '{ "name":"2.55", "score":100  }', '100')
     
-ZADD  flag_division  20  { "name":"none", "score":20  }
-ZADD  flag_division  40  { "name":"quads", "score":40  }
-ZADD  flag_division  60  { "name":"diagquads", "score":60  }
-ZADD  flag_division  80  { "name":"diagonal", "score":80  }
-ZADD  flag_division  100  { "name":"stripes", "score":100  }
+self.redis.zadd('flag_division', '{ "name":"none", "score":20  }', '20')
+self.redis.zadd('flag_division', '{ "name":"quads", "score":40  }', '40')
+self.redis.zadd('flag_division', '{ "name":"diagquads", "score":60  }', '60')
+self.redis.zadd('flag_division', '{ "name":"diagonal", "score":80  }', '80')
+self.redis.zadd('flag_division', '{ "name":"stripes", "score":100  }', '100')
 
 self.redis.lpush('flag_division_diagonal_direction', 'right-to-left')
 self.redis.lpush('flag_division_diagonal_direction', 'left-to-right')
@@ -124,18 +124,18 @@ self.redis.lpush('flag_division_stripes_count', '13')
 self.redis.lpush('flag_division_stripes_colorcount', '2')
 self.redis.lpush('flag_division_stripes_colorcount', '3')
    
-ZADD  flag_overlay   5  { "name":"none", "score":5  }
-ZADD  flag_overlay  10  { "name":"quaddiag", "score":10  }
-ZADD  flag_overlay  20  { "name":"quad", "score":20  }
-ZADD  flag_overlay  30  { "name":"stripe", "score":30  }
-ZADD  flag_overlay  40  { "name":"slash", "score":40  }
+self.redis.zadd('flag_overlay', '{ "name":"none", "score":5  }', '5')
+self.redis.zadd('flag_overlay', '{ "name":"quaddiag", "score":10  }', '10')
+self.redis.zadd('flag_overlay', '{ "name":"quad", "score":20  }', '20')
+self.redis.zadd('flag_overlay', '{ "name":"stripe", "score":30  }', '30')
+self.redis.zadd('flag_overlay', '{ "name":"slash", "score":40  }', '40')
 #ZADD  flag_overlay  50  { "name":"asterisk", "score":50  }
-ZADD  flag_overlay  60  { "name":"x", "score":60  }
+self.redis.zadd('flag_overlay', '{ "name":"x", "score":60  }', '60')
 #ZADD  flag_overlay  70  { "name":"jack", "score":70  }
-ZADD  flag_overlay  80  { "name":"cross", "score":80  }
-ZADD  flag_overlay  90  { "name":"diamond", "score":90  }
-ZADD  flag_overlay  95  { "name":"circle", "score":95  }
-ZADD  flag_overlay  100  { "name":"rays", "score":100  }
+self.redis.zadd('flag_overlay', '{ "name":"cross", "score":80  }', '80')
+self.redis.zadd('flag_overlay', '{ "name":"diamond", "score":90  }', '90')
+self.redis.zadd('flag_overlay', '{ "name":"circle", "score":95  }', '95')
+self.redis.zadd('flag_overlay', '{ "name":"rays", "score":100  }', '100')
 
 self.redis.lpush('flag_overlay_quaddiag_side', 'north')
 self.redis.lpush('flag_overlay_quaddiag_side', 'south')
@@ -272,10 +272,10 @@ self.redis.lpush('flag_overlay_rays_y', '.75')
 self.redis.lpush('flag_overlay_rays_y', '1')
 self.redis.lpush('flag_overlay_rays_y', '2')
                 
-ZADD  flag_symbol  25 { "name":"none", "score":25  }
-ZADD  flag_symbol  50 { "name":"circle", "score":50  }
-ZADD  flag_symbol  75 { "name":"star", "score":75  }
-ZADD  flag_symbol 100 { "name":"letter", "score":100  }
+self.redis.zadd('flag_symbol', '{ "name":"none", "score":25  }', '25')
+self.redis.zadd('flag_symbol', '{ "name":"circle", "score":50  }', '50')
+self.redis.zadd('flag_symbol', '{ "name":"star", "score":75  }', '75')
+self.redis.zadd('flag_symbol', '{ "name":"letter", "score":100  }', '100')
 self.redis.lpush('flag_symbol_circle_outline', 'true')
 self.redis.lpush('flag_symbol_circle_outline', 'false')
 self.redis.lpush('flag_symbol_circle_radiusdirection', 'horizontal')
@@ -328,8 +328,8 @@ self.redis.lpush('flag_symbol_letter_x', '.5')
 self.redis.lpush('flag_symbol_letter_y', '.25')
 self.redis.lpush('flag_symbol_letter_y', '.5')
                
-ZADD  flag_border  50  { "name":"none", "score":50  }       
-ZADD  flag_border  100  { "name":"solid", "score":100  }
+self.redis.zadd('flag_border', '{ "name":"none", "score":50  }       ', '50')
+self.redis.zadd('flag_border', '{ "name":"solid", "score":100  }', '100')
 self.redis.lpush('flag_border_solid_size', '.08')
 self.redis.lpush('flag_border_solid_size', '.05')
 self.redis.lpush('flag_border_solid_size', '.01')

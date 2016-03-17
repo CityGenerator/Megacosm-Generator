@@ -144,18 +144,18 @@ self.redis.hset('curse_kind_description', 'tunnelvision', '{"name":"tunnel visio
 
 
 # The effects of the curse _____________.
-ZADD curse_duration   5  {"name":"appear intermittently", "score":5  }
-ZADD curse_duration  10  {"name":"are temporary",         "score":10  }
-ZADD curse_duration  40  {"name":"last for a few minutes at a time",    "score":40  }
-ZADD curse_duration  50  {"name":"last for several minutes at a time",  "score":50  }
-ZADD curse_duration  60  {"name":"last for an hour at a time",          "score":60  }
-ZADD curse_duration  70  {"name":"last for a few hours at a time",      "score":70  }
-ZADD curse_duration  95  {"name":"last several hours at a time",    "score":95  }
-ZADD curse_duration  96  {"name":"last a day",            "score":96  }
-ZADD curse_duration  97  {"name":"last a few days",       "score":97  }
-ZADD curse_duration  98  {"name":"last a week",           "score":98  }
-ZADD curse_duration  99  {"name":"last weeks",            "score":99  }
-ZADD curse_duration 100  {"name":"last a lifetime",       "score":100 }
+self.redis.zadd('curse_duration', '{"name":"appear intermittently", "score":5  }', '5')
+self.redis.zadd('curse_duration', '{"name":"are temporary",         "score":10  }', '10')
+self.redis.zadd('curse_duration', '{"name":"last for a few minutes at a time",    "score":40  }', '40')
+self.redis.zadd('curse_duration', '{"name":"last for several minutes at a time",  "score":50  }', '50')
+self.redis.zadd('curse_duration', '{"name":"last for an hour at a time",          "score":60  }', '60')
+self.redis.zadd('curse_duration', '{"name":"last for a few hours at a time",      "score":70  }', '70')
+self.redis.zadd('curse_duration', '{"name":"last several hours at a time",    "score":95  }', '95')
+self.redis.zadd('curse_duration', '{"name":"last a day",            "score":96  }', '96')
+self.redis.zadd('curse_duration', '{"name":"last a few days",       "score":97  }', '97')
+self.redis.zadd('curse_duration', '{"name":"last a week",           "score":98  }', '98')
+self.redis.zadd('curse_duration', '{"name":"last weeks",            "score":99  }', '99')
+self.redis.zadd('curse_duration', '{"name":"last a lifetime",       "score":100 }', '100')
 
 
 # ...and can only be undone by ___________

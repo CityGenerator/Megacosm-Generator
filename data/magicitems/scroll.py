@@ -552,19 +552,19 @@ self.redis.lpush('scroll_effect', 'zombification')
             
 #<!-- may cause blindness, which -->
 
-ZADD scroll_duration  10  {"name":"is temporary",           "score":10  }
-ZADD scroll_duration  20  {"name":"lasts a few seconds",    "score":20  }
-ZADD scroll_duration  30  {"name":"lasts a minute",         "score":30  }
-ZADD scroll_duration  40  {"name":"lasts a few minutes",    "score":40  }
-ZADD scroll_duration  50  {"name":"lasts several minutes",  "score":50  }
-ZADD scroll_duration  60  {"name":"lasts an hour",          "score":60  }
-ZADD scroll_duration  70  {"name":"lasts a few hours",      "score":70  }
-ZADD scroll_duration  80  {"name":"lasts several hours",    "score":80  }
-ZADD scroll_duration  85  {"name":"lasts a day",            "score":85  }
-ZADD scroll_duration  90  {"name":"lasts a few days",       "score":90  }
-ZADD scroll_duration  95  {"name":"lasts a week",           "score":95  }
-ZADD scroll_duration  98  {"name":"lasts weeks",            "score":98  }
-ZADD scroll_duration 100  {"name":"is permanent",           "score":100  }
+self.redis.zadd('scroll_duration', '{"name":"is temporary",           "score":10  }', '10')
+self.redis.zadd('scroll_duration', '{"name":"lasts a few seconds",    "score":20  }', '20')
+self.redis.zadd('scroll_duration', '{"name":"lasts a minute",         "score":30  }', '30')
+self.redis.zadd('scroll_duration', '{"name":"lasts a few minutes",    "score":40  }', '40')
+self.redis.zadd('scroll_duration', '{"name":"lasts several minutes",  "score":50  }', '50')
+self.redis.zadd('scroll_duration', '{"name":"lasts an hour",          "score":60  }', '60')
+self.redis.zadd('scroll_duration', '{"name":"lasts a few hours",      "score":70  }', '70')
+self.redis.zadd('scroll_duration', '{"name":"lasts several hours",    "score":80  }', '80')
+self.redis.zadd('scroll_duration', '{"name":"lasts a day",            "score":85  }', '85')
+self.redis.zadd('scroll_duration', '{"name":"lasts a few days",       "score":90  }', '90')
+self.redis.zadd('scroll_duration', '{"name":"lasts a week",           "score":95  }', '95')
+self.redis.zadd('scroll_duration', '{"name":"lasts weeks",            "score":98  }', '98')
+self.redis.zadd('scroll_duration', '{"name":"is permanent",           "score":100  }', '100')
 
 
 

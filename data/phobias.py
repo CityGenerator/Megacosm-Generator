@@ -2,10 +2,10 @@
 self.redis.lpush('phobia_template', 'You have {{params.strength[\'name\']}} {{params.kind_description[\'name\']}}, which is a fear of {{params.kind_description[\'description\']}}.')
 
 
-ZADD phobia_strength  60 {"name":"mild",      "score":60    }
-ZADD phobia_strength  80 {"name":"moderate",  "score":80    }
-ZADD phobia_strength  90 {"name":"severe",    "score":90    }
-ZADD phobia_strength 100 {"name":"crippling", "score":100   }
+self.redis.zadd('phobia_strength', '{"name":"mild",      "score":60    }', '60')
+self.redis.zadd('phobia_strength', '{"name":"moderate",  "score":80    }', '80')
+self.redis.zadd('phobia_strength', '{"name":"severe",    "score":90    }', '90')
+self.redis.zadd('phobia_strength', '{"name":"crippling", "score":100   }', '100')
 
 
 self.redis.lpush('phobia_kind', 'ablutophobia')

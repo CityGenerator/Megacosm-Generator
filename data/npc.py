@@ -1,188 +1,188 @@
 #
 
-ZADD npc_sex 51   {"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }
-ZADD npc_sex 100  {"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }
+self.redis.zadd('npc_sex', '{"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }', '51')
+self.redis.zadd('npc_sex', '{"name":"male",       "pronoun":"he", "possessive":"his",  "third-person":"him", "spouse":"wife",    "score":100  }', '100')
 
 # Bob is a[n] ________ follower of Grabesh.
-ZADD npc_piety   5 {"name":"noncommittal",  "score":5     }
-ZADD npc_piety  10 {"name":"dispassionate", "score":10    }
-ZADD npc_piety  20 {"name":"insincere",     "score":20    }
-ZADD npc_piety  30 {"name":"inattentive",   "score":30    }
-ZADD npc_piety  40 {"name":"dutiful",       "score":40    }
-ZADD npc_piety  50 {"name":"pious",         "score":50    }
-ZADD npc_piety  60 {"name":"devoted",       "score":60    }
-ZADD npc_piety  70 {"name":"reverent",      "score":70    }
-ZADD npc_piety  80 {"name":"devout",        "score":80    }
-ZADD npc_piety  90 {"name":"passionate",    "score":90    }
-ZADD npc_piety 100 {"name":"overzealous",   "score":100   }
+self.redis.zadd('npc_piety', '{"name":"noncommittal",  "score":5     }', '5')
+self.redis.zadd('npc_piety', '{"name":"dispassionate", "score":10    }', '10')
+self.redis.zadd('npc_piety', '{"name":"insincere",     "score":20    }', '20')
+self.redis.zadd('npc_piety', '{"name":"inattentive",   "score":30    }', '30')
+self.redis.zadd('npc_piety', '{"name":"dutiful",       "score":40    }', '40')
+self.redis.zadd('npc_piety', '{"name":"pious",         "score":50    }', '50')
+self.redis.zadd('npc_piety', '{"name":"devoted",       "score":60    }', '60')
+self.redis.zadd('npc_piety', '{"name":"reverent",      "score":70    }', '70')
+self.redis.zadd('npc_piety', '{"name":"devout",        "score":80    }', '80')
+self.redis.zadd('npc_piety', '{"name":"passionate",    "score":90    }', '90')
+self.redis.zadd('npc_piety', '{"name":"overzealous",   "score":100   }', '100')
 
 #Bob is a human 
-ZADD npc_age 5    {"name":"juvenile",       "score":5   }
-ZADD npc_age 10   {"name":"adolescent",     "score":10  }
-ZADD npc_age 20   {"name":"young",          "score":20  }
-ZADD npc_age 40   {"name":"adult",          "score":40  }
-ZADD npc_age 80   {"name":"middle-aged",    "score":80  }
-ZADD npc_age 95   {"name":"elderly",        "score":95  }
-ZADD npc_age 100  {"name":"ancient",        "score":100 }
+self.redis.zadd('npc_age', '{"name":"juvenile",       "score":5   }', '5')
+self.redis.zadd('npc_age', '{"name":"adolescent",     "score":10  }', '10')
+self.redis.zadd('npc_age', '{"name":"young",          "score":20  }', '20')
+self.redis.zadd('npc_age', '{"name":"adult",          "score":40  }', '40')
+self.redis.zadd('npc_age', '{"name":"middle-aged",    "score":80  }', '80')
+self.redis.zadd('npc_age', '{"name":"elderly",        "score":95  }', '95')
+self.redis.zadd('npc_age', '{"name":"ancient",        "score":100 }', '100')
 
 # friends consider bob ________
-ZADD npc_honor 5    {"name":"treacherous",   "score":5   }
-ZADD npc_honor 10   {"name":"untrustworthy", "score":10  }
-ZADD npc_honor 15   {"name":"dishonorable",  "score":15  }
-ZADD npc_honor 20   {"name":"devious",       "score":20  }
-ZADD npc_honor 30   {"name":"dishonest",     "score":30  }
-ZADD npc_honor 40   {"name":"inconsistent",  "score":40  }
-ZADD npc_honor 50   {"name":"dependable",    "score":50  }
-ZADD npc_honor 60   {"name":"reliable",      "score":60  }
-ZADD npc_honor 70   {"name":"honest",        "score":70  }
-ZADD npc_honor 80   {"name":"credible",      "score":80  }
-ZADD npc_honor 85   {"name":"faithful",      "score":85  }
-ZADD npc_honor 90   {"name":"loyal",         "score":90  }
-ZADD npc_honor 95   {"name":"trustworthy",   "score":95  }
-ZADD npc_honor 100  {"name":"honorable",     "score":100 }
+self.redis.zadd('npc_honor', '{"name":"treacherous",   "score":5   }', '5')
+self.redis.zadd('npc_honor', '{"name":"untrustworthy", "score":10  }', '10')
+self.redis.zadd('npc_honor', '{"name":"dishonorable",  "score":15  }', '15')
+self.redis.zadd('npc_honor', '{"name":"devious",       "score":20  }', '20')
+self.redis.zadd('npc_honor', '{"name":"dishonest",     "score":30  }', '30')
+self.redis.zadd('npc_honor', '{"name":"inconsistent",  "score":40  }', '40')
+self.redis.zadd('npc_honor', '{"name":"dependable",    "score":50  }', '50')
+self.redis.zadd('npc_honor', '{"name":"reliable",      "score":60  }', '60')
+self.redis.zadd('npc_honor', '{"name":"honest",        "score":70  }', '70')
+self.redis.zadd('npc_honor', '{"name":"credible",      "score":80  }', '80')
+self.redis.zadd('npc_honor', '{"name":"faithful",      "score":85  }', '85')
+self.redis.zadd('npc_honor', '{"name":"loyal",         "score":90  }', '90')
+self.redis.zadd('npc_honor', '{"name":"trustworthy",   "score":95  }', '95')
+self.redis.zadd('npc_honor', '{"name":"honorable",     "score":100 }', '100')
 
 # When provoked, bob is 
-ZADD npc_bravery 5    {"name":"chicken-hearted",   "score":5  }
-ZADD npc_bravery 10   {"name":"spineless",   "score":10  }
-ZADD npc_bravery 15   {"name":"cowardly",   "score":15  }
-ZADD npc_bravery 20   {"name":"craven",   "score":20  }
-ZADD npc_bravery 30   {"name":"faint-hearted",   "score":30  }
-ZADD npc_bravery 40   {"name":"panicky",   "score":40  }
-ZADD npc_bravery 50   {"name":"nervous",   "score":50  }
-ZADD npc_bravery 60   {"name":"tough",   "score":60  }
-ZADD npc_bravery 70   {"name":"intrepid",   "score":70  }
-ZADD npc_bravery 80   {"name":"fearless",   "score":80  }
-ZADD npc_bravery 85   {"name":"bold",   "score":85  }
-ZADD npc_bravery 90   {"name":"unafraid",   "score":90  }
-ZADD npc_bravery 95   {"name":"brave",   "score":95  }
-ZADD npc_bravery 100  {"name":"heroic",   "score":100  }
+self.redis.zadd('npc_bravery', '{"name":"chicken-hearted",   "score":5  }', '5')
+self.redis.zadd('npc_bravery', '{"name":"spineless",   "score":10  }', '10')
+self.redis.zadd('npc_bravery', '{"name":"cowardly",   "score":15  }', '15')
+self.redis.zadd('npc_bravery', '{"name":"craven",   "score":20  }', '20')
+self.redis.zadd('npc_bravery', '{"name":"faint-hearted",   "score":30  }', '30')
+self.redis.zadd('npc_bravery', '{"name":"panicky",   "score":40  }', '40')
+self.redis.zadd('npc_bravery', '{"name":"nervous",   "score":50  }', '50')
+self.redis.zadd('npc_bravery', '{"name":"tough",   "score":60  }', '60')
+self.redis.zadd('npc_bravery', '{"name":"intrepid",   "score":70  }', '70')
+self.redis.zadd('npc_bravery', '{"name":"fearless",   "score":80  }', '80')
+self.redis.zadd('npc_bravery', '{"name":"bold",   "score":85  }', '85')
+self.redis.zadd('npc_bravery', '{"name":"unafraid",   "score":90  }', '90')
+self.redis.zadd('npc_bravery', '{"name":"brave",   "score":95  }', '95')
+self.redis.zadd('npc_bravery', '{"name":"heroic",   "score":100  }', '100')
 
-ZADD npc_skill 5   {"name":"incompetent",   "score":5  }
-ZADD npc_skill 10  {"name":"ineptly skilled",   "score":10  }
-ZADD npc_skill 30  {"name":"poorly skilled",   "score":30  }
-ZADD npc_skill 40  {"name":"mediocrely skilled",   "score":40  }
-ZADD npc_skill 50  {"name":"reasonably skilled",   "score":50  }
-ZADD npc_skill 70  {"name":"decently skilled",   "score":70  }
-ZADD npc_skill 80  {"name":"skilled",   "score":80  }
-ZADD npc_skill 90  {"name":"gifted",   "score":90  }
-ZADD npc_skill 98  {"name":"impressively skilled",   "score":98  }
-ZADD npc_skill 100 {"name":"legendarily skilled",   "score":100  }
+self.redis.zadd('npc_skill', '{"name":"incompetent",   "score":5  }', '5')
+self.redis.zadd('npc_skill', '{"name":"ineptly skilled",   "score":10  }', '10')
+self.redis.zadd('npc_skill', '{"name":"poorly skilled",   "score":30  }', '30')
+self.redis.zadd('npc_skill', '{"name":"mediocrely skilled",   "score":40  }', '40')
+self.redis.zadd('npc_skill', '{"name":"reasonably skilled",   "score":50  }', '50')
+self.redis.zadd('npc_skill', '{"name":"decently skilled",   "score":70  }', '70')
+self.redis.zadd('npc_skill', '{"name":"skilled",   "score":80  }', '80')
+self.redis.zadd('npc_skill', '{"name":"gifted",   "score":90  }', '90')
+self.redis.zadd('npc_skill', '{"name":"impressively skilled",   "score":98  }', '98')
+self.redis.zadd('npc_skill', '{"name":"legendarily skilled",   "score":100  }', '100')
 
-ZADD npc_experience 5    {"name":"new",   "score":5  }
-ZADD npc_experience 10   {"name":"naive",   "score":10  }
-ZADD npc_experience 15   {"name":"green",   "score":15  }
-ZADD npc_experience 20   {"name":"amateur",   "score":20  }
-ZADD npc_experience 25   {"name":"fledgling",   "score":25  }
-ZADD npc_experience 30   {"name":"inexperienced",   "score":30  }
-ZADD npc_experience 35   {"name":"rookie",   "score":35  }
-ZADD npc_experience 40   {"name":"trained",   "score":40  }
-ZADD npc_experience 45   {"name":"capable",   "score":45  }
-ZADD npc_experience 50   {"name":"qualified",   "score":50  }
-ZADD npc_experience 55   {"name":"proficient",   "score":55  }
-ZADD npc_experience 60   {"name":"average",   "score":60  }
-ZADD npc_experience 65   {"name":"effective",   "score":65  }
-ZADD npc_experience 70   {"name":"accomplished",   "score":70  }
-ZADD npc_experience 75   {"name":"gifted",   "score":75  }
-ZADD npc_experience 80   {"name":"adept",   "score":80  }
-ZADD npc_experience 85   {"name":"worldly",   "score":85  }
-ZADD npc_experience 90   {"name":"expert",   "score":90  }
-ZADD npc_experience 95   {"name":"veteran",   "score":95  }
-ZADD npc_experience 100  {"name":"grizzled",   "score":100  }
+self.redis.zadd('npc_experience', '{"name":"new",   "score":5  }', '5')
+self.redis.zadd('npc_experience', '{"name":"naive",   "score":10  }', '10')
+self.redis.zadd('npc_experience', '{"name":"green",   "score":15  }', '15')
+self.redis.zadd('npc_experience', '{"name":"amateur",   "score":20  }', '20')
+self.redis.zadd('npc_experience', '{"name":"fledgling",   "score":25  }', '25')
+self.redis.zadd('npc_experience', '{"name":"inexperienced",   "score":30  }', '30')
+self.redis.zadd('npc_experience', '{"name":"rookie",   "score":35  }', '35')
+self.redis.zadd('npc_experience', '{"name":"trained",   "score":40  }', '40')
+self.redis.zadd('npc_experience', '{"name":"capable",   "score":45  }', '45')
+self.redis.zadd('npc_experience', '{"name":"qualified",   "score":50  }', '50')
+self.redis.zadd('npc_experience', '{"name":"proficient",   "score":55  }', '55')
+self.redis.zadd('npc_experience', '{"name":"average",   "score":60  }', '60')
+self.redis.zadd('npc_experience', '{"name":"effective",   "score":65  }', '65')
+self.redis.zadd('npc_experience', '{"name":"accomplished",   "score":70  }', '70')
+self.redis.zadd('npc_experience', '{"name":"gifted",   "score":75  }', '75')
+self.redis.zadd('npc_experience', '{"name":"adept",   "score":80  }', '80')
+self.redis.zadd('npc_experience', '{"name":"worldly",   "score":85  }', '85')
+self.redis.zadd('npc_experience', '{"name":"expert",   "score":90  }', '90')
+self.redis.zadd('npc_experience', '{"name":"veteran",   "score":95  }', '95')
+self.redis.zadd('npc_experience', '{"name":"grizzled",   "score":100  }', '100')
 
-ZADD npc_strength 10     {"name":"weak",   "score":10  }
-ZADD npc_strength 20     {"name":"shaky",   "score":20  }
-ZADD npc_strength 30     {"name":"delicate",   "score":30  }
-ZADD npc_strength 40     {"name":"inactive",   "score":40  }
-ZADD npc_strength 60     {"name":"able-bodied",   "score":60  }
-ZADD npc_strength 70     {"name":"strong",   "score":70  }
-ZADD npc_strength 80     {"name":"sinewy",   "score":80  }
-ZADD npc_strength 90     {"name":"powerful",   "score":90  }
-ZADD npc_strength 100    {"name":"herculean",   "score":100  }
+self.redis.zadd('npc_strength', '{"name":"weak",   "score":10  }', '10')
+self.redis.zadd('npc_strength', '{"name":"shaky",   "score":20  }', '20')
+self.redis.zadd('npc_strength', '{"name":"delicate",   "score":30  }', '30')
+self.redis.zadd('npc_strength', '{"name":"inactive",   "score":40  }', '40')
+self.redis.zadd('npc_strength', '{"name":"able-bodied",   "score":60  }', '60')
+self.redis.zadd('npc_strength', '{"name":"strong",   "score":70  }', '70')
+self.redis.zadd('npc_strength', '{"name":"sinewy",   "score":80  }', '80')
+self.redis.zadd('npc_strength', '{"name":"powerful",   "score":90  }', '90')
+self.redis.zadd('npc_strength', '{"name":"herculean",   "score":100  }', '100')
 
-ZADD npc_endurance 10    {"name":"exhausted",   "score":10  }
-ZADD npc_endurance 20    {"name":"unenergetic",   "score":20  }
-ZADD npc_endurance 30    {"name":"lazy",   "score":30  }
-ZADD npc_endurance 40    {"name":"lethargic",   "score":40  }
-ZADD npc_endurance 60    {"name":"resistant",   "score":60  }
-ZADD npc_endurance 70    {"name":"vital",   "score":70  }
-ZADD npc_endurance 80    {"name":"fortified",   "score":80  }
-ZADD npc_endurance 90    {"name":"resolute",   "score":90  }
-ZADD npc_endurance 100   {"name":"unflagging",   "score":100  }
+self.redis.zadd('npc_endurance', '{"name":"exhausted",   "score":10  }', '10')
+self.redis.zadd('npc_endurance', '{"name":"unenergetic",   "score":20  }', '20')
+self.redis.zadd('npc_endurance', '{"name":"lazy",   "score":30  }', '30')
+self.redis.zadd('npc_endurance', '{"name":"lethargic",   "score":40  }', '40')
+self.redis.zadd('npc_endurance', '{"name":"resistant",   "score":60  }', '60')
+self.redis.zadd('npc_endurance', '{"name":"vital",   "score":70  }', '70')
+self.redis.zadd('npc_endurance', '{"name":"fortified",   "score":80  }', '80')
+self.redis.zadd('npc_endurance', '{"name":"resolute",   "score":90  }', '90')
+self.redis.zadd('npc_endurance', '{"name":"unflagging",   "score":100  }', '100')
 
 # Looking at his past, bob is _____ of his choices in the past
-ZADD npc_satisfaction 10     {"name":"rueful",   "score":10  }
-ZADD npc_satisfaction 20     {"name":"regretful",   "score":20  }
-ZADD npc_satisfaction 30     {"name":"apologetic",   "score":30  }
-ZADD npc_satisfaction 40     {"name":"repentant",   "score":40  }
-ZADD npc_satisfaction 50     {"name":"remorseful",   "score":50  }
-ZADD npc_satisfaction 60     {"name":"questioning",   "score":60  }
-ZADD npc_satisfaction 70     {"name":"unrepentant",   "score":70  }
-ZADD npc_satisfaction 80     {"name":"unashamed",   "score":80  }
-ZADD npc_satisfaction 90     {"name":"accepting",   "score":90  }
-ZADD npc_satisfaction 100    {"name":"satisfied",   "score":100  }
+self.redis.zadd('npc_satisfaction', '{"name":"rueful",   "score":10  }', '10')
+self.redis.zadd('npc_satisfaction', '{"name":"regretful",   "score":20  }', '20')
+self.redis.zadd('npc_satisfaction', '{"name":"apologetic",   "score":30  }', '30')
+self.redis.zadd('npc_satisfaction', '{"name":"repentant",   "score":40  }', '40')
+self.redis.zadd('npc_satisfaction', '{"name":"remorseful",   "score":50  }', '50')
+self.redis.zadd('npc_satisfaction', '{"name":"questioning",   "score":60  }', '60')
+self.redis.zadd('npc_satisfaction', '{"name":"unrepentant",   "score":70  }', '70')
+self.redis.zadd('npc_satisfaction', '{"name":"unashamed",   "score":80  }', '80')
+self.redis.zadd('npc_satisfaction', '{"name":"accepting",   "score":90  }', '90')
+self.redis.zadd('npc_satisfaction', '{"name":"satisfied",   "score":100  }', '100')
 
-ZADD npc_agility 30      {"name":"clumsy",   "score":30  }
-ZADD npc_agility 60      {"name":"average",   "score":60  }
-ZADD npc_agility 100     {"name":"agile",   "score":100  }
+self.redis.zadd('npc_agility', '{"name":"clumsy",   "score":30  }', '30')
+self.redis.zadd('npc_agility', '{"name":"average",   "score":60  }', '60')
+self.redis.zadd('npc_agility', '{"name":"agile",   "score":100  }', '100')
 
-ZADD npc_wisdom 10       {"name":"foolish",   "score":10  }
-ZADD npc_wisdom 20       {"name":"obtuse",   "score":20  }
-ZADD npc_wisdom 30       {"name":"careless",   "score":30  }
-ZADD npc_wisdom 40       {"name":"indiscreet",   "score":40  }
-ZADD npc_wisdom 50       {"name":"average",   "score":50  }
-ZADD npc_wisdom 60       {"name":"keen",   "score":60  }
-ZADD npc_wisdom 70       {"name":"astute",   "score":70  }
-ZADD npc_wisdom 80       {"name":"thoughtful",   "score":80  }
-ZADD npc_wisdom 90       {"name":"enlightened",   "score":90  }
-ZADD npc_wisdom 100      {"name":"wise",   "score":100  }
+self.redis.zadd('npc_wisdom', '{"name":"foolish",   "score":10  }', '10')
+self.redis.zadd('npc_wisdom', '{"name":"obtuse",   "score":20  }', '20')
+self.redis.zadd('npc_wisdom', '{"name":"careless",   "score":30  }', '30')
+self.redis.zadd('npc_wisdom', '{"name":"indiscreet",   "score":40  }', '40')
+self.redis.zadd('npc_wisdom', '{"name":"average",   "score":50  }', '50')
+self.redis.zadd('npc_wisdom', '{"name":"keen",   "score":60  }', '60')
+self.redis.zadd('npc_wisdom', '{"name":"astute",   "score":70  }', '70')
+self.redis.zadd('npc_wisdom', '{"name":"thoughtful",   "score":80  }', '80')
+self.redis.zadd('npc_wisdom', '{"name":"enlightened",   "score":90  }', '90')
+self.redis.zadd('npc_wisdom', '{"name":"wise",   "score":100  }', '100')
 
-ZADD npc_charisma 30     {"name":"obnoxious",   "score":30  }
-ZADD npc_charisma 50     {"name":"off-putting",   "score":50  }
-ZADD npc_charisma 60     {"name":"average",   "score":60  }
-ZADD npc_charisma 80     {"name":"charming",   "score":80  }
-ZADD npc_charisma 100    {"name":"inspiring",   "score":100  }
+self.redis.zadd('npc_charisma', '{"name":"obnoxious",   "score":30  }', '30')
+self.redis.zadd('npc_charisma', '{"name":"off-putting",   "score":50  }', '50')
+self.redis.zadd('npc_charisma', '{"name":"average",   "score":60  }', '60')
+self.redis.zadd('npc_charisma', '{"name":"charming",   "score":80  }', '80')
+self.redis.zadd('npc_charisma', '{"name":"inspiring",   "score":100  }', '100')
 
-ZADD npc_intelligence 20    {"name":"dumb",   "score":20  }
-ZADD npc_intelligence 40    {"name":"dimwitted",   "score":40  }
-ZADD npc_intelligence 60    {"name":"average",   "score":60  }
-ZADD npc_intelligence 80    {"name":"clever",   "score":80  }
-ZADD npc_intelligence 100   {"name":"brilliant",   "score":100  }
+self.redis.zadd('npc_intelligence', '{"name":"dumb",   "score":20  }', '20')
+self.redis.zadd('npc_intelligence', '{"name":"dimwitted",   "score":40  }', '40')
+self.redis.zadd('npc_intelligence', '{"name":"average",   "score":60  }', '60')
+self.redis.zadd('npc_intelligence', '{"name":"clever",   "score":80  }', '80')
+self.redis.zadd('npc_intelligence', '{"name":"brilliant",   "score":100  }', '100')
 
 # Strangers take one look and consider Sydney _________
-ZADD npc_attractiveness   5 {"name":"hideous",      "score":5   }
-ZADD npc_attractiveness  10 {"name":"repulsive",    "score":10  }
-ZADD npc_attractiveness  20 {"name":"repellent",    "score":20  }
-ZADD npc_attractiveness  30 {"name":"ugly",         "score":30  }
-ZADD npc_attractiveness  40 {"name":"unattractive", "score":40  }
-ZADD npc_attractiveness  50 {"name":"homely",       "score":50  }
-ZADD npc_attractiveness  60 {"name":"average",      "score":60  }
-ZADD npc_attractiveness  70 {"name":"cute",         "score":70  }
-ZADD npc_attractiveness  80 {"name":"attractive",   "score":80  }
-ZADD npc_attractiveness  90 {"name":"good-looking", "score":90  }
-ZADD npc_attractiveness  95 {"name":"gorgeous",     "score":95  }
-ZADD npc_attractiveness 100 {"name":"stunning",     "score":100 }
+self.redis.zadd('npc_attractiveness', '{"name":"hideous",      "score":5   }', '5')
+self.redis.zadd('npc_attractiveness', '{"name":"repulsive",    "score":10  }', '10')
+self.redis.zadd('npc_attractiveness', '{"name":"repellent",    "score":20  }', '20')
+self.redis.zadd('npc_attractiveness', '{"name":"ugly",         "score":30  }', '30')
+self.redis.zadd('npc_attractiveness', '{"name":"unattractive", "score":40  }', '40')
+self.redis.zadd('npc_attractiveness', '{"name":"homely",       "score":50  }', '50')
+self.redis.zadd('npc_attractiveness', '{"name":"average",      "score":60  }', '60')
+self.redis.zadd('npc_attractiveness', '{"name":"cute",         "score":70  }', '70')
+self.redis.zadd('npc_attractiveness', '{"name":"attractive",   "score":80  }', '80')
+self.redis.zadd('npc_attractiveness', '{"name":"good-looking", "score":90  }', '90')
+self.redis.zadd('npc_attractiveness', '{"name":"gorgeous",     "score":95  }', '95')
+self.redis.zadd('npc_attractiveness', '{"name":"stunning",     "score":100 }', '100')
         
 #Bob is ____________
-ZADD npc_money 5    {"name":"destitute",        "score":5   }
-ZADD npc_money 20   {"name":"poor",             "score":20  }
-ZADD npc_money 40   {"name":"barely getting by","score":40  }
-ZADD npc_money 80   {"name":"making ends meet", "score":80  }
-ZADD npc_money 95   {"name":"well off",         "score":95  }
-ZADD npc_money 100  {"name":"rich",             "score":100 }
+self.redis.zadd('npc_money', '{"name":"destitute",        "score":5   }', '5')
+self.redis.zadd('npc_money', '{"name":"poor",             "score":20  }', '20')
+self.redis.zadd('npc_money', '{"name":"barely getting by","score":40  }', '40')
+self.redis.zadd('npc_money', '{"name":"making ends meet", "score":80  }', '80')
+self.redis.zadd('npc_money', '{"name":"well off",         "score":95  }', '95')
+self.redis.zadd('npc_money', '{"name":"rich",             "score":100 }', '100')
 
 # and is ________ with what he owns.
-ZADD npc_generous  50  {"name":"stingy",        "score":50  }
-ZADD npc_generous 100  {"name":"generous",     "score":100 }
+self.redis.zadd('npc_generous', '{"name":"stingy",        "score":50  }', '50')
+self.redis.zadd('npc_generous', '{"name":"generous",     "score":100 }', '100')
 
 
 #Many people would consider bob ___________
-ZADD npc_luck 50   {"name":"unlucky",        "score":50  }
-ZADD npc_luck 100  {"name":"lucky",          "score":100 }
+self.redis.zadd('npc_luck', '{"name":"unlucky",        "score":50  }', '50')
+self.redis.zadd('npc_luck', '{"name":"lucky",          "score":100 }', '100')
 
 #and  ____________ confident.
-ZADD npc_confident 30   {"name":"not very",       "score":30  }
-ZADD npc_confident 60   {"name":"somewhat",       "score":60  }
-ZADD npc_confident 100  {"name":"incredibly",     "score":100 }
+self.redis.zadd('npc_confident', '{"name":"not very",       "score":30  }', '30')
+self.redis.zadd('npc_confident', '{"name":"somewhat",       "score":60  }', '60')
+self.redis.zadd('npc_confident', '{"name":"incredibly",     "score":100 }', '100')
 
 
         
@@ -388,11 +388,11 @@ self.redis.lpush('npc_marriagestatus', 'divorced')
 self.redis.lpush('npc_marriagestatus', 'widowed')
 
 # Bob has 
-ZADD npc_kill 40    {"name":"never killed",                     "score":20  }
-ZADD npc_kill 80    {"name":"killed in self defense",           "score":40  }
-ZADD npc_kill 90    {"name":"killed in the heat of the moment", "score":60  }
-ZADD npc_kill 95    {"name":"killed to solve a problem",        "score":80  }
-ZADD npc_kill 100   {"name":"killed without issue",             "score":100  }
+self.redis.zadd('npc_kill', '{"name":"never killed",                     "score":20  }', '40')
+self.redis.zadd('npc_kill', '{"name":"killed in self defense",           "score":40  }', '80')
+self.redis.zadd('npc_kill', '{"name":"killed in the heat of the moment", "score":60  }', '90')
+self.redis.zadd('npc_kill', '{"name":"killed to solve a problem",        "score":80  }', '95')
+self.redis.zadd('npc_kill', '{"name":"killed without issue",             "score":100  }', '100')
 
 # Bob suffers from
 SET   npc_medical_condition_chance 10

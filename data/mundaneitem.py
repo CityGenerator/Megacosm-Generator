@@ -1,16 +1,16 @@
 # A Greatsword, which is  _______
-ZADD mundaneitem_repair   5 {"name":"broken",                    "score":5   }
-ZADD mundaneitem_repair  20 {"name":"in disrepair",              "score":20  }
-ZADD mundaneitem_repair  60 {"name":"intact",                    "score":60  }
-ZADD mundaneitem_repair  80 {"name":"well maintained",           "score":80  }
-ZADD mundaneitem_repair 100 {"name":"in pristine condition",     "score":100 }
+self.redis.zadd('mundaneitem_repair', '{"name":"broken",                    "score":5   }', '5')
+self.redis.zadd('mundaneitem_repair', '{"name":"in disrepair",              "score":20  }', '20')
+self.redis.zadd('mundaneitem_repair', '{"name":"intact",                    "score":60  }', '60')
+self.redis.zadd('mundaneitem_repair', '{"name":"well maintained",           "score":80  }', '80')
+self.redis.zadd('mundaneitem_repair', '{"name":"in pristine condition",     "score":100 }', '100')
 
 # Foo is a ________ greatsword that is well maintained
-ZADD mundaneitem_quality   5 {"name":"shoddy",   "score":5   }
-ZADD mundaneitem_quality  20 {"name":"poor",     "score":10  }
-ZADD mundaneitem_quality  80 {"name":"average",  "score":90  }
-ZADD mundaneitem_quality  95 {"name":"good",     "score":95  }
-ZADD mundaneitem_quality 100 {"name":"excellent","score":100 }
+self.redis.zadd('mundaneitem_quality', '{"name":"shoddy",   "score":5   }', '5')
+self.redis.zadd('mundaneitem_quality', '{"name":"poor",     "score":10  }', '20')
+self.redis.zadd('mundaneitem_quality', '{"name":"average",  "score":90  }', '80')
+self.redis.zadd('mundaneitem_quality', '{"name":"good",     "score":95  }', '95')
+self.redis.zadd('mundaneitem_quality', '{"name":"excellent","score":100 }', '100')
 
 self.redis.lpush('mundaneitem_template', '{{params.quality[\'name\']|article}} {{params.kind}} that is {{params.repair[\'name\']}}')
 

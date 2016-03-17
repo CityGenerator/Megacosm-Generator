@@ -15,122 +15,122 @@ self.redis.lpush('deity_favored_stat', 'honor')
 self.redis.lpush('deity_favored_stat', 'piety')
 
 # Members of the church are ____________ in their beliefs._
-ZADD deity_unity  10 {"name":"splintered",  "score":10  }
-ZADD deity_unity  20 {"name":"fractured",   "score":20  }
-ZADD deity_unity  30 {"name":"divided",     "score":30  }
-ZADD deity_unity  70 {"name":"fragmented",  "score":70  }
-ZADD deity_unity  80 {"name":"diverse",     "score":80  }
-ZADD deity_unity  90 {"name":"faceted",     "score":90  }
-ZADD deity_unity 100 {"name":"unified",     "score":100 }
+self.redis.zadd('deity_unity', '{"name":"splintered",  "score":10  }', '10')
+self.redis.zadd('deity_unity', '{"name":"fractured",   "score":20  }', '20')
+self.redis.zadd('deity_unity', '{"name":"divided",     "score":30  }', '30')
+self.redis.zadd('deity_unity', '{"name":"fragmented",  "score":70  }', '70')
+self.redis.zadd('deity_unity', '{"name":"diverse",     "score":80  }', '80')
+self.redis.zadd('deity_unity', '{"name":"faceted",     "score":90  }', '90')
+self.redis.zadd('deity_unity', '{"name":"unified",     "score":100 }', '100')
 
 # Followers of Gobesh are ________ organized
-ZADD deity_organized  10 {"name":"formlessly",      "score":10  }
-ZADD deity_organized  10 {"name":"loosely",         "score":20  }
-ZADD deity_organized  20 {"name":"lightly",         "score":30  }
-ZADD deity_organized  20 {"name":"flexibly",        "score":40  }
-ZADD deity_organized  30 {"name":"generally",       "score":50  }
-ZADD deity_organized  60 {"name":"stiffly",         "score":60  }
-ZADD deity_organized  70 {"name":"firmly",          "score":70  }
-ZADD deity_organized  80 {"name":"tightly",         "score":80  }
-ZADD deity_organized  90 {"name":"strictly",        "score":90  }
-ZADD deity_organized 100 {"name":"rigidly",         "score":100 }
+self.redis.zadd('deity_organized', '{"name":"formlessly",      "score":10  }', '10')
+self.redis.zadd('deity_organized', '{"name":"loosely",         "score":20  }', '10')
+self.redis.zadd('deity_organized', '{"name":"lightly",         "score":30  }', '20')
+self.redis.zadd('deity_organized', '{"name":"flexibly",        "score":40  }', '20')
+self.redis.zadd('deity_organized', '{"name":"generally",       "score":50  }', '30')
+self.redis.zadd('deity_organized', '{"name":"stiffly",         "score":60  }', '60')
+self.redis.zadd('deity_organized', '{"name":"firmly",          "score":70  }', '70')
+self.redis.zadd('deity_organized', '{"name":"tightly",         "score":80  }', '80')
+self.redis.zadd('deity_organized', '{"name":"strictly",        "score":90  }', '90')
+self.redis.zadd('deity_organized', '{"name":"rigidly",         "score":100 }', '100')
 
 # Gobesh is _____________ in today\'s world
-ZADD deity_health  10 {"name":"nearly forgotten",           "score":10  }
-ZADD deity_health  20 {"name":"mostly unknown",             "score":20  }
-ZADD deity_health  30 {"name":"dying out",                  "score":30  }
-ZADD deity_health  40 {"name":"fading",                     "score":40  }
-ZADD deity_health  50 {"name":"well known",                 "score":50  }
-ZADD deity_health  60 {"name":"on the rise",                "score":60  }
-ZADD deity_health  70 {"name":"maintaining popularity",     "score":70  }
-ZADD deity_health  80 {"name":"gaining followers",          "score":80  }
-ZADD deity_health  90 {"name":"gaining in popularity",      "score":90  }
-ZADD deity_health 100 {"name":"more popular than ever",     "score":100 }
+self.redis.zadd('deity_health', '{"name":"nearly forgotten",           "score":10  }', '10')
+self.redis.zadd('deity_health', '{"name":"mostly unknown",             "score":20  }', '20')
+self.redis.zadd('deity_health', '{"name":"dying out",                  "score":30  }', '30')
+self.redis.zadd('deity_health', '{"name":"fading",                     "score":40  }', '40')
+self.redis.zadd('deity_health', '{"name":"well known",                 "score":50  }', '50')
+self.redis.zadd('deity_health', '{"name":"on the rise",                "score":60  }', '60')
+self.redis.zadd('deity_health', '{"name":"maintaining popularity",     "score":70  }', '70')
+self.redis.zadd('deity_health', '{"name":"gaining followers",          "score":80  }', '80')
+self.redis.zadd('deity_health', '{"name":"gaining in popularity",      "score":90  }', '90')
+self.redis.zadd('deity_health', '{"name":"more popular than ever",     "score":100 }', '100')
 
-ZADD deity_importance  10 {"name":"quasi-deity",         "score":10, "points":1 }
-ZADD deity_importance  20 {"name":"demi-deity",          "score":20, "points":2 }
-ZADD deity_importance  30 {"name":"minor deity",         "score":30, "points":3 }
-ZADD deity_importance  50 {"name":"lesser deity",        "score":50, "points":7 }
-ZADD deity_importance  80 {"name":"intermediate deity",  "score":80, "points":11 }
-ZADD deity_importance  99 {"name":"greater deity",       "score":99, "points":13 }
-ZADD deity_importance 100 {"name":"over deity",          "score":100,"points":21 }
+self.redis.zadd('deity_importance', '{"name":"quasi-deity",         "score":10, "points":1 }', '10')
+self.redis.zadd('deity_importance', '{"name":"demi-deity",          "score":20, "points":2 }', '20')
+self.redis.zadd('deity_importance', '{"name":"minor deity",         "score":30, "points":3 }', '30')
+self.redis.zadd('deity_importance', '{"name":"lesser deity",        "score":50, "points":7 }', '50')
+self.redis.zadd('deity_importance', '{"name":"intermediate deity",  "score":80, "points":11 }', '80')
+self.redis.zadd('deity_importance', '{"name":"greater deity",       "score":99, "points":13 }', '99')
+self.redis.zadd('deity_importance', '{"name":"over deity",          "score":100,"points":21 }', '100')
 
 
-ZADD deity_jealousy  10 {"name":"trusting",  "score":10   }
-ZADD deity_jealousy  20 {"name":"unresentful",  "score":20   }
-ZADD deity_jealousy  30 {"name":"unquestioning",  "score":30   }
-ZADD deity_jealousy  40 {"name":"unsuspecting",  "score":40   }
-ZADD deity_jealousy  50 {"name":"content",  "score":50   }
-ZADD deity_jealousy  60 {"name":"covetous",  "score":60   }
-ZADD deity_jealousy  70 {"name":"demanding",  "score":70   }
-ZADD deity_jealousy  80 {"name":"suspicious",  "score":80   }
-ZADD deity_jealousy  90 {"name":"selfish",  "score":90   }
-ZADD deity_jealousy 100 {"name":"jealous",  "score":100   }
+self.redis.zadd('deity_jealousy', '{"name":"trusting",  "score":10   }', '10')
+self.redis.zadd('deity_jealousy', '{"name":"unresentful",  "score":20   }', '20')
+self.redis.zadd('deity_jealousy', '{"name":"unquestioning",  "score":30   }', '30')
+self.redis.zadd('deity_jealousy', '{"name":"unsuspecting",  "score":40   }', '40')
+self.redis.zadd('deity_jealousy', '{"name":"content",  "score":50   }', '50')
+self.redis.zadd('deity_jealousy', '{"name":"covetous",  "score":60   }', '60')
+self.redis.zadd('deity_jealousy', '{"name":"demanding",  "score":70   }', '70')
+self.redis.zadd('deity_jealousy', '{"name":"suspicious",  "score":80   }', '80')
+self.redis.zadd('deity_jealousy', '{"name":"selfish",  "score":90   }', '90')
+self.redis.zadd('deity_jealousy', '{"name":"jealous",  "score":100   }', '100')
 
 #        <age> <!-- bob is a _____ god-->
-ZADD deity_age   5 {"name":"new",  "score":5   }
-ZADD deity_age  10 {"name":"young",  "score":10   }
-ZADD deity_age  15 {"name":"recent",  "score":15   }
-ZADD deity_age  20 {"name":"latter",  "score":20   }
-ZADD deity_age  25 {"name":"modern",  "score":25   }
-ZADD deity_age  30 {"name":"contemporary",  "score":30   }
-ZADD deity_age  35 {"name":"fledgling",  "score":35   }
-ZADD deity_age  40 {"name":"primitive",  "score":40   }
-ZADD deity_age  45 {"name":"old",  "score":45   }
-ZADD deity_age  55 {"name":"antiquated",  "score":55   }
-ZADD deity_age  60 {"name":"aboriginal",  "score":60   }
-ZADD deity_age  65 {"name":"primeval",  "score":65   }
-ZADD deity_age  70 {"name":"primal",  "score":70   }
-ZADD deity_age  75 {"name":"primordial",  "score":75   }
-ZADD deity_age  80 {"name":"archaic",  "score":80   }
-ZADD deity_age  85 {"name":"eternal",  "score":85   }
-ZADD deity_age  99 {"name":"ancient",  "score":99   }
-ZADD deity_age 100 {"name":"original",  "score":100   }
+self.redis.zadd('deity_age', '{"name":"new",  "score":5   }', '5')
+self.redis.zadd('deity_age', '{"name":"young",  "score":10   }', '10')
+self.redis.zadd('deity_age', '{"name":"recent",  "score":15   }', '15')
+self.redis.zadd('deity_age', '{"name":"latter",  "score":20   }', '20')
+self.redis.zadd('deity_age', '{"name":"modern",  "score":25   }', '25')
+self.redis.zadd('deity_age', '{"name":"contemporary",  "score":30   }', '30')
+self.redis.zadd('deity_age', '{"name":"fledgling",  "score":35   }', '35')
+self.redis.zadd('deity_age', '{"name":"primitive",  "score":40   }', '40')
+self.redis.zadd('deity_age', '{"name":"old",  "score":45   }', '45')
+self.redis.zadd('deity_age', '{"name":"antiquated",  "score":55   }', '55')
+self.redis.zadd('deity_age', '{"name":"aboriginal",  "score":60   }', '60')
+self.redis.zadd('deity_age', '{"name":"primeval",  "score":65   }', '65')
+self.redis.zadd('deity_age', '{"name":"primal",  "score":70   }', '70')
+self.redis.zadd('deity_age', '{"name":"primordial",  "score":75   }', '75')
+self.redis.zadd('deity_age', '{"name":"archaic",  "score":80   }', '80')
+self.redis.zadd('deity_age', '{"name":"eternal",  "score":85   }', '85')
+self.redis.zadd('deity_age', '{"name":"ancient",  "score":99   }', '99')
+self.redis.zadd('deity_age', '{"name":"original",  "score":100   }', '100')
 
 #        <followerzeal> <!--Bobs followers are -->
-ZADD deity_followerzeal   5 {"name":"noncommittal", "score":5   }
-ZADD deity_followerzeal  10 {"name":"dispassionate","score":10   }
-ZADD deity_followerzeal  20 {"name":"insincere",    "score":20   }
-ZADD deity_followerzeal  30 {"name":"inattentive",  "score":30   }
-ZADD deity_followerzeal  40 {"name":"dutiful",      "score":40   }
-ZADD deity_followerzeal  50 {"name":"pious",        "score":50   }
-ZADD deity_followerzeal  60 {"name":"devoted",      "score":60   }
-ZADD deity_followerzeal  70 {"name":"reverent",     "score":70   }
-ZADD deity_followerzeal  80 {"name":"devout",       "score":80   }
-ZADD deity_followerzeal  90 {"name":"passionate",   "score":90   }
-ZADD deity_followerzeal 100 {"name":"overzealous",  "score":100   }
+self.redis.zadd('deity_followerzeal', '{"name":"noncommittal", "score":5   }', '5')
+self.redis.zadd('deity_followerzeal', '{"name":"dispassionate","score":10   }', '10')
+self.redis.zadd('deity_followerzeal', '{"name":"insincere",    "score":20   }', '20')
+self.redis.zadd('deity_followerzeal', '{"name":"inattentive",  "score":30   }', '30')
+self.redis.zadd('deity_followerzeal', '{"name":"dutiful",      "score":40   }', '40')
+self.redis.zadd('deity_followerzeal', '{"name":"pious",        "score":50   }', '50')
+self.redis.zadd('deity_followerzeal', '{"name":"devoted",      "score":60   }', '60')
+self.redis.zadd('deity_followerzeal', '{"name":"reverent",     "score":70   }', '70')
+self.redis.zadd('deity_followerzeal', '{"name":"devout",       "score":80   }', '80')
+self.redis.zadd('deity_followerzeal', '{"name":"passionate",   "score":90   }', '90')
+self.redis.zadd('deity_followerzeal', '{"name":"overzealous",  "score":100   }', '100')
 
 #TODO ZADD popularity growing/dying out
 
 #        <devotion {"name":"<!-- Bob is thought to have _______ current followers in the world-->
-ZADD deity_followercount   5 {"name":"no",  "score":5   }
-ZADD deity_followercount  10 {"name":"only a few",  "score":10   }
-ZADD deity_followercount  15 {"name":"several",  "score":15   }
-ZADD deity_followercount  20 {"name":"a dozen",  "score":20   }
-ZADD deity_followercount  25 {"name":"several dozen",  "score":25   }
-ZADD deity_followercount  30 {"name":"over a hundred",  "score":30   }
-ZADD deity_followercount  60 {"name":"an unknown number of",  "score":60   }
-ZADD deity_followercount  65 {"name":"hundreds of",  "score":65   }
-ZADD deity_followercount  70 {"name":"near a thousand",  "score":70   }
-ZADD deity_followercount  75 {"name":"several thousand",  "score":75   }
-ZADD deity_followercount  80 {"name":"tens of thousands of",  "score":80   }
-ZADD deity_followercount  85 {"name":"hundreds of thousands of",  "score":85   }
-ZADD deity_followercount 100 {"name":"countless",  "score":100   }
+self.redis.zadd('deity_followercount', '{"name":"no",  "score":5   }', '5')
+self.redis.zadd('deity_followercount', '{"name":"only a few",  "score":10   }', '10')
+self.redis.zadd('deity_followercount', '{"name":"several",  "score":15   }', '15')
+self.redis.zadd('deity_followercount', '{"name":"a dozen",  "score":20   }', '20')
+self.redis.zadd('deity_followercount', '{"name":"several dozen",  "score":25   }', '25')
+self.redis.zadd('deity_followercount', '{"name":"over a hundred",  "score":30   }', '30')
+self.redis.zadd('deity_followercount', '{"name":"an unknown number of",  "score":60   }', '60')
+self.redis.zadd('deity_followercount', '{"name":"hundreds of",  "score":65   }', '65')
+self.redis.zadd('deity_followercount', '{"name":"near a thousand",  "score":70   }', '70')
+self.redis.zadd('deity_followercount', '{"name":"several thousand",  "score":75   }', '75')
+self.redis.zadd('deity_followercount', '{"name":"tens of thousands of",  "score":80   }', '80')
+self.redis.zadd('deity_followercount', '{"name":"hundreds of thousands of",  "score":85   }', '85')
+self.redis.zadd('deity_followercount', '{"name":"countless",  "score":100   }', '100')
 
 # and are often {{deity.secrecy[\'name\']}} about their affiliation.
-ZADD deity_secrecy   5 {"name":"secretive",     "score":5   }
-ZADD deity_secrecy  10 {"name":"silent",        "score":10   }
-ZADD deity_secrecy  20 {"name":"tight lipped",  "score":20   }
-ZADD deity_secrecy  30 {"name":"cryptic",       "score":30   }
-ZADD deity_secrecy  40 {"name":"hidden",        "score":40   }
-ZADD deity_secrecy  45 {"name":"careful",       "score":45   }
-ZADD deity_secrecy  50 {"name":"reserved",      "score":50   }
-ZADD deity_secrecy  55 {"name":"honest",        "score":55   }
-ZADD deity_secrecy  60 {"name":"open",          "score":60   }
-ZADD deity_secrecy  70 {"name":"indiscreet",    "score":70   }
-ZADD deity_secrecy  80 {"name":"proud",         "score":80   }
-ZADD deity_secrecy  90 {"name":"pretentious",   "score":90   }
-ZADD deity_secrecy 100 {"name":"pompous",       "score":100   }
+self.redis.zadd('deity_secrecy', '{"name":"secretive",     "score":5   }', '5')
+self.redis.zadd('deity_secrecy', '{"name":"silent",        "score":10   }', '10')
+self.redis.zadd('deity_secrecy', '{"name":"tight lipped",  "score":20   }', '20')
+self.redis.zadd('deity_secrecy', '{"name":"cryptic",       "score":30   }', '30')
+self.redis.zadd('deity_secrecy', '{"name":"hidden",        "score":40   }', '40')
+self.redis.zadd('deity_secrecy', '{"name":"careful",       "score":45   }', '45')
+self.redis.zadd('deity_secrecy', '{"name":"reserved",      "score":50   }', '50')
+self.redis.zadd('deity_secrecy', '{"name":"honest",        "score":55   }', '55')
+self.redis.zadd('deity_secrecy', '{"name":"open",          "score":60   }', '60')
+self.redis.zadd('deity_secrecy', '{"name":"indiscreet",    "score":70   }', '70')
+self.redis.zadd('deity_secrecy', '{"name":"proud",         "score":80   }', '80')
+self.redis.zadd('deity_secrecy', '{"name":"pretentious",   "score":90   }', '90')
+self.redis.zadd('deity_secrecy', '{"name":"pompous",       "score":100   }', '100')
 #TODO secrecy should include loud and proud
 
 #

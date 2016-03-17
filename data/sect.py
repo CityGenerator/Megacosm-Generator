@@ -1,26 +1,26 @@
 #
 
 #    <acceptance><!--Sect members are see as _____ by the faithful -->
-ZADD sect_acceptance   5 {"name":"heretical",  "score":5   } 
-ZADD sect_acceptance  10 {"name":"blasphemous",  "score":10   } 
-ZADD sect_acceptance  15 {"name":"sectarian",  "score":15   } 
-ZADD sect_acceptance  20 {"name":"rebellious",  "score":20   } 
-ZADD sect_acceptance  25 {"name":"defecting",  "score":25   } 
-ZADD sect_acceptance  30 {"name":"dissenting",  "score":30   } 
-ZADD sect_acceptance  35 {"name":"agitating",  "score":35   } 
-ZADD sect_acceptance  40 {"name":"deviant",  "score":40   } 
-ZADD sect_acceptance  45 {"name":"mislead",  "score":45   } 
-ZADD sect_acceptance  50 {"name":"non-confirming",  "score":50   } 
-ZADD sect_acceptance  55 {"name":"faithful",  "score":55   } 
-ZADD sect_acceptance  60 {"name":"honorable",  "score":60   } 
-ZADD sect_acceptance  65 {"name":"noble",  "score":65   } 
-ZADD sect_acceptance  70 {"name":"loyal",  "score":70   } 
-ZADD sect_acceptance  75 {"name":"dutiful",  "score":75   } 
-ZADD sect_acceptance  80 {"name":"reverent",  "score":80   } 
-ZADD sect_acceptance  85 {"name":"devout",  "score":85   } 
-ZADD sect_acceptance  90 {"name":"virtuous",  "score":90   } 
-ZADD sect_acceptance  95 {"name":"righteous",  "score":95   } 
-ZADD sect_acceptance 100 {"name":"saintly",  "score":100   } 
+self.redis.zadd('sect_acceptance', '{"name":"heretical",  "score":5   } ', '5')
+self.redis.zadd('sect_acceptance', '{"name":"blasphemous",  "score":10   } ', '10')
+self.redis.zadd('sect_acceptance', '{"name":"sectarian",  "score":15   } ', '15')
+self.redis.zadd('sect_acceptance', '{"name":"rebellious",  "score":20   } ', '20')
+self.redis.zadd('sect_acceptance', '{"name":"defecting",  "score":25   } ', '25')
+self.redis.zadd('sect_acceptance', '{"name":"dissenting",  "score":30   } ', '30')
+self.redis.zadd('sect_acceptance', '{"name":"agitating",  "score":35   } ', '35')
+self.redis.zadd('sect_acceptance', '{"name":"deviant",  "score":40   } ', '40')
+self.redis.zadd('sect_acceptance', '{"name":"mislead",  "score":45   } ', '45')
+self.redis.zadd('sect_acceptance', '{"name":"non-confirming",  "score":50   } ', '50')
+self.redis.zadd('sect_acceptance', '{"name":"faithful",  "score":55   } ', '55')
+self.redis.zadd('sect_acceptance', '{"name":"honorable",  "score":60   } ', '60')
+self.redis.zadd('sect_acceptance', '{"name":"noble",  "score":65   } ', '65')
+self.redis.zadd('sect_acceptance', '{"name":"loyal",  "score":70   } ', '70')
+self.redis.zadd('sect_acceptance', '{"name":"dutiful",  "score":75   } ', '75')
+self.redis.zadd('sect_acceptance', '{"name":"reverent",  "score":80   } ', '80')
+self.redis.zadd('sect_acceptance', '{"name":"devout",  "score":85   } ', '85')
+self.redis.zadd('sect_acceptance', '{"name":"virtuous",  "score":90   } ', '90')
+self.redis.zadd('sect_acceptance', '{"name":"righteous",  "score":95   } ', '95')
+self.redis.zadd('sect_acceptance', '{"name":"saintly",  "score":100   } ', '100')
     
 #    <secttype>
 self.redis.lpush('sect_kind', 'brotherhood')

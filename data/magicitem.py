@@ -1,30 +1,30 @@
 #
 
-ZADD magicitem_value  25 {"name":"trivial magical item",  "score": 25   }
-ZADD magicitem_value  65 {"name":"minor magical item",    "score": 65   }
-ZADD magicitem_value  90 {"name":"medium magical item",   "score": 90   }
-ZADD magicitem_value  97 {"name":"major magical item",    "score": 97   }
-ZADD magicitem_value 100 {"name":"artifact",              "score": 100  }
+self.redis.zadd('magicitem_value', '{"name":"trivial magical item",  "score": 25   }', '25')
+self.redis.zadd('magicitem_value', '{"name":"minor magical item",    "score": 65   }', '65')
+self.redis.zadd('magicitem_value', '{"name":"medium magical item",   "score": 90   }', '90')
+self.redis.zadd('magicitem_value', '{"name":"major magical item",    "score": 97   }', '97')
+self.redis.zadd('magicitem_value', '{"name":"artifact",              "score": 100  }', '100')
         
 # Foo is a quality greatsword that is _______ 
-ZADD magicitem_repair   5 {"name":"broken",                    "score":5   }
-ZADD magicitem_repair  20 {"name":"in disrepair",              "score":20  }
-ZADD magicitem_repair  60 {"name":"intact",                    "score":60  }
-ZADD magicitem_repair  80 {"name":"well maintained",           "score":80  }
-ZADD magicitem_repair 100 {"name":"in pristine condition",     "score":100 }
+self.redis.zadd('magicitem_repair', '{"name":"broken",                    "score":5   }', '5')
+self.redis.zadd('magicitem_repair', '{"name":"in disrepair",              "score":20  }', '20')
+self.redis.zadd('magicitem_repair', '{"name":"intact",                    "score":60  }', '60')
+self.redis.zadd('magicitem_repair', '{"name":"well maintained",           "score":80  }', '80')
+self.redis.zadd('magicitem_repair', '{"name":"in pristine condition",     "score":100 }', '100')
         
-ZADD magicitem_strength  20 {"name":"weak",         "score":20  }
-ZADD magicitem_strength  40 {"name":"mediocre",     "score":40  }
-ZADD magicitem_strength  60 {"name":"moderate",     "score":60  }
-ZADD magicitem_strength  80 {"name":"strong",       "score":80  }
-ZADD magicitem_strength 100 {"name":"powerful",     "score":100  }
+self.redis.zadd('magicitem_strength', '{"name":"weak",         "score":20  }', '20')
+self.redis.zadd('magicitem_strength', '{"name":"mediocre",     "score":40  }', '40')
+self.redis.zadd('magicitem_strength', '{"name":"moderate",     "score":60  }', '60')
+self.redis.zadd('magicitem_strength', '{"name":"strong",       "score":80  }', '80')
+self.redis.zadd('magicitem_strength', '{"name":"powerful",     "score":100  }', '100')
 
 # Foo is a ________ greatsword that is well maintained
-ZADD magicitem_quality  20 {"name":"shoddy",   "score":20  }
-ZADD magicitem_quality  40 {"name":"poor",     "score":40  }
-ZADD magicitem_quality  60 {"name":"average",  "score":60  }
-ZADD magicitem_quality  80 {"name":"good",     "score":80  }
-ZADD magicitem_quality 100 {"name":"excellent","score":100 }
+self.redis.zadd('magicitem_quality', '{"name":"shoddy",   "score":20  }', '20')
+self.redis.zadd('magicitem_quality', '{"name":"poor",     "score":40  }', '40')
+self.redis.zadd('magicitem_quality', '{"name":"average",  "score":60  }', '60')
+self.redis.zadd('magicitem_quality', '{"name":"good",     "score":80  }', '80')
+self.redis.zadd('magicitem_quality', '{"name":"excellent","score":100 }', '100')
         
 #        <location><!-- This ring can be found _________. -->
 self.redis.lpush('magicitem_location', 'hidden on a corpse')
@@ -58,11 +58,11 @@ SET   magicitem_curse_chance 40
 
 
 # Foo was created ___________ by a human named bob
-ZADD magicitem_age  20 {"name":"recently",              "score":20  }
-ZADD magicitem_age  40 {"name":"several months ago",    "score":40  }
-ZADD magicitem_age  60 {"name":"several years ago",     "score":60  }
-ZADD magicitem_age  80 {"name":"several decades ago",   "score":80  }
-ZADD magicitem_age 100 {"name":"over a century ago",    "score":100 }
+self.redis.zadd('magicitem_age', '{"name":"recently",              "score":20  }', '20')
+self.redis.zadd('magicitem_age', '{"name":"several months ago",    "score":40  }', '40')
+self.redis.zadd('magicitem_age', '{"name":"several years ago",     "score":60  }', '60')
+self.redis.zadd('magicitem_age', '{"name":"several decades ago",   "score":80  }', '80')
+self.redis.zadd('magicitem_age', '{"name":"over a century ago",    "score":100 }', '100')
 
 # this wand was created recently by _________
 self.redis.lpush('magicitem_creator_template', '{{npc.race | article}}')

@@ -1,11 +1,11 @@
 
-ZADD flaw_scope  30 { "name":"minor"    , "score":30  }
-ZADD flaw_scope  70 { "name":"moderate" , "score":70  }
-ZADD flaw_scope 100 { "name":"major"    , "score":100  }
+self.redis.zadd('flaw_scope', '{ "name":"minor"    , "score":30  }', '30')
+self.redis.zadd('flaw_scope', '{ "name":"moderate" , "score":70  }', '70')
+self.redis.zadd('flaw_scope', '{ "name":"major"    , "score":100  }', '100')
 
-ZADD flaw_quality  30 { "name":"horrible"    , "score":30  }
-ZADD flaw_quality  70 { "name":"bad" , "score":70  }
-ZADD flaw_quality 100 { "name":"poor"    , "score":100  }
+self.redis.zadd('flaw_quality', '{ "name":"horrible"    , "score":30  }', '30')
+self.redis.zadd('flaw_quality', '{ "name":"bad" , "score":70  }', '70')
+self.redis.zadd('flaw_quality', '{ "name":"poor"    , "score":100  }', '100')
 
 # and is made out of
 self.redis.lpush('flaw_enemytrait', 'devious')
