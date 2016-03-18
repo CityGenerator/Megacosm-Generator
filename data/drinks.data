@@ -1,0 +1,97 @@
+
+LPUSH drink_appearance crimson
+LPUSH drink_appearance amber
+LPUSH drink_appearance black
+LPUSH drink_appearance steamed
+LPUSH drink_appearance bubble
+
+LPUSH drink_type ale
+LPUSH drink_type lager
+LPUSH drink_type beer
+LPUSH drink_type stout
+LPUSH drink_type whiskey
+LPUSH drink_type rum
+LPUSH drink_type scotch
+LPUSH drink_type cognac
+LPUSH drink_type sherry
+LPUSH drink_type gin
+LPUSH drink_type liquor
+LPUSH drink_type shot
+LPUSH drink_type brew
+LPUSH drink_type grog
+LPUSH drink_type infusion
+LPUSH drink_type brine
+LPUSH drink_type tonic
+LPUSH drink_type wine
+LPUSH drink_type nectar
+LPUSH drink_type cider
+LPUSH drink_type juice
+LPUSH drink_type punch
+LPUSH drink_type milk
+LPUSH drink_type tea
+LPUSH drink_type broth
+
+LPUSH drink_flavor_strength faint
+LPUSH drink_flavor_strength mild
+LPUSH drink_flavor_strength pleasant
+LPUSH drink_flavor_strength strong
+LPUSH drink_flavor_strength aggressive
+LPUSH drink_flavor_strength overpowering
+
+#with a ____ flavor of ______
+LPUSH drink_flavor elderberry
+LPUSH drink_flavor banana
+LPUSH drink_flavor mint
+LPUSH drink_flavor lavender
+LPUSH drink_flavor ambrosia
+LPUSH drink_flavor spice
+
+#It is _____
+ZADD drink_price   5 {"name":"fairly cheap",     "score":5    }
+ZADD drink_price  30 {"name":"reasonably priced",      "score":30   }
+ZADD drink_price  70 {"name":"mildly expensive",   "score":70   }
+ZADD drink_price  95 {"name":"pricey",     "score":95   }
+ZADD drink_price 100 {"name":"lavishly priced",     "score":100  }
+
+#, ____ to the region
+ZADD drink_rarity   5 {"name":"rare",        "score":5    }
+ZADD drink_rarity  10 {"name":"strange",     "score":10   }
+ZADD drink_rarity  20 {"name":"uncommon",    "score":20   }
+ZADD drink_rarity  30 {"name":"familiar",    "score":30   }
+ZADD drink_rarity  40 {"name":"ordinary",    "score":40   }
+ZADD drink_rarity  60 {"name":"common",      "score":60   }
+ZADD drink_rarity  70 {"name":"limited",     "score":70   }
+ZADD drink_rarity  80 {"name":"isolated",    "score":80   }
+ZADD drink_rarity  90 {"name":"native",      "score":90   }
+ZADD drink_rarity  95 {"name":"exclusive",   "score":95   }
+ZADD drink_rarity 100 {"name":"unique",      "score":100  }
+
+#, and is _______ these days
+ZADD drink_volume  10 {"name":"rarely found",     "score":10    }
+ZADD drink_volume  30 {"name":"in short supply",     "score":30    }
+ZADD drink_volume  70 {"name":"commonly found",     "score":70    }
+ZADD drink_volume 100 {"name":"in excess",     "score":100    }
+
+LPUSH drink_feel cold
+LPUSH drink_feel cool
+LPUSH drink_feel crisp
+LPUSH drink_feel dry
+LPUSH drink_feel fleshy
+LPUSH drink_feel furry
+LPUSH drink_feel fuzzy
+LPUSH drink_feel gritty
+LPUSH drink_feel refreshing
+LPUSH drink_feel icy
+LPUSH drink_feel lukewarm
+LPUSH drink_feel oily
+LPUSH drink_feel pulpy
+LPUSH drink_feel slimy
+LPUSH drink_feel sticky
+LPUSH drink_feel tacky
+LPUSH drink_feel thick
+LPUSH drink_feel thin
+LPUSH drink_feel velvety
+LPUSH drink_feel warm
+LPUSH drink_feel waxy
+
+LPUSH drink_template  You sip a {{params.appearance}} {{params.type}} that is {{params.rarity['name']}} to {{params.region.name['full']}}. It has a {{params.flavor_strength}} flavor of {{params.flavor}}, and feels {{params.feel}} on the tongue.
