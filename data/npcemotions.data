@@ -31,7 +31,7 @@ LPUSH npc_emotion disappointed
 LPUSH npc_emotion disgusted
 LPUSH npc_emotion disliked
 LPUSH npc_emotion dismayed
-LPUSH npc_emotion displeasure
+LPUSH npc_emotion displeased
 LPUSH npc_emotion distressed
 LPUSH npc_emotion dread-filled
 LPUSH npc_emotion eager
@@ -97,7 +97,7 @@ LPUSH npc_emotion regretful
 LPUSH npc_emotion rejected
 LPUSH npc_emotion relieved
 LPUSH npc_emotion remorseful
-LPUSH npc_emotion resenting
+LPUSH npc_emotion resentful
 LPUSH npc_emotion revolted
 LPUSH npc_emotion saddened
 LPUSH npc_emotion satisfied
