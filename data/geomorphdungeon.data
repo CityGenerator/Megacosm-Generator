@@ -1,15 +1,15 @@
 #
 
-ZADD geomorphdungeon_gridwidth   5 {"name":"1",     "tiles":1,    "score": 25   }
+ZADD geomorphdungeon_gridwidth   5 {"name":"1",     "tiles":1,    "score": 5    }
 ZADD geomorphdungeon_gridwidth  30 {"name":"2",     "tiles":2,    "score": 30   }
 ZADD geomorphdungeon_gridwidth  50 {"name":"3",     "tiles":3,    "score": 50   }
 ZADD geomorphdungeon_gridwidth  70 {"name":"4",     "tiles":4,    "score": 70   }
 ZADD geomorphdungeon_gridwidth  90 {"name":"5",     "tiles":5,    "score": 90   }
-ZADD geomorphdungeon_gridwidth 100 {"name":"6",     "tiles":6,   "score": 100  }
+ZADD geomorphdungeon_gridwidth 100 {"name":"6",     "tiles":6,    "score": 100  }
 
 
 
-ZADD geomorphdungeon_gridheight   5 {"name":"1",    "tiles":1,    "score": 25   }
+ZADD geomorphdungeon_gridheight   5 {"name":"1",    "tiles":1,    "score": 5    }
 ZADD geomorphdungeon_gridheight  35 {"name":"2",    "tiles":2,    "score": 35   }
 ZADD geomorphdungeon_gridheight  90 {"name":"3",    "tiles":3,    "score": 90   }
 ZADD geomorphdungeon_gridheight 100 {"name":"4",    "tiles":4,    "score": 100  }

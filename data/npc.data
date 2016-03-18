@@ -388,10 +388,10 @@ LPUSH npc_marriagestatus divorced
 LPUSH npc_marriagestatus widowed
 
 # Bob has 
-ZADD npc_kill 40    {"name":"never killed",                     "score":20  }
-ZADD npc_kill 80    {"name":"killed in self defense",           "score":40  }
-ZADD npc_kill 90    {"name":"killed in the heat of the moment", "score":60  }
-ZADD npc_kill 95    {"name":"killed to solve a problem",        "score":80  }
+ZADD npc_kill 40    {"name":"never killed",                     "score":40  }
+ZADD npc_kill 80    {"name":"killed in self defense",           "score":80  }
+ZADD npc_kill 90    {"name":"killed in the heat of the moment", "score":90  }
+ZADD npc_kill 95    {"name":"killed to solve a problem",        "score":95  }
 ZADD npc_kill 100   {"name":"killed without issue",             "score":100  }
 
 # Bob suffers from

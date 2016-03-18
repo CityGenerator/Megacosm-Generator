@@ -7,8 +7,8 @@ ZADD mundaneitem_repair 100 {"name":"in pristine condition",     "score":100 }
 
 # Foo is a ________ greatsword that is well maintained
 ZADD mundaneitem_quality   5 {"name":"shoddy",   "score":5   }
-ZADD mundaneitem_quality  20 {"name":"poor",     "score":10  }
-ZADD mundaneitem_quality  80 {"name":"average",  "score":90  }
+ZADD mundaneitem_quality  20 {"name":"poor",     "score":20  }
+ZADD mundaneitem_quality  80 {"name":"average",  "score":80  }
 ZADD mundaneitem_quality  95 {"name":"good",     "score":95  }
 ZADD mundaneitem_quality 100 {"name":"excellent","score":100 }
 
@@ -20,6 +20,9 @@ LPUSH mundaneitem_metal iron
 LPUSH mundaneitem_metal bronze
 LPUSH mundaneitem_metal tin
 LPUSH mundaneitem_metal copper
+
+LPUSH mundaneitem_cloth wool
+LPUSH mundaneitem_cloth cotton
 
 
 LPUSH mundaneitem_kind 10-foot ladder

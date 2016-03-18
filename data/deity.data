@@ -25,10 +25,10 @@ ZADD deity_unity 100 {"name":"unified",     "score":100 }
 
 # Followers of Gobesh are ________ organized
 ZADD deity_organized  10 {"name":"formlessly",      "score":10  }
-ZADD deity_organized  10 {"name":"loosely",         "score":20  }
-ZADD deity_organized  20 {"name":"lightly",         "score":30  }
-ZADD deity_organized  20 {"name":"flexibly",        "score":40  }
-ZADD deity_organized  30 {"name":"generally",       "score":50  }
+ZADD deity_organized  20 {"name":"loosely",         "score":20  }
+ZADD deity_organized  30 {"name":"lightly",         "score":30  }
+ZADD deity_organized  40 {"name":"flexibly",        "score":40  }
+ZADD deity_organized  50 {"name":"generally",       "score":50  }
 ZADD deity_organized  60 {"name":"stiffly",         "score":60  }
 ZADD deity_organized  70 {"name":"firmly",          "score":70  }
 ZADD deity_organized  80 {"name":"tightly",         "score":80  }

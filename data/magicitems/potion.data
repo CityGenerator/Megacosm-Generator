@@ -567,43 +567,43 @@ ZADD potion_duration  85  {"name":"lasts a day",            "score":85  }
 ZADD potion_duration  90  {"name":"lasts a few days",       "score":90  }
 ZADD potion_duration  95  {"name":"lasts a week",           "score":95  }
 ZADD potion_duration  98  {"name":"lasts weeks",            "score":98  }
-ZADD potion_duration 100  {"name":"is permanent",           "score":100  }
+ZADD potion_duration 100  {"name":"is permanent",           "score":100 }
 
 
 # In the container is a _________ potion
-ZADD potion_consistency   3  {"name":"watery",   "score":3  }
-ZADD potion_consistency   6  {"name":"thick",   "score":6  }
-ZADD potion_consistency   9  {"name":"chunky",   "score":9  }
-ZADD potion_consistency  12  {"name":"viscous",   "score":12  }
-ZADD potion_consistency  15  {"name":"goopy",   "score":15  }
-ZADD potion_consistency  18  {"name":"gooey",   "score":18  }
-ZADD potion_consistency  21  {"name":"milky",   "score":21  }
-ZADD potion_consistency  24  {"name":"soupy",   "score":24  }
-ZADD potion_consistency  27  {"name":"sappy",   "score":27  }
-ZADD potion_consistency  30  {"name":"crusty",   "score":30  }
-ZADD potion_consistency  33  {"name":"buttery",   "score":33  }
-ZADD potion_consistency  36  {"name":"bubbly",   "score":36  }
-ZADD potion_consistency  39  {"name":"runny",   "score":39  }
-ZADD potion_consistency  42  {"name":"layered",   "score":42  }
-ZADD potion_consistency  45  {"name":"syrupy",   "score":45  }
-ZADD potion_consistency  48  {"name":"coagulated",   "score":48  }
+ZADD potion_consistency   3  {"name":"watery",      "score":3   }
+ZADD potion_consistency   6  {"name":"thick",       "score":6   }
+ZADD potion_consistency   9  {"name":"chunky",      "score":9   }
+ZADD potion_consistency  12  {"name":"viscous",     "score":12  }
+ZADD potion_consistency  15  {"name":"goopy",       "score":15  }
+ZADD potion_consistency  18  {"name":"gooey",       "score":18  }
+ZADD potion_consistency  21  {"name":"milky",       "score":21  }
+ZADD potion_consistency  24  {"name":"soupy",       "score":24  }
+ZADD potion_consistency  27  {"name":"sappy",       "score":27  }
+ZADD potion_consistency  30  {"name":"crusty",      "score":30  }
+ZADD potion_consistency  33  {"name":"buttery",     "score":33  }
+ZADD potion_consistency  36  {"name":"bubbly",      "score":36  }
+ZADD potion_consistency  39  {"name":"runny",       "score":39  }
+ZADD potion_consistency  42  {"name":"layered",     "score":42  }
+ZADD potion_consistency  45  {"name":"syrupy",      "score":45  }
+ZADD potion_consistency  48  {"name":"coagulated",  "score":48  }
 ZADD potion_consistency  51  {"name":"congealed",   "score":51  }
-ZADD potion_consistency  54  {"name":"gloppy",   "score":54  }
-ZADD potion_consistency  57  {"name":"gunky",   "score":57  }
-ZADD potion_consistency  60  {"name":"jellied",   "score":60  }
-ZADD potion_consistency  63  {"name":"solidified",   "score":63  }
-ZADD potion_consistency  66  {"name":"pulpy",   "score":66  }
-ZADD potion_consistency  69  {"name":"slushy",   "score":69  }
-ZADD potion_consistency  72  {"name":"tacky",   "score":72  }
-ZADD potion_consistency  75  {"name":"mucousy",   "score":75  }
-ZADD potion_consistency  78  {"name":"waxy",   "score":78  }
-ZADD potion_consistency  81  {"name":"scummy",   "score":81  }
-ZADD potion_consistency  84  {"name":"aqueous",   "score":84  }
-ZADD potion_consistency  87  {"name":"brothy",   "score":87  }
-ZADD potion_consistency  90  {"name":"fizzing",   "score":90  }
-ZADD potion_consistency  93  {"name":"chalky",   "score":93  }
-ZADD potion_consistency  96  {"name":"oily",   "score":96  }
-ZADD potion_consistency 100  {"name":"gritty",   "score":99  }
+ZADD potion_consistency  54  {"name":"gloppy",      "score":54  }
+ZADD potion_consistency  57  {"name":"gunky",       "score":57  }
+ZADD potion_consistency  60  {"name":"jellied",     "score":60  }
+ZADD potion_consistency  63  {"name":"solidified",  "score":63  }
+ZADD potion_consistency  66  {"name":"pulpy",       "score":66  }
+ZADD potion_consistency  69  {"name":"slushy",      "score":69  }
+ZADD potion_consistency  72  {"name":"tacky",       "score":72  }
+ZADD potion_consistency  75  {"name":"mucousy",     "score":75  }
+ZADD potion_consistency  78  {"name":"waxy",        "score":78  }
+ZADD potion_consistency  81  {"name":"scummy",      "score":81  }
+ZADD potion_consistency  84  {"name":"aqueous",     "score":84  }
+ZADD potion_consistency  87  {"name":"brothy",      "score":87  }
+ZADD potion_consistency  90  {"name":"fizzing",     "score":90  }
+ZADD potion_consistency  93  {"name":"chalky",      "score":93  }
+ZADD potion_consistency  96  {"name":"oily",        "score":96  }
+ZADD potion_consistency 100  {"name":"gritty",      "score":100 }
 
             
 LPUSH potion_color aquamarine
