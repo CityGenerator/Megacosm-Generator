@@ -5,13 +5,14 @@ from megacosm.generators import Star
 import unittest2 as unittest
 
 import fakeredis
-
+import fixtures
 from config import TestConfiguration
 
 class TestStar(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
+        fixtures.star.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
@@ -20,4 +21,4 @@ class TestStar(unittest.TestCase):
         """  """
 
         star = Star(self.redis)
-        self.assertNotEquals('', star.name)
+        self.assertEqual('Krojel', str(star.name))

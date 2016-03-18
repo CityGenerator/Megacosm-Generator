@@ -199,7 +199,7 @@ SET   cuisine_sauce_chance 30
 SET   cuisine_served_chance 20 
 
 
-LPUSH cuisine_template {%if params.method%}{{params.method}} {%endif%}{%if params.flavor%}{{params.flavor}} {%endif%}{{params.dish}}{%if params.mealtype%} {{params.mealtype}}{%endif%}{%if params.sauce%} in {{params.sauce}} {{params.saucetype}}{%endif%}{%if params.served%}, served {{params.served}}{%endif%} This dish is {{params.rarity['name']}} to the {{params.region.name['full']}}. Travelers consider the dish {{params.spice['name']}} and {{params.presentation['name']}} to the eye. Portions are usually {{params.size['name']}}.
+LPUSH cuisine_template {%if params.method%}{{params.method}} {%endif%}{%if params.flavor%}{{params.flavor}} {%endif%}{{params.dish}}{%if params.mealtype%} {{params.mealtype}}{%endif%}{%if params.sauce%} in {{params.sauce}} {{params.saucetype}}{%endif%}{%if params.served%}, served {{params.served}}{%endif%} This dish is {{params.rarity['name']}} to the {{params.region.name.fullname}}. Travelers consider the dish {{params.spice['name']}} and {{params.presentation['name']}} to the eye. Portions are usually {{params.size['name']}}.
 
 # The above template is a mess, but here's what it makes....
 #{%if params.method%}{{params.method}} {%endif%}

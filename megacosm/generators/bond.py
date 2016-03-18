@@ -20,7 +20,7 @@ class Bond(Generator):
 
         # a random NPC
         if not hasattr(self, 'other'):
-            self.other = npc.NPC(self.redis).name['full']
+            self.other = npc.NPC(self.redis).name.fullname
 
         # We put you and other in an array so we can randomly select
         # who is the subject and who is the object.

@@ -5,19 +5,24 @@ from megacosm.generators import Country, Region
 import unittest2 as unittest
 import fakeredis
 from config import TestConfiguration
-
+import fixtures
 
 class TestCountry(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis()
-        self.redis.zadd('country_size', '{"name":"micro",    "mincities":1,   "maxcities":2,       "score":100    }', 100)
-        self.redis.zadd('country_regiondetails','{"name":"a single",     "score":100,  "mincount":1,   "maxcount":1   }',100)
-        self.redis.lpush('name_countrytitle', 'Central')
-        self.redis.lpush('name_countrypre','Af')
-        self.redis.lpush('name_countryroot','kil')
-
+        fixtures.country.import_fixtures(self)
+        fixtures.leader.import_fixtures(self)
+        fixtures.continent.import_fixtures(self)
+        fixtures.region.import_fixtures(self)
+        fixtures.npc.import_fixtures(self)
+        fixtures.phobia.import_fixtures(self)
+        fixtures.motivation.import_fixtures(self)
+        fixtures.city.import_fixtures(self)
+        fixtures.business.import_fixtures(self)
+        fixtures.organization.import_fixtures(self)
+        self.redis.lpush('npc_race','gnome')
 
     def test_random_country(self):
         """  """
@@ -46,5 +51,6 @@ class TestCountry(unittest.TestCase):
         """  """
         country = Country(self.redis, {'regioncount': 25})
         country.add_regions()
-        self.assertEqual('Central Afkil with 25 regions',str(country))
+        self.assertEqual('Central Afkil',str(country))
+        self.assertEqual(25,len(country.regions))
 

@@ -16,7 +16,7 @@ class Grafitti(Generator):
             setattr(self, 'npc', NPC(self.redis))
 
         if not hasattr(self, 'npcname'):
-            setattr(self, 'npcname', self.npc.name['full'])
+            setattr(self, 'npcname', self.npc.name.shortname)
         if not hasattr(self, 'npcprofession'):
             setattr(self, 'npcprofession', self.npc.profession)
 

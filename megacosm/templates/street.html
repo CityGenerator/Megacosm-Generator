@@ -1,17 +1,17 @@
 
 
 {% extends "base.html" %}
-{% block title %}How to get to {{tempobj.name['full']}} {% endblock %}
+{% block title %}How to get to {{tempobj.name.fullname}} {% endblock %}
 {% block head %}
   {{ super() }}
 {% endblock %}
 {% block content %}
 
-    <h1>How to get to {{tempobj.name['full']}} <a href="/tempobj?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
+    <h1>How to get to {{tempobj.name}} <a href="/tempobj?seed={{tempobj.seed}}">({{tempobj.seed}})</a></h1>
 
-{{tempobj.name['full']}} is {{tempobj.popularity['name']|article}}, {{tempobj.size['name']}} {{tempobj.kind}} that is {{tempobj.age['name']|article}} {{tempobj.important['name']}} route in the {{tempobj.scope['name']}}. It is made of {{tempobj.material}} over {{tempobj.terrain['name']}} ground and is usually {{tempobj.pollution['name']}}.
+{{tempobj.name}} is {{tempobj.popularity['name']|article}}, {{tempobj.size['name']}} {{tempobj.kind}} that is {{tempobj.age['name']|article}} {{tempobj.important['name']}} route in the {{tempobj.scope['name']}}. It is made of {{tempobj.material}} over {{tempobj.terrain['name']}} ground and is usually {{tempobj.pollution['name']}}.
 
-Crime on {{tempobj.name['full']}} is {{tempobj.crime['name']}}.
+Crime on {{tempobj.name.fullname}} is {{tempobj.crime['name']}}.
 
 
 {% endblock %}

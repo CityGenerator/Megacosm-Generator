@@ -96,4 +96,4 @@ LPUSH weather_time in the dead of night
 LPUSH weather_time before dawn
 
 
-
+LPUSH weather_template Right now it is {{params.temp["name"]}} outside, with {{params.wind["name"]}} winds.{%if params.precipitation%} It is {{params.precipitation["name"] }} {{params.precipitation_type}} at the moment.{%endif%}{%if params.cloud%} There are {{ params.cloud }} clouds in the sky above.{%endif%}{%if params.storm%} {{ params.storm |article |capitalize}} is approaching, and will hit {{params.time}}.{%endif%}

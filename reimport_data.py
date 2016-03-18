@@ -40,7 +40,13 @@ def parse_file(pipe, filename):
                         pipe.lpush(key, value)
                     elif command == 'ZADD':
                         (key, score, value) = args.split(None, 2)
-                        validate_json(value, filename, linenumber)
+                        jsontxt=validate_json(value, filename, linenumber)
+                        if not jsontxt.has_key('score'):
+                            print "Warning: Score isn't a parameter of jsontxt: %s: %s %s" % (key, score, value)
+                        elif int(score) != int(jsontxt['score']):
+                            print "Warning: Score is invalid for %s: %s == %s" % (key, score, jsontxt['score'])
+                        if not jsontxt.has_key('name'):
+                            print "Warning: Name is missing from %s: %s %s" % (key, score, value)
                         pipe.zadd(key, value, score)
                     elif command == 'HSET':
                         (name, key, value) = args.split(None, 2)
@@ -65,14 +71,14 @@ JSONVALIDATE = 0
 def validate_json(value, filename, linenumber):
     global JSONVALIDATE
     try:
-        json.loads(value)
+        jsontxt=json.loads(value)
         JSONVALIDATE += 1
+        return jsontxt
     except Exception:
         print 'ERROR: The following value is not proper JSON:'
         print filename, 'near line', linenumber, ':'
         print value
         sys.exit(1)
-
 
 server = redis.from_url(BaseConfiguration.REDIS_URL)
 pipe = server.pipeline()

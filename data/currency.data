@@ -86,7 +86,7 @@ LPUSH currency_back building
 LPUSH currency_back crest
 LPUSH currency_back religious symbol
 
-LPUSH currency_template {{params.name['full']|article|title}} is {{params.weight['name'] | article}}, {{params.value['name']}} coin that is common in the {{params.scope['name']}}. It is {{params.size['name']}}, {{params.shape}}, and made of {{params.material}}. The coins are covered with {{params.detail['name']}} designs.
-LPUSH currency_template {{params.name['full']|article|title}} is {{params.value['name'] | article}}, {{params.weight['name']}} coin that is minted in the {{params.scope['name']}}. It is {{params.shape}}, {{params.size['name']}}, and made of {{params.material}}. The designs on the coin are {{params.detail['name']}}.  On the front side of the coin is {{params.front |article}}, while the reverse side has {{params.back |article}}.
+LPUSH currency_template {{params.name.fullname|article|title}} is {{params.weight['name'] | article}}, {{params.value['name']}} coin that is common in the {{params.scope['name']}}. It is {{params.size['name']}}, {{params.shape}}, and made of {{params.material}}. The coins are covered with {{params.detail['name']}} designs.
+LPUSH currency_template {{params.name.fullname|article|title}} is {{params.value['name'] | article}}, {{params.weight['name']}} coin that is minted in the {{params.scope['name']}}. It is {{params.shape}}, {{params.size['name']}}, and made of {{params.material}}. The designs on the coin are {{params.detail['name']}}.  On the front side of the coin is {{params.front |article}}, while the reverse side has {{params.back |article}}.
 
 

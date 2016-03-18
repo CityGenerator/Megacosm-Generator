@@ -57,6 +57,8 @@ from motivation import Motivation
 assert Motivation
 from mundaneitem import MundaneItem
 assert MundaneItem
+from name import Name
+assert Name
 from npc import NPC
 assert NPC
 from organization import Organization

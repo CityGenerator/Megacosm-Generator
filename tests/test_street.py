@@ -3,7 +3,7 @@
 
 from megacosm.generators import Street
 import unittest2 as unittest
-
+import fixtures
 import fakeredis
 
 from config import TestConfiguration
@@ -12,9 +12,7 @@ class TestStreet(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis()
-        self.redis.lpush('name_streettitle','new')
-        self.redis.lpush('name_streetroot','alba')
-        self.redis.lpush('street_kind', 'byway')
+        fixtures.street.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
@@ -23,11 +21,6 @@ class TestStreet(unittest.TestCase):
     def test_random_street(self):
         """  """
         street = Street(self.redis)
-        self.assertEqual('New Alba Byway', street.name['full'])
+        self.assertEqual('New Alba Byway', str(street))
 
 
-    def test_random_stree_trailer(self):
-        """  """
-        self.redis.lpush('name_streettrailer','alley')
-        street = Street(self.redis)
-        self.assertEqual('New Alba Alley', street.name['full'])
