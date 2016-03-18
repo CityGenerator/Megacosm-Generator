@@ -15,6 +15,7 @@ import cuisine
 import currency
 import curse
 import deity
+import drink
 import dungeon
 import event
 import flag

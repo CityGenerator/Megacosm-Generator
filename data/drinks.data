@@ -94,4 +94,4 @@ LPUSH drink_feel velvety
 LPUSH drink_feel warm
 LPUSH drink_feel waxy
 
-LPUSH drink_template  You sip a {{params.appearance}} {{params.type}} that is {{params.rarity['name']}} to {{params.region.name['full']}}. It has a {{params.flavor_strength}} flavor of {{params.flavor}}, and feels {{params.feel}} on the tongue.
+LPUSH drink_template  You sip {{params.appearance|article}} {{params.type}} that is {{params.rarity['name']}} to {{params.region.name.fullname}}. It has a {{params.flavor_strength}} flavor of {{params.flavor}}, and feels {{params.feel}} on the tongue.
