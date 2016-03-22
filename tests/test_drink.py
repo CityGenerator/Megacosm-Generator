@@ -28,7 +28,6 @@ class TestDrink(unittest.TestCase):
         drink = Drink(self.redis)
         print drink.text
         self.assertEqual('You sip an amber broth that is unique to New Lombardy. It has a overpowering flavor of spice, and feels sticky on the tongue.', drink.text)
-
     def test_drink_template(self):
         """ """
         drink = Drink(self.redis, {
