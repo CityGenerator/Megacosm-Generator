@@ -18,29 +18,19 @@ class MagicItem(Generator):
         self.logger = logging.getLogger(__name__)
         self.generate_features(self.kind)
 
-        self.npc = NPC(redis)
+        if not hasattr(self, 'npc'):
+            self.npc = NPC(redis)
 
         self.curse_chance_roll = random.randint(1, 100);
-        if self.curse_chance_roll < self.curse_chance :
+        if not hasattr(self, 'curse') and self.curse_chance_roll < self.curse_chance :
             self.curse = Curse(redis)
-        else:
-            del self.curse
 
-        self.build_creator()
+        self.creator = self.render_template(self.creator_template)
 
-        text = self.render_template(self.name_template)
-        self.name = self.render_template(text)
+        if not hasattr(self, 'text'):
+            self.text = self.render_template(self.template).title()
 
-    def build_creator(self):
-        environment = Environment()
-        environment.filters['article'] = Filters.select_article
-        environment.filters['pluralize'] = Filters.select_pluralize
-        template = environment.from_string(self.creator_template)
-
-        self.creator = template.render(npc=self.npc)
-
-
+    def __str__(self):
+        return self.text
 # TODO needs real testing!
 
-# TODO move FILTER additions to generator
-# TODO same with template rendering

@@ -3,9 +3,9 @@
 LPUSH magicitem_kind potion
 
 
-LPUSH potion_name_template {{ params.strength['name'] }} {{ params.effect_description['name'] }} {{ params.kind }}
-LPUSH potion_name_template {{ params.strength['name'] }} {{ params.variety }} of {{ params.effect_description['name'] }}
-LPUSH potion_name_template {{ params.npc.name.shortname }}'s {{ params.effect_description['name'] }} {{ params.variety }}
+LPUSH potion_template {{ params.strength['name'] }} {{ params.effect_description['name'] }} {{ params.kind }}
+LPUSH potion_template {{ params.strength['name'] }} {{ params.variety }} of {{ params.effect_description['name'] }}
+LPUSH potion_template {{ params.npc.name.shortname }}'s {{ params.effect_description['name'] }} {{ params.variety }}
 
 
 
