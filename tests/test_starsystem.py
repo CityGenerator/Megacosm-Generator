@@ -26,4 +26,5 @@ class TestStarSystem(unittest.TestCase):
         starsystem = StarSystem(self.redis)
         self.assertTrue(starsystem.planet)
         self.assertEqual(2, len(starsystem.stars))
+        self.assertEqual('Krojel System', str(starsystem))
 

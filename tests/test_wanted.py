@@ -33,3 +33,8 @@ class TestWanted(unittest.TestCase):
         npc = NPC(self.redis)
         wanted = Wanted(self.redis, {'npc':npc})
         self.assertEquals(npc, wanted.npc)
+
+    def test_wanted_str(self):
+        """  """
+        wanted = Wanted(self.redis)
+        self.assertEquals("Wanted: Tom Gyro", str(wanted))

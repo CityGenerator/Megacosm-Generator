@@ -7,7 +7,7 @@ def import_fixtures(self):
     self.redis.lpush('organizationname_root', 'u')
     self.redis.lpush('organizationname_trailer', 'Dragons')
     self.redis.lpush('organization_powertype', 'gambling')
-    self.redis.lpush('organization_template', "{{params.leader.name['firstname']}}'s {{params.kind|title}}")
+    self.redis.lpush('organization_template', "{{params.leader.name.shortname}}'s {{params.kind|title}}")
     self.redis.zadd('organization_adaptability', '{"name":"stay ahead of new development",    "score":100  }', 100)
     self.redis.zadd('organization_age', '{"name":"ancient",       "score":100  }', 100)
     self.redis.zadd('organization_entry', '{"name":"impossible",      "score":100  }', 100)

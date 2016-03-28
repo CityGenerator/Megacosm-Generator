@@ -4,7 +4,7 @@
 from gem import Gem
 from generator import Generator
 import logging
-
+from pprint import pprint
 
 class Artwork(Generator):
     """Generate an exquisite piece of artwork."""
@@ -12,6 +12,8 @@ class Artwork(Generator):
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
+
+        self.generate_features('artwork'+self.kind)
 
         if not hasattr(self, 'gem'):
             setattr(self, 'gem', Gem(self.redis))
