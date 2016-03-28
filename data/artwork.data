@@ -1,8 +1,5 @@
 
 
-# How do we lay out artwork?
-
-
 LPUSH artwork_metal copper
 LPUSH artwork_metal silver
 LPUSH artwork_metal electrum
@@ -64,8 +61,8 @@ LPUSH artworkitem_subkind comb
 LPUSH artworkitem_subkind cup
 LPUSH artworkitem_subkind decantur
 LPUSH artworkitem_subkind deck of tarot cards
-LPUSH artworkitem_subkind dice
-LPUSH artworkitem_subkind dice (pair)
+LPUSH artworkitem_subkind pair of dice
+LPUSH artworkitem_subkind set of dice
 LPUSH artworkitem_subkind drinking horn
 LPUSH artworkitem_subkind drum
 LPUSH artworkitem_subkind ewer
@@ -150,7 +147,7 @@ LPUSH artworkjewelry_template A jeweled {{params.metal}} {{params.subkind}}
 
 LPUSH artwork_kind textile
 LPUSH artworktextile_subkind glove
-LPUSH artworktextile_subkind vestments
+LPUSH artworktextile_subkind vestment
 LPUSH artworktextile_subkind tapestry
 LPUSH artworktextile_subkind mantle
 LPUSH artworktextile_subkind rug
@@ -184,7 +181,7 @@ LPUSH artworkclothing_subkind cloak
 LPUSH artworkclothing_subkind coat
 LPUSH artworkclothing_subkind corset
 LPUSH artworkclothing_subkind gown
-LPUSH artworkclothing_subkind gloves
+LPUSH artworkclothing_subkind pair of gloves
 LPUSH artworkclothing_subkind hunter's cap
 LPUSH artworkclothing_subkind robe
 LPUSH artworkclothing_subkind sash

@@ -46,6 +46,11 @@ class TestGovt(unittest.TestCase):
         self.assertIn('Central Afkil', str(govt.body))
         self.assertEqual(type(govt.body), Country)
 
+    def test_str(self):
+        """  """
+        govt = Govt(self.redis,{'kind':'country'})
+        self.assertIn('absolute monarchy', str(govt))
+
 
     def test_static_body_tacos(self):
         """  What happens if you pass in an unsupported kind? it defaults to country."""

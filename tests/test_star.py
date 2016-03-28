@@ -22,3 +22,4 @@ class TestStar(unittest.TestCase):
 
         star = Star(self.redis)
         self.assertEqual('Krojel', str(star.name))
+        self.assertEqual('Krojel', str(star))

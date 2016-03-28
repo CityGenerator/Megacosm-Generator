@@ -31,3 +31,6 @@ class StarSystem(Generator):
     def generate_planet(self):
         """ Do stuff"""
         self.planet = Planet(self.redis)
+
+    def __str__(self):
+        return self.stars[0].name.shortname+" System"
