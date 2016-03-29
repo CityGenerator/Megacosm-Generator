@@ -10,12 +10,15 @@ import re
 
 COMMANDCOUNT = 0
 
+def is_ascii(s):
+    return all(ord(c) < 128 for c in s)
 
 def parse_file(pipe, filename):
     linenumber = 0
     global COMMANDCOUNT
     raw_data = open(filename)
     for line in raw_data:
+        
         linenumber += 1
         line = line.rstrip()
         if line:
@@ -25,6 +28,8 @@ def parse_file(pipe, filename):
             if line.startswith('#'):
                 continue
             else:
+                if not is_ascii( line):
+                    raise Exception('line #%s in %s contains invalid unicode characters.' % (linenumber, filename))
                 COMMANDCOUNT += 1
                 (command, args) = line.split(' ', 1)
                 command = command.upper()

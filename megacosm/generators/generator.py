@@ -13,6 +13,12 @@ import logging
 import random
 from pprint import pprint
 
+#TODO:
+# Description - The long version of text.  Should be a full sentence or two describing the object.
+# Abbr - The short version. It should answer "You see ___."
+#    e.g. "A ring", "Drebak", "Marthok, Goddess of Light", "Lichenstien", "the Mongo brewhouse", a" red moon", "the Ibiwan Curse", "King Leopold", "a clear day"
+
+
 class Generator(object):
 
     """ An abstracted Generator that all generators are based from """
