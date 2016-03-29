@@ -10,7 +10,7 @@ import redis
 from config import IntegrationTestConfiguration
 
 
-class TestArtwork(unittest.TestCase):
+class TestArtworkIntegration(unittest.TestCase):
 
     def setUp(self):
         self.redis = redis.from_url(IntegrationTestConfiguration.REDIS_URL)

@@ -544,18 +544,18 @@ LPUSH mundaneitem_kind medium tent
 LPUSH mundaneitem_kind medium wooden chest
 LPUSH mundaneitem_kind merchants scale w/weights
 LPUSH mundaneitem_kind metal backpack frame
-LPUSH mundaneitem_kind metal candle holder
-LPUSH mundaneitem_kind metal eating acid
-LPUSH mundaneitem_kind metal file
-LPUSH mundaneitem_kind metal flask
-LPUSH mundaneitem_kind metal hoop
-LPUSH mundaneitem_kind metal needle
-LPUSH mundaneitem_kind metal plate
-LPUSH mundaneitem_kind metal sconce candle
-LPUSH mundaneitem_kind metal scroll tube
-LPUSH mundaneitem_kind metal shears
-LPUSH mundaneitem_kind metal tongs
-LPUSH mundaneitem_kind metal wire
+LPUSH mundaneitem_kind {{params.metal}} candle holder
+LPUSH mundaneitem_kind {{params.metal}} eating acid
+LPUSH mundaneitem_kind {{params.metal}} file
+LPUSH mundaneitem_kind {{params.metal}} flask
+LPUSH mundaneitem_kind {{params.metal}} hoop
+LPUSH mundaneitem_kind {{params.metal}} needle
+LPUSH mundaneitem_kind {{params.metal}} plate
+LPUSH mundaneitem_kind {{params.metal}} sconce candle
+LPUSH mundaneitem_kind {{params.metal}} scroll tube
+LPUSH mundaneitem_kind {{params.metal}} shears
+LPUSH mundaneitem_kind {{params.metal}} tongs
+LPUSH mundaneitem_kind {{params.metal}} wire
 LPUSH mundaneitem_kind meteor hammer
 LPUSH mundaneitem_kind military fork
 LPUSH mundaneitem_kind miner miner
@@ -922,3 +922,104 @@ LPUSH mundaneitem_kind zephyrium ore
 #
 #http://www.d20pfsrd.com/equipment---final
 #http://irontavern.com/2013/03/14/random-table-treasure-items/
+LPUSH mindaneitem_prettyword elegant
+LPUSH mindaneitem_prettyword beautiful
+LPUSH mindaneitem_prettyword lovely
+
+
+
+#
+#
+#
+#A ball of hair containing 1. A human tooth 2. A gold coin 3. Melted wax 4. A desiccated mouse 5 a shred of silk 6. A broken piece of chalk.
+#
+#A broken clay mask
+#
+#A humanoid femur carved into a flute.
+#1d4 gold coins
+#A melted candle
+#A rotten apple covered in aggressive maggots. (Stat out as a small swarm.)
+#A moldy flyer advertising a long past show called “The stories of Johann.”
+#A smashed potion bottle with one quarter dose from a random potion still salvageable. (Pick a random effect and make it one quarter as effective.)
+#A turnip carved to represent the head of a wolf.
+#A scrap of tattered 1.flag 2.tartan 3.cotton under clothing 4.cape 6.pants
+#A skull with a cross bow bolt lodged through it. 12.A rotten sack containing moldy rice and 1d4 vermin.
+#The paw of Vecna’s pet gerbil. An evil artifact, to gerbils.
+#A pile of coals, some grey some still black.
+#A fallen door that looks like something has in dug underneath it. Under it can be found 1.a carrion crawler. 2. A bag containing 1d100 gold coins 3. A crushed dwarf skeleton 4. a very large and angry woodchuck 5.A ghoul 6.A coiled up sleeping snake
+#A small moldy paper box colored red and containing a pile of papers along with two thin almost completely rotten books.
+#A leather belt.
+#A small potted plant which looks relatively healthy. 1. Mint 2. A maple sapling 3. A white birch sapling 4.Basil 6. A sapling Man trapper.
+#A pile of 1d100 rusty nails.
+#A clutch of pool ball sized spider eggs.
+#A batch of strange mushrooms 1.Poison hallucinogenic 3.healing 4. intelligent and awake.
+#A large pile of Bat Guano.
+#A pile of ashes containing flakes of metal, bone, and 1d20 teeth.
+#A pile of clam and muscle shells.
+#A finger. (Could be any of the 8, but it's not a thumb.)
+#A rusty key, It has obviously been here a long time.
+#A chunk of rotten meat that has the distinct smell of smoke, apple wood smoke to be exact.
+#A small birds nest containing 1. A small but very aggressive bird 2. Small blue eggs (1d4) 3. A strange looking baby chick. 4. A large wise ass Raven who will now try to steal from you.
+#A puddle of bubbling mud.
+#A back pack containing 1. A small sewing kit 2.clothing 3.rotten books 4.a venomous snake 5. A book titled “How to Love Your Inner Kobold” 6.spore cloud producing mold.
+#A jar of pickled eggs.
+#A strange twine and wicker totem.
+#The mostly rotten corpse of a deer, the characters will all smell it long before they see it.
+#An expended torch.
+#A busted up tinder box, an empty flask of oil, and some unlit tinder.
+#A bag of wet sand.
+#A smashed ale stein decorated with scenes of human torture and butchery.
+#A bag containing 1d4 gold coins
+#A melted candle
+#A pile of dirty clothing swarmed with rodents. (Stat out as a small swarm.)
+#A smashed human skull
+#A Cracked lute with rotten strings.
+#A turnip carved to represent a running human.
+#A puddle of congealed blood.
+#A tiny gelatinous cube only 2 inches across and 3 inches tall... it is still acidic.
+#A small puzzle box.
+#A cracked Ax handle with no head.
+#A bent saw.
+#A pile of still warm coals.
+#A bottle of ladies lilac perfume.
+#A smashed mirror.
+#The husk of a large insect.
+#A small book containing musical staff and a partial completed musical score.
+#(1d6) Clay, amphora, pots and jars containing 1. nothing but dirt and dust 2.wine 3.pickled eyes 4.rancid rice 5.water 6.(1d100) gold each.
+#A set of writing instruments, pen and quill, a blotter,with no ink.
+#a horse shoe.
+#a nearly completely rusted away set of plate mail containing a skeleton
+#A lump of bees wax and mica powder in 1.red 2.white 3.orange 4.Green
+#A small farmers implement 1.rake 2. hoe 3.shovel 4.sickle wrapped in dirty rags
+#Torn open brown paper wrappers.
+#A smashed chest, rotting and rusting away.
+#A piece of statuary in plaster representing 1.An angel 2.A lion 3.Thodin 4.A wolf 5.A dragon 6.A serpent 7.A symbol of evil 8.A warrior 9.A demon 10.An abstract form.
+#a wand snapped in half, burnt at both ends.
+#A tattered map to this local underground are, it looks very old and may well be out of date.
+#a wooden bucket with 1-3 a hole in the bottom, 4-6 no hole in the bottom.
+#A scalp.
+#An old dirty bandage.
+#A sack containing horse feed and a brush.
+#1d20 arrows laid in a neat pile.
+#A large but harmless black Newt.
+#A leather pouch containing a quarter pound of salt.
+#An apparently empty lidless masons jar labeled "In case of emergency open."
+#A rotting leather bag containing a set of rusty thieves tools, a moldy deck of playing cards, and 1d4 gold.
+#A small onyx figurine depicting a Scottish wolfhound.
+#A ball of string, the free end has been singed.
+#A rusty compass, that is stuck pointing south west.
+#A cracked snow globe.
+#A document torn to shreds and tossed in the corner that seems to a a contract 1.between a retainer and an adventurer. 2.An assassin's contract 3.A sale of land between two parties. 4.An oath of allegiance between a wizard and some evil entity.
+#An elegant candle holder.
+#The skeleton of a large fish.
+#The dried peels form several different kinds of citrus fruits and several hash marks scratched on the wall.
+#A rotten leather whip.
+#Roll twice on this chart discount another result of 94. (Or, A half eaten moldy cheese-wheel in cloth, if the Gm prefers a result.)
+#Two skeletons with their hands locked around each others throats.
+#A molds and nearly rotten away spell book, lying next to a skeleton that's been ripped in two.
+#A smashed coffin full of dirt. (D4 vermin as well)
+#Three ration packs still sealed in their iron casings.
+#a child's baby doll toy, dirty and tattered, missing an eye.
+#A face recently removed from an unfortunate. 1.Elf 2.Dwarf 3.human 4.Halfling 5.Orc 6.Kobold.
+#
+#
