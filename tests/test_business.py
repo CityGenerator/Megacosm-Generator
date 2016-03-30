@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Business, NPC
 import unittest2 as unittest
 import fakeredis
@@ -13,6 +15,7 @@ import fixtures
 class TestBusiness(unittest.TestCase):
 
     def setUp(self):
+        """ Set up the required fixtures """
         """  """
         self.redis = fakeredis.FakeRedis()
         fixtures.business.import_fixtures(self)
@@ -25,6 +28,7 @@ class TestBusiness(unittest.TestCase):
 
 
     def tearDown(self):
+        """ Clean up any changes from the last run. """
         self.redis.flushall()
 
     def test_business(self):

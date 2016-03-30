@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 import unittest2 as unittest
 
 from megacosm.util.Seeds import set_seed

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Bond
 import unittest2 as unittest
 import fixtures
@@ -11,6 +13,7 @@ from config import TestConfiguration
 class TestBond(unittest.TestCase):
 
     def setUp(self):
+        """ Set up the required fixtures """
         """  """
         self.redis = fakeredis.FakeRedis()
         fixtures.bond.import_fixtures(self)
@@ -20,6 +23,7 @@ class TestBond(unittest.TestCase):
         self.redis.lpush('npc_race','gnome')
 
     def tearDown(self):
+        """ Clean up any changes from the last run. """
         self.redis.flushall()
 
     def test_random_bond(self):
