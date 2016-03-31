@@ -41,7 +41,6 @@ class Business(Generator):
 
         # Business is one of the few classes where trailer doesn't start as part of the name
         # So we have to add it here.
-        
         self.name=Name(self.redis, 'business', {'trailer': self.trailer})
 
         # If maxfloors isn'd designated, set it to 1
