@@ -45,14 +45,15 @@ class Business(Generator):
         self.name=Name(self.redis, 'business', {'trailer': self.trailer})
 
         # If maxfloors isn'd designated, set it to 1
-
         if not hasattr(self, 'maxfloors'):
             self.maxfloors = 1
+        else:
+            self.maxfloors = int(self.maxfloors)
 
         # don't set floors if it already exists
 
         if not hasattr(self, 'floor'):
-            self.floor = random.randint(1, int(self.maxfloors))
+            self.floor = random.randint(1, self.maxfloors)
 
     def __str__(self):
         return self.name.fullname.title()
