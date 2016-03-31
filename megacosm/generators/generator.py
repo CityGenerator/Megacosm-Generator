@@ -104,11 +104,13 @@ class Generator(object):
         # Zset means it's a 1-100 stat;
 
         if self.redis.type(key) == 'zset':
-            setattr(self, featurename, Generator.select_by_roll(self, key))
+            if not hasattr(self, featurename):
+                setattr(self, featurename, Generator.select_by_roll(self, key))
         elif self.redis.type(key) == 'string':
 
             # string means it's a simple value that plugs right in
-            setattr(self, featurename, self.redis.get(key))
+            if not hasattr(self, featurename):
+                setattr(self, featurename, self.redis.get(key))
         elif self.redis.type(key) == 'list':
 
             # List gets a bit tricky; select a value, then see if it has an associated description
