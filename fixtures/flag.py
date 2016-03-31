@@ -1,14 +1,26 @@
-import fakeredis
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
-    self.redis.hset('flagcolor_description', 'black', '{"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }')
-    self.redis.hset('flagcolor_description', 'brown', '{"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"solidly"          }')
-    self.redis.hset('flagcolor_description', 'darkbrown', '{"name":"dark brown",        "hex":"#330000",  "verb":"balance",    "adverb":"naturally"        }')
-    self.redis.hset('flagcolor_description', 'lightred', '{"name":"light red",         "hex":"#ff3333",  "verb":"cherish",    "adverb":"peacefully"       }')
-    self.redis.hset('flagcolor_description', 'purple', '{"name":"purple",            "hex":"#660099",  "verb":"rule",       "adverb":"majestically"     }')
-    self.redis.hset('flagcolor_description', 'red', '{"name":"red",               "hex":"#ff0000",  "verb":"expand",     "adverb":"gracefully"       }')
-    self.redis.hset('flagcolor_description', 'verylightred', '{"name":"very light red",    "hex":"#ff6666",  "verb":"love",       "adverb":"lovingly"         }')
-    self.redis.hset('flagcolor_description', 'white', '{"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }')
+    """ Create simple fixture entries..."""
+    self.redis.hset('flagcolor_description', 'black',
+                    '{"name":"black",             "hex":"#000000",  "verb":"destroy",    "adverb":"purposefully"     }')
+    self.redis.hset('flagcolor_description', 'brown',
+                    '{"name":"brown",             "hex":"#663300",  "verb":"withstand",  "adverb":"solidly"          }')
+    self.redis.hset('flagcolor_description', 'darkbrown',
+                    '{"name":"dark brown",        "hex":"#330000",  "verb":"balance",    "adverb":"naturally"        }')
+    self.redis.hset('flagcolor_description', 'lightred',
+                    '{"name":"light red",         "hex":"#ff3333",  "verb":"cherish",    "adverb":"peacefully"       }')
+    self.redis.hset('flagcolor_description', 'purple',
+                    '{"name":"purple",            "hex":"#660099",  "verb":"rule",       "adverb":"majestically"     }')
+    self.redis.hset('flagcolor_description', 'red',
+                    '{"name":"red",               "hex":"#ff0000",  "verb":"expand",     "adverb":"gracefully"       }')
+    self.redis.hset('flagcolor_description', 'verylightred',
+                    '{"name":"very light red",    "hex":"#ff6666",  "verb":"love",       "adverb":"lovingly"         }')
+    self.redis.hset('flagcolor_description', 'white',
+                    '{"name":"white",             "hex":"#ffffff",  "verb":"perfect",    "adverb":"peacefully"       }')
     self.redis.zadd('flag_border', '{ "name":"solid", "score":100  }', 100)
     self.redis.zadd('flag_division', '{ "name":"stripes", "score":100  }', 100)
     self.redis.zadd('flag_overlay', '{ "name":"rays", "score":100  }', 100)

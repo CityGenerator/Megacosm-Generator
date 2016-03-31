@@ -1,4 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
+
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
 
     self.redis.lpush('organization_identification', 'with difficulty')
     self.redis.lpush('organization_kind', 'crime ring')

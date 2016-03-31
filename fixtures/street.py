@@ -1,8 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
-    self.redis.lpush('streetname_title','new')
-    self.redis.lpush('streetname_root','alba')
-    self.redis.lpush('streetname_trailer','byway')
+    """ Create simple fixture entries..."""
+    self.redis.lpush('streetname_title', 'new')
+    self.redis.lpush('streetname_root', 'alba')
+    self.redis.lpush('streetname_trailer', 'byway')
     self.redis.lpush('streetname_fullname_template', '{{params.title}} {{params.root}} {{params.trailer}}')
     self.redis.lpush('streetname_shortname_template', '{{params.root}} {{params.trailer}}')
     self.redis.lpush('streetname_formalname_template', '{{params.fullname}}')

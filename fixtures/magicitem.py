@@ -1,4 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
+
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
     self.redis.lpush('magicitem_creator_template', '{{params.npc.race | article}} named {{params.npc.name.fullname}}')
     self.redis.lpush('magicitem_location', 'buried in a nest')
     self.redis.lpush('magicitem_vibe', 'gives you feelings of power')
@@ -6,7 +12,7 @@ def import_fixtures(self):
     self.redis.set('magicitem_curse_chance', '40')
 
     self.redis.zadd('magicitem_age', '{"name":"over a century ago",    "score":100 }', 100)
-    self.redis.zadd('magicitem_quality', '{"name":"excellent","score":100 }', 100)
+    self.redis.zadd('magicitem_quality', '{"name":"excellent", "score":100 }', 100)
     self.redis.zadd('magicitem_repair', '{"name":"in pristine condition",     "score":100 }', 100)
     self.redis.zadd('magicitem_strength', '{"name":"powerful",     "score":100  }', 100)
     self.redis.zadd('magicitem_value', '{"name":"artifact",              "score": 100  }', 100)
@@ -35,13 +41,13 @@ def import_fixtures(self):
 
 # potion
     self.redis.lpush('potion_template', '{{ params.strength["name"] }} {{ params.effect_description["name"] }} {{ params.kind }}')
-    self.redis.hset('potion_effect_description', 'accuracyboost','{"name":"accuracy boost",    "description":"increases accuracy with projectiles" }')
+    self.redis.hset('potion_effect_description', 'accuracyboost', '{"name":"accuracy boost",    "description":"increases accuracy with projectiles" }')
     self.redis.lpush('potion_effect', 'accuracyboost')
 
-    self.redis.zadd('potion_duration', '{"name":"is permanent",           "score":100 }',100)
-    self.redis.zadd('potion_consistency', '{"name":"gritty",      "score":100 }',100)
+    self.redis.zadd('potion_duration', '{"name":"is permanent",           "score":100 }', 100)
+    self.redis.zadd('potion_consistency', '{"name":"gritty",      "score":100 }', 100)
     self.redis.lpush('potion_color', 'aquamarine')
-    self.redis.hset('potion_color_description', 'aquamarine','{"name":"aquamarine", "hex":"7FFFD4" }')
+    self.redis.hset('potion_color_description', 'aquamarine', '{"name":"aquamarine", "hex":"7FFFD4" }')
     self.redis.lpush('potion_sideeffect', 'seizures')
     self.redis.lpush('potion_variety', 'potion')
     self.redis.lpush('potion_smell', 'bubblegum')
@@ -54,9 +60,9 @@ def import_fixtures(self):
 
 #Scroll
     self.redis.lpush('scroll_template', '{{ params.strength["name"] }} {{ params.effect_description["name"] }} scroll')
-    self.redis.hset('scroll_effect_description', 'adnauseum','{"name":"ad nauseum",    "description":"causes sudden and severe nausea" }')
+    self.redis.hset('scroll_effect_description', 'adnauseum', '{"name":"ad nauseum",    "description":"causes sudden and severe nausea" }')
     self.redis.lpush('scroll_effect', 'adnauseum')
-    self.redis.zadd('scroll_duration', '{"name":"is permanent",           "score":100  }',100)
+    self.redis.zadd('scroll_duration', '{"name":"is permanent",           "score":100  }', 100)
     self.redis.lpush('scroll_sideeffect', 'seizures')
     self.redis.lpush('scroll_material', 'papyrus')
     self.redis.lpush('scroll_writingtype', 'cryptic')
@@ -66,19 +72,19 @@ def import_fixtures(self):
 
 #weapon
     self.redis.lpush('weapon_category', 'sword')
-    self.redis.hset('weapon_category_description', 'sword','{"name":"sword",        "materialpart":"blade"    }')
+    self.redis.hset('weapon_category_description', 'sword', '{"name":"sword",        "materialpart":"blade"    }')
     self.redis.lpush('weapon_ability', 'bull')
-    self.redis.hset('weapon_ability_description', 'bull','{"name":"the bull",  "description":"grants the user unnatural strength"     }')
+    self.redis.hset('weapon_ability_description', 'bull', '{"name":"the bull",  "description":"grants the user unnatural strength"     }')
     self.redis.lpush('weapon_effect', 'sharp')
-    self.redis.hset('weapon_effect_description', 'sharp','{"name":"sharp",     "description":"will occasionally slice through anything"                  }')
+    self.redis.hset('weapon_effect_description', 'sharp', '{"name":"sharp",     "description":"will occasionally slice through anything"                  }')
 
     self.redis.lpush('weapon_flaw', 'chip')
-    self.redis.hset('weapon_flaw_description', 'chip','{"name":"small chip",         "description":""  }')
+    self.redis.hset('weapon_flaw_description', 'chip', '{"name":"small chip",         "description":""  }')
     self.redis.lpush('weapon_visualcause', 'orc')
-    self.redis.hset('weapon_visualcause_description', 'orc','{"name":"orc",      "description":"exposed to orcs"         }')
+    self.redis.hset('weapon_visualcause_description', 'orc', '{"name":"orc",      "description":"exposed to orcs"         }')
     self.redis.lpush('weapon_visualeffect', 'sparkles')
     self.redis.lpush('weapon_material', 'coldiron')
-    self.redis.hset('weapon_material_description', 'coldiron','{"name":"cold iron",       "description":"beautiful cold steel"    }')
+    self.redis.hset('weapon_material_description', 'coldiron', '{"name":"cold iron",       "description":"beautiful cold steel"    }')
     self.redis.lpush('weapon_decoration', 'flames')
-    self.redis.hset('weapon_decoration_description', 'flames','{"name":"flames",   "description":"streaks of red and yellow which glisten like flames"  }')
+    self.redis.hset('weapon_decoration_description', 'flames', '{"name":"flames",   "description":"streaks of red and yellow which glisten like flames"  }')
     self.redis.lpush('weapon_template', '{{ params.effect_description["name"] }} {{ params.category_description["name"]}}{%if params.ability_description%} of {{params.ability_description["name"]}}{%endif%}')

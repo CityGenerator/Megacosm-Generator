@@ -1,4 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
+
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
     self.redis.lpush('legend_ability', 'make someone speak the truth')
     self.redis.lpush('legend_abilitytype', 'capability')
     self.redis.lpush('legend_area', 'swamps')

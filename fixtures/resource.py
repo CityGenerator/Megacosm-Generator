@@ -1,5 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
     self.redis.zadd('resource_competition', '{  "name":"fierce",             "score":100      }', 100)
     self.redis.zadd('resource_depletion', '{  "name":"bountiful",           "score":100      }', 100)
     self.redis.zadd('resource_exportregion', '{  "name":"across the continent",           "score":100      }', 100)
