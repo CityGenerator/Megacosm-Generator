@@ -5,5 +5,5 @@
 
 def import_fixtures(self):
     """ Create simple fixture entries..."""
-    self.redis.zadd( 'sect_acceptance', '{"name":"saintly",  "score":100   }', 100)
+    self.redis.zadd('sect_acceptance', '{"name":"saintly",  "score":100   }', 100)
 

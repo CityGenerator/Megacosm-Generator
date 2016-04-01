@@ -29,7 +29,8 @@ def import_fixtures(self):
     self.redis.zadd('organization_teamwork', '{ "name":"as a well oiled machine",         "score":100 }', 100)
     self.redis.zadd('organization_violence', '{"name":"passive",       "score":100  }', 100)
     self.redis.zadd('organization_visibility', '{ "name":"well known",            "score":100 }', 100)
-    self.redis.lpush('organizationname_fullname_template', 'The {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+    self.redis.lpush('organizationname_fullname_template',
+                     'The {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
     self.redis.lpush('organizationname_shortname_template', 'The {{params.kind|title}}')
     self.redis.lpush('organizationname_formalname_template', '{{params.fullname}}')
 

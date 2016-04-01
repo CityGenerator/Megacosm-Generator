@@ -1,20 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from business import Business
-from npc import NPC
-import leader
-#from leader import Leader
-from name import Name
-import region
+""" The City class is one of the more complex modules due to its reliance
+    on many other modules as well as a good deal of statistical logic. """
 import json
 import random
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.business import Business
+from megacosm.generators.name import Name
+from megacosm.generators.npc import NPC
+
+from megacosm.generators import leader
+from megacosm.generators import region
 
 
 class City(Generator):
-
+    """ Generate a full city population."""
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
@@ -28,7 +30,7 @@ class City(Generator):
             #self.leader = Leader(self.redis)
 
         if not hasattr(self, 'name'):
-            self.name=Name(self.redis, 'city')
+            self.name = Name(self.redis, 'city')
 
         self.citizen = NPC(self.redis)
 
@@ -37,10 +39,12 @@ class City(Generator):
         self.select_subraces()
 
     def calculate_population(self):
+        """ Estimate the population, then calculate the density."""
         self.population_estimate = random.randint(int(self.size['minpop']), int(self.size['maxpop']))
         self.population_density = random.randint(int(self.size['min_density']), int(self.size['max_density']))
 
     def calculate_racial_breakdown(self):
+        """ Split the population by race."""
         total = random.randint(1, 10)  # % reserved for "other"
         racelist = {'other': total}
         races = self.redis.lrange('npc_race', 0, -1)
@@ -73,7 +77,7 @@ class City(Generator):
         subraces = self.redis.lrange(parentrace + '_subrace', 0, -1)
         random.shuffle(subraces)
         for subrace in subraces:
-            print "for %s in %s" %(subrace,subraces)
+            print "for %s in %s" %(subrace, subraces)
             print "parentpercentage: %s" % (parentpercentage)
             subracepercentage = random.randint(1, parentpercentage)
             if total + subracepercentage < parentpercentage:
@@ -95,30 +99,32 @@ class City(Generator):
         """ Determine if each race will show subraces """
         final_racelist = {}
         self.racequalifiers = {'mostly': []}
-        for race in sorted(self.races) :
+        for race in sorted(self.races):
             #print "has_subraces: %s for %s, want subraces?" %(self.has_subraces(race), race)
             #if self.has_subraces(race):
             #    print self.want_subraces(race)
             if self.has_subraces(race) and self.want_subraces(race):
                 print "race: %s, races: %s" %(race, self.races[race])
-                if isinstance(self.races[race], int ):
+                if isinstance(self.races[race], int):
                     subraces = self.calculate_which_subraces(race, self.races[race])
                 else:
-                    subraces=self.races[race]
+                    subraces = self.races[race]
                 final_racelist[race] = subraces
             else:
                 final_racelist[race] = self.races[race]
         self.races = final_racelist
 
     def has_subraces(self, race):
+        """ Check to see if a race has subraces."""
         if self.redis.llen(race + '_subrace') > 0:
             return True
         else:
             return False
 
     def want_subraces(self, race):
+        """ Determine if we should mention subraces for a given race."""
         roll = random.randint(0, 100)
-        #print "want_race %s with %s chance and a roll of %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll)
+        #print "want_race %s with %s chance and roll %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll)
         if roll < int(self.redis.get(race + '_subrace_chance')):
             return True
         else:
@@ -142,9 +148,10 @@ class City(Generator):
         return results
 
     def get_scale(self):
+        """ Return the proper scale for a city, minus unneeded values."""
         scales = []
         for scale in self.redis.zrange('city_size', 0, -1):
-            print scale
+            #print scale
             scalejson = json.loads(scale)
             del scalejson['maxpop']
             del scalejson['minpop']

@@ -17,6 +17,12 @@ def import_fixtures(self):
     self.redis.lpush('naturalresource_crop_product', 'cocoa beans')
     self.redis.lpush('naturalresource_kind', 'crop')
     self.redis.lpush('resource_kind', 'naturalresource')
-    self.redis.lpush('resource_template', '"{{params.place.name.fullname}} is known for its {{params.name_type}} {{params.name}} which {{params.method}} {{params.product}}. This resource is {{params.ubiquity["name"]}} to the region. Many consider the {{params.product}} {{params.utility["name"]}}, and are regardless seen as a {{params.value["name"]}} resource. Competition in the {{params.product}} market is {{params.competition["name"]}}, and the {{params.name}} resource as a whole are {{params.management["name"]}} managed."')
+    self.redis.lpush('resource_template',
+                     '"{{params.place.name.fullname}} is known for its {{params.name_type}} {{params.name}} which '+
+                     '{{params.method}} {{params.product}}. This resource is {{params.ubiquity["name"]}} to the '+
+                     'region. Many consider the {{params.product}} {{params.utility["name"]}}, and are regardless '+
+                     'seen as a {{params.value["name"]}} resource. Competition in the {{params.product}} market is '+
+                     '{{params.competition["name"]}}, and the {{params.name}} resource as a whole are '+
+                     '{{params.management["name"]}} managed."')
 
 

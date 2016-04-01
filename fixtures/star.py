@@ -15,5 +15,5 @@ def import_fixtures(self):
     self.redis.zadd('star_color', '{ "name":"red",    "color":"0xff0000", "luminosity":0.2, "score":100  }', 100)
 
 
-    self.redis.lpush('starposition', '{"name": "companion",    "x":-150,    "y":4,  "z":4  }' )
-    self.redis.lpush('starposition', '{"name": "companion2",    "x":-150,    "y":-4,  "z":4  }' )
+    self.redis.lpush('starposition', '{"name": "companion",    "x":-150,    "y":4,  "z":4  }')
+    self.redis.lpush('starposition', '{"name": "companion2",    "x":-150,    "y":-4,  "z":4  }')

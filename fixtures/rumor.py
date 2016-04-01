@@ -6,7 +6,7 @@
 def import_fixtures(self):
     """ Create simple fixture entries..."""
     self.redis.lpush('rumor_belief', '{{params.believer}} wants to believe it.')
-    self.redis.lpush('rumor_dangeroushobby',  'drunkenly arguing with people')
+    self.redis.lpush('rumor_dangeroushobby', 'drunkenly arguing with people')
     self.redis.lpush('rumor_fearresult', 'fell to the ground, dead')
     self.redis.lpush('rumor_heardit', '{{params.source}} said')
     self.redis.lpush('rumor_location', 'old millhouse')

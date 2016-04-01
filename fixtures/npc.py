@@ -5,7 +5,8 @@
 
 def import_fixtures(self):
     """ Create simple fixture entries..."""
-    self.redis.zadd( 'npc_sex', '{"name":"female",     "pronoun":"she", "possessive":"her", "third-person":"her", "spouse":"husband", "score":51   }', 100);
+    self.redis.zadd('npc_sex', '{"name":"female",     "pronoun":"she", "possessive":"her", '+
+                    '"third-person":"her", "spouse":"husband", "score":51   }', 100)
     self.redis.zadd('npc_piety', '{"name":"overzealous",   "score":100   }', 100)
     self.redis.zadd('npc_age', '{"name":"ancient",        "score":100 }', 100)
     self.redis.zadd('npc_honor', '{"name":"honorable",     "score":100 }', 100)
@@ -53,28 +54,40 @@ def import_fixtures(self):
     self.redis.lpush('feather_covertemplate', 'feather cover template')
     self.redis.lpush('feather_feathercolor', 'white')
     self.redis.lpush('feather_featherkind', 'thin')
+    import_race_fixtures(self)
 
+def import_race_fixtures(self):
+    """ Details for each race."""
     #Details for Kobolds
-    self.redis.set( 'kobold_details', '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}')
+    self.redis.set('kobold_details',
+                   '{"name": "Kobold",     "size": "small",   "description": "their small stature and cowardice"}')
     self.redis.lpush('kobold_covering', 'skin')
-    self.redis.lpush('koboldname_fullname_template', '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
-    self.redis.lpush('koboldname_shortname_template', '{{params.first_root}}')
-    self.redis.lpush('koboldname_formalname_template', '{{params.title}} {{params.first_root}}')
+    self.redis.lpush('koboldname_fullname_template',
+                     '{{params.title}} {{params.first_root}}{{params.first_post}} {{params.trailer}}')
+    self.redis.lpush('koboldname_shortname_template',
+                     '{{params.first_root}}')
+    self.redis.lpush('koboldname_formalname_template',
+                     '{{params.title}} {{params.first_root}}')
 
     self.redis.set('kobold_subrace_chance', 100)
     self.redis.lpush('kobold_subrace', 'aquatic')
-    self.redis.hset('kobold_subrace_description', 'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }')
+    self.redis.hset('kobold_subrace_description',
+                    'aquatic', '{"subrace": "Aquatic Kobold",   "description": "" }')
 
     self.redis.lpush('koboldname_first_root', 'Kole')
 
     #Details for Humans
-    self.redis.set('human_details', '{"name": "Human",  "size": "medium",  "description": "quick growth and adaptability"}')
+    self.redis.set('human_details',
+                   '{"name": "Human",  "size": "medium",  "description": "quick growth and adaptability"}')
     #details for Humans
     self.redis.lpush('human_covering', 'skin')
 
-    self.redis.lpush('humanname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}')
+    self.redis.lpush('humanname_fullname_template',
+                     '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} '+
+                     '{{params.last_pre}}{{params.last_root}}{{params.last_post}} {{params.trailer}}')
     self.redis.lpush('humanname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
-    self.redis.lpush('humanname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
+    self.redis.lpush('humanname_formalname_template',
+                     '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
 
     self.redis.lpush('humanname_first_pre', 'Dru')
     self.redis.lpush('humanname_first_root', 'cil')
@@ -84,31 +97,35 @@ def import_fixtures(self):
     self.redis.lpush('humanname_last_post', 'vae')
 
 
-
-
-
-
-    #Details for Kobolds
-    self.redis.set('gnome_details',  '{"name": "Gnome",      "size": "small",   "description": "having engineering and intellectual expertise" }')
+    self.redis.set('gnome_details',
+                   '{"name": "Gnome", "size": "small", "description":"having engineering and intellectual expertise"}')
     self.redis.lpush('gnome_covering', 'skin')
-    self.redis.lpush('gnomename_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+    self.redis.lpush('gnomename_fullname_template',
+                     '{{params.title}} {{params.first_pre}}{{params.first_root}} '+
+                     '{{params.last_pre}}{{params.last_root}} {{params.trailer}}')
     self.redis.lpush('gnomename_shortname_template', '{{params.first_pre}}{{params.first_root}}')
     self.redis.lpush('gnomename_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}')
     self.redis.lpush('gnomename_first_root', 'Tom')
     self.redis.lpush('gnomename_last_pre', 'Gyro')
 
 
-
-
     self.redis.lpush('orc_covering', 'skin')
-    self.redis.set('orc_details',  '{"name": "Orc",        "size": "medium",  "description": "under-bite and ferocious demeanor"}')
-    self.redis.lpush('orcname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_pre}}{{params.last_root}} {{params.trailer}}')
-    self.redis.lpush('orcname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}')
-    self.redis.lpush('orcname_formalname_template', '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
+    self.redis.set('orc_details',
+                   '{"name": "Orc", "size": "medium",  "description": "under-bite and ferocious demeanor"}')
+    self.redis.lpush('orcname_fullname_template',
+                     '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} '+
+                     '{{params.last_pre}}{{params.last_root}} {{params.trailer}}')
+    self.redis.lpush('orcname_shortname_template',
+                     '{{params.first_pre}}{{params.first_root}}{{params.first_post}} {{trailer}}')
+    self.redis.lpush('orcname_formalname_template',
+                     '{{params.title}} {{params.last_pre}}{{params.last_root}}{{params.last_post}}')
 
 
-    self.redis.set('elf_details',  '{"name": "Elf",        "size": "medium",  "description": "care-free spirit and lengthy lifespan"}')
-    self.redis.lpush('elfname_fullname_template', '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} {{params.last_root}}{{params.last_post}} {{params.trailer}}')
+    self.redis.set('elf_details',
+                   '{"name": "Elf", "size": "medium", "description": "care-free spirit and lengthy lifespan"}')
+    self.redis.lpush('elfname_fullname_template',
+                     '{{params.title}} {{params.first_pre}}{{params.first_root}}{{params.first_post}} '+
+                     '{{params.last_root}}{{params.last_post}} {{params.trailer}}')
     self.redis.lpush('elfname_shortname_template', '{{params.first_pre}}{{params.first_root}}{{params.first_post}}')
     self.redis.lpush('elfname_formalname_template', '{{params.title}} {{params.last_root}}{{params.last_post}}')
 

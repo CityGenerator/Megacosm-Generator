@@ -31,7 +31,11 @@ def import_fixtures(self):
     self.redis.lpush('legend_stopit', 'unless you offer a sacrifice')
     self.redis.lpush('legend_storytime', 'In olden times')
     self.redis.lpush('legend_talent', 'a valiant knight')
-    self.redis.lpush('legend_template', '{{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name.fullname}} {{params.wander}} the {{params.area}} {{params.when}} {{params.drawn}}. {{params.who}} say that if you {{params.detect}} {{params.villain.sex["third-person"]}}, you {{params.badfate}} {{params.stopit}}.')
+    self.redis.lpush('legend_template',
+                     '{{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name.fullname}} '+
+                     '{{params.wander}} the {{params.area}} {{params.when}} {{params.drawn}}. {{params.who}} say '+
+                     'that if you {{params.detect}} {{params.villain.sex["third-person"]}}, you {{params.badfate}} '+
+                     '{{params.stopit}}.')
     self.redis.lpush('legend_trap', 'give you a gift if you are nice')
     self.redis.lpush('legend_victory', 'and rescued the hostages')
     self.redis.lpush('legend_virtue', 'never trusting another {{params.badguytype}}')

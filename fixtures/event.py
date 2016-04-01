@@ -10,5 +10,6 @@ def import_fixtures(self):
     self.redis.lpush('eventdisaster_variety', 'animal infestation')
     self.redis.lpush('event_kind', 'disaster')
     self.redis.lpush('event_template',
-                     '{{params.variety }} {{params.kind}}, which is {{params.magnitude["name"]}} to the people in the area.')
+                     '{{params.variety }} {{params.kind}}, which is {{params.magnitude["name"]}}'+
+                     ' to the people in the area.')
 

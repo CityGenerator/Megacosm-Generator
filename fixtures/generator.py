@@ -7,9 +7,9 @@
 def import_fixtures(self):
     """ Create simple fixture entries..."""
     #Used for testing chances that always happen
-    self.redis.zadd('bogus_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }', 1.0)
-    self.redis.zadd('bogus_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }', 40.0)
-    self.redis.zadd('bogus_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }', 100.0)
+    self.redis.zadd('bogus_size', '{ "name":"tiny", "multiplier":0.5, "score":1 }', 1.0)
+    self.redis.zadd('bogus_size', '{ "name":"large", "multiplier":1.0, "score":40 }', 40.0)
+    self.redis.zadd('bogus_size', '{ "name":"giant", "multiplier":2.0, "score":100 }', 100.0)
     self.redis.lpush('bogus_mylist', 1)
     self.redis.lpush('bogus_mylist', 2)
     self.redis.lpush('bogus_mylist', 3)
@@ -20,9 +20,9 @@ def import_fixtures(self):
     self.redis.lpush('other_misslist', 'a')
     self.redis.lpush('other_misslist', 'b')
     self.redis.set('chnc_size_chance', 101)
-    self.redis.zadd('chnc_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }', 1.0)
-    self.redis.zadd('chnc_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }', 40.0)
-    self.redis.zadd('chnc_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }', 100.0)
+    self.redis.zadd('chnc_size', '{ "name":"tiny", "multiplier":0.5, "score":1 }', 1.0)
+    self.redis.zadd('chnc_size', '{ "name":"large", "multiplier":1.0, "score":40 }', 40.0)
+    self.redis.zadd('chnc_size', '{ "name":"giant", "multiplier":2.0, "score":100 }', 100.0)
     self.redis.set('chnc_mylist_chance', 101)
     self.redis.lpush('chnc_mylist', 1)
     self.redis.lpush('chnc_mylist', 2)
@@ -30,9 +30,9 @@ def import_fixtures(self):
 
     #Used for testing chances that never happen
     self.redis.set('nochnc_size_chance', 0)
-    self.redis.zadd('nochnc_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }', 1.0)
-    self.redis.zadd('nochnc_size',  '{ "name":"large",  "multiplier":1.0, "score":40  }', 40.0)
-    self.redis.zadd('nochnc_size',  '{ "name":"giant",  "multiplier":2.0, "score":100  }', 100.0)
+    self.redis.zadd('nochnc_size', '{ "name":"tiny", "multiplier":0.5, "score":1 }', 1.0)
+    self.redis.zadd('nochnc_size', '{ "name":"large", "multiplier":1.0, "score":40 }', 40.0)
+    self.redis.zadd('nochnc_size', '{ "name":"giant", "multiplier":2.0, "score":100 }', 100.0)
     self.redis.set('nochnc_mylist_chance', 0)
     self.redis.lpush('nochnc_mylist', 1)
     self.redis.lpush('nochnc_mylist', 2)
@@ -48,8 +48,14 @@ def import_fixtures(self):
     self.redis.lpush('mybadknd_kind', 'small')
     self.redis.hset('mybadknd_kind_description', 'small', 'whoops this is bad')
 
+    self.redis.zadd('incompleteset_size', '{ "name":"tiny", "multiplier":0.5, "score":1 }', 1.0)
 
+    self.redis.zadd('badjson_widget', 'waffles not json', 100.0)
 
+    import_city_name_fixtures(self)
+
+def import_city_name_fixtures(self):
+    """ import fixtures for name testing."""
     self.redis.set('fullcitytitle_chance', 100)
     self.redis.set('fullcitypre_chance', 100)
     self.redis.set('fullcitytrailer_chance', 100)
@@ -82,6 +88,3 @@ def import_fixtures(self):
     self.redis.lpush('mincitytrailer', 'Park')
 
 
-    self.redis.zadd('incompleteset_size',  '{ "name":"tiny",  "multiplier":0.5, "score":1  }', 1.0)
-
-    self.redis.zadd('badjson_widget',  'waffles not json', 100.0)
