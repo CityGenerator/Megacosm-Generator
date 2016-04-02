@@ -21,6 +21,7 @@ class TestSect(unittest.TestCase):
         fixtures.phobia.import_fixtures(self)
         fixtures.deity.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)
+        fixtures.sect.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
 
     def tearDown(self):
@@ -29,16 +30,17 @@ class TestSect(unittest.TestCase):
     def test_random_sect(self):
         """  """
         sect = Sect(self.redis)
-        self.assertNotEqual(sect.domain, '')
+        self.assertIn('name',sect.domain)
+        self.assertEqual('Order of the Oreibalic',str(sect) )
 
     def test_static_sect(self):
         """  """
 	deity=Deity(self.redis)
         sect = Sect(self.redis, {'deity':deity})
-        self.assertNotEqual(sect.domain, '')
+        self.assertIn('name',sect.domain)
         self.assertIn(sect.domain, deity.portfolios)
 
-    def test_static_domain(self):
-        """  """
-        sect = Sect(self.redis, {'domain':'tacos'})
-        self.assertEqual(sect.domain, 'tacos')
+#    def test_static_domain(self):
+#        """  """
+#        sect = Sect(self.redis, {'domain':'tacos'})
+#        self.assertEqual(sect.domain, 'tacos')

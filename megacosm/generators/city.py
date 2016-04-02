@@ -21,7 +21,7 @@ class City(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
         if not hasattr(self, 'region'):
-            print "noregion!!!"
+            # print "noregion!!!"
             self.region = region.Region(self.redis)
 
         self.gatheringplace = Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
@@ -62,7 +62,7 @@ class City(Generator):
                 break
 
         if total < 100:
-            """ Check to make sure we didn't run out of races before hitting 100"""
+            # Check to make sure we didn't run out of races before hitting 100
             total_without_other = total - racelist['other']
             racelist['other'] = 100 - total_without_other
             total = 100
@@ -88,7 +88,7 @@ class City(Generator):
                 total = parentpercentage
                 break
         if total < parentpercentage:
-            """ Check to make sure we didn't run out of races before hitting parentpercentage"""
+            # Check to make sure we didn't run out of races before hitting parentpercentage
             subrace = subracelist.keys()[0]
             total_without_other = total - subracelist[subrace]
             subracelist[subrace] = parentpercentage - total_without_other
@@ -116,26 +116,20 @@ class City(Generator):
 
     def has_subraces(self, race):
         """ Check to see if a race has subraces."""
-        if self.redis.llen(race + '_subrace') > 0:
-            return True
-        else:
-            return False
+        return bool(self.redis.llen(race + '_subrace'))
 
     def want_subraces(self, race):
         """ Determine if we should mention subraces for a given race."""
         roll = random.randint(0, 100)
         #print "want_race %s with %s chance and roll %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll)
-        if roll < int(self.redis.get(race + '_subrace_chance')):
-            return True
-        else:
-            return False
+        return bool(roll < int(self.redis.get(race + '_subrace_chance')))
 
     def get_race_breakdown(self):
         """ return a simple dict of proper race names and percentages """
         results = {}
         for race in self.races:
             if isinstance(self.races[race], dict):
-                """ Time to handle the subraces and squeeze them into the results"""
+                # Time to handle the subraces and squeeze them into the results
                 for subrace in self.races[race]:
                     subracejson = json.loads(self.redis.hget(race + '_subrace_description', subrace))
                     results[subracejson['subrace']] = self.races[race][subrace]

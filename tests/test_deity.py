@@ -20,6 +20,7 @@ class TestDeity(unittest.TestCase):
         fixtures.motivation.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.deity.import_fixtures(self)
+        fixtures.sect.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
 
     def tearDown(self):

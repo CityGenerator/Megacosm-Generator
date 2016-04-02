@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from planet import Planet
-from star import Star
+""" A starsystem contains one or more stars """
+
 import json
 import logging
 import random
+from megacosm.generators.generator import Generator
+from megacosm.generators.planet import Planet
+from megacosm.generators.star import Star
 
 
 class StarSystem(Generator):
-
+    """ "Generate some stars and planets."""
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
@@ -18,10 +20,9 @@ class StarSystem(Generator):
         self.generate_planet()
 
     def generate_stars(self):
-        """ Do stuff"""
+        """ generate our stars first."""
 
         self.stars = []
-
         positions = self.redis.lrange('starposition', 0, -1)
 
         for starId in xrange(self.starcount['count']):
@@ -29,7 +30,8 @@ class StarSystem(Generator):
             self.stars.append(Star(self.redis, {'pos': json.loads(positions.pop(0))}))
 
     def generate_planet(self):
-        """ Do stuff"""
+        """ Generate a planet"""
+        #TODO this should be an array, right?
         self.planet = Planet(self.redis)
 
     def __str__(self):

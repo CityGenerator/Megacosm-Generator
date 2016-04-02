@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from npc import NPC
-from region import Region
+""" The Drink is a tasty beverage found at your local tavern."""
+
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.npc import NPC
+from megacosm.generators.region import Region
 
 
 class Drink(Generator):
-
+    """ Drink has a creator and a region. """
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
