@@ -3,13 +3,13 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import GeomorphDungeon
-import unittest2 as unittest
-
-import fakeredis
-from config import TestConfiguration
+import sys
 import fixtures
 import json
+import fakeredis
+import unittest2 as unittest
+from megacosm.generators import GeomorphDungeon
+
 
 class TestGeomorphDungeon(unittest.TestCase):
 
@@ -24,8 +24,12 @@ class TestGeomorphDungeon(unittest.TestCase):
 
     def test_random_geomorphdungeon(self):
         """  """
-        geomorphdungeon = GeomorphDungeon(self.redis)
-        self.assertEqual('Lost Panopticon Of The King Of Chaos', str(geomorphdungeon))
+        gd = GeomorphDungeon(self.redis)
+        self.assertEqual('Lost Panopticon Of The King Of Chaos', str(gd.name))
+        self.assertEqual('Lost Panopticon Of The King Of Chaos', str(gd))
+        self.assertEqual(6, gd.width)
+        self.assertEqual(4, gd.height)
+
 
     def test_simplify_for_json(self):
         """  """
@@ -38,9 +42,39 @@ class TestGeomorphDungeon(unittest.TestCase):
                 self.assertTrue(tile['path'])
                 self.assertIn(tile['rotation'], [0,1,2,3])
 
-#    def generate_grid(self):
-#    def generate_connections(self):
-#    def calculate_top(self, cell):
+    def test_generate_grid(self):
+        gd = GeomorphDungeon(self.redis, {'height':8, 'width':7})
+        gd.grid=None
+        self.assertEqual(None, gd.grid)
+        self.assertEqual(7, gd.width)
+        self.assertEqual(8, gd.height)
+
+        gd.generate_grid()
+        self.assertEqual(8, len(gd.grid))
+        self.assertEqual(7, len(gd.grid[0]))
+        for row in gd.grid:
+            for tile in row:
+                self.assertIsInstance(tile,GeomorphDungeon.Tile)
+
+    def test_generate_connections(self):
+        gd = GeomorphDungeon(self.redis)
+        self.assertEqual(gd.width*gd.height, len(gd.alltiles))
+
+    def test_calculate_top(self):
+        gd = GeomorphDungeon(self.redis)
+        gd.grid=None
+        gd.generate_grid()
+        for row in gd.grid:
+            for tile in row:
+                if tile.top:
+                    sys.stdout.write("T")
+                else:
+                    sys.stdout.write("F")
+            print "\n"
+                
+        
+
+
 #    def calculate_right(self, cell):
 #    def calculate_bottom(self, cell):
 #    def calculate_left(self, cell):

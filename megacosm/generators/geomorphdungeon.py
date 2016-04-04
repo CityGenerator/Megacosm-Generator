@@ -47,34 +47,92 @@ class GeomorphDungeon(Generator):
         self.generate_features('dungeon')
 
         self.name=Name(self.redis,'dungeon')
-        self.width = self.gridwidth['tiles']
-        self.height = self.gridheight['tiles']
+        if not hasattr(self,'width'):
+            self.width = self.gridwidth['tiles']
+        
+        if not hasattr(self,'height'):
+            self.height = self.gridheight['tiles']
 
+        # First Generate the Grid
         self.generate_grid()
+        # Then Generate the Connections to each other.
         self.generate_connections()
+        
         self.set_tiletypes()
 
-    def generate_dungeon_name(self):
-        """ Read the dungeon_template from dungeon_data and construct the name."""
-        if not hasattr(self, 'text'):
-            self.text = self.render_template(self.template)
-            self.text = self.render_template(self.text)
-        self.text = self.text.title()
 
-    def __str__(self):
-        """ print the name as a string."""
-        return self.name.fullname.title()
+    def generate_grid(self):
+        """ Create a grid of width by height Tiles."""
+        self.grid = [[GeomorphDungeon.Tile(i, j) for i in range(self.width)] for j in range(self.height)]
 
-    def simplify_for_json(self):
-        """ Convert our pretty grid into something json-friendly."""
-        resultmatrix = []
+    def generate_connections(self):
+        """ Link each tile to the tiles around it."""
+        self.alltiles = []
         for row in self.grid:
-            resultrow = []
             for tile in row:
-                resultrow.append({'path': tile.image, 'rotation': tile.imagerotation})
-            resultmatrix.append(resultrow)
-        # Note this is returning a clean array of arrays
-        return resultmatrix
+                self.alltiles.append(tile)
+
+        random.shuffle(self.alltiles)
+
+        for tile in self.alltiles:
+            self.calculate_top(tile)
+            self.calculate_right(tile)
+            self.calculate_bottom(tile)
+            self.calculate_left(tile)
+
+    def calculate_top(self, tile):
+        """ determine whether this tile is connected to the one above it."""
+
+        # If the tile is in the first row, it means there is no tile above it, so it isn't connected..
+        if tile.y == 0:
+            tile.top = False
+        # If the tile above it exists AND it's bottom tile has already been decided, set this to the same decision.
+        # e.g. if the tile above has already decided we're connected, say we're connected.
+        elif self.grid[tile.y - 1][tile.x].bottom is not None:
+            tile.top = self.grid[tile.y - 1][tile.x].bottom
+        # If the tile above us exists but hasn't been checked for connectivity, we get to decide!
+        else:
+            # Check to see if it's disconnected, This is determined by the graphs segmentation value.
+            # This can range from 
+            if random.randint(0, self.segmentation['disconnect_chance']) == 0:
+                tile.top = False
+            else:
+                # We're connected! Finally!
+                tile.top = True
+
+
+    def calculate_right(self, tile):
+        if tile.x == len(self.grid[0]) - 1:
+            tile.right = False
+        elif self.grid[tile.y][tile.x + 1].left is not None:
+            tile.right = self.grid[tile.y][tile.x + 1].left
+        else:
+            if random.randint(0, self.segmentation['disconnect_chance']) == 0:
+                tile.right = False
+            else:
+                tile.right = True
+
+    def calculate_bottom(self, tile):
+        if tile.y == len(self.grid) - 1:
+            tile.bottom = False
+        elif self.grid[tile.y + 1][tile.x].top is not None:
+            tile.bottom = self.grid[tile.y + 1][tile.x].top
+        else:
+            if random.randint(0, self.segmentation['disconnect_chance']) == 0:
+                tile.bottom = False
+            else:
+                tile.bottom = True
+
+    def calculate_left(self, tile):
+        if tile.x == 0:
+            tile.left = False
+        elif self.grid[tile.y][tile.x - 1].right is not None:
+            tile.left = self.grid[tile.y][tile.x - 1].right
+        else:
+            if random.randint(0, self.segmentation['disconnect_chance']) == 0:
+                tile.left = False
+            else:
+                tile.left = True
 
     def set_tiletypes(self):
         """ """
@@ -99,67 +157,22 @@ class GeomorphDungeon(Generator):
         tile.imagerotation = self.CELL_TYPES[tile.tiletype]['rotation']
         return tile
 
-    def generate_grid(self):
+    def __str__(self):
+        """ print the name as a string."""
+        return self.name.fullname.title()
 
-        self.grid = [[GeomorphDungeon.Tile(i, j) for i in range(self.width)] for j in range(self.height)]
-
-    def generate_connections(self):
-        alltiles = []
+    def simplify_for_json(self):
+        """ Convert our pretty grid into something json-friendly."""
+        resultmatrix = []
         for row in self.grid:
+            resultrow = []
             for tile in row:
-                alltiles.append(tile)
+                resultrow.append({'path': tile.image, 'rotation': tile.imagerotation})
+            resultmatrix.append(resultrow)
+        # Note this is returning a clean array of arrays
+        return resultmatrix
+    
 
-        random.shuffle(alltiles)
-
-        for tile in alltiles:
-            self.calculate_top(tile)
-            self.calculate_right(tile)
-            self.calculate_bottom(tile)
-            self.calculate_left(tile)
-
-    def calculate_top(self, tile):
-        if tile.y == 0:
-            tile.top = False
-        elif self.grid[tile.y - 1][tile.x].bottom is not None:
-            tile.top = self.grid[tile.y - 1][tile.x].bottom
-        else:
-            if random.randint(0, self.segmentation['solidchance']) == 0:
-                tile.top = False
-            else:
-                tile.top = True
-
-    def calculate_right(self, tile):
-        if tile.x == len(self.grid[0]) - 1:
-            tile.right = False
-        elif self.grid[tile.y][tile.x + 1].left is not None:
-            tile.right = self.grid[tile.y][tile.x + 1].left
-        else:
-            if random.randint(0, self.segmentation['solidchance']) == 0:
-                tile.right = False
-            else:
-                tile.right = True
-
-    def calculate_bottom(self, tile):
-        if tile.y == len(self.grid) - 1:
-            tile.bottom = False
-        elif self.grid[tile.y + 1][tile.x].top is not None:
-            tile.bottom = self.grid[tile.y + 1][tile.x].top
-        else:
-            if random.randint(0, self.segmentation['solidchance']) == 0:
-                tile.bottom = False
-            else:
-                tile.bottom = True
-
-    def calculate_left(self, tile):
-        if tile.x == 0:
-            tile.left = False
-        elif self.grid[tile.y][tile.x - 1].right is not None:
-            tile.left = self.grid[tile.y][tile.x - 1].right
-        else:
-            if random.randint(0, self.segmentation['solidchance']) == 0:
-                tile.left = False
-            else:
-                tile.left = True
 
     class Tile(object):
 
