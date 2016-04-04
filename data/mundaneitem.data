@@ -57,10 +57,6 @@ LPUSH mundaneitem_wood maple
 LPUSH mundaneitem_wood mahogany
 LPUSH mundaneitem_wood pine
 LPUSH mundaneitem_wood spruce
-LPUSH mundaneitem_wood
-LPUSH mundaneitem_wood
-LPUSH mundaneitem_wood
-
 
 LPUSH mundaneitem_kind 10-foot ladder
 LPUSH mundaneitem_kind 10-foot pole

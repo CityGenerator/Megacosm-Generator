@@ -26,7 +26,8 @@ class TestMundaneItemIntegration(unittest.TestCase):
             for template in self.redis.lrange('mundaneitem_template',0,-1):
                 print "template: "+template
                 mundaneitem = MundaneItem(self.redis, {'kind':kind, 'template':template} )
-                self.assertEqual(kind, str(mundaneitem.kind))
+                rendered_kind= mundaneitem.render_template(kind)
+                self.assertEqual(rendered_kind, str(mundaneitem.kind))
 
                 self.assertNotIn('{', str(mundaneitem))
                 self.assertNotIn('}', str(mundaneitem))
