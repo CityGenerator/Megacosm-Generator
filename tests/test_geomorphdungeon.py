@@ -60,19 +60,61 @@ class TestGeomorphDungeon(unittest.TestCase):
         gd = GeomorphDungeon(self.redis)
         self.assertEqual(gd.width*gd.height, len(gd.alltiles))
 
-    def test_calculate_top(self):
-        gd = GeomorphDungeon(self.redis)
+    def test_calculate_top_w_connections(self):
+        gd = GeomorphDungeon(self.redis, {'height':2, 'width':2})
+
         gd.grid=None
         gd.generate_grid()
-        for row in gd.grid:
-            for tile in row:
-                if tile.top:
-                    sys.stdout.write("T")
-                else:
-                    sys.stdout.write("F")
-            print "\n"
-                
-        
+        self.assertEqual(None, gd.grid[0][0].top)
+        gd.calculate_top(gd.grid[0][0])
+        self.assertEqual(False, gd.grid[0][0].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1])
+        self.assertEqual(True, gd.grid[1][1].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1],False)
+        self.assertEqual(False, gd.grid[1][1].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1],True)
+        self.assertEqual(True, gd.grid[1][1].top)
+
+
+    def test_calculate_top_wo_connections(self):
+        gd = GeomorphDungeon(self.redis, {'height':2, 'width':2, 'segmentation':{'name':'none', 'connection_chance':0, 'score':0}})
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[0][0].top)
+        gd.calculate_top(gd.grid[0][0])
+        self.assertEqual(False, gd.grid[0][0].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1])
+        self.assertEqual(False, gd.grid[1][1].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1],False)
+        self.assertEqual(False, gd.grid[1][1].top)
+
+        gd.grid=None
+        gd.generate_grid()
+        self.assertEqual(None, gd.grid[1][1].top)
+        gd.calculate_top(gd.grid[1][1],True)
+        self.assertEqual(True, gd.grid[1][1].top)
+
 
 
 #    def calculate_right(self, cell):

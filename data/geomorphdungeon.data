@@ -16,11 +16,11 @@ ZADD geomorphdungeon_gridheight 100 {"name":"4",    "tiles":4,    "score": 100  
 
 # solid chance means 1 in ____ chance that a side is solid. lower the solid chance number, 
 # higher the chance of a solid, the more segmentation
-ZADD geomorphdungeon_segmentation  20 {"name":"none",       "disconnect_chance":1000,     "score": 20   }
-ZADD geomorphdungeon_segmentation  80 {"name":"a little",   "disconnect_chance":4,        "score": 80   }
-ZADD geomorphdungeon_segmentation  90 {"name":"a lot",      "disconnect_chance":3,        "score": 90   }
-ZADD geomorphdungeon_segmentation  95 {"name":"most",       "disconnect_chance":1,        "score": 95   }
-ZADD geomorphdungeon_segmentation 100 {"name":"all",        "disconnect_chance":0,        "score": 100  }
+ZADD geomorphdungeon_segmentation  20 {"name":"none",       "connection_chance":0,    "score": 20   }
+ZADD geomorphdungeon_segmentation  80 {"name":"a little",   "connection_chance":10,   "score": 80   }
+ZADD geomorphdungeon_segmentation  90 {"name":"a lot",      "connection_chance":50,   "score": 90   }
+ZADD geomorphdungeon_segmentation  95 {"name":"most",       "connection_chance":75,   "score": 95   }
+ZADD geomorphdungeon_segmentation 100 {"name":"all",        "connection_chance":100, "score": 100  }
 
 
 
