@@ -26,3 +26,6 @@ class Govt(Generator):
                 self.body = Country(self.redis)
             else: 
                 self.body = Country(self.redis)
+
+    def __str__(self):
+        return self.govttype_description['name']

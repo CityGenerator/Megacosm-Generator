@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+""" Custom Curses can spice up a game."""
 
-from generator import Generator
 import logging
+from megacosm.generators.generator import Generator
 
 
 class Curse(Generator):

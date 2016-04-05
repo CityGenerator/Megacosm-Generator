@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from npc import NPC
-from region import Region
+""" Cuisine may be specific to a region or named after the creator. """
+
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.npc import NPC
+from megacosm.generators.region import Region
 
 
 class Cuisine(Generator):

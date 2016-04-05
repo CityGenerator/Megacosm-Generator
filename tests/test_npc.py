@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import NPC, Phobia, Motivation
 import unittest2 as unittest
 import fakeredis

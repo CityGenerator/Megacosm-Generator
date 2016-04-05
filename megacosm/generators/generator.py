@@ -13,6 +13,12 @@ import logging
 import random
 from pprint import pprint
 
+#TODO:
+# Description - The long version of text.  Should be a full sentence or two describing the object.
+# Abbr - The short version. It should answer "You see ___."
+#    e.g. "A ring", "Drebak", "Marthok, Goddess of Light", "Lichenstien", "the Mongo brewhouse", a" red moon", "the Ibiwan Curse", "King Leopold", "a clear day"
+
+
 class Generator(object):
 
     """ An abstracted Generator that all generators are based from """
@@ -98,11 +104,13 @@ class Generator(object):
         # Zset means it's a 1-100 stat;
 
         if self.redis.type(key) == 'zset':
-            setattr(self, featurename, Generator.select_by_roll(self, key))
+            if not hasattr(self, featurename):
+                setattr(self, featurename, Generator.select_by_roll(self, key))
         elif self.redis.type(key) == 'string':
 
             # string means it's a simple value that plugs right in
-            setattr(self, featurename, self.redis.get(key))
+            if not hasattr(self, featurename):
+                setattr(self, featurename, self.redis.get(key))
         elif self.redis.type(key) == 'list':
 
             # List gets a bit tricky; select a value, then see if it has an associated description

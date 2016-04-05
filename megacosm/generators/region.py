@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from name import Name
+""" A region usually contains several cities."""
+
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.name import Name
 
 
 class Region(Generator):
-
+    """ Create a region to populate. """
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
-        self.name=Name(self.redis, 'region')
+        self.name = Name(self.redis, 'region')
     def __str__(self):
         return str(self.name.fullname).title()
 

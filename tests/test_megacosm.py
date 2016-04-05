@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+"Fully test this module's functionality through the use of fixtures."
 #
 
 import megacosm
@@ -446,7 +448,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_sect_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/sect')
         self.assert200(response)
 
@@ -477,7 +478,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_wanted_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/wanted')
         self.assert200(response)
 
@@ -488,7 +488,6 @@ class MegacosmFlaskTestCast(TestCase):
 ################################################################
 
     def test_weather_route(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/weather')
         self.assert200(response)
 
@@ -503,12 +502,10 @@ class MegacosmFlaskTestCast(TestCase):
 
 ################################################################
     def test_feature_filter_npc(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/npc?npc_endurance_roll=100&npc_medical_condition=0')
         self.assert200(response)
 
     def test_feature_filter_business(self):
-        self.redis.lpush('npc_race','kobold')
         response = self.app.get('/business?business_kind=bus_adventurersguild')
         self.assert200(response)
         response = self.app.get('/business?business_kind=nothingcorrect')

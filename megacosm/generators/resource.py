@@ -1,18 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from region import Region
+""" Resources may be lumber, grain, diamonds, etc """
+
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.region import Region
 
 
 class Resource(Generator):
-
+    """ Resource Object determines what's valuable in a region or city."""
     def __init__(self, redis, features={}):
 
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
-
 
         if not hasattr(self, 'place'):
             self.place = Region(self.redis)

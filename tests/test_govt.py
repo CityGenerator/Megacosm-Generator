@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Govt, Country, City
 import unittest2 as unittest
 
@@ -45,6 +47,11 @@ class TestGovt(unittest.TestCase):
         govt = Govt(self.redis,{'kind':'country'})
         self.assertIn('Central Afkil', str(govt.body))
         self.assertEqual(type(govt.body), Country)
+
+    def test_str(self):
+        """  """
+        govt = Govt(self.redis,{'kind':'country'})
+        self.assertIn('absolute monarchy', str(govt))
 
 
     def test_static_body_tacos(self):

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Flag
 import unittest2 as unittest
 import string

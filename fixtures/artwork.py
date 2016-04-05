@@ -1,12 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
     self.redis.lpush('artwork_metal', 'bronze')
-    self.redis.lpush('artwork_weapon', 'dagger')
-    self.redis.lpush('artwork_item', 'harp')
-    self.redis.lpush('artwork_item_material', 'ivory')
-    self.redis.lpush('artwork_item_decoration', 'bear')
-    self.redis.lpush('artwork_jewelry', 'ring')
-    self.redis.lpush('artwork_cloth_item', 'glove')
-    self.redis.lpush('artwork_cloth_material', 'silk')
-    self.redis.lpush('artwork_template', "a necklace of {{params.gem.size}} {{params.gem.kind_description['name']|pluralize(2)}}")
-
+    self.redis.lpush('artworkweapon_subkind', 'spear')
+    self.redis.lpush('artwork_kind', 'weapon')
+    self.redis.lpush('artworkweapon_template',
+                     'A ceremonial {{params.metal}} {{params.subkind}} with '+
+                     'a {{params.gem.kind_description["name"]}} in the pommel')

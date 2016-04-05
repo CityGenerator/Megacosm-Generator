@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import StarSystem,Planet, Star
 import unittest2 as unittest
 import fixtures
@@ -26,4 +28,5 @@ class TestStarSystem(unittest.TestCase):
         starsystem = StarSystem(self.redis)
         self.assertTrue(starsystem.planet)
         self.assertEqual(2, len(starsystem.stars))
+        self.assertEqual('Krojel System', str(starsystem))
 

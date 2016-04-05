@@ -1,5 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
     self.redis.lpush('wanted_by', 'Regional Authorities')
     self.redis.lpush('wanted_condition', 'proof of death')
     self.redis.lpush('wanted_crime', 'Desecration')

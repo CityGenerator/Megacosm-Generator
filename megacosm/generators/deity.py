@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from npc import NPC
-from sect import Sect
+""" Deities are basically NPCs with portfolios and followers.  """
+
 import json
 import logging
 import random
+from megacosm.generators.npc import NPC
+from megacosm.generators.sect import Sect
 
 
 class Deity(NPC):
@@ -48,39 +50,38 @@ class Deity(NPC):
                 sectchance = sectchance / 2
         #Ensure the deity is set.
         for sect in self.sects:
-            sect.deity=self
+            sect.deity = self
 
     def select_portfolio(self):
-        """  use the deity's importance to determine how many portfolios it has. """
+        #FIXME : Currently points are static values rather than ranges.
+        """ Use the deity's importance to determine how many portfolios it rules over.
+            First we detmine the Deities importance, which can range from 21 to 1. This
+            number determines how many "portfolios" it rules over. Portfolios range
+            from 16 points to 1 point; the higher the number, the more generic the portfolio.
+            Good and evil are 16 points each, while amphibians are only one point.
+            This can lead to the following gods:
+                - Chronos, major deity, 21 points: Time(8), Death(8), Obedience(4), Anger(1)
+                - Frogos, quazi deity, 1 point: Amphibians(1)
+        """
 
+        # Danger, each assigned portfolio reduces this point count.
         points = int(self.importance['points'])
-        # domains are split up by power level; the more valuable, the higher the power
-        # Values currently include: 16, 8, 6, 5, 4, 3, 2, 1
 
         powerlevels = self.redis.lrange('portfolio_level', 0, -1)
 
-        # Only set this if it's empty.
-
+        # Only set portfolio array if it's empty.
         if not hasattr(self, 'portfolios'):
             self.portfolios = []
 
-        # Danger, each assigned domain reduces the point count.
-
+        #Loop removing points each time.
         while points > 0:
 
-            # Grab the highest power level available
-
+            # Grab the highest power level available the first time, then a random one after that.
             powerlevel = int(powerlevels.pop())
 
             # Check to make sure this deity has the points to buy at that power level
-
             if powerlevel <= points:
 
-                # shuffle the remaining power levels
-                # insert that power level at the back of the list; chances are we won't need it again.
-
-                random.shuffle(powerlevels)
-                powerlevels.insert(0, powerlevel)
 
                 # get all the domains at the current powerlevel
 
@@ -108,5 +109,8 @@ class Deity(NPC):
                     # subtract our new domain's power level from our available points
 
                     points = points - powerlevel
-            # else:
-                # print "can't support powerlevel",powerlevel,"with",points,"points"
+
+                # shuffle the remaining power levels
+                # insert that power level at the back of the list; chances are we won't need it again.
+                random.shuffle(powerlevels)
+                powerlevels.insert(0, powerlevel)

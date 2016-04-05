@@ -1,6 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
 
 def import_fixtures(self):
-    self.redis.lpush('grafitti_template', 'The following message is written in {{params.language}} with {{params.material}}: "{{params.message}}"')
+    """ Create simple fixture entries..."""
+    self.redis.lpush('grafitti_template',
+                     'The following message is written in {{params.language}} with {{params.material}}: '+
+                     '"{{params.message}}"')
     self.redis.lpush('grafitti_language', 'Gnomish')
     self.redis.lpush('grafitti_hero', 'warrior')
     self.redis.lpush('grafitti_monster', 'mimic')

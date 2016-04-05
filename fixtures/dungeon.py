@@ -1,5 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
+
 def import_fixtures(self):
-    self.redis.lpush('dungeonname_fullname_template', '{{params.descriptor}} {{params.place}} of the {{params.thingtype}} of {{params.thing}}')
+    """ Create simple fixture entries..."""
+    self.redis.lpush('dungeonname_fullname_template',
+                     '{{params.descriptor}} {{params.place}} of the {{params.thingtype}} of {{params.thing}}')
     self.redis.lpush('dungeonname_shortname_template', 'The {{params.place}}')
     self.redis.lpush('dungeonname_formalname_template', '{{params.fullname}}')
 
