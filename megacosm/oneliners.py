@@ -18,11 +18,42 @@ from megacosm.generators import MundaneItem
 from megacosm.generators import Cuisine
 from megacosm.generators import NPC
 from megacosm.generators import Region
+from megacosm.generators import Drink
 
 from megacosm.util.Seeds import set_seed
 
 from megacosm import app, feature_filter, builder_form_data
 
+#########################################################################
+
+@app.route('/drink')
+def generatedrink():
+    """Generate a drink"""
+
+    features = feature_filter('drink')
+    features['region'] = Region(app.server)
+    titletext = "What's on tap today?"
+    if ('count' in request.args and
+            request.args['count'].isdigit() and
+            int(request.args['count']) > 1 and
+            int(request.args['count']) <= 100):
+        drinks = []
+        for _ in xrange(int(request.args['count'])):
+            drinks.append(Drink(app.server, features))
+            features['seed'] = set_seed()
+        return render_template('oneliner.html', oneliners=drinks,
+                               oneliner=drinks[0], titletext=titletext, generator='drink')
+    else:
+        drinks = Drink(app.server, features)
+        return render_template('oneliner.html', oneliner=drinks, titletext=titletext, generator='drink')
+
+@app.route('/drink_builder')
+def drink_builder():
+    """Build a drink"""
+    classname = 'drink'
+    plist, pstring, pset = builder_form_data(classname)
+
+    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 #########################################################################
 def valid_count(count):
@@ -34,7 +65,6 @@ def valid_count(count):
         return False
 
 #########################################################################
-
 
 @app.route('/artwork')
 def generateartwork():
@@ -156,6 +186,8 @@ def resource_builder():
     return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 #########################################################################
+
+
 
 
 @app.route('/rumor')

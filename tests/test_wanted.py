@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Wanted, NPC
 import unittest2 as unittest
 import fixtures
@@ -33,3 +35,8 @@ class TestWanted(unittest.TestCase):
         npc = NPC(self.redis)
         wanted = Wanted(self.redis, {'npc':npc})
         self.assertEquals(npc, wanted.npc)
+
+    def test_wanted_str(self):
+        """  """
+        wanted = Wanted(self.redis)
+        self.assertEquals("Wanted: Tom Gyro", str(wanted))

@@ -1,18 +1,18 @@
 # city info!
 
-ZADD city_size 10  { "name":"settlement",    "minpop":"25",    "maxpop":"100",   "min_density":"10",  "max_density":"400",   "min_dist":-5, "max_dist":1  }
-ZADD city_size 30  { "name":"hamlet",        "minpop":"101",   "maxpop":"500",   "min_density":"20",  "max_density":"2000",  "min_dist":-5, "max_dist":2  }
-ZADD city_size 35  { "name":"small village", "minpop":"501",   "maxpop":"600",   "min_density":"30",  "max_density":"2400",  "min_dist":-3, "max_dist":2  }
-ZADD city_size 40  { "name":"village",       "minpop":"601",   "maxpop":"750",   "min_density":"60",  "max_density":"3000",  "min_dist":-1, "max_dist":2  }
-ZADD city_size 45  { "name":"large village", "minpop":"751",   "maxpop":"1000",  "min_density":"75",  "max_density":"4000",  "min_dist":-1, "max_dist":3  }
-ZADD city_size 60  { "name":"small town",    "minpop":"1001",  "maxpop":"1500",  "min_density":"90",  "max_density":"6000",  "min_dist":0,  "max_dist":3  }
-ZADD city_size 70  { "name":"town",          "minpop":"1501",  "maxpop":"3500",  "min_density":"100", "max_density":"9000",  "min_dist":0,  "max_dist":4  }
-ZADD city_size 80  { "name":"large town",    "minpop":"3501",  "maxpop":"5000",  "min_density":"110", "max_density":"10000", "min_dist":1,  "max_dist":4  }
-ZADD city_size 85  { "name":"small city",    "minpop":"5001",  "maxpop":"8000",  "min_density":"150", "max_density":"15000", "min_dist":1,  "max_dist":6  }
-ZADD city_size 90  { "name":"city",          "minpop":"8001",  "maxpop":"15000", "min_density":"180", "max_density":"22000", "min_dist":1,  "max_dist":8  }
-ZADD city_size 94  { "name":"large city",    "minpop":"15001", "maxpop":"22000", "min_density":"200", "max_density":"28000", "min_dist":2,  "max_dist":10 }
-ZADD city_size 99  { "name":"metropolis",    "minpop":"22001", "maxpop":"30000", "min_density":"220", "max_density":"30000", "min_dist":3,  "max_dist":12 }
-ZADD city_size 100 { "name":"capitol",       "minpop":"30001", "maxpop":"80000", "min_density":"240", "max_density":"40000", "min_dist":3,  "max_dist":14 }
+ZADD city_size 10  { "name":"settlement",    "minpop":"25",    "maxpop":"100",   "min_density":"10",  "max_density":"400",   "min_dist":-5, "max_dist":1,   "score":10  }
+ZADD city_size 30  { "name":"hamlet",        "minpop":"101",   "maxpop":"500",   "min_density":"20",  "max_density":"2000",  "min_dist":-5, "max_dist":2,   "score":30  }
+ZADD city_size 35  { "name":"small village", "minpop":"501",   "maxpop":"600",   "min_density":"30",  "max_density":"2400",  "min_dist":-3, "max_dist":2,   "score":35  }
+ZADD city_size 40  { "name":"village",       "minpop":"601",   "maxpop":"750",   "min_density":"60",  "max_density":"3000",  "min_dist":-1, "max_dist":2,   "score":40  }
+ZADD city_size 45  { "name":"large village", "minpop":"751",   "maxpop":"1000",  "min_density":"75",  "max_density":"4000",  "min_dist":-1, "max_dist":3,   "score":45  }
+ZADD city_size 60  { "name":"small town",    "minpop":"1001",  "maxpop":"1500",  "min_density":"90",  "max_density":"6000",  "min_dist":0,  "max_dist":3,   "score":60  }
+ZADD city_size 70  { "name":"town",          "minpop":"1501",  "maxpop":"3500",  "min_density":"100", "max_density":"9000",  "min_dist":0,  "max_dist":4,   "score":70  }
+ZADD city_size 80  { "name":"large town",    "minpop":"3501",  "maxpop":"5000",  "min_density":"110", "max_density":"10000", "min_dist":1,  "max_dist":4,   "score":80  }
+ZADD city_size 85  { "name":"small city",    "minpop":"5001",  "maxpop":"8000",  "min_density":"150", "max_density":"15000", "min_dist":1,  "max_dist":6,   "score":85  }
+ZADD city_size 90  { "name":"city",          "minpop":"8001",  "maxpop":"15000", "min_density":"180", "max_density":"22000", "min_dist":1,  "max_dist":8,   "score":90  }
+ZADD city_size 94  { "name":"large city",    "minpop":"15001", "maxpop":"22000", "min_density":"200", "max_density":"28000", "min_dist":2,  "max_dist":10,  "score":94  }
+ZADD city_size 99  { "name":"metropolis",    "minpop":"22001", "maxpop":"30000", "min_density":"220", "max_density":"30000", "min_dist":3,  "max_dist":12,  "score":99  }
+ZADD city_size 100 { "name":"capitol",       "minpop":"30001", "maxpop":"80000", "min_density":"240", "max_density":"40000", "min_dist":3,  "max_dist":14,  "score":100 }
 
 
 # Citizens of Willis are mentally _____  and pyhsically feeble.

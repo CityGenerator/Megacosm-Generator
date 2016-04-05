@@ -1,17 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from region import Region
-from name import Name
-#from leader import Leader
-import leader
+""" The Largest governed body on the planet, it has various regions and a leader.
+"""
+
 import logging
 import random
+from megacosm.generators.generator import Generator
+from megacosm.generators.region import Region
+from megacosm.generators.name import Name
+#from leader import Leader
+import leader
 
 
 class Country(Generator):
-
+    """ The Country Object includes a leader and one or more regions."""
     def __init__(self, redis, features={}):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)

@@ -39,7 +39,7 @@ ZADD organization_violence  10 {"name":"murderous",      "score":10   }
 ZADD organization_violence  20 {"name":"brutal",        "score":20   }
 ZADD organization_violence  30 {"name":"violent",       "score":30   }
 ZADD organization_violence  40 {"name":"coercive",      "score":40   }
-ZADD organization_violence  50 {"name":"rough",         "score":40   }
+ZADD organization_violence  50 {"name":"rough",         "score":50   }
 ZADD organization_violence  60 {"name":"strict",        "score":60   }
 ZADD organization_violence  80 {"name":"mild",          "score":80   }
 ZADD organization_violence  90 {"name":"calm",          "score":90   }

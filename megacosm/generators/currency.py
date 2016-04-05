@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from npc import NPC
-from name import Name
+""" Gold, Silver and Copper are boring currencies; this spices them up a bit. """
+
 import logging
 import random
+from megacosm.generators.generator import Generator
+from megacosm.generators.npc import NPC
+from megacosm.generators.name import Name
 
 
 class Currency(Generator):
@@ -20,7 +22,7 @@ class Currency(Generator):
         if not hasattr(self, 'count'):
             self.count = random.randint(self.amount['min'], self.amount['max'])
         if not hasattr(self, 'name'):
-            self.name=Name(self.redis,'currency')
+            self.name = Name(self.redis, 'currency')
 
         # Double parse the template to fill in templated template values.
 

@@ -7,6 +7,8 @@
 
 from adventure import Adventure
 assert Adventure
+from drink import Drink
+assert Drink
 from artwork import Artwork
 assert Artwork
 from bond import Bond
@@ -89,3 +91,5 @@ from wanted import Wanted
 assert Wanted
 from weather import Weather
 assert Weather
+from elixir import Elixir
+assert Elixir
