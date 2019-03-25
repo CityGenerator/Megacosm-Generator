@@ -22,3 +22,11 @@ nosetests.xml
 
 megacosm/static/gen/
 megacosm/static/.webassets-cache/
+
+
+.idea/
+.terraform/
+*.tfstate
+*.tfstate.backup
+venv/
+
