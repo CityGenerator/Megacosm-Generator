@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Flaw
-import unittest2 as unittest
+from megacosm.generators.Flaw import Flaw
+import unittest
 
 import fakeredis
 import fixtures
@@ -15,7 +15,7 @@ class TestFlaw(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.flaw.import_fixtures(self)
 
     def tearDown(self):

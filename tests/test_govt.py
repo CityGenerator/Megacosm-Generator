@@ -3,8 +3,10 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Govt, Country, City
-import unittest2 as unittest
+from megacosm.generators.Govt import Govt
+from megacosm.generators.Country import Country
+from megacosm.generators.City import City
+import unittest
 
 import fakeredis
 import fixtures
@@ -15,7 +17,7 @@ class TestGovt(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.govt.import_fixtures(self)
         fixtures.city.import_fixtures(self)
         fixtures.region.import_fixtures(self)

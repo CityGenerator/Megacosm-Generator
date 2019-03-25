@@ -5,7 +5,7 @@
 ## -*- coding: utf-8 -*-
 #
 #from megacosm.generators import Elixir
-#import unittest2 as unittest
+#import unittest
 #
 #import redis
 #from config import TestConfiguration
@@ -14,7 +14,7 @@
 #
 #    def setUp(self):
 #        """  """
-#        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+#        self.redis = TestConfiguration.REDIS
 #
 #    def test_random_elixir(self):
 #        """ """

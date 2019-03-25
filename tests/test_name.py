@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Name
-import unittest2 as unittest
+from megacosm.generators.Name import Name
+import unittest
 import fixtures
 import fakeredis
 from pprint import pprint
@@ -13,7 +13,7 @@ from pprint import pprint
 class TestName(unittest.TestCase):
 
     def setUp(self):
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
 
     def tearDown(self):

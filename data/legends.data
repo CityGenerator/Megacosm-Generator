@@ -104,21 +104,21 @@ LPUSH legend_wander frequented
 LPUSH legend_wander lingered in
         
 SET   legend_stopit_chance 10
-LPUSH legend_stopit unless you flee
-LPUSH legend_stopit unless you complete a quest
-LPUSH legend_stopit unless you return a lost possession
-LPUSH legend_stopit unless you offer a sacrifice
-LPUSH legend_stopit unless you offer your most valued possession
-LPUSH legend_stopit unless you pay a tribute
-LPUSH legend_stopit unless you answer a riddle
+LPUSH legend_stopit  unless you flee
+LPUSH legend_stopit  unless you complete a quest
+LPUSH legend_stopit  unless you return a lost possession
+LPUSH legend_stopit  unless you offer a sacrifice
+LPUSH legend_stopit  unless you offer your most valued possession
+LPUSH legend_stopit  unless you pay a tribute
+LPUSH legend_stopit  unless you answer a riddle
         
 SET   legend_drawn_chance 30
-LPUSH legend_drawn and was drawn towards misbehaving children
-LPUSH legend_drawn and was drawn towards murderers
-LPUSH legend_drawn and was drawn towards those that have killed innocents
-LPUSH legend_drawn and was drawn towards thieves
-LPUSH legend_drawn and was drawn towards acts of greed
-LPUSH legend_drawn and was drawn towards those that wronged others
+LPUSH legend_drawn  and was drawn towards misbehaving children
+LPUSH legend_drawn  and was drawn towards murderers
+LPUSH legend_drawn  and was drawn towards those that have killed innocents
+LPUSH legend_drawn  and was drawn towards thieves
+LPUSH legend_drawn  and was drawn towards acts of greed
+LPUSH legend_drawn  and was drawn towards those that wronged others
         
 SET   legend_when_chance 40
 LPUSH legend_when  at dusk
@@ -268,7 +268,7 @@ LPUSH legend_failedresolution kill {{params.villain.name.fullname}}
 
 #LPUSH legend_template  Legends tell of {{params.npc.name.fullname}}'s {{params.object |title}}, {{params.reputation | article}} {{params.object}} with the {{params.abilitytype}} to {{params.ability}}.  It  {{params.lastseen}}.
 
-LPUSH legend_template  {{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name.fullname}} {{params.wander}} the {{params.area}} {{params.when}} {{params.drawn}}. {{params.who}} say that if you {{params.detect}} {{params.villain.sex['third-person']}}, you {{params.badfate}} {{params.stopit}}.
+LPUSH legend_template  {{params.storytime}}, {{params.badguytype |article }} named {{params.villain.name.fullname}} {{params.wander}} the {{params.area}}{{params.when}}{{params.drawn}}. {{params.who}} say that if you {{params.detect}} {{params.villain.sex['third-person']}}, you {{params.badfate}}{{params.stopit}}.
 #LPUSH legend_template  {{params. USE infl = Lingua.EN.Inflect; -}}{{params.storytime}}, {{params.  infl.A( imaginarymonster )}} {{params.wander}} the {{params.area}}{{params.when}}{{params.drawn}}. {{params.who}} say that the {{params.imaginarymonster}} will {{params.baityou}}, then {{params.trapyou}}.
 
 

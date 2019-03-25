@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Curse
-import unittest2 as unittest
+from megacosm.generators.Curse import Curse
+import unittest
 
 import fakeredis
 import fixtures
@@ -17,7 +17,7 @@ class TestCurse(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.curse.import_fixtures(self)
     def tearDown(self):
         self.redis.flushall()

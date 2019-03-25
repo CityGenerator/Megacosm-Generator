@@ -3,10 +3,10 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Cuisine
-from megacosm.generators import Region
-from megacosm.generators import NPC
-import unittest2 as unittest
+from megacosm.generators.Cuisine import Cuisine
+from megacosm.generators.Region import Region
+from megacosm.generators.NPC import NPC
+import unittest
 
 import fakeredis
 from config import TestConfiguration
@@ -16,7 +16,7 @@ class TestCuisine(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis=fakeredis.FakeRedis()
+        self.redis=fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)
@@ -32,7 +32,7 @@ class TestCuisine(unittest.TestCase):
     def test_random_cuisine(self):
         """  """
         cuisine = Cuisine(self.redis)
-        print cuisine.text
+        print(cuisine.text)
         self.assertEqual('Scalded orange dog salad in chile gravy, served luke warm This dish is unique to the . Travelers consider the dish spicy and beautiful to the eye. Portions are usually large.', cuisine.text)
 
     def test_static_cuisine(self):

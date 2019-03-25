@@ -1,41 +1,39 @@
 import fakeredis
 import redis
 
+
 class BaseConfiguration(object):
     # Statement for enabling the development environment
     DEBUG = True
-
     LOG_PATH = 'data/logging.json'
-
-    REDIS_URL = 'redis://127.0.0.1:6379/'
-    REDIS = redis.Redis()
+    REDIS = redis.Redis(host="localhost", port=6379, decode_responses=True, encoding=u'utf-8')
 
 
 class ProductionConfiguration(BaseConfiguration):
     # Statement for enabling the development environment
     DEBUG = False
-
     LOG_PATH = 'data/logging.json'
-
-    REDIS_URL = 'redis://127.0.0.1:6379/'
-    REDIS = fakeredis.FakeRedis()
+    REDIS = redis.Redis(host="localhost", port=6379, decode_responses=True, encoding=u'utf-8')
 
 
-class TestConfiguration(BaseConfiguration):
+class DevConfiguration(BaseConfiguration):
     # Statement for enabling the development environment
     DEBUG = True
-
     LOG_PATH = 'data/logging.json'
+    REDIS = redis.Redis(host="localhost", port=6379, decode_responses=True, encoding=u'utf-8')
 
-    REDIS_URL = 'redis://127.0.0.1:6379/'
-    REDIS = fakeredis.FakeRedis()
 
 class IntegrationTestConfiguration(BaseConfiguration):
     # Statement for enabling the development environment
     DEBUG = True
 
-    LOG_PATH='data/logging.json'
+    LOG_PATH = 'data/logging.json'
 
-    REDIS_URL='redis://127.0.0.1:6379/'
-    REDIS = redis.Redis()
+    REDIS = redis.Redis(host="localhost", port=6379, decode_responses=True, encoding=u'utf-8')
 
+
+class TestConfiguration(BaseConfiguration):
+    # Statement for enabling the development environment
+    DEBUG = True
+    LOG_PATH = 'data/logging.json'
+    REDIS = fakeredis.FakeRedis(decode_responses=True)

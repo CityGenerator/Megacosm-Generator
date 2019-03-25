@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Event
-import unittest2 as unittest
+from megacosm.generators.Event import Event
+import unittest
 import fixtures
 import fakeredis
 from config import TestConfiguration
@@ -14,7 +14,7 @@ class TestEvent(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.event.import_fixtures(self)
     def tearDown(self):
         self.redis.flushall()

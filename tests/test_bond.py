@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Bond
-import unittest2 as unittest
+from megacosm.generators.Bond import Bond
+import unittest
 import fixtures
 import fakeredis
 
@@ -13,7 +13,7 @@ class TestBond(unittest.TestCase):
     """ Test the functionality of the Bond module. """
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.bond.import_fixtures(self)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)

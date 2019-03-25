@@ -1,24 +1,31 @@
 language: python
+dist: xenial
 services:
   - "redis-server"
 python:
-  - "2.7"
-  - "pypy"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "pypy3.5"
 install:
   - pip install -r requirements.txt
 before_script:
   - cp config.py.example config.py
   - python reimport_data.py
-script: nosetests
+script:
+  - nosetests
 after_success:
-    coveralls
+  - coveralls
 notifications:
-  irc:
-    channels: "chat.freenode.net#megacosm"
-    on_success: change # default: always
-    on_failure: change # default: always
-    use_notice: false
-    skip_join: false
-    template:
-      - "%{repository} (%{commit}) : %{message} "
-      - "Build details: %{build_url}"
+  slack:
+    rooms:
+    - unrelatedinterests:MmoeZWe7r1LDNNRSZKqwd5Ov#morgajel
+#  irc:
+#    channels: "chat.freenode.net#megacosm"
+#    on_success: change # default: always
+#    on_failure: change # default: always
+#    use_notice: false
+#    skip_join: false
+#    template:
+#      - "%{repository} (%{commit}) : %{message} "
+#      - "Build details: %{build_url}"

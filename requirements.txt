@@ -5,9 +5,11 @@ fakeredis
 fixture
 flake8
 Flask
+jinja2
 Flask-Assets
 Flask-Testing
 Flask-WTF
+travislint
 gunicorn
 inflect
 jsmin
@@ -16,7 +18,5 @@ nose
 pylint
 pytest
 pytest-cov
-redis
+redis >= 3.2.1
 rednose
-twill
-unittest2

@@ -5,13 +5,13 @@
 
 def import_fixtures(self):
     """ Create simple fixture entries..."""
-    self.redis.zadd('resource_competition', '{  "name":"fierce",             "score":100      }', 100)
-    self.redis.zadd('resource_depletion', '{  "name":"bountiful",           "score":100      }', 100)
-    self.redis.zadd('resource_exportregion', '{  "name":"across the continent",           "score":100      }', 100)
-    self.redis.zadd('resource_management', '{  "name":"well",           "score":100      }', 100)
-    self.redis.zadd('resource_ubiquity', '{  "name":"not specific",       "score":100       }', 100)
-    self.redis.zadd('resource_utility', '{  "name":"useful",          "score":100      }', 100)
-    self.redis.zadd('resource_value', '{  "name":"valuable",          "score":100      }', 100)
+    self.redis.zadd('resource_competition', {'{  "name":"fierce",             "score":100      }': 100})
+    self.redis.zadd('resource_depletion', {'{  "name":"bountiful",           "score":100      }': 100})
+    self.redis.zadd('resource_exportregion', {'{  "name":"across the continent",           "score":100      }': 100})
+    self.redis.zadd('resource_management', {'{  "name":"well",           "score":100      }': 100})
+    self.redis.zadd('resource_ubiquity', {'{  "name":"not specific",       "score":100       }': 100})
+    self.redis.zadd('resource_utility', {'{  "name":"useful",          "score":100      }': 100})
+    self.redis.zadd('resource_value', {'{  "name":"valuable",          "score":100      }': 100})
     self.redis.lpush('naturalresource_crop_name', 'crop')
     self.redis.lpush('naturalresource_crop_name_type', 'wild')
     self.redis.lpush('naturalresource_crop_product', 'cocoa beans')

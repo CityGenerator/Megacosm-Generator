@@ -3,8 +3,9 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Grafitti, NPC
-import unittest2 as unittest
+from megacosm.generators.Grafitti import Grafitti
+from megacosm.generators.NPC import NPC
+import unittest
 
 import fakeredis
 import fixtures
@@ -13,7 +14,7 @@ class TestGrafitti(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)
@@ -48,7 +49,7 @@ class TestGrafitti(unittest.TestCase):
     def test_static_npcpname(self):
         """  """
         grafitti = Grafitti(self.redis, {'npcname': 'Guenter'})
-        print grafitti.text
+        print(grafitti.text)
         self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
         self.assertEqual('Guenter', grafitti.npcname)
 

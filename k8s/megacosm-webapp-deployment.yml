@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: megacosm-webapp
+spec:
+  selector:
+    matchLabels:
+      app: megacosm-webapp
+      tier: frontend
+  serviceName: "megacosm-webapp"
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: megacosm-webapp
+        tier: frontend
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: megacosm-webapp
+          image: morgajel/megacosm-webapp
+          ports:
+            - containerPort: 8000
+              name: http
+

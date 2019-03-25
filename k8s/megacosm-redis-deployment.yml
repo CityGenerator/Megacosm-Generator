@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: megacosm-redis
+spec:
+  selector:
+    matchLabels:
+      app: megacosm-redis
+      tier: backend
+  serviceName: "megacosm-redis"
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: megacosm-redis
+        tier: backend
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+        - name: megacosm-redis
+          image: morgajel/megacosm-redis
+          ports:
+            - containerPort: 6379
+              name: redis

@@ -3,8 +3,9 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Rumor, NPC
-import unittest2 as unittest
+from megacosm.generators.Rumor import Rumor
+from megacosm.generators.NPC import NPC
+import unittest
 
 import fakeredis
 from megacosm.util.Seeds import set_seed
@@ -16,7 +17,7 @@ class TestRumor(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.rumor.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)

@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Moon
-import unittest2 as unittest
+from megacosm.generators.Moon import Moon
+import unittest
 
 import fakeredis
 import fixtures
@@ -16,7 +16,7 @@ class TestMoon(unittest.TestCase):
     def setUp(self):
         """  """
 
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.moon.import_fixtures(self)
 
     def tearDown(self):

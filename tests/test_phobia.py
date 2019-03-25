@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Phobia
-import unittest2 as unittest
+from megacosm.generators.Phobia import Phobia
+import unittest
 import fakeredis
 import fixtures
 from config import TestConfiguration
@@ -14,7 +14,7 @@ class TestPhobia(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.phobia.import_fixtures(self)
 
 

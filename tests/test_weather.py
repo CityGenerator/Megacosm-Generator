@@ -3,8 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Weather
-import unittest2 as unittest
+from megacosm.generators.Weather import Weather
+import unittest
 import fakeredis
 from config import TestConfiguration
 import fixtures
@@ -13,7 +13,7 @@ class TestWeather(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.weather.import_fixtures(self)
 
     def test_random_weather(self):
