@@ -15,7 +15,7 @@ def import_fixtures(self):
                      '{{params.region.name.fullname}}. It has a {{params.flavor_strength}} flavor of '+
                      '{{params.flavor}}, and feels {{params.feel}} on the tongue.')
     self.redis.lpush('drink_type', 'broth')
-    self.redis.zadd('drink_price', '{"name":"lavishly priced",     "score":100  }', 100)
-    self.redis.zadd('drink_rarity', '{"name":"unique",      "score":100  }', 100)
-    self.redis.zadd('drink_volume', '{"name":"in excess",     "score":100    }', 100)
+    self.redis.zadd('drink_price', {'{"name":"lavishly priced",     "score":100  }': 100})
+    self.redis.zadd('drink_rarity', {'{"name":"unique",      "score":100  }': 100})
+    self.redis.zadd('drink_volume', {'{"name":"in excess",     "score":100    }': 100})
 

@@ -21,10 +21,10 @@ def import_fixtures(self):
                      'article}}, {{params.value["name"]}} coin that is common in the {{params.scope["name"]}}. '+
                      'It is {{params.size["name"]}}, {{params.shape}}, and made of {{params.material}}. The coins '+
                      'are covered with {{params.detail["name"]}} designs.')
-    self.redis.zadd('currency_amount', '{ "name":"a large pile of",    "min":100,  "max":3000, "score":100 }', 100)
-    self.redis.zadd('currency_detail', '{ "name":"unmistakable" , "score":100  }', 100)
-    self.redis.zadd('currency_scope', '{ "name":"continent",   "score":100  }', 100)
-    self.redis.zadd('currency_size', '{ "name":"giant (40mm )"    , "score":100 }', 100)
-    self.redis.zadd('currency_value', '{ "name":"priceless",         "score":100  }', 100)
-    self.redis.zadd('currency_weight', '{ "name":"hefty" , "score":100  }', 100)
+    self.redis.zadd('currency_amount', {'{ "name":"a large pile of",    "min":100,  "max":3000, "score":100 }': 100})
+    self.redis.zadd('currency_detail', {'{ "name":"unmistakable" , "score":100  }': 100})
+    self.redis.zadd('currency_scope', {'{ "name":"continent",   "score":100  }': 100})
+    self.redis.zadd('currency_size', {'{ "name":"giant (40mm )"    , "score":100 }': 100})
+    self.redis.zadd('currency_value', {'{ "name":"priceless",         "score":100  }': 100})
+    self.redis.zadd('currency_weight', {'{ "name":"hefty" , "score":100  }': 100})
 

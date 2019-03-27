@@ -5,12 +5,12 @@
 
 def import_fixtures(self):
     """ Create simple fixture entries..."""
-    self.redis.zadd('flag_border', '{ "name":"solid", "score":100  }', 100)
-    self.redis.zadd('flag_division', '{ "name":"stripes", "score":100  }', 100)
-    self.redis.zadd('flag_overlay', '{ "name":"rays", "score":100  }', 100)
-    self.redis.zadd('flag_ratio', '{ "name":"2.55", "score":100  }', 100)
-    self.redis.zadd('flag_shape', '{"name":"tongued",     "score":100   }', 100)
-    self.redis.zadd('flag_symbol', '{ "name":"letter", "score":100  }', 100)
+    self.redis.zadd('flag_border', {'{ "name":"solid", "score":100  }': 100})
+    self.redis.zadd('flag_division', {'{ "name":"stripes", "score":100  }': 100})
+    self.redis.zadd('flag_overlay', {'{ "name":"rays", "score":100  }': 100})
+    self.redis.zadd('flag_ratio', {'{ "name":"2.55", "score":100  }': 100})
+    self.redis.zadd('flag_shape', {'{"name":"tongued",     "score":100   }': 100})
+    self.redis.zadd('flag_symbol', {'{ "name":"letter", "score":100  }': 100})
 
     self.redis.lpush('flag_border_solid_size', '.01')
     self.redis.lpush('flagcolor', 'black')
