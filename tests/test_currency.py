@@ -3,7 +3,7 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Currency
+from megacosm.generators.Currency import Currency
 import unittest2 as unittest
 
 import fakeredis
@@ -15,7 +15,7 @@ class TestCurrency(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis=fakeredis.FakeRedis()
+        self.redis=fakeredis.FakeRedis(decode_responses=True)
         fixtures.currency.import_fixtures(self)
 
     def tearDown(self):

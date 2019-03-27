@@ -8,14 +8,14 @@ import fixtures
 import json
 import fakeredis
 import unittest2 as unittest
-from megacosm.generators import GeomorphDungeon
+from megacosm.generators.GeomorphDungeon import GeomorphDungeon
 
 
 class TestGeomorphDungeon(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.dungeon.import_fixtures(self)
         fixtures.geomorphdungeon.import_fixtures(self)
 

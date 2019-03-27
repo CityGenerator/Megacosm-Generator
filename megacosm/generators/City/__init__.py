@@ -7,27 +7,32 @@ import json
 import random
 import logging
 from megacosm.generators.Generator import Generator
-from megacosm.generators.Business import Business
 from megacosm.generators.Name import Name
 from megacosm.generators.NPC import NPC
 
 from megacosm.generators import Leader
 from megacosm.generators import Region
-
+from megacosm.generators import Business
+from pprint import pprint
 
 class City(Generator):
     """ Generate a full city population."""
-    def __init__(self, redis, features={}):
+    races = None
+    racequalifiers = None
+    population_estimate = None
+    population_density = None
+
+    def __init__(self, redis, features=None):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
         if not hasattr(self, 'region'):
             # print("noregion!!!")
             self.region = Region.Region(self.redis)
 
-        self.gatheringplace = Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
+        self.gatheringplace = Business.Business(self.redis, {'kind': 'bus_' + self.gatheringplace})
         if not hasattr(self, 'leader'):
-            self.leader = Leader.Leader(self.redis, {"location":self})
-            #self.leader = Leader(self.redis)
+            self.leader = Leader.Leader(self.redis, {"location": self})
+            # self.leader = Leader(self.redis)
 
         if not hasattr(self, 'name'):
             self.name = Name(self.redis, 'city')
@@ -65,7 +70,7 @@ class City(Generator):
             # Check to make sure we didn't run out of races before hitting 100
             total_without_other = total - racelist['other']
             racelist['other'] = 100 - total_without_other
-            total = 100
+            # total = 100
 
         self.races = racelist
 
@@ -77,8 +82,8 @@ class City(Generator):
         subraces = self.redis.lrange(parentrace + '_subrace', 0, -1)
         random.shuffle(subraces)
         for subrace in subraces:
-            print("for %s in %s" %(subrace, subraces))
-            print("parentpercentage: %s" % (parentpercentage))
+            print("for %s in %s" % (subrace, subraces))
+            print("parentpercentage: %s" % parentpercentage)
             subracepercentage = random.randint(1, parentpercentage)
             if total + subracepercentage < parentpercentage:
                 total += subracepercentage
@@ -89,10 +94,10 @@ class City(Generator):
                 break
         if total < parentpercentage:
             # Check to make sure we didn't run out of races before hitting parentpercentage
-            subrace = subracelist.keys()[0]
+            subrace = list(subracelist.keys())[0]
             total_without_other = total - subracelist[subrace]
             subracelist[subrace] = parentpercentage - total_without_other
-            total = parentpercentage
+            # total = parentpercentage
         return subracelist
 
     def select_subraces(self):
@@ -100,11 +105,11 @@ class City(Generator):
         final_racelist = {}
         self.racequalifiers = {'mostly': []}
         for race in sorted(self.races):
-            #print("has_subraces: %s for %s, want subraces?" %(self.has_subraces(race), race))
-            #if self.has_subraces(race):
+            # print("has_subraces: %s for %s, want subraces?" %(self.has_subraces(race), race))
+            # if self.has_subraces(race):
             #    print(self.want_subraces(race))
             if self.has_subraces(race) and self.want_subraces(race):
-                print("race: %s, races: %s" %(race, self.races[race]))
+                print("race: %s, races: %s" % (race, self.races[race]))
                 if isinstance(self.races[race], int):
                     subraces = self.calculate_which_subraces(race, self.races[race])
                 else:
@@ -121,7 +126,7 @@ class City(Generator):
     def want_subraces(self, race):
         """ Determine if we should mention subraces for a given race."""
         roll = random.randint(0, 100)
-        #print("want_race %s with %s chance and roll %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll))
+        # print("want_race %s with %s chance and roll %s" %(race, int(self.redis.get(race + '_subrace_chance')), roll))
         return bool(roll < int(self.redis.get(race + '_subrace_chance')))
 
     def get_race_breakdown(self):
@@ -145,7 +150,7 @@ class City(Generator):
         """ Return the proper scale for a city, minus unneeded values."""
         scales = []
         for scale in self.redis.zrange('city_size', 0, -1):
-            #print(scale)
+            # print(scale)
             scalejson = json.loads(scale)
             del scalejson['maxpop']
             del scalejson['minpop']
@@ -155,4 +160,4 @@ class City(Generator):
         return scales
 
     def __str__(self):
-        return '%s' % (self.name.fullname)
+        return '%s' % self.name.fullname

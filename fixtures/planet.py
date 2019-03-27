@@ -22,4 +22,4 @@ def import_fixtures(self):
     self.redis.zadd('planet_precipitation', {'{"name":"excessive", "multiplier":1.5 ,  "score":100   } ': 100})
     self.redis.zadd('planet_mooncount', {'{"name":"quadruple moon",   "count":4,  "score":100   } ': 100})
     self.redis.zadd('planet_technology',
-                    '{"name":"Contemporary Age", "description":"being similar to our own", "score":100 } ', 100)
+                    {'{"name":"Contemporary Age", "description":"being similar to our own", "score":100 } ': 100})

@@ -25,7 +25,7 @@ class StarSystem(Generator):
         self.stars = []
         positions = self.redis.lrange('starposition', 0, -1)
 
-        for starId in xrange(self.starcount['count']):
+        for starId in range(self.starcount['count']):
             random.shuffle(positions)
             self.stars.append(Star(self.redis, {'pos': json.loads(positions.pop(0))}))
 

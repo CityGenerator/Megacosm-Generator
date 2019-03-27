@@ -31,7 +31,7 @@ from megacosm.generators.Wanted import Wanted
 from megacosm.generators.Weather import Weather
 from megacosm.util.Seeds import set_seed
 from megacosm.util import Filters
-#from megacosm import oneliners
+# from megacosm import oneliners
 import datetime
 import json
 import re

@@ -3,7 +3,7 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Flag
+from megacosm.generators.Flag import Flag
 import unittest2 as unittest
 import string
 import fakeredis
@@ -14,7 +14,7 @@ class TestFlag(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.flag.import_fixtures(self)
 
     def tearDown(self):

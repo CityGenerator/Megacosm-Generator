@@ -121,13 +121,11 @@ class Generator(object):
                 setattr(self, featurename, featurevalue)
 
             # if the description hasn't been set and exists in redis.
-            print("Got to here for %s!" % key)
             if not hasattr(self, featurename + '_description'):
                 desc_text = ""
                 try:
                     desc_text = self.redis.hmget("%s_description" % key, getattr(self, featurename))[0]
                     if desc_text is not None:
-                        print("Got to here for %s!" % desc_text)
                         featurevalue = json.loads(desc_text)
                         setattr(self, featurename + '_description', featurevalue)
                 except ValueError:

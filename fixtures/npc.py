@@ -5,8 +5,8 @@
 
 def import_fixtures(self):
     """ Create simple fixture entries..."""
-    self.redis.zadd('npc_sex', '{"name":"female",     "pronoun":"she", "possessive":"her", '+
-                    '"third-person":"her", "spouse":"husband", "score":51   }', 100)
+    self.redis.zadd('npc_sex', {'{"name":"female",     "pronoun":"she", "possessive":"her", '+
+                    '"third-person":"her", "spouse":"husband", "score":51   }': 100})
     self.redis.zadd('npc_piety', {'{"name":"overzealous",   "score":100   }': 100})
     self.redis.zadd('npc_age', {'{"name":"ancient",        "score":100 }': 100})
     self.redis.zadd('npc_honor', {'{"name":"honorable",     "score":100 }': 100})

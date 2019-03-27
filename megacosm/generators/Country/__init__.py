@@ -32,7 +32,7 @@ class Country(Generator):
 
         if not hasattr(self, 'regions'):
             self.regions = []
-            for regionid in xrange(self.regioncount):
+            for regionid in range(self.regioncount):
                 self.regions.append(Region(self.redis, {'country': self}))
 
     def __str__(self):

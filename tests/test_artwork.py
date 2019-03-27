@@ -3,7 +3,9 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Artwork, Gem, Deity
+from megacosm.generators.Artwork import Artwork
+from megacosm.generators.Gem import Gem
+from megacosm.generators.Deity import Deity
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -13,7 +15,7 @@ class TestArtwork(unittest.TestCase):
     """ Test the Artwork Class"""
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.artwork.import_fixtures(self)
         fixtures.gem.import_fixtures(self)
         fixtures.npc.import_fixtures(self)

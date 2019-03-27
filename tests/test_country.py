@@ -3,7 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Country, Region
+from megacosm.generators.Country import Country
+from megacosm.generators.Region import Region
 import unittest2 as unittest
 import fakeredis
 from config import TestConfiguration
@@ -13,7 +14,7 @@ class TestCountry(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.country.import_fixtures(self)
         fixtures.leader.import_fixtures(self)
         fixtures.continent.import_fixtures(self)

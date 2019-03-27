@@ -1,19 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
-from megacosm.generators import Business, NPC
-#from pprint import pprint
+from megacosm.generators.Business import Business
+from megacosm.generators.NPC import NPC
 import unittest2 as unittest
 import fakeredis
 import fixtures
+
 
 class TestBusiness(unittest.TestCase):
     """ Test various features of the Business class """
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.business.import_fixtures(self)
         fixtures.npc.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)
@@ -39,7 +40,7 @@ class TestBusiness(unittest.TestCase):
         """ Verify that all three senses exist. """
         senses = {'smell': 'stank', 'sight': 'ugly blinds', 'sound': 'cries for help'}
         business = Business(self.redis, senses)
-        #pprint(vars(business.name))
+        # pprint(vars(business.name))
         self.assertEqual("Angry Axe Hall", str(business))
         self.assertEqual('you smell stank', business.smell)
         self.assertEqual('you see ugly blinds', business.sight)
@@ -47,7 +48,7 @@ class TestBusiness(unittest.TestCase):
 
     def test_no_maxfloors(self):
         """  Ensure the number of floors if there's no max"""
-        self.redis.set('bus_adventurersguild_maxfloors', None)
+        self.redis.delete('bus_adventurersguild_maxfloors')
         business = Business(self.redis)
         self.assertEqual("Angry Axe Hall", str(business))
         self.assertEqual(1, business.maxfloors)
@@ -59,12 +60,9 @@ class TestBusiness(unittest.TestCase):
         business = Business(self.redis, features)
         self.assertEqual(100, business.maxfloors)
 
-
-
         for feature in features.keys():
             self.assertEqual(features[feature], getattr(business, feature))
 
         self.assertEqual("Angry Axe A Place", str(business))
         self.assertGreaterEqual(100, business.floor)
         self.assertLessEqual(1, business.floor)
-

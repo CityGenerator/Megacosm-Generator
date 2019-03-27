@@ -22,5 +22,5 @@ class Region(Generator):
 #        """ add cities to the region"""
 #        if not hasattr(self, 'cities'):
 #            self.cities=[]
-#        for cityid in xrange(self.citycount):
+#        for cityid in range(self.citycount):
 #            self.city.append( City(self.redis,{'region':self} ) )

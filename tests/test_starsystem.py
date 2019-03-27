@@ -3,19 +3,16 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import StarSystem,Planet, Star
+from megacosm.generators.StarSystem import StarSystem
 import unittest2 as unittest
 import fixtures
 import fakeredis
-from mock import Mock, patch, MagicMock
-
-from config import TestConfiguration
 
 
 class TestStarSystem(unittest.TestCase):
 
     def setUp(self):
-    	self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.starsystem.import_fixtures(self)
         fixtures.star.import_fixtures(self)
         fixtures.planet.import_fixtures(self)

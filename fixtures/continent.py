@@ -13,9 +13,9 @@ def import_fixtures(self):
                      '{{params.title}} {{params.pre}}{{params.root}}{{params.post}}')
     self.redis.zadd('continent_civilization', {'{"name":"thriving"    ,  "score":100   }': 100})
     self.redis.zadd('continent_countrydetails',
-                    '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }', 100)
+                    {'{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }': 100})
     self.redis.zadd('continent_countrydetails',
-                    '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }', 100)
+                    {'{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }': 100})
     self.redis.zadd('continent_size', {'{"name":"massive",  "multiplier":2.0,  "score":100   }': 100})
     self.redis.zadd('continent_technology', {' {"name":"Contemporary Age", "score":100   }': 100})
 

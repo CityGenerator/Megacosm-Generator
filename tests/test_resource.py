@@ -3,7 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Resource, Region
+from megacosm.generators.Resource import Resource
+from megacosm.generators.Region import Region
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -14,7 +15,7 @@ class TestResource(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.resource.import_fixtures(self)
         fixtures.region.import_fixtures(self)
     def tearDown(self):

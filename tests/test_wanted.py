@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
-from megacosm.generators import Wanted, NPC
+from megacosm.generators.Wanted import Wanted
+from megacosm.generators.NPC import NPC
 import unittest2 as unittest
 import fixtures
 import fakeredis
-from config import TestConfiguration
 
 
 class TestWanted(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.wanted.import_fixtures(self)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)

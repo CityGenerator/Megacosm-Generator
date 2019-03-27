@@ -5,10 +5,9 @@
 #
 
 import megacosm
-from flask.ext.testing import TestCase
+from flask_testing import TestCase
 import fakeredis
 import fixtures
-from flask import Flask
 
 
 class MegacosmFlaskTestCast(TestCase):
@@ -16,13 +15,17 @@ class MegacosmFlaskTestCast(TestCase):
     def create_app(self):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
-        megacosm.app.debug = False
-        megacosm.app.server=fakeredis.FakeRedis()
+        app.debug = True
+        app.config['TESTING'] = True
+        app.config['REDIS'] = fakeredis.FakeRedis(decode_responses=True)
         return app
 
+
     def setUp(self):
+        megacosm.app.config['REDIS'] = fakeredis.FakeRedis(decode_responses=True)
         self.app = megacosm.app.test_client()
-        self.redis=megacosm.app.server
+        self.redis = megacosm.app.config['REDIS']
+
         fixtures.bond.import_fixtures(self)
         fixtures.business.import_fixtures(self)
         fixtures.city.import_fixtures(self)
@@ -63,22 +66,22 @@ class MegacosmFlaskTestCast(TestCase):
         self.redis.lpush('npc_race','kobold')
 
     def tearDown(self):
-        megacosm.app.server.flushall()
+        self.redis.flushall()
         self.app = None
 
 ################################################################
 
     def test_builder_form_data(self):
-        megacosm.app.server.lpush('unittestgenerator_list', 'a', 'b', 'c')
-        megacosm.app.server.set('unittestgenerator_list_chance', 30)
-        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test1"}', 50)
-        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test2"}', 100)
-        megacosm.app.server.hset('unittestgenerator_list_description', 'foo', '{"name":"test1"}')
-        megacosm.app.server.hset('unittestgenerator_list-description', 'bar', '{"name":"test2"}')
+        self.redis.lpush('unittestgenerator_list', 'a', 'b', 'c')
+        self.redis.set('unittestgenerator_list_chance', 30)
+        self.redis.zadd('unittestgenerator_range', {'{"name":"test1"}': 50})
+        self.redis.zadd('unittestgenerator_range', {'{"name":"test2"}': 100})
+        self.redis.hset('unittestgenerator_list_description', 'foo', '{"name":"test1"}')
+        self.redis.hset('unittestgenerator_list-description', 'bar', '{"name":"test2"}')
         self.assertEquals(megacosm.builder_form_data('unittestgenerator'), ({'list': ['c', 'b', 'a']},
                           {'list_chance': '30'}, {'range': [{u'name': u'test1'}, {u'name': u'test2'}]}))
 
-        megacosm.app.server.zadd('unittestgenerator_range', '{"name":"test2"', 100)
+        self.redis.zadd('unittestgenerator_range', {'{"name":"test2"': 100})
 
         with self.assertRaisesRegexp(ValueError, 'failed to parse unittestgenerator_range field {"name":"test2"'):
             megacosm.builder_form_data('unittestgenerator')

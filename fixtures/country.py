@@ -15,7 +15,7 @@ def import_fixtures(self):
     self.redis.zadd('country_influence', {'{ "name":"thriving",              "score":100    }': 100})
     self.redis.zadd('country_military', {'{"name":"bloodthirsty",         "score":100    }': 100})
     self.redis.zadd('country_regiondetails',
-                    '{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }', 100)
+                    {'{"name":"over a dozen",       "score":100, "mincount":12,  "maxcount":36  }': 100})
     self.redis.zadd('country_reputation', {'{"name":"revered",     "score":100    }': 100})
     self.redis.zadd('country_size', {'{"name":"micro",    "mincities":1,   "maxcities":2,    "score":100    }': 100})
     self.redis.zadd('country_social', {'{"name":"authoritarian",       "score":100   }': 100})

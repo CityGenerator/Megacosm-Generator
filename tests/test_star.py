@@ -3,7 +3,7 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Star
+from megacosm.generators.Star import Star
 import unittest2 as unittest
 
 import fakeredis
@@ -13,7 +13,7 @@ from config import TestConfiguration
 class TestStar(unittest.TestCase):
 
     def setUp(self):
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.star.import_fixtures(self)
 
     def tearDown(self):

@@ -3,9 +3,9 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import MagicItem
-from megacosm.generators import NPC
-from megacosm.generators import Curse
+from megacosm.generators.MagicItem import MagicItem
+from megacosm.generators.NPC import NPC
+from megacosm.generators.Curse import Curse
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -16,7 +16,7 @@ class TestMagicItem(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.magicitem.import_fixtures(self)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)

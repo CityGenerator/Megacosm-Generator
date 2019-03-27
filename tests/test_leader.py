@@ -3,11 +3,11 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Leader
+from megacosm.generators.Leader import Leader
 import unittest2 as unittest
-from megacosm.generators import City
-from megacosm.generators import Organization
-from megacosm.generators import Country
+from megacosm.generators.City import City
+from megacosm.generators.Organization import Organization
+from megacosm.generators.Country import Country
 import fakeredis
 from config import TestConfiguration
 import fixtures
@@ -16,7 +16,7 @@ class TestLeader(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.leader.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)

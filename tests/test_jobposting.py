@@ -3,7 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import JobPosting, NPC
+from megacosm.generators.JobPosting import JobPosting
+from megacosm.generators.NPC import NPC
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -14,7 +15,7 @@ class TestJobPosting(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.jobposting.import_fixtures(self)
         fixtures.business.import_fixtures(self)
         fixtures.npc.import_fixtures(self)

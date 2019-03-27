@@ -13,7 +13,7 @@ from megacosm.generators.Name import Name
 class Business(Generator):
     """ Create a business."""
 
-    def __init__(self, rdis, features=None):
+    def __init__(self, redis, features=None):
         super().__init__(redis, features)
         self.logger = logging.getLogger(__name__)
         self.generate_features(self.kind)

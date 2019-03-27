@@ -3,7 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Grafitti, NPC
+from megacosm.generators.Grafitti import Grafitti
+from megacosm.generators.NPC import NPC
 import unittest2 as unittest
 
 import fakeredis
@@ -13,7 +14,7 @@ class TestGrafitti(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)

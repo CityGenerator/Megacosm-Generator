@@ -3,7 +3,7 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Drink
+from megacosm.generators.Drink import Drink
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -13,7 +13,7 @@ class TestDrink(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.drink.import_fixtures(self)
         fixtures.npc.import_fixtures(self)
         fixtures.region.import_fixtures(self)

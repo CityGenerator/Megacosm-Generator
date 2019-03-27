@@ -3,7 +3,8 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Sect, Deity
+from megacosm.generators.Deity import Deity
+from megacosm.generators.Sect import Sect
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -16,7 +17,7 @@ class TestSect(unittest.TestCase):
 
     def setUp(self):
         """  """
-        self.redis=fakeredis.FakeRedis()
+        self.redis=fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.deity.import_fixtures(self)
@@ -35,7 +36,7 @@ class TestSect(unittest.TestCase):
 
     def test_static_sect(self):
         """  """
-	deity=Deity(self.redis)
+        deity=Deity(self.redis)
         sect = Sect(self.redis, {'deity':deity})
         self.assertIn('name',sect.domain)
         self.assertIn(sect.domain, deity.portfolios)

@@ -3,7 +3,7 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Street
+from megacosm.generators.Street import Street
 import unittest2 as unittest
 import fixtures
 import fakeredis
@@ -13,7 +13,7 @@ from config import TestConfiguration
 class TestStreet(unittest.TestCase):
 
     def setUp(self):
-        self.redis = fakeredis.FakeRedis()
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
         fixtures.street.import_fixtures(self)
 
     def tearDown(self):

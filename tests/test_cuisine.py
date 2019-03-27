@@ -3,9 +3,9 @@
 
 "Fully test this module's functionality through the use of fixtures."
 
-from megacosm.generators import Cuisine
-from megacosm.generators import Region
-from megacosm.generators import NPC
+from megacosm.generators.Cuisine import Cuisine
+from megacosm.generators.Region import Region
+from megacosm.generators.NPC import NPC
 import unittest2 as unittest
 
 import fakeredis
@@ -16,7 +16,7 @@ class TestCuisine(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis=fakeredis.FakeRedis()
+        self.redis=fakeredis.FakeRedis(decode_responses=True)
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
         fixtures.motivation.import_fixtures(self)
