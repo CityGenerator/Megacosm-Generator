@@ -3,13 +3,14 @@
 
 """ Include this to load these fixtures. """
 
+
 def import_fixtures(self):
     """ Create simple fixture entries..."""
     self.redis.lpush('magicitem_creator_template', '{{params.npc.race | article}} named {{params.npc.name.fullname}}')
     self.redis.lpush('magicitem_location', 'buried in a nest')
     self.redis.lpush('magicitem_vibe', 'gives you feelings of power')
     self.redis.lpush('magicitem_vibe_when', 'looking at')
-    self.redis.set('magicitem_curse_chance', '40')
+    self.redis.set('magicitem_curse_chance', 40)
 
     self.redis.zadd('magicitem_age', {'{"name":"over a century ago",    "score":100 }': 100})
     self.redis.zadd('magicitem_quality', {'{"name":"excellent", "score":100 }': 100})
@@ -22,6 +23,7 @@ def import_fixtures(self):
     import_potion_fixtures(self)
     import_scroll_fixtures(self)
 
+
 def import_armor_fixtures(self):
     """ Armor Fixtures"""
     self.redis.hset('armor_ability_description',
@@ -31,7 +33,7 @@ def import_armor_fixtures(self):
     self.redis.hset('armor_decoration_description',
                     'flames', '{"name":"flames", "description":"streaks of red and yellow which glisten like flames"}')
     self.redis.hset('armor_effect_description',
-                    'muffled', '{"name":"muffled", '+
+                    'muffled', '{"name":"muffled", ' +
                     '"description":"allows the wearer to move more quietly than otherwise possible" }')
     self.redis.hset('armor_flaw_description',
                     'dent', '{"name":"dent", "description":"" }')
@@ -49,7 +51,7 @@ def import_armor_fixtures(self):
     self.redis.lpush('armor_flaw', 'dent')
     self.redis.lpush('armor_material', 'coldiron')
     self.redis.lpush('armor_template',
-                     '{{ params.effect_description["name"] }} {{ params.category_description["name"]}}'+
+                     '{{ params.effect_description["name"] }} {{ params.category_description["name"]}}' +
                      '{%if params.ability_description%} of {{params.ability_description["name"]}}{%endif%}')
     self.redis.lpush('armor_visualcause', 'orc')
     self.redis.lpush('armor_visualeffect', 'sparkles')
@@ -77,6 +79,7 @@ def import_potion_fixtures(self):
     self.redis.lpush('potion_container_label', 'illegible')
     self.redis.lpush('potion_container_shape', 'ampoule')
 
+
 def import_scroll_fixtures(self):
     """ Scroll Fixtures"""
     self.redis.lpush('scroll_template', '{{ params.strength["name"] }} {{ params.effect_description["name"] }} scroll')
@@ -90,6 +93,7 @@ def import_scroll_fixtures(self):
     self.redis.lpush('scroll_writingform', 'symbols')
     self.redis.lpush('scroll_container_label', 'illegible')
     self.redis.lpush('scroll_container_type', 'scroll case')
+
 
 def import_weapon_fixtures(self):
     """ Weapon Fixtures"""
@@ -114,5 +118,5 @@ def import_weapon_fixtures(self):
     self.redis.hset('weapon_decoration_description', 'flames',
                     '{"name":"flames", "description":"streaks of red and yellow which glisten like flames"  }')
     self.redis.lpush('weapon_template',
-                     '{{ params.effect_description["name"] }} {{ params.category_description["name"]}}'+
+                     '{{ params.effect_description["name"] }} {{ params.category_description["name"]}}' +
                      '{%if params.ability_description%} of {{params.ability_description["name"]}}{%endif%}')

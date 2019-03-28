@@ -32,7 +32,7 @@ class TestCuisine(unittest.TestCase):
     def test_random_cuisine(self):
         """  """
         cuisine = Cuisine(self.redis)
-        print cuisine.text
+        print(cuisine.text)
         self.assertEqual('Scalded orange dog salad in chile gravy, served luke warm This dish is unique to the . Travelers consider the dish spicy and beautiful to the eye. Portions are usually large.', cuisine.text)
 
     def test_static_cuisine(self):

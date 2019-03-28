@@ -23,7 +23,7 @@ def parse_file(pipe, filename):
         line = line.rstrip()
         if line:
 
-            # print line
+            # print(line)
 
             if line.startswith('#'):
                 continue
@@ -39,7 +39,7 @@ def parse_file(pipe, filename):
                         pipe.set(key, value)
                     elif command == 'LPUSH':
 
-                        # print "setting", key, "to", value
+                        # print("setting", key, "to", value)
 
                         (key, value) = args.split(' ', 1)
                         pipe.lpush(key, value)
@@ -47,11 +47,11 @@ def parse_file(pipe, filename):
                         (key, score, value) = args.split(None, 2)
                         jsontxt=validate_json(value, filename, linenumber)
                         if not jsontxt.has_key('score'):
-                            print "Warning: Score isn't a parameter of jsontxt: %s: %s %s" % (key, score, value)
+                            print("Warning: Score isn't a parameter of jsontxt: %s: %s %s" % (key, score, value))
                         elif int(score) != int(jsontxt['score']):
-                            print "Warning: Score is invalid for %s: %s == %s" % (key, score, jsontxt['score'])
+                            print("Warning: Score is invalid for %s: %s == %s" % (key, score, jsontxt['score']))
                         if not jsontxt.has_key('name'):
-                            print "Warning: Name is missing from %s: %s %s" % (key, score, value)
+                            print("Warning: Name is missing from %s: %s %s" % (key, score, value))
                         pipe.zadd(key, value, score)
                     elif command == 'HSET':
                         (name, key, value) = args.split(None, 2)
@@ -61,12 +61,12 @@ def parse_file(pipe, filename):
                         pipe.delete(args)
                     else:
 
-                        # print "I have no idea what ", line, "is."
+                        # print("I have no idea what ", line, "is.")
 
                         raise Exception('line #%s in %s: %s is an unsupported command.' % (linenumber, filename,
                                         command))
                 except ValueError:
-                    print 'There was a problem reading', filename, 'near line', linenumber, ''
+                    print('There was a problem reading', filename, 'near line', linenumber, '')
     raw_data.close()
 
 
@@ -80,9 +80,9 @@ def validate_json(value, filename, linenumber):
         JSONVALIDATE += 1
         return jsontxt
     except Exception:
-        print 'ERROR: The following value is not proper JSON:'
-        print filename, 'near line', linenumber, ':'
-        print value
+        print('ERROR: The following value is not proper JSON:')
+        print(filename, 'near line', linenumber, ':')
+        print(value)
         sys.exit(1)
 
 server = redis.from_url(BaseConfiguration.REDIS_URL)
@@ -110,7 +110,7 @@ def create_geomorphimage_record(pipe, image):
                    tileset))
         IMAGECOUNT += 1
     else:
-        print 'WARNING, ', image, 'is not in the right format.'
+        print('WARNING, ', image, 'is not in the right format.')
 
 
 # static/images/geomorphs/1/basic2.png
@@ -128,7 +128,7 @@ def create_dungeonbackground_record(pipe, image):
         pipe.lpush('geomorphdungeon_background', tilename)
         IMAGECOUNT += 1
     else:
-        print 'WARNING, ', image, 'is not in the right format.'
+        print('WARNING, ', image, 'is not in the right format.')
 
 
 for image in sorted(glob.glob('megacosm/static/images/backgrounds/*.png')):
@@ -147,7 +147,7 @@ def create_dungeondecoration_record(pipe, image):
         pipe.lpush('geomorphdungeon_decoration', tilename)
         IMAGECOUNT += 1
     else:
-        print 'WARNING, ', image, 'is not in the right format.'
+        print('WARNING, ', image, 'is not in the right format.')
 
 
 for image in sorted(glob.glob('megacosm/static/images/decorations/*.png')):
@@ -156,6 +156,6 @@ for image in sorted(glob.glob('megacosm/static/images/decorations/*.png')):
 
 pipe.execute()
 
-print COMMANDCOUNT, 'Commands were run.'
-print IMAGECOUNT, 'geomorphs documented.'
-print JSONVALIDATE, 'JSON strings validated.'
+print(COMMANDCOUNT, 'Commands were run.')
+print(IMAGECOUNT, 'geomorphs documented.')
+print(JSONVALIDATE, 'JSON strings validated.')

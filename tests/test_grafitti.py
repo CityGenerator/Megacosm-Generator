@@ -49,7 +49,7 @@ class TestGrafitti(unittest.TestCase):
     def test_static_npcpname(self):
         """  """
         grafitti = Grafitti(self.redis, {'npcname': 'Guenter'})
-        print grafitti.text
+        print(grafitti.text)
         self.assertEqual('The following message is written in Gnomish with slime: "The warrior tried to protect us, but was too late..." The message is signed with a hand print. You\'d guess the message is less than a day old.', grafitti.text)
         self.assertEqual('Guenter', grafitti.npcname)
 

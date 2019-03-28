@@ -5,6 +5,7 @@ fakeredis
 fixture
 flake8
 Flask
+jinja2
 Flask-Assets
 Flask-Testing
 Flask-WTF
@@ -18,5 +19,4 @@ pytest
 pytest-cov
 redis
 rednose
-twill
 unittest2

@@ -76,7 +76,6 @@ class Generator(object):
 
     def generate_feature(self, namekey, key):
         if self.redis.exists("%s_chance" % key):
-
             # make sure the value is not already set, then grab it.
 
             if not hasattr(self, "%s_chance" % key):

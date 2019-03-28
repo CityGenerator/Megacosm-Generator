@@ -10,7 +10,7 @@ import string
 
 class Flag(Generator):
 
-    def __init__(self, redis, features={}):
+    def __init__(self, redis, features=None):
 
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
@@ -50,7 +50,7 @@ class Flag(Generator):
             cls=None,
             indent=4,
             separators=(', ', ': '),
-            encoding='utf-8',
+            # encoding='utf-8', python 3.4 may not need this
             default=None,
             sort_keys=False,
             )
