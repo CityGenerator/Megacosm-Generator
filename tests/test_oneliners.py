@@ -11,7 +11,7 @@ from megacosm import oneliner
 import re
 
 
-class MegacosmFlaskTestCast(TestCase):
+class OnelinerFlaskTestCast(TestCase):
 
     def create_app(self):
         """ """

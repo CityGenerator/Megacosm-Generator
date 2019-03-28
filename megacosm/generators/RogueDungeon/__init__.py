@@ -213,8 +213,8 @@ class RogueDungeon(Generator):
             self.y1 = y
             self.x2 = x + w
             self.y2 = y + h
-            center_x = (self.x1 + self.x2) / 2
-            center_y = (self.y1 + self.y2) / 2
+            center_x = int((self.x1 + self.x2) / 2)
+            center_y = int((self.y1 + self.y2) / 2)
             self.center = {'x': center_x, 'y': center_y}
 
         def intersect(self, other):

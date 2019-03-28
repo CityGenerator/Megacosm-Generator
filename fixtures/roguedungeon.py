@@ -3,6 +3,7 @@
 
 """ Include this to load these fixtures. """
 
+
 def import_fixtures(self):
     """ Create simple fixture entries..."""
     self.redis.hset('roguedungeonroom_kind_description', 'audiencechamber',

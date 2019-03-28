@@ -10,13 +10,15 @@ import re
 
 COMMANDCOUNT = 0
 
+
 def is_ascii(s):
     return all(ord(c) < 128 for c in s)
 
-def parse_file(pipe, filename):
+
+def parse_file(parse_pipe, file_to_parse):
     linenumber = 0
     global COMMANDCOUNT
-    raw_data = open(filename)
+    raw_data = open(file_to_parse)
     for line in raw_data:
         
         linenumber += 1
@@ -28,62 +30,64 @@ def parse_file(pipe, filename):
             if line.startswith('#'):
                 continue
             else:
-                if not is_ascii( line):
-                    raise Exception('line #%s in %s contains invalid unicode characters.' % (linenumber, filename))
+                if not is_ascii(line):
+                    raise Exception('line #%s in %s contains invalid unicode characters.' % (linenumber, file_to_parse))
                 COMMANDCOUNT += 1
                 (command, args) = line.split(' ', 1)
                 command = command.upper()
                 try:
                     if command == 'SET':
                         (key, value) = args.split(None, 1)
-                        pipe.set(key, value)
+                        parse_pipe.set(key, value)
                     elif command == 'LPUSH':
 
                         # print("setting", key, "to", value)
 
                         (key, value) = args.split(' ', 1)
-                        pipe.lpush(key, value)
+                        parse_pipe.lpush(key, value)
                     elif command == 'ZADD':
                         (key, score, value) = args.split(None, 2)
-                        jsontxt=validate_json(value, filename, linenumber)
-                        if not jsontxt.has_key('score'):
+                        jsontxt = validate_json(value, file_to_parse, linenumber)
+                        if 'score' not in jsontxt:
                             print("Warning: Score isn't a parameter of jsontxt: %s: %s %s" % (key, score, value))
                         elif int(score) != int(jsontxt['score']):
                             print("Warning: Score is invalid for %s: %s == %s" % (key, score, jsontxt['score']))
-                        if not jsontxt.has_key('name'):
+                        if 'name' not in jsontxt:
                             print("Warning: Name is missing from %s: %s %s" % (key, score, value))
-                        pipe.zadd(key, value, score)
+                        from pprint import pprint
+                        parse_pipe.zadd(key, {value: score})
                     elif command == 'HSET':
                         (name, key, value) = args.split(None, 2)
-                        validate_json(value, filename, linenumber)
-                        pipe.hset(name, key, value)
+                        validate_json(value, file_to_parse, linenumber)
+                        parse_pipe.hset(name, key, value)
                     elif command == 'DEL':
-                        pipe.delete(args)
+                        parse_pipe.delete(args)
                     else:
 
                         # print("I have no idea what ", line, "is.")
 
-                        raise Exception('line #%s in %s: %s is an unsupported command.' % (linenumber, filename,
-                                        command))
+                        raise Exception('line #%s in %s: %s is an unsupported command.' % (linenumber, file_to_parse,
+                                                                                           command))
                 except ValueError:
-                    print('There was a problem reading', filename, 'near line', linenumber, '')
+                    print('There was a problem reading', file_to_parse, 'near line', linenumber, '')
     raw_data.close()
 
 
 JSONVALIDATE = 0
 
 
-def validate_json(value, filename, linenumber):
+def validate_json(value, json_file, linenumber):
     global JSONVALIDATE
     try:
-        jsontxt=json.loads(value)
+        jsontxt = json.loads(value)
         JSONVALIDATE += 1
         return jsontxt
-    except Exception:
+    except json.JSONDecodeError:
         print('ERROR: The following value is not proper JSON:')
-        print(filename, 'near line', linenumber, ':')
+        print(json_file, 'near line', linenumber, ':')
         print(value)
         sys.exit(1)
+
 
 server = redis.from_url(BaseConfiguration.REDIS_URL)
 pipe = server.pipeline()
@@ -99,18 +103,18 @@ for filename in sorted(glob.glob('data/*/*.data')):
 IMAGECOUNT = 0
 
 
-def create_geomorphimage_record(pipe, image):
-    m = re.search('geomorphs/(.*)/(.*)/([0-5])/.*\.png', image)
+def create_geomorphimage_record(gpipe, gimage):
+    m = re.search('geomorphs/(.*)/(.*)/([0-5])/.*\\.png', gimage)
     global IMAGECOUNT
     if m:
         author = m.group(1)
         tileset = m.group(2)
         imagetype = m.group(3)
-        pipe.lpush('geomorph_type_' + imagetype, ' { "path":"/%s", "author":"%s", "tileset":"%s"   }' % (image, author,
-                   tileset))
+        gpipe.lpush('geomorph_type_' + imagetype,
+                    ' { "path":"/%s", "author":"%s", "tileset":"%s"   }' % (gimage, author, tileset))
         IMAGECOUNT += 1
     else:
-        print('WARNING, ', image, 'is not in the right format.')
+        print('WARNING, ', gimage, 'is not in the right format.')
 
 
 # static/images/geomorphs/1/basic2.png
@@ -120,15 +124,15 @@ for image in glob.glob('megacosm/static/images/geomorphs/*/*/*/*.png'):
     create_geomorphimage_record(pipe, image)
 
 
-def create_dungeonbackground_record(pipe, image):
-    m = re.search('backgrounds/(.*)\.png', image)
+def create_dungeonbackground_record(dbg_pipe, dbg_image):
+    m = re.search('backgrounds/(.*)\\.png', dbg_image)
     global IMAGECOUNT
     if m:
         tilename = m.group(1)
-        pipe.lpush('geomorphdungeon_background', tilename)
+        dbg_pipe.lpush('geomorphdungeon_background', tilename)
         IMAGECOUNT += 1
     else:
-        print('WARNING, ', image, 'is not in the right format.')
+        print('WARNING, ', dbg_image, 'is not in the right format.')
 
 
 for image in sorted(glob.glob('megacosm/static/images/backgrounds/*.png')):
@@ -138,16 +142,16 @@ for image in sorted(glob.glob('megacosm/static/images/backgrounds/*.png')):
 pipe.set('geomorphdungeon_decoration_chance', 30)
 
 
-def create_dungeondecoration_record(pipe, image):
-    image = image[9:]
-    m = re.search('decorations/(.*)\.png', image)
+def create_dungeondecoration_record(dd_pipe, dd_image):
+    dd_image = dd_image[9:]
+    m = re.search('decorations/(.*)\\.png', dd_image)
     global IMAGECOUNT
     if m:
         tilename = m.group(1)
-        pipe.lpush('geomorphdungeon_decoration', tilename)
+        dd_pipe.lpush('geomorphdungeon_decoration', tilename)
         IMAGECOUNT += 1
     else:
-        print('WARNING, ', image, 'is not in the right format.')
+        print('WARNING, ', dd_image, 'is not in the right format.')
 
 
 for image in sorted(glob.glob('megacosm/static/images/decorations/*.png')):
