@@ -8,18 +8,16 @@ import logging
 import random
 from megacosm.generators.NPC import NPC
 from megacosm.generators.Sect import Sect
-
+from pprint import pprint
 
 class Deity(NPC):
 
     """ Generate a god for your world"""
 
-    def __init__(self, redis, features={}):
-        NPC.__init__(self, redis, features, 'npc')
+    def __init__(self, redis, features=None):
+        super().__init__(redis, features, 'npc')
         self.logger = logging.getLogger(__name__)
-
         self.generate_features('deity')
-
         self.select_portfolio()
 
     def add_sects(self):  # TODO make this more like countries for continents

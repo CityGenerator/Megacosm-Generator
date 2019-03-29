@@ -14,7 +14,7 @@
 #
 #    def setUp(self):
 #        """  """
-#        self.redis = redis.from_url(TestConfiguration.REDIS_URL)
+#        self.redis = TestConfiguration.REDIS
 #
 #    def test_random_elixir(self):
 #        """ """

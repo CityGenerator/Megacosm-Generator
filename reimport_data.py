@@ -89,7 +89,7 @@ def validate_json(value, json_file, linenumber):
         sys.exit(1)
 
 
-server = redis.from_url(BaseConfiguration.REDIS_URL)
+server = BaseConfiguration.REDIS
 pipe = server.pipeline()
 
 pipe.flushall()

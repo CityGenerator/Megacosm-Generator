@@ -13,7 +13,7 @@ from config import IntegrationTestConfiguration
 class TestNameIntegration(unittest.TestCase):
 
     def setUp(self):
-        self.redis = redis.from_url(IntegrationTestConfiguration.REDIS_URL)
+        self.redis = IntegrationTestConfiguration.REDIS
 
     def tearDown(self):
         """Tear stuff Down."""

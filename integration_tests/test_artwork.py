@@ -2,20 +2,16 @@
 # -*- coding: utf-8 -*-
 """ Test the Artwork against live data in redis to ensure the Artwork data is valid/behaves."""
 
-
+import unittest
 from megacosm.generators.Artwork import Artwork
-
-import unittest2 as unittest
-
-import redis
 from config import IntegrationTestConfiguration
 
 
 class TestArtworkIntegration(unittest.TestCase):
     """ Test Artwork Integration """
     def setUp(self):
-        "Create Redis Connection"
-        self.redis = redis.from_url(IntegrationTestConfiguration.REDIS_URL)
+        """Create Redis Connection"""
+        self.redis = IntegrationTestConfiguration.REDIS
 
     def tearDown(self):
         """Tear stuff Down."""

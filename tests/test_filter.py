@@ -4,9 +4,9 @@
 "Fully test this module's functionality through the use of fixtures."
 #
 
-import unittest2 as unittest
-from megacosm import select_article, select_pluralize, select_conjunction, select_uppercase
-from megacosm import select_plural_verb, select_plural_adj
+import unittest
+from megacosm.template_filters import select_article, select_pluralize, select_conjunction, select_uppercase
+from megacosm.template_filters import select_plural_verb, select_plural_adj
 
 
 class TestFilter(unittest.TestCase):

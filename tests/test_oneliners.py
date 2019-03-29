@@ -7,7 +7,6 @@ import megacosm
 from flask_testing import TestCase
 import fakeredis
 import fixtures
-from megacosm import oneliner
 import re
 
 
@@ -16,9 +15,6 @@ class OnelinerFlaskTestCast(TestCase):
     def create_app(self):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
-        app.debug = True
-        app.config['TESTING'] = True
-        app.config['REDIS'] = fakeredis.FakeRedis(decode_responses=True)
         return app
 
     def setUp(self):

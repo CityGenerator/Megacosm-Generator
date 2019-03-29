@@ -16,8 +16,6 @@ class MegacosmFlaskTestCast(TestCase):
         """ """
         app = megacosm.create_app('config.TestConfiguration')
         app.debug = True
-        app.config['TESTING'] = True
-        app.config['REDIS'] = fakeredis.FakeRedis(decode_responses=True)
         return app
 
     def setUp(self):
@@ -92,64 +90,6 @@ class MegacosmFlaskTestCast(TestCase):
         self.assertFalse(megacosm.isvalidscore('-10'))
         self.assertFalse(megacosm.isvalidscore('1010'))
         self.assertFalse(megacosm.isvalidscore('Fred'))
-################################################################
-
-    def test_select_uppercase(self):
-        self.assertEquals('DOG', megacosm.select_uppercase('dog'))
-        self.assertEquals('APPLE?', megacosm.select_uppercase('Apple?'))
-        self.assertEquals('HOUR.!', megacosm.select_uppercase('HOUR.!'))
-
-################################################################
-
-    def test_select_article(self):
-        self.assertEquals('a dog', megacosm.select_article('dog'))
-        self.assertEquals('an apple', megacosm.select_article('apple'))
-        self.assertEquals('an hour', megacosm.select_article('hour'))
-
-################################################################
-
-    def test_select_pluralize(self):
-        self.assertEquals('dogs', megacosm.select_pluralize('dog', 0))
-        self.assertEquals('dog', megacosm.select_pluralize('dog', 1))
-        self.assertEquals('dogs', megacosm.select_pluralize('dog', 2))
-        self.assertEquals('classes', megacosm.select_pluralize('class', 0))
-        self.assertEquals('class', megacosm.select_pluralize('class', 1))
-        self.assertEquals('classes', megacosm.select_pluralize('class', 2))
-
-################################################################
-
-    def test_select_conjunction(self):
-        self.assertEquals('a', megacosm.select_conjunction(['a']))
-        self.assertEquals('a and b', megacosm.select_conjunction(['a', 'b']))
-        self.assertEquals('a, b, and c', megacosm.select_conjunction(['a', 'b', 'c']))
-        self.assertEquals('a, b, c, and d', megacosm.select_conjunction(['a', 'b', 'c', 'd']))
-
-################################################################
-
-    def test_select_plural_verb(self):
-        self.assertEquals('were', megacosm.select_plural_verb('was', 0))
-        self.assertEquals('was', megacosm.select_plural_verb('was', 1))
-        self.assertEquals('were', megacosm.select_plural_verb('was', 2))
-
-################################################################
-
-    def test_select_plural_adj(self):
-        self.assertEquals('some', megacosm.select_plural_adj('a', 0))
-        self.assertEquals('a', megacosm.select_plural_adj('a', 1))
-        self.assertEquals('some', megacosm.select_plural_adj('a', 2))
-
-        self.assertEquals('these', megacosm.select_plural_adj('this', 0))
-        self.assertEquals('this', megacosm.select_plural_adj('this', 1))
-        self.assertEquals('these', megacosm.select_plural_adj('this', 2))
-
-        self.assertEquals('those', megacosm.select_plural_adj('that', 0))
-        self.assertEquals('that', megacosm.select_plural_adj('that', 1))
-        self.assertEquals('those', megacosm.select_plural_adj('that', 2))
-
-        self.assertEquals('our', megacosm.select_plural_adj('my', 0))
-        self.assertEquals('my', megacosm.select_plural_adj('my', 1))
-        self.assertEquals('our', megacosm.select_plural_adj('my', 2))
-
 ################################################################
 
     def test_index_route(self):

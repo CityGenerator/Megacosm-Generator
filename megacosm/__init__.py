@@ -29,14 +29,13 @@ from megacosm.generators.Star import Star
 from megacosm.generators.Street import Street
 from megacosm.generators.Wanted import Wanted
 from megacosm.generators.Weather import Weather
+
 from megacosm.util.Seeds import set_seed
-from megacosm.util import Filters
-# from megacosm import oneliners
+
 import datetime
 import json
 import re
 import traceback
-
 
 def create_app(config_location='config.BaseConfiguration'):
     myapp = Flask(__name__)
@@ -634,51 +633,8 @@ def page_borked(error):
     return render_template('500.html', request=request, e=error, time=time), 500
 
 
-@app.template_filter('uppercase')
-def select_uppercase(word):
-    """Switch the word to uppercase"""
-
-    return Filters.select_uppercase(word)
-
-
-@app.template_filter('article')
-def select_article(noun):
-    """Select the proper article for a noun."""
-
-    return Filters.select_article(noun)
-
-
-@app.template_filter('pluralize')
-def select_pluralize(verb, count):
-    """Select the proper verb for a count."""
-
-    return Filters.select_pluralize(verb, count)
-
-
-@app.template_filter('conjunction')
-def select_conjunction(wordlist):
-    """Join a list with commas and such."""
-
-    return Filters.select_conjunction(wordlist)
-
-
-@app.template_filter('plural_verb')
-def select_plural_verb(verb, subject):
-    """select the proper plural verb."""
-
-    # FIXME is this a duplicate of select_pluralize???
-
-    return Filters.select_plural_verb(verb, subject)
-
-
-@app.template_filter('plural_adj')
-def select_plural_adj(adj, subject):
-    """Select the proper version of an adjective."""
-
-    # FIXME is this correct? or is it count-based?
-
-    return Filters.select_plural_adj(adj, subject)
-
+from megacosm import template_filters
+from megacosm.oneliners import *
 
 if __name__ == '__main__':
     app.run()
