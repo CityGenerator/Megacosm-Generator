@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+""" Test the Mundane Items against live data in redis to ensure the MundaneItems data is valid/behaves."""
 
+import unittest
 from megacosm.generators.MundaneItem import MundaneItem
-import unittest2 as unittest
-
-import redis
 from config import IntegrationTestConfiguration
 
 

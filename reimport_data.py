@@ -7,8 +7,6 @@ import redis
 from config import BaseConfiguration
 from importer import Importer
 
-
-
 parser = argparse.ArgumentParser(usage="Import Megacosm data into Redis")
 
 parser.add_argument('-r', '--redishost', help='host to connect to.', default='localhost')
@@ -17,14 +15,11 @@ parser.add_argument('-p', '--redisport', help='host port to connect to.', defaul
 args = parser.parse_args()
 
 BaseConfiguration.REDIS = redis.Redis(host=args.redishost, port=int(args.redisport), decode_responses=True)
-
-
 server = BaseConfiguration.REDIS
+
 pipe = server.pipeline()
-
 pipe.flushall()
-
-imp = Importer(server)
+imp = Importer(pipe)
 
 for filename in sorted(glob.glob('data/**/*.data', recursive=True)):
     imp.parse_data_file(filename)

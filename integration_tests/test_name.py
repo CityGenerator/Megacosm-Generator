@@ -1,12 +1,10 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""Test Names with live data to ensure things behave as expected."""
 
+import unittest
 from megacosm.generators.Name import Name
 from megacosm.generators.NPC import NPC
-import unittest2 as unittest
-
-
-import redis
 from config import IntegrationTestConfiguration
 
 
