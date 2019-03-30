@@ -5,7 +5,7 @@ import glob
 import argparse
 import redis
 from config import BaseConfiguration
-from megacosm.importer import Importer
+from importer import Importer
 
 
 
