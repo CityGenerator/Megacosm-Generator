@@ -12,7 +12,7 @@ class TestArtworkIntegration(unittest.TestCase):
     def setUp(self):
         """Create Redis Connection"""
         self.redis = IntegrationTestConfiguration.REDIS
-        self.redis.lrange('artwork', 0, -1)
+        pprint(self.redis.lrange('artwork', 0, -1))
 
     def test_kinds(self):
         """ Test all the artwork kinds, subkinds, and their templates """
