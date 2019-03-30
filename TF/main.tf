@@ -16,7 +16,7 @@ resource "kubernetes_deployment" "megacosm-deployment" {
   }
 
   spec {
-    replicas = 1
+    replicas = 2
 
     selector {
       match_labels {
@@ -44,6 +44,10 @@ resource "kubernetes_deployment" "megacosm-deployment" {
               memory = "50Mi"
             }
           }
+        }
+        container {
+          image="python:3.7"
+          name = "data-loader"
         }
       }
     }
