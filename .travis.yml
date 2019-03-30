@@ -13,7 +13,7 @@ install:
 before_script:
   - cp config.py.example config.py
   - python reimport_data.py
-  - echo  'keys *' | redis-cli|tail 
+  - echo  'keys *' | redis-cli|wc -l 
 script: nosetests
 after_success:
     coveralls
