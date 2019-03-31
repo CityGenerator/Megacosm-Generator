@@ -3,25 +3,23 @@ dist: xenial
 services:
   - "redis-server"
 python:
-#  - "3.4"
   - "3.5"
-#  - "3.6"
-#  - "3.7"
-#  - "pypy3.5"
+  - "3.6"
+  - "3.7"
+  - "pypy3.5"
 install:
-  - pip install --upgrade pip
   - pip install -r requirements.txt
 before_script:
   - cp config.py.example config.py
   - python reimport_data.py
-  - echo  'keys *' | redis-cli|wc -l 
 script:
-  - nosetests --verbosity=10 -x --debug-log=debug.log
-after_failure:
-  - cat debug.log
+  - nosetests
 after_success:
   - coveralls
-#notifications:
+notifications:
+  slack:
+    rooms:
+    - unrelatedinterests:MmoeZWe7r1LDNNRSZKqwd5Ov#morgajel
 #  irc:
 #    channels: "chat.freenode.net#megacosm"
 #    on_success: change # default: always

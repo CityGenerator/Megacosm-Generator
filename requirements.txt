@@ -9,6 +9,7 @@ jinja2
 Flask-Assets
 Flask-Testing
 Flask-WTF
+travislint
 gunicorn
 inflect
 jsmin
