@@ -15,7 +15,7 @@ before_script:
   - python reimport_data.py
   - echo  'keys *' | redis-cli|wc -l 
 script:
-  - nosetests --verbose=10 -x --debug-log=debug.log
+  - nosetests --verbosity=10 -x --debug-log=debug.log
 after_failure:
   - cat debug.log
 after_success:
