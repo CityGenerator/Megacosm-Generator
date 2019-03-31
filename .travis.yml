@@ -16,7 +16,7 @@ before_script:
   - echo  'keys *' | redis-cli|wc -l 
 script:
   - nosetests -v -x -s -l=DEFAULT --debug-log=debug.log
-after_failure
+after_failure:
   - cat debug.log
 after_success:
   - coveralls
