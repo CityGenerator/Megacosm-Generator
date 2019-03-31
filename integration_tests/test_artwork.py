@@ -6,13 +6,14 @@ import unittest
 from megacosm.generators.Artwork import Artwork
 from config import IntegrationTestConfiguration
 from pprint import pprint
-
+import redis
 
 class TestArtworkIntegration(unittest.TestCase):
     """ Test Artwork Integration """
     def setUp(self):
         """Create Redis Connection"""
-        self.redis = IntegrationTestConfiguration.REDIS
+#        self.redis = IntegrationTestConfiguration.REDIS
+        self.redis = redis.Redis(host="localhost", port=6379, decode_responses=True)
         pprint(self.redis)
         pprint(self.redis.keys())
         pprint(self.redis.lrange('artwork', 0, -1))
