@@ -14,7 +14,7 @@ class TestArtworkIntegration(unittest.TestCase):
         """Create Redis Connection"""
         self.redis = IntegrationTestConfiguration.REDIS
         pprint(self.redis)
-        pprint(sef.redis.keys())
+        pprint(self.redis.keys())
         pprint(self.redis.lrange('artwork', 0, -1))
 
     def test_kinds(self):
