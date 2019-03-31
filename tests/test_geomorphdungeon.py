@@ -7,7 +7,7 @@ import sys
 import fixtures
 import json
 import fakeredis
-import unittest2 as unittest
+import unittest
 from megacosm.generators.GeomorphDungeon import GeomorphDungeon
 
 

@@ -5,7 +5,7 @@
 
 from megacosm.generators.Continent import Continent
 from megacosm.generators.Country import Country
-import unittest2 as unittest
+import unittest
 from pprint import pprint
 import fakeredis
 from config import TestConfiguration

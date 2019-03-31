@@ -6,7 +6,7 @@
 from megacosm.generators.Artwork import Artwork
 from megacosm.generators.Gem import Gem
 from megacosm.generators.Deity import Deity
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 

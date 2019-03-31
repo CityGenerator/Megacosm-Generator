@@ -5,7 +5,7 @@
 
 from megacosm.generators.Country import Country
 from megacosm.generators.Region import Region
-import unittest2 as unittest
+import unittest
 import fakeredis
 from config import TestConfiguration
 import fixtures

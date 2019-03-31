@@ -5,7 +5,7 @@
 
 from megacosm.generators.Grafitti import Grafitti
 from megacosm.generators.NPC import NPC
-import unittest2 as unittest
+import unittest
 
 import fakeredis
 import fixtures

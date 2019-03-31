@@ -6,7 +6,7 @@
 from megacosm.generators.NPC import NPC
 from megacosm.generators.Phobia import Phobia
 from megacosm.generators.Motivation import Motivation
-import unittest2 as unittest
+import unittest
 import fakeredis
 import fixtures
 

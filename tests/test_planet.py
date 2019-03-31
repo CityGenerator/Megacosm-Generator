@@ -6,7 +6,7 @@
 from megacosm.generators.Planet import Planet
 from megacosm.generators.Continent import Continent
 from megacosm.generators.Moon import Moon
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 from config import TestConfiguration

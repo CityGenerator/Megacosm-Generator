@@ -5,7 +5,7 @@
 
 from megacosm.generators.Leader import Leader
 from megacosm.generators.Organization import Organization
-import unittest2 as unittest
+import unittest
 import fakeredis
 from config import TestConfiguration
 import fixtures

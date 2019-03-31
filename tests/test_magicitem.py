@@ -6,7 +6,7 @@
 from megacosm.generators.MagicItem import MagicItem
 from megacosm.generators.NPC import NPC
 from megacosm.generators.Curse import Curse
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 

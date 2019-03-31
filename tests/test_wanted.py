@@ -5,7 +5,7 @@
 
 from megacosm.generators.Wanted import Wanted
 from megacosm.generators.NPC import NPC
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 

@@ -5,7 +5,7 @@
 
 from megacosm.generators.Region import Region
 from megacosm.generators.City import City
-import unittest2 as unittest
+import unittest
 from mock import Mock, patch, MagicMock
 import fakeredis
 import fixtures

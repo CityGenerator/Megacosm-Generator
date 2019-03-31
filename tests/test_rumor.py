@@ -5,7 +5,7 @@
 
 from megacosm.generators.Rumor import Rumor
 from megacosm.generators.NPC import NPC
-import unittest2 as unittest
+import unittest
 
 import fakeredis
 from megacosm.util.Seeds import set_seed

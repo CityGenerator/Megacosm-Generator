@@ -4,7 +4,7 @@
 "Fully test this module's functionality through the use of fixtures."
 
 from megacosm.generators.Leader import Leader
-import unittest2 as unittest
+import unittest
 from megacosm.generators.City import City
 from megacosm.generators.Organization import Organization
 from megacosm.generators.Country import Country

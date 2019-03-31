@@ -5,7 +5,7 @@
 
 from megacosm.generators.Deity import Deity
 from megacosm.generators.Sect import Sect
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 from megacosm.util.Seeds import set_seed

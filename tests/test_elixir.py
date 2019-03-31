@@ -5,7 +5,7 @@
 ## -*- coding: utf-8 -*-
 #
 #from megacosm.generators import Elixir
-#import unittest2 as unittest
+#import unittest
 #
 #import redis
 #from config import TestConfiguration

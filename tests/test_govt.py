@@ -6,7 +6,7 @@
 from megacosm.generators.Govt import Govt
 from megacosm.generators.Country import Country
 from megacosm.generators.City import City
-import unittest2 as unittest
+import unittest
 
 import fakeredis
 import fixtures

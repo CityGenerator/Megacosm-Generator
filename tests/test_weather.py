@@ -4,7 +4,7 @@
 "Fully test this module's functionality through the use of fixtures."
 
 from megacosm.generators.Weather import Weather
-import unittest2 as unittest
+import unittest
 import fakeredis
 from config import TestConfiguration
 import fixtures

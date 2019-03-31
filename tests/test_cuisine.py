@@ -6,7 +6,7 @@
 from megacosm.generators.Cuisine import Cuisine
 from megacosm.generators.Region import Region
 from megacosm.generators.NPC import NPC
-import unittest2 as unittest
+import unittest
 
 import fakeredis
 from config import TestConfiguration

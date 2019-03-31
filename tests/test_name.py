@@ -4,7 +4,7 @@
 "Fully test this module's functionality through the use of fixtures."
 
 from megacosm.generators.Name import Name
-import unittest2 as unittest
+import unittest
 import fixtures
 import fakeredis
 from pprint import pprint

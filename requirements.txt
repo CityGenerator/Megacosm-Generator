@@ -17,6 +17,5 @@ nose
 pylint
 pytest
 pytest-cov
-redis
+redis >= 3.2.1
 rednose
-unittest2
