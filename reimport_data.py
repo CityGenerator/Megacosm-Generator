@@ -18,6 +18,7 @@ BaseConfiguration.REDIS = redis.Redis(host=args.redishost, port=int(args.redispo
 server = BaseConfiguration.REDIS
 
 pipe = server.pipeline()
+print("clearing out old data...")
 pipe.flushall()
 imp = Importer(pipe)
 
