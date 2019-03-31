@@ -15,7 +15,7 @@ before_script:
   - python reimport_data.py
   - echo  'keys *' | redis-cli|wc -l 
 script:
-  - nosetests -v -x -s
+  - nosetests -v -x -s -l=DEFAULT --debug-log=FILE
 after_success:
     coveralls
 notifications:
