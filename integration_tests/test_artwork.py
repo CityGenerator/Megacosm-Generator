@@ -5,34 +5,26 @@
 import unittest
 from megacosm.generators.Artwork import Artwork
 from config import IntegrationTestConfiguration
-from pprint import pprint
-import redis
 
 class TestArtworkIntegration(unittest.TestCase):
     """ Test Artwork Integration """
     def setUp(self):
         """Create Redis Connection"""
-#        self.redis = IntegrationTestConfiguration.REDIS
-        self.redis = redis.Redis(host="localhost", port=6379, decode_responses=True)
-        pprint(self.redis)
-        pprint(self.redis.keys())
-        pprint(self.redis.lrange('artwork', 0, -1))
+        self.redis = IntegrationTestConfiguration.REDIS
 
     def test_kinds(self):
         """ Test all the artwork kinds, subkinds, and their templates """
         for kind in self.redis.lrange('artwork_kind', 0, -1):
-            print("kind: "+kind)
-            for template in self.redis.lrange('artwork'+kind+'_template', 0, -1):
-                print("template: "+template)
-                # print "template: "+template
+            print("kind: %s" % kind)
+            for template in self.redis.lrange('artwork%s_template' % kind, 0, -1):
+                print("template: %s" % template)
                 artwork = Artwork(self.redis, {'kind': kind, 'template': template})
                 self.assertEqual(kind, str(artwork.kind))
 
                 self.assertNotIn('{', str(artwork))
                 self.assertNotIn('}', str(artwork))
                 self.assertNotIn('params', str(artwork))
-            for subkind in self.redis.lrange('artwork'+kind+'_subkind', 0, -1):
-                # print "template: "+template
+            for subkind in self.redis.lrange("artwork%s_subkind" % kind, 0, -1):
                 artwork = Artwork(self.redis, {'kind': kind, 'subkind': subkind})
                 self.assertEqual(kind, str(artwork.kind))
                 self.assertNotIn(kind, str(artwork))
