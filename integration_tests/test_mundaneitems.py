@@ -21,7 +21,7 @@ class TestMundaneItemIntegration(unittest.TestCase):
         for kind in self.redis.lrange('mundaneitem_kind', 0, -1):
             print("kind: "+kind)
             for template in self.redis.lrange('mundaneitem_template', 0, -1):
-                print("template: "+template)
+                print("template: %s" % template)
                 mundaneitem = MundaneItem(self.redis, {'kind': kind, 'template': template})
                 rendered_kind = mundaneitem.render_template(kind)
                 self.assertEqual(rendered_kind, str(mundaneitem.kind))
