@@ -15,9 +15,11 @@ before_script:
   - python reimport_data.py
   - echo  'keys *' | redis-cli|wc -l 
 script:
-  - nosetests -v -x -s -l=DEFAULT --debug-log=FILE
+  - nosetests -v -x -s -l=DEFAULT --debug-log=debug.log
+after_failure
+  - cat debug.log
 after_success:
-    coveralls
+  - coveralls
 notifications:
 #  irc:
 #    channels: "chat.freenode.net#megacosm"
