@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: megacosm-webapp
+  labels:
+    app: megacosm-webapp
+spec:
+  ports:
+    - port: 8000
+      targetPort: 8000
+  selector:
+    app: megacosm-webapp
