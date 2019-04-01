@@ -5,9 +5,12 @@ metadata:
   name: megacosm-redis
   labels:
     app: megacosm-redis
+    tier: backend 
 spec:
+  type: NodePort
   ports:
     - port: 6379
       targetPort: 6379
   selector:
     app: megacosm-redis
+    tier: backend

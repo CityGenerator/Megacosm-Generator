@@ -3,6 +3,9 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: megacosm-dataloader
+  labels:
+    app: megacosm-dataloader
+    tier: job
 spec:
   backoffLimit: 6 # number of retries before throwing error
   activeDeadlineSeconds: 10 # time to allow job to run
@@ -18,11 +21,12 @@ spec:
           image: megacosm-dataloader:latest
           env:
           - name: REDISHOST
-            resourceFieldRef:
-              serviceName: megacosm-redis
-              resource:  medadata.name
+            valueFrom:
+              resourceFieldRef:
+                resource:  medadata.name
           - name: REDISPORT
-            resourceFieldRef:
-              serviceName: megacosm-redis
-              resource: spec.ports.port
+            valueFrom:
+              resourceFieldRef:
+                resource: spec.ports.port
+
 

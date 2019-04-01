@@ -5,9 +5,12 @@ metadata:
   name: megacosm-webapp
   labels:
     app: megacosm-webapp
+    tier: frontend
 spec:
+  type: NodePort
   ports:
     - port: 8000
       targetPort: 8000
   selector:
     app: megacosm-webapp
+    tier: frontend
