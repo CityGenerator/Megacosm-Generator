@@ -5,7 +5,7 @@ metadata:
   name: megacosm-redis
   labels:
     app: megacosm-redis
-    tier: backend 
+    tier: backend
 spec:
   type: NodePort
   ports:

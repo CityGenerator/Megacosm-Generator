@@ -7,26 +7,20 @@ metadata:
     app: megacosm-dataloader
     tier: job
 spec:
-  backoffLimit: 6 # number of retries before throwing error
-  activeDeadlineSeconds: 10 # time to allow job to run
+  activeDeadlineSeconds: 100
   template:
     metadata:
       labels:
         app: megacosm-dataloader
         tier: job
     spec:
-      restartPolicy: OnFailure
       containers:
-        - name: job
-          image: megacosm-dataloader:latest
+        - name: dataloader
+          image: morgajel/megacosm-dataloader
           env:
           - name: REDISHOST
-            valueFrom:
-              resourceFieldRef:
-                resource:  medadata.name
+            value: "megacosm-redis.default.svc.cluster.local"
           - name: REDISPORT
-            valueFrom:
-              resourceFieldRef:
-                resource: spec.ports.port
-
-
+            value: "6379"
+      restartPolicy: Never
+  backoffLimit: 5
