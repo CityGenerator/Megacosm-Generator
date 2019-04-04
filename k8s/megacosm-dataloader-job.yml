@@ -4,29 +4,27 @@ kind: Job
 metadata:
   name: megacosm-dataloader
   labels:
-    app: megacosm-dataloader
+    app: dataloader
     tier: job
 spec:
-  backoffLimit: 6 # number of retries before throwing error
-  activeDeadlineSeconds: 10 # time to allow job to run
   template:
     metadata:
       labels:
-        app: megacosm-dataloader
+        app: dataloader
         tier: job
     spec:
-      restartPolicy: OnFailure
       containers:
-        - name: job
-          image: megacosm-dataloader:latest
+        - name: dataloader
+          image: morgajel/megacosm-dataloader
           env:
           - name: REDISHOST
-            valueFrom:
-              resourceFieldRef:
-                resource:  medadata.name
+            value: "megacosm-redis.default.svc"
           - name: REDISPORT
-            valueFrom:
-              resourceFieldRef:
-                resource: spec.ports.port
-
-
+            value: "6379"
+      initContainers:
+      - name: checkforredis
+        image: busybox
+        command: ['sh', '-c', 'until nslookup megacosm-redis.default.svc; do echo "waiting for backend" ; sleep 3; done; echo "backend is up"']
+      restartPolicy: Never
+  activeDeadlineSeconds: 600
+  backoffLimit: 5

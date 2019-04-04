@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: megacosm-webapp
   labels:
-    app: megacosm-webapp
+    app: webapp
     tier: frontend
 spec:
   type: NodePort
@@ -12,5 +12,5 @@ spec:
     - port: 8000
       targetPort: 8000
   selector:
-    app: megacosm-webapp
+    app: webapp
     tier: frontend

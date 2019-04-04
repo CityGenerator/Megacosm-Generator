@@ -1,22 +1,12 @@
 blinker
-coverage
-coveralls
 fakeredis
-fixture
-flake8
 Flask
 jinja2
+json-logging-py
 Flask-Assets
-Flask-Testing
 Flask-WTF
-travislint
 gunicorn
 inflect
 jsmin
-mock
-nose
-pylint
-pytest
-pytest-cov
-redis >= 3.2.1
-rednose
+prometheus_client
+redis

@@ -6,7 +6,6 @@ data/*.xml
 *.py[cod]
 env/
 venv/
-# Secret Config files:
 config.py
 
 # generated files

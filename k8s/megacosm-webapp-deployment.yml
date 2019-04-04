@@ -1,25 +1,35 @@
-apiVersion: apps/v1
-kind: StatefulSet
+apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
   name: megacosm-webapp
+  labels:
+    app: webapp
+    tier: frontend
 spec:
   selector:
     matchLabels:
-      app: megacosm-webapp
+      app: webapp
       tier: frontend
-  serviceName: "megacosm-webapp"
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
-        app: megacosm-webapp
+        app: webapp
         tier: frontend
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
         - name: megacosm-webapp
           image: morgajel/megacosm-webapp
           ports:
             - containerPort: 8000
               name: http
-
+          env:
+            - name: FLASK_ENV
+              value: "production"
+            - name: APP_SETTINGS
+              value: "config.DockerConfiguration"
+            - name: REDISHOST
+              value: "megacosm-redis.default.svc"
+            - name: REDISPORT
+              value: "6379"
+      restartPolicy: Always
