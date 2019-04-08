@@ -4,14 +4,13 @@ kind: Job
 metadata:
   name: megacosm-dataloader
   labels:
-    app: megacosm-dataloader
+    app: dataloader
     tier: job
 spec:
-  activeDeadlineSeconds: 100
   template:
     metadata:
       labels:
-        app: megacosm-dataloader
+        app: dataloader
         tier: job
     spec:
       containers:
@@ -19,8 +18,13 @@ spec:
           image: morgajel/megacosm-dataloader
           env:
           - name: REDISHOST
-            value: "megacosm-redis.default.svc.cluster.local"
+            value: "megacosm-redis.default.svc"
           - name: REDISPORT
             value: "6379"
+      initContainers:
+      - name: checkforredis
+        image: busybox
+        command: ['sh', '-c', 'until nslookup megacosm-redis.default.svc; do echo "waiting for backend" ; sleep 3; done; echo "backend is up"']
       restartPolicy: Never
+  activeDeadlineSeconds: 600
   backoffLimit: 5

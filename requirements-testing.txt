@@ -1,0 +1,13 @@
+coverage
+coveralls
+fakeredis
+fixture
+flake8
+Flask-Testing
+travislint
+mock
+nose
+pylint
+pytest
+pytest-cov
+rednose

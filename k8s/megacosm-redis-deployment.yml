@@ -2,16 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: megacosm-redis
+  labels:
+    app: redis
+    tier: backend
 spec:
   selector:
     matchLabels:
-      app: megacosm-redis
+      app: redis
       tier: backend
   replicas: 1
   template:
     metadata:
       labels:
-        app: megacosm-redis
+        app: redis
         tier: backend
     spec:
       containers:

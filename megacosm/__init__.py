@@ -32,18 +32,26 @@ from megacosm.generators.Weather import Weather
 
 from megacosm.util.Seeds import set_seed
 
+import logging
 import datetime
 import json
 import re
+import os
 import traceback
+
+logger = logging.getLogger(__name__)
 
 def create_app(config_location='config.BaseConfiguration'):
     myapp = Flask(__name__)
     myapp.config.from_object(config_location)
+    #logger.info("App Created", extra={'tags': ['role:web', 'tier:frontend']})
     return myapp
 
-
-app = create_app()
+app = None
+if 'APP_SETTINGS' in os.environ:
+    app = create_app(os.environ['APP_SETTINGS'])
+else:
+    app = create_app()
 
 #########################################################################
 # Using JS and CSS bundlers to minify code.

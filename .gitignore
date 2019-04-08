@@ -5,9 +5,6 @@ data/*.xml
 *.py[cod]
 env/
 
-# Secret Config files:
-config.py
-
 # generated files
 coverage/
 .coverage
