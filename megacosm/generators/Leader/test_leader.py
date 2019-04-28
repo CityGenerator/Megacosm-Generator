@@ -1,32 +1,30 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Leader import Leader
 import unittest
-from megacosm.generators.City import City
-from megacosm.generators.Organization import Organization
-from megacosm.generators.Country import Country
 import fakeredis
-from config import TestConfiguration
-import fixtures
-from pprint import pprint
+from fixtures import npc, leader, phobia, motivation, region, organization, business, country, city
+
+
 class TestLeader(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.npc.import_fixtures(self)
-        fixtures.leader.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.region.import_fixtures(self)
-        fixtures.organization.import_fixtures(self)
-        fixtures.business.import_fixtures(self)
-        fixtures.country.import_fixtures(self)
-        fixtures.city.import_fixtures(self)
-        self.redis.lpush('npc_race','human')
+        npc.import_fixtures(self)
+        leader.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
+        region.import_fixtures(self)
+        organization.import_fixtures(self)
+        business.import_fixtures(self)
+        country.import_fixtures(self)
+        city.import_fixtures(self)
+        self.redis.lpush('npc_race', 'human')
+
     def tearDown(self):
         self.redis.flushall()
 

@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Currency import Currency
 import unittest
 
 import fakeredis
-import fixtures
-from config import TestConfiguration
+from fixtures import currency
 
 
 class TestCurrency(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis=fakeredis.FakeRedis(decode_responses=True)
-        fixtures.currency.import_fixtures(self)
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
+        currency.import_fixtures(self)
 
     def tearDown(self):
         """ Clean up any changes from the last run. """

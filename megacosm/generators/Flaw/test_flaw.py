@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Flaw import Flaw
 import unittest
 
 import fakeredis
-import fixtures
-from config import TestConfiguration
+from fixtures import flaw
 
 
 class TestFlaw(unittest.TestCase):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Govt import Govt
 from megacosm.generators.Country import Country
@@ -9,8 +9,7 @@ from megacosm.generators.City import City
 import unittest
 
 import fakeredis
-import fixtures
-from config import TestConfiguration
+from fixtures import govt, city, region, country, organization, business, leader, npc, motivation, phobia
 
 
 class TestGovt(unittest.TestCase):
@@ -18,16 +17,16 @@ class TestGovt(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.govt.import_fixtures(self)
-        fixtures.city.import_fixtures(self)
-        fixtures.region.import_fixtures(self)
-        fixtures.country.import_fixtures(self)
-        fixtures.organization.import_fixtures(self)
-        fixtures.business.import_fixtures(self)
-        fixtures.leader.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
+        govt.import_fixtures(self)
+        city.import_fixtures(self)
+        region.import_fixtures(self)
+        country.import_fixtures(self)
+        organization.import_fixtures(self)
+        business.import_fixtures(self)
+        leader.import_fixtures(self)
+        npc.import_fixtures(self)
+        motivation.import_fixtures(self)
+        phobia.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
 
     def tearDown(self):

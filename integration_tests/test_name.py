@@ -6,16 +6,65 @@ import unittest
 from megacosm.generators.Name import Name
 from megacosm.generators.NPC import NPC
 from config import IntegrationTestConfiguration
+from fixtures import bond, business, city, continent, country, cuisine, currency, curse, deity, drink, dungeon, event
+from fixtures import flag, flaw, gem, generator, geomorphdungeon, govt, grafitti, jobposting, leader, legend, magicitem
+from fixtures import misfire, moon, mundaneitem, npc, organization, motivation, planet, phobia, region, resource
+from fixtures import roguedungeon, rumor, sect, star, starsystem, street, wanted, weather
 
 
 class TestNameIntegration(unittest.TestCase):
 
     def setUp(self):
         self.redis = IntegrationTestConfiguration.REDIS
+        npc.import_fixtures(self)
+        star.import_fixtures(self)
+        starsystem.import_fixtures(self)
+        artwork.import_fixtures(self)
+        bond.import_fixtures(self)
+        business.import_fixtures(self)
+        city.import_fixtures(self)
+        continent.import_fixtures(self)
+        country.import_fixtures(self)
+        cuisine.import_fixtures(self)
+        currency.import_fixtures(self)
+        curse.import_fixtures(self)
+        deity.import_fixtures(self)
+        drink.import_fixtures(self)
+        dungeon.import_fixtures(self)
+        event.import_fixtures(self)
+        flag.import_fixtures(self)
+        flaw.import_fixtures(self)
+        gem.import_fixtures(self)
+        generator.import_fixtures(self)
+        geomorphdungeon.import_fixtures(self)
+        govt.import_fixtures(self)
+        grafitti.import_fixtures(self)
+        jobposting.import_fixtures(self)
+        leader.import_fixtures(self)
+        legend.import_fixtures(self)
+        magicitem.import_fixtures(self)
+        misfire.import_fixtures(self)
+        moon.import_fixtures(self)
+        mundaneitem.import_fixtures(self)
+        npc.import_fixtures(self)
+        organization.import_fixtures(self)
+        motivation.import_fixtures(self)
+        planet.import_fixtures(self)
+        phobia.import_fixtures(self)
+        region.import_fixtures(self)
+        resource.import_fixtures(self)
+        roguedungeon.import_fixtures(self)
+        rumor.import_fixtures(self)
+        sect.import_fixtures(self)
+        star.import_fixtures(self)
+        starsystem.import_fixtures(self)
+        street.import_fixtures(self)
+        wanted.import_fixtures(self)
+        weather.import_fixtures(self)
 
     def tearDown(self):
         """Tear stuff Down."""
-        # self.redis.flushall()
+        self.redis.flushall()
 
     def test_races(self):
         """  """

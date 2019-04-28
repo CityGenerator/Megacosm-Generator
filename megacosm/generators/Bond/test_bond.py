@@ -5,7 +5,7 @@
 
 from megacosm.generators.Bond import Bond
 import unittest
-import fixtures
+from fixtures import bond, npc, phobia, motivation
 import fakeredis
 
 
@@ -14,10 +14,10 @@ class TestBond(unittest.TestCase):
     def setUp(self):
         """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.bond.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
+        bond.import_fixtures(self)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
         self.redis.lpush('npc_race', 'gnome')
 
     def tearDown(self):

@@ -7,8 +7,8 @@ from megacosm.generators.MagicItem import MagicItem
 from megacosm.generators.NPC import NPC
 from megacosm.generators.Curse import Curse
 import unittest
-import fixtures
 import fakeredis
+from fixtures import magicitem, npc, phobia, motivation, curse
 
 
 class TestMagicItem(unittest.TestCase):
@@ -16,11 +16,11 @@ class TestMagicItem(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.magicitem.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.curse.import_fixtures(self)
+        magicitem.import_fixtures(self)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
+        curse.import_fixtures(self)
         self.redis.lpush('npc_race', 'gnome')
 
     def tearDown(self):

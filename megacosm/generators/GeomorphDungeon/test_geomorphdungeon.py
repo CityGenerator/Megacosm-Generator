@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
-import sys
-import fixtures
-import json
 import fakeredis
 import unittest
 from megacosm.generators.GeomorphDungeon import GeomorphDungeon
+
+from fixtures import dungeon, geomorphdungeon
 
 
 class TestGeomorphDungeon(unittest.TestCase):
@@ -16,8 +15,8 @@ class TestGeomorphDungeon(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.dungeon.import_fixtures(self)
-        fixtures.geomorphdungeon.import_fixtures(self)
+        dungeon.import_fixtures(self)
+        geomorphdungeon.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()

@@ -7,7 +7,7 @@ from megacosm.generators.Business import Business
 from megacosm.generators.NPC import NPC
 import unittest
 import fakeredis
-import fixtures
+from fixtures import business, npc, motivation, phobia
 
 
 class TestBusiness(unittest.TestCase):
@@ -15,10 +15,10 @@ class TestBusiness(unittest.TestCase):
     def setUp(self):
         """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.business.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
+        business.import_fixtures(self)
+        npc.import_fixtures(self)
+        motivation.import_fixtures(self)
+        phobia.import_fixtures(self)
         self.redis.lpush('npc_race', 'gnome')
 
     def tearDown(self):

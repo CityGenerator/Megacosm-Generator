@@ -9,21 +9,20 @@ from megacosm.generators.NPC import NPC
 import unittest
 
 import fakeredis
-from config import TestConfiguration
-import fixtures
+from fixtures import npc, phobia, motivation, region, cuisine
+
 
 class TestCuisine(unittest.TestCase):
 
     def setUp(self):
         """ Set up the required fixtures """
-        self.redis=fakeredis.FakeRedis(decode_responses=True)
-        fixtures.npc.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.region.import_fixtures(self)
-        fixtures.cuisine.import_fixtures(self)
-        self.redis.lpush('npc_race','gnome')
-
+        self.redis = fakeredis.FakeRedis(decode_responses=True)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
+        region.import_fixtures(self)
+        cuisine.import_fixtures(self)
+        self.redis.lpush('npc_race', 'gnome')
 
     def tearDown(self):
         """ Clean up any changes from the last run. """

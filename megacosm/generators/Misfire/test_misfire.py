@@ -6,7 +6,7 @@
 from megacosm.generators.Misfire import Misfire
 import unittest
 
-import fixtures
+from fixtures import misfire, npc, phobia, motivation
 import fakeredis
 
 
@@ -15,10 +15,10 @@ class TestMisfire(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.misfire.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
+        misfire.import_fixtures(self)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
         self.redis.lpush('npc_race', 'gnome')
 
     def tearDown(self):
