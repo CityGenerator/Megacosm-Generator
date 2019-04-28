@@ -1,14 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.JobPosting import JobPosting
 from megacosm.generators.NPC import NPC
 import unittest
-import fixtures
+from fixtures import jobposting, business, npc, phobia, motivation
 import fakeredis
-from config import TestConfiguration
 
 
 class TestJobPosting(unittest.TestCase):
@@ -16,11 +15,11 @@ class TestJobPosting(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.jobposting.import_fixtures(self)
-        fixtures.business.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
+        jobposting.import_fixtures(self)
+        business.import_fixtures(self)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
 
         self.redis.lpush('npc_race','gnome')
 

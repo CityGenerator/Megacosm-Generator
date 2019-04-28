@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Artwork import Artwork
 from megacosm.generators.Gem import Gem
 from megacosm.generators.Deity import Deity
 import unittest
-import fixtures
 import fakeredis
+from fixtures import artwork, gem, npc, motivation, phobia, deity
 
 
 class TestArtwork(unittest.TestCase):
@@ -16,13 +16,14 @@ class TestArtwork(unittest.TestCase):
     def setUp(self):
         """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.artwork.import_fixtures(self)
-        fixtures.gem.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.deity.import_fixtures(self)
+        artwork.import_fixtures(self)
+        gem.import_fixtures(self)
+        npc.import_fixtures(self)
+        motivation.import_fixtures(self)
+        phobia.import_fixtures(self)
+        deity.import_fixtures(self)
         self.redis.lpush('npc_race', 'gnome')
+
     def tearDown(self):
         """ Clean up any changes from the last run. """
         self.redis.flushall()

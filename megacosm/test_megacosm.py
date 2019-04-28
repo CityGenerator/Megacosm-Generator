@@ -7,7 +7,10 @@
 import megacosm
 from flask_testing import TestCase
 import fakeredis
-import fixtures
+from fixtures import bond, business, city, continent, country, cuisine, currency, curse, deity, drink, dungeon, event
+from fixtures import flag, flaw, gem, generator, geomorphdungeon, govt, grafitti, jobposting, leader, legend, magicitem
+from fixtures import misfire, moon, mundaneitem, npc, organization, motivation, planet, phobia, region, resource
+from fixtures import roguedungeon, rumor, sect, star, starsystem, street, wanted, weather
 
 
 class MegacosmFlaskTestCast(TestCase):
@@ -23,43 +26,43 @@ class MegacosmFlaskTestCast(TestCase):
         self.app = megacosm.app.test_client()
         self.redis = megacosm.app.config['REDIS']
 
-        fixtures.bond.import_fixtures(self)
-        fixtures.business.import_fixtures(self)
-        fixtures.city.import_fixtures(self)
-        fixtures.continent.import_fixtures(self)
-        fixtures.country.import_fixtures(self)
-        fixtures.cuisine.import_fixtures(self)
-        fixtures.currency.import_fixtures(self)
-        fixtures.curse.import_fixtures(self)
-        fixtures.deity.import_fixtures(self)
-        fixtures.dungeon.import_fixtures(self)
-        fixtures.event.import_fixtures(self)
-        fixtures.flag.import_fixtures(self)
-        fixtures.gem.import_fixtures(self)
-        fixtures.geomorphdungeon.import_fixtures(self)
-        fixtures.govt.import_fixtures(self)
-        fixtures.jobposting.import_fixtures(self)
-        fixtures.leader.import_fixtures(self)
-        fixtures.legend.import_fixtures(self)
-        fixtures.misfire.import_fixtures(self)
-        fixtures.magicitem.import_fixtures(self)
-        fixtures.moon.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.mundaneitem.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.organization.import_fixtures(self)
-        fixtures.planet.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.region.import_fixtures(self)
-        fixtures.resource.import_fixtures(self)
-        fixtures.roguedungeon.import_fixtures(self)
-        fixtures.rumor.import_fixtures(self)
-        fixtures.sect.import_fixtures(self)
-        fixtures.star.import_fixtures(self)
-        fixtures.starsystem.import_fixtures(self)
-        fixtures.street.import_fixtures(self)
-        fixtures.weather.import_fixtures(self)
-        fixtures.wanted.import_fixtures(self)
+        bond.import_fixtures(self)
+        business.import_fixtures(self)
+        city.import_fixtures(self)
+        continent.import_fixtures(self)
+        country.import_fixtures(self)
+        cuisine.import_fixtures(self)
+        currency.import_fixtures(self)
+        curse.import_fixtures(self)
+        deity.import_fixtures(self)
+        dungeon.import_fixtures(self)
+        event.import_fixtures(self)
+        flag.import_fixtures(self)
+        gem.import_fixtures(self)
+        geomorphdungeon.import_fixtures(self)
+        govt.import_fixtures(self)
+        jobposting.import_fixtures(self)
+        leader.import_fixtures(self)
+        legend.import_fixtures(self)
+        misfire.import_fixtures(self)
+        magicitem.import_fixtures(self)
+        moon.import_fixtures(self)
+        motivation.import_fixtures(self)
+        mundaneitem.import_fixtures(self)
+        npc.import_fixtures(self)
+        organization.import_fixtures(self)
+        planet.import_fixtures(self)
+        phobia.import_fixtures(self)
+        region.import_fixtures(self)
+        resource.import_fixtures(self)
+        roguedungeon.import_fixtures(self)
+        rumor.import_fixtures(self)
+        sect.import_fixtures(self)
+        star.import_fixtures(self)
+        starsystem.import_fixtures(self)
+        street.import_fixtures(self)
+        weather.import_fixtures(self)
+        wanted.import_fixtures(self)
         self.redis.lpush('npc_race','kobold')
 
     def tearDown(self):
@@ -98,7 +101,6 @@ class MegacosmFlaskTestCast(TestCase):
         self.assert200(response)
 
 ################################################################
-
 
     def test_business_route(self):
         response = self.app.get('/business')

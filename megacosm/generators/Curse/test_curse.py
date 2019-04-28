@@ -7,10 +7,7 @@ from megacosm.generators.Curse import Curse
 import unittest
 
 import fakeredis
-import fixtures
-from megacosm.util.Seeds import set_seed
-
-from config import TestConfiguration
+from fixtures import curse
 
 
 class TestCurse(unittest.TestCase):
@@ -18,7 +15,8 @@ class TestCurse(unittest.TestCase):
     def setUp(self):
         """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.curse.import_fixtures(self)
+        curse.import_fixtures(self)
+
     def tearDown(self):
         self.redis.flushall()
 

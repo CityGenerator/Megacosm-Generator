@@ -5,16 +5,15 @@
 
 from megacosm.generators.Generator import Generator
 import unittest
-from pprint import pprint
 import fakeredis
-import fixtures
+from fixtures import generator
 
 
 class TestGenerator(unittest.TestCase):
 
     def setUp(self):
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.generator.import_fixtures(self)
+        generator.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()

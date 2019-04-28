@@ -14,7 +14,7 @@ class TestMundaneItemIntegration(unittest.TestCase):
 
     def tearDown(self):
         """Tear stuff Down."""
-        # self.redis.flushall()
+        self.redis.flushall()
 
     def test_kinds(self):
         """  """

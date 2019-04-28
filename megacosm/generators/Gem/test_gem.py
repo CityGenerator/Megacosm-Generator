@@ -1,21 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"Fully test this module's functionality through the use of fixtures."
+"""Fully test this module's functionality through the use of fixtures."""
 
 from megacosm.generators.Gem import Gem
 import unittest
 
 import fakeredis
-from config import TestConfiguration
-import fixtures
+from fixtures import gem
 
 class TestGem(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.gem.import_fixtures(self)
+        gem.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()

@@ -5,19 +5,28 @@
 import unittest
 from megacosm.generators.Artwork import Artwork
 from config import IntegrationTestConfiguration
+from fixtures import artwork, npc, gem, deity, phobia, motivation
+
 
 class TestArtworkIntegration(unittest.TestCase):
     """ Test Artwork Integration """
     def setUp(self):
         """Create Redis Connection"""
         self.redis = IntegrationTestConfiguration.REDIS
+        artwork.import_fixtures(self)
+        gem.import_fixtures(self)
+        npc.import_fixtures(self)
+        phobia.import_fixtures(self)
+        motivation.import_fixtures(self)
+        deity.import_fixtures(self)
+
+    def tearDown(self):
+        self.redis.flushall()
 
     def test_kinds(self):
         """ Test all the artwork kinds, subkinds, and their templates """
         for kind in self.redis.lrange('artwork_kind', 0, -1):
-            print("kind: %s" % kind)
             for template in self.redis.lrange('artwork%s_template' % kind, 0, -1):
-                print("template: %s" % template)
                 artwork = Artwork(self.redis, {'kind': kind, 'template': template})
                 self.assertEqual(kind, str(artwork.kind))
 

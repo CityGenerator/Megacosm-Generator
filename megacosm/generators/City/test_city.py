@@ -8,7 +8,7 @@ from megacosm.generators.City import City
 import unittest
 from mock import Mock, patch, MagicMock
 import fakeredis
-import fixtures
+from fixtures import business, npc, region, motivation, phobia, city, organization, leader, country
 
 
 class TestCity(unittest.TestCase):
@@ -18,15 +18,15 @@ class TestCity(unittest.TestCase):
         """  """
         # TODO see if testconfiguration can put a prefix on redis keys to prevent overlap
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.business.import_fixtures(self)
-        fixtures.npc.import_fixtures(self)
-        fixtures.region.import_fixtures(self)
-        fixtures.motivation.import_fixtures(self)
-        fixtures.phobia.import_fixtures(self)
-        fixtures.city.import_fixtures(self)
-        fixtures.organization.import_fixtures(self)
-        fixtures.leader.import_fixtures(self)
-        fixtures.country.import_fixtures(self)
+        business.import_fixtures(self)
+        npc.import_fixtures(self)
+        region.import_fixtures(self)
+        motivation.import_fixtures(self)
+        phobia.import_fixtures(self)
+        city.import_fixtures(self)
+        organization.import_fixtures(self)
+        leader.import_fixtures(self)
+        country.import_fixtures(self)
 
     def tearDown(self):
         """ Clean up any changes from the last run. """

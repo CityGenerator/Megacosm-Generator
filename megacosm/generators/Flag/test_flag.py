@@ -7,15 +7,15 @@ from megacosm.generators.Flag import Flag
 import unittest
 import string
 import fakeredis
-from config import TestConfiguration
-import fixtures
+from fixtures import flag
+
 
 class TestFlag(unittest.TestCase):
 
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.flag.import_fixtures(self)
+        flag.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
