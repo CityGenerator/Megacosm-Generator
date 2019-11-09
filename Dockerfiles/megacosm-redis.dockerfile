@@ -1,5 +1,5 @@
 FROM redis:5
-MAINTAINER "Jesse Morgan <morgajel@gmail.com>"
+LABEL maintainer="Jesse Morgan <morgajel@gmail.com>"
 WORKDIR /app
 #COPY megacosm log run.py requirements.txt /app/
 COPY ./data /app
