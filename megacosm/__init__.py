@@ -6,7 +6,7 @@
 """`main` is the top level module for this application."""
 
 from flask import Flask, render_template, request
-from flask.ext.assets import Environment, Bundle
+from flask_assets import Environment, Bundle
 
 from megacosm.generators import Business
 from megacosm.generators import City
