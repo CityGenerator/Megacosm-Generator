@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import megacosm
 
 megacosm.app.config.from_object('config.TestConfiguration')

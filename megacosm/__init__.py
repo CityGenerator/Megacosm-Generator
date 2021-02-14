@@ -140,7 +140,7 @@ def npc_builder():
     classname = 'npc'
     (plist, pstring, pset) = builder_form_data(classname)
 
-    return render_template('generic_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
+    return render_template('npc_builder.html', plist=plist, pstring=pstring, pset=pset, name=classname)
 
 
 #########################################################################

@@ -3,4 +3,5 @@
 
 # Maximum number of characters on a single line.
 max-line-length=120
-
+reports=no
+disable=no-member,dangerous-default-value,invalid-name

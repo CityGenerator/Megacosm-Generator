@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Cuisine
 from megacosm.generators import Region
 from megacosm.generators import NPC
@@ -13,7 +15,7 @@ import fixtures
 class TestCuisine(unittest.TestCase):
 
     def setUp(self):
-        """  """
+        """ Set up the required fixtures """
         self.redis=fakeredis.FakeRedis()
         fixtures.npc.import_fixtures(self)
         fixtures.phobia.import_fixtures(self)
@@ -24,6 +26,7 @@ class TestCuisine(unittest.TestCase):
 
 
     def tearDown(self):
+        """ Clean up any changes from the last run. """
         self.redis.flushall()
 
     def test_random_cuisine(self):

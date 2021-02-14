@@ -32,43 +32,153 @@
 
 
         <h1>Let's build an NPC!</h1>
+    <div class='container-fluid'>
+        <div class="row">
         <form action="/npc" id="npcform">
 
 
-        <table>
-            {% for statname in otherstats %}
-            <tr>
-                <td>{{statname|capitalize}} </td>
-                <td>
-                    <select name="npc_{{statname}}">
-                        <option value=""></option>
-                        {% for stat in otherstats[statname]|sort %}
-                        <option value="{{ stat }}">{{stat }} </option>
-                        {% endfor %}
-                    <select>
-                </td>
-            </tr>
-            {% endfor %}
+            <div  class="col-xs-5">
+                <div style="border:1px solid black; margin-top:5px;">
+                    <h4>Basic Details</h4>
+                    <div>
+                        <label> Race:</label>
+                        <select name="npc_race">
+                            <option value=""></option>
+                            {% for stat in plist['race'] %}
+                            <option value="{{stat}}">{{stat }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% for stat in ['sex','age'] %}
+                    <div>
+                        <label> {{stat|capitalize}}:</label>
+                        <select name="npc_{{stat}}_roll">
+                            <option value=""></option>
+                            {% for stat in pset[stat]|sort %}
+                            <option value="{{ stat.score }}">{{stat.name }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="border:1px solid black; margin-top:5px;">
+                    <h4>Misc.</h4>
+                    {% for stat in ['skill', 'experience', 'money', 'luck'] %}
+                    <div>
+                        <label> {{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}_roll">
+                            <option value=""></option>
+                            {% for statvalue in pset[stat] %}
+                            <option value="{{ statvalue['score'] }}">{{statvalue['name'] }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                    {% for stat in ['posession','posessiondetail','marriagestatus','regret' ] %}
+                    <div>
+                        <label>{{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}">
+                            <option value=""></option>
+                            {% for statvalue in plist[stat] %}
+                            <option value="{{ loop.index-1 }}">{{statvalue }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="border:1px solid black; margin-top:5px;">
+                    <h4>Personality</h4>
+                    {% for stat in ['piety', 'honor', 'bravery', 'generous'] %}
+                    <div>
+                        <label> {{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}_roll">
+                            <option value=""></option>
+                            {% for statvalue in pset[stat] %}
+                            <option value="{{ statvalue['score'] }}">{{statvalue['name'] }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                </div>
 
+            </div>
+            <div class="col-xs-5">
+    
+                <div style="border:1px solid black; margin-top:5px;">
+                    <h4>Basic Stats</h4>
+                    {% for stat in ['strength','agility', 'endurance','intelligence','wisdom','charisma'] %}
+                    <div>
+                        <label> {{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}_roll">
+                            <option value=""></option>
+                            {% for statvalue in pset[stat] %}
+                            <option value="{{ statvalue['score'] }}">{{statvalue['name'] }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div style="border:1px solid black; margin-top:5px;">
+                    <h4>Physical Features</h4>
+                    <div>
+                        <label>Attractiveness:</label>
+                        <select name="npc_attractiveness_roll">
+                            <option value=""></option>
+                            {% for statvalue in pset['attractiveness'] %}
+                            <option value="{{ statvalue['score'] }}">{{statvalue['name'] }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% for stat in ['height','build','complexion','eye' ] %}
+                    <div>
+                        <label>{{ stat|capitalize }}:</label>
+                        <select name="npc_{{ stat }}">
+                            <option value=""></option>
+                            {% for statvalue in plist[stat] %}
+                            <option value="{{ loop.index-1 }}">{{statvalue }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    {% endfor %}
+                    <div>
+                        <label>Mark:</label>
+                        <select name="npc_mark">
+                            <option value=""></option>
+                            {% for statvalue in plist['mark'] %}
+                            <option value="{{ loop.index-1 }}">{{statvalue }} </option>
+                            {% endfor %}
+                        <select>
+                    </div>
+                    <div>
+                        <label>Mark Location:</label>
+                        <select name="npc_mark_location">
+                            <option value=""></option>
+                            {% for statvalue in plist['mark_location'] %}
+                            <option value="{{ loop.index-1 }}">{{ statvalue }} </option>
+                            {% endfor %}
+                        <select><br/>
+                        <label>Mark Chance</label> <input name="npc_mark_chance" maxlength="3" size="2"/>%
+                    </div>
+                    <div>
+                        <label>Medical Condition:</label>
+                        <select name="npc_medical_condition">
+                            <option value=""></option>
+                            {% for statvalue in plist['medical_condition'] %}
+                            <option value="{{ loop.index-1 }}">{{statvalue }} </option>
+                            {% endfor %}
+                        <select><label>Medical Condition Chance</label> <input name="npc_medical_condition_chance" maxlength="3" size="2"/>%
+                    </div>
+                </div>
+    
+            </div>
 
+            <div  class="col-xs-5" style="margin-top:5px; text-align:center" >
+                <input onclick="disable_unused();" type="submit" value="build!"></input>
+           </div>
 
-            {% for stat in statinfo %}
-            <tr>
-                <td>{{stat}}: </td>
-                <td>
-                    <select name="npc_{{stat}}_roll">
-                        <option value=""></option>
-                        {% for statstring in statinfo[stat] %}
-                        <option value="{{ statstring['score']}}">{{statstring['name'] }} </option>
-                        {% endfor %}
-                    <select>
-                </td> 
-            </tr> 
-            {% endfor %}
-        </table>
-            <input onclick="disable_unused();" type="submit" value="build!"></input>
         </form>
-
+        </div>
+    </div>
 {% endblock %}
 
 

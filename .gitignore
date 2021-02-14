@@ -1,15 +1,18 @@
+
 # Deprecated Data files
 data/*.xml
 
 # compiled python files
 *.py[cod]
 env/
-
+venv/
 # Secret Config files:
 config.py
 
 # generated files
 coverage/
+.idea/
+.terraform/
 .coverage
 .tox
 nosetests.xml

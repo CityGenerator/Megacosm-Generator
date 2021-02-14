@@ -19,3 +19,5 @@ class Wanted(Generator):
 
         self.headline = self.render_template(self.headline)
         self.lastseen = self.render_template(self.lastseen)
+    def __str__(self):
+        return "Wanted: %s" %  self.npc.name.fullname

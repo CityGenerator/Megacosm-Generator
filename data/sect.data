@@ -38,65 +38,68 @@ LPUSH sect_kind society
 
 
 # The ___________ _________ _______ are a beloved sect that focuses on stray cats.
+LPUSH sectname_fullname_template {{params.title}} {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}
+LPUSH sectname_shortname_template {{params.fullname}}
+LPUSH sectname_formalname_template {{params.fullname}}
 
-SET   name_secttitle_chance 30
-LPUSH name_secttitle Order of the 
-LPUSH name_secttitle Message of the
-LPUSH name_secttitle Pilgrims of 
-LPUSH name_secttitle Brethren of
-LPUSH name_secttitle Church of the 
-LPUSH name_secttitle Reformed
-LPUSH name_secttitle Sacred
-LPUSH name_secttitle Ancient Order of
+SET   sectname_title_chance 30
+LPUSH sectname_title Order of the 
+LPUSH sectname_title Message of the
+LPUSH sectname_title Pilgrims of 
+LPUSH sectname_title Brethren of
+LPUSH sectname_title Church of the 
+LPUSH sectname_title Reformed
+LPUSH sectname_title Sacred
+LPUSH sectname_title Ancient Order of
 
-LPUSH name_sectpre Prima
-LPUSH name_sectpre Kanno
-LPUSH name_sectpre Eani
-LPUSH name_sectpre Shaki
-LPUSH name_sectpre Orei
-LPUSH name_sectpre Ordi
-LPUSH name_sectpre Kabba
-LPUSH name_sectpre Delphi
-LPUSH name_sectpre Sera
-LPUSH name_sectpre Anna
-LPUSH name_sectpre Brudo
-LPUSH name_sectpre Diani
-LPUSH name_sectpre Free
-LPUSH name_sectpre Fera
-LPUSH name_sectpre Gonko
-LPUSH name_sectpre Lecto
+LPUSH sectname_pre Prima
+LPUSH sectname_pre Kanno
+LPUSH sectname_pre Eani
+LPUSH sectname_pre Shaki
+LPUSH sectname_pre Orei
+LPUSH sectname_pre Ordi
+LPUSH sectname_pre Kabba
+LPUSH sectname_pre Delphi
+LPUSH sectname_pre Sera
+LPUSH sectname_pre Anna
+LPUSH sectname_pre Brudo
+LPUSH sectname_pre Diani
+LPUSH sectname_pre Free
+LPUSH sectname_pre Fera
+LPUSH sectname_pre Gonko
+LPUSH sectname_pre Lecto
 
-SET   name_sectpost_chance 80
-LPUSH name_sectroot tav
-LPUSH name_sectroot dar
-LPUSH name_sectroot bor
-LPUSH name_sectroot c
-LPUSH name_sectroot bal
-LPUSH name_sectroot damp
-LPUSH name_sectroot moto
-LPUSH name_sectroot costal
-LPUSH name_sectroot far
-LPUSH name_sectroot rik
-LPUSH name_sectroot versal
-LPUSH name_sectroot dun
+SET   sectname_root_chance 80
+LPUSH sectname_root tav
+LPUSH sectname_root dar
+LPUSH sectname_root bor
+LPUSH sectname_root c
+LPUSH sectname_root bal
+LPUSH sectname_root damp
+LPUSH sectname_root moto
+LPUSH sectname_root costal
+LPUSH sectname_root far
+LPUSH sectname_root rik
+LPUSH sectname_root versal
+LPUSH sectname_root dun
 
-SET   name_sectpost_chance 30
-LPUSH name_sectpost ism
-LPUSH name_sectpost um
-LPUSH name_sectpost aj
-LPUSH name_sectpost ic
-LPUSH name_sectpost ites
-LPUSH name_sectpost oxy
-LPUSH name_sectpost ogy
-LPUSH name_sectpost ons
-LPUSH name_sectpost ists
+SET   sectname_post_chance 30
+LPUSH sectname_post ism
+LPUSH sectname_post um
+LPUSH sectname_post aj
+LPUSH sectname_post ic
+LPUSH sectname_post ites
+LPUSH sectname_post oxy
+LPUSH sectname_post ogy
+LPUSH sectname_post ons
+LPUSH sectname_post ists
 
 
-SET   name_secttrailer_chance 30
-LPUSH name_secttrailer Movement
-LPUSH name_secttrailer Temple
-LPUSH name_secttrailer Society
-LPUSH name_secttrailer Fellowship
-LPUSH name_secttrailer Witnesses
-LPUSH name_secttrailer Followers
-LPUSH name_secttrailer Radiance
+SET   name_sect_trailer_chance 30
+LPUSH name_sect_trailer Movement
+LPUSH name_sect_trailer Temple
+LPUSH name_sect_trailer Society
+LPUSH name_sect_trailer Fellowship
+LPUSH name_sect_trailer Witnesses
+LPUSH name_sect_trailer Followers
+LPUSH name_sect_trailer Radiance

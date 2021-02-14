@@ -1,4 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+""" Include this to load these fixtures. """
+
 def import_fixtures(self):
+    """ Create simple fixture entries..."""
 
     self.redis.lpush('organization_identification', 'with difficulty')
     self.redis.lpush('organization_kind', 'crime ring')
@@ -7,7 +13,7 @@ def import_fixtures(self):
     self.redis.lpush('organizationname_root', 'u')
     self.redis.lpush('organizationname_trailer', 'Dragons')
     self.redis.lpush('organization_powertype', 'gambling')
-    self.redis.lpush('organization_template', "{{params.leader.name['firstname']}}'s {{params.kind|title}}")
+    self.redis.lpush('organization_template', "{{params.leader.name.shortname}}'s {{params.kind|title}}")
     self.redis.zadd('organization_adaptability', '{"name":"stay ahead of new development",    "score":100  }', 100)
     self.redis.zadd('organization_age', '{"name":"ancient",       "score":100  }', 100)
     self.redis.zadd('organization_entry', '{"name":"impossible",      "score":100  }', 100)
@@ -23,7 +29,8 @@ def import_fixtures(self):
     self.redis.zadd('organization_teamwork', '{ "name":"as a well oiled machine",         "score":100 }', 100)
     self.redis.zadd('organization_violence', '{"name":"passive",       "score":100  }', 100)
     self.redis.zadd('organization_visibility', '{ "name":"well known",            "score":100 }', 100)
-    self.redis.lpush('organizationname_fullname_template', 'The {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
+    self.redis.lpush('organizationname_fullname_template',
+                     'The {{params.pre}}{{params.root}}{{params.post}} {{params.trailer}}')
     self.redis.lpush('organizationname_shortname_template', 'The {{params.kind|title}}')
     self.redis.lpush('organizationname_formalname_template', '{{params.fullname}}')
 

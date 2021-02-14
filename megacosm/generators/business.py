@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from npc import NPC
-from name import Name
+""" The Business class generates any number of business types
+    including a rough description, patrons, and other details."""
 import logging
 import random
+from megacosm.generators.generator import Generator
+from megacosm.generators.npc import NPC
+from megacosm.generators.name import Name
 
 
 class Business(Generator):
@@ -41,18 +43,18 @@ class Business(Generator):
 
         # Business is one of the few classes where trailer doesn't start as part of the name
         # So we have to add it here.
-        
-        self.name=Name(self.redis, 'business', {'trailer': self.trailer})
+        self.name = Name(self.redis, 'business', {'trailer': self.trailer})
 
         # If maxfloors isn'd designated, set it to 1
-
         if not hasattr(self, 'maxfloors'):
             self.maxfloors = 1
+        else:
+            self.maxfloors = int(self.maxfloors)
 
         # don't set floors if it already exists
 
         if not hasattr(self, 'floor'):
-            self.floor = random.randint(1, int(self.maxfloors))
+            self.floor = random.randint(1, self.maxfloors)
 
     def __str__(self):
         return self.name.fullname.title()

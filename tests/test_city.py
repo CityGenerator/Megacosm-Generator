@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import City, Region
 import unittest2 as unittest
 from mock import Mock, patch, MagicMock
@@ -11,6 +13,7 @@ import fixtures
 class TestCity(unittest.TestCase):
 
     def setUp(self):
+        """ Set up the required fixtures """
         """  """
         # TODO see if testconfiguration can put a prefix on redis keys to prevent overlap
         self.redis = fakeredis.FakeRedis()
@@ -27,6 +30,7 @@ class TestCity(unittest.TestCase):
 
 
     def tearDown(self):
+        """ Clean up any changes from the last run. """
         """  """
         self.redis.flushall()
 

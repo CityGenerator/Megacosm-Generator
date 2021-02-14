@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-import npc
+""" Bond generator creates a bond between two people """
+
 import logging
 import random
+from megacosm.generators.generator import Generator
+from megacosm.generators import npc
 
 
 class Bond(Generator):

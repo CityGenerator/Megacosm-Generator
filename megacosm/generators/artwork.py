@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-from gem import Gem
-from generator import Generator
+""" Artwork will generate several type of artwork. """
 import logging
-
+from megacosm.generators.gem import Gem
+from megacosm.generators.deity import Deity
+from megacosm.generators.generator import Generator
+#from pprint import pprint
 
 class Artwork(Generator):
     """Generate an exquisite piece of artwork."""
@@ -13,8 +14,12 @@ class Artwork(Generator):
         Generator.__init__(self, redis, features)
         self.logger = logging.getLogger(__name__)
 
+        self.generate_features('artwork'+self.kind)
+
         if not hasattr(self, 'gem'):
             setattr(self, 'gem', Gem(self.redis))
+        if not hasattr(self, 'deity'):
+            setattr(self, 'deity', Deity(self.redis))
 
         if not hasattr(self, 'text'):
             self.text = self.render_template(self.template)

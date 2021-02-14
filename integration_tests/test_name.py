@@ -13,7 +13,7 @@ import redis
 from config import IntegrationTestConfiguration
 
 
-class TestName(unittest.TestCase):
+class TestNameIntegration(unittest.TestCase):
 
     def setUp(self):
         self.redis = redis.from_url(IntegrationTestConfiguration.REDIS_URL)

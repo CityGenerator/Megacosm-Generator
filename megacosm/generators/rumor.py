@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from generator import Generator
-from npc import NPC
+""" Rumors are a good way to start a new quest or add drama."""
+
 import logging
+from megacosm.generators.generator import Generator
+from megacosm.generators.npc import NPC
 
 
 class Rumor(Generator):
-
+    """ While some rumors are based in fact, most aren't. """
     def __init__(self, redis, features={}):
 
         Generator.__init__(self, redis, features)

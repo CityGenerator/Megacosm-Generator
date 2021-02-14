@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Continent,Country
 import unittest2 as unittest
 from pprint import pprint
@@ -11,7 +13,7 @@ import fixtures
 class TestContinent(unittest.TestCase):
 
     def setUp(self):
-        """  """
+        """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis()
 
         fixtures.continent.import_fixtures(self)
@@ -26,6 +28,7 @@ class TestContinent(unittest.TestCase):
         fixtures.business.import_fixtures(self)
         self.redis.lpush('npc_race','gnome')
     def tearDown(self):
+        """ Clean up any changes from the last run. """
         self.redis.flushall()
 
     def test_random_continent(self):

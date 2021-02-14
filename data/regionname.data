@@ -11,6 +11,7 @@ SET   regionname_trailer_chance 50
 
 LPUSH regionname_title East
 LPUSH regionname_title West
+LPUSH regionname_title Greater
 LPUSH regionname_title North
 LPUSH regionname_title South
 LPUSH regionname_title Lower
@@ -21,6 +22,7 @@ LPUSH regionname_pre Ab
 LPUSH regionname_pre Ac
 LPUSH regionname_pre Ad
 LPUSH regionname_pre Af
+LPUSH regionname_pre Agu
 LPUSH regionname_pre Ba
 LPUSH regionname_pre Bi
 LPUSH regionname_pre Alb
@@ -28,6 +30,74 @@ LPUSH regionname_pre Lom
 LPUSH regionname_pre Loir
 LPUSH regionname_pre Mid
 LPUSH regionname_pre Pyr
+LPUSH regionname_pre Bal
+LPUSH regionname_pre Bol
+LPUSH regionname_pre Born
+LPUSH regionname_pre Brand
+LPUSH regionname_pre Cal
+LPUSH regionname_pre Cham
+LPUSH regionname_pre Cors
+LPUSH regionname_pre Dur
+LPUSH regionname_pre Delt
+LPUSH regionname_pre Fern
+LPUSH regionname_pre Flor
+LPUSH regionname_pre Geor
+LPUSH regionname_pre Pol
+LPUSH regionname_pre Hidal
+LPUSH regionname_pre Id
+LPUSH regionname_pre Io
+LPUSH regionname_pre Ital
+LPUSH regionname_pre Jal
+LPUSH regionname_pre Jig
+LPUSH regionname_pre Kan
+LPUSH regionname_pre Kad
+LPUSH regionname_pre Lag
+LPUSH regionname_pre Mart
+LPUSH regionname_pre Mar
+LPUSH regionname_pre Man
+LPUSH regionname_pre Mis
+LPUSH regionname_pre Mor
+LPUSH regionname_pre Hamp
+LPUSH regionname_pre Jer
+LPUSH regionname_pre Brun
+LPUSH regionname_pre Nor
+LPUSH regionname_pre Car
+LPUSH regionname_pre Dak
+LPUSH regionname_pre Ok
+LPUSH regionname_pre Para
+LPUSH regionname_pre Per
+LPUSH regionname_pre Pic
+LPUSH regionname_pre Plat
+LPUSH regionname_pre Port
+LPUSH regionname_pre Punj
+LPUSH regionname_pre Ruth
+LPUSH regionname_pre Rho
+LPUSH regionname_pre San
+LPUSH regionname_pre Sax
+LPUSH regionname_pre Sar
+LPUSH regionname_pre Sil
+LPUSH regionname_pre Sin
+LPUSH regionname_pre Son
+LPUSH regionname_pre Tab
+LPUSH regionname_pre Tam
+LPUSH regionname_pre Tenn
+LPUSH regionname_pre Tex
+LPUSH regionname_pre Tyr
+LPUSH regionname_pre Tuc
+LPUSH regionname_pre Val
+LPUSH regionname_pre Ven
+LPUSH regionname_pre Wal
+LPUSH regionname_pre Vic
+LPUSH regionname_pre Ver
+LPUSH regionname_pre Wis
+LPUSH regionname_pre Yuk
+LPUSH regionname_pre Zam
+LPUSH regionname_pre Zel
+LPUSH regionname_pre Zer
+LPUSH regionname_pre Xul
+LPUSH regionname_pre Xan
+LPUSH regionname_pre Yam
+LPUSH regionname_pre Wod
 
 
 LPUSH regionname_root ad
@@ -37,6 +107,46 @@ LPUSH regionname_root ed
 LPUSH regionname_root har
 LPUSH regionname_root ja
 LPUSH regionname_root ruz
+LPUSH regionname_root nar
+LPUSH regionname_root Ab
+LPUSH regionname_root zon
+LPUSH regionname_root dal
+LPUSH regionname_root kan
+LPUSH regionname_root vern
+LPUSH regionname_root izon
+LPUSH regionname_root sam
+LPUSH regionname_root den
+LPUSH regionname_root rina
+LPUSH regionname_root uchi
+LPUSH regionname_root ar
+LPUSH regionname_root yel
+LPUSH regionname_root iv
+LPUSH regionname_root em
+LPUSH regionname_root ab
+LPUSH regionname_root ifor
+LPUSH regionname_root an
+LPUSH regionname_root ech
+LPUSH regionname_root tab
+LPUSH regionname_root pag
+LPUSH regionname_root apa
+LPUSH regionname_root im
+LPUSH regionname_root ect
+LPUSH regionname_root si
+LPUSH regionname_root awa
+LPUSH regionname_root tri
+LPUSH regionname_root ang
+LPUSH regionname_root cu
+LPUSH regionname_root ic
+LPUSH regionname_root uli
+LPUSH regionname_root elo
+LPUSH regionname_root aju
+LPUSH regionname_root un
+LPUSH regionname_root nat
+LPUSH regionname_root ark
+LPUSH regionname_root yan
+LPUSH regionname_root erre
+LPUSH regionname_root elli
+LPUSH regionname_root appo
 
 LPUSH regionname_post a
 LPUSH regionname_post ad
@@ -44,333 +154,59 @@ LPUSH regionname_post ain
 LPUSH regionname_post awa
 LPUSH regionname_post dy
 LPUSH regionname_post ia
+LPUSH regionname_post tes
 LPUSH regionname_post re
 LPUSH regionname_post zo
+LPUSH regionname_post oas
+LPUSH regionname_post ma
+LPUSH regionname_post wa
+LPUSH regionname_post cio
+LPUSH regionname_post taka
+LPUSH regionname_post sina
+LPUSH regionname_post la
+LPUSH regionname_post via
+LPUSH regionname_post ra
+LPUSH regionname_post ess
+LPUSH regionname_post o
+LPUSH regionname_post hor
+LPUSH regionname_post bom
+LPUSH regionname_post na
+LPUSH regionname_post a
+LPUSH regionname_post ka
+LPUSH regionname_post via
+LPUSH regionname_post tan
+LPUSH regionname_post stan
+LPUSH regionname_post nois
+LPUSH regionname_post chal
+LPUSH regionname_post ero
+LPUSH regionname_post ria
+LPUSH regionname_post ne
+LPUSH regionname_post tia
+LPUSH regionname_post tra
+LPUSH regionname_post cca
+LPUSH regionname_post oba
+LPUSH regionname_post burg
+LPUSH regionname_post sina
+LPUSH regionname_post gan
+LPUSH regionname_post can
+LPUSH regionname_post nas
+LPUSH regionname_post ota
+LPUSH regionname_post ippi
+LPUSH regionname_post wick
+LPUSH regionname_post ska
+LPUSH regionname_post buco
+LPUSH regionname_post mo
+LPUSH regionname_post gon
+LPUSH regionname_post bla
+LPUSH regionname_post lia
+LPUSH regionname_post esa
 
 
 LPUSH regionname_trailer District
 LPUSH regionname_trailer Province
 LPUSH regionname_trailer Region
 LPUSH regionname_trailer Territory
+LPUSH regionname_trailer Country
 
 
 
-#Pays-de-la-Loire
-#Basque Country
-#Lorraine
-#Colima
-#Los
-#Kebbi
-#Nagaland
-#Madhya
-#Sabah
-#Delaware
-#Greater Poland
-#Cantabria
-#Jalisco
-#Ayacucho
-#Hidalgo
-#Valencian Community
-#São
-#norfolk
-#Red Ruthenia
-#Oregon
-#Zamfara
-#Brittany
-#Ogun
-#Quintana
-#Odisha
-#Benue
-#Centre
-#Jammu
-#Nuevo
-#Falcón
-#Yucatán
-#Umbria
-#Amazonas
-#Coahuila
-#Champagne-Ardenne
-#Florida
-#Espírito
-#Italian
-#Uttar
-#Terengganu
-#Guerrero
-#Aquitaine
-#Portuguesa
-#Auvergne
-#Alabama
-#Silesia
-#Masovia
-#queensland
-#Oaxaca
-#Calabria
-#Durango
-#wales
-#Morros
-#Provence-Alpes-Côte
-#Illinois
-#Táchira
-#Martinique
-#Pennsylvania[E]
-#West
-#Tyrol
-#Nova Scotia
-#Rhine-Westphalia
-#Yobe
-#Murcia
-#Réunion
-#Tabasco
-#Andalusia
-#Zulia
-#San
-#Indiana
-#Alberta
-#Imo
-#Veracruz
-#Virginia[G]
-#Pará
-#Louisiana
-#Aragon
-#Extremadura
-#Miranda
-#Arizona
-#Nebraska
-#Puebla
-#Mecklenburg-Western
-#Madrid
-#Balearic Islands
-#Monagas
-#South Dakota
-#Wappen
-#Escudo
-#Aguascalientes
-#Rajasthan
-#Southern Podlasie
-#Piedmont
-#Juan
-#Kuyavia
-#Guanajuato
-#Barinas
-#Kerala
-#Podlaskie
-#Burgundy
-#Ebonyi
-#British Columbia
-#Campania
-#Navarra
-#Sarawak
-#Anzoátegui
-#Uttarakhand
-#Barquisimeto
-#Georgia
-#Rhône-Alpes
-#Tripura
-#Sergipe
-#Zacatecas
-#Lazio
-#Prince Edward Island
-#jervis
-#Ohio
-#Michigan
-#amapa
-#Westphalia
-#Kedah
-#Apulia
-#Kaduna
-#Colorado
-#Perak
-#North Carolina
-#Tennessee
-#Kelantan
-#Maryland
-#Niger
-#Mississippi
-#Edo
-#Malacca
-#Ceará
-#Sicilian
-#Rhineland-Palatinate
-#Goiás
-#New Brunswick
-#Berlin
-#ESCUDO
-#Catalonia
-#Amacuro
-#Maracay
-#Anambra
-#Arunachal
-#Coat
-#Ontario
-#Gombe
-#Osun
-#Akwa
-#Newfoundland and Labrador
-#Messina
-#Poitou-Charentes
-#Distrito
-#Wisconsin
-#Nevada
-#Taraba
-#Assam
-#Santa
-#Giulia
-#Bolívar
-#Massachusetts[D]
-#Missouri
-#Chiapas
-#Guadeloupe
-#Molise
-#Guayana
-#Castilla y Leon
-#Nunavut
-#Bahia
-#Manipur
-#Plateau
-#Negeri
-#Asturias
-#Katsina
-#Languedoc-Roussillon
-#Maharashtra
-#Johor
-#Borno
-#Nueva
-#Utah
-#Guárico
-#Kansas
-#Paraíba
-#Tlaxcala
-#Kwara
-#Apure
-#Wyoming
-#Enugu
-#Haryana
-#Limousin
-#Lusatia
-#Jigawa
-#Saskatchewan
-#Nord-Pas-de-Calais
-#Mérida
-#Perlis
-#den-Württemberg
-#New Jersey
-#California
-#Bremen
-#Bauchi
-#Idaho
-#Palermo
-#Jharkhand
-#Texas
-#Connecticut
-#Valencia
-#Kogi
-#Prussia
-#Mato
-#victoria
-#Yukon
-#Lagos
-#amazonas
-#Trujillo
-#Picardy
-#Kano
-#New Hampshire
-#Canary Islands
-#Karnataka
-#Franche-Comté
-#Ekiti
-#Baden-Württemberg
-#Bavaria
-#North Dakota
-#Alaska
-#Oklahoma
-#West Virginia
-#Carabobo
-#Barcelona
-#Arkansas
-#Sokoto
-#Himachal
-#Île-de-France
-#Iowa
-#Minnesota
-#New Mexico
-#Piauí
-#Ondo
-#Bayelsa
-#Quebec
-#Paraná
-#Tucupita
-#Pernambuco
-#Sonora
-#Nayarit
-#Tuscany
-#Vermont
-#Montana
-#Maine
-#Marche
-#Goa
-#Brandenburg
-#La Rioja
-#Lara
-#Rhode Island[F]
-#tasmania
-#New York
-#Basilicata
-#Galicia
-#Puerto
-#Lower
-#Liguria
-#Kentucky[C]
-#alagoas
-#Roraima
-#Delta
-#Selangor
-#Tamaulipas
-#Northwest Territories
-#Pomerania
-#Chhattisgarh
-#Punjab
-#Castilla-La Mancha
-#Maranhão
-#Ignacio
-#Hawaii
-#Pomerelia
-#Michoacán
-#Veneto
-#Washington
-#Fernando
-#Querétaro
-#Landessymbol
-#Coro
-#Upper
-#South Carolina
-#Saxony
-#Nasarawa
-#Minas
-#Hamburg
-#Hesse
-#Oyo
-#México
-#Ciudad
-#Corsica
-#Pahang
-#Meghalaya
-#Ibom
-#Penang
-#Tocantins
-#Manitoba
-#Campeche
-#Sikkim
-#Mizoram
-#Aragua
-#Rondônia
-#Alsace
-#Andhra
-#Emilia-Romagna
-#Guiana
-#Morelos
-#Tamil
-#Chihuahua
-#Sinaloa
-#Gujarat
-#Lesser Poland
-#

@@ -1,0 +1,681 @@
+LPUSH elixir_color absolute zero
+LPUSH elixir_color acid green
+LPUSH elixir_color aero
+LPUSH elixir_color aero blue
+LPUSH elixir_color african violet
+LPUSH elixir_color air superiority blue
+LPUSH elixir_color alabama crimson
+LPUSH elixir_color alice blue
+LPUSH elixir_color alien armpit
+LPUSH elixir_color alizarin crimson
+LPUSH elixir_color alloy orange
+LPUSH elixir_color almond
+LPUSH elixir_color amaranth
+LPUSH elixir_color amaranth deep purple
+LPUSH elixir_color amaranth pink
+LPUSH elixir_color amaranth purple
+LPUSH elixir_color amaranth red
+LPUSH elixir_color amazon
+LPUSH elixir_color amber
+LPUSH elixir_color american rose
+LPUSH elixir_color amethyst
+LPUSH elixir_color android green
+LPUSH elixir_color anti-flash white
+LPUSH elixir_color antique brass
+LPUSH elixir_color antique bronze
+LPUSH elixir_color antique fuchsia
+LPUSH elixir_color antique ruby
+LPUSH elixir_color antique white
+LPUSH elixir_color apple green
+LPUSH elixir_color apricot
+LPUSH elixir_color aqua
+LPUSH elixir_color aquamarine
+LPUSH elixir_color arctic lime
+LPUSH elixir_color army green
+LPUSH elixir_color artichoke
+LPUSH elixir_color arylide yellow
+LPUSH elixir_color ash grey
+LPUSH elixir_color asparagus
+LPUSH elixir_color atomic tangerine
+LPUSH elixir_color auburn
+LPUSH elixir_color aureolin
+LPUSH elixir_color aurometalsaurus
+LPUSH elixir_color avocado
+LPUSH elixir_color aztec gold
+LPUSH elixir_color azure
+LPUSH elixir_color azure mist
+LPUSH elixir_color azureish white
+LPUSH elixir_color baby blue
+LPUSH elixir_color baby blue eyes
+LPUSH elixir_color baby pink
+LPUSH elixir_color baby powder
+LPUSH elixir_color baker-miller pink
+LPUSH elixir_color ball blue
+LPUSH elixir_color banana mania
+LPUSH elixir_color banana yellow
+LPUSH elixir_color bangladesh green
+LPUSH elixir_color barbie pink
+LPUSH elixir_color barn red
+LPUSH elixir_color battleship grey
+LPUSH elixir_color bazaar
+LPUSH elixir_color beau blue
+LPUSH elixir_color beaver
+LPUSH elixir_color beige
+LPUSH elixir_color belgion
+LPUSH elixir_color b'dazzled blue
+LPUSH elixir_color big dip of ruby
+LPUSH elixir_color big foot feet
+LPUSH elixir_color bisque
+LPUSH elixir_color bistre
+LPUSH elixir_color bistre brown
+LPUSH elixir_color bitter lemon
+LPUSH elixir_color bitter lime
+LPUSH elixir_color bittersweet
+LPUSH elixir_color bittersweet shimmer
+LPUSH elixir_color black
+LPUSH elixir_color black bean
+LPUSH elixir_color black coral
+LPUSH elixir_color black leather jacket
+LPUSH elixir_color black olive
+LPUSH elixir_color black shadows
+LPUSH elixir_color blanched almond
+LPUSH elixir_color blast-off bronze
+LPUSH elixir_color bleu de france
+LPUSH elixir_color blizzard blue
+LPUSH elixir_color blond
+LPUSH elixir_color blue
+LPUSH elixir_color blue bell
+LPUSH elixir_color blue-gray
+LPUSH elixir_color blue-green
+LPUSH elixir_color blue jeans
+LPUSH elixir_color blue lagoon
+LPUSH elixir_color blue-magenta violet
+LPUSH elixir_color blue sapphire
+LPUSH elixir_color blue-violet
+LPUSH elixir_color blue yonder
+LPUSH elixir_color blueberry
+LPUSH elixir_color bluebonnet
+LPUSH elixir_color blush
+LPUSH elixir_color bole
+LPUSH elixir_color bondi blue
+LPUSH elixir_color bone
+LPUSH elixir_color booger buster
+LPUSH elixir_color boston university red
+LPUSH elixir_color bottle green
+LPUSH elixir_color boysenberry
+LPUSH elixir_color brandeis blue
+LPUSH elixir_color brass
+LPUSH elixir_color brick red
+LPUSH elixir_color bright cerulean
+LPUSH elixir_color bright green
+LPUSH elixir_color bright lavender
+LPUSH elixir_color bright lilac
+LPUSH elixir_color bright maroon
+LPUSH elixir_color bright navy blue
+LPUSH elixir_color bright pink
+LPUSH elixir_color bright turquoise
+LPUSH elixir_color bright ube
+LPUSH elixir_color brilliant azure
+LPUSH elixir_color brilliant lavender
+LPUSH elixir_color brilliant rose
+LPUSH elixir_color brink pink
+LPUSH elixir_color british racing green
+LPUSH elixir_color bronze
+LPUSH elixir_color bronze yellow
+LPUSH elixir_color brown-nose
+LPUSH elixir_color brown sugar
+LPUSH elixir_color brunswick green
+LPUSH elixir_color bubble gum
+LPUSH elixir_color bubbles
+LPUSH elixir_color bud green
+LPUSH elixir_color buff
+LPUSH elixir_color bulgarian rose
+LPUSH elixir_color burgundy
+LPUSH elixir_color burlywood
+LPUSH elixir_color burnished brown
+LPUSH elixir_color burnt orange
+LPUSH elixir_color burnt sienna
+LPUSH elixir_color burnt umber
+LPUSH elixir_color byzantine
+LPUSH elixir_color byzantium
+LPUSH elixir_color cadet
+LPUSH elixir_color cadet blue
+LPUSH elixir_color cadet grey
+LPUSH elixir_color cadmium green
+LPUSH elixir_color cadmium orange
+LPUSH elixir_color cadmium red
+LPUSH elixir_color cadmium yellow
+LPUSH elixir_color cafe au lait
+LPUSH elixir_color cafe noir
+LPUSH elixir_color cal poly green
+LPUSH elixir_color cambridge blue
+LPUSH elixir_color camel
+LPUSH elixir_color cameo pink
+LPUSH elixir_color camouflage green
+LPUSH elixir_color canary yellow
+LPUSH elixir_color candy apple red
+LPUSH elixir_color candy pink
+LPUSH elixir_color capri
+LPUSH elixir_color caput mortuum
+LPUSH elixir_color cardinal
+LPUSH elixir_color caribbean green
+LPUSH elixir_color carmine
+LPUSH elixir_color carmine pink
+LPUSH elixir_color carmine red
+LPUSH elixir_color carnation pink
+LPUSH elixir_color carnelian
+LPUSH elixir_color carolina blue
+LPUSH elixir_color carrot orange
+LPUSH elixir_color castleton green
+LPUSH elixir_color catalina blue
+LPUSH elixir_color catawba
+LPUSH elixir_color cedar chest
+LPUSH elixir_color ceil
+LPUSH elixir_color celadon
+LPUSH elixir_color celadon blue
+LPUSH elixir_color celadon green
+LPUSH elixir_color celeste
+LPUSH elixir_color celestial blue
+LPUSH elixir_color cerise
+LPUSH elixir_color cerise pink
+LPUSH elixir_color cerulean
+LPUSH elixir_color cerulean blue
+LPUSH elixir_color cerulean frost
+LPUSH elixir_color cg blue
+LPUSH elixir_color cg red
+LPUSH elixir_color chamoisee
+LPUSH elixir_color champagne
+LPUSH elixir_color charcoal
+LPUSH elixir_color charleston green
+LPUSH elixir_color charm pink
+LPUSH elixir_color cherry
+LPUSH elixir_color cherry blossom pink
+LPUSH elixir_color chestnut
+LPUSH elixir_color china pink
+LPUSH elixir_color china rose
+LPUSH elixir_color chinese red
+LPUSH elixir_color chinese violet
+LPUSH elixir_color chlorophyll green
+LPUSH elixir_color chrome yellow
+LPUSH elixir_color cinereous
+LPUSH elixir_color cinnabar
+LPUSH elixir_color cinnamon
+LPUSH elixir_color cinnamon satin
+LPUSH elixir_color citrine
+LPUSH elixir_color citron
+LPUSH elixir_color claret
+LPUSH elixir_color classic rose
+LPUSH elixir_color cobalt blue
+LPUSH elixir_color cocoa brown
+LPUSH elixir_color coconut
+LPUSH elixir_color coffee
+LPUSH elixir_color columbia blue
+LPUSH elixir_color congo pink
+LPUSH elixir_color cool black
+LPUSH elixir_color cool grey
+LPUSH elixir_color copper
+LPUSH elixir_color copper penny
+LPUSH elixir_color copper red
+LPUSH elixir_color copper rose
+LPUSH elixir_color coquelicot
+LPUSH elixir_color coral
+LPUSH elixir_color coral pink
+LPUSH elixir_color coral red
+LPUSH elixir_color cordovan
+LPUSH elixir_color corn
+LPUSH elixir_color cornell red
+LPUSH elixir_color cornflower blue
+LPUSH elixir_color cornsilk
+LPUSH elixir_color cosmic cobalt
+LPUSH elixir_color cosmic latte
+LPUSH elixir_color coyote brown
+LPUSH elixir_color cotton candy
+LPUSH elixir_color cream
+LPUSH elixir_color crimson
+LPUSH elixir_color crimson glory
+LPUSH elixir_color crimson red
+LPUSH elixir_color cultured
+LPUSH elixir_color cyan
+LPUSH elixir_color cyan azure
+LPUSH elixir_color cyan-blue azure
+LPUSH elixir_color cyan cobalt blue
+LPUSH elixir_color cyan cornflower blue
+LPUSH elixir_color cyber grape
+LPUSH elixir_color cyber yellow
+LPUSH elixir_color cyclamen
+LPUSH elixir_color daffodil
+LPUSH elixir_color dandelion
+LPUSH elixir_color dark blue
+LPUSH elixir_color dark blue-gray
+LPUSH elixir_color dark brown
+LPUSH elixir_color dark brown-tangelo
+LPUSH elixir_color dark byzantium
+LPUSH elixir_color dark candy apple red
+LPUSH elixir_color dark cerulean
+LPUSH elixir_color dark chestnut
+LPUSH elixir_color dark coral
+LPUSH elixir_color dark cyan
+LPUSH elixir_color dark electric blue
+LPUSH elixir_color dark goldenrod
+LPUSH elixir_color dark green
+LPUSH elixir_color dark gunmetal
+LPUSH elixir_color dark imperial blue
+LPUSH elixir_color dark imperial blue
+LPUSH elixir_color dark jungle green
+LPUSH elixir_color dark khaki
+LPUSH elixir_color dark lava
+LPUSH elixir_color dark lavender
+LPUSH elixir_color dark liver
+LPUSH elixir_color dark magenta
+LPUSH elixir_color dark medium gray
+LPUSH elixir_color dark midnight blue
+LPUSH elixir_color dark moss green
+LPUSH elixir_color dark olive green
+LPUSH elixir_color dark orange
+LPUSH elixir_color dark orchid
+LPUSH elixir_color dark pastel blue
+LPUSH elixir_color dark pastel green
+LPUSH elixir_color dark pastel purple
+LPUSH elixir_color dark pastel red
+LPUSH elixir_color dark pink
+LPUSH elixir_color dark powder blue
+LPUSH elixir_color dark puce
+LPUSH elixir_color dark purple
+LPUSH elixir_color dark raspberry
+LPUSH elixir_color dark red
+LPUSH elixir_color dark salmon
+LPUSH elixir_color dark scarlet
+LPUSH elixir_color dark sea green
+LPUSH elixir_color dark sienna
+LPUSH elixir_color dark sky blue
+LPUSH elixir_color dark slate blue
+LPUSH elixir_color dark slate gray
+LPUSH elixir_color dark spring green
+LPUSH elixir_color dark tan
+LPUSH elixir_color dark tangerine
+LPUSH elixir_color dark taupe
+LPUSH elixir_color dark terra cotta
+LPUSH elixir_color dark turquoise
+LPUSH elixir_color dark vanilla
+LPUSH elixir_color dark violet
+LPUSH elixir_color dark yellow
+LPUSH elixir_color dartmouth green
+LPUSH elixir_color davy's grey
+LPUSH elixir_color debian red
+LPUSH elixir_color deep aquamarine
+LPUSH elixir_color deep carmine
+LPUSH elixir_color deep carmine pink
+LPUSH elixir_color deep carrot orange
+LPUSH elixir_color deep cerise
+LPUSH elixir_color deep champagne
+LPUSH elixir_color deep chestnut
+LPUSH elixir_color deep coffee
+LPUSH elixir_color deep fuchsia
+LPUSH elixir_color deep green
+LPUSH elixir_color deep green-cyan turquoise
+LPUSH elixir_color deep jungle green
+LPUSH elixir_color deep lemon
+LPUSH elixir_color deep lilac
+LPUSH elixir_color deep magenta
+LPUSH elixir_color deep maroon
+LPUSH elixir_color deep mauve
+LPUSH elixir_color deep moss green
+LPUSH elixir_color deep peach
+LPUSH elixir_color deep pink
+LPUSH elixir_color deep puce
+LPUSH elixir_color deep red
+LPUSH elixir_color deep ruby
+LPUSH elixir_color deep saffron
+LPUSH elixir_color deep sky blue
+LPUSH elixir_color deep space sparkle
+LPUSH elixir_color deep spring bud
+LPUSH elixir_color deep taupe
+LPUSH elixir_color deep tuscan red
+LPUSH elixir_color deep violet
+LPUSH elixir_color deer
+LPUSH elixir_color denim
+LPUSH elixir_color denim blue
+LPUSH elixir_color desaturated cyan
+LPUSH elixir_color desert
+LPUSH elixir_color desert sand
+LPUSH elixir_color desire
+LPUSH elixir_color diamond
+LPUSH elixir_color dim gray
+LPUSH elixir_color dingy dungeon
+LPUSH elixir_color dirt
+LPUSH elixir_color dodger blue
+LPUSH elixir_color dogwood rose
+LPUSH elixir_color dollar bill
+LPUSH elixir_color donkey brown
+LPUSH elixir_color drab
+LPUSH elixir_color duke blue
+LPUSH elixir_color dust storm
+LPUSH elixir_color dutch white
+LPUSH elixir_color earth yellow
+LPUSH elixir_color ebony
+LPUSH elixir_color ecru
+LPUSH elixir_color eerie black
+LPUSH elixir_color eggplant
+LPUSH elixir_color eggshell
+LPUSH elixir_color egyptian blue
+LPUSH elixir_color electric blue
+LPUSH elixir_color electric crimson
+LPUSH elixir_color electric cyan
+LPUSH elixir_color electric green
+LPUSH elixir_color electric indigo
+LPUSH elixir_color electric lavender
+LPUSH elixir_color electric lime
+LPUSH elixir_color electric purple
+LPUSH elixir_color electric ultramarine
+LPUSH elixir_color electric violet
+LPUSH elixir_color electric yellow
+LPUSH elixir_color emerald
+LPUSH elixir_color eminence
+LPUSH elixir_color english green
+LPUSH elixir_color english lavender
+LPUSH elixir_color english red
+LPUSH elixir_color english vermillion
+LPUSH elixir_color english violet
+LPUSH elixir_color eton blue
+LPUSH elixir_color eucalyptus
+LPUSH elixir_color fallow
+LPUSH elixir_color falu red
+LPUSH elixir_color fandango
+LPUSH elixir_color fandango pink
+LPUSH elixir_color fashion fuchsia
+LPUSH elixir_color fawn
+LPUSH elixir_color feldgrau
+LPUSH elixir_color feldspar
+LPUSH elixir_color fern green
+LPUSH elixir_color ferrari red
+LPUSH elixir_color field drab
+LPUSH elixir_color fiery rose
+LPUSH elixir_color firebrick
+LPUSH elixir_color fire engine red
+LPUSH elixir_color flame
+LPUSH elixir_color flamingo pink
+LPUSH elixir_color flattery
+LPUSH elixir_color flavescent
+LPUSH elixir_color flax
+LPUSH elixir_color flirt
+LPUSH elixir_color floral white
+LPUSH elixir_color fluorescent orange
+LPUSH elixir_color fluorescent pink
+LPUSH elixir_color fluorescent yellow
+LPUSH elixir_color folly
+LPUSH elixir_color french beige
+LPUSH elixir_color french bistre
+LPUSH elixir_color french blue
+LPUSH elixir_color french fuchsia
+LPUSH elixir_color french lilac
+LPUSH elixir_color french lime
+LPUSH elixir_color french mauve
+LPUSH elixir_color french pink
+LPUSH elixir_color french plum
+LPUSH elixir_color french puce
+LPUSH elixir_color french raspberry
+LPUSH elixir_color french rose
+LPUSH elixir_color french sky blue
+LPUSH elixir_color french violet
+LPUSH elixir_color french wine
+LPUSH elixir_color fresh air
+LPUSH elixir_color frostbite
+LPUSH elixir_color fuchsia
+LPUSH elixir_color fuchsia pink
+LPUSH elixir_color fuchsia purple
+LPUSH elixir_color fuchsia rose
+LPUSH elixir_color fulvous
+LPUSH elixir_color fuzzy wuzzy
+
+LPUSH elixir_taste acidic
+LPUSH elixir_taste acrid
+LPUSH elixir_taste aged
+LPUSH elixir_taste bitter
+LPUSH elixir_taste bittersweet
+LPUSH elixir_taste bland
+LPUSH elixir_taste burnt
+LPUSH elixir_taste buttery
+LPUSH elixir_taste chalky
+LPUSH elixir_taste cheesy
+LPUSH elixir_taste chewy
+LPUSH elixir_taste chocolaty
+LPUSH elixir_taste citrusy
+LPUSH elixir_taste cool
+LPUSH elixir_taste creamy
+LPUSH elixir_taste crispy
+LPUSH elixir_taste crumbly
+LPUSH elixir_taste crunchy
+LPUSH elixir_taste crusty
+LPUSH elixir_taste doughy
+LPUSH elixir_taste dry
+LPUSH elixir_taste earthy
+LPUSH elixir_taste eggy
+LPUSH elixir_taste fatty
+LPUSH elixir_taste fermented
+LPUSH elixir_taste fiery
+LPUSH elixir_taste fishy
+LPUSH elixir_taste fizzy
+LPUSH elixir_taste flakey
+LPUSH elixir_taste flat
+LPUSH elixir_taste flavorful
+LPUSH elixir_taste fresh
+LPUSH elixir_taste fried
+LPUSH elixir_taste fruity
+LPUSH elixir_taste full-bodied
+LPUSH elixir_taste garlicky
+LPUSH elixir_taste gelatinous
+LPUSH elixir_taste gingery
+LPUSH elixir_taste glazed
+LPUSH elixir_taste grainy
+LPUSH elixir_taste greasy
+LPUSH elixir_taste gooey
+LPUSH elixir_taste gritty
+LPUSH elixir_taste harsh
+LPUSH elixir_taste hearty
+LPUSH elixir_taste heavy
+LPUSH elixir_taste herbal
+LPUSH elixir_taste hot
+LPUSH elixir_taste icy
+LPUSH elixir_taste infused
+LPUSH elixir_taste juicy
+LPUSH elixir_taste lean
+LPUSH elixir_taste light
+LPUSH elixir_taste lemony
+LPUSH elixir_taste malty
+LPUSH elixir_taste mashed
+LPUSH elixir_taste meaty
+LPUSH elixir_taste mellow
+LPUSH elixir_taste mild
+LPUSH elixir_taste minty
+LPUSH elixir_taste moist
+LPUSH elixir_taste mushy
+LPUSH elixir_taste nutty
+LPUSH elixir_taste oily
+LPUSH elixir_taste oniony
+LPUSH elixir_taste overripe
+LPUSH elixir_taste pasty
+LPUSH elixir_taste peppery
+LPUSH elixir_taste pickled
+LPUSH elixir_taste plain
+LPUSH elixir_taste powdery
+LPUSH elixir_taste raw
+LPUSH elixir_taste refreshing
+LPUSH elixir_taste rich
+LPUSH elixir_taste ripe
+LPUSH elixir_taste roasted
+LPUSH elixir_taste robust
+LPUSH elixir_taste rubbery
+LPUSH elixir_taste runny
+LPUSH elixir_taste salty
+LPUSH elixir_taste sauteed
+LPUSH elixir_taste savory
+LPUSH elixir_taste seared
+LPUSH elixir_taste seasoned
+LPUSH elixir_taste sharp
+LPUSH elixir_taste silky
+LPUSH elixir_taste slimy
+LPUSH elixir_taste smokey
+LPUSH elixir_taste smothered
+LPUSH elixir_taste smooth
+LPUSH elixir_taste soggy
+LPUSH elixir_taste soupy
+LPUSH elixir_taste sour
+LPUSH elixir_taste spicy
+LPUSH elixir_taste spongy
+LPUSH elixir_taste stale
+LPUSH elixir_taste sticky
+LPUSH elixir_taste stale
+LPUSH elixir_taste stringy
+LPUSH elixir_taste strong
+LPUSH elixir_taste sugary or sweet
+LPUSH elixir_taste sweet-and-sour
+LPUSH elixir_taste syrupy
+LPUSH elixir_taste tangy
+LPUSH elixir_taste tart
+LPUSH elixir_taste tasteless
+LPUSH elixir_taste tender
+LPUSH elixir_taste toasted
+LPUSH elixir_taste tough
+LPUSH elixir_taste unflavored
+LPUSH elixir_taste unseasoned
+LPUSH elixir_taste velvety
+LPUSH elixir_taste vinegary
+LPUSH elixir_taste watery
+LPUSH elixir_taste whipped
+LPUSH elixir_taste woody
+LPUSH elixir_taste yeasty
+LPUSH elixir_taste zesty
+LPUSH elixir_taste zingy
+
+LPUSH elixir_feel cold
+LPUSH elixir_feel cool
+LPUSH elixir_feel crisp
+LPUSH elixir_feel damp
+LPUSH elixir_feel dry
+LPUSH elixir_feel dull
+LPUSH elixir_feel elastic
+LPUSH elixir_feel explode
+LPUSH elixir_feel feathery
+LPUSH elixir_feel firm
+LPUSH elixir_feel fishy
+LPUSH elixir_feel fleshy
+LPUSH elixir_feel fragile
+LPUSH elixir_feel furry
+LPUSH elixir_feel fuzzy
+LPUSH elixir_feel gritty
+LPUSH elixir_feel hairy
+LPUSH elixir_feel hard
+LPUSH elixir_feel hot
+LPUSH elixir_feel icy
+LPUSH elixir_feel leathery
+LPUSH elixir_feel lukewarm
+LPUSH elixir_feel moist
+LPUSH elixir_feel oily
+LPUSH elixir_feel pebbly
+LPUSH elixir_feel prickly
+LPUSH elixir_feel pulpy
+LPUSH elixir_feel rough
+LPUSH elixir_feel rubbery
+LPUSH elixir_feel sandy
+LPUSH elixir_feel satiny
+LPUSH elixir_feel sharp
+LPUSH elixir_feel silky
+LPUSH elixir_feel slimy
+LPUSH elixir_feel slippery
+LPUSH elixir_feel smooth
+LPUSH elixir_feel soft
+LPUSH elixir_feel spongy
+LPUSH elixir_feel steamy
+LPUSH elixir_feel sticky
+LPUSH elixir_feel stuccoed
+LPUSH elixir_feel tacky
+LPUSH elixir_feel tender
+LPUSH elixir_feel tepid
+LPUSH elixir_feel textured
+LPUSH elixir_feel thick
+LPUSH elixir_feel thin
+LPUSH elixir_feel tough
+LPUSH elixir_feel velvety
+LPUSH elixir_feel warm
+LPUSH elixir_feel waxy
+LPUSH elixir_feel wet
+LPUSH elixir_feel wooly
+
+LPUSH elixir_container_type glass
+LPUSH elixir_container_type silver
+LPUSH elixir_container_type golden
+LPUSH elixir_container_type metallic
+LPUSH elixir_container_type diamond
+LPUSH elixir_container_type bronze
+LPUSH elixir_container_type platinum
+LPUSH elixir_container_type iron
+LPUSH elixir_container_type steel
+
+LPUSH elixir_container bowl
+LPUSH elixir_container chalice
+LPUSH elixir_container plate
+LPUSH elixir_container bottle
+LPUSH elixir_container cup
+LPUSH elixir_container jar
+
+LPUSH elixir_container2 aerosol
+LPUSH elixir_container2 ampoule
+LPUSH elixir_container2 atomiser
+LPUSH elixir_container2 barrel
+LPUSH elixir_container2 basin
+LPUSH elixir_container2 bath
+LPUSH elixir_container2 bottle
+LPUSH elixir_container2 bucket
+LPUSH elixir_container2 can
+LPUSH elixir_container2 canteen
+LPUSH elixir_container2 carafe
+LPUSH elixir_container2 carton
+LPUSH elixir_container2 cask
+LPUSH elixir_container2 cistern
+LPUSH elixir_container2 cocktail shaker
+LPUSH elixir_container2 cylinder
+LPUSH elixir_container2 decanter
+LPUSH elixir_container2 dropper
+LPUSH elixir_container2 drum
+LPUSH elixir_container2 ewer
+LPUSH elixir_container2 flagon
+LPUSH elixir_container2 flask
+LPUSH elixir_container2 ice bucket
+LPUSH elixir_container2 jar
+LPUSH elixir_container2 jeroboam
+LPUSH elixir_container2 jerrycan
+LPUSH elixir_container2 jug
+LPUSH elixir_container2 keg
+LPUSH elixir_container2 magnum
+LPUSH elixir_container2 oilcan
+LPUSH elixir_container2 pail
+LPUSH elixir_container2 phial
+LPUSH elixir_container2 pitcher
+LPUSH elixir_container2 pot
+LPUSH elixir_container2 reservoir
+LPUSH elixir_container2 shaker
+LPUSH elixir_container2 soda siphon
+LPUSH elixir_container2 spray can
+LPUSH elixir_container2 tank
+LPUSH elixir_container2 tin
+LPUSH elixir_container2 trough
+LPUSH elixir_container2 vacuum flask
+LPUSH elixir_container2 vat
+LPUSH elixir_container2 vial
+LPUSH elixir_container2 wine cooler
+
+LPUSH elixir_characteristic soothing
+LPUSH elixir_characteristic enraging
+LPUSH elixir_characteristic poisonous
+LPUSH elixir_characteristic numbing
+LPUSH elixir_characteristic nauseous
+LPUSH elixir_characteristic zombified
+LPUSH elixir_characteristic anxious
+
+LPUSH elixir_template You find the {{params.color}} elixir in a {{params.container_type}} {{params.container}}. On the label it saids it has {{params.characteristic}} effects.
+LPUSH elixir_template You see the {{params.container_type}} {{params.container}} with {{params.color}} liquid inside. After sipping it, you found that it tastes {{params.taste}}.
+LPUSH elixir_template You find the {{params.color}} elixir to feel {{params.feel}} when you touch it
+LPUSH elixir_template The liquid in the {{params.container_type}} {{params.container}} has {{params.color}} color to it. Upon further inspection, the container feels {{params.feel}}
+LPUSH elixir_template After drinking the {{params.color}} liquid, you feel its {{params.characteristic}} effect.
+LPUSH elixir_template The {{params.container2}} container doesn't seem like it's from around here. Inside, you find some {{params.color}} liquid.
+

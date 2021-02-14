@@ -21,5 +21,7 @@ class Organization(Generator):
 
         if not hasattr(self, 'text'):
             self.text = self.render_template(self.template)
-        self.name=Name(self.redis, 'organization', {'leader':self.leader})
+        self.name=Name(self.redis, 'organization', {'leader':self.leader, 'kind':self.kind})
 
+    def __str__(self):
+        return self.name.shortname

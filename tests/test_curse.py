@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"Fully test this module's functionality through the use of fixtures."
+
 from megacosm.generators import Curse
 import unittest2 as unittest
 
@@ -14,7 +16,7 @@ from config import TestConfiguration
 class TestCurse(unittest.TestCase):
 
     def setUp(self):
-        """  """
+        """ Set up the required fixtures """
         self.redis = fakeredis.FakeRedis()
         fixtures.curse.import_fixtures(self)
     def tearDown(self):
