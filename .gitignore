@@ -25,7 +25,7 @@ nosetests.xml
 megacosm/static/gen/
 megacosm/static/.webassets-cache/
 
-
+.vscode/
 .idea/
 .terraform/
 *.tfstate
