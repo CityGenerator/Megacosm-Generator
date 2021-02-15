@@ -6,10 +6,10 @@ import unittest
 from megacosm.generators.Name import Name
 from megacosm.generators.NPC import NPC
 from config import IntegrationTestConfiguration
-from fixtures import bond, business, city, continent, country, cuisine, currency, curse, deity, drink, dungeon, event
-from fixtures import flag, flaw, gem, generator, geomorphdungeon, govt, grafitti, jobposting, leader, legend, magicitem
-from fixtures import misfire, moon, mundaneitem, npc, organization, motivation, planet, phobia, region, resource
-from fixtures import roguedungeon, rumor, sect, star, starsystem, street, wanted, weather
+from fixtures import artwork, bond, business, city, continent, country, cuisine, currency, curse, deity, drink, dungeon
+from fixtures import event, flag, flaw, gem, generator, geomorphdungeon, govt, grafitti, jobposting, leader, legend
+from fixtures import magicitem, misfire, moon, mundaneitem, npc, organization, motivation, planet, phobia, region
+from fixtures import resource, roguedungeon, rumor, sect, star, starsystem, street, wanted, weather
 
 
 class TestNameIntegration(unittest.TestCase):

@@ -15,7 +15,7 @@ class TestFlaw(unittest.TestCase):
     def setUp(self):
         """  """
         self.redis = fakeredis.FakeRedis(decode_responses=True)
-        fixtures.flaw.import_fixtures(self)
+        flaw.import_fixtures(self)
 
     def tearDown(self):
         self.redis.flushall()
@@ -24,7 +24,8 @@ class TestFlaw(unittest.TestCase):
         """  """
         flaw = Flaw(self.redis)
         self.assertNotEquals('', flaw.text)
+
     def test_static_text(self):
         """  """
-        flaw = Flaw(self.redis,{'text':'You are a loser.'})
+        flaw = Flaw(self.redis, {'text': 'You are a loser.'})
         self.assertEquals('You are a loser.', str(flaw))

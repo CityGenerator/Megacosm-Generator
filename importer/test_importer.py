@@ -6,7 +6,6 @@
 from importer import Importer
 import unittest
 import fakeredis
-import json
 # from fixtures import artwork, gem, npc, motivation, phobia, deity
 
 
@@ -51,12 +50,8 @@ class TestImporter(unittest.TestCase):
         # self
         imp = Importer(self.redis)
         bad_json = """test type1 "name":"type one", 's;'"""
-        with self.assertRaises(json.JSONDecodeError) as cm:
+        with self.assertRaises(TypeError):
             imp.process_hset(bad_json)
-        
-        #self.assertEqual(self.redis.hget("test", "type1"), '')
-
-
 
     # def test_process_hset(self, args):
     # def test_process_zadd(self, args):
